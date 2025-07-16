@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy 4010Y</title>
+    <style>
+        html, body { /* Ensure no default margins/paddings on html and body */
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            padding-top: 60px; /* Space for the fixed header */
+            background-color: #f4f4f4; /* Light background for the page */
+            color: #333;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #4CAF50; /* Green background for the navbar */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000; /* Ensure navbar stays on top */
+            display: flex;
+            justify-content: flex-start; /* Align title to the start */
+            align-items: center;
+            padding: 20.5px 20px; /* Adjusted vertical padding to match other pages' navbar height */
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .navbar-title {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none; /* Remove underline from title link */
+            flex-grow: 1; /* Make the title take up all available space */
+            text-align: center; /* Center the text within the expanded title area */
+            padding: 0; /* Reset specific padding on title to let flexbox manage */
+        }
+        .content {
+            margin: 20px auto; /* Center content with auto margins */
+            max-width: 800px; /* Max width for readability */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column; /* Stack buttons vertically */
+            gap: 15px; /* Space between buttons */
+            align-items: center; /* Center buttons horizontally */
+        }
+        .button {
+            display: block; /* Make buttons block-level for full width */
+            width: 80%; /* Adjust width as needed, or use max-width */
+            max-width: 300px; /* Limit button width */
+            padding: 15px 25px;
+            background-color: #007BFF; /* Blue button color */
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 10px; /* More rounded corners */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Deeper shadow */
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: translateY(-2px); /* Slight lift effect */
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* Enhanced shadow on hover */
+        }
+        .button:active {
+            transform: translateY(0); /* Press down effect */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                padding: 10px; /* Adjust padding for smaller screens */
+            }
+            .navbar-title {
+                margin-bottom: 10px;
+            }
+            .content {
+                margin: 10px;
+                padding: 15px;
+            }
+            .button {
+                width: 90%;
+                padding: 12px 20px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="navbar-title">Pharmacy 4010Y - UEA Learning Enhancement Team</a>
+    </div>
+
+    <div class="content">
+        <h1>Welcome to Pharmacy Calculations Practice</h1>
+        <p>Here you will find some questions based around the pharmacy calculations assessment. Use the links to look at the various examples.</p>
+
+        <div class="button-container">
+            <a href="pha01.html" class="button">Pharmacy Question Set 1</a>
+            <a href="pha02.html" class="button">Pharmacy Question Set 2</a>
+            <a href="pha03.html" class="button">Pharmacy Question Set 3</a>
+            <a href="pha04.html" class="button">Pharmacy Question Set 4</a>
+            <a href="pha05.html" class="button">Pharmacy Question Set 5</a>
+        </div>
+    </div>
+
+</body>
+</html>
