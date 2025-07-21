@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Questions 3 - Solutions</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0; /* Reset default body margin */
+            line-height: 1.6;
+            padding-top: 60px; /* Space for the fixed header */
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #4CAF50; /* Green background for the navbar */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000; /* Ensure navbar stays on top */
+            display: flex;
+            justify-content: flex-start; /* Align items to the start */
+            align-items: center;
+            padding: 10px 20px;
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+            border-radius: 8px; /* Rounded corners for links */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+            margin-right: 10px; /* Space between links */
+        }
+        .navbar a:hover {
+            background-color: #5cb85c; /* Lighter green on hover */
+            color: white;
+        }
+        .content {
+            margin: 20px; /* Margin for the main content */
+        }
+        h1, h2 {
+            color: #333;
+        }
+        strong {
+            font-weight: bold;
+        }
+        .instructions, .formulae, .solution-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px; /* Rounded corners for info boxes */
+        }
+        ol {
+            counter-reset: item;
+            list-style-type: none;
+            padding-left: 40px; /* Increased padding for the whole list */
+        }
+        ol li {
+            display: block;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 2.5em; /* Space for the counter and a gap */
+        }
+        ol > li:before { /* This rule ensures only top-level list items are numbered */
+            content: counter(item) ". ";
+            counter-increment: item;
+            position: absolute;
+            left: 0; /* Position relative to the li's padding-box */
+            font-weight: bold;
+            text-align: right; /* Align numbers to the right within their space */
+            width: 2em; /* Give numbers a fixed width */
+        }
+        ul { /* Style for unordered lists, specifically for formula items */
+            list-style-type: disc;
+            margin-left: 20px; /* Indent for nested ul */
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+        .solution-details {
+            margin-top: 5px;
+            padding: 10px;
+            background-color: #e6ffe6; /* Light green for solutions */
+            border-left: 5px solid #4CAF50;
+            border-radius: 4px;
+            font-family: monospace;
+            white-space: pre-wrap; /* Preserve whitespace and wrap text */
+            font-size: 1.1em; /* Increased font size for readability */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="pha03.html">Questions</a> <!-- Link changed to pha03.html -->
+    </div>
+
+    <div class="content">
+        <h1>Pharmacy Questions 3 - Solutions</h1> <!-- Main heading for solutions -->
+
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <p>Below are the worked solutions for each question.</p>
+        </div>
+
+        <hr>
+
+        <ol>
+            <li>
+                What is <strong>0.005 grams</strong> expressed in micrograms?
+                <div class="solution-details">
+                    To go from grams to milligrams, multiply by 1000:
+                    0.005 g &times; 1000 = 5 mg
+
+                    To go from milligrams to micrograms, multiply by 1000:
+                    5 mg &times; 1000 = 5,000 mcg
+                    <br><strong>Solution: 5,000 mcg</strong>
+                </div>
+            </li>
+            <li>
+                What is <strong>0.0008 kilometres</strong> expressed in millimetres?
+                <div class="solution-details">
+                    To go from kilometres to metres, multiply by 1000:
+                    0.0008 km &times; 1000 = 0.8 m
+
+                    To go from metres to millimetres, multiply by 1000:
+                    0.8 m &times; 1000 = 800 mm
+                    <br><strong>Solution: 800 mm</strong>
+                </div>
+            </li>
+            <li>
+                What is <strong>1 in 500</strong> expressed as mg/mL?
+                <div class="solution-details">
+                    "1 in 500" means 1 gram in 500 mL.
+                    Convert grams to milligrams: 1 g = 1000 mg.
+                    So, 1000 mg in 500 mL.
+
+                    To find mg per mL, divide milligrams by millilitres:
+                    1000 mg &divide; 500 mL = 2 mg/mL
+                    <br><strong>Solution: 2 mg/mL</strong>
+                </div>
+            </li>
+            <li>
+                What is <strong>5 mg/mL</strong> expressed as %w/v?
+                <div class="solution-details">
+                    %w/v means grams per 100 mL.
+                    We have 5 mg per 1 mL.
+                    To find mg per 100 mL: 5 mg/mL &times; 100 = 500 mg/100 mL.
+
+                    Convert milligrams to grams: 500 mg &divide; 1000 mg/g = 0.5 g.
+                    So, 0.5 g in 100 mL, which is 0.5% w/v.
+                    <br><strong>Solution: 0.5% w/v</strong>
+                </div>
+            </li>
+            <li>
+                If a mixture is described as <strong>4mg/ml</strong>, how many grams are required to make <strong>200 millilitres</strong> of the mixture?
+                <div class="solution-details">
+                    First, find total milligrams:
+                    4 mg/mL &times; 200 mL = 800 mg
+
+                    Convert milligrams to grams:
+                    800 mg &divide; 1000 mg/g = 0.8 g
+                    <br><strong>Solution: 0.8 g</strong>
+                </div>
+            </li>
+            <li>
+                If a drug is described as <strong>1 part in 200</strong>, how many litres are required to provide a dose of <strong>10g</strong>?
+                <div class="solution-details">
+                    "1 part in 200" means 1 gram in 200 mL.
+                    We need 10 grams. This is 10 times the amount.
+                    So, 10 g will be in 10 &times; 200 mL = 2000 mL.
+
+                    Convert millilitres to litres:
+                    2000 mL &divide; 1000 mL/L = 2 L
+                    <br><strong>Solution: 2 L</strong>
+                </div>
+            </li>
+            <li>
+                How many millilitres of a <strong>5%w/v</strong> solution would be required to provide a dose of <strong>250mg</strong>?
+                <div class="solution-details">
+                    Convert %w/v to mg/mL:
+                    5% w/v = 5 grams in 100 mL = 5000 mg in 100 mL.
+                    So, 5000 mg &divide; 100 mL = 50 mg/mL.
+
+                    Now, find the volume needed for 250 mg:
+                    Volume = Total dose &divide; Concentration
+                    Volume = 250 mg &divide; 50 mg/mL = 5 mL
+                    <br><strong>Solution: 5 ml</strong>
+                </div>
+            </li>
+            <li>
+                How much <strong>Magnesium Sulfate</strong> in grams is required to make <strong>400 millimoles</strong>, given that the molecular weight of Magnesium Sulfate = <strong>120</strong>?
+                <div class="solution-details">
+                    1 mole of Magnesium Sulfate weighs 120 grams.
+                    1000 millimoles = 120 grams.
+
+                    We need 400 millimoles.
+                    400 millimoles is 400/1000 = 0.4 moles.
+                    So, 0.4 &times; 120 g = 48 g
+                    <br><strong>Solution: 48 g</strong>
+                </div>
+            </li>
+            <li>
+                How many grams of <strong>Glucose</strong> (molecular weight = <strong>180</strong>) are required to produce <strong>250 millilitres</strong> of a <strong>2 molar</strong> solution?
+                <div class="solution-details">
+                    1 molar (1M) solution means 180 g in 1000 mL.
+                    2 molar (2M) solution means 2 &times; 180 g in 1000 mL = 360 g in 1000 mL.
+
+                    We need to make 250 mL, which is one-quarter (1/4) of 1000 mL.
+                    So, we need one-quarter of 360 g:
+                    360 g &divide; 4 = 90 g
+                    <br><strong>Solution: 90 g</strong>
+                </div>
+            </li>
+            <li>
+                You need to make <strong>500mL</strong> of a <strong>3M</strong> solution from a <strong>15M</strong> stock solution, how many millilitres of stock solution do you require?
+                <div class="solution-details">
+                    Use the formula C1V1 = C2V2:
+                    (15 M) &times; V1 = (3 M) &times; (500 mL)
+                    15 &times; V1 = 1500
+                    V1 = 1500 &divide; 15
+                    V1 = 100 mL
+                    <br><strong>Solution: 100 ml</strong>
+                </div>
+            </li>
+            <li>
+                If a person is <strong>5 feet and 2 inches</strong> tall, what is this in meters (Assuming <strong>1 inch = 2.5 cm</strong>)?
+                <div class="solution-details">
+                    Convert feet to inches:
+                    5 feet &times; 12 inches/foot = 60 inches.
+                    Total height in inches = 60 inches + 2 inches = 62 inches.
+
+                    Convert inches to centimetres:
+                    62 inches &times; 2.5 cm/inch = 155 cm.
+                    (Calculation: 62 &times; 2 = 124; 62 &times; 0.5 = 31; 124 + 31 = 155)
+
+                    Convert centimetres to metres:
+                    155 cm &divide; 100 cm/m = 1.55 meters
+                    <br><strong>Solution: 1.55 meters</strong>
+                </div>
+            </li>
+            <li>
+                If a patient is <strong>12 stone 4 lbs</strong>, how much do they weigh in Kg (Assuming <strong>2 lbs = 1 Kg</strong>)?
+                <div class="solution-details">
+                    Convert stone to pounds:
+                    12 stone &times; 14 lbs/stone = 168 lbs.
+                    Total weight in pounds = 168 lbs + 4 lbs = 172 lbs.
+
+                    Convert pounds to kilograms:
+                    172 lbs &divide; 2 lbs/Kg = 86 Kg
+                    <br><strong>Solution: 86 Kg</strong>
+                </div>
+            </li>
+            <li>
+                What is the body surface area of someone who is <strong>1.6 metres</strong> tall and <strong>81 Kg</strong> in weight?<br>
+                (For Your Information: &radic;3.24 = 1.8, &radic;3.61 = 1.9, &radic;4.00 = 2.0)<br>
+                <em>Formula: BSA = &radic;(Ht (cm) x Weight (kg) / 3600)</em>
+                <div class="solution-details">
+                    Convert height to cm: 1.6 metres = 160 cm.
+                    BSA = &radic;((160 cm &times; 81 Kg) &divide; 3600)
+
+                    Simplify the fraction first:
+                    (160 &times; 81) &divide; 3600
+                    Divide numerator and denominator by 40:
+                    (4 &times; 81) &divide; 90
+                    324 &divide; 90 = 3.6
+
+                    BSA = &radic;3.6
+                    From the given list, &radic;3.61 = 1.9 is the closest.
+                    <br><strong>Solution: 1.9 m&sup2;</strong>
+                </div>
+            </li>
+            <li>
+                What is <strong>25 &deg;C</strong> in <strong>&deg;F</strong>?
+                <div class="solution-details">
+                    Use the formula F = (C &times; 9/5) + 32:
+                    F = (25 &times; 9/5) + 32
+                    Simplify the multiplication: (25 &divide; 5) &times; 9 = 5 &times; 9 = 45.
+                    F = 45 + 32
+                    F = 77 &deg;F
+                    <br><strong>Solution: 77 &deg;F</strong>
+                </div>
+            </li>
+            <li>
+                How many millilitres of a <strong>1 in 50</strong> solution is required to produce <strong>200mL</strong> of a <strong>1 in 10,000</strong> solution?
+                <div class="solution-details">
+                    Use the formula C1V1 = C2V2.
+                    C1 = 1/50
+                    V1 = ?
+                    C2 = 1/10000
+                    V2 = 200 mL
+
+                    (1/50) &times; V1 = (1/10000) &times; 200
+                    To isolate V1, multiply both sides by the reciprocal of C1 (which is 50/1):
+                    V1 = (1/10000) &times; 200 &times; (50/1)
+                    V1 = (200 &times; 50) / 10000
+                    V1 = 10000 / 10000
+                    V1 = 1 mL
+                    <br><strong>Solution: 1 ml</strong>
+                </div>
+            </li>
+            <li>
+                If an <strong>80-year-old</strong> male has an ideal body weight of <strong>65kg</strong> and a serum creatinine of <strong>130 micromol/litre</strong>, what is their CrCl?<br>
+                <em>Formula: CrCl (ml/min) = (140-Age) x Weight (Kg) / Serum creatinine (micromol/L)</em>
+                <div class="solution-details">
+                    CrCl (ml/min) = (140 - 80) &times; 65 &divide; 130
+                    CrCl (ml/min) = 60 &times; 65 &divide; 130
+                    CrCl (ml/min) = 3900 &divide; 130
+                    CrCl (ml/min) = 390 &divide; 13
+                    CrCl (ml/min) = 30 ml/min
+                    <br><strong>Solution: 30 ml/min</strong>
+                </div>
+            </li>
+            <li>
+                If <strong>Salicylic Acid cream</strong> is described as <strong>3% w/w</strong>, in milligrams, how much active ingredient will be required to make <strong>200 grams</strong>?
+                <div class="solution-details">
+                    3% w/w means 3 grams of active ingredient in 100 grams of cream.
+                    We need to make 200 grams of cream, which is 2 times 100 grams.
+                    So, we need 2 &times; 3 grams = 6 grams of active ingredient.
+
+                    Convert grams to milligrams:
+                    6 g &times; 1000 mg/g = 6,000 mg
+                    <br><strong>Solution: 6,000 mg</strong>
+                </div>
+            </li>
+            <li>
+                A <strong>40 Kg</strong> patient requires <strong>20 mg/Kg/minute</strong> for <strong>5 minutes</strong>. This is to be delivered from a <strong>10% w/v</strong> solution, how much solution will they need in ml?
+                <div class="solution-details">
+                    First, calculate the total amount of drug needed:
+                    20 mg/Kg/minute &times; 40 Kg &times; 5 minutes = 4000 mg.
+
+                    Next, understand the concentration of the stock solution:
+                    10% w/v = 10 grams in 100 mL = 10,000 mg in 100 mL.
+
+                    Now, find the volume of solution needed:
+                    Volume = (Total drug needed / Concentration in mg) &times; Volume for concentration
+                    Volume = (4000 mg / 10000 mg) &times; 100 mL
+                    Simplify the fraction 4000/10000:
+                    4000/10000 = 4/10 (cancel zeros) = 2/5 (divide by 2)
+                    Volume = (2/5) &times; 100 mL
+                    Volume = 0.4 &times; 100 mL = 40 mL
+                    <br><strong>Solution: 40 ml</strong>
+                </div>
+            </li>
+            <li>
+                If a patient requires <strong>15 mcg/minute</strong> of a drug for <strong>4 hours</strong>, what is the total amount of drug they will receive in mg? Answer to <strong>1 decimal place</strong>.
+                <div class="solution-details">
+                    First, convert hours to minutes:
+                    4 hours &times; 60 minutes/hour = 240 minutes.
+
+                    Calculate total micrograms:
+                    15 mcg/minute &times; 240 minutes = 3600 mcg.
+
+                    Convert micrograms to milligrams:
+                    3600 mcg &divide; 1000 mcg/mg = 3.6 mg.
+                    <br><strong>Solution: 3.6 mg</strong>
+                </div>
+            </li>
+            <li>
+                If the formula for <strong>Paracetamol Suspension</strong> is:<br>
+                <ul>
+                    <li>Paracetamol: <strong>120mg</strong></li>
+                    <li>Vehicle: <strong>to 5 mL</strong></li>
+                </ul>
+                How much <strong>Paracetamol</strong> in milligrams is required to produce <strong>250ml</strong> of the Paracetamol Suspension?
+                <div class="solution-details">
+                    The formula is for a total volume of 5 mL.
+                    We need to produce 250 mL.
+                    Calculate the scaling factor: 250 mL &divide; 5 mL = 50.
+
+                    Multiply the Paracetamol quantity by the scaling factor:
+                    120 mg &times; 50 = 6,000 mg
+                    <br><strong>Solution: 6,000 mg</strong>
+                </div>
+            </li>
+        </ol>
+
+        <hr>
+    </div>
+
+</body>
+</html>
