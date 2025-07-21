@@ -47,6 +47,7 @@
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 40px; /* Add space before the new section */
         }
         h1, h2 {
             color: #333;
@@ -63,6 +64,7 @@
             flex-direction: column; /* Stack buttons vertically */
             gap: 15px; /* Space between buttons */
             align-items: center; /* Center buttons horizontally */
+            margin-bottom: 40px; /* Space before new section */
         }
         .button {
             display: block; /* Make buttons block-level for full width */
@@ -91,16 +93,56 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
 
+        .topic-section {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .topic-link-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Space between topic links */
+        }
+        .topic-link {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            background-color: #e9e9e9;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .topic-link:hover {
+            background-color: #dcdcdc;
+            transform: translateX(5px);
+        }
+        .topic-icon {
+            margin-right: 10px;
+            font-size: 1.5em; /* Adjust icon size */
+            color: #4CAF50; /* Green color for icons */
+        }
+        .topic-description {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+            margin-left: 35px; /* Align with text after icon */
+        }
+
         /* Responsive adjustments */
         @media (max-width: 600px) {
             .navbar {
                 flex-direction: column;
-                padding: 10px; /* Adjust padding for smaller screens */
+                padding: 10px;
             }
             .navbar-title {
                 margin-bottom: 10px;
             }
-            .content {
+            .content, .topic-section {
                 margin: 10px;
                 padding: 15px;
             }
@@ -109,8 +151,20 @@
                 padding: 12px 20px;
                 font-size: 1em;
             }
+            .topic-link {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .topic-icon {
+                margin-bottom: 5px;
+            }
+            .topic-description {
+                margin-left: 0;
+            }
         }
     </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
@@ -129,6 +183,77 @@
             <a href="pha03.html" class="button">Pharmacy Question Set 3</a>
             <a href="pha04.html" class="button">Pharmacy Question Set 4</a>
             <a href="pha05.html" class="button">Pharmacy Question Set 5</a>
+        </div>
+    </div>
+
+    <div class="topic-section">
+        <h2>Further Topic Based Practice</h2>
+        <p>Below you will find links to questions on individual topics.</p>
+
+        <div class="topic-link-container">
+            <a href="unit_conv/q.html" class="topic-link">
+                <i class="fas fa-ruler-combined topic-icon"></i>
+                <div>
+                    <strong>Unit Conversions</strong>
+                    <div class="topic-description">Converting between different units of mass, volume, and length.</div>
+                </div>
+            </a>
+            <a href="concentrations/q.html" class="topic-link">
+                <i class="fas fa-flask topic-icon"></i>
+                <div>
+                    <strong>Concentration Calculations</strong>
+                    <div class="topic-description">Expressing concentrations in various forms (mg/mL, %w/v, 1 in X) and converting between them.</div>
+                </div>
+            </a>
+            <a href="dosage/q.html" class="topic-link">
+                <i class="fas fa-pills topic-icon"></i>
+                <div>
+                    <strong>Dosage and Volume Calculations</strong>
+                    <div class="topic-description">Determining the amount of drug or volume of solution required based on given concentrations and desired doses.</div>
+                </div>
+            </a>
+            <a href="mole/q.html" class="topic-link">
+                <i class="fas fa-atom topic-icon"></i>
+                <div>
+                    <strong>Molarity and Mole Calculations</strong>
+                    <div class="topic-description">Calculating quantities of substances based on molecular weights and molarity, often involving millimoles.</div>
+                </div>
+            </a>
+            <a href="dilutions/q.html" class="topic-link">
+                <i class="fas fa-tint topic-icon"></i>
+                <div>
+                    <strong>Dilution Principles</strong>
+                    <div class="topic-description">Applying the C1V1 = C2V2 formula to calculate required volumes for dilutions.</div>
+                </div>
+            </a>
+            <a href="imperial/q.html" class="topic-link">
+                <i class="fas fa-user-md topic-icon"></i>
+                <div>
+                    <strong>Patient Specific Conversions</strong>
+                    <div class="topic-description">Converting patient height and weight between imperial and metric units, and temperature conversions.</div>
+                </div>
+            </a>
+            <a href="bsa/q.html" class="topic-link">
+                <i class="fas fa-chart-area topic-icon"></i>
+                <div>
+                    <strong>Body Surface Area (BSA) Calculation</strong>
+                    <div class="topic-description">Using a specific formula to determine Body Surface Area from height and weight.</div>
+                </div>
+            </a>
+            <a href="drug/q.html" class="topic-link">
+                <i class="fas fa-clock topic-icon"></i>
+                <div>
+                    <strong>Drug Administration Rates</strong>
+                    <div class="topic-description">Calculating the total amount of drug administered over time based on a given rate.</div>
+                </div>
+            </a>
+            <a href="formula/q.html" class="topic-link">
+                <i class="fas fa-prescription-bottle-alt topic-icon"></i>
+                <div>
+                    <strong>Formula Scaling</strong>
+                    <div class="topic-description">Calculating ingredient quantities for larger batches of multi-component preparations based on a standard formula.</div>
+                </div>
+            </a>
         </div>
     </div>
 
