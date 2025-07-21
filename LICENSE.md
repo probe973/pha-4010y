@@ -1,4 +1,4 @@
-Copywrite (c) 2025 Phillip John Roberts
+Copyright (c) 2025 Phillip John Roberts
 
 Creative Commons Attribution-NonCommercial 4.0 International Public License
 
