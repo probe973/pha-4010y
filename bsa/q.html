@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Surface Area (BSA) Questions</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0; /* Reset default body margin */
+            line-height: 1.6;
+            padding-top: 60px; /* Space for the fixed header */
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #4CAF50; /* Green background for the navbar */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000; /* Ensure navbar stays on top */
+            display: flex;
+            justify-content: flex-start; /* Align items to the start */
+            align-items: center;
+            padding: 10px 20px;
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+            border-radius: 8px; /* Rounded corners for links */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+            margin-right: 10px; /* Space between links */
+        }
+        .navbar a:hover {
+            background-color: #5cb85c; /* Lighter green on hover */
+            color: white;
+        }
+        .content {
+            margin: 20px; /* Margin for the main content */
+        }
+        h1, h2 {
+            color: #333;
+        }
+        strong {
+            font-weight: bold;
+        }
+        .instructions, .formulae {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px; /* Rounded corners for info boxes */
+        }
+        ol {
+            counter-reset: item;
+            list-style-type: none;
+            padding-left: 40px; /* Increased padding for the whole list */
+        }
+        ol li {
+            display: block;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 2.5em; /* Space for the counter and a gap */
+        }
+        ol > li:before { /* This rule now only applies to direct children of <ol> */
+            content: counter(item) ". ";
+            counter-increment: item;
+            position: absolute;
+            left: 0; /* Position relative to the li's padding-box */
+            font-weight: bold;
+            text-align: right; /* Align numbers to the right within their space */
+            width: 2em; /* Give numbers a fixed width */
+        }
+        ul { /* Style for unordered lists, specifically for formula items */
+            list-style-type: disc;
+            margin-left: 20px; /* Indent for nested ul */
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <div class="navbar">
+        <a href="../index.html">Home</a> <!-- Adjusted path for topic folders -->
+        <a href="s.html">Solutions</a> <!-- Link for solutions within topic folder -->
+    </div>
+
+    <div class="content">
+        <h1>Body Surface Area (BSA) Questions</h1>
+
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <p>No calculators</p>
+        </div>
+
+        <div class="formulae">
+            <h2>For Your Information:</h2>
+            <p>
+                &radic;2.25 = 1.5, &radic;2.56 = 1.6, &radic;2.89 = 1.7, &radic;3.24 = 1.8, &radic;3.61 = 1.9, &radic;4.00 = 2.0,<br>
+                &radic;4.41 = 2.1, &radic;4.84 = 2.2, &radic;5.29 = 2.3, &radic;5.76 = 2.4, &radic;6.25 = 2.5, &radic;6.76 = 2.6,<br>
+                &radic;7.29 = 2.7, &radic;7.84 = 2.8, &radic;8.41 = 2.9, &radic;9.00 = 3.0
+            </p>
+            <em>Formula: BSA = &radic;(Ht (cm) x Weight (kg) / 3600)</em>
+        </div>
+
+        <hr>
+
+        <ol>
+            <li>What is the body surface area of someone who is <strong>1.8 metres</strong> tall and <strong>64.8 Kg</strong> in weight?</li>
+            <li>What is the body surface area of someone who is <strong>1.9 metres</strong> tall and <strong>68.4 Kg</strong> in weight?</li>
+            <li>What is the body surface area of someone who is <strong>1.6 metres</strong> tall and <strong>90 Kg</strong> in weight?</li>
+            <li>What is the body surface area of someone who is <strong>1.8 metres</strong> tall and <strong>88.2 Kg</strong> in weight?</li>
+            <li>What is the body surface area of someone who is <strong>1.8 metres</strong> tall and <strong>57.8 Kg</strong> in weight?</li>
+            <li>What is the body surface area of someone who is <strong>1.5 metres</strong> tall and <strong>54 Kg</strong> in weight?</li>
+            <li>What is the body surface area of someone who is <strong>1.6 metres</strong> tall and <strong>57.6 Kg</strong> in weight?</li>
+            <li>What is the body surface area of someone who is <strong>1.7 metres</strong> tall and <strong>61.2 Kg</strong> in weight?</li>
+            <li>What is the body surface area of someone who is <strong>1.8 metres</strong> tall and <strong>72.2 Kg</strong> in weight?</li>
+            <li>What is the body surface area of someone who is <strong>1.92 metres</strong> tall and <strong>75 Kg</strong> in weight?</li>
+            <li>What is the body surface area of someone who is <strong>1.8 metres</strong> tall and <strong>96.8 Kg</strong> in weight?</li>
+            <li>What is the body surface area of someone who is <strong>1.8 metres</strong> tall and <strong>105.8 Kg</strong> in weight?</li>
+        </ol>
+
+        <hr>
+    </div>
+
+</body>
+</html>

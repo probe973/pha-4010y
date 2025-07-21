@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Surface Area (BSA) Solutions</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0; /* Reset default body margin */
+            line-height: 1.6;
+            padding-top: 60px; /* Space for the fixed header */
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #4CAF50; /* Green background for the navbar */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000; /* Ensure navbar stays on top */
+            display: flex;
+            justify-content: flex-start; /* Align items to the start */
+            align-items: center;
+            padding: 10px 20px;
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+            border-radius: 8px; /* Rounded corners for links */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+            margin-right: 10px; /* Space between links */
+        }
+        .navbar a:hover {
+            background-color: #5cb85c; /* Lighter green on hover */
+            color: white;
+        }
+        .content {
+            margin: 20px; /* Margin for the main content */
+        }
+        h1, h2 {
+            color: #333;
+        }
+        strong {
+            font-weight: bold;
+        }
+        .instructions, .formulae, .solution-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px; /* Rounded corners for info boxes */
+        }
+        ol {
+            counter-reset: item;
+            list-style-type: none;
+            padding-left: 40px; /* Increased padding for the whole list */
+        }
+        ol li {
+            display: block;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 2.5em; /* Space for the counter and a gap */
+        }
+        ol > li:before { /* This rule ensures only top-level list items are numbered */
+            content: counter(item) ". ";
+            counter-increment: item;
+            position: absolute;
+            left: 0; /* Position relative to the li's padding-box */
+            font-weight: bold;
+            text-align: right; /* Align numbers to the right within their space */
+            width: 2em; /* Give numbers a fixed width */
+        }
+        ul { /* Style for unordered lists, specifically for formula items */
+            list-style-type: disc;
+            margin-left: 20px; /* Indent for nested ul */
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+        .solution-details {
+            margin-top: 5px;
+            padding: 10px;
+            background-color: #e6ffe6; /* Light green for solutions */
+            border-left: 5px solid #4CAF50;
+            border-radius: 4px;
+            font-family: monospace;
+            white-space: pre-wrap; /* Preserve whitespace and wrap text */
+            font-size: 1.1em; /* Increased font size for readability */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <div class="navbar">
+        <a href="../index.html">Home</a> <!-- Adjusted path for topic folders -->
+        <a href="q.html">Questions</a> <!-- Link for questions within topic folder -->
+    </div>
+
+    <div class="content">
+        <h1>Body Surface Area (BSA) Solutions</h1>
+
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <p>Below are the worked solutions for each question.</p>
+        </div>
+
+        <div class="formulae">
+            <h2>For Your Information:</h2>
+            <p>
+                &radic;2.25 = 1.5, &radic;2.56 = 1.6, &radic;2.89 = 1.7, &radic;3.24 = 1.8, &radic;3.61 = 1.9, &radic;4.00 = 2.0,<br>
+                &radic;4.41 = 2.1, &radic;4.84 = 2.2, &radic;5.29 = 2.3, &radic;5.76 = 2.4, &radic;6.25 = 2.5, &radic;6.76 = 2.6,<br>
+                &radic;7.29 = 2.7, &radic;7.84 = 2.8, &radic;8.41 = 2.9, &radic;9.00 = 3.0
+            </p>
+            <em>Formula: BSA = &radic;(Ht (cm) x Weight (kg) / 3600)</em>
+        </div>
+
+        <hr>
+
+        <ol>
+            <li>
+                What is the body surface area of someone who is <strong>1.8 metres</strong> tall and <strong>64.8 Kg</strong> in weight?
+                <div class="solution-details">
+                    Convert height to cm: 1.8 metres = 180 cm.
+                    BSA = &radic;((180 cm &times; 64.8 Kg) &divide; 3600)
+
+                    Simplify the fraction:
+                    (180 &times; 64.8) &divide; 3600
+                    Cancel a zero from the numerator (180) and denominator (3600) by dividing both by 10:
+                    = (18 &times; 64.8) &divide; 360
+                    Divide the numerator (18) and denominator (360) by 18:
+                    = (1 &times; 64.8) &divide; 20
+                    Now, divide 64.8 by 20:
+                    = 3.24
+
+                    BSA = &radic;3.24
+                    From the given list, &radic;3.24 = 1.8.
+                    <br><strong>Solution: 1.8 m&sup2;</strong>
+                </div>
+            </li>
+            <li>
+                What is the body surface area of someone who is <strong>1.9 metres</strong> tall and <strong>68.4 Kg</strong> in weight?
+                <div class="solution-details">
+                    Convert height to cm: 1.9 metres = 190 cm.
+                    BSA = &radic;((190 cm &times; 68.4 Kg) &divide; 3600)
+
+                    Simplify the fraction:
+                    (190 &times; 68.4) &divide; 3600
+                    Cancel a zero from the numerator (190) and denominator (3600) by dividing both by 10:
+                    = (19 &times; 68.4) &divide; 360
+                    Divide the numerator (68.4) and denominator (360) by 9:
+                    = (19 &times; 7.6) &divide; 40
+                    Divide the numerator (7.6) and denominator (40) by 4:
+                    = (19 &times; 1.9) &divide; 10
+                    Multiply 19 by 1.9:
+                    = 36.1 &divide; 10
+                    = 3.61
+
+                    BSA = &radic;3.61
+                    From the given list, &radic;3.61 = 1.9.
+                    <br><strong>Solution: 1.9 m&sup2;</strong>
+                </div>
+            </li>
+            <li>
+                What is the body surface area of someone who is <strong>1.6 metres</strong> tall and <strong>90 Kg</strong> in weight?
+                <div class="solution-details">
+                    Convert height to cm: 1.6 metres = 160 cm.
+                    BSA = &radic;((160 cm &times; 90 Kg) &divide; 3600)
+
+                    Simplify the fraction:
+                    (160 &times; 90) &divide; 3600
+                    Cancel two zeros from numerator (160 and 90) and denominator (3600) by dividing both by 100:
+                    = (16 &times; 9) &divide; 36
+                    Divide the numerator (9) and denominator (36) by 9:
+                    = (16 &times; 1) &divide; 4
+                    Multiply 16 by 1:
+                    = 16 &divide; 4
+                    Divide 16 by 4:
+                    = 4
+                    = 4.00
+
+                    BSA = &radic;4.00
+                    From the given list, &radic;4.00 = 2.0.
+                    <br><strong>Solution: 2.0 m&sup2;</strong>
+                </div>
+            </li>
+            <li>
+                What is the body surface area of someone who is <strong>1.8 metres</strong> tall and <strong>88.2 Kg</strong> in weight?
+                <div class="solution-details">
+                    Convert height to cm: 1.8 metres = 180 cm.
+                    BSA = &radic;((180 cm &times; 88.2 Kg) &divide; 3600)
+
+                    Simplify the fraction:
+                    (180 &times; 88.2) &divide; 3600
+                    Cancel a zero from the numerator (180) and denominator (3600) by dividing both by 10:
+                    = (18 &times; 88.2) &divide; 360
+                    Divide the numerator (18) and denominator (360) by 18:
+                    = (1 &times; 88.2) &divide; 20
+                    Now, divide 88.2 by 20:
+                    = 4.41
+
+                    BSA = &radic;4.41
+                    From the given list, &radic;4.41 = 2.1.
+                    <br><strong>Solution: 2.1 m&sup2;</strong>
+                </div>
+            </li>
+            <li>
+                What is the body surface area of someone who is <strong>1.8 metres</strong> tall and <strong>57.8 Kg</strong> in weight?
+                <div class="solution-details">
+                    Convert height to cm: 1.8 metres = 180 cm.
+                    BSA = &radic;((180 cm &times; 57.8 Kg) &divide; 3600)
+
+                    Simplify the fraction:
+                    (180 &times; 57.8) &divide; 3600
+                    Cancel a zero from the numerator (180) and denominator (3600) by dividing both by 10:
+                    = (18 &times; 57.8) &divide; 360
+                    Divide the numerator (18) and denominator (360) by 18:
+                    = (1 &times; 57.8) &divide; 20
+                    Now, divide 57.8 by 20:
+                    = 2.89
+
+                    BSA = &radic;2.89
+                    From the given list, &radic;2.89 = 1.7.
+                    <br><strong>Solution: 1.7 m&sup2;</strong>
+                </div>
+            </li>
+            <li>
+                What is the body surface area of someone who is <strong>1.5 metres</strong> tall and <strong>54 Kg</strong> in weight?
+                <div class="solution-details">
+                    Convert height to cm: 1.5 metres = 150 cm.
+                    BSA = &radic;((150 cm &times; 54 Kg) &divide; 3600)
+
+                    Simplify the fraction:
+                    (150 &times; 54) &divide; 3600
+                    Cancel a zero from the numerator (150) and denominator (3600) by dividing both by 10:
+                    = (15 &times; 54) &divide; 360
+                    Divide the numerator (54) and denominator (360) by 9:
+                    = (15 &times; 6) &divide; 40
+                    Divide the numerator (6) and denominator (40) by 2:
+                    = (15 &times; 3) &divide; 20
+                    Multiply 15 by 3:
+                    = 45 &divide; 20
+                    = 2.25
+
+                    BSA = &radic;2.25
+                    From the given list, &radic;2.25 = 1.5.
+                    <br><strong>Solution: 1.5 m&sup2;</strong>
+                </div>
+            </li>
+            <li>
+                What is the body surface area of someone who is <strong>1.6 metres</strong> tall and <strong>57.6 Kg</strong> in weight?
+                <div class="solution-details">
+                    Convert height to cm: 1.6 metres = 160 cm.
+                    BSA = &radic;((160 cm &times; 57.6 Kg) &divide; 3600)
+
+                    Simplify the fraction:
+                    (160 &times; 57.6) &divide; 3600
+                    Cancel a zero from the numerator (160) and denominator (3600) by dividing both by 10:
+                    = (16 &times; 57.6) &divide; 360
+                    Divide the numerator (57.6) and denominator (360) by 9:
+                    = (16 &times; 6.4) &divide; 40
+                    Divide the numerator (6.4) and denominator (40) by 4:
+                    = (16 &times; 1.6) &divide; 10
+                    Multiply 16 by 1.6:
+                    = 25.6 &divide; 10
+                    = 2.56
+
+                    BSA = &radic;2.56
+                    From the given list, &radic;2.56 = 1.6.
+                    <br><strong>Solution: 1.6 m&sup2;</strong>
+                </div>
+            </li>
+            <li>
+                What is the body surface area of someone who is <strong>1.7 metres</strong> tall and <strong>61.2 Kg</strong> in weight?
+                <div class="solution-details">
+                    Convert height to cm: 1.7 metres = 170 cm.
+                    BSA = &radic;((170 cm &times; 61.2 Kg) &divide; 3600)
+
+                    Simplify the fraction:
+                    (170 &times; 61.2) &divide; 3600
+                    Cancel a zero from the numerator (170) and denominator (3600) by dividing both by 10:
+                    = (17 &times; 61.2) &divide; 360
+                    Divide the numerator (61.2) and denominator (360) by 9:
+                    = (17 &times; 6.8) &divide; 40
+                    Divide the numerator (6.8) and denominator (40) by 4:
+                    = (17 &times; 1.7) &divide; 10
+                    Multiply 17 by 1.7:
+                    = 28.9 &divide; 10
+                    = 2.89
+
+                    BSA = &radic;2.89
+                    From the given list, &radic;2.89 = 1.7.
+                    <br><strong>Solution: 1.7 m&sup2;</strong>
+                </div>
+            </li>
+            <li>
+                What is the body surface area of someone who is <strong>1.8 metres</strong> tall and <strong>72.2 Kg</strong> in weight?
+                <div class="solution-details">
+                    Convert height to cm: 1.8 metres = 180 cm.
+                    BSA = &radic;((180 cm &times; 72.2 Kg) &divide; 3600)
+
+                    Simplify the fraction:
+                    (180 &times; 72.2) &divide; 3600
+                    Cancel a zero from the numerator (180) and denominator (3600) by dividing both by 10:
+                    = (18 &times; 72.2) &divide; 360
+                    Divide the numerator (18) and denominator (360) by 18:
+                    = (1 &times; 72.2) &divide; 20
+                    Now, divide 72.2 by 20:
+                    = 3.61
+
+                    BSA = &radic;3.61
+                    From the given list, &radic;3.61 = 1.9.
+                    <br><strong>Solution: 1.9 m&sup2;</strong>
+                </div>
+            </li>
+            <li>
+                What is the body surface area of someone who is <strong>1.92 metres</strong> tall and <strong>75 Kg</strong> in weight?
+                <div class="solution-details">
+                    Convert height to cm: 1.92 metres = 192 cm.
+                    BSA = &radic;((192 cm &times; 75 Kg) &divide; 3600)
+
+                    Simplify the fraction:
+                    (192 &times; 75) &divide; 3600
+                    Divide the numerator (192) and denominator (3600) by 4:
+                    = (48 &times; 75) &divide; 900
+                    Divide the numerator (48) and denominator (900) by 4:
+                    = (12 &times; 75) &divide; 225
+                    Divide the numerator (75) and denominator (225) by 5:
+                    = (12 &times; 15) &divide; 45
+                    Divide the numerator (15) and denominator (45) by 5:
+                    = (12 &times; 3) &divide; 9
+                    Divide the numerator (3) and denominator (9) by 3:
+                    = (12 &times; 1) &divide; 3
+                    Multiply 12 by 1:
+                    = 12 &divide; 3
+                    Divide 12 by 3:
+                    = 4
+                    = 4.00
+
+                    BSA = &radic;4.00
+                    From the given list, &radic;4.00 = 2.0.
+                    <br><strong>Solution: 2.0 m&sup2;</strong>
+                </div>
+            </li>
+            <li>
+                What is the body surface area of someone who is <strong>1.8 metres</strong> tall and <strong>96.8 Kg</strong> in weight?
+                <div class="solution-details">
+                    Convert height to cm: 1.8 metres = 180 cm.
+                    BSA = &radic;((180 cm &times; 96.8 Kg) &divide; 3600)
+
+                    Simplify the fraction:
+                    (180 &times; 96.8) &divide; 3600
+                    Cancel a zero from the numerator (180) and denominator (3600) by dividing both by 10:
+                    = (18 &times; 96.8) &divide; 360
+                    Divide the numerator (18) and denominator (360) by 18:
+                    = (1 &times; 96.8) &divide; 20
+                    Now, divide 96.8 by 20:
+                    = 4.84
+
+                    BSA = &radic;4.84
+                    From the given list, &radic;4.84 = 2.2.
+                    <br><strong>Solution: 2.2 m&sup2;</strong>
+                </div>
+            </li>
+            <li>
+                What is the body surface area of someone who is <strong>1.8 metres</strong> tall and <strong>105.8 Kg</strong> in weight?
+                <div class="solution-details">
+                    Convert height to cm: 1.8 metres = 180 cm.
+                    BSA = &radic;((180 cm &times; 105.8 Kg) &divide; 3600)
+
+                    Simplify the fraction:
+                    (180 &times; 105.8) &divide; 3600
+                    Cancel a zero from the numerator (180) and denominator (3600) by dividing both by 10:
+                    = (18 &times; 105.8) &divide; 360
+                    Divide the numerator (18) and denominator (360) by 18:
+                    = (1 &times; 105.8) &divide; 20
+                    Now, divide 105.8 by 20:
+                    = 5.29
+
+                    BSA = &radic;5.29
+                    From the given list, &radic;5.29 = 2.3.
+                    <br><strong>Solution: 2.3 m&sup2;</strong>
+                </div>
+            </li>
+        </ol>
+
+        <hr>
+    </div>
+
+</body>
+</html>
