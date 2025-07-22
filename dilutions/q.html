@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dilution Principles Questions</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0; /* Reset default body margin */
+            line-height: 1.6;
+            padding-top: 60px; /* Space for the fixed header */
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #4CAF50; /* Green background for the navbar */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000; /* Ensure navbar stays on top */
+            display: flex;
+            justify-content: flex-start; /* Align items to the start */
+            align-items: center;
+            padding: 10px 20px;
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+            border-radius: 8px; /* Rounded corners for links */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+            margin-right: 10px; /* Space between links */
+        }
+        .navbar a:hover {
+            background-color: #5cb85c; /* Lighter green on hover */
+            color: white;
+        }
+        .content {
+            margin: 20px; /* Margin for the main content */
+        }
+        h1, h2 {
+            color: #333;
+        }
+        strong {
+            font-weight: bold;
+        }
+        .instructions, .formulae {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px; /* Rounded corners for info boxes */
+        }
+        ol {
+            counter-reset: item;
+            list-style-type: none;
+            padding-left: 40px; /* Increased padding for the whole list */
+        }
+        ol li {
+            display: block;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 2.5em; /* Space for the counter and a gap */
+        }
+        ol > li:before { /* This rule now only applies to direct children of <ol> */
+            content: counter(item) ". ";
+            counter-increment: item;
+            position: absolute;
+            left: 0; /* Position relative to the li's padding-box */
+            font-weight: bold;
+            text-align: right; /* Align numbers to the right within their space */
+            width: 2em; /* Give numbers a fixed width */
+        }
+        ul { /* Style for unordered lists, specifically for formula items */
+            list-style-type: disc;
+            margin-left: 20px; /* Indent for nested ul */
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <div class="navbar">
+        <a href="../index.html">Home</a> <!-- Adjusted path for topic folders -->
+        <a href="s.html">Solutions</a> <!-- Link for solutions within topic folder -->
+    </div>
+
+    <div class="content">
+        <h1>Dilution Principles Questions</h1>
+
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <p>No calculators</p>
+        </div>
+
+        <div class="formulae">
+            <h2>For Your Information:</h2>
+            <em>Formula: C1V1 = C2V2</em>
+        </div>
+
+        <hr>
+
+        <ol>
+            <li>You need to prepare <strong>500 mL</strong> of a <strong>2% w/v</strong> solution. You have a stock solution of <strong>10% w/v</strong>. How much of the stock solution do you need in mL?</li>
+            <li>You have <strong>20 mL</strong> of a <strong>50 mg/mL</strong> solution. You dilute it to a final concentration of <strong>10 mg/mL</strong>. What is the final volume in mL?</li>
+            <li>If you dilute <strong>200 mL</strong> of a <strong>10% w/v</strong> solution to a final volume of <strong>400 mL</strong>, what is the final concentration in %w/v?</li>
+            <li>A <strong>50 mL</strong> stock solution is diluted to a final volume of <strong>250 mL</strong>, resulting in a concentration of <strong>20 mg/mL</strong>. What was the original concentration of the stock solution in mg/mL?</li>
+            <li>You dilute <strong>50 mL</strong> of a <strong>4% w/v</strong> solution to a final volume of <strong>200 mL</strong>. What is the final concentration in mg/mL?</li>
+            <li>You dilute <strong>100 mL</strong> of a <strong>20 mg/mL</strong> solution to a final volume of <strong>500 mL</strong>. What is the final concentration in %w/v?</li>
+            <li>You dilute <strong>100 mL</strong> of a <strong>1 in 100</strong> solution to a final volume of <strong>500 mL</strong>. What is the final strength expressed as <strong>1 in X</strong>?</li>
+            <li>You need to make <strong>200 mL</strong> of a <strong>1 in 2000</strong> solution. You have a stock solution of <strong>1 in 500</strong>. How much of the stock solution do you need in mL?</li>
+            <li>You have a stock solution of <strong>25% w/v</strong>. You need to prepare <strong>100 mL</strong> of a <strong>5% w/v</strong> solution. How much of the stock solution do you need in mL?</li>
+            <li>You have <strong>500 mL</strong> of a <strong>2 mg/mL</strong> solution. You want to dilute it to a final concentration of <strong>0.5 mg/mL</strong>. What is the final volume in mL?</li>
+            <li>You need to prepare <strong>250 mL</strong> of a <strong>4 mg/mL</strong> solution. You have a stock solution of <strong>20 mg/mL</strong>. How much of the stock solution do you need in mL?</li>
+            <li>If you dilute <strong>50 mL</strong> of an <strong>8% w/v</strong> solution to a final volume of <strong>400 mL</strong>, what is the final concentration in %w/v?</li>
+            <li>You have <strong>15 mL</strong> of a <strong>1 in 200</strong> solution. You dilute it to a final strength of <strong>1 in 1000</strong>. What is the final volume in mL?</li>
+            <li>You have a stock solution of <strong>40 mg/mL</strong>. You need to prepare <strong>200 mL</strong> of a <strong>10 mg/mL</strong> solution. How much of the stock solution do you need in mL?</li>
+            <li>You need to prepare <strong>500 mL</strong> of a <strong>1 in 200</strong> solution. You have a stock solution of <strong>1 in 50</strong>. How much of the stock solution do you need in mL?</li>
+            <li>You need to prepare <strong>1000 mL</strong> of a <strong>0.5% w/v</strong> solution. You have a stock solution of <strong>20% w/v</strong>. How much of the stock solution do you need in mL?</li>
+            <li>You dilute <strong>250 mL</strong> of a <strong>1 in 500</strong> solution to a final volume of <strong>1000 mL</strong>. What is the final strength expressed as <strong>1 in X</strong>?</li>
+            <li>You have <strong>300 mL</strong> of a <strong>15% w/v</strong> solution. You want to dilute it to a final concentration of <strong>3% w/v</strong>. What is the final volume in mL?</li>
+            <li>You have a stock solution that is <strong>1 in 20</strong>. How much of this stock solution do you need in mL to make <strong>250 mL</strong> of a <strong>1 in 100</strong> solution?</li>
+            <li>You need to prepare <strong>200 mL</strong> of a <strong>5 mg/mL</strong> solution. You have a stock solution of <strong>50 mg/mL</strong>. How much of the stock solution do you need in mL?</li>
+        </ol>
+
+        <hr>
+    </div>
+
+</body>
+</html>
