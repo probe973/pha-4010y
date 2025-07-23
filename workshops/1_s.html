@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop 1: Solutions</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0; /* Reset default body margin */
+            line-height: 1.6;
+            padding-top: 60px; /* Space for the fixed header */
+            background-color: #f4f4f4; /* Light background for the page */
+            color: #333;
+            font-size: 18px; /* Consistent base font size for all text (now 18px) */
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #45ac8b; /* New background color for the navbar */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000; /* Ensure navbar stays on top */
+            display: flex;
+            justify-content: flex-start; /* Align items to the start */
+            align-items: center;
+            padding: 10px 20px;
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: black; /* Changed text color to black */
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px; /* Fixed size for navbar links */
+            border-radius: 8px; /* Rounded corners for links */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+            margin-right: 10px; /* Space between links */
+        }
+        .navbar a:hover {
+            background-color: #5cb85c; /* Lighter green on hover */
+            color: black;
+        }
+        .content {
+            margin: 20px auto; /* Center content with auto margins */
+            max-width: 800px; /* Max width for readability */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 40px; /* Space before new section */
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em !important; /* Consistent heading size relative to base (18px * 2 = 36px) */
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5em !important; /* Consistent heading size relative to base (18px * 1.5 = 27px) */
+        }
+        p {
+            text-align: left; /* Default text alignment */
+            margin-bottom: 15px;
+            font-size: 1em !important; /* Paragraph font size relative to body (18px) */
+        }
+        ul {
+            list-style-type: none; /* Remove default bullet points */
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 20px; /* Indent list items */
+            position: relative;
+            font-size: 1em !important; /* Consistent list item font size (18px) */
+        }
+        ul li:before {
+            content: "\2022"; /* Unicode for a bullet point */
+            color: #4CAF50; /* Green bullet point */
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .solution-list ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+        .solution-list ol li {
+            margin-bottom: 20px; /* Space between solutions */
+            font-size: 1em !important; /* Consistent solution list item font size (18px) */
+        }
+        .solution-list ol li p {
+            margin-left: 20px; /* Indent for solution text */
+            font-size: 1em !important; /* Consistent font size for solution paragraphs (18px) */
+        }
+        /* Styling for nested sub-solutions (a, b, c) */
+        .solution-list ol li p.sub-solution-label {
+            margin-left: 20px; /* Indent for a, b, c paragraphs */
+            margin-bottom: 5px; /* Smaller margin for sub-solutions */
+            font-weight: bold; /* Make a, b, c bold */
+            font-size: 1em !important; /* Consistent font size for a,b,c labels (18px) */
+        }
+        .solution-list ol li p.sub-solution-text {
+            margin-left: 40px; /* Further indent for the actual solution text */
+            margin-bottom: 5px;
+            font-size: 1em !important; /* Consistent font size for a,b,c solution text (18px) */
+        }
+
+        /* Adjust MathJax inline font size for fractions */
+        mjx-container {
+            font-size: 1em !important; /* Make MathJax container match parent font size (18px) */
+        }
+        mjx-container[display="inline"] {
+            font-size: 1.1em !important; /* Make inline fractions 10% larger than 18px (19.8px) */
+            vertical-align: -0.2em !important; /* Adjusted vertical alignment for better visual balance */
+        }
+    </style>
+    <!-- MathJax for LaTeX rendering -->
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            options: {
+                // Removed global scale here, relying on CSS for precise control
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <div class="navbar">
+        <a href="../index.html">Home</a> <!-- Link back to index.html -->
+        <a href="1.html">Questions</a> <!-- Link to questions for this workshop -->
+    </div>
+
+    <div class="content">
+        <h1>Workshop 1: Answers and Solutions</h1>
+
+        <div class="section">
+            <h2>Arithmetic</h2>
+            <ol class="solution-list">
+                <li>$125+200+50+75=450$</li>
+                <li>$500-250=250$</li>
+                <li>$250-500=-250$</li>
+                <li>$40+120-30+500-300=330$</li>
+                <li>$50\times7=350$</li>
+                <li>$30\times0.8=24$</li>
+                <li>$240\times0.12=28.8$</li>
+                <li>$3368\div8=421$</li>
+                <li>$2862\div6=477$</li>
+                <li>$1170\div12=97.5$</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Fractions</h2>
+            <h3>Write each of these fractions in their lowest terms:</h3>
+            <ol class="solution-list">
+                <li>$\frac{25}{30}=\frac{5\times5}{5\times6}=\frac{5}{6}$</li>
+                <li>$\frac{25}{75}=\frac{25\times1}{25\times3}=\frac{1}{3}$</li>
+                <li>$\frac{18}{42}=\frac{6\times3}{6\times7}=\frac{3}{7}$</li>
+                <li>$\frac{45}{60}=\frac{15\times3}{15\times4}=\frac{3}{4}$</li>
+                <li>$\frac{81}{90}=\frac{9\times9}{9\times10}=\frac{9}{10}$</li>
+                <li>$\frac{90}{81}=\frac{9\times10}{9\times9}=\frac{10}{9}$</li>
+                <li>$\frac{64}{48}=\frac{16\times4}{16\times3}=\frac{4}{3}$</li>
+            </ol>
+            <h3>Perform the following calculations, and give the answer in the lowest terms:</h3>
+            <ol class="solution-list">
+                <li>$\frac{4}{9}+\frac{2}{9}=\frac{4+2}{9}=\frac{6}{9}=\frac{2}{3}$</li>
+                <li>$\frac{5}{8}-\frac{1}{8}=\frac{5-1}{8}=\frac{4}{8}=\frac{1}{2}$</li>
+                <li>$\frac{5}{8}\times\frac{3}{4}=\frac{5\times3}{8\times4}=\frac{15}{32}$</li>
+                <li>$\frac{4}{9}\times\frac{6}{11}=\frac{4\times6}{9\times11}=\frac{4\times2}{3\times11}=\frac{8}{33}$</li>
+                <li>$\frac{2}{7}\times3=\frac{2}{7}\times\frac{3}{1}=\frac{2\times3}{7\times1}=\frac{6}{7}$</li>
+                <li>$\frac{5}{12}\div\frac{2}{9}=\frac{5}{12}\times\frac{9}{2}=\frac{5\times3}{4\times2}=\frac{15}{8}$</li>
+                <li>$\frac{3}{10}\div\frac{6}{7}=\frac{3}{10}\times\frac{7}{6}=\frac{3\times7}{10\times2}=\frac{7}{20}$</li>
+                <li>$\frac{5}{8}\div4=\frac{5}{8}\times\frac{1}{4}=\frac{5\times1}{8\times4}=\frac{5}{32}$</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Standard Form</h2>
+            <ol class="solution-list">
+                <li>$52000=5.2\times10^{4}$</li>
+                <li>$420000=4.2\times10^{5}$</li>
+                <li>$642~million=642\times10^{6}=6.42\times10^{8}$</li>
+                <li>$452\times10^{64}=4.52\times10^{2}\times10^{64}=4.52\times10^{66}$</li>
+                <li>$0.05=5\times10^{-2}$</li>
+                <li>$0.000234=2.34\times10^{-4}$</li>
+                <li>$0.603=6.03\times10^{-1}$</li>
+                <li>$300\times10^{-8}=3\times10^{2}\times10^{-8}=3\times10^{-6}$</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Converting Units</h2>
+            <ol class="solution-list">
+                <li>3 kilograms into grams: $3\times10^{3}=3\times1000=3000~g$</li>
+                <li>16 litres into millilitres: $16\times10^{3}=16\times1000=16000~ml$</li>
+                <li>0.42 grams into milligrams: $0.42\times10^{3}=0.42\times1000=420~mg$</li>
+                <li>1.63 milligrams into micrograms: $1.63\times10^{3}=1.63\times1000=1630~mcg$</li>
+                <li>0.0034 grams into micrograms: $0.0034\times10^{6}=3.4\times10^{3}=3400~mcg$</li>
+                <li>420 milligrams into grams: $420\times10^{-3}=420\div1000=0.42~g$</li>
+                <li>24000 millilitres into litres: $24000\times10^{-3}=24~l$</li>
+                <li>650000 micrograms into grams: $650000\times10^{-6}=0.65~g$</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Mixed Questions</h2>
+            <ol class="solution-list">
+                <li>A patient requires 25 ml of drug, twice a day for 7 days. What is the total volume of drug that is required?<br>
+                    $25\times2\times7=50\times7=350~ml$</li><br><br>
+                <li>A patient requires 400 mg of a drug, three times a day for 10 days. How many grams of the drug are required in total?<br>
+                    $400\times3\times10=400\times30=12000~mg=12~g$</li><br><br>
+                <li>A patient requires 300 mg of a drug, twice a day for 4 days and then reduce the dose to a third and take it twice a day for 3 days. How many grams of the drug are required in total in grams?<br>
+                    $300\times2\times4=300\times8=2400~mg$<br>
+                    $300\times\frac{1}{3}=100mg$<br>
+                    $100\times2\times3=100\times6=600~mg$<br>
+                    Total: $2400~mg+600mg=3000mg=3gr$</li><br><br>
+                <li>During a day, a patient takes in water on 4 occasions. The amounts taken in are: 250 ml, 500 ml, 150 ml, and 125 ml. During the day they lose 785 ml of water. What is their net water intake?<br>
+                    $250+500+150+125-785=1025-785=240~ml$</li><br><br>
+                <li>A patient is currently taking 500 mg of a drug daily. It is decided that the patient should now only take three-quarters of what they are now taking. What is the patient's new dose?<br>
+                    $\frac{3}{4}\times500=\frac{3}{4}\times\frac{500}{1}=\frac{3\times500}{4\times1}=\frac{3\times125}{1\times1}=375~mg$</li><br><br>
+                <li>To celebrate a pharmacist's birthday, their colleagues get them a cake. It is put out before the start of the celebration. When the celebration starts, they find that someone has been in and eaten $\frac{1}{4}$ of the cake. They moan a bit and then decide to start eating what is left. The pharmacist with the birthday takes $\frac{1}{3}$ of the remaining cake. The other 5 guests then share the remainder equally between them.
+                    <p class="sub-solution-label"><b>a.</b> What fraction of the total cake does the birthday pharmacist get?</p>
+                    <p class="sub-solution-text">Fraction at start of celebration is $1-\frac{1}{4}=\frac{4}{4}-\frac{1}{4}=\frac{3}{4}$</p>
+                    <p class="sub-solution-text">Birthday pharmacist takes $\frac{1}{3}\times\frac{3}{4}=\frac{1\times3}{3\times4}=\frac{1\times1}{1\times4}=\frac{1}{4}$ of the total cake</p>
+                    <p class="sub-solution-label"><b>b.</b> What fraction of the total cake do the other guests each get?</p>
+                    <p class="sub-solution-text">Birthday thief + birthday pharmacist has eaten $\frac{1}{4}+\frac{1}{4}=\frac{2}{4}=\frac{1}{2}$ of cake.</p>
+                    <p class="sub-solution-text">Remaining is $1-\frac{1}{2}=\frac{2}{2}-\frac{1}{2}=\frac{1}{2}$ of the cake</p>
+                    <p class="sub-solution-text">5 guests share this: $\frac{1}{2}\div5=\frac{1}{2}\times\frac{1}{5}=\frac{1}{10}$ of the cake each</p>
+                </li><br><br>
+                <li>The human body has between 4500 ml to 5700 ml of blood. If a person, at the upper end of this scale, loses 1.2 litres of blood, how many ml of blood would they now have (assuming new blood hasn't had time to be created within the body).<br>
+                    $1.2~l=1.2\times10^{3}=1200~ml$<br>
+                    $5700-1200=4500~ml$ or $4.5~l$</li><br><br>
+                <li>If a mixture is to be 15 mg in 1 ml, how many mg are required to make 50 ml?<br>
+                    $\frac{15}{1}\times50=150\times5=750~mg$</li><br><br>
+                <li>If a medicine is described as 8 g in 100 ml, how many mg are given if a patient receives a dose of 25 ml?<br>
+                    $\frac{8}{100}\times25=\frac{8\times25}{100}=\frac{8\times1}{4}=2g$</li><br><br>
+                <li>You have the following formula to create 300 ml of a particular medications X:
+                    <ul>
+                        <li>Ingredient A: 30 mg</li>
+                        <li>Ingredient B: 180 mg</li>
+                        <li>Ingredient C: 15 ml</li>
+                        <li>Water to 300 ml</li>
+                    </ul>
+                    <p class="sub-solution-label"><b>a.</b> How much of each ingredient you need to make 30 ml of the medication.</p>
+                    <p class="sub-solution-text">Since Water to $\frac{300}{10}=30ml$</p>
+                    <p class="sub-solution-text">Then</p>
+                    <p class="sub-solution-text">Ingredient A: $\frac{30}{10}=3~mg$</p>
+                    <p class="sub-solution-text">Ingredient B: $\frac{180}{10}=18mg$</p>
+                    <p class="sub-solution-text">Ingredient C: $\frac{15}{10}=1.5ml$</p>
+                    <p class="sub-solution-label"><b>b.</b> How much of each ingredient you need to make two thirds of the medication.</p>
+                    <p class="sub-solution-text">Ingredient A: $\frac{2}{3}\times30=20~mg$</p>
+                    <p class="sub-solution-text">Ingredient B: $\frac{2}{3}\times180=120mg$</p>
+                    <p class="sub-solution-text">Ingredient C: $\frac{2}{3}\times15=10ml$</p>
+                    <p class="sub-solution-text">Water to $\frac{2}{3}\times300=200~ml$</p>
+                    <p class="sub-solution-label"><b>c.</b> How much of the ingredients is needed to make 1 l of the medication X. Express your answers in grams and litres.</p>
+                    <p class="sub-solution-text">Note that if we multiply the water by $\frac{10}{3}$</p>
+                    <p class="sub-solution-text">Water to $\frac{10}{3}\times300=1000~ml=1l$</p>
+                    <p class="sub-solution-text">Then we have 1 litre</p>
+                    <p class="sub-solution-text">Ingredient A: $\frac{10}{3}\times30=100~mg$</p>
+                    <p class="sub-solution-text">Ingredient B: $\frac{10}{3}\times180=600mg$</p>
+                    <p class="sub-solution-text">Ingredient C: $\frac{10}{3}\times15=50ml$</p>
+                </li>
+            </ol>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop 4: Imperial Units and Calculating Body Indices - Answers and Solutions</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0; /* Reset default body margin */
+            line-height: 1.6;
+            padding-top: 60px; /* Space for the fixed header */
+            background-color: #f4f4f4; /* Light background for the page */
+            color: #333;
+            font-size: 18px; /* Consistent base font size for all text */
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #45ac8b; /* New background color for the navbar */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000; /* Ensure navbar stays on top */
+            display: flex;
+            align-items: center; /* Vertically center items */
+            justify-content: flex-start; /* Align items to the start (left) */
+            padding: 10px 20px;
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .navbar a {
+            display: block; /* Use block for flexbox */
+            color: black; /* Changed text color to black */
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px; /* Fixed size for navbar links */
+            border-radius: 8px; /* Rounded corners for links */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+            margin-right: 10px; /* Space between links */
+        }
+        .navbar-title {
+            color: black;
+            font-size: 1.2em; /* Slightly larger for the title */
+            font-weight: bold;
+            margin-left: 10px; /* Small margin to separate from links */
+        }
+        .content {
+            margin: 20px auto; /* Center content with auto margins */
+            max-width: 800px; /* Max width for readability */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 40px; /* Space before new section */
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em !important; /* Consistent heading size relative to base (18px * 2 = 36px) */
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5em !important; /* Consistent heading size relative to base (18px * 1.5 = 27px) */
+        }
+        p {
+            text-align: left; /* Default text alignment */
+            margin-bottom: 15px; /* Default paragraph spacing */
+            font-size: 1em !important; /* Paragraph font size relative to body (18px) */
+        }
+        ul {
+            list-style-type: disc; /* Revert to default bullet points */
+            padding-left: 20px; /* Standard indent for lists */
+            text-align: left; /* Ensure list is left-aligned */
+        }
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 0; /* Reset custom padding */
+            position: relative;
+            font-size: 1em !important; /* Consistent list item font size (18px) */
+            display: list-item; /* Revert to default list item display */
+            text-align: left; /* Ensure text is left-aligned */
+        }
+        ul li:before {
+            /* Remove custom bullet point as default disc will be used */
+            content: none;
+        }
+        .solution-list ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+        .solution-list ol li {
+            margin-bottom: 70px; /* Significantly increased space between main solutions */
+            font-size: 1em !important; /* Consistent solution list item font size (18px) */
+        }
+        .solution-list ol li p {
+            margin-left: 20px; /* Indent for solution text */
+            margin-bottom: 15px; /* Ensure spacing between solution lines/paragraphs */
+            font-size: 1em !important; /* Consistent font size for solution paragraphs (18px) */
+        }
+        /* Styling for nested sub-solutions (a, b, c) */
+        .solution-list ol li p.sub-solution-label {
+            margin-left: 20px; /* Indent for a, b, c labels */
+            margin-top: 25px; /* Added top margin for clear separation from previous content */
+            margin-bottom: 20px; /* Increased margin for sub-solutions labels */
+            font-weight: bold; /* Make a, b, c bold */
+            font-size: 1em !important; /* Consistent font size for a,b,c labels (18px) */
+        }
+        .solution-list ol li p.sub-solution-text {
+            margin-left: 40px; /* Further indent for the actual solution text */
+            margin-bottom: 15px; /* Increased margin for sub-solution text lines */
+            font-size: 1em !important; /* Consistent font size for a,b,c solution text (18px) */
+        }
+
+        /* Adjust MathJax inline font size for equations */
+        mjx-container {
+            font-size: 1em !important; /* Make MathJax container match parent font size (18px) */
+        }
+        mjx-container[display="inline"] {
+            font-size: 1.1em !important; /* Make inline equations 10% larger than 18px (19.8px) */
+            vertical-align: -0.2em !important; /* Adjusted vertical alignment for better visual balance */
+        }
+        .centered-formula {
+            text-align: center;
+        }
+    </style>
+    <!-- MathJax for LaTeX rendering -->
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            options: {
+                // Global scaling for all MathJax output. 1.1 is 10% larger than the base font.
+                scale: 1.1
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <div class="navbar">
+        <a href="../index.html">Home</a> <!-- Link back to index.html -->
+        <a href="4.html">Questions</a> <!-- Link to questions for this workshop -->
+        <span class="navbar-title">Imperial Units and Calculating Body Indices - Answers and Solutions</span>
+    </div>
+
+    <div class="content">
+        <h1>Workshop: Imperial Units and Calculating Body Indices - Answers and Solutions</h1>
+
+        <div class="section">
+            <h2>Imperial and Metric Units for Volumes</h2>
+            <p>For this section you should use:</p>
+            <ul>
+                <li>1 pint $\approx$ 500 ml</li>
+                <li>1 gallon = 8 pints</li>
+            </ul>
+            <ol class="solution-list">
+                <li>Convert the following volumes into ml:
+                    <p class="sub-solution-label"><b>a.</b> 3 pints: $3~\text{pints} \times 500~\text{ml}/\text{pint} = 1500~\text{ml}$</p>
+                    <p class="sub-solution-label"><b>b.</b> 0.5 pints: $0.5~\text{pints} \times 500~\text{ml}/\text{pint} = 250~\text{ml}$</p>
+                    <p class="sub-solution-label"><b>c.</b> 3 gallons: $3~\text{gallons} \times 8~\text{pints}/\text{gallon} \times 500~\text{ml}/\text{pint} = 12000~\text{ml}$</p>
+                </li><br><br>
+                <li>Convert the following volumes into pints:
+                    <p class="sub-solution-label"><b>a.</b> 2000 ml: $2000~\text{ml} / 500~\text{ml}/\text{pint} = 4~\text{pints}$</p>
+                    <p class="sub-solution-label"><b>b.</b> 3.5 l: $3.5~\text{l} = 3500~\text{ml}$, so $3500~\text{ml} / 500~\text{ml}/\text{pint} = 7~\text{pints}$</p>
+                    <p class="sub-solution-label"><b>c.</b> 4 gallons: $4~\text{gallons} \times 8~\text{pints}/\text{gallon} = 32~\text{pints}$</p>
+                    <p class="sub-solution-label"><b>d.</b> 125 ml: $125~\text{ml} / 500~\text{ml}/\text{pint} = 0.25~\text{pints}$</p>
+                </li><br><br>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Imperial and Metric Units for Mass</h2>
+            <p>For this section you should use:</p>
+            <ul>
+                <li>1 $\text{kg}\approx2$ lbs (pounds)</li>
+                <li>1 $\text{lb}=16~\text{oz}$ (ounces)</li>
+                <li>1 stone = 14 lbs</li>
+            </ul>
+            <ol class="solution-list" start="3">
+                <li>Convert the following masses into lbs (pounds):
+                    <p class="sub-solution-label"><b>a.</b> 5 kg: $5~\text{kg} \times 2~\text{lbs}/\text{kg} = 10~\text{lbs}$</p>
+                    <p class="sub-solution-label"><b>b.</b> 500 g: $500~\text{g} = 0.5~\text{kg}$, so $0.5~\text{kg} \times 2~\text{lbs}/\text{kg} = 1~\text{lb}$</p>
+                    <p class="sub-solution-label"><b>c.</b> 3500 g: $3500~\text{g} = 3.5~\text{kg}$, so $3.5~\text{kg} \times 2~\text{lbs}/\text{kg} = 7~\text{lbs}$</p>
+                    <p class="sub-solution-label"><b>d.</b> 32 oz: $32~\text{oz} / 16~\text{oz}/\text{lb} = 2~\text{lbs}$</p>
+                    <p class="sub-solution-label"><b>e.</b> 8 oz: $8~\text{oz} / 16~\text{oz}/\text{lb} = 0.5~\text{lbs}$</p>
+                    <p class="sub-solution-label"><b>f.</b> 2 stone: $2~\text{stone} \times 14~\text{lbs}/\text{stone} = 28~\text{lbs}$</p>
+                    <p class="sub-solution-label"><b>g.</b> 10 stone 4 lbs: $(10~\text{stone} \times 14~\text{lbs}/\text{stone}) + 4~\text{lbs} = 140~\text{lbs} + 4~\text{lbs} = 144~\text{lbs}$</p>
+                    <p class="sub-solution-label"><b>h.</b> 12 stone 12 lbs: $(12~\text{stone} \times 14~\text{lbs}/\text{stone}) + 12~\text{lbs} = 168~\text{lbs} + 12~\text{lbs} = 180~\text{lbs}$</p>
+                </li><br><br>
+                <li>Convert the following into stone:
+                    <p class="sub-solution-label"><b>a.</b> 280 lbs: $280~\text{lbs} / 14~\text{lbs}/\text{stone} = 20~\text{stone}$</p>
+                    <p class="sub-solution-label"><b>b.</b> 84 lbs: $84~\text{lbs} / 14~\text{lbs}/\text{stone} = 6~\text{stone}$</p>
+                    <p class="sub-solution-label"><b>c.</b> 70 kg: $70~\text{kg} \times 2~\text{lbs}/\text{kg} = 140~\text{lbs}$, so $140~\text{lbs} / 14~\text{lbs}/\text{stone} = 10~\text{stone}$</p>
+                </li><br><br>
+                <li>Convert the following masses into stone and lbs (e.g. 12 stone 5 lbs):
+                    <p class="sub-solution-label"><b>a.</b> 150 lbs: $150~\text{lbs} / 14 = 10$ with remainder $10~\text{lbs}$, so 10 stone 10 lbs</p>
+                    <p class="sub-solution-label"><b>b.</b> 200 lbs: $200~\text{lbs} / 14 = 14$ with remainder $4~\text{lbs}$, so 14 stone 4 lbs</p>
+                    <p class="sub-solution-label"><b>c.</b> 55 kg: $55~\text{kg} \times 2~\text{lbs}/\text{kg} = 110~\text{lbs}$, so $110~\text{lbs} / 14 = 7$ with remainder $12~\text{lbs}$, so 7 stone 12 lbs</p>
+                    <p class="sub-solution-label"><b>d.</b> 82 kg: $82~\text{kg} \times 2~\text{lbs}/\text{kg} = 164~\text{lbs}$, so $164~\text{lbs} / 14 = 11$ with remainder $10~\text{lbs}$, so 11 stone 10 lbs</p>
+                </li><br><br>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Imperial and Metric Units for Length</h2>
+            <p>For this section you should use:</p>
+            <ul>
+                <li>1 inch $\approx$ 2.5 cm</li>
+                <li>1 ft (foot) = 12 inches</li>
+            </ul>
+            <ol class="solution-list" start="6">
+                <li>Convert the following lengths into cm:
+                    <p class="sub-solution-label"><b>a.</b> 10 inches: $10~\text{inches} \times 2.5~\text{cm}/\text{inch} = 25~\text{cm}$</p>
+                    <p class="sub-solution-label"><b>b.</b> 1 ft: $1~\text{ft} = 12~\text{inches}$, so $12~\text{inches} \times 2.5~\text{cm}/\text{inch} = 30~\text{cm}$</p>
+                    <p class="sub-solution-label"><b>c.</b> 5 ft 3 inches: $5~\text{ft} = 60~\text{inches}$, so $(60+3)~\text{inches} \times 2.5~\text{cm}/\text{inch} = 63~\text{inches} \times 2.5~\text{cm}/\text{inch} = 157.5~\text{cm}$</p>
+                    <p class="sub-solution-label"><b>d.</b> 6 ft 6 inches: $6~\text{ft} = 72~\text{inches}$, so $(72+6)~\text{inches} \times 2.5~\text{cm}/\text{inch} = 78~\text{inches} \times 2.5~\text{cm}/\text{inch} = 195~\text{cm}$</p>
+                </li><br><br>
+                <li>Convert the following lengths into ft and inches (e.g. 5 ft 8 inches):
+                    <p class="sub-solution-label"><b>a.</b> 240 inches: $240~\text{inches} / 12~\text{inches}/\text{ft} = 20~\text{ft}$</p>
+                    <p class="sub-solution-label"><b>b.</b> 100 inches: $100~\text{inches} / 12~\text{inches}/\text{ft} = 8$ with remainder $4~\text{inches}$, so 8 ft 4 inches</p>
+                    <p class="sub-solution-label"><b>c.</b> 75 inches: $75~\text{inches} / 12~\text{inches}/\text{ft} = 6$ with remainder $3~\text{inches}$, so 6 ft 3 inches</p>
+                    <p class="sub-solution-label"><b>d.</b> 50 cm: $50~\text{cm} / 2.5~\text{cm}/\text{inch} = 20~\text{inches}$, so $20~\text{inches} / 12~\text{inches}/\text{ft} = 1$ with remainder $8~\text{inches}$, so 1 ft 8 inches</p>
+                    <p class="sub-solution-label"><b>e.</b> 2 m: $2~\text{m} = 200~\text{cm}$, so $200~\text{cm} / 2.5~\text{cm}/\text{inch} = 80~\text{inches}$, so $80~\text{inches} / 12~\text{inches}/\text{ft} = 6$ with remainder $8~\text{inches}$, so 6 ft 8 inches</p>
+                </li><br><br>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Body Mass Index</h2>
+            <p>The formula for body mass index (BMI):</p>
+            <p class="centered-formula">$BMI=\frac{\text{Mass}(\text{kg})}{(\text{Height}(\text{m}))^{2}}$</p>
+            <ol class="solution-list" start="8">
+                <li>What are the units of the BMI measurement?
+                    <p class="sub-solution-text">Units are $\text{kg}/\text{m}^{2}$</p>
+                </li><br><br>
+                <li>Find the BMI of the following people:
+                    <p class="sub-solution-label"><b>a.</b> Mass=90 $\text{kg}$, Height=2 $\text{m}$: $BMI = \frac{90~\text{kg}}{(2~\text{m})^{2}} = \frac{90}{4}~\text{kg}/\text{m}^{2} = 22.5~\text{kg}/\text{m}^{2}$</p>
+                    <p class="sub-solution-label"><b>b.</b> Mass=64 $\text{kg}$, Height=1.6 $\text{m}$: $BMI = \frac{64~\text{kg}}{(1.6~\text{m})^{2}} = \frac{64}{2.56}~\text{kg}/\text{m}^{2} = 25~\text{kg}/\text{m}^{2}$</p>
+                    <p class="sub-solution-label"><b>c.</b> Mass=64.8 $\text{kg}$, Height=180 $\text{cm}$: $180~\text{cm} = 1.8~\text{m}$, so $BMI = \frac{64.8~\text{kg}}{(1.8~\text{m})^{2}} = \frac{64.8}{3.24}~\text{kg}/\text{m}^{2} = 20~\text{kg}/\text{m}^{2}$</p>
+                </li><br><br>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Body Surface Area</h2>
+            <p>The formula for body surface area (BSA):</p>
+            <p class="centered-formula">$BSA(\text{m}^{2})=\sqrt{\frac{\text{Height}(\text{cm})\times \text{Mass}(\text{Kg})}{3600}}$</p>
+            <p>The following information may be useful:</p>
+            <p class="centered-formula">$\sqrt{2}\approx1.41\quad\sqrt{3}\approx1.73\quad\sqrt{5}\approx2.24\quad\sqrt{6}\approx2.45$</p>
+            <ol class="solution-list" start="10">
+                <li>Find the BSA of the following people:
+                    <p class="sub-solution-label"><b>a.</b> Height=180 $\text{cm}$, Mass=60 $\text{kg}$: $BSA = \sqrt{\frac{180 \times 60}{3600}} = \sqrt{\frac{18 \times 6}{36}} = \sqrt{\frac{108}{36}} = \sqrt{3} \approx 1.73~\text{m}^{2}$</p>
+                    <p class="sub-solution-label"><b>b.</b> Height=144 $\text{cm}$, Mass=50 $\text{kg}$: $BSA = \sqrt{\frac{144 \times 50}{3600}} = \sqrt{\frac{144 \times 1}{72}} = \sqrt{2} \approx 1.41~\text{m}^{2}$</p>
+                    <p class="sub-solution-label"><b>c.</b> Height=1.92 $\text{m}$, Mass=112.5 $\text{kg}$: $1.92~\text{m} = 192~\text{cm}$, so $BSA = \sqrt{\frac{192 \times 112.5}{3600}} = \sqrt{\frac{4 \times 112.5}{75}} = \sqrt{\frac{450}{75}} = \sqrt{6} \approx 2.45~\text{m}^{2}$</p>
+                </li><br><br>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Ideal Body Weight (IBW)</h2>
+            <p>Use this formula for IBW:</p>
+            <p class="centered-formula">Female: IBW ($\text{kg}$) = Height ($\text{cm}$)$\times0.9-92$</p>
+            <p class="centered-formula">Male: IBW ($\text{kg}$) = Height ($\text{cm}$)$\times0.9-88$</p>
+            <ol class="solution-list" start="11">
+                <li>What is the IBW for the following:
+                    <p class="sub-solution-label"><b>a.</b> Male, Height = 1.7 m: $1.7~\text{m} = 170~\text{cm}$, so $IBW = 170~\text{cm} \times 0.9 - 88 = 153 - 88 = 65~\text{kg}$</p>
+                    <p class="sub-solution-label"><b>b.</b> Female, Height = 1.8 m: $1.8~\text{m} = 180~\text{cm}$, so $IBW = 180~\text{cm} \times 0.9 - 92 = 162 - 92 = 70~\text{kg}$</p>
+                </li><br><br>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Mixed Question</h2>
+            <ol class="solution-list" start="12">
+                <li>For a person who is:
+                    <p>Male; Height $=6$ ft; Mass $=14$ stone 4 lbs</p>
+                    <p>Find, using the conversions given in the earlier part of this worksheet:</p>
+                    <p class="sub-solution-label"><b>a.</b> Their BSA</p>
+                    <p class="sub-solution-text">Height in cm: $6~\text{ft} = 72~\text{inches}$, $72~\text{inches} \times 2.5~\text{cm}/\text{inch} = 180~\text{cm}$</p>
+                    <p class="sub-solution-text">Mass in kg: $14~\text{stone}~4~\text{lbs} = (14 \times 14) + 4 = 196 + 4 = 200~\text{lbs}$, $200~\text{lbs} / 2~\text{lbs}/\text{kg} = 100~\text{kg}$</p>
+                    <p class="sub-solution-text">$BSA = \sqrt{\frac{180~\text{cm} \times 100~\text{kg}}{3600}} = \sqrt{\frac{180 \times 1}{36}} = \sqrt{5} \approx 2.24~\text{m}^{2}$</p>
+                    <p class="sub-solution-label"><b>b.</b> Their IBW</p>
+                    <p class="sub-solution-text">Height in cm: $6~\text{ft} = 180~\text{cm}$ (from part a)</p>
+                    <p class="sub-solution-text">Male IBW = Height ($\text{cm}$)$\times0.9-88 = 180~\text{cm} \times 0.9 - 88 = 162 - 88 = 74~\text{kg}$</p>
+                </li><br><br>
+            </ol>
+        </div>
+
+    </div>
+
+</body>
+</html>

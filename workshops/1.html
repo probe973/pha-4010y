@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop 1: Arithmetic</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0; /* Reset default body margin */
+            line-height: 1.6;
+            padding-top: 60px; /* Space for the fixed header */
+            background-color: #f4f4f4; /* Light background for the page */
+            color: #333;
+            font-size: 18px; /* Consistent base font size for all text (e.g., 18px) */
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #45ac8b; /* New background color for the navbar */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000; /* Ensure navbar stays on top */
+            display: flex;
+            justify-content: flex-start; /* Align items to the start */
+            align-items: center;
+            padding: 10px 20px;
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: black; /* Changed text color to black */
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px; /* This is a fixed size for the navbar links */
+            border-radius: 8px; /* Rounded corners for links */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+            margin-right: 10px; /* Space between links */
+        }
+        .navbar a:hover {
+            background-color: #5cb85c; /* Lighter green on hover */
+            color: black;
+        }
+        .content {
+            margin: 20px auto; /* Center content with auto margins */
+            max-width: 800px; /* Max width for readability */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 40px; /* Space before new section */
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em; /* Heading size relative to base (18px * 2 = 36px) */
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5em; /* Heading size relative to base (18px * 1.5 = 27px) */
+        }
+        p {
+            text-align: left; /* Default text alignment */
+            margin-bottom: 15px;
+            font-size: 1em; /* Paragraph font size relative to body (18px) */
+        }
+        ul {
+            list-style-type: none; /* Remove default bullet points */
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 20px; /* Indent list items */
+            position: relative;
+            font-size: 1em; /* Consistent list item font size (18px) */
+        }
+        ul li:before {
+            content: "\2022"; /* Unicode for a bullet point */
+            color: #4CAF50; /* Green bullet point */
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .question-list ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+        /* No margin-bottom here, using <br> tags directly in HTML for spacing */
+
+        /* Styling for nested questions (a, b, c) - using explicit paragraph tags */
+        .question-list ol li p {
+            margin-left: 20px; /* Indent for a, b, c paragraphs */
+            margin-bottom: 5px; /* Smaller margin for sub-questions */
+            font-size: 1em; /* Consistent font size for a,b,c paragraphs (18px) */
+        }
+    </style>
+    <!-- MathJax for LaTeX rendering -->
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            options: {
+                // Global scaling for all MathJax output. 1.2 is 20% larger than the base font.
+                scale: 1.2
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <div class="navbar">
+        <a href="../index.html">Home</a> <!-- Link back to index.html -->
+        <a href="1_s.html">Solutions</a> <!-- Link to solutions for this workshop -->
+    </div>
+
+    <div class="content">
+        <h1>Workshop 1: Arithmetic</h1>
+
+        <div class="section">
+            <h2>Arithmetic</h2>
+            <p>Perform the following calculations:</p>
+            <ul>
+                <li>$125 + 200 + 50 + 75$</li>
+                <li>$500 - 250$</li>
+                <li>$250 - 500$</li>
+                <li>$40 + 120 - 30 + 500 - 300$</li>
+                <li>$50 \times 7$</li>
+                <li>$30 \times 0.8$</li>
+                <li>$240 \times 0.12$</li>
+                <li>$3368 \div 8$</li>
+                <li>$2862 \div 6$</li>
+                <li>$1170 \div 12$</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Fractions</h2>
+            <p>Write each of these fractions in their lowest terms:</p>
+            <ul>
+                <li>$\frac{25}{30}$</li>
+                <li>$\frac{25}{75}$</li>
+                <li>$\frac{18}{42}$</li>
+                <li>$\frac{45}{60}$</li>
+                <li>$\frac{81}{90}$</li>
+                <li>$\frac{90}{81}$</li>
+                <li>$\frac{64}{48}$</li>
+            </ul>
+            <p>Perform the following calculations, and give the answer in the lowest terms:</p>
+            <ul>
+                <li>$\frac{4}{9} + \frac{2}{9}$</li>
+                <li>$\frac{5}{8} - \frac{1}{8}$</li>
+                <li>$\frac{5}{8} \times \frac{3}{4}$</li>
+                <li>$\frac{4}{9} \times \frac{6}{11}$</li>
+                <li>$\frac{2}{7} \times 3$</li>
+                <li>$\frac{5}{12} \div \frac{2}{9}$</li>
+                <li>$\frac{3}{10} \div \frac{6}{7}$</li>
+                <li>$\frac{5}{8} \div 4$</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Standard Form</h2>
+            <p>Express the following numbers in standard form (scientific notation):</p>
+            <ul>
+                <li>$52000$</li>
+                <li>$420000$</li>
+                <li>$642 \text{ million}$</li>
+                <li>$452 \times 10^{64}$</li>
+                <li>$0.05$</li>
+                <li>$0.000234$</li>
+                <li>$0.603$</li>
+                <li>$300 \times 10^{-8}$</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Converting Units</h2>
+            <p>Convert each of the following, into the given unit:</p>
+            <ul>
+                <li>3 kilograms into grams</li>
+                <li>16 litres into millilitres</li>
+                <li>0.42 grams into milligrams</li>
+                <li>1.63 milligrams into micrograms</li>
+                <li>0.0034 grams into micrograms</li>
+                <li>420 milligrams into grams</li>
+                <li>24000 millilitres into litres</li>
+                <li>650000 micrograms into grams</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Mixed Questions</h2>
+            <ol class="question-list">
+                <li>A patient requires 25 ml of drug, twice a day for 7 days. What is the total volume of drug that is required?</li><br><br>
+                <li>A patient requires 400 mg of a drug, three times a day for 10 days. How many grams of the drug are required in total?</li><br><br>
+                <li>A patient requires 300 mg of a drug, twice a day for 4 days and then reduce the dose to a third and take it twice a day for 3 days. How many grams of the drug are required in total?</li><br><br>
+                <li>During a day, a patient takes in water on 4 occasions. The amounts taken in are: 250 ml, 500 ml, 150 ml, and 125 ml. During the day they lose 785 ml of water. What is their net water intake?</li><br><br>
+                <li>A patient is currently taking 500 mg of a drug daily. It is decided that the patient should now only take three-quarters of what they are now taking. What is the patient’s new dose?</li><br><br>
+                <li>To celebrate a pharmacist’s birthday, their colleagues get them a cake. It is put out before the start of the celebration. When the celebration starts, they find that someone has been in and eaten $\frac{1}{4}$ of the cake. They moan a bit and then decide to start eating what is left. The pharmacist with the birthday takes $\frac{1}{3}$ of the remaining cake. The other 5 guests then share the remainder equally between them.
+                    <ul>
+                        <li>What fraction of the total cake does the birthday pharmacist get?</li>
+                        <li>What fraction of the total cake do the other guests each get?</li>
+                    </ul>
+                </li><br><br>
+                <li>The human body has between 4500 ml to 5700 ml of blood. If a person, at the upper end of this scale, loses 1.2 litres of blood, how many ml of blood would they now have (assuming new blood hasn’t had time to be created within the body).</li><br><br>
+                <li>If a mixture is to be 15 mg in 1 ml, how many mg are required to make 50 ml?</li><br><br>
+                <li>If a medicine is described as 8 g in 100 ml, how many mg are given if a patient receives a dose of 25 ml?</li><br><br>
+                <li>You have the following formula to create 300 ml of a particular medications X:
+                    <ul>
+                        <li>Ingredient A: 30 mg</li>
+                        <li>Ingredient B: 180 mg</li>
+                        <li>Ingredient C: 15 ml</li>
+                        <li>Water to 300 ml</li>
+                    </ul>
+                    <p><b>a.</b> How much of each ingredient you need to make 30 ml of the medication.</p>
+                    <p><b>b.</b> How much of each ingredient you need to make two thirds of the medication.</p>
+                    <p><b>c.</b> How much of the ingredients is needed to make 1 l of the medication X. Express your answers in grams and litres.</p>
+                </li>
+            </ol>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop 3: Concentrations - Answers and Solutions</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0; /* Reset default body margin */
+            line-height: 1.6;
+            padding-top: 60px; /* Space for the fixed header */
+            background-color: #f4f4f4; /* Light background for the page */
+            color: #333;
+            font-size: 18px; /* Consistent base font size for all text */
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #45ac8b; /* New background color for the navbar */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000; /* Ensure navbar stays on top */
+            display: flex;
+            align-items: center; /* Vertically center items */
+            justify-content: flex-start; /* Align items to the start (left) */
+            padding: 10px 20px;
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .navbar a {
+            display: block; /* Use block for flexbox */
+            color: black; /* Changed text color to black */
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px; /* Fixed size for navbar links */
+            border-radius: 8px; /* Rounded corners for links */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+            margin-right: 10px; /* Space between links */
+        }
+        .navbar-title {
+            color: black;
+            font-size: 1.2em; /* Slightly larger for the title */
+            font-weight: bold;
+            margin-left: 10px; /* Small margin to separate from links */
+        }
+        .content {
+            margin: 20px auto; /* Center content with auto margins */
+            max-width: 800px; /* Max width for readability */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 40px; /* Space before new section */
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em !important; /* Consistent heading size relative to base (18px * 2 = 36px) */
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5em !important; /* Consistent heading size relative to base (18px * 1.5 = 27px) */
+        }
+        p {
+            text-align: left; /* Default text alignment */
+            margin-bottom: 15px; /* Default paragraph spacing */
+            font-size: 1em !important; /* Paragraph font size relative to body (18px) */
+        }
+        ul {
+            list-style-type: none; /* Remove default bullet points */
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 20px; /* Indent list items */
+            position: relative;
+            font-size: 1em !important; /* Consistent list item font size (18px) */
+        }
+        ul li:before {
+            content: "\2022"; /* Unicode for a bullet point */
+            color: #4CAF50; /* Green bullet point */
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .solution-list ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+        .solution-list ol li {
+            margin-bottom: 70px; /* Significantly increased space between main solutions */
+            font-size: 1em !important; /* Consistent solution list item font size (18px) */
+        }
+        .solution-list ol li p {
+            margin-left: 20px; /* Indent for solution text */
+            margin-bottom: 15px; /* Ensure spacing between solution lines/paragraphs */
+            font-size: 1em !important; /* Consistent font size for solution paragraphs (18px) */
+        }
+        /* Styling for nested sub-solutions (a, b, c) */
+        .solution-list ol li p.sub-solution-label {
+            margin-left: 20px; /* Indent for a, b, c labels */
+            margin-top: 25px; /* Added top margin for clear separation from previous content */
+            margin-bottom: 20px; /* Increased margin for sub-solutions labels */
+            font-weight: bold; /* Make a, b, c bold */
+            font-size: 1em !important; /* Consistent font size for a,b,c labels (18px) */
+        }
+        .solution-list ol li p.sub-solution-text {
+            margin-left: 40px; /* Further indent for the actual solution text */
+            margin-bottom: 15px; /* Increased margin for sub-solution text lines */
+            font-size: 1em !important; /* Consistent font size for a,b,c solution text (18px) */
+        }
+
+        /* Adjust MathJax inline font size for equations */
+        mjx-container {
+            font-size: 1em !important; /* Make MathJax container match parent font size (18px) */
+        }
+        mjx-container[display="inline"] {
+            font-size: 1.1em !important; /* Make inline equations 10% larger than 18px (19.8px) */
+            vertical-align: -0.2em !important; /* Adjusted vertical alignment for better visual balance */
+        }
+    </style>
+    <!-- MathJax for LaTeX rendering -->
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            options: {
+                // Global scaling for all MathJax output. 1.1 is 10% larger than the base font.
+                scale: 1.1
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <div class="navbar">
+        <a href="../index.html">Home</a> <!-- Link back to index.html -->
+        <a href="3.html">Questions</a> <!-- Link to questions for this workshop -->
+        <span class="navbar-title">Concentrations - Answers and Solutions</span>
+    </div>
+
+    <div class="content">
+        <h1>Workshop: Concentrations - Answers and Solutions</h1>
+
+        <div class="section">
+            <h2>Conversion between concentrations</h2>
+            <ol class="solution-list">
+                <li>Convert the following concentrations into $\text{mg}/\text{ml}$
+                    <p class="sub-solution-label"><b>a.</b> 100 mg in 5 ml: $100~\text{mg} / 5~\text{ml} = 20~\text{mg}/\text{ml}$</p>
+                    <p class="sub-solution-label"><b>b.</b> 1000 mg in 20 ml: $1000~\text{mg} / 20~\text{ml} = 50~\text{mg}/\text{ml}$</p>
+                    <p class="sub-solution-label"><b>c.</b> 1 g in 100 ml: $1~\text{g} = 1000~\text{mg}$, so $1000~\text{mg} / 100~\text{ml} = 10~\text{mg}/\text{ml}$</p>
+                    <p class="sub-solution-label"><b>d.</b> 1 g in 200 ml: $1~\text{g} = 1000~\text{mg}$, so $1000~\text{mg} / 200~\text{ml} = 5~\text{mg}/\text{ml}$</p>
+                    <p class="sub-solution-label"><b>e.</b> 2 g in 500 ml: $2~\text{g} = 2000~\text{mg}$, so $2000~\text{mg} / 500~\text{ml} = 4~\text{mg}/\text{ml}$</p>
+                    <p class="sub-solution-label"><b>f.</b> 10 g in 1 l: $10~\text{g} = 10000~\text{mg}$, $1~\text{l} = 1000~\text{ml}$, so $10000~\text{mg} / 1000~\text{ml} = 10~\text{mg}/\text{ml}$</p>
+                    <p>Which of the concentrations in question 1 is the weakest and which is the strongest?</p>
+                    <p class="sub-solution-text">Weakest: 2 g in 500 ml (4 mg/ml)</p>
+                    <p class="sub-solution-text">Strongest: 1000 mg in 20 ml (50 mg/ml)</p>
+                </li><br><br>
+                <li>Convert the following concentrations into %w/v. %w/v means $\text{g}/100$ ml.
+                    <p>$%\text{w}/\text{v}=\frac{\text{mass}(\text{g})}{\text{volume}(\text{ml})}\times100$</p>
+                    <p class="sub-solution-label"><b>a.</b> 1 g in 100 ml: $\frac{1~\text{g}}{100~\text{ml}}\times100 = 1\%\text{w}/\text{v}$</p>
+                    <p class="sub-solution-label"><b>b.</b> 5 g in 100 ml: $\frac{5~\text{g}}{100~\text{ml}}\times100 = 5\%\text{w}/\text{v}$</p>
+                    <p class="sub-solution-label"><b>c.</b> 5 g in 1000 ml: $\frac{5~\text{g}}{1000~\text{ml}}\times100 = 0.5\%\text{w}/\text{v}$</p>
+                    <p class="sub-solution-label"><b>d.</b> 5 g in 50 ml: $\frac{5~\text{g}}{50~\text{ml}}\times100 = 10\%\text{w}/\text{v}$</p>
+                    <p class="sub-solution-label"><b>e.</b> 500 mg in 10 ml: $500~\text{mg} = 0.5~\text{g}$, so $\frac{0.5~\text{g}}{10~\text{ml}}\times100 = 5\%\text{w}/\text{v}$</p>
+                    <p class="sub-solution-label"><b>f.</b> 150 $\text{mg}/\text{ml}$: $150~\text{mg}/\text{ml} = 15~\text{g}/100~\text{ml}$, so $15\%\text{w}/\text{v}$</p>
+                    <p>Which two concentrations in question 2 have the same strength?</p>
+                    <p class="sub-solution-text">5 g in 100 ml (5% w/v) and 500 mg in 10 ml (5% w/v)</p>
+                </li><br><br>
+                <li>Convert each of the following concentrations into the given unit.
+                    <p class="sub-solution-label"><b>a.</b> 250 $\text{mg}/10$ ml into $\text{mg}/\text{ml}$: $250~\text{mg}/10~\text{ml} = 25~\text{mg}/\text{ml}$</p>
+                    <p class="sub-solution-label"><b>b.</b> 250 $\text{mg}/10$ ml into %w/v: $250~\text{mg} = 0.25~\text{g}$, so $\frac{0.25~\text{g}}{10~\text{ml}}\times100 = 2.5\%\text{w}/\text{v}$</p>
+                    <p class="sub-solution-label"><b>c.</b> 40% $\text{w}/\text{v}$ into $\text{mg}/\text{ml}$: $40\%\text{w}/\text{v} = 40~\text{g}/100~\text{ml} = 40000~\text{mg}/100~\text{ml} = 400~\text{mg}/\text{ml}$</p>
+                    <p class="sub-solution-label"><b>d.</b> 2% $\text{w}/\text{v}$ into $\text{mg}/\text{ml}$: $2\%\text{w}/\text{v} = 2~\text{g}/100~\text{ml} = 2000~\text{mg}/100~\text{ml} = 20~\text{mg}/\text{ml}$</p>
+                </li><br><br>
+                <li>Convert each of the following concentrations into %v/v.
+                    <p>%v/v can be thought of as $\text{ml}/100$ ml (or $\text{l}/100$ l).</p>
+                    <p class="sub-solution-label"><b>a.</b> 50 ml in 200 ml: $\frac{50~\text{ml}}{200~\text{ml}}\times100 = 25\%\text{v}/\text{v}$</p>
+                    <p class="sub-solution-label"><b>b.</b> 2 ml in 50 ml: $\frac{2~\text{ml}}{50~\text{ml}}\times100 = 4\%\text{v}/\text{v}$</p>
+                    <p class="sub-solution-label"><b>c.</b> 500 ml in 2 l: $2~\text{l} = 2000~\text{ml}$, so $\frac{500~\text{ml}}{2000~\text{ml}}\times100 = 25\%\text{v}/\text{v}$</p>
+                    <p class="sub-solution-label"><b>d.</b> 0.5 ml in 500 ml: $\frac{0.5~\text{ml}}{500~\text{ml}}\times100 = 0.1\%\text{v}/\text{v}$</p>
+                </li><br><br>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Ordering concentrations by strength</h2>
+            <ol class="solution-list" start="5">
+                <li>Order the following concentrations from weakest to strongest.
+                    <p><b>A:</b> 50 $\text{mg}/\text{ml}$</p>
+                    <p><b>B:</b> 100 $\text{mg}/10$ ml = 10 $\text{mg}/\text{ml}$</p>
+                    <p><b>C:</b> 250 $\text{mg}/100$ ml = 2.5 $\text{mg}/\text{ml}$</p>
+                    <p><b>D:</b> 1 $\text{g}/500$ ml = 1000 $\text{mg}/500$ ml = 2 $\text{mg}/\text{ml}$</p>
+                    <p class="sub-solution-text">Order: D (2 mg/ml), C (2.5 mg/ml), B (10 mg/ml), A (50 mg/ml)</p>
+                </li><br><br>
+                <li>Order the following concentrations from weakest to strongest.
+                    <p><b>A:</b> 5% $\text{w}/\text{v}$</p>
+                    <p><b>B:</b> 2.5 $\text{g}/100$ ml = 2.5% $\text{w}/\text{v}$</p>
+                    <p><b>C:</b> 5 $\text{g}/10$ ml = 50 $\text{g}/100$ ml = 50% $\text{w}/\text{v}$</p>
+                    <p><b>D:</b> $0.8~\text{g}/\text{ml}$ = 80 $\text{g}/100$ ml = 80% $\text{w}/\text{v}$</p>
+                    <p class="sub-solution-text">Order: B (2.5% w/v), A (5% w/v), C (50% w/v), D (80% w/v)</p>
+                </li><br><br>
+                <li>Order the following concentrations from weakest to strongest.
+                    <p><b>A:</b> 1% $\text{w}/\text{v}$ = 1 $\text{g}/100$ ml = 10 $\text{mg}/\text{ml}$</p>
+                    <p><b>B:</b> $100~\text{mcg}/\text{ml}$ = 0.1 $\text{mg}/\text{ml}$</p>
+                    <p><b>C:</b> 1 $\text{mg}/5~\text{ml}$ = 0.2 $\text{mg}/\text{ml}$</p>
+                    <p><b>D:</b> $1~\text{mg}/\text{ml}$</p>
+                    <p class="sub-solution-text">Order: B (0.1 mg/ml), C (0.2 mg/ml), D (1 mg/ml), A (10 mg/ml)</p>
+                </li><br><br>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Calculating dosage</h2>
+            <ol class="solution-list" start="8">
+                <li>A patient requires a drug dose of 200 mg. The drug comes in liquid form with a strength of $5~\text{mg}/\text{ml}$. How many ml does the patient need?
+                    <p class="sub-solution-text">Required volume = $\frac{200~\text{mg}}{5~\text{mg}}\times1~\text{ml} = 40~\text{ml}$</p>
+                </li><br><br>
+                <li>A patient requires a drug dose of 500 mg. The drug comes in liquid form with a strength of 2% $\text{w}/\text{v}$ How many ml does the patient need?
+                    <p class="sub-solution-text">2% $\text{w}/\text{v} = 2~\text{g}/100~\text{ml} = 2000~\text{mg}/100~\text{ml} = 20~\text{mg}/\text{ml}$</p>
+                    <p class="sub-solution-text">Required volume = $\frac{500~\text{mg}}{20~\text{mg}}\times1~\text{ml} = 25~\text{ml}$</p>
+                </li><br><br>
+                <li>A patient requires a drug dose of 2 g. The drug comes in liquid form with a strength of $800~\text{mg}/10$ ml. How many ml does the patient need?
+                    <p class="sub-solution-text">2 g = 2000 mg</p>
+                    <p class="sub-solution-text">Strength = $800~\text{mg}/10~\text{ml} = 80~\text{mg}/\text{ml}$</p>
+                    <p class="sub-solution-text">Required volume = $\frac{2000~\text{mg}}{80~\text{mg}}\times1~\text{ml} = 25~\text{ml}$</p>
+                </li><br><br>
+                <li>A patient is given a drug that comes in a strength of 0.4% $\text{w}/\text{v}.$ The patient needs 20 mg of the drug, twice daily for 7 days. What is the total number of ml required for the treatment?
+                    <p class="sub-solution-text">0.4% $\text{w}/\text{v} = 0.4~\text{g}/100~\text{ml} = 400~\text{mg}/100~\text{ml} = 4~\text{mg}/\text{ml}$</p>
+                    <p class="sub-solution-text">Total dose needed = $20~\text{mg} \times 2 (\text{times per day}) \times 7 (\text{days}) = 280~\text{mg}$</p>
+                    <p class="sub-solution-text">Total volume = $\frac{280~\text{mg}}{4~\text{mg}}\times1~\text{ml} = 70~\text{ml}$</p>
+                </li><br><br>
+                <li>A particular drug comes in a strength of 10% $\text{v}/\text{v}.$ The patient needs an active dose of 5 ml per day for 5 days, followed by 10 days of 2.5 ml per day. What is the total ml needed to complete the treatment?
+                    <p class="sub-solution-text">Dose for first 5 days = $5~\text{ml}/\text{day} \times 5~\text{days} = 25~\text{ml}$</p>
+                    <p class="sub-solution-text">Dose for next 10 days = $2.5~\text{ml}/\text{day} \times 10~\text{days} = 25~\text{ml}$</p>
+                    <p class="sub-solution-text">Total active dose needed = $25~\text{ml} + 25~\text{ml} = 50~\text{ml}$</p>
+                    <p class="sub-solution-text">Drug strength: 10% $\text{v}/\text{v}$ means 10 ml of active drug in 100 ml of solution.</p>
+                    <p class="sub-solution-text">Total solution needed = $\frac{50~\text{ml} (\text{active dose})}{10~\text{ml} (\text{active in 100ml solution})}\times100~\text{ml} (\text{solution}) = 500~\text{ml}$</p>
+                </li><br><br>
+            </ol>
+        </div>
+
+    </div>
+
+</body>
+</html>

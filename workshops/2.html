@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop 2: Conversion of Units and Transposing Equations</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0; /* Reset default body margin */
+            line-height: 1.6;
+            padding-top: 60px; /* Space for the fixed header */
+            background-color: #f4f4f4; /* Light background for the page */
+            color: #333;
+            font-size: 18px; /* Consistent base font size for all text (now 18px) */
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #45ac8b; /* New background color for the navbar */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000; /* Ensure navbar stays on top */
+            display: flex;
+            justify-content: flex-start; /* Align items to the start */
+            align-items: center;
+            padding: 10px 20px;
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: black; /* Changed text color to black */
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px; /* Fixed size for navbar links */
+            border-radius: 8px; /* Rounded corners for links */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+            margin-right: 10px; /* Space between links */
+        }
+        .navbar a:hover {
+            background-color: #5cb85c; /* Lighter green on hover */
+            color: black;
+        }
+        .navbar-title {
+            color: black;
+            font-size: 1.2em; /* Slightly larger for the title */
+            margin-left: 20px; /* Space from links */
+            font-weight: bold;
+        }
+        .content {
+            margin: 20px auto; /* Center content with auto margins */
+            max-width: 800px; /* Max width for readability */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 40px; /* Space before new section */
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em !important; /* Consistent heading size relative to base (18px * 2 = 36px) */
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5em !important; /* Consistent heading size relative to base (18px * 1.5 = 27px) */
+        }
+        p {
+            text-align: left; /* Default text alignment */
+            margin-bottom: 15px;
+            font-size: 1em !important; /* Paragraph font size relative to body (18px) */
+        }
+        ul {
+            list-style-type: none; /* Remove default bullet points */
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 20px; /* Indent list items */
+            position: relative;
+            font-size: 1em !important; /* Consistent list item font size (18px) */
+        }
+        ul li:before {
+            content: "\2022"; /* Unicode for a bullet point */
+            color: #4CAF50; /* Green bullet point */
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .question-list ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+        .question-list ol li {
+            margin-bottom: 15px; /* Space between main questions */
+            font-size: 1em !important; /* Consistent question list item font size (18px) */
+        }
+        /* Styling for nested sub-questions (a, b, c, etc.) - using explicit paragraph tags */
+        .question-list ol li p.sub-question-label {
+            margin-left: 20px; /* Indent for a, b, c paragraphs */
+            margin-bottom: 5px; /* Smaller margin for sub-questions */
+            font-weight: bold; /* Make a, b, c bold */
+            font-size: 1em !important; /* Consistent font size for a,b,c labels (18px) */
+        }
+        /* Styling for bracketed variables like [V1] */
+        .bracketed-variable {
+            font-weight: bold;
+            color: #333; /* Match text color */
+        }
+
+        /* Adjust MathJax inline font size for equations */
+        mjx-container {
+            font-size: 1em !important; /* Make MathJax container match parent font size (18px) */
+        }
+        mjx-container[display="inline"] {
+            font-size: 1.1em !important; /* Make inline equations 10% larger than 18px (19.8px) */
+            vertical-align: -0.2em !important; /* Adjusted vertical alignment for better visual balance */
+        }
+    </style>
+    <!-- MathJax for LaTeX rendering -->
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            options: {
+                // Global scaling for all MathJax output. 1.1 is 10% larger than the base font.
+                scale: 1.1
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <div class="navbar">
+        <a href="../index.html">Home</a> <!-- Link back to index.html -->
+        <a href="2_s.html">Solutions</a> <!-- Link to solutions for this workshop -->
+        <span class="navbar-title">Conversion of Units and Transposing Equations</span>
+    </div>
+
+    <div class="content">
+        <h1>Workshop: Conversion of Units and Transposing Equations</h1>
+
+        <div class="section">
+            <h2>Conversion of units</h2>
+            <ol class="question-list">
+                <li>Convert each of the following into grams, writing each answer in standard form:
+                    <p class="sub-question-label"><b>a.</b> 1 kg</p>
+                    <p class="sub-question-label"><b>b.</b> 1 mg</p>
+                    <p class="sub-question-label"><b>c.</b> 1 mcg</p>
+                    <p class="sub-question-label"><b>d.</b> 5 kg</p>
+                    <p class="sub-question-label"><b>e.</b> 250 kg</p>
+                    <p class="sub-question-label"><b>f.</b> 3500 mg</p>
+                </li>
+                <li>Convert each of the following into the given unit, writing each answer in standard form:
+                    <p class="sub-question-label"><b>a.</b> 120 ml into mcl</p>
+                    <p class="sub-question-label"><b>b.</b> 4500 mcg into nanograms</p>
+                    <p class="sub-question-label"><b>c.</b> 2.2 l into ml</p>
+                    <p class="sub-question-label"><b>d.</b> 0.56 g into mg</p>
+                    <p class="sub-question-label"><b>e.</b> 0.000235 g into mcg</p>
+                </li>
+                <li>Convert each of the following into the given unit, writing each answer in standard form:
+                    <p class="sub-question-label"><b>a.</b> 54000 mg into g</p>
+                    <p class="sub-question-label"><b>b.</b> 250000 mg into kg</p>
+                    <p class="sub-question-label"><b>c.</b> 0.25 ml into l</p>
+                    <p class="sub-question-label"><b>d.</b> 6250000 nanograms into mg</p>
+                </li>
+                <li>Convert each of the following into the given unit, writing each answer in standard form:
+                    <p class="sub-question-label"><b>a.</b> $25\times10^{14}$ mg into g</p>
+                    <p class="sub-question-label"><b>b.</b> $9.5\times10^{20}$ kW into W</p>
+                    <p class="sub-question-label"><b>c.</b> $650\times10^{15}$ mcg into kg</p>
+                    <p class="sub-question-label"><b>d.</b> $1.224\times10^{-12}$ ml into l</p>
+                    <p class="sub-question-label"><b>e.</b> $5\times10^{-6}$ MJ into mJ</p>
+                    <p class="sub-question-label"><b>f.</b> $56\times10^{4}$ cm into km</p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Transposing equations</h2>
+            <ol class="question-list">
+                <li>Make x the subject of each of the following:
+                    <p class="sub-question-label"><b>a.</b> $5x=b$</p>
+                    <p class="sub-question-label"><b>b.</b> $z=a+x$</p>
+                    <p class="sub-question-label"><b>c.</b> $y=mx+c$</p>
+                    <p class="sub-question-label"><b>d.</b> $y-10=3(x-2)$</p>
+                    <p class="sub-question-label"><b>e.</b> $\frac{x+5}{p}=q$</p>
+                </li>
+                <li>In each of the following, make the given variable <span class="bracketed-variable">[in brackets]</span> the subject:
+                    <p class="sub-question-label"><b>a.</b> $C_{1}V_{1}=C_{2}V_{2}$ <span class="bracketed-variable">[V1]</span></p>
+                    <p class="sub-question-label"><b>b.</b> $E=h\frac{c}{\lambda}$ <span class="bracketed-variable">[h]</span></p>
+                    <p class="sub-question-label"><b>c.</b> $I=\frac{m}{h^{2}}$ <span class="bracketed-variable">[h]</span></p>
+                    <p class="sub-question-label"><b>d.</b> $A=\frac{\sqrt{HM}}{60}$ <span class="bracketed-variable">[M]</span></p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Mixed Questions</h2>
+            <ol class="question-list">
+                <li>The body mass index (BMI) of a person is calculated as:
+                    <p>$BMI=\frac{Mass(Kg)}{(Height(m))^{2}}$</p>
+                    <p>Find the height of a person in centimetres, given that they have a body mass index of 22.5 and a mass of 90000 g.</p>
+                </li>
+                <li>The wavelength of a light wave ($\lambda$), in m, can be calculated using the speed of light (c) and the frequency (v):
+                    <p>$\lambda=\frac{c}{v}$</p>
+                    <p>It is found that a light wave has a wavelength of $1.5\times10^{-5}mm$. The speed of light is $3\times10^{8}ms^{-1}$</p>
+                    <p class="sub-question-label"><b>a.</b> Convert the wavelength into metres</p>
+                    <p class="sub-question-label"><b>b.</b> By rearranging the equation, and using your answer to part a, find the frequency of the light wave.</p>
+                </li>
+            </ol>
+        </div>
+
+    </div>
+
+</body>
+</html>

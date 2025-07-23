@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop 4: Imperial Units and Calculating Body Indices</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0; /* Reset default body margin */
+            line-height: 1.6;
+            padding-top: 60px; /* Space for the fixed header */
+            background-color: #f4f4f4; /* Light background for the page */
+            color: #333;
+            font-size: 18px; /* Consistent base font size for all text */
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #45ac8b; /* New background color for the navbar */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000; /* Ensure navbar stays on top */
+            display: flex;
+            align-items: center; /* Vertically center items */
+            justify-content: flex-start; /* Align items to the start (left) */
+            padding: 10px 20px;
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .navbar a {
+            display: block; /* Use block for flexbox */
+            color: black; /* Changed text color to black */
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px; /* Fixed size for navbar links */
+            border-radius: 8px; /* Rounded corners for links */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+            margin-right: 10px; /* Space between links */
+        }
+        .navbar-title {
+            color: black;
+            font-size: 1.2em; /* Slightly larger for the title */
+            font-weight: bold;
+            margin-left: 10px; /* Small margin to separate from links */
+        }
+        .content {
+            margin: 20px auto; /* Center content with auto margins */
+            max-width: 800px; /* Max width for readability */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 40px; /* Space before new section */
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em !important; /* Consistent heading size relative to base (18px * 2 = 36px) */
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5em !important; /* Consistent heading size relative to base (18px * 1.5 = 27px) */
+        }
+        p {
+            text-align: left; /* Default text alignment */
+            margin-bottom: 15px; /* Default paragraph spacing */
+            font-size: 1em !important; /* Paragraph font size relative to body (18px) */
+        }
+        ul {
+            list-style-type: disc; /* Revert to default bullet points */
+            padding-left: 20px; /* Standard indent for lists */
+            text-align: left; /* Ensure list is left-aligned */
+        }
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 0; /* Reset custom padding */
+            position: relative;
+            font-size: 1em !important; /* Consistent list item font size (18px) */
+            display: list-item; /* Revert to default list item display */
+            text-align: left; /* Ensure text is left-aligned */
+        }
+        ul li:before {
+            /* Remove custom bullet point as default disc will be used */
+            content: none;
+        }
+        .question-list ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+        .question-list ol li {
+            margin-bottom: 40px; /* Space between main questions */
+            font-size: 1em !important; /* Consistent question list item font size (18px) */
+        }
+        /* Styling for nested sub-questions (a, b, c, etc.) - using explicit paragraph tags */
+        .question-list ol li p.sub-question-label {
+            margin-left: 20px; /* Indent for a, b, c paragraphs */
+            margin-top: 20px; /* Added top margin for clear separation from previous content */
+            margin-bottom: 15px; /* Smaller margin for sub-questions */
+            font-weight: bold; /* Make a, b, c bold */
+            font-size: 1em !important; /* Consistent font size for a,b,c labels (18px) */
+        }
+        /* Adjust MathJax inline font size for equations */
+        mjx-container {
+            font-size: 1em !important; /* Make MathJax container match parent font size (18px) */
+        }
+        mjx-container[display="inline"] {
+            font-size: 1.1em !important; /* Make inline equations 10% larger than 18px (19.8px) */
+            vertical-align: -0.2em !important; /* Adjusted vertical alignment for better visual balance */
+        }
+        .centered-formula {
+            text-align: center;
+        }
+        /* Removed .centered-text as it's no longer needed for these specific paragraphs */
+    </style>
+    <!-- MathJax for LaTeX rendering -->
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            options: {
+                // Global scaling for all MathJax output. 1.1 is 10% larger than the base font.
+                scale: 1.1
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <div class="navbar">
+        <a href="../index.html">Home</a> <!-- Link back to index.html -->
+        <a href="4_s.html">Solutions</a> <!-- Link to solutions for this workshop -->
+        <span class="navbar-title">Imperial Units and Calculating Body Indices</span>
+    </div>
+
+    <div class="content">
+        <h1>Workshop: Imperial Units and Calculating Body Indices</h1>
+
+        <div class="section">
+            <h2>Imperial and Metric Units for Volumes</h2>
+            <p>For this section you should use:</p>
+            <ul>
+                <li>1 pint $\approx$ 500 ml</li>
+                <li>1 gallon = 8 pints</li>
+            </ul>
+            <ol class="question-list">
+                <li>Convert the following volumes into ml:
+                    <p class="sub-question-label"><b>a.</b> 3 pints</p>
+                    <p class="sub-question-label"><b>b.</b> 0.5 pints</p>
+                    <p class="sub-question-label"><b>c.</b> 3 gallons</p>
+                </li><br><br>
+                <li>Convert the following volumes into pints:
+                    <p class="sub-question-label"><b>a.</b> 2000 ml</p>
+                    <p class="sub-question-label"><b>b.</b> 3.5 l</p>
+                    <p class="sub-question-label"><b>c.</b> 4 gallons</p>
+                    <p class="sub-question-label"><b>d.</b> 125 ml</p>
+                </li><br><br>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Imperial and Metric Units for Mass</h2>
+            <p>For this section you should use:</p>
+            <ul>
+                <li>1 $\text{kg}\approx2$ lbs (pounds)</li>
+                <li>1 $\text{lb}=16~\text{oz}$ (ounces)</li>
+                <li>1 stone = 14 lbs</li>
+            </ul>
+            <ol class="question-list" start="3">
+                <li>Convert the following masses into lbs (pounds):
+                    <p class="sub-question-label"><b>a.</b> 5 kg</p>
+                    <p class="sub-question-label"><b>b.</b> 500 g</p>
+                    <p class="sub-question-label"><b>c.</b> 3500 g</p>
+                    <p class="sub-question-label"><b>d.</b> 32 oz</p>
+                    <p class="sub-question-label"><b>e.</b> 8 oz</p>
+                    <p class="sub-question-label"><b>f.</b> 2 stone</p>
+                    <p class="sub-question-label"><b>g.</b> 10 stone 4 lbs</p>
+                    <p class="sub-question-label"><b>h.</b> 12 stone 12 lbs</p>
+                </li><br><br>
+                <li>Convert the following into stone:
+                    <p class="sub-question-label"><b>a.</b> 280 lbs</p>
+                    <p class="sub-question-label"><b>b.</b> 84 lbs</p>
+                    <p class="sub-question-label"><b>c.</b> 70 kg</p>
+                </li><br><br>
+                <li>Convert the following masses into stone and lbs (e.g. 12 stone 5 lbs):
+                    <p class="sub-question-label"><b>a.</b> 150 lbs</p>
+                    <p class="sub-question-label"><b>b.</b> 200 lbs</p>
+                    <p class="sub-question-label"><b>c.</b> 55 kg</p>
+                    <p class="sub-question-label"><b>d.</b> 82 kg</p>
+                </li><br><br>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Imperial and Metric Units for Length</h2>
+            <p>For this section you should use:</p>
+            <ul>
+                <li>1 inch $\approx$ 2.5 cm</li>
+                <li>1 ft (foot) = 12 inches</li>
+            </ul>
+            <ol class="question-list" start="6">
+                <li>Convert the following lengths into cm:
+                    <p class="sub-question-label"><b>a.</b> 10 inches</p>
+                    <p class="sub-question-label"><b>b.</b> 1 ft</p>
+                    <p class="sub-question-label"><b>c.</b> 5 ft 3 inches</p>
+                    <p class="sub-question-label"><b>d.</b> 6 ft 6 inches</p>
+                </li><br><br>
+                <li>Convert the following lengths into ft and inches (e.g. 5 ft 8 inches):
+                    <p class="sub-question-label"><b>a.</b> 240 inches</p>
+                    <p class="sub-question-label"><b>b.</b> 100 inches</p>
+                    <p class="sub-question-label"><b>c.</b> 75 inches</p>
+                    <p class="sub-question-label"><b>d.</b> 50 cm</p>
+                    <p class="sub-question-label"><b>e.</b> 2 m</p>
+                </li><br><br>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Body Mass Index</h2>
+            <p>The formula for body mass index (BMI):</p>
+            <p class="centered-formula">$BMI=\frac{\text{Mass}(\text{kg})}{(\text{Height}(\text{m}))^{2}}$</p>
+            <ol class="question-list" start="8">
+                <li>What are the units of the BMI measurement?</li><br><br>
+                <li>Find the BMI of the following people:
+                    <p class="sub-question-label"><b>a.</b> Mass=90 $\text{kg}$, Height=2 $\text{m}$</p>
+                    <p class="sub-question-label"><b>b.</b> Mass=64 $\text{kg}$, Height=1.6 $\text{m}$</p>
+                    <p class="sub-question-label"><b>c.</b> Mass=64.8 $\text{kg}$, Height=180 $\text{cm}$</p>
+                </li><br><br>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Body Surface Area</h2>
+            <p>The formula for body surface area (BSA):</p>
+            <p class="centered-formula">$BSA(\text{m}^{2})=\sqrt{\frac{\text{Height}(\text{cm})\times \text{Mass}(\text{Kg})}{3600}}$</p>
+            <p>The following information may be useful:</p>
+            <p class="centered-formula">$\sqrt{2}\approx1.41\quad\sqrt{3}\approx1.73\quad\sqrt{5}\approx2.24\quad\sqrt{6}\approx2.45$</p>
+            <ol class="question-list" start="10">
+                <li>Find the BSA of the following people:
+                    <p class="sub-question-label"><b>a.</b> Height=180 $\text{cm}$, Mass=60 $\text{kg}$</p>
+                    <p class="sub-question-label"><b>b.</b> Height=144 $\text{cm}$, Mass=50 $\text{kg}$</p>
+                    <p class="sub-question-label"><b>c.</b> Height=1.92 $\text{m}$, Mass=112.5 $\text{kg}$</p>
+                </li><br><br>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Ideal Body Weight (IBW)</h2>
+            <p>Use this formula for IBW:</p>
+            <p class="centered-formula">Female: IBW ($\text{kg}$) = Height ($\text{cm}$)$\times0.9-92$</p>
+            <p class="centered-formula">Male: IBW ($\text{kg}$) = Height ($\text{cm}$)$\times0.9-88$</p>
+            <ol class="question-list" start="11">
+                <li>What is the IBW for the following:
+                    <p class="sub-question-label"><b>a.</b> Male, Height = 1.7 m</p>
+                    <p class="sub-question-label"><b>b.</b> Female, Height = 1.8 m</p>
+                </li><br><br>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Mixed Question</h2>
+            <ol class="question-list" start="12">
+                <li>For a person who is:
+                    <p>Male; Height $=6$ ft; Mass $=14$ stone 4 lbs</p>
+                    <p>Find, using the conversions given in the earlier part of this worksheet:</p>
+                    <p class="sub-question-label"><b>a.</b> Their BSA</p>
+                    <p class="sub-question-label"><b>b.</b> Their IBW</p>
+                </li><br><br>
+            </ol>
+        </div>
+
+    </div>
+
+</body>
+</html>

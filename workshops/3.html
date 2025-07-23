@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop 3: Concentrations</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0; /* Reset default body margin */
+            line-height: 1.6;
+            padding-top: 60px; /* Space for the fixed header */
+            background-color: #f4f4f4; /* Light background for the page */
+            color: #333;
+            font-size: 18px; /* Consistent base font size for all text */
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #45ac8b; /* New background color for the navbar */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000; /* Ensure navbar stays on top */
+            display: flex;
+            align-items: center; /* Vertically center items */
+            justify-content: flex-start; /* Align items to the start (left) */
+            padding: 10px 20px;
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .navbar a {
+            display: block; /* Use block for flexbox */
+            color: black; /* Changed text color to black */
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px; /* Fixed size for navbar links */
+            border-radius: 8px; /* Rounded corners for links */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+            margin-right: 10px; /* Space between links */
+        }
+        .navbar-title {
+            color: black;
+            font-size: 1.2em; /* Slightly larger for the title */
+            font-weight: bold;
+            margin-left: 10px; /* Small margin to separate from links */
+        }
+        .content {
+            margin: 20px auto; /* Center content with auto margins */
+            max-width: 800px; /* Max width for readability */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 40px; /* Space before new section */
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em !important; /* Consistent heading size relative to base (18px * 2 = 36px) */
+        }
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5em !important; /* Consistent heading size relative to base (18px * 1.5 = 27px) */
+        }
+        p {
+            text-align: left; /* Default text alignment */
+            margin-bottom: 15px; /* Default paragraph spacing */
+            font-size: 1em !important; /* Paragraph font size relative to body (18px) */
+        }
+        ul {
+            list-style-type: none; /* Remove default bullet points */
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+            padding-left: 20px; /* Indent list items */
+            position: relative;
+            font-size: 1em !important; /* Consistent list item font size (18px) */
+        }
+        ul li:before {
+            content: "\2022"; /* Unicode for a bullet point */
+            color: #4CAF50; /* Green bullet point */
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        .question-list ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+        .question-list ol li {
+            margin-bottom: 40px; /* Space between main questions */
+            font-size: 1em !important; /* Consistent question list item font size (18px) */
+        }
+        /* Styling for nested sub-questions (a, b, c, etc.) - using explicit paragraph tags */
+        .question-list ol li p.sub-question-label {
+            margin-left: 20px; /* Indent for a, b, c paragraphs */
+            margin-top: 20px; /* Added top margin for clear separation from previous content */
+            margin-bottom: 15px; /* Smaller margin for sub-questions */
+            font-weight: bold; /* Make a, b, c bold */
+            font-size: 1em !important; /* Consistent font size for a,b,c labels (18px) */
+        }
+        /* Adjust MathJax inline font size for equations */
+        mjx-container {
+            font-size: 1em !important; /* Make MathJax container match parent font size (18px) */
+        }
+        mjx-container[display="inline"] {
+            font-size: 1.1em !important; /* Make inline equations 10% larger than 18px (19.8px) */
+            vertical-align: -0.2em !important; /* Adjusted vertical alignment for better visual balance */
+        }
+        .centered-formula {
+            text-align: center;
+        }
+    </style>
+    <!-- MathJax for LaTeX rendering -->
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            options: {
+                // Global scaling for all MathJax output. 1.1 is 10% larger than the base font.
+                scale: 1.1
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <div class="navbar">
+        <a href="../index.html">Home</a> <!-- Link back to index.html -->
+        <a href="3_s.html">Solutions</a> <!-- Link to solutions for this workshop -->
+        <span class="navbar-title">Concentrations</span>
+    </div>
+
+    <div class="content">
+        <h1>Workshop: Concentrations</h1>
+
+        <div class="section">
+            <h2>Conversion between concentrations</h2>
+            <ol class="question-list">
+                <li>Convert the following concentrations into $\text{mg}/\text{ml}$
+                    <p class="sub-question-label"><b>a.</b> 100 mg in 5 ml</p>
+                    <p class="sub-question-label"><b>b.</b> 1000 mg in 20 ml</p>
+                    <p class="sub-question-label"><b>c.</b> 1 g in 100 ml</p>
+                    <p class="sub-question-label"><b>d.</b> 1 g in 200 ml</p>
+                    <p class="sub-question-label"><b>e.</b> 2 g in 500 ml</p>
+                    <p class="sub-question-label"><b>f.</b> 10 g in 1 l</p>
+                </li>
+                <p>Which of the concentrations in question 1 is the weakest and which is the strongest?</p><br><br>
+                <li>Convert the following concentrations into %w/v. %w/v means $\text{g}/100$ ml.
+                    <p class="centered-formula">$\%\text{w}/\text{v}=\frac{\text{mass}(\text{g})}{\text{volume}(\text{ml})}\times100$</p>
+                    <p class="sub-question-label"><b>a.</b> 1 g in 100 ml</p>
+                    <p class="sub-question-label"><b>b.</b> 5 g in 100 ml</p>
+                    <p class="sub-question-label"><b>c.</b> 5 g in 1000 ml</p>
+                    <p class="sub-question-label"><b>d.</b> 5 g in 50 ml</p>
+                    <p class="sub-question-label"><b>e.</b> 500 mg in 10 ml</p>
+                    <p class="sub-question-label"><b>f.</b> 150 $\text{mg}/\text{ml}$</p>
+                </li>
+                <p>Which two concentrations in question 2 have the same strength?</p><br><br>
+                <li>Convert each of the following concentrations into the given unit.
+                    <p class="sub-question-label"><b>a.</b> 250 $\text{mg}/10$ ml into $\text{mg}/\text{ml}$</p>
+                    <p class="sub-question-label"><b>b.</b> 250 $\text{mg}/10$ ml into %w/v</p>
+                    <p class="sub-question-label"><b>c.</b> 40% $\text{w}/\text{v}$ into $\text{mg}/\text{ml}$</p>
+                    <p class="sub-question-label"><b>d.</b> 2% $\text{w}/\text{v}$ into $\text{mg}/\text{ml}$</p>
+                </li><br><br>
+                <li>Convert each of the following concentrations into %v/v.
+                    <p>%v/v can be thought of as $\text{ml}/100$ ml (or $\text{l}/100$ l).</p>
+                    <p class="sub-question-label"><b>a.</b> 50 ml in 200 ml</p>
+                    <p class="sub-question-label"><b>b.</b> 2 ml in 50 ml</p>
+                    <p class="sub-question-label"><b>c.</b> 500 ml in 2 l</p>
+                    <p class="sub-question-label"><b>d.</b> 0.5 ml in 500 ml</p>
+                </li><br><br>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Ordering concentrations by strength</h2>
+            <ol class="question-list" start="5">
+                <li>Order the following concentrations from weakest to strongest.
+                    <p><b>A:</b> 50 $\text{mg}/\text{ml}$</p>
+                    <p><b>B:</b> 100 $\text{mg}/10$ ml</p>
+                    <p><b>C:</b> 250 $\text{mg}/100$ ml</p>
+                    <p><b>D:</b> 1 $\text{g}/500$ ml</p>
+                </li><br><br>
+                <li>Order the following concentrations from weakest to strongest.
+                    <p><b>A:</b> 5% $\text{w}/\text{v}$</p>
+                    <p><b>B:</b> 2.5 $\text{g}/100$ ml</p>
+                    <p><b>C:</b> 5 $\text{g}/10$ ml</p>
+                    <p><b>D:</b> $0.8~\text{g}/\text{ml}$</p>
+                </li><br><br>
+                <li>Order the following concentrations from weakest to strongest.
+                    <p><b>A:</b> 1% $\text{w}/\text{v}$</p>
+                    <p><b>B:</b> $100~\text{mcg}/\text{ml}$</p>
+                    <p><b>C:</b> 1 $\text{mg}/5~\text{ml}$</p>
+                    <p><b>D:</b> $1~\text{mg}/\text{ml}$</p>
+                </li><br><br>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Calculating dosage</h2>
+            <ol class="question-list" start="8">
+                <li>A patient requires a drug dose of 200 mg. The drug comes in liquid form with a strength of $5~\text{mg}/\text{ml}$. How many ml does the patient need?</li><br><br>
+                <li>A patient requires a drug dose of 500 mg. The drug comes in liquid form with a strength of 2% $\text{w}/\text{v}$ How many ml does the patient need?</li><br><br>
+                <li>A patient requires a drug dose of 2 g. The drug comes in liquid form with a strength of $800~\text{mg}/10$ ml. How many ml does the patient need?</li><br><br>
+                <li>A patient is given a drug that comes in a strength of 0.4% $\text{w}/\text{v}.$ The patient needs 20 mg of the drug, twice daily for 7 days. What is the total number of ml required for the treatment?</li><br><br>
+                <li>A particular drug comes in a strength of 10% $\text{v}/\text{v}.$ The patient needs an active dose of 5 ml per day for 5 days, followed by 10 days of 2.5 ml per day. What is the total ml needed to complete the treatment?</li><br><br>
+            </ol>
+        </div>
+
+    </div>
+
+</body>
+</html>
