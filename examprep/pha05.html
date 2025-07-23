@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Questions 5</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0; /* Reset default body margin */
+            line-height: 1.6;
+            padding-top: 60px; /* Space for the fixed header */
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #45ac8b; /* Changed background color to #45ac8b */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000; /* Ensure navbar stays on top */
+            display: flex;
+            justify-content: flex-start; /* Align items to the start */
+            align-items: center;
+            padding: 10px 20px;
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: black; /* Changed text color to black */
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 17px;
+            border-radius: 8px; /* Rounded corners for links */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+            margin-right: 10px; /* Space between links */
+        }
+        .navbar a:hover {
+            background-color: #5cb85c; /* Lighter green on hover */
+            color: black; /* Ensure text remains black on hover */
+        }
+        .navbar-title {
+            color: black;
+            font-size: 1.2em; /* Slightly larger for the title */
+            font-weight: bold;
+            margin-left: 10px; /* Small margin to separate from links */
+        }
+        .content {
+            margin: 20px; /* Margin for the main content */
+        }
+        h1, h2 {
+            color: #333;
+        }
+        strong {
+            font-weight: bold;
+        }
+        .instructions, .formulae {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px; /* Rounded corners for info boxes */
+        }
+        ol {
+            counter-reset: item;
+            list-style-type: none;
+            padding-left: 40px; /* Increased padding for the whole list */
+        }
+        ol li {
+            display: block;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 2.5em; /* Space for the counter and a gap */
+        }
+        ol > li:before {
+            content: counter(item) ". ";
+            counter-increment: item;
+            position: absolute;
+            left: 0; /* Position relative to the li's padding-box */
+            font-weight: bold;
+            text-align: right; /* Align numbers to the right within their space */
+            width: 2em; /* Give numbers a fixed width */
+        }
+        ul { /* Style for unordered lists, specifically for formula items */
+            list-style-type: disc;
+            margin-left: 20px; /* Indent for nested ul */
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar -->
+    <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="pha05_s.html">Solutions</a> <!-- Link for solutions -->
+        <span class="navbar-title">Pharmacy Questions 5</span>
+    </div>
+
+
+    <div class="content">
+        <h1>Pharmacy Questions 5</h1>
+
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <ul>
+                <li>Answer <strong>ALL</strong> questions on this paper.</li>
+                <li>All questions have equal weighting.</li>
+                <li>All answers must include units, where appropriate. Answers without units (or incorrect units) will be marked as incorrect.</li>
+                <li>Calculators of any description are <strong>NOT</strong> allowed.</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <ol>
+            <li>What is <strong>2500 grams</strong> expressed in kilograms?</li>
+            <li>What is <strong>0.000005 kilograms</strong> expressed in micrograms?</li>
+            <li>What is <strong>5 mg/mL</strong> expressed as <strong>1 in X</strong>?</li>
+            <li>What is <strong>0.2% w/v</strong> expressed as <strong>1 in X</strong>?</li>
+            <li>If a mixture is described as <strong>15mg/ml</strong>, how many grams are required to make <strong>80 millilitres</strong> of the mixture?</li>
+            <li>If a drug is described as <strong>1 part in 250</strong>, how many litres are required to provide a dose of <strong>50g</strong>?</li>
+            <li>How many millilitres of a <strong>2.5%w/v</strong> solution would be required to provide a dose of <strong>100mg</strong>?</li>
+            <li>How much <strong>Calcium Carbonate</strong> in grams is required to make <strong>150 millimoles</strong>, given that the molecular weight of Calcium Carbonate = <strong>100</strong>?</li>
+            <li>How many grams of <strong>Potassium Permanganate</strong> (molecular weight = <strong>158</strong>) are required to produce <strong>500 millilitres</strong> of a <strong>0.5 molar</strong> solution?</li>
+            <li>You need to make <strong>200mL</strong> of a <strong>6M</strong> solution from a <strong>20M</strong> stock solution, how many millilitres of stock solution do you require?</li>
+            <li>If a person is <strong>5 feet and 1 inch</strong> tall, what is this in meters (Assuming <strong>1 inch = 2.5 cm</strong>)?</li>
+            <li>If a patient is <strong>10 stone 10 lbs</strong>, how much do they weigh in Kg (Assuming <strong>2 lbs = 1 Kg</strong>)?</li>
+            <li>What is the body surface area of someone who is <strong>1.8 metres</strong> tall and <strong>80 Kg</strong> in weight?<br>
+                (For Your Information: &radic;3.61 = 1.9, &radic;4.00 = 2.0, &radic;4.41 = 2.1, &radic;4.84 = 2.2)<br>
+                <em>Formula: BSA = &radic;(Ht (cm) x Weight (kg) / 3600)</em></li>
+            <li>What is <strong>50 &deg;F</strong> in <strong>&deg;C</strong>?</li>
+            <li>How many millilitres of a <strong>1 in 200</strong> solution is required to produce <strong>1000mL</strong> of a <strong>1 in 50,000</strong> solution?</li>
+            <li>If a <strong>75-year-old</strong> male has an ideal body weight of <strong>60kg</strong> and an actual body weight of <strong>70kg</strong> with a serum creatinine of <strong>140 micromol/litre</strong>, what is their CrCl?<br>
+                <em>Formula: CrCl (ml/min) = (140-Age) x Weight (Kg) / Serum creatinine (micromol/L)</em></li>
+            <li>If <strong>Zinc Oxide cream</strong> is described as <strong>10% w/w</strong>, in milligrams, how much active ingredient will be required to make <strong>250 grams</strong>?</li>
+            <li>A <strong>50 Kg</strong> patient requires <strong>12 mg/Kg/minute</strong> for <strong>5 minutes</strong>. This is to be delivered from a <strong>6% w/v</strong> solution, how much solution will they need in ml?</li>
+            <li>If a patient requires <strong>25 mcg/minute</strong> of a drug for <strong>2 hours</strong>, what is the total amount of drug they will receive in mg? Answer to <strong>1 decimal place</strong>.</li>
+            <li>If the formula for <strong>Oral Electrolyte Solution</strong> is:<br>
+                <ul>
+                    <li>Sodium Chloride: <strong>260mg</strong></li>
+                    <li>Potassium Chloride: <strong>150mg</strong></li>
+                    <li>Glucose: <strong>2000mg</strong></li>
+                    <li>Purified Water: <strong>to 100 mL</strong></li>
+                </ul>
+                How much <strong>Sodium Chloride</strong> and <strong>Potassium Chloride</strong> in milligrams are required to produce <strong>500ml</strong> of the Oral Electrolyte Solution?</li>
+        </ol>
+
+        <hr>
+    </div>
+
+</body>
+</html>
