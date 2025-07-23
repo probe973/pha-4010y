@@ -21,7 +21,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: #4CAF50; /* Green background for the navbar */
+            background-color: #45ac8b; /* Changed background color for the navbar */
             overflow: hidden;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
             z-index: 1000; /* Ensure navbar stays on top */
@@ -32,7 +32,7 @@
             box-sizing: border-box; /* Include padding in width */
         }
         .navbar-title {
-            color: white;
+            color: black; /* Changed text color to black */
             font-size: 24px;
             font-weight: bold;
             text-decoration: none; /* Remove underline from title link */
@@ -54,11 +54,22 @@
             text-align: center;
             margin-bottom: 20px;
         }
+        /* New style for the specific sub-heading */
+        .sub-heading {
+            font-size: 1.4em; /* Slightly smaller than default h2 */
+            color: #555; /* Slightly lighter color */
+            margin-top: -10px; /* Pull it closer to the h1 */
+            margin-bottom: 30px; /* Adjust spacing below */
+            font-weight: normal; /* Less bold than default h2 */
+        }
         p {
             text-align: center;
             margin-bottom: 30px;
             font-size: 1.1em;
         }
+        /* The original .button-container and .button styles are no longer needed for pha links,
+           but kept here in case they are used elsewhere or for reference.
+           The pha links will now use topic-link-container and topic-link styles. */
         .button-container {
             display: flex;
             flex-direction: column; /* Stack buttons vertically */
@@ -100,6 +111,7 @@
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 40px; /* Space between sections */
         }
         .topic-link-container {
             display: flex;
@@ -132,6 +144,25 @@
             margin-top: 5px;
             margin-left: 35px; /* Align with text after icon */
         }
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 75%; /* 4:3 Aspect Ratio (change this to 56.25% for 16:9) */
+            height: 0;
+            overflow: hidden;
+            margin-top: 20px; /* Space above iframe */
+            border-radius: 8px; /* Match container border-radius */
+        }
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none; /* Remove iframe border */
+            border-radius: 8px; /* Match container border-radius */
+        }
+
 
         /* Responsive adjustments */
         @media (max-width: 600px) {
@@ -146,6 +177,7 @@
                 margin: 10px;
                 padding: 15px;
             }
+            /* .button styles are now largely superseded by .topic-link for pha links */
             .button {
                 width: 90%;
                 padding: 12px 20px;
@@ -161,6 +193,9 @@
             .topic-description {
                 margin-left: 0;
             }
+            .iframe-container {
+                padding-bottom: 100%; /* Adjust aspect ratio for smaller screens if needed */
+            }
         }
     </style>
     <!-- Font Awesome for icons -->
@@ -170,22 +205,53 @@
 
     <!-- Fixed Navigation Bar -->
     <div class="navbar">
-        <a href="index.html" class="navbar-title">Pharmacy 4010Y - UEA Learning Enhancement Team</a>
+        <a href="index.html" class="navbar-title">Pharmacy 4010Y - Learning Enhancement Team</a>
     </div>
 
     <div class="content">
         <h1>Welcome to Pharmacy Calculations Practice</h1>
-        <p>Here you will find some questions based around the pharmacy calculations assessment. Use the links to look at the various examples.</p>
+        <h2 class="sub-heading">LLE - Mathematics & Statistics</h2>
+        <!-- The introductory paragraph for the old buttons is removed as per new structure -->
+    </div>
 
-        <div class="button-container">
-            <a href="pha01.html" class="button">Pharmacy Question Set 1</a>
-            <a href="pha02.html" class="button">Pharmacy Question Set 2</a>
-            <a href="pha03.html" class="button">Pharmacy Question Set 3</a>
-            <a href="pha04.html" class="button">Pharmacy Question Set 4</a>
-            <a href="pha05.html" class="button">Pharmacy Question Set 5</a>
+    <!-- New: Learning Enhancement Workshops Block -->
+    <div class="topic-section">
+        <h2>Learning Enhancement Workshops</h2>
+        <p>Use the following links to go to the LET workshops.</p>
+
+        <div class="topic-link-container">
+            <a href="workshops/1.html" class="topic-link">
+                <i class="fas fa-calculator topic-icon"></i>
+                <div>
+                    <strong>Arithmetic</strong>
+                    <div class="topic-description">Workshop on arithmetic, fractions, standard form, and conversion of units.</div>
+                </div>
+            </a>
+            <a href="workshops/2.html" class="topic-link">
+                <i class="fas fa-arrows-alt-h topic-icon"></i>
+                <div>
+                    <strong>Converting Units</strong>
+                    <div class="topic-description">Workshop on converting units and rearranging equations.</div>
+                </div>
+            </a>
+            <a href="workshops/3.html" class="topic-link">
+                <i class="fas fa-flask topic-icon"></i>
+                <div>
+                    <strong>Concentrations</strong>
+                    <div class="topic-description">Converting between concentrations and calculating dosages.</div>
+                </div>
+            </a>
+            <a href="workshops/4.html" class="topic-link">
+                <i class="fas fa-balance-scale topic-icon"></i>
+                <div>
+                    <strong>Imperial Measures</strong>
+                    <div class="topic-description">Converting between imperial and metric measures, and body index calculations.</div>
+                </div>
+            </a>
         </div>
     </div>
 
+    <!-- Existing: Further Topic Based Practice Block (Unchanged) -->
     <div class="topic-section">
         <h2>Further Topic Based Practice</h2>
         <p>Below you will find links to questions on individual topics.</p>
@@ -254,6 +320,84 @@
                     <div class="topic-description">Calculating ingredient quantities for larger batches of multi-component preparations based on a standard formula.</div>
                 </div>
             </a>
+        </div>
+    </div>
+
+    <!-- New: Review Exercises Block -->
+    <div class="topic-section">
+        <h2>Review Exercises</h2>
+        <p>Below you will find links to comprehensive review exercises.</p>
+
+        <div class="topic-link-container">
+            <a href="review/1.html" class="topic-link">
+                <i class="fas fa-book-open topic-icon"></i>
+                <div>
+                    <strong>Review 1</strong>
+                    <div class="topic-description">Conversion between metric units, calculating required amounts, and concentrations.</div>
+                </div>
+            </a>
+            <a href="review/2.html" class="topic-link">
+                <i class="fas fa-book-open topic-icon"></i>
+                <div>
+                    <strong>Review 2</strong>
+                    <div class="topic-description">Conversion between concentrations, calculating with concentrations, dilutions, and reactions.</div>
+                </div>
+            </a>
+            <a href="review/3.html" class="topic-link">
+                <i class="fas fa-book-open topic-icon"></i>
+                <div>
+                    <strong>Review 3</strong>
+                    <div class="topic-description">Metric and imperial units, BMI, IBW, and BSA.</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Existing: Pharmacy Question Set Links (now styled as topic-links) -->
+    <div class="topic-section">
+        <h2>Exam Preparation Questions</h2>
+        <p>Practice with exam style questions.</p>
+        <div class="topic-link-container">
+            <a href="examprep/pha01.html" class="topic-link">
+                <i class="fas fa-file-alt topic-icon"></i>
+                <div>
+                    <strong>Pharmacy Question Set 1</strong>
+                </div>
+            </a>
+            <a href="examprep/pha02.html" class="topic-link">
+                <i class="fas fa-file-alt topic-icon"></i>
+                <div>
+                    <strong>Pharmacy Question Set 2</strong>
+                </div>
+            </a>
+            <a href="examprep/pha03.html" class="topic-link">
+                <i class="fas fa-file-alt topic-icon"></i>
+                <div>
+                    <strong>Pharmacy Question Set 3</strong>
+                </div>
+            </a>
+            <a href="examprep/pha04.html" class="topic-link">
+                <i class="fas fa-file-alt topic-icon"></i>
+                <div>
+                    <strong>Pharmacy Question Set 4</strong>
+                </div>
+            </a>
+            <a href="examprep/pha05.html" class="topic-link">
+                <i class="fas fa-file-alt topic-icon"></i>
+                <div>
+                    <strong>Pharmacy Question Set 5</strong>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- New: Random Question Generator Block -->
+    <div class="topic-section">
+        <h2>Random Question Generator</h2>
+        <p>Try out our random question generator for extra practice!</p>
+        <div class="iframe-container">
+            <!-- Replace 'YOUR_GOOGLE_SCRIPT_WEB_APP_URL_HERE' with your actual deployed URL -->
+            <iframe src="https://script.google.com/macros/s/AKfycbxOmHIhngmaM5y5EfojU9bYLThQ-FOafhdVSj_W0GLDuoR7n570FQiorGgsfq5z1yDTUA/exec" title="Random Question Generator"></iframe>
         </div>
     </div>
 
