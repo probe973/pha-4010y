@@ -27,7 +27,7 @@ html, body {
 
 .navbar a, .navbar-link {
     display: block;
-    color: white; /* White text for navbar links */
+    color: black; /* Changed to BLACK for navbar links */
     text-align: center;
     padding: 12px 18px; /* Adjusted padding */
     text-decoration: none;
@@ -39,11 +39,11 @@ html, body {
 
 .navbar a:hover, .navbar-link:hover {
     background-color: #3a9172; /* Darker green on hover */
-    color: white;
+    color: black; /* Ensure text remains BLACK on hover */
 }
 
 .navbar-title {
-    color: white; /* White text for title */
+    color: black; /* Changed to BLACK for navbar title */
     font-size: 1.4em; /* Larger, more prominent title */
     font-weight: bold;
     text-decoration: none;
@@ -167,7 +167,7 @@ ul li {
 /* MathJax (LaTeX) specific styling */
 /* This ensures MathJax matches the surrounding text size and aligns vertically */
 mjx-container, mjx-math {
-    font-size: 1em !important; /* Forces MathJax to match its parent element's font size (which is 1.05em for p, and 1em for solution content p) */
+    font-size: 1em !important; /* Forces MathJax to match its parent element's font size */
     vertical-align: -0.125em !important; /* Adjusts vertical alignment to prevent "floating" */
 }
 
