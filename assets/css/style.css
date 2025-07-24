@@ -1,0 +1,263 @@
+html, body { /* Ensure no default margins/paddings on html and body */
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    padding-top: 60px; /* Space for the fixed header */
+    background-color: #f4f4f4; /* Light background for the page */
+    color: #333;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #45ac8b; /* Changed background color for the navbar */
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000; /* Ensure navbar stays on top */
+    display: flex;
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center;
+    padding: 20.5px 20px; /* Adjusted vertical padding to match other pages' navbar height */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Styles for the navigation links (Home, Solutions/Questions) */
+.navbar-link {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px; /* Space between links */
+}
+.navbar-link:hover {
+    background-color: #5cb85c;
+    color: black;
+}
+
+/* Styles for the main page title in the navbar */
+.navbar-title {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0;
+    margin-left: 10px; /* Space after links */
+    flex-grow: 1; /* Allow title to take up remaining space */
+    text-align: center; /* Center the title within its available space */
+}
+
+/* Media query to adjust navbar-title for smaller screens */
+@media (max-width: 600px) {
+    .navbar-title {
+        font-size: 20px; /* Slightly smaller title on mobile */
+        text-align: center; /* Center on mobile if links wrap */
+        margin-left: 0; /* Remove left margin on mobile */
+        margin-top: 10px; /* Add some top margin if links stack */
+    }
+}
+
+
+.content {
+    margin: 20px auto; /* Center content with auto margins */
+    max-width: 800px; /* Max width for readability */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 40px; /* Add space before the new section */
+}
+h1, h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+strong {
+    font-weight: bold;
+}
+.instructions, .formulae {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px; /* Rounded corners for info boxes */
+}
+ol {
+    counter-reset: item;
+    list-style-type: none;
+    padding-left: 40px; /* Increased padding for the whole list */
+}
+ol li {
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 2.5em; /* Space for the counter and a gap */
+}
+ol > li:before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    position: absolute;
+    left: 0; /* Position relative to the li's padding-box */
+    font-weight: bold;
+    text-align: right; /* Align numbers to the right within their space */
+    width: 2em; /* Give numbers a fixed width */
+}
+ul { /* Style for unordered lists, specifically for formula items */
+    list-style-type: disc;
+    margin-left: 20px; /* Indent for nested ul */
+    padding-left: 0;
+}
+ul li {
+    margin-bottom: 5px;
+}
+
+/* New style for the specific sub-heading */
+.sub-heading {
+    font-size: 1.4em; /* Slightly smaller than default h2 */
+    color: #555; /* Slightly lighter color */
+    margin-top: -10px; /* Pull it closer to the h1 */
+    margin-bottom: 30px; /* Adjust spacing below */
+    font-weight: normal; /* Less bold than default h2 */
+}
+p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+/* The original .button-container and .button styles are no longer needed for pha links,
+   but kept here in case they are used elsewhere or for reference.
+   The pha links will now use topic-link-container and topic-link styles. */
+.button-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px; /* Space between buttons */
+    align-items: center; /* Center buttons horizontally */
+    margin-bottom: 40px; /* Space before new section */
+}
+.button {
+    display: block; /* Make buttons block-level for full width */
+    width: 80%; /* Adjust width as needed, or use max-width */
+    max-width: 300px; /* Limit button width */
+    padding: 15px 25px;
+    background-color: #007BFF; /* Blue button color */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Deeper shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* Enhanced shadow on hover */
+}
+.button:active {
+    transform: translateY(0); /* Press down effect */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.topic-section {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 40px; /* Space between sections */
+}
+.topic-link-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between topic links */
+}
+.topic-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #e9e9e9;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.topic-link:hover {
+    background-color: #dcdcdc;
+    transform: translateX(5px);
+}
+.topic-icon {
+    margin-right: 10px;
+    font-size: 1.5em; /* Adjust icon size */
+    color: #4CAF50; /* Green color for icons */
+}
+.topic-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+    margin-left: 35px; /* Align with text after icon */
+}
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* 4:3 Aspect Ratio (change this to 56.25% for 16:9) */
+    height: 0;
+    overflow: hidden;
+    margin-top: 20px; /* Space above iframe */
+    border-radius: 8px; /* Match container border-radius */
+}
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove iframe border */
+    border-radius: 8px; /* Match container border-radius */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .navbar-title {
+        margin-bottom: 10px;
+    }
+    .content, .topic-section {
+        margin: 10px;
+        padding: 15px;
+    }
+    /* .button styles are now largely superseded by .topic-link for pha links */
+    .button {
+        width: 90%;
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+    .topic-link {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .topic-icon {
+        margin-bottom: 5px;
+    }
+    .topic-description {
+        margin-left: 0;
+    }
+    .iframe-container {
+        padding-bottom: 100%; /* Adjust aspect ratio for smaller screens if needed */
+    }
+}
