@@ -115,6 +115,11 @@ ol ol { /* This targets any ordered list nested directly inside another ordered 
     padding-left: 20px; /* Adjust padding for nested lists to indent them */
     margin-left: 0; /* Ensure no extra margin pushes them too far */
     counter-reset: none; /* IMPORTANT: Prevent nested lists from resetting or incrementing the main 'item' counter */
+    counter-increment: none;
+}
+
+ol ol li {
+    counter-increment: none; /* Ensures list items in nested lists do NOT increment the main 'question-counter' */
 }
 
 ol li {
