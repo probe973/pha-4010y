@@ -147,8 +147,9 @@ p {
     font-size: 1.1em; /* Your target font size for paragraph text */
 }
 
-/* MathJax (LaTeX) Font Size is now controlled by MathJax.options.scale in _layouts/default.html */
-/* No explicit font-size override is needed here in style.css for MathJax elements */
+mjx-container, mjx-math {
+    font-size: 1em !important; /* Forces MathJax to match the parent element's font size */
+}
 
 
 /* New styles for solution details spacing and alignment */
