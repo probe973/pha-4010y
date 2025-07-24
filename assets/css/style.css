@@ -146,7 +146,11 @@ ul li {
 }
 
 .mjx-chtml { /* This targets the main MathJax HTML output */
-    font-size: 1em !important; /* Forces MathJax output to match parent font size */
+    font-size: 1.1em !important; /* Forces MathJax output to match parent font size */
+}
+
+mjx-math {
+    font-size: 1.1em !important; /* Forces MathJax output to match your paragraph text size */
 }
 
 p {
