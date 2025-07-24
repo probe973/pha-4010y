@@ -1,0 +1,5 @@
+title: Pharmacy 4010Y Website
+description: Practice questions and workshops for Pharmacy 4010Y.
+baseurl: "/pha-4010y" # <-- THIS IS THE MOST IMPORTANT LINE FOR YOU
+markdown: kramdown
+theme: minima
