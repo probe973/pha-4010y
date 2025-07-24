@@ -8,7 +8,6 @@ body {
     padding-top: 60px; /* Space for the fixed header */
     background-color: #f4f4f4; /* Light background for the page */
     color: #333;
-    /* Removed custom counter-reset from here */
 }
 .navbar {
     position: fixed;
@@ -107,12 +106,10 @@ strong {
 ol {
     list-style-type: decimal; /* Use native decimal numbering for main questions */
     padding-left: 40px; /* Standard padding for ordered lists */
-    /* Removed all custom counter rules */
 }
 
 ol li {
     margin-bottom: 10px; /* Standard spacing for list items */
-    /* Removed custom counter-increment and display properties */
 }
 
 /* Simplified rules for nested ordered lists */
@@ -120,11 +117,10 @@ ol ol { /* This targets any ordered list nested directly inside another ordered 
     list-style-type: lower-alpha; /* Forces alphabetical numbering (a, b, c...) */
     padding-left: 20px; /* Adjust padding for nested lists to indent them */
     margin-left: 0; /* Ensure no extra margin pushes them too far */
-    /* Removed counter-reset: none; counter-increment: none; */
 }
 
 ol ol li {
-    /* Removed counter-increment: none; list-style-type: lower-alpha; padding-left: 0; */
+    /* No specific rules needed here, inherited from ol ol */
 }
 
 ul { /* Style for unordered lists, specifically for formula items */
@@ -158,11 +154,23 @@ p {
 /* New styles for solution details spacing and alignment */
 .solution-details {
     margin-top: 20px; /* Add space above the dropdown summary */
+    margin-bottom: 30px; /* Add space after the entire solution block */
 }
 
 .solution-content p { /* Target paragraphs specifically within solution content */
-    text-align: left; /* Ensure solution content is left-aligned */
+    text-align: left; /* Ensure solution content paragraphs are left-aligned */
     margin-bottom: 10px; /* Adjust spacing within solutions if needed */
+}
+
+.solution-content ul { /* Target unordered lists specifically within solution content */
+    text-align: left; /* Ensure solution content lists are left-aligned */
+    margin-left: 20px; /* Standard indent for lists */
+    margin-bottom: 10px;
+}
+
+.solution-content li { /* Target list items specifically within solution content */
+    text-align: left; /* Ensure solution content list items are left-aligned */
+    margin-bottom: 5px;
 }
 
 
