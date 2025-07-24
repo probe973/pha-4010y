@@ -72,7 +72,7 @@ body {
     font-weight: bold;
     text-decoration: none;
     padding: 0;
-    margin-left: 10px; /* Space after links */
+    
     flex-grow: 1; /* Allow title to take up remaining space */
     text-align: center; /* Center the title within its available space */
 }
