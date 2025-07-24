@@ -1,214 +1,225 @@
-html, body { /* Ensure no default margins/paddings on html and body */
+/* Base styles for HTML and Body */
+html, body {
     margin: 0;
     padding: 0;
-}
-body {
-    font-family: sans-serif;
     line-height: 1.6;
-    padding-top: 60px; /* Space for the fixed header */
-    background-color: #f4f4f4; /* Light background for the page */
-    color: #333;
+    font-family: 'Inter', sans-serif; /* Using Inter font */
+    color: #333; /* Dark gray text */
+    background-color: #f8f8f8; /* Very light background */
 }
+
+/* Navbar styles */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #45ac8b; /* Changed background color for the navbar */
+    background-color: #45ac8b; /* Greenish background */
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    z-index: 1000; /* Ensure navbar stays on top */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Enhanced shadow */
+    z-index: 1000;
     display: flex;
-    justify-content: flex-start; /* Align items to the start */
+    justify-content: flex-start;
     align-items: center;
-    padding: 10px 20px; /* Adjusted vertical padding to match other pages' navbar height */
-    box-sizing: border-box; /* Include padding in width */
+    padding: 10px 20px;
+    box-sizing: border-box;
 }
 
-/* --- START: Navigation Link Styles --- */
-
-/* Styles for links in EXISTING HTML files (e.g., pha01.html, pha01_s.html) */
-/* These target <a> tags directly inside .navbar */
-.navbar a {
+.navbar a, .navbar-link {
     display: block;
-    color: black; /* Changed text color to black */
+    color: white; /* White text for navbar links */
     text-align: center;
-    padding: 14px 20px;
+    padding: 12px 18px; /* Slightly adjusted padding */
     text-decoration: none;
-    font-size: 17px;
-    border-radius: 8px; /* Rounded corners for links */
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
-    margin-right: 10px; /* Space between links */
-}
-.navbar a:hover {
-    background-color: #5cb85c; /* Lighter green on hover */
-    color: black; /* Ensure text remains black on hover */
+    font-size: 1.05em; /* Slightly smaller font for links */
+    border-radius: 6px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-right: 15px; /* Space between links */
 }
 
-/* Styles for links in NEW Jekyll-processed Markdown files */
-/* These target <a> tags specifically given the .navbar-link class in _layouts/default.html */
-.navbar-link {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-size: 17px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    float: none !important; /* Ensures no floating behavior */
-    margin-right: auto !important; /* Pushes the link to the far left */
-    margin-left: 0 !important; /* Ensures no left margin interference */
-}
-.navbar-link:hover {
-    background-color: #5cb85c;
-    color: black;
+.navbar a:hover, .navbar-link:hover {
+    background-color: #3a9172; /* Darker green on hover */
+    color: white;
 }
 
-/* Styles for the main page title in the navbar */
 .navbar-title {
-    color: black;
-    font-size: 1.2em; /* Adjusted to match original HTML's title size */
+    color: white; /* White text for title */
+    font-size: 1.4em; /* Larger, more prominent title */
     font-weight: bold;
     text-decoration: none;
     padding: 0;
-    flex-grow: 1; /* Allows title to take up remaining space */
-    text-align: center; /* Centers the text within its allocated space */
-}
-
-/* --- END: Navigation Link Styles --- */
-
-
-.content {
-    margin: 20px auto; /* Center content with auto margins */
-    max-width: 800px; /* Max width for readability */
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-bottom: 40px; /* Add space before the new section */
-}
-h1, h2 {
-    color: #333;
+    flex-grow: 1;
     text-align: center;
-    margin-bottom: 20px;
 }
-strong {
-    font-weight: bold;
+
+/* Main content area */
+.content {
+    margin: 80px auto 40px auto; /* Space for fixed header, center, bottom margin */
+    max-width: 850px; /* Slightly wider content area */
+    padding: 30px; /* More padding inside */
+    background-color: #fff;
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Deeper, softer shadow */
 }
+
+/* Headings */
+h1, h2 {
+    color: #2c3e50; /* Darker blue-gray for headings */
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600; /* Slightly bolder */
+}
+
+/* Paragraphs and general text */
+p {
+    text-align: left; /* Default to left-aligned */
+    margin-bottom: 15px;
+    font-size: 1.05em; /* Consistent font size for main text */
+}
+
+/* Instructions and Formulae boxes */
 .instructions, .formulae {
-    border: 1px solid #ccc;
-    padding: 15px;
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px; /* Rounded corners for info boxes */
+    border: 1px solid #dcdcdc; /* Lighter border */
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #fdfdfd; /* Off-white background */
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); /* Subtle inner shadow */
 }
+
+/* Ordered Lists (Questions) */
 ol {
-    list-style-type: decimal; /* Use native decimal numbering for main questions */
-    padding-left: 40px; /* Standard padding for ordered lists */
+    list-style-type: decimal; /* Native decimal numbering */
+    padding-left: 30px; /* Standard indent */
+    margin-bottom: 20px; /* Space after main list */
 }
 
 ol li {
-    margin-bottom: 10px; /* Standard spacing for list items */
+    margin-bottom: 15px; /* More spacing between list items */
+    font-size: 1.05em; /* Consistent font size with paragraphs */
 }
 
-/* Simplified rules for nested ordered lists */
-ol ol { /* This targets any ordered list nested directly inside another ordered list */
-    list-style-type: lower-alpha; /* Forces alphabetical numbering (a, b, c...) */
-    padding-left: 20px; /* Adjust padding for nested lists to indent them */
-    margin-left: 0; /* Ensure no extra margin pushes them too far */
+/* Nested Ordered Lists (a, b, c) */
+ol ol {
+    list-style-type: lower-alpha; /* Native alphabetical numbering */
+    padding-left: 25px; /* Indent for nested lists */
+    margin-top: 10px; /* Space above nested list */
+    margin-bottom: 10px; /* Space below nested list */
 }
 
 ol ol li {
-    /* No specific rules needed here, inherited from ol ol */
+    margin-bottom: 8px; /* Closer spacing for sub-items */
 }
 
-ul { /* Style for unordered lists, specifically for formula items */
+/* Unordered Lists */
+ul {
     list-style-type: disc;
-    margin-left: 20px; /* Indent for nested ul */
+    margin-left: 25px;
     padding-left: 0;
+    margin-bottom: 15px;
 }
+
 ul li {
     margin-bottom: 5px;
 }
 
-
-/* New style for the specific sub-heading */
-.sub-heading {
-    font-size: 1.4em; /* Slightly smaller than default h2 */
-    color: #555; /* Slightly lighter color */
-    margin-top: -10px; /* Pull it closer to the h1 */
-    margin-bottom: 30px; /* Adjust spacing below */
-    font-weight: normal; /* Less bold than default h2 */
-}
-p {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 1.1em; /* Your target font size for paragraph text */
-}
-
-mjx-container, mjx-math {
-    font-size: 17.6px !important; /* Forces MathJax to match the parent element's font size */
-}
-
-
-/* New styles for solution details spacing and alignment */
+/* Solution Details (Collapsible) */
 .solution-details {
-    margin-top: 20px; /* Add space above the dropdown summary */
-    margin-bottom: 30px; /* Add space after the entire solution block */
+    margin-top: 25px; /* More space above the solution dropdown */
+    margin-bottom: 35px; /* More space after the solution block */
+    background-color: #f0f8f0; /* Light green background for solution area */
+    border: 1px solid #d4edda; /* Greenish border */
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Subtle shadow for solution box */
 }
 
-.solution-content p { /* Target paragraphs specifically within solution content */
-    text-align: left; /* Ensure solution content paragraphs are left-aligned */
-    margin-bottom: 10px; /* Adjust spacing within solutions if needed */
+.solution-details summary {
+    font-weight: bold;
+    color: #28a745; /* Green color for summary text */
+    cursor: pointer;
+    padding: 5px 0;
+    outline: none; /* Remove outline on focus */
 }
 
-.solution-content ul { /* Target unordered lists specifically within solution content */
-    text-align: left; /* Ensure solution content lists are left-aligned */
-    margin-left: 20px; /* Standard indent for lists */
-    margin-bottom: 10px;
+.solution-details summary:hover {
+    color: #218838; /* Darker green on hover */
 }
 
-.solution-content li { /* Target list items specifically within solution content */
-    text-align: left; /* Ensure solution content list items are left-aligned */
-    margin-bottom: 5px;
+.solution-content {
+    padding-top: 15px; /* Space between summary and content */
+    border-top: 1px solid #e2f0e2; /* Light separator line */
+    margin-top: 15px;
 }
 
+.solution-content p,
+.solution-content ul,
+.solution-content li {
+    text-align: left; /* Ensure all content inside solutions is left-aligned */
+    font-size: 1.05em; /* Maintain consistent font size */
+    margin-bottom: 10px; /* Spacing for paragraphs/list items within solutions */
+}
 
-/* The original .button-container and .button styles are no longer needed for pha links,
-   but kept here in case they are used elsewhere or for reference.
-   The pha links will now use topic-link-container and topic-link styles. */
+.solution-content ul {
+    margin-left: 20px; /* Indent for lists within solutions */
+}
+
+/* MathJax (LaTeX) specific styling */
+/* This ensures MathJax matches the surrounding text size */
+mjx-container, mjx-math {
+    font-size: 1em !important; /* Forces MathJax to match its parent's font size */
+    vertical-align: middle !important; /* Helps align with surrounding text */
+}
+
+/* Horizontal Rule */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}
+
+/* Other specific styles */
+.sub-heading {
+    font-size: 1.4em;
+    color: #555;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+/* Button and Topic Link styles (from previous versions, adjusted for consistency) */
 .button-container {
     display: flex;
-    flex-direction: column; /* Stack buttons vertically */
-    gap: 15px; /* Space between buttons */
-    align-items: center; /* Center buttons horizontally */
-    margin-bottom: 40px; /* Space before new section */
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 40px;
 }
 .button {
-    display: block; /* Make buttons block-level for full width */
-    width: 80%; /* Adjust width as needed, or use max-width */
-    max-width: 300px; /* Limit button width */
+    display: block;
+    width: 80%;
+    max-width: 300px;
     padding: 15px 25px;
-    background-color: #007BFF; /* Blue button color */
+    background-color: #007BFF;
     color: white;
     text-align: center;
     text-decoration: none;
     font-size: 1.2em;
     font-weight: bold;
-    border-radius: 10px; /* More rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Deeper shadow */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     border: none;
     cursor: pointer;
 }
 .button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: translateY(-2px); /* Slight lift effect */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* Enhanced shadow on hover */
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
 .button:active {
-    transform: translateY(0); /* Press down effect */
+    transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
@@ -219,12 +230,12 @@ mjx-container, mjx-math {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-bottom: 40px; /* Space between sections */
+    margin-bottom: 40px;
 }
 .topic-link-container {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Space between topic links */
+    gap: 10px;
 }
 .topic-link {
     display: flex;
@@ -243,23 +254,23 @@ mjx-container, mjx-math {
 }
 .topic-icon {
     margin-right: 10px;
-    font-size: 1.5em; /* Adjust icon size */
-    color: #4CAF50; /* Green color for icons */
+    font-size: 1.5em;
+    color: #4CAF50;
 }
 .topic-description {
     font-size: 0.9em;
     color: #666;
     margin-top: 5px;
-    margin-left: 35px; /* Align with text after icon */
+    margin-left: 35px;
 }
 .iframe-container {
     position: relative;
     width: 100%;
-    padding-bottom: 75%; /* 4:3 Aspect Ratio (change this to 56.25% for 16:9) */
+    padding-bottom: 75%;
     height: 0;
     overflow: hidden;
-    margin-top: 20px; /* Space above iframe */
-    border-radius: 8px; /* Match container border-radius */
+    margin-top: 20px;
+    border-radius: 8px;
 }
 .iframe-container iframe {
     position: absolute;
@@ -267,10 +278,9 @@ mjx-container, mjx-math {
     left: 0;
     width: 100%;
     height: 100%;
-    border: none; /* Remove iframe border */
-    border-radius: 8px; /* Match container border-radius */
+    border: none;
+    border-radius: 8px;
 }
-
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
@@ -285,7 +295,6 @@ mjx-container, mjx-math {
         margin: 10px;
         padding: 15px;
     }
-    /* .button styles are now largely superseded by .topic-link for pha links */
     .button {
         width: 90%;
         padding: 12px 20px;
@@ -302,6 +311,6 @@ mjx-container, mjx-math {
         margin-left: 0;
     }
     .iframe-container {
-        padding-bottom: 100%; /* Adjust aspect ratio for smaller screens if needed */
+        padding-bottom: 100%;
     }
 }
