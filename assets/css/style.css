@@ -21,7 +21,7 @@ body {
     display: flex;
     justify-content: flex-start; /* Align items to the start */
     align-items: center;
-    padding: 20.5px 20px; /* Adjusted vertical padding to match other pages' navbar height */
+    padding: 10px 20px; /* Adjusted vertical padding to match other pages' navbar height */
     box-sizing: border-box; /* Include padding in width */
 }
 
