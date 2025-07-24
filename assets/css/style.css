@@ -329,6 +329,4 @@ mjx-container, mjx-math {
     }
 }
 
-.content > *:first-child {
-    margin-top: 0 !important;
-}
+
