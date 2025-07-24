@@ -65,13 +65,16 @@ html, body { /* Ensure no default margins/paddings on html and body */
 
 /* Styles for the main page title in the navbar */
 .navbar-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     color: black;
     font-size: 1.2em; /* Adjusted to match original HTML's title size */
     font-weight: bold;
     text-decoration: none;
     padding: 0;
-    flex-grow: 1; /* Allows title to take up remaining space */
-    text-align: center; /* Centers the text within its allocated space */
+    /*flex-grow: 1;  Allows title to take up remaining space */
+    /*text-align: center;  Centers the text within its allocated space */
 }
 
 /* --- END: Navigation Link Styles --- */
