@@ -8,7 +8,7 @@ body {
     padding-top: 60px; /* Space for the fixed header */
     background-color: #f4f4f4; /* Light background for the page */
     color: #333;
-    counter-reset: item;
+    counter-reset: question-counter;
 }
 .navbar {
     position: fixed;
@@ -122,10 +122,11 @@ ol li {
     margin-bottom: 10px;
     position: relative;
     padding-left: 2.5em; /* Space for the counter and a gap */
+    counter-increment: question-counter;
 }
 ol > li:before {
-    content: counter(item) ". ";
-    counter-increment: item;
+    content: counter(question-counter) ". ";
+    /*counter-increment: item;*/
     position: absolute;
     left: 0; /* Position relative to the li's padding-box */
     font-weight: bold;
