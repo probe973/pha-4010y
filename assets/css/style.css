@@ -110,6 +110,25 @@ ol {
     padding-left: 40px; /* Increased padding for the whole list */
 }
 
+ol.main-questions > li { /* CHANGE: Added .main-questions to target only top-level list items */
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 2.5em; /* Space for the counter and a gap */
+    counter-increment: question-counter; /* Increment the main question number */
+}
+
+ol.main-questions > li:before { /* CHANGE: Added .main-questions to target only top-level list items */
+    content: counter(question-counter) ". "; /* Display the main question number */
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    text-align: right;
+    width: 2em;
+}
+
+
+
 ol ol { /* This targets any ordered list nested directly inside another ordered list */
     list-style-type: lower-alpha; /* Forces alphabetical numbering (a, b, c...) */
     padding-left: 20px; /* Adjust padding for nested lists to indent them */
@@ -120,6 +139,8 @@ ol ol { /* This targets any ordered list nested directly inside another ordered 
 
 ol ol li {
     counter-increment: none; /* Ensures list items in nested lists do NOT increment the main 'question-counter' */
+    list-style-type: lower-alpha; /* Redundant but ensures alphabetical if ol ol is overridden */
+    padding-left: 0;
 }
 
 ol li {
