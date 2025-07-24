@@ -1,129 +1,152 @@
-/* Base styles for HTML and Body */
-html, body {
+html, body { /* Ensure no default margins/paddings on html and body */
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    font-family: 'Inter', sans-serif; /* Using Inter font */
-    color: #333; /* Dark gray text for main content */
-    background-color: #f8f8f8; /* Very light background for the page */
+    font-family: sans-serif;
+    padding-top: 60px; /* Space for the fixed header */
+    background-color: #f4f4f4; /* Light background for the page */
+    color: #333; /* Main text color */
+    font-size: 16px; /* Set a base font size for the body */
 }
-
-/* Navbar styles */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #45ac8b; /* Greenish background */
+    background-color: #45ac8b; /* Changed background color for the navbar */
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Enhanced shadow */
-    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000; /* Ensure navbar stays on top */
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-start; /* Align items to the start */
     align-items: center;
-    padding: 10px 20px;
-    box-sizing: border-box;
+    padding: 10px 20px; /* Adjusted vertical padding to match other pages' navbar height */
+    box-sizing: border-box; /* Include padding in width */
 }
 
-.navbar a, .navbar-link {
+/* --- START: Navigation Link Styles --- */
+
+/* Styles for links in EXISTING HTML files (e.g., pha01.html, pha01_s.html) */
+/* These target <a> tags directly inside .navbar */
+.navbar a {
     display: block;
-    color: black; /* Changed to BLACK for navbar links */
+    color: black; /* Changed text color to black */
     text-align: center;
-    padding: 12px 18px; /* Adjusted padding */
+    padding: 14px 20px;
     text-decoration: none;
-    font-size: 1.05em; /* Consistent font size for links */
-    border-radius: 6px; /* Rounded corners */
-    transition: background-color 0.3s ease, color 0.3s ease;
-    margin-right: 15px; /* Space between links */
+    font-size: 17px;
+    border-radius: 8px; /* Rounded corners for links */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    margin-right: 10px; /* Space between links */
+}
+.navbar a:hover {
+    background-color: #5cb85c; /* Lighter green on hover */
+    color: black; /* Ensure text remains black on hover */
 }
 
-.navbar a:hover, .navbar-link:hover {
-    background-color: #3a9172; /* Darker green on hover */
-    color: black; /* Ensure text remains BLACK on hover */
+/* Styles for links in NEW Jekyll-processed Markdown files */
+/* These target <a> tags specifically given the .navbar-link class in _layouts/default.html */
+.navbar-link {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    float: none !important; /* Ensures no floating behavior */
+    margin-right: auto !important; /* Pushes the link to the far left */
+    margin-left: 0 !important; /* Ensures no left margin interference */
+}
+.navbar-link:hover {
+    background-color: #5cb85c;
+    color: black;
 }
 
+/* Styles for the main page title in the navbar */
 .navbar-title {
-    color: black; /* Changed to BLACK for navbar title */
-    font-size: 1.4em; /* Larger, more prominent title */
+    color: black;
+    font-size: 1.2em; /* Adjusted to match original HTML's title size */
     font-weight: bold;
     text-decoration: none;
     padding: 0;
-    flex-grow: 1;
-    text-align: center;
+    flex-grow: 1; /* Allows title to take up remaining space */
+    text-align: center; /* Centers the text within its allocated space */
 }
 
-/* Main content area */
+/* --- END: Navigation Link Styles --- */
+
+
 .content {
-    margin: 80px auto 40px auto; /* Space for fixed header, center, bottom margin */
-    max-width: 850px; /* Slightly wider content area */
-    padding: 30px; /* More padding inside */
-    background-color: #fff;
-    border-radius: 10px; /* More rounded corners */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Deeper, softer shadow */
-}
-
-/* Headings */
-h1, h2 {
-    color: #2c3e50; /* Darker blue-gray for headings */
-    text-align: center;
-    margin-bottom: 25px;
-    font-weight: 600; /* Slightly bolder */
-}
-
-/* Paragraphs and general text */
-p {
-    text-align: left; /* Default to left-aligned */
-    margin-bottom: 15px;
-    font-size: 1.05em; /* Consistent font size for main text */
-}
-
-/* Instructions and Formulae boxes */
-.instructions, .formulae {
-    border: 1px solid #dcdcdc; /* Lighter border */
+    margin: 20px auto; /* Center content with auto margins */
+    max-width: 800px; /* Max width for readability */
     padding: 20px;
-    margin-bottom: 30px;
-    background-color: #fdfdfd; /* Off-white background */
+    background-color: #fff;
     border-radius: 8px;
-    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); /* Subtle inner shadow */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 40px; /* Add space before the new section */
 }
-
-/* Ordered Lists (Questions) */
+h1, h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+strong {
+    font-weight: bold;
+}
+.instructions, .formulae {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px; /* Rounded corners for info boxes */
+}
 ol {
-    list-style-type: decimal; /* Native decimal numbering */
-    padding-left: 30px; /* Standard indent */
-    margin-bottom: 20px; /* Space after main list */
+    list-style-type: decimal; /* Use native decimal numbering for main questions */
+    padding-left: 40px; /* Standard padding for ordered lists */
 }
 
 ol li {
-    margin-bottom: 15px; /* More spacing between list items */
-    font-size: 1.05em; /* Consistent font size with paragraphs */
+    margin-bottom: 10px; /* Standard spacing for list items */
 }
 
-/* Nested Ordered Lists (a, b, c) */
-ol ol {
-    list-style-type: lower-alpha; /* Native alphabetical numbering */
-    padding-left: 25px; /* Indent for nested lists */
-    margin-top: 10px; /* Space above nested list */
-    margin-bottom: 10px; /* Space below nested list */
+/* Simplified rules for nested ordered lists */
+ol ol { /* This targets any ordered list nested directly inside another ordered list */
+    list-style-type: lower-alpha; /* Forces alphabetical numbering (a, b, c...) */
+    padding-left: 20px; /* Adjust padding for nested lists to indent them */
+    margin-left: 0; /* Ensure no extra margin pushes them too far */
 }
 
 ol ol li {
-    margin-bottom: 8px; /* Closer spacing for sub-items */
+    /* No specific rules needed here, inherited from ol ol */
 }
 
-/* Unordered Lists */
-ul {
+ul { /* Style for unordered lists, specifically for formula items */
     list-style-type: disc;
-    margin-left: 25px;
+    margin-left: 20px; /* Indent for nested ul */
     padding-left: 0;
-    margin-bottom: 15px;
 }
-
 ul li {
     margin-bottom: 5px;
 }
 
-/* Solution Details (Collapsible) */
+
+/* New style for the specific sub-heading */
+.sub-heading {
+    font-size: 1.4em; /* Slightly smaller than default h2 */
+    color: #555; /* Slightly lighter color */
+    margin-top: -10px; /* Pull it closer to the h1 */
+    margin-bottom: 30px; /* Adjust spacing below */
+    font-weight: normal; /* Less bold than default h2 */
+}
+p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1em; /* Your target font size for paragraph text */
+}
+
+/* --- START: Solution Details (Collapsible) Styles --- */
 .solution-details {
     margin-top: 25px; /* More space above the solution dropdown */
     margin-bottom: 35px; /* More space after the solution block */
@@ -156,13 +179,15 @@ ul li {
 .solution-content ul,
 .solution-content li {
     text-align: left; /* Ensure all content inside solutions is left-aligned */
-    font-size: 1em; /* Set to 1em here, as the parent .solution-details has padding, it should inherit correctly. */
+    font-size: 1em; /* This will make solution content match the size of its immediate parent, which is .solution-details, inheriting from body's 16px. So this will be 16px. */
     margin-bottom: 10px; /* Spacing for paragraphs/list items within solutions */
 }
 
 .solution-content ul {
     margin-left: 20px; /* Indent for lists within solutions */
 }
+/* --- END: Solution Details (Collapsible) Styles --- */
+
 
 /* MathJax (LaTeX) specific styling */
 /* This ensures MathJax matches the surrounding text size and aligns vertically */
@@ -170,6 +195,7 @@ mjx-container, mjx-math {
     font-size: 1em !important; /* Forces MathJax to match its parent element's font size */
     vertical-align: -0.125em !important; /* Adjusts vertical alignment to prevent "floating" */
 }
+
 
 /* Horizontal Rule */
 hr {
@@ -181,45 +207,48 @@ hr {
 
 /* Other specific styles */
 .sub-heading {
-    font-size: 1.4em;
-    color: #555;
-    margin-top: -10px;
-    margin-bottom: 30px;
-    font-weight: normal;
+    font-size: 1.4em; /* Slightly smaller than default h2 */
+    color: #555; /* Slightly lighter color */
+    margin-top: -10px; /* Pull it closer to the h1 */
+    margin-bottom: 30px; /* Adjust spacing below */
+    font-weight: normal; /* Less bold than default h2 */
 }
 
-/* Button and Topic Link styles (from previous versions, adjusted for consistency) */
+
+/* The original .button-container and .button styles are no longer needed for pha links,
+   but kept here in case they are used elsewhere or for reference.
+   The pha links will now use topic-link-container and topic-link styles. */
 .button-container {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    margin-bottom: 40px;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px; /* Space between buttons */
+    align-items: center; /* Center buttons horizontally */
+    margin-bottom: 40px; /* Space before new section */
 }
 .button {
-    display: block;
-    width: 80%;
-    max-width: 300px;
+    display: block; /* Make buttons block-level for full width */
+    width: 80%; /* Adjust width as needed, or use max-width */
+    max-width: 300px; /* Limit button width */
     padding: 15px 25px;
-    background-color: #007BFF;
+    background-color: #007BFF; /* Blue button color */
     color: white;
     text-align: center;
     text-decoration: none;
     font-size: 1.2em;
     font-weight: bold;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Deeper shadow */
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     border: none;
     cursor: pointer;
 }
 .button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* Enhanced shadow on hover */
 }
 .button:active {
-    transform: translateY(0);
+    transform: translateY(0); /* Press down effect */
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
@@ -230,12 +259,12 @@ hr {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* Space between sections */
 }
 .topic-link-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 10px; /* Space between topic links */
 }
 .topic-link {
     display: flex;
@@ -254,23 +283,23 @@ hr {
 }
 .topic-icon {
     margin-right: 10px;
-    font-size: 1.5em;
-    color: #4CAF50;
+    font-size: 1.5em; /* Adjust icon size */
+    color: #4CAF50; /* Green color for icons */
 }
 .topic-description {
     font-size: 0.9em;
     color: #666;
     margin-top: 5px;
-    margin-left: 35px;
+    margin-left: 35px; /* Align with text after icon */
 }
 .iframe-container {
     position: relative;
     width: 100%;
-    padding-bottom: 75%;
+    padding-bottom: 75%; /* 4:3 Aspect Ratio (change this to 56.25% for 16:9) */
     height: 0;
     overflow: hidden;
-    margin-top: 20px;
-    border-radius: 8px;
+    margin-top: 20px; /* Space above iframe */
+    border-radius: 8px; /* Match container border-radius */
 }
 .iframe-container iframe {
     position: absolute;
@@ -278,9 +307,10 @@ hr {
     left: 0;
     width: 100%;
     height: 100%;
-    border: none;
-    border-radius: 8px;
+    border: none; /* Remove iframe border */
+    border-radius: 8px; /* Match container border-radius */
 }
+
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
@@ -295,6 +325,7 @@ hr {
         margin: 10px;
         padding: 15px;
     }
+    /* .button styles are now largely superseded by .topic-link for pha links */
     .button {
         width: 90%;
         padding: 12px 20px;
@@ -311,6 +342,6 @@ hr {
         margin-left: 0;
     }
     .iframe-container {
-        padding-bottom: 100%;
+        padding-bottom: 100%; /* Adjust aspect ratio for smaller screens if needed */
     }
 }
