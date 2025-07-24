@@ -144,6 +144,11 @@ ul li {
     margin-bottom: 30px; /* Adjust spacing below */
     font-weight: normal; /* Less bold than default h2 */
 }
+
+.mjx-chtml { /* This targets the main MathJax HTML output */
+    font-size: 1em !important; /* Forces MathJax output to match parent font size */
+}
+
 p {
     text-align: center;
     margin-bottom: 30px;
