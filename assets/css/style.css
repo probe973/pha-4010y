@@ -8,6 +8,7 @@ body {
     padding-top: 60px; /* Space for the fixed header */
     background-color: #f4f4f4; /* Light background for the page */
     color: #333;
+    counter-reset: item;
 }
 .navbar {
     position: fixed;
@@ -104,10 +105,18 @@ strong {
     border-radius: 8px; /* Rounded corners for info boxes */
 }
 ol {
-    counter-reset: item;
+    /*counter-reset: item;*/
     list-style-type: none;
     padding-left: 40px; /* Increased padding for the whole list */
 }
+
+ol ol { /* This targets any ordered list nested directly inside another ordered list */
+    list-style-type: lower-alpha; /* Forces alphabetical numbering (a, b, c...) */
+    padding-left: 20px; /* Adjust padding for nested lists to indent them */
+    margin-left: 0; /* Ensure no extra margin pushes them too far */
+    counter-reset: none; /* IMPORTANT: Prevent nested lists from resetting or incrementing the main 'item' counter */
+}
+
 ol li {
     display: block;
     margin-bottom: 10px;
