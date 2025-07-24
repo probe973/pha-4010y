@@ -30,7 +30,7 @@ body {
 /* Styles for links in EXISTING HTML files (e.g., pha01.html, pha01_s.html) */
 /* These target <a> tags directly inside .navbar */
 .navbar a {
-    float: left; /* Keep float for old structure if needed, or adjust to flex */
+    /* float: left; Keep float for old structure if needed, or adjust to flex */
     display: block;
     color: black; /* Changed text color to black */
     text-align: center;
