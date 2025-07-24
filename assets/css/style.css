@@ -8,7 +8,7 @@ body {
     padding-top: 60px; /* Space for the fixed header */
     background-color: #f4f4f4; /* Light background for the page */
     color: #333;
-    /* REMOVED: counter-reset: question-counter; - relying on native numbering */
+    /* Removed custom counter-reset from here */
 }
 .navbar {
     position: fixed;
@@ -105,14 +105,14 @@ strong {
     border-radius: 8px; /* Rounded corners for info boxes */
 }
 ol {
-    /* REMOVED: list-style-type: none; - relying on native numbering */
+    list-style-type: decimal; /* Use native decimal numbering for main questions */
     padding-left: 40px; /* Standard padding for ordered lists */
-    /* REMOVED: all custom counter-related rules */
+    /* Removed all custom counter rules */
 }
 
 ol li {
     margin-bottom: 10px; /* Standard spacing for list items */
-    /* REMOVED: display: block; position: relative; padding-left: 2.5em; counter-increment: question-counter; */
+    /* Removed custom counter-increment and display properties */
 }
 
 /* Simplified rules for nested ordered lists */
@@ -120,11 +120,11 @@ ol ol { /* This targets any ordered list nested directly inside another ordered 
     list-style-type: lower-alpha; /* Forces alphabetical numbering (a, b, c...) */
     padding-left: 20px; /* Adjust padding for nested lists to indent them */
     margin-left: 0; /* Ensure no extra margin pushes them too far */
-    /* REMOVED: counter-reset: none; counter-increment: none; */
+    /* Removed counter-reset: none; counter-increment: none; */
 }
 
 ol ol li {
-    /* REMOVED: counter-increment: none; list-style-type: lower-alpha; padding-left: 0; */
+    /* Removed counter-increment: none; list-style-type: lower-alpha; padding-left: 0; */
 }
 
 ul { /* Style for unordered lists, specifically for formula items */
@@ -153,6 +153,17 @@ p {
 
 /* MathJax (LaTeX) Font Size is now controlled by MathJax.options.scale in _layouts/default.html */
 /* No explicit font-size override is needed here in style.css for MathJax elements */
+
+
+/* New styles for solution details spacing and alignment */
+.solution-details {
+    margin-top: 20px; /* Add space above the dropdown summary */
+}
+
+.solution-content p { /* Target paragraphs specifically within solution content */
+    text-align: left; /* Ensure solution content is left-aligned */
+    margin-bottom: 10px; /* Adjust spacing within solutions if needed */
+}
 
 
 /* The original .button-container and .button styles are no longer needed for pha links,
