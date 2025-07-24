@@ -4,8 +4,8 @@ html, body {
     padding: 0;
     line-height: 1.6;
     font-family: 'Inter', sans-serif; /* Using Inter font */
-    color: #333; /* Dark gray text */
-    background-color: #f8f8f8; /* Very light background */
+    color: #333; /* Dark gray text for main content */
+    background-color: #f8f8f8; /* Very light background for the page */
 }
 
 /* Navbar styles */
@@ -29,9 +29,9 @@ html, body {
     display: block;
     color: white; /* White text for navbar links */
     text-align: center;
-    padding: 12px 18px; /* Slightly adjusted padding */
+    padding: 12px 18px; /* Adjusted padding */
     text-decoration: none;
-    font-size: 1.05em; /* Slightly smaller font for links */
+    font-size: 1.05em; /* Consistent font size for links */
     border-radius: 6px; /* Rounded corners */
     transition: background-color 0.3s ease, color 0.3s ease;
     margin-right: 15px; /* Space between links */
@@ -156,7 +156,7 @@ ul li {
 .solution-content ul,
 .solution-content li {
     text-align: left; /* Ensure all content inside solutions is left-aligned */
-    font-size: 1.05em; /* Maintain consistent font size */
+    font-size: 1em; /* Set to 1em here, as the parent .solution-details has padding, it should inherit correctly. */
     margin-bottom: 10px; /* Spacing for paragraphs/list items within solutions */
 }
 
@@ -165,10 +165,10 @@ ul li {
 }
 
 /* MathJax (LaTeX) specific styling */
-/* This ensures MathJax matches the surrounding text size */
+/* This ensures MathJax matches the surrounding text size and aligns vertically */
 mjx-container, mjx-math {
-    font-size: 1em !important; /* Forces MathJax to match its parent's font size */
-    vertical-align: middle !important; /* Helps align with surrounding text */
+    font-size: 1em !important; /* Forces MathJax to match its parent element's font size (which is 1.05em for p, and 1em for solution content p) */
+    vertical-align: -0.125em !important; /* Adjusts vertical alignment to prevent "floating" */
 }
 
 /* Horizontal Rule */
