@@ -147,12 +147,8 @@ p {
     font-size: 1.1em; /* Your target font size for paragraph text */
 }
 
-/* --- START: MathJax (LaTeX) Font Size Fix --- */
-/* Forcing MathJax elements to a specific pixel size to match paragraph text (1.1em * 16px default = 17.6px) */
-.mjx-chtml, mjx-math {
-    font-size: 8px !important; /* Set to match 1.1em of typical body font size */
-}
-/* --- END: MathJax (LaTeX) Font Size Fix --- */
+/* MathJax (LaTeX) Font Size is now controlled by MathJax.options.scale in _layouts/default.html */
+/* No explicit font-size override is needed here in style.css for MathJax elements */
 
 
 /* The original .button-container and .button styles are no longer needed for pha links,
