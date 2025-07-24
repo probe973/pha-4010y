@@ -59,6 +59,7 @@ body {
     border-radius: 8px;
     transition: background-color 0.3s ease;
     margin-right: auto; /* Space between links */
+    float: none;
 }
 .navbar-link:hover {
     background-color: #5cb85c;
