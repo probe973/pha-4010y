@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Workshop: Arithmetic
+title: Workshop - Arithmetic
 ---
 
 <h1>Workshop: Arithmetic</h1>
