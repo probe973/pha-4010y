@@ -15,13 +15,12 @@ title: "Unit Conversions"
 
 <div class="formulae">
     <h2>Information</h2>
-    <p>Please use:</p>
     <ul>
         <li>1 inch $\approx$ 2.5 cm</li>
         <li>1 kg $\approx$ 2 lb</li>
         <li>1 pint $\approx$ 500 ml</li>
     </ul>
-    <p>You may also find useful for conversions between degrees Fahrenheit (F) and degrees Celsius (C):</p>
+    <p>For conversions between degrees Fahrenheit (F) and degrees Celsius (C):</p>
     <p>$F = \frac{9}{5}C + 32$</p>
 </div>
 
