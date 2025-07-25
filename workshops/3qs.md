@@ -287,7 +287,7 @@ title: "Workshop: Concentrations"
         <details class="solution-details">
             <summary>Solution</summary>
             <div class="solution-content">
-                <p>Required volume = $\frac{200~\text{mg}}{5~\text{mg/ml}} = \textbf{40 ml}$</p>
+                <p>Required volume = $\frac{200~\text{mg}}{5~\text{mg}}\times1~\text{ml} = \textbf{40 ml}$</p>
             </div>
         </details>
     </li>
@@ -296,7 +296,7 @@ title: "Workshop: Concentrations"
             <summary>Solution</summary>
             <div class="solution-content">
                 <p>$2\%~\text{w}/\text{v} = 2~\text{g}/100~\text{ml} = 2000~\text{mg}/100~\text{ml} = 20~\text{mg}/\text{ml}$</p>
-                <p>Required volume = $\frac{500~\text{mg}}{20~\text{mg/ml}} = \textbf{25 ml}$</p>
+                <p>Required volume = $\frac{500~\text{mg}}{20~\text{mg}}\times1~\text{ml} = \textbf{25 ml}$</p>
             </div>
         </details>
     </li>
@@ -305,8 +305,8 @@ title: "Workshop: Concentrations"
             <summary>Solution</summary>
             <div class="solution-content">
                 <p>$2~\text{g} = 2000~\text{mg}$</p>
-                <p>Strength = $\frac{800~\text{mg}}{10~\text{ml}} = 80~\text{mg}/\text{ml}$</p>
-                <p>Required volume = $\frac{2000~\text{mg}}{80~\text{mg/ml}} = \textbf{25 ml}$</p>
+                <p>Strength = $800~\text{mg}/10~\text{ml} = 80~\text{mg}/\text{ml}$</p>
+                <p>Required volume = $\frac{2000~\text{mg}}{80~\text{mg}}\times1~\text{ml} = \textbf{25 ml}$</p>
             </div>
         </details>
     </li>
@@ -316,7 +316,7 @@ title: "Workshop: Concentrations"
             <div class="solution-content">
                 <p>$0.4\%~\text{w}/\text{v} = 0.4~\text{g}/100~\text{ml} = 400~\text{mg}/100~\text{ml} = 4~\text{mg}/\text{ml}$</p>
                 <p>Total dose needed = $20~\text{mg} \times 2 (\text{times per day}) \times 7 (\text{days}) = 280~\text{mg}$</p>
-                <p>Total volume = $\frac{280~\text{mg}}{4~\text{mg/ml}} = \textbf{70 ml}$</p>
+                <p>Total volume = $\frac{280~\text{mg}}{4~\text{mg}}\times1~\text{ml} = \textbf{70 ml}$</p>
             </div>
         </details>
     </li>
@@ -328,7 +328,7 @@ title: "Workshop: Concentrations"
                 <p>Dose for next 10 days = $2.5~\text{ml/day} \times 10~\text{days} = 25~\text{ml}$</p>
                 <p>Total active dose needed = $25~\text{ml} + 25~\text{ml} = 50~\text{ml}$</p>
                 <p>Drug strength: $10\%~\text{v}/\text{v}$ means 10 ml of active drug in 100 ml of solution.</p>
-                <p>Total solution needed = $\frac{50~\text{ml} (\text{active dose})}{10~\text{ml} (\text{active in 100ml solution})} \times 100~\text{ml} (\text{solution}) = \textbf{500 ml}$</p>
+                <p>Total solution needed = $\frac{50~\text{ml} (\text{active dose})}{10~\text{ml} (\text{active in 100ml solution})}\times100~\text{ml} (\text{solution}) = \textbf{500 ml}$</p>
             </div>
         </details>
     </li>
