@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "Workshop 2: Conversion of Units and Transposing Equations"
+title: "Workshop: Conversion of Units and Transposing Equations"
 ---
 
-<h1>Workshop 2: Conversion of Units and Transposing Equations</h1>
+<h1>Workshop: Conversion of Units and Transposing Equations</h1>
 
 <div class="instructions">
     <h2>Instructions</h2>
