@@ -35,7 +35,7 @@
     <!-- Fixed Navigation Bar - Adjusted to match default.html structure -->
     <div class="navbar">
         <a href="index.html" class="navbar-link">Home</a>
-        <span class="navbar-title" id="quizTitle">Interactive Quiz</span>
+        <span class="navbar-title" id="quizTitle"></span> <!-- Initial content removed -->
     </div>
 
     <div class="content">
@@ -59,7 +59,7 @@
 
             <div class="button-group">
                 <button id="checkAnswerBtn">Check Answer</button>
-                <button id="nextQuestionBtn">Next Question</button> <!-- Enabled by default now -->
+                <button id="nextQuestionBtn">Next Question</button>
                 <button id="restartQuizBtn" style="display: none;">Restart Quiz</button>
             </div>
         </div>
@@ -116,8 +116,16 @@
         function formatQuizTitle(quizId) {
             const match = quizId.match(/(\D+)(\d+)/); // Captures non-digits and digits
             if (match && match[1] && match[2]) {
-                const prefix = match[1].replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
+                let prefix = match[1];
                 const number = match[2];
+
+                // Specific mapping for known prefixes
+                if (prefix === 'mcq') {
+                    prefix = 'Multiple Choice';
+                } else {
+                    // General capitalization for other prefixes if needed
+                    prefix = prefix.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
+                }
                 return `${prefix} Quiz ${number}`;
             }
             return quizId.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase()) + ' Quiz'; // Fallback
