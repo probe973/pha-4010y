@@ -375,7 +375,8 @@ mjx-container, mjx-math {
     margin-bottom: 10px;
 }
 .options-list label {
-    display: block;
+    display: flex; 
+    align-items: center;
     background-color: #e0e0e0;
     padding: 12px 15px;
     border-radius: 8px;
