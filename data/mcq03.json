@@ -1,222 +1,222 @@
 [
   {
-    "question": "What is <strong>7500 milligrams</strong> expressed in grams?",
+    "question": "What is <strong>2500 millilitres</strong> expressed in litres?",
     "options": [
-      "0.075 g",
-      "0.75 g",
-      "7.5 g",
-      "75 g"
-    ],
-    "correctAnswer": "7.5 g",
-    "explanation": "$7500~\\text{mg} \\div 1000~\\text{mg/g} = 7.5~\\text{g}$"
-  },
-  {
-    "question": "What is <strong>0.000003 litres</strong> expressed in nanolitres?",
-    "options": [
-      "3 nl",
-      "30 nl",
-      "300 nl",
-      "3000 nl"
-    ],
-    "correctAnswer": "3000 nl",
-    "explanation": "$0.000003~\\text{litres} \\times 1,000,000,000~\\text{nl/litre} = 3000~\\text{nl}$"
-  },
-  {
-    "question": "What is <strong>2% w/v</strong> expressed as mg/mL?",
-    "options": [
-      "0.2 mg/mL",
-      "2 mg/mL",
-      "10 mg/mL",
-      "20 mg/mL"
-    ],
-    "correctAnswer": "20 mg/mL",
-    "explanation": "$2\\%~\\text{w/v} \\implies 2~\\text{g} : 100~\\text{ml}$. Convert to mg: $2000~\\text{mg} : 100~\\text{ml}$. Divide by 100: $20~\\text{mg/ml}$"
-  },
-  {
-    "question": "What is <strong>25 mg/mL</strong> expressed as 1 in X?",
-    "options": [
-      "1 in 4",
-      "1 in 25",
-      "1 in 40",
-      "1 in 250"
-    ],
-    "correctAnswer": "1 in 40",
-    "explanation": "$25~\\text{mg/ml} \\implies 25~\\text{mg} : 1~\\text{ml}$. Convert to g: $0.025~\\text{g} : 1~\\text{ml}$. To get 1g, divide 1 by 0.025: $1 / 0.025 = 40$. So, $1~\\text{g} : 40~\\text{ml}$, or $1~\\text{in}~40$"
-  },
-  {
-    "question": "If a mixture is described as <strong>12mg/ml</strong>, how many grams are required to make <strong>25 millilitres</strong> of the mixture? Please give your answer to <strong>2 decimal points</strong>.",
-    "options": [
-      "0.03 g",
-      "0.30 g",
-      "3.00 g",
-      "30.00 g"
-    ],
-    "correctAnswer": "0.30 g",
-    "explanation": "Amount = $12~\\text{mg/ml} \\times 25~\\text{ml} = 300~\\text{mg}$. Convert to g: $300~\\text{mg} \\div 1000 = 0.30~\\text{g}$"
-  },
-  {
-    "question": "If a drug is described as <strong>1 part in 200</strong>, how many litres are required to provide a dose of <strong>25g</strong>?",
-    "options": [
-      "2 l",
-      "5 l",
-      "10 l",
+      "0.025 l",
+      "0.25 l",
+      "2.5 l",
       "25 l"
     ],
-    "correctAnswer": "5 l",
-    "explanation": "$1~\\text{in}~200 \\implies 1~\\text{g} : 200~\\text{ml}$. For 25g, multiply by 25: $(1 \\times 25)~\\text{g} : (200 \\times 25)~\\text{ml} \\implies 25~\\text{g} : 5000~\\text{ml}$. Convert to litres: $5000~\\text{ml} = 5~\\text{l}$"
+    "correctAnswer": "2.5 l",
+    "explanation": "$2500~\\text{ml} \\div 1000~\\text{ml/l} = 2.5~\\text{l}$"
   },
   {
-    "question": "How many millilitres of a <strong>2%w/v</strong> solution would be required to provide a dose of <strong>100mg</strong>?",
+    "question": "What is <strong>0.000007 kilograms</strong> expressed in micrograms?",
+    "options": [
+      "0.7 mcg",
+      "7 mcg",
+      "70 mcg",
+      "7000 mcg"
+    ],
+    "correctAnswer": "7000 mcg",
+    "explanation": "$0.000007~\\text{kg} \\times 1,000,000,000~\\text{mcg/kg} = 7000~\\text{mcg}$"
+  },
+  {
+    "question": "What is <strong>1 in 250</strong> expressed as %w/v?",
+    "options": [
+      "0.2% w/v",
+      "0.4% w/v",
+      "1% w/v",
+      "2% w/v"
+    ],
+    "correctAnswer": "0.4% w/v",
+    "explanation": "$1~\\text{in}~250 \\implies 1~\\text{g} : 250~\\text{ml}$. To get %w/v (g in 100ml), divide by 2.5: $1 / 2.5 = 0.4$. So, $0.4~\\text{g} : 100~\\text{ml}$, or $0.4\\%~\\text{w/v}$"
+  },
+  {
+    "question": "What is <strong>20 mg/mL</strong> expressed as 1 in X?",
+    "options": [
+      "1 in 5",
+      "1 in 20",
+      "1 in 50",
+      "1 in 200"
+    ],
+    "correctAnswer": "1 in 50",
+    "explanation": "$20~\\text{mg/ml} \\implies 20~\\text{mg} : 1~\\text{ml}$. Convert to g: $0.02~\\text{g} : 1~\\text{ml}$. To get 1g, divide 1 by 0.02: $1 / 0.02 = 50$. So, $1~\\text{g} : 50~\\text{ml}$, or $1~\\text{in}~50$"
+  },
+  {
+    "question": "If a mixture is described as <strong>20mg/ml</strong>, how many grams are required to make <strong>35 millilitres</strong> of the mixture? Please give your answer to <strong>2 decimal points</strong>.",
+    "options": [
+      "0.07 g",
+      "0.70 g",
+      "7.00 g",
+      "70.00 g"
+    ],
+    "correctAnswer": "0.70 g",
+    "explanation": "Amount = $20~\\text{mg/ml} \\times 35~\\text{ml} = 700~\\text{mg}$. Convert to g: $700~\\text{mg} \\div 1000 = 0.70~\\text{g}$"
+  },
+  {
+    "question": "If a drug is described as <strong>1 part in 200</strong>, how many litres are required to provide a dose of <strong>30g</strong>?",
+    "options": [
+      "3 l",
+      "4 l",
+      "6 l",
+      "8 l"
+    ],
+    "correctAnswer": "6 l",
+    "explanation": "$1~\\text{in}~200 \\implies 1~\\text{g} : 200~\\text{ml}$. For 30g, multiply by 30: $(1 \\times 30)~\\text{g} : (200 \\times 30)~\\text{ml} \\implies 30~\\text{g} : 6000~\\text{ml}$. Convert to litres: $6000~\\text{ml} = 6~\\text{l}$"
+  },
+  {
+    "question": "How many millilitres of a <strong>3%w/v</strong> solution would be required to provide a dose of <strong>180mg</strong>?",
+    "options": [
+      "3 ml",
+      "4 ml",
+      "5 ml",
+      "6 ml"
+    ],
+    "correctAnswer": "6 ml",
+    "explanation": "$3\\%~\\text{w/v} = 3~\\text{g}/100~\\text{ml} = 3000~\\text{mg}/100~\\text{ml} = 30~\\text{mg/ml}$. Required volume = $180~\\text{mg} \\div 30~\\text{mg/ml} = 6~\\text{ml}$"
+  },
+  {
+    "question": "How much <strong>Ammonium Chloride (NH4Cl)</strong> (atomic weight of nitrogen = <strong>14</strong>, hydrogen = <strong>1</strong>, chlorine = <strong>35.5</strong>) in grams is required to make <strong>200 millimoles</strong>?",
+    "options": [
+      "5.35 g",
+      "10.7 g",
+      "53.5 g",
+      "107 g"
+    ],
+    "correctAnswer": "10.7 g",
+    "explanation": "Molecular weight of NH4Cl = $14 + (1 \\times 4) + 35.5 = 14 + 4 + 35.5 = 53.5~\\text{g/mol}$. $200~\\text{millimoles} = 0.2~\\text{moles}$. Mass = $0.2~\\text{moles} \\times 53.5~\\text{g/mol} = 10.7~\\text{g}$"
+  },
+  {
+    "question": "How many grams of <strong>Potassium Permanganate</strong> (molecular weight = <strong>158</strong>) are required to produce <strong>500 millilitres</strong> of a <strong>0.1 molar</strong> solution?",
+    "options": [
+      "7.9 g",
+      "15.8 g",
+      "79 g",
+      "158 g"
+    ],
+    "correctAnswer": "7.9 g",
+    "explanation": "$0.1~\\text{molar} \\implies 0.1~\\text{moles/litre}$. For 500 ml (0.5 litres): $0.1~\\text{moles/litre} \\times 0.5~\\text{litres} = 0.05~\\text{moles}$. Mass = $0.05~\\text{moles} \\times 158~\\text{g/mol} = 7.9~\\text{g}$"
+  },
+  {
+    "question": "You need to make <strong>120mL</strong> of a <strong>0.2M</strong> solution from a <strong>6M</strong> stock solution, how many millilitres of stock solution do you require?",
     "options": [
       "2 ml",
       "3 ml",
       "4 ml",
       "5 ml"
     ],
-    "correctAnswer": "5 ml",
-    "explanation": "$2\\%~\\text{w/v} = 2~\\text{g}/100~\\text{ml} = 2000~\\text{mg}/100~\\text{ml} = 20~\\text{mg/ml}$. Required volume = $100~\\text{mg} \\div 20~\\text{mg/ml} = 5~\\text{ml}$"
+    "correctAnswer": "4 ml",
+    "explanation": "Using $C1V1 = C2V2$: $6M \\times V1 = 0.2M \\times 120~\\text{ml}$. $6V1 = 24$. $V1 = 4~\\text{ml}$"
   },
   {
-    "question": "How much <strong>Water (H2O)</strong> (atomic weight of hydrogen = <strong>1</strong>, oxygen = <strong>16</strong>) in grams is required to make <strong>500 millimoles</strong>?",
+    "question": "If a person is <strong>5 feet and 2 inches</strong> tall, what is this in metres (Assuming <strong>1 inch = 2.5 cm</strong>)?",
     "options": [
-      "0.9 g",
-      "1.8 g",
-      "9 g",
-      "18 g"
-    ],
-    "correctAnswer": "9 g",
-    "explanation": "Molecular weight of H2O = $(1 \\times 2) + 16 = 18~\\text{g/mol}$. $500~\\text{millimoles} = 0.5~\\text{moles}$. Mass = $0.5~\\text{moles} \\times 18~\\text{g/mol} = 9~\\text{g}$"
-  },
-  {
-    "question": "How many grams of <strong>Potassium Bromide</strong> (molecular weight = <strong>119</strong>) are required to produce <strong>100 millilitres</strong> of a <strong>0.5 molar</strong> solution?",
-    "options": [
-      "5.95 g",
-      "11.9 g",
-      "59.5 g",
-      "119 g"
-    ],
-    "correctAnswer": "5.95 g",
-    "explanation": "$0.5~\\text{molar} \\implies 0.5~\\text{moles/litre}$. For 100 ml (0.1 litres): $0.5~\\text{moles/litre} \\times 0.1~\\text{litres} = 0.05~\\text{moles}$. Mass = $0.05~\\text{moles} \\times 119~\\text{g/mol} = 5.95~\\text{g}$"
-  },
-  {
-    "question": "You need to make <strong>50mL</strong> of a <strong>0.4M</strong> solution from a <strong>10M</strong> stock solution, how many millilitres of stock solution do you require?",
-    "options": [
-      "1 ml",
-      "2 ml",
-      "4 ml",
-      "5 ml"
-    ],
-    "correctAnswer": "2 ml",
-    "explanation": "Using $C1V1 = C2V2$: $10M \\times V1 = 0.4M \\times 50~\\text{ml}$. $10V1 = 20$. $V1 = 2~\\text{ml}$"
-  },
-  {
-    "question": "If a person is <strong>5 feet and 6 inches</strong> tall, what is this in metres (Assuming <strong>1 inch = 2.5 cm</strong>)?",
-    "options": [
+      "1.55 m",
+      "1.58 m",
       "1.60 m",
-      "1.65 m",
-      "1.70 m",
-      "1.75 m"
+      "1.62 m"
     ],
-    "correctAnswer": "1.65 m",
-    "explanation": "$5~\\text{feet} = 5 \\times 12 = 60~\\text{inches}$. Total inches = $60 + 6 = 66~\\text{inches}$. Convert to cm: $66~\\text{inches} \\times 2.5~\\text{cm/inch} = 165~\\text{cm}$. Convert to m: $165~\\text{cm} = 1.65~\\text{m}$"
+    "correctAnswer": "1.58 m",
+    "explanation": "$5~\\text{feet} = 5 \\times 12 = 60~\\text{inches}$. Total inches = $60 + 2 = 62~\\text{inches}$. Convert to cm: $62~\\text{inches} \\times 2.5~\\text{cm/inch} = 155~\\text{cm}$. Convert to m: $155~\\text{cm} = 1.55~\\text{m}$"
   },
   {
-    "question": "If a patient is <strong>9 stone 4 lbs</strong>, how much do they weigh in Kg (Assuming <strong>2 lbs = 1 Kg</strong>)?",
+    "question": "If a patient is <strong>10 stone 10 lbs</strong>, how much do they weigh in Kg (Assuming <strong>2 lbs = 1 Kg</strong>)?",
     "options": [
-      "63 kg",
-      "64 kg",
-      "65 kg",
-      "66 kg"
+      "70 kg",
+      "72 kg",
+      "74 kg",
+      "75 kg"
     ],
-    "correctAnswer": "65 kg",
-    "explanation": "$9~\\text{stone} = 9 \\times 14 = 126~\\text{lbs}$. Total lbs = $126 + 4 = 130~\\text{lbs}$. Convert to Kg: $130~\\text{lbs} \\div 2~\\text{lbs/kg} = 65~\\text{kg}$"
+    "correctAnswer": "75 kg",
+    "explanation": "$10~\\text{stone} = 10 \\times 14 = 140~\\text{lbs}$. Total lbs = $140 + 10 = 150~\\text{lbs}$. Convert to Kg: $150~\\text{lbs} \\div 2~\\text{lbs/kg} = 75~\\text{kg}$"
   },
   {
-    "question": "What is the body surface area of someone who is <strong>1.7 metres</strong> tall and <strong>81 Kg</strong> in weight?<br> (For Your Information: $\\sqrt{3.78} = 1.94$, $\\sqrt{3.825} = 1.956$, $\\sqrt{3.98} = 1.99$, $\\sqrt{4.08} = 2.02$)<br><em>Formula: BSA = $\\sqrt{\\frac{\\text{Ht (cm)} \\times \\text{Weight (kg)}}{3600}}$</em>",
+    "question": "What is the body surface area of someone who is <strong>1.5 metres</strong> tall and <strong>54 Kg</strong> in weight?<br> (For Your Information: $\\sqrt{2.1} = 1.45$, $\\sqrt{2.25} = 1.50$, $\\sqrt{2.4} = 1.55$, $\\sqrt{2.5} = 1.58$)<br><em>Formula: BSA = $\\sqrt{\\frac{\\text{Ht (cm)} \\times \\text{Weight (kg)}}{3600}}$</em>",
     "options": [
-      "1.94 m$^2$",
-      "1.96 m$^2$",
-      "1.99 m$^2$",
-      "2.02 m$^2$"
+      "1.45 m$^2$",
+      "1.50 m$^2$",
+      "1.55 m$^2$",
+      "1.58 m$^2$"
     ],
-    "correctAnswer": "1.96 m$^2$",
-    "explanation": "Height in cm: $1.7~\\text{m} = 170~\\text{cm}$. BSA = $\\sqrt{\\frac{170 \\times 81}{3600}} = \\sqrt{\\frac{13770}{3600}} = \\sqrt{3.825}$. From info: $\\sqrt{3.825} \\approx 1.956$. So, $1.96~\\text{m}^2$"
+    "correctAnswer": "1.50 m$^2$",
+    "explanation": "Height in cm: $1.5~\\text{m} = 150~\\text{cm}$. BSA = $\\sqrt{\\frac{150 \\times 54}{3600}} = \\sqrt{\\frac{8100}{3600}} = \\sqrt{\\frac{81}{36}} = \\sqrt{2.25}$. From info: $\\sqrt{2.25} = 1.50$. So, $1.50~\\text{m}^2$"
   },
   {
-    "question": "What is <strong>10 &deg;C</strong> in <strong>&deg;F</strong>?",
+    "question": "What is <strong>59 &deg;F</strong> in <strong>&deg;C</strong>?",
     "options": [
-      "40 °F",
-      "45 °F",
-      "50 °F",
-      "55 °F"
+      "10 °C",
+      "15 °C",
+      "20 °C",
+      "25 °C"
     ],
-    "correctAnswer": "50 °F",
-    "explanation": "$F = \\frac{9}{5}C + 32$. $F = \\frac{9}{5}(10) + 32 = 9 \\times 2 + 32 = 18 + 32 = 50~\\text{&deg;F}$"
+    "correctAnswer": "15 °C",
+    "explanation": "$C = \\frac{5}{9}(F-32)$. $C = \\frac{5}{9}(59-32) = \\frac{5}{9}(27) = 5 \\times 3 = 15~\\text{&deg;C}$"
   },
   {
-    "question": "How many millilitres of a <strong>1 in 20</strong> solution is required to produce <strong>250mL</strong> of a <strong>1 in 5,000</strong> solution?",
+    "question": "How many millilitres of a <strong>1 in 50</strong> solution is required to produce <strong>100mL</strong> of a <strong>1 in 2,000</strong> solution?",
     "options": [
-      "0.5 ml",
       "1 ml",
-      "2 ml",
-      "5 ml"
+      "2.5 ml",
+      "5 ml",
+      "10 ml"
     ],
-    "correctAnswer": "1 ml",
-    "explanation": "Using $C1V1 = C2V2$: $\\frac{1}{20} \\times V1 = \\frac{1}{5000} \\times 250$. $V1 = \\frac{250}{5000} \\times 20 = \\frac{250}{250} = 1~\\text{ml}$"
+    "correctAnswer": "2.5 ml",
+    "explanation": "Using $C1V1 = C2V2$: $\\frac{1}{50} \\times V1 = \\frac{1}{2000} \\times 100$. $V1 = \\frac{100}{2000} \\times 50 = \\frac{5000}{2000} = 2.5~\\text{ml}$"
   },
   {
-    "question": "If a <strong>70-year-old</strong> male has a weight of <strong>75kg</strong> and a serum creatinine of <strong>105 micromol/litre</strong>, what is their CrCl (ml/min)?<br><em>Formula: CrCl (ml/min) = (140-Age) x Weight (Kg) / Serum creatinine (micromol/L)</em>",
+    "question": "If a <strong>75-year-old</strong> male has a weight of <strong>70kg</strong> and a serum creatinine of <strong>110 micromol/litre</strong>, what is their CrCl (ml/min)?<br><em>Formula: CrCl (ml/min) = (140-Age) x Weight (Kg) / Serum creatinine (micromol/L)</em>",
     "options": [
+      "35 ml/min",
+      "40 ml/min",
       "45 ml/min",
-      "50 ml/min",
-      "55 ml/min",
-      "60 ml/min"
+      "50 ml/min"
     ],
-    "correctAnswer": "50 ml/min",
-    "explanation": "CrCl = $(140 - 70) \\times 75 / 105 = 70 \\times 75 / 105 = (70/105) \\times 75 = (2/3) \\times 75 = 50~\\text{ml/min}$"
+    "correctAnswer": "41.36 ml/min",
+    "explanation": "CrCl = $(140 - 75) \\times 70 / 110 = 65 \\times 70 / 110 = 4550 / 110 \\approx 41.36~\\text{ml/min}$"
   },
   {
-    "question": "If <strong>Betamethasone cream</strong> is described as <strong>5% w/w</strong>, in milligrams, how much active ingredient will be required to make <strong>150 grams</strong>?",
+    "question": "If <strong>Zinc Oxide cream</strong> is described as <strong>10% w/w</strong>, in milligrams, how much active ingredient will be required to make <strong>250 grams</strong>?",
     "options": [
-      "75 mg",
-      "750 mg",
-      "7500 mg",
-      "75000 mg"
+      "250 mg",
+      "2500 mg",
+      "25000 mg",
+      "250000 mg"
     ],
-    "correctAnswer": "7500 mg",
-    "explanation": "$5\\%~\\text{w/w} \\implies 5~\\text{g} : 100~\\text{g}$. For 150g, multiply by 1.5: $(5 \\times 1.5)~\\text{g} : (100 \\times 1.5)~\\text{g} \\implies 7.5~\\text{g} : 150~\\text{g}$. Convert to mg: $7.5~\\text{g} = 7500~\\text{mg}$"
+    "correctAnswer": "25000 mg",
+    "explanation": "$10\\%~\\text{w/w} \\implies 10~\\text{g} : 100~\\text{g}$. For 250g, multiply by 2.5: $(10 \\times 2.5)~\\text{g} : (100 \\times 2.5)~\\text{g} \\implies 25~\\text{g} : 250~\\text{g}$. Convert to mg: $25~\\text{g} = 25000~\\text{mg}$"
   },
   {
-    "question": "A patient requires <strong>10 mg/Kg/minute</strong> of a drug for <strong>10 minutes</strong>. The patient weighs <strong>50 Kg</strong>. What is the total amount of drug needed in grams?",
+    "question": "A patient requires <strong>3 mg/Kg/minute</strong> of a drug for <strong>20 minutes</strong>. The patient weighs <strong>80 Kg</strong>. What is the total amount of drug needed in grams?",
     "options": [
-      "2 g",
-      "3 g",
-      "4 g",
-      "5 g"
+      "3.6 g",
+      "4.8 g",
+      "5.4 g",
+      "6.0 g"
     ],
-    "correctAnswer": "5 g",
-    "explanation": "Total mg/minute = $10~\\text{mg/Kg/minute} \\times 50~\\text{Kg} = 500~\\text{mg/minute}$. Total mg = $500~\\text{mg/minute} \\times 10~\\text{minutes} = 5000~\\text{mg}$. Convert to g: $5000~\\text{mg} \\div 1000 = 5~\\text{g}$"
+    "correctAnswer": "4.8 g",
+    "explanation": "Total mg/minute = $3~\\text{mg/Kg/minute} \\times 80~\\text{Kg} = 240~\\text{mg/minute}$. Total mg = $240~\\text{mg/minute} \\times 20~\\text{minutes} = 4800~\\text{mg}$. Convert to g: $4800~\\text{mg} \\div 1000 = 4.8~\\text{g}$"
   },
   {
-    "question": "If a patient requires <strong>20 mcg/minute</strong> of a drug for <strong>5 hours</strong>, what is the total amount of drug they will receive in mg? Answer to <strong>1 decimal place</strong>.",
+    "question": "If a patient requires <strong>75 mcg/minute</strong> of a drug for <strong>2 hours</strong>, what is the total amount of drug they will receive in mg? Answer to <strong>1 decimal place</strong>.",
     "options": [
-      "0.6 mg",
-      "3.0 mg",
+      "4.5 mg",
       "6.0 mg",
-      "12.0 mg"
+      "7.5 mg",
+      "9.0 mg"
     ],
-    "correctAnswer": "6.0 mg",
-    "explanation": "Total minutes = $5~\\text{hours} \\times 60~\\text{minutes/hour} = 300~\\text{minutes}$. Total mcg = $20~\\text{mcg/minute} \\times 300~\\text{minutes} = 6000~\\text{mcg}$. Convert to mg: $6000~\\text{mcg} \\div 1000 = 6~\\text{mg}$"
+    "correctAnswer": "9.0 mg",
+    "explanation": "Total minutes = $2~\\text{hours} \\times 60~\\text{minutes/hour} = 120~\\text{minutes}$. Total mcg = $75~\\text{mcg/minute} \\times 120~\\text{minutes} = 9000~\\text{mcg}$. Convert to mg: $9000~\\text{mcg} \\div 1000 = 9.0~\\text{mg}$"
   },
   {
-    "question": "If the formula for <strong>Oral Rehydration Salts</strong> is:<br><ul><li>Glucose: <strong>50mg</strong></li><li>Potassium Chloride: <strong>10mg</strong></li><li>Purified Water: <strong>to 5 mL</strong></li></ul>How much <strong>Glucose</strong> in milligrams is required to produce <strong>150ml</strong> of the Oral Rehydration Salts solution?",
+    "question": "If the formula for <strong>Oral Rehydration Salts</strong> is:<br><ul><li>Sodium Chloride: <strong>150mg</strong></li><li>Potassium Chloride: <strong>40mg</strong></li><li>Purified Water: <strong>to 15 mL</strong></li></ul>How much <strong>Sodium Chloride</strong> in milligrams is required to produce <strong>300ml</strong> of the Oral Rehydration Salts solution?",
     "options": [
-      "1000 mg",
       "1500 mg",
       "2000 mg",
-      "2500 mg"
+      "2500 mg",
+      "3000 mg"
     ],
-    "correctAnswer": "1500 mg",
-    "explanation": "The formula is for 5 ml. We need to make 150 ml. Factor = $150~\\text{ml} \\div 5~\\text{ml} = 30$. Glucose needed = $50~\\text{mg} \\times 30 = 1500~\\text{mg}$"
+    "correctAnswer": "3000 mg",
+    "explanation": "The formula is for 15 ml. We need to make 300 ml. Factor = $300~\\text{ml} \\div 15~\\text{ml} = 20$. Sodium Chloride needed = $150~\\text{mg} \\times 20 = 3000~\\text{mg}$"
   }
 ]
