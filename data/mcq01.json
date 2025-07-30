@@ -145,14 +145,14 @@
   {
     "question": "What is <strong>25 &deg;C</strong> in <strong>&deg;F</strong>?",
     "options": [
-      "68 &deg;F",
-      "72 &deg;F",
-      "77 &deg;F",
-      "81 &deg;F"
+      "68 °F",
+      "72 °F",
+      "77 °F",
+      "81 °F"
     ],
-    "correctAnswer": "77 &deg;F",
+    "correctAnswer": "77 °F",
     "explanation": "$F = \\frac{9}{5}C + 32$. $F = \\frac{9}{5}(25) + 32 = 9 \\times 5 + 32 = 45 + 32 = 77~\\text{&deg;F}$"
-  },
+  }
   {
     "question": "How many millilitres of a <strong>1 in 10</strong> solution is required to produce <strong>100mL</strong> of a <strong>1 in 2,000</strong> solution?",
     "options": [
