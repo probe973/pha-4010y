@@ -125,22 +125,22 @@
     "options": [
       "78 kg",
       "80 kg",
-      "82 kg",
+      "81 kg",
       "84 kg"
     ],
-    "correctAnswer": "78 kg",
+    "correctAnswer": "81 kg",
     "explanation": "$11~\\text{stone} = 11 \\times 14 = 154~\\text{lbs}$. Total lbs = $154 + 8 = 162~\\text{lbs}$. Convert to Kg: $162~\\text{lbs} \\div 2~\\text{lbs/kg} = 81~\\text{kg}$"
   },
   {
-    "question": "What is the body surface area of someone who is <strong>1.7 metres</strong> tall and <strong>81 Kg</strong> in weight?<br> (For Your Information: $\\sqrt{3.78} = 1.94$, $\\sqrt{3.825} = 1.956$, $\\sqrt{3.98} = 1.99$, $\\sqrt{4.08} = 2.02$)<br><em>Formula: BSA = $\\sqrt{\\frac{\\text{Ht (cm)} \\times \\text{Weight (kg)}}{3600}}$</em>",
+    "question": "What is the body surface area of someone who is <strong>1.8 metres</strong> tall and <strong>80 Kg</strong> in weight?<br> (For Your Information: $\\sqrt{3.8} = 1.95$, $\\sqrt{4} = 2.00$, $\\sqrt{4.2} = 2.05$, $\\sqrt{4.4} = 2.10$)<br><em>Formula: BSA = $\\sqrt{\\frac{\\text{Ht (cm)} \\times \\text{Weight (kg)}}{3600}}$</em>",
     "options": [
-      "1.94 m$^2$",
-      "1.96 m$^2$",
-      "1.99 m$^2$",
-      "2.02 m$^2$"
+      "1.95 m$^2$",
+      "2.00 m$^2$",
+      "2.05 m$^2$",
+      "2.10 m$^2$"
     ],
-    "correctAnswer": "1.96 m$^2$",
-    "explanation": "Height in cm: $1.7~\\text{m} = 170~\\text{cm}$. BSA = $\\sqrt{\\frac{170 \\times 81}{3600}} = \\sqrt{\\frac{13770}{3600}} = \\sqrt{3.825}$. From info: $\\sqrt{3.825} \\approx 1.956$. So, $1.96~\\text{m}^2$"
+    "correctAnswer": "2.00 m$^2$",
+    "explanation": "Height in cm: $1.8~\\text{m} = 180~\\text{cm}$. BSA = $\\sqrt{\\frac{180 \\times 80}{3600}} = \\sqrt{\\frac{14400}{3600}} = \\sqrt{\\frac{144}{36}} = \\sqrt{4}$. From info: $\\sqrt{4} = 2.00$. So, $2.00~\\text{m}^2$"
   },
   {
     "question": "What is <strong>20 &deg;C</strong> in <strong>&deg;F</strong>?",
@@ -169,8 +169,8 @@
     "options": [
       "40 ml/min",
       "50 ml/min",
-      "60 ml/min",
-      "70 ml/min"
+      "53 ml/min",
+      "60 ml/min"
     ],
     "correctAnswer": "53.33 ml/min",
     "explanation": "CrCl = $(140 - 60) \\times 60 / 90 \\times 0.85 (female factor) = 80 \\times 60 / 90 \\times 0.85 = 4800 / 90 \\times 0.85 = 53.33 \\times 0.85 \\approx 45.33~\\text{ml/min}$"
