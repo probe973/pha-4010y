@@ -69,8 +69,8 @@
             font-size: 1.1em;
         }
         /* The original .button-container and .button styles are no longer needed for pha links,
-           but kept here in case they are used elsewhere or for reference.
-           The pha links will now use topic-link-container and topic-link styles. */
+            but kept here in case they are used elsewhere or for reference.
+            The pha links will now use topic-link-container and topic-link styles. */
         .button-container {
             display: flex;
             flex-direction: column; /* Stack buttons vertically */
@@ -324,96 +324,49 @@
         </div>
     </div>
 
-    <!-- New: Review Exercises Block -->
+    <!-- NEW: Multiple Choice Quiz Section -->
     <div class="topic-section">
-        <h2>Review Exercises</h2>
-        <p>Below you will find links to comprehensive review exercises.</p>
+        <h2>Multiple Choice Practice Questions</h2>
+        <p>Test your knowledge with interactive multiple choice quizzes.</p>
 
         <div class="topic-link-container">
-            <a href="review/1.html" class="topic-link">
-                <i class="fas fa-book-open topic-icon"></i>
+            <a href="quiz.html?quiz=mcq01" class="topic-link">
+                <i class="fas fa-question-circle topic-icon"></i>
                 <div>
-                    <strong>Review 1</strong>
-                    <div class="topic-description">Conversion between metric units, calculating required amounts, and concentrations.</div>
+                    <strong>Multiple Choice Quiz 1</strong>
+                    <div class="topic-description">A set of 20 multiple choice questions covering various pharmacy calculation topics.</div>
                 </div>
             </a>
-            <a href="review/2.html" class="topic-link">
-                <i class="fas fa-book-open topic-icon"></i>
+            <a href="quiz.html?quiz=mcq02" class="topic-link">
+                <i class="fas fa-question-circle topic-icon"></i>
                 <div>
-                    <strong>Review 2</strong>
-                    <div class="topic-description">Conversion between concentrations, calculating with concentrations, dilutions, and reactions.</div>
-                </div>
-            </a>
-            <a href="review/3.html" class="topic-link">
-                <i class="fas fa-book-open topic-icon"></i>
-                <div>
-                    <strong>Review 3</strong>
-                    <div class="topic-description">Metric and imperial units, BMI, IBW, and BSA.</div>
+                    <strong>Multiple Choice Quiz 2</strong>
+                    <div class="topic-description">A second set of 20 multiple choice questions to further test your skills.</div>
                 </div>
             </a>
         </div>
     </div>
 
-    <!-- Existing: Pharmacy Question Set Links (now styled as topic-links) -->
+    <!-- Existing: Random Question Generator Block -->
     <div class="topic-section">
-        <h2>Exam Preparation Questions</h2>
-        <p>Practice with exam style questions.</p>
+        <h2>Random Question Generator</h2>
+        <p>Generate random new practice questions</p>
         <div class="topic-link-container">
-            <a href="examprep/pha01.html" class="topic-link">
-                <i class="fas fa-file-alt topic-icon"></i>
+            <a href="https://sites.google.com/view/phagen" target="_blank" class="topic-link">
+                <i class="fas fa-dice topic-icon"></i>
                 <div>
-                    <strong>Pharmacy Question Set 1</strong>
-                </div>
-            </a>
-            <a href="examprep/pha02.html" class="topic-link">
-                <i class="fas fa-file-alt topic-icon"></i>
-                <div>
-                    <strong>Pharmacy Question Set 2</strong>
-                </div>
-            </a>
-            <a href="examprep/pha03.html" class="topic-link">
-                <i class="fas fa-file-alt topic-icon"></i>
-                <div>
-                    <strong>Pharmacy Question Set 3</strong>
-                </div>
-            </a>
-            <a href="examprep/pha04.html" class="topic-link">
-                <i class="fas fa-file-alt topic-icon"></i>
-                <div>
-                    <strong>Pharmacy Question Set 4</strong>
-                </div>
-            </a>
-            <a href="examprep/pha05.html" class="topic-link">
-                <i class="fas fa-file-alt topic-icon"></i>
-                <div>
-                    <strong>Pharmacy Question Set 5</strong>
+                    <strong>Random Question Generator</strong>
                 </div>
             </a>
         </div>
     </div>
 
-    <div class="topic-section">
-    <h2>Random Question Generator</h2>
-    <p>Generate random new practice questions</p>
-    <div class="topic-link-container">
-        <a href="https://sites.google.com/view/phagen" target="_blank" class="topic-link">
-            <i class="fas fa-dice topic-icon"></i>
-            <div>
-                <strong>Random Question Generator</strong>
-            </div>
-        </a>
-    </div>
-</div>
-
-<footer style="text-align: center; margin-top: 50px; padding: 20px; font-size: 0.8em; color: #666;">
+    <footer style="text-align: center; margin-top: 50px; padding: 20px; font-size: 0.8em; color: #666;">
         <p>Icons by <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">Font Awesome</a>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>.</p>
         <p>Mathematical typesetting by <a href="https://www.mathjax.org/" target="_blank" rel="noopener noreferrer">MathJax</a>.</p>
         <p>Styled with <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">Tailwind CSS</a>.</p>
         <!-- Add any other libraries you use here -->
     </footer>
-
-</body>
-</html>
 
 </body>
 </html>
