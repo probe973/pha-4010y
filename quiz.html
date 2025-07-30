@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Pharmacy Quiz</title>
+
+    <!-- Link to your external stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Favicon (if you have one) -->
+    <link rel="icon" href="/pha-4010y/favicon.ico" type="image/x-icon">
+
+    <!-- MathJax for LaTeX rendering -->
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            options: {
+                // Removed 'scale' option here to rely on CSS 'font-size: 1em !important;' from style.css
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+</head>
+<body>
+
+    <!-- Fixed Navigation Bar - Adjusted to match default.html structure -->
+    <div class="navbar">
+        <a href="index.html" class="navbar-link">Home</a>
+        <span class="navbar-title" id="quizTitle">Interactive Quiz</span>
+    </div>
+
+    <div class="content">
+        <h1>Practice Questions</h1>
+
+        <div class="status-bar">
+            <span>Question: <span id="currentQuestionNum">1</span> / <span id="totalQuestions">0</span></span>
+            <span>Score: <span id="scoreTracker">0</span></span>
+            <span>Time: <span id="timeTracker">0 minutes 0 seconds</span></span>
+        </div>
+
+        <div class="quiz-container">
+            <p class="question-number" id="questionNumberDisplay"></p>
+            <p class="question-text" id="questionText"></p>
+            <ul class="options-list" id="optionsList">
+                <!-- Options will be dynamically loaded here -->
+            </ul>
+
+            <div class="feedback-message" id="feedbackMessage"></div>
+            <div class="solution-explanation" id="solutionExplanation"></div>
+
+            <div class="button-group">
+                <button id="checkAnswerBtn">Check Answer</button>
+                <button id="nextQuestionBtn" disabled>Next Question</button>
+                <button id="restartQuizBtn" style="display: none;">Restart Quiz</button>
+            </div>
+        </div>
+
+        <div class="quiz-summary" id="quizSummary" style="display: none;">
+            <h2>Quiz Complete!</h2>
+            <p>Your final score: <span id="finalScore"></span> out of <span id="finalTotal"></span></p>
+            <p>Time taken: <span id="finalTime"></span></p>
+            <div class="button-group">
+                <button id="summaryRestartBtn">Restart Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer for attribution, consistent with your other pages -->
+    <footer style="text-align: center; margin-top: 50px; padding: 20px; font-size: 0.8em; color: #666;">
+        <p>Icons by <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">Font Awesome</a>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>.</p>
+        <p>Mathematical typesetting by <a href="https://www.mathjax.org/" target="_blank" rel="noopener noreferrer">MathJax</a>.</p>
+        <p>Styled with <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">Tailwind CSS</a>.</p>
+    </footer>
+
+    <script>
+        let quizData = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let timerInterval;
+        let secondsElapsed = 0;
+        let quizName = "Interactive Quiz"; // Default name
+
+        const questionNumberDisplay = document.getElementById('questionNumberDisplay');
+        const questionText = document.getElementById('questionText');
+        const optionsList = document.getElementById('optionsList');
+        const feedbackMessage = document.getElementById('feedbackMessage');
+        const solutionExplanation = document.getElementById('solutionExplanation');
+        const checkAnswerBtn = document.getElementById('checkAnswerBtn');
+        const nextQuestionBtn = document.getElementById('nextQuestionBtn');
+        const restartQuizBtn = document.getElementById('restartQuizBtn');
+        const quizSummary = document.getElementById('quizSummary');
+        const summaryRestartBtn = document.getElementById('summaryRestartBtn');
+        const scoreTracker = document.getElementById('scoreTracker');
+        const timeTracker = document.getElementById('timeTracker');
+        const currentQuestionNum = document.getElementById('currentQuestionNum');
+        const totalQuestions = document.getElementById('totalQuestions');
+        const quizTitle = document.getElementById('quizTitle');
+
+        // Function to parse URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            const results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Function to load quiz data
+        async function loadQuiz(quizId) {
+            try {
+                const response = await fetch(`data/${quizId}.json`);
+                if (!response.ok) {
+                    throw new Error(`Failed to load quiz data: ${response.statusText}`);
+                }
+                quizData = await response.json();
+                totalQuestions.textContent = quizData.length;
+                // Format quizId for display title (e.g., "pha01_quiz" -> "Pha01 Quiz")
+                quizTitle.textContent = quizId.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase()) + ' Quiz';
+                startQuiz();
+            } catch (error) {
+                console.error("Error loading quiz:", error);
+                questionText.innerHTML = `<p style="color: red;">Error loading quiz. Please check the quiz ID in the URL and ensure the data file exists.</p>`;
+                checkAnswerBtn.disabled = true;
+                nextQuestionBtn.disabled = true;
+            }
+        }
+
+        // Function to start the quiz
+        function startQuiz() {
+            currentQuestionIndex = 0;
+            score = 0;
+            secondsElapsed = 0;
+            scoreTracker.textContent = score;
+            quizSummary.style.display = 'none';
+            document.querySelector('.quiz-container').style.display = 'block'; // Show quiz container
+            document.querySelector('.status-bar').style.display = 'flex'; // Show status bar
+            restartQuizBtn.style.display = 'none';
+            checkAnswerBtn.style.display = 'inline-block';
+            nextQuestionBtn.style.display = 'inline-block';
+            nextQuestionBtn.disabled = true;
+            checkAnswerBtn.disabled = false;
+            startTimer();
+            displayQuestion();
+        }
+
+        // Function to display a question
+        function displayQuestion() {
+            if (currentQuestionIndex >= quizData.length) {
+                endQuiz();
+                return;
+            }
+
+            const question = quizData[currentQuestionIndex];
+            currentQuestionNum.textContent = currentQuestionIndex + 1;
+            questionText.innerHTML = question.question; // Use innerHTML to render MathJax
+            optionsList.innerHTML = ''; // Clear previous options
+            feedbackMessage.style.display = 'none';
+            solutionExplanation.style.display = 'none';
+            feedbackMessage.className = 'feedback-message'; // Reset classes
+
+            // Shuffle options to prevent memorization of position
+            const shuffledOptions = [...question.options].sort(() => Math.random() - 0.5);
+
+            shuffledOptions.forEach((option, index) => {
+                const listItem = document.createElement('li');
+                const radioId = `option${index}`;
+                listItem.innerHTML = `
+                    <input type="radio" id="${radioId}" name="answer" value="${option}" data-index="${index}">
+                    <label for="${radioId}">${option}</label>
+                `;
+                optionsList.appendChild(listItem);
+            });
+
+            // Render MathJax for the new question and options
+            MathJax.typesetPromise([questionText, optionsList]).catch((err) => console.error("MathJax typesetting error:", err));
+
+            checkAnswerBtn.disabled = false;
+            nextQuestionBtn.disabled = true;
+            enableOptions();
+        }
+
+        // Function to handle checking the answer
+        function checkAnswer() {
+            const selectedOption = document.querySelector('input[name="answer"]:checked');
+            if (!selectedOption) {
+                feedbackMessage.textContent = "Please select an answer.";
+                feedbackMessage.style.display = 'block';
+                feedbackMessage.className = 'feedback-message feedback-incorrect';
+                return;
+            }
+
+            const userAnswer = selectedOption.value;
+            const correctAnswer = quizData[currentQuestionIndex].correctAnswer;
+            const explanation = quizData[currentQuestionIndex].explanation;
+
+            if (userAnswer === correctAnswer) {
+                score++;
+                feedbackMessage.textContent = "Correct!";
+                feedbackMessage.className = 'feedback-message feedback-correct';
+            } else {
+                feedbackMessage.textContent = "Incorrect. Please review the solution.";
+                feedbackMessage.className = 'feedback-message feedback-incorrect';
+            }
+            scoreTracker.textContent = score;
+            feedbackMessage.style.display = 'block';
+            checkAnswerBtn.disabled = true;
+            nextQuestionBtn.disabled = false;
+            disableOptions();
+
+            if (explanation) {
+                solutionExplanation.innerHTML = `<strong>Solution:</strong> ${explanation}`;
+                solutionExplanation.style.display = 'block';
+                MathJax.typesetPromise([solutionExplanation]).catch((err) => console.error("MathJax typesetting error:", err));
+            }
+        }
+
+        // Function to move to the next question
+        function nextQuestion() {
+            currentQuestionIndex++;
+            displayQuestion();
+        }
+
+        // Function to end the quiz
+        function endQuiz() {
+            clearInterval(timerInterval);
+            quizSummary.style.display = 'block';
+            document.querySelector('.quiz-container').style.display = 'none';
+            document.querySelector('.status-bar').style.display = 'none';
+
+            document.getElementById('finalScore').textContent = score;
+            document.getElementById('finalTotal').textContent = quizData.length;
+            document.getElementById('finalTime').textContent = formatTime(secondsElapsed);
+
+            // Show restart button on summary, hide other buttons
+            summaryRestartBtn.style.display = 'inline-block';
+            checkAnswerBtn.style.display = 'none';
+            nextQuestionBtn.style.display = 'none';
+            restartQuizBtn.style.display = 'none'; // Ensure this is hidden if it was shown for some reason
+        }
+
+        // Timer functions
+        function startTimer() {
+            clearInterval(timerInterval); // Clear any existing timer
+            secondsElapsed = 0;
+            timeTracker.textContent = formatTime(secondsElapsed);
+            timerInterval = setInterval(() => {
+                secondsElapsed++;
+                timeTracker.textContent = formatTime(secondsElapsed);
+            }, 1000);
+        }
+
+        function formatTime(totalSeconds) {
+            const minutes = Math.floor(totalSeconds / 60);
+            const seconds = totalSeconds % 60;
+            return `${minutes} minute${minutes === 1 ? '' : 's'} ${seconds} second${seconds === 1 ? '' : 's'}`;
+        }
+
+        // Helper functions for UI state
+        function disableOptions() {
+            document.querySelectorAll('input[name="answer"]').forEach(radio => {
+                radio.disabled = true;
+            });
+        }
+
+        function enableOptions() {
+            document.querySelectorAll('input[name="answer"]').forEach(radio => {
+                radio.disabled = false;
+                radio.checked = false; // Uncheck all options for the new question
+            });
+        }
+
+        // Event Listeners
+        checkAnswerBtn.addEventListener('click', checkAnswer);
+        nextQuestionBtn.addEventListener('click', nextQuestion);
+        restartQuizBtn.addEventListener('click', startQuiz); // This button is hidden by default, used for quick restart during development/testing
+        summaryRestartBtn.addEventListener('click', startQuiz);
+
+        // Initial load: get quiz ID from URL and load data
+        window.onload = () => {
+            const quizId = getUrlParameter('quiz');
+            if (quizId) {
+                loadQuiz(quizId);
+            } else {
+                questionText.innerHTML = `<p style="color: red;">No quiz ID specified in the URL. Please use a link like: <code>quiz.html?quiz=your_quiz_id</code></p>`;
+                checkAnswerBtn.disabled = true;
+                nextQuestionBtn.disabled = true;
+            }
+        };
+    </script>
+</body>
+</html>
