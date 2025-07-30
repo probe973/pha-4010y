@@ -131,22 +131,29 @@
             return quizId.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase()) + ' Quiz'; // Fallback
         }
 
-        // Function to load quiz data
-        async function loadQuiz(quizId) {
+        // Function to load quiz data with exponential backoff and retries
+        async function loadQuiz(quizId, retries = 3, delay = 1000) { // 3 retries, starting with 1 second delay
             try {
                 const response = await fetch(`data/${quizId}.json`);
                 if (!response.ok) {
-                    throw new Error(`Failed to load quiz data: ${response.statusText}`);
+                    // If response is not OK, throw an error to trigger catch block
+                    throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 quizData = await response.json();
                 totalQuestions.textContent = quizData.length;
                 quizTitle.textContent = formatQuizTitle(quizId);
                 startQuiz();
             } catch (error) {
-                console.error("Error loading quiz:", error);
-                questionText.innerHTML = `<p style="color: red;">Error loading quiz. Please check the quiz ID in the URL and ensure the data file exists.</p>`;
-                checkAnswerBtn.disabled = true;
-                nextQuestionBtn.disabled = true;
+                console.error(`Attempt to load quiz data failed (retries left: ${retries}):`, error);
+                if (retries > 0) {
+                    // Retry after delay
+                    setTimeout(() => loadQuiz(quizId, retries - 1, delay * 2), delay);
+                } else {
+                    // No more retries, show error message
+                    questionText.innerHTML = `<p style="color: red;">Error loading quiz. Please check the quiz ID in the URL and ensure the data file exists. If the problem persists, try refreshing the page or contact support.</p>`;
+                    checkAnswerBtn.disabled = true;
+                    nextQuestionBtn.disabled = true;
+                }
             }
         }
 
