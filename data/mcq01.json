@@ -125,8 +125,8 @@
     "options": [
       "68 kg",
       "70 kg",
-      "72 kg",
-      "74 kg"
+      "73 kg",
+      "75 kg"
     ],
     "correctAnswer": "73 kg",
     "explanation": "$10~\\text{stone} = 10 \\times 14 = 140~\\text{lbs}$. Total lbs = $140 + 6 = 146~\\text{lbs}$. Convert to Kg: $146~\\text{lbs} \\div 2~\\text{lbs/kg} = 73~\\text{kg}$"
