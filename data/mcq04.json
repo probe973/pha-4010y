@@ -140,7 +140,7 @@
       "2.10 m$^2$"
     ],
     "correctAnswer": "2.00 m$^2$",
-    "explanation": "Height in cm: $1.8~\\text{m} = 180~\\text{cm}$. BSA = $\\sqrt{\\frac{180 \\times 80}{3600}} = \\sqrt{\\frac{14400}{3600}} = \\sqrt{\\frac{144}{36}} = \\sqrt{4}$. From info: $\\sqrt{4} = 2.00$. So, $2.00~\\text{m}^2$"
+    "explanation": "Height in cm: $1.8~\\text{m} = 180~\\text{cm}$. BSA = $\\sqrt{\\frac{180 \\times 80}{3600}} = \\sqrt{\\frac{14400}{3600}} = \\sqrt{4}$. From info: $\\sqrt{4} = 2.00$. So, $2.00~\\text{m}^2$"
   },
   {
     "question": "What is <strong>20 &deg;C</strong> in <strong>&deg;F</strong>?",
@@ -165,15 +165,15 @@
     "explanation": "Using $C1V1 = C2V2$: $\\frac{1}{100} \\times V1 = \\frac{1}{10000} \\times 500$. $V1 = \\frac{500}{10000} \\times 100 = \\frac{500}{100} = 5~\\text{ml}$"
   },
   {
-    "question": "If a <strong>60-year-old</strong> female has a weight of <strong>60kg</strong> and a serum creatinine of <strong>90 micromol/litre</strong>, what is their CrCl (ml/min)?<br><em>Formula: CrCl (ml/min) = (140-Age) x Weight (Kg) / Serum creatinine (micromol/L)</em>",
+    "question": "If a **60-year-old** male has a weight of **72kg** and a serum creatinine of **96 micromol/litre**, what is their CrCl (ml/min)?<br><em>Formula: CrCl (ml/min) = (140-Age) x Weight (Kg) / Serum creatinine (micromol/L)</em>",
     "options": [
       "40 ml/min",
       "50 ml/min",
-      "53 ml/min",
+      "55 ml/min",
       "60 ml/min"
     ],
-    "correctAnswer": "53.33 ml/min",
-    "explanation": "CrCl = $(140 - 60) \\times 60 / 90 \\times 0.85 (female factor) = 80 \\times 60 / 90 \\times 0.85 = 4800 / 90 \\times 0.85 = 53.33 \\times 0.85 \\approx 45.33~\\text{ml/min}$"
+    "correctAnswer": "60 ml/min",
+    "explanation": "CrCl = $(140 - 60) \\times 72 / 96 = 80 \\times 72 / 96$. Simplify $80/96$ to $5/6$. Then $5 \\times 72 / 6 = 5 \\times 12 = 60~\\text{ml/min}$"
   },
   {
     "question": "If <strong>Calamine Lotion</strong> is described as <strong>15% w/w</strong>, in milligrams, how much active ingredient will be required to make <strong>200 grams</strong>?",
@@ -206,7 +206,7 @@
       "12.0 mg"
     ],
     "correctAnswer": "6.0 mg",
-    "explanation": "Total minutes = $1~\\text{hour} \\times 60~\\text{minutes/hour} = 60~\\text{minutes}$. Total mcg = $100~\\text{mcg/minute} \\times 60~\\text{minutes} = 6000~\\text{mcg}$. Convert to mg: $6000~\\text{mcg} \\div 1000 = 6~\\text{mg}$"
+    "explanation": "Total minutes = $1~\\text{hour} \\times 60~\\text{minutes/hour} = 60~\\text{minutes}$. Total mcg = $100~\\text{mcg/minute} \\times 60~\\text{minutes} = 6000~\\text{mcg}$. Convert to mg: $6000~\\text{mcg} \\div 1000 = 6.0~\\text{mg}$"
   },
   {
     "question": "If the formula for <strong>Oral Rehydration Salts</strong> is:<br><ul><li>Sodium Chloride: <strong>200mg</strong></li><li>Potassium Chloride: <strong>50mg</strong></li><li>Purified Water: <strong>to 20 mL</strong></li></ul>How much <strong>Sodium Chloride</strong> in milligrams is required to produce <strong>100ml</strong> of the Oral Rehydration Salts solution?",
