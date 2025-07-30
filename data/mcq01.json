@@ -77,15 +77,15 @@
     "explanation": "$5\\%~\\text{w/v} = 5~\\text{g}/100~\\text{ml} = 5000~\\text{mg}/100~\\text{ml} = 50~\\text{mg/ml}$. Required volume = $150~\\text{mg} \\div 50~\\text{mg/ml} = 3~\\text{ml}$"
   },
   {
-    "question": "How much <strong>KCl</strong> in grams is required to make <strong>150 millimoles</strong>, given that the atomic weight of potassium = <strong>39</strong> and chlorine = <strong>35.5</strong>?",
+    "question": "How much <strong>Urea</strong> (molecular weight = <strong>60</strong>) in grams is required to make <strong>250 millimoles</strong>?",
     "options": [
-      "11.175 g",
-      "1.1175 g",
-      "111.75 g",
-      "1117.5 g"
+      "1.5 g",
+      "15 g",
+      "150 g",
+      "1500 g"
     ],
-    "correctAnswer": "11.175 g",
-    "explanation": "Molecular weight of KCl = $39 + 35.5 = 74.5~\\text{g/mol}$. $150~\\text{millimoles} = 0.150~\\text{moles}$. Mass = $0.150~\\text{moles} \\times 74.5~\\text{g/mol} = 11.175~\\text{g}$"
+    "correctAnswer": "15 g",
+    "explanation": "Molecular weight of Urea = $60~\\text{g/mol}$. $250~\\text{millimoles} = 0.25~\\text{moles}$. Mass = $0.25~\\text{moles} \\times 60~\\text{g/mol} = 15~\\text{g}$"
   },
   {
     "question": "How many grams of <strong>Glucose</strong> (molecular weight = <strong>180</strong>) are required to produce <strong>250 millilitres</strong> of a <strong>0.5 molar</strong> solution?",
