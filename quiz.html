@@ -44,7 +44,7 @@
         <div class="status-bar">
             <span>Question: <span id="currentQuestionNum">1</span> / <span id="totalQuestions">0</span></span>
             <span>Score: <span id="scoreTracker">0</span></span>
-            <span>Time: <span id="timeTracker">0 minutes 0 seconds</span></span>
+            <span>Time: <span id="timeTracker">0 minutes</span></span>
         </div>
 
         <div class="quiz-container">
@@ -59,7 +59,7 @@
 
             <div class="button-group">
                 <button id="checkAnswerBtn">Check Answer</button>
-                <button id="nextQuestionBtn" disabled>Next Question</button>
+                <button id="nextQuestionBtn">Next Question</button> <!-- Enabled by default now -->
                 <button id="restartQuizBtn" style="display: none;">Restart Quiz</button>
             </div>
         </div>
@@ -87,7 +87,6 @@
         let score = 0;
         let timerInterval;
         let secondsElapsed = 0;
-        let quizName = "Interactive Quiz"; // Default name
 
         const questionNumberDisplay = document.getElementById('questionNumberDisplay');
         const questionText = document.getElementById('questionText');
@@ -113,6 +112,17 @@
             return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
         }
 
+        // Function to format quiz title (e.g., "mcq01" -> "Multiple Choice Quiz 01")
+        function formatQuizTitle(quizId) {
+            const match = quizId.match(/(\D+)(\d+)/); // Captures non-digits and digits
+            if (match && match[1] && match[2]) {
+                const prefix = match[1].replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
+                const number = match[2];
+                return `${prefix} Quiz ${number}`;
+            }
+            return quizId.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase()) + ' Quiz'; // Fallback
+        }
+
         // Function to load quiz data
         async function loadQuiz(quizId) {
             try {
@@ -122,8 +132,7 @@
                 }
                 quizData = await response.json();
                 totalQuestions.textContent = quizData.length;
-                // Format quizId for display title (e.g., "pha01_quiz" -> "Pha01 Quiz")
-                quizTitle.textContent = quizId.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase()) + ' Quiz';
+                quizTitle.textContent = formatQuizTitle(quizId);
                 startQuiz();
             } catch (error) {
                 console.error("Error loading quiz:", error);
@@ -145,8 +154,7 @@
             restartQuizBtn.style.display = 'none';
             checkAnswerBtn.style.display = 'inline-block';
             nextQuestionBtn.style.display = 'inline-block';
-            nextQuestionBtn.disabled = true;
-            checkAnswerBtn.disabled = false;
+            checkAnswerBtn.disabled = false; // Ensure check button is enabled at start
             startTimer();
             displayQuestion();
         }
@@ -182,38 +190,36 @@
             // Render MathJax for the new question and options
             MathJax.typesetPromise([questionText, optionsList]).catch((err) => console.error("MathJax typesetting error:", err));
 
-            checkAnswerBtn.disabled = false;
-            nextQuestionBtn.disabled = true;
-            enableOptions();
+            checkAnswerBtn.disabled = false; // Check button enabled for new question
+            enableOptions(); // Options enabled for new question
         }
 
         // Function to handle checking the answer
         function checkAnswer() {
             const selectedOption = document.querySelector('input[name="answer"]:checked');
-            if (!selectedOption) {
-                feedbackMessage.textContent = "Please select an answer.";
-                feedbackMessage.style.display = 'block';
-                feedbackMessage.className = 'feedback-message feedback-incorrect';
-                return;
-            }
+            const currentQuestion = quizData[currentQuestionIndex];
+            const correctAnswer = currentQuestion.correctAnswer;
+            const explanation = currentQuestion.explanation;
 
-            const userAnswer = selectedOption.value;
-            const correctAnswer = quizData[currentQuestionIndex].correctAnswer;
-            const explanation = quizData[currentQuestionIndex].explanation;
-
-            if (userAnswer === correctAnswer) {
-                score++;
-                feedbackMessage.textContent = "Correct!";
-                feedbackMessage.className = 'feedback-message feedback-correct';
+            if (selectedOption) {
+                const userAnswer = selectedOption.value;
+                if (userAnswer === correctAnswer) {
+                    score++;
+                    feedbackMessage.textContent = "Correct!";
+                    feedbackMessage.className = 'feedback-message feedback-correct';
+                } else {
+                    feedbackMessage.textContent = "Incorrect. Please review the solution.";
+                    feedbackMessage.className = 'feedback-message feedback-incorrect';
+                }
             } else {
-                feedbackMessage.textContent = "Incorrect. Please review the solution.";
+                feedbackMessage.textContent = "No answer selected. Please review the solution.";
                 feedbackMessage.className = 'feedback-message feedback-incorrect';
             }
+
             scoreTracker.textContent = score;
             feedbackMessage.style.display = 'block';
-            checkAnswerBtn.disabled = true;
-            nextQuestionBtn.disabled = false;
-            disableOptions();
+            checkAnswerBtn.disabled = true; // Disable check after an attempt
+            disableOptions(); // Disable options after an attempt
 
             if (explanation) {
                 solutionExplanation.innerHTML = `<strong>Solution:</strong> ${explanation}`;
@@ -243,7 +249,7 @@
             summaryRestartBtn.style.display = 'inline-block';
             checkAnswerBtn.style.display = 'none';
             nextQuestionBtn.style.display = 'none';
-            restartQuizBtn.style.display = 'none'; // Ensure this is hidden if it was shown for some reason
+            restartQuizBtn.style.display = 'none';
         }
 
         // Timer functions
@@ -257,10 +263,10 @@
             }, 1000);
         }
 
+        // Format time to show only minutes
         function formatTime(totalSeconds) {
             const minutes = Math.floor(totalSeconds / 60);
-            const seconds = totalSeconds % 60;
-            return `${minutes} minute${minutes === 1 ? '' : 's'} ${seconds} second${seconds === 1 ? '' : 's'}`;
+            return `${minutes} minute${minutes === 1 ? '' : 's'}`;
         }
 
         // Helper functions for UI state
@@ -280,7 +286,7 @@
         // Event Listeners
         checkAnswerBtn.addEventListener('click', checkAnswer);
         nextQuestionBtn.addEventListener('click', nextQuestion);
-        restartQuizBtn.addEventListener('click', startQuiz); // This button is hidden by default, used for quick restart during development/testing
+        restartQuizBtn.addEventListener('click', startQuiz);
         summaryRestartBtn.addEventListener('click', startQuiz);
 
         // Initial load: get quiz ID from URL and load data
