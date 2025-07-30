@@ -59,7 +59,7 @@
 
             <div class="button-group">
                 <button id="checkAnswerBtn">Check Answer</button>
-                <button id="nextQuestionBtn">Next Question</button>
+                <button id="nextQuestionBtn" disabled>Next Question</button> <!-- Disabled by default -->
                 <button id="restartQuizBtn" style="display: none;">Restart Quiz</button>
             </div>
         </div>
@@ -163,6 +163,7 @@
             checkAnswerBtn.style.display = 'inline-block';
             nextQuestionBtn.style.display = 'inline-block';
             checkAnswerBtn.disabled = false; // Ensure check button is enabled at start
+            nextQuestionBtn.disabled = true; // Disabled until answer is checked
             startTimer();
             displayQuestion();
         }
@@ -188,9 +189,12 @@
             shuffledOptions.forEach((option, index) => {
                 const listItem = document.createElement('li');
                 const radioId = `option${index}`;
+                // Changed HTML structure: input is now inside the label
                 listItem.innerHTML = `
-                    <input type="radio" id="${radioId}" name="answer" value="${option}" data-index="${index}">
-                    <label for="${radioId}">${option}</label>
+                    <label for="${radioId}">
+                        <input type="radio" id="${radioId}" name="answer" value="${option}" data-index="${index}">
+                        ${option}
+                    </label>
                 `;
                 optionsList.appendChild(listItem);
             });
@@ -199,6 +203,7 @@
             MathJax.typesetPromise([questionText, optionsList]).catch((err) => console.error("MathJax typesetting error:", err));
 
             checkAnswerBtn.disabled = false; // Check button enabled for new question
+            nextQuestionBtn.disabled = true; // Next button disabled until answer is checked
             enableOptions(); // Options enabled for new question
         }
 
@@ -227,6 +232,7 @@
             scoreTracker.textContent = score;
             feedbackMessage.style.display = 'block';
             checkAnswerBtn.disabled = true; // Disable check after an attempt
+            nextQuestionBtn.disabled = false; // Enable next button after checking
             disableOptions(); // Disable options after an attempt
 
             if (explanation) {
