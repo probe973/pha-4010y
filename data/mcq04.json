@@ -140,7 +140,7 @@
       "2.10 m$^2$"
     ],
     "correctAnswer": "2.00 m$^2$",
-    "explanation": "Height in cm: $1.8~\\text{m} = 180~\\text{cm}$. BSA = $\\sqrt{\\frac{180 \\times 80}{3600}} = \\sqrt{\\frac{14400}{3600}} = \\sqrt{4}$. From info: $\\sqrt{4} = 2.00$. So, $2.00~\\text{m}^2$"
+    "explanation": "Height in cm: $1.8~\\text{m} = 180~\\text{cm}$. BSA = $\\sqrt{\\frac{180 \\times 80}{3600}} = \\sqrt{\\frac{1 \\times 8}{2}} = \\sqrt{4}$. From info: $\\sqrt{4} = 2.00$. So, $2.00~\\text{m}^2$"
   },
   {
     "question": "What is <strong>20 &deg;C</strong> in <strong>&deg;F</strong>?",
@@ -165,7 +165,7 @@
     "explanation": "Using $C1V1 = C2V2$: $\\frac{1}{100} \\times V1 = \\frac{1}{10000} \\times 500$. $V1 = \\frac{500}{10000} \\times 100 = \\frac{500}{100} = 5~\\text{ml}$"
   },
   {
-    "question": "If a **60-year-old** male has a weight of **72kg** and a serum creatinine of **96 micromol/litre**, what is their CrCl (ml/min)?<br><em>Formula: CrCl (ml/min) = (140-Age) x Weight (Kg) / Serum creatinine (micromol/L)</em>",
+    "question": "If a 60-year-old male has a weight of 72kg and a serum creatinine of 96 micromol/litre, what is their CrCl (ml/min)?<br><em>Formula: CrCl (ml/min) = (140-Age) x Weight (Kg) / Serum creatinine (micromol/L)</em>",
     "options": [
       "40 ml/min",
       "50 ml/min",
