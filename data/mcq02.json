@@ -132,26 +132,26 @@
     "explanation": "$12~\\text{stone} = 12 \\times 14 = 168~\\text{lbs}$. Total lbs = $168 + 4 = 172~\\text{lbs}$. Convert to Kg: $172~\\text{lbs} \\div 2~\\text{lbs/kg} = 86~\\text{kg}$"
   },
   {
-    "question": "What is the body surface area of someone who is <strong>1.6 metres</strong> tall and <strong>90 Kg</strong> in weight?<br> (For Your Information: $\\sqrt{4} = 2.00$)<br><em>Formula: BSA = $\\sqrt{\\frac{\\text{Ht (cm)} \\times \\text{Weight (kg)}}{3600}}$</em>",
+    "question": "What is the body surface area of someone who is <strong>1.6 metres</strong> tall and <strong>90 Kg</strong> in weight?<br> (For Your Information: $\\sqrt{3.6} = 1.90$, $\\sqrt{3.8} = 1.95$, $\\sqrt{4} = 2.00$, $\\sqrt{4.2} = 2.05$)<br><em>Formula: BSA = $\\sqrt{\\frac{\\text{Ht (cm)} \\times \\text{Weight (kg)}}{3600}}$</em>",
     "options": [
-      "1.80 m$^2$",
       "1.90 m$^2$",
+      "1.95 m$^2$",
       "2.00 m$^2$",
-      "2.10 m$^2$"
+      "2.05 m$^2$"
     ],
     "correctAnswer": "2.00 m$^2$",
     "explanation": "Height in cm: $1.6~\\text{m} = 160~\\text{cm}$. BSA = $\\sqrt{\\frac{160 \\times 90}{3600}} = \\sqrt{\\frac{16 \\times 9}{36}} = \\sqrt{\\frac{144}{36}} = \\sqrt{4}$. From info: $\\sqrt{4} = 2.00$. So, $2.00~\\text{m}^2$"
   },
   {
-    "question": "What is <strong>86 &deg;F</strong> in <strong>&deg;C</strong>?",
+    "question": "What is <strong>50 &deg;F</strong> in <strong>&deg;C</strong>?",
     "options": [
-      "20 &deg;C",
-      "25 &deg;C",
-      "30 &deg;C",
-      "35 &deg;C"
+      "5 °C",
+      "10 °C",
+      "15 °C",
+      "20 °C"
     ],
-    "correctAnswer": "30 &deg;C",
-    "explanation": "$C = \\frac{5}{9}(F-32)$. $C = \\frac{5}{9}(86-32) = \\frac{5}{9}(54) = 5 \\times 6 = 30~\\text{&deg;C}$"
+    "correctAnswer": "10 °C",
+    "explanation": "$C = \\frac{5}{9}(F-32)$. $C = \\frac{5}{9}(50-32) = \\frac{5}{9}(18) = 5 \\times 2 = 10~\\text{&deg;C}$"
   },
   {
     "question": "How many millilitres of a <strong>1 in 20</strong> solution is required to produce <strong>250mL</strong> of a <strong>1 in 5,000</strong> solution?",
