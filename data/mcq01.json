@@ -152,7 +152,7 @@
     ],
     "correctAnswer": "77 °F",
     "explanation": "$F = \\frac{9}{5}C + 32$. $F = \\frac{9}{5}(25) + 32 = 9 \\times 5 + 32 = 45 + 32 = 77~\\text{&deg;F}$"
-  }
+  },
   {
     "question": "How many millilitres of a <strong>1 in 10</strong> solution is required to produce <strong>100mL</strong> of a <strong>1 in 2,000</strong> solution?",
     "options": [
