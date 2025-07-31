@@ -153,6 +153,8 @@
         const TOTAL_QUESTIONS_PER_QUIZ = 10;
 
         // --- Unit Definitions ---
+        // Factors represent how many of the BASE unit (mg, ml, cm) are in the given unit.
+        // Example: 'g': 1000 means 1 gram = 1000 mg (if mg is base)
         const unitConversions = {
             'mass': {
                 'kg': 1000000, 'g': 1000, 'mg': 1, 'mcg': 0.001, 'ng': 0.000001
@@ -183,6 +185,25 @@
         function formatNumber(num, decimalPlaces) {
             return parseFloat(num.toFixed(decimalPlaces));
         }
+
+        // --- Generic Unit Conversion Helper (used by multiple generators) ---
+        // Corrected logic: value * (conversion_factor_of_fromUnit / conversion_factor_of_toUnit)
+        // Or, more intuitively: value_in_base_unit / to_unit_factor
+        function convertValue(value, fromUnit, toUnit, unitType) {
+            const fromFactor = unitConversions[unitType][fromUnit];
+            const toFactor = unitConversions[unitType][toUnit];
+            if (fromFactor === undefined || toFactor === undefined) {
+                console.error(`Conversion error: Invalid units ${fromUnit} or ${toUnit} for type ${unitType}`);
+                return null;
+            }
+            // Convert 'value' from 'fromUnit' to the base unit (e.g., mg for mass)
+            const valueInBaseUnit = value * fromFactor;
+            // Convert 'valueInBaseUnit' from base unit to 'toUnit'
+            const convertedValue = valueInBaseUnit / toFactor;
+
+            return convertedValue;
+        }
+
 
         // --- Question Generation Functions (Topic Specific) ---
 
@@ -272,7 +293,7 @@
                 }
 
                 const questionText = `What is <strong>${baseValue} ${fromUnit}</strong> expressed in ${toUnit}?`;
-                explanation = `To convert ${baseValue} ${fromUnit} to ${toUnit}: $${baseValue}~\\text{${fromUnit}} \\times \\frac{${unitConversions[selectedType][toUnit]}~\\text{${toUnit}}}{${unitConversions[selectedType][fromUnit]}~\\text{${fromUnit}}} = ${formatNumber(correctAnswer, decimalPlaces)}~\\text{${toUnit}}$`;
+                explanation = `To convert ${baseValue} ${fromUnit} to ${toUnit}: $${baseValue}~\\text{${fromUnit}} \\times \\frac{${unitConversions[selectedType][fromUnit]}~\\text{BaseUnit}}{1~\\text{${fromUnit}}} \\div \\frac{${unitConversions[selectedType][toUnit]}~\\text{BaseUnit}}{1~\\text{${toUnit}}} = ${formatNumber(correctAnswer, decimalPlaces)}~\\text{${toUnit}}$`;
 
                 return {
                     question: questionText,
@@ -294,14 +315,14 @@
                         questionText = `What is <strong>${value}% w/v</strong> expressed as mg/mL?`;
                         correctAnswer = value * 10;
                         units = "mg/mL";
-                        explanation = `$${value}\\%~\\text{w/v} \\implies ${value}~\\text{g} : 100~\\text{ml}$. Convert to mg: $${value * 1000}~\\text{mg} : 100~\\text{ml}$. Divide by 100: $${correctAnswer}~\\text{mg/ml}$";
+                        explanation = `$${value}\\%~\\text{w/v} \\implies ${value}~\\text{g} : 100~\\text{ml}$. Convert to mg: $${value * 1000}~\\text{mg} : 100~\\text{ml}$. Divide by 100: $${correctAnswer}~\\text{mg/ml}$`;
                         break;
                     case 'mg/ml_to_%w/v':
                         value = getRandomInt(1, 10) * 10; // e.g., 20mg/mL
                         questionText = `What is <strong>${value} mg/mL</strong> expressed as %w/v?`;
                         correctAnswer = value / 10;
                         units = "%w/v";
-                        explanation = `$${value}~\\text{mg/ml} \\implies ${value}~\\text{mg} : 1~\\text{ml}$. Multiply by 100: $${value * 100}~\\text{mg} : 100~\\text{ml}$. Convert to g: $${correctAnswer}~\\text{g} : 100~\\text{ml}$. So, $${correctAnswer}\\%~\\text{w/v}$";
+                        explanation = `$${value}~\\text{mg/ml} \\implies ${value}~\\text{mg} : 1~\\text{ml}$. Multiply by 100: $${value * 100}~\\text{mg} : 100~\\text{ml}$. Convert to g: $${correctAnswer}~\\text{g} : 100~\\text{ml}$. So, $${correctAnswer}\\%~\\text{w/v}$`;
                         break;
                     case '1_in_X_to_mg/ml':
                         // X should be a factor of 1000 for clean mg/mL
@@ -310,7 +331,7 @@
                         questionText = `What is <strong>1 in ${value}</strong> expressed as mg/mL?`;
                         correctAnswer = 1000 / value;
                         units = "mg/mL";
-                        explanation = `$1~\\text{in}~${value} \\implies 1~\\text{g} : ${value}~\\text{ml}$. Convert to mg: $1000~\\text{mg} : ${value}~\\text{ml}$. Divide by ${value}: $${correctAnswer}~\\text{mg/ml}$";
+                        explanation = `$1~\\text{in}~${value} \\implies 1~\\text{g} : ${value}~\\text{ml}$. Convert to mg: $1000~\\text{mg} : ${value}~\\text{ml}$. Divide by ${value}: $${correctAnswer}~\\text{mg/ml}$`;
                         break;
                     case 'mg/ml_to_1_in_X':
                         // mg/mL should be a factor of 1000 for clean X
@@ -319,7 +340,7 @@
                         questionText = `What is <strong>${value} mg/mL</strong> expressed as 1 in X?`;
                         correctAnswer = 1000 / value;
                         units = "1 in X";
-                        explanation = `$${value}~\\text{mg/ml} \\implies ${value}~\\text{mg} : 1~\\text{ml}$. Convert to g: $${value / 1000}~\\text{g} : 1~\\text{ml}$. To get 1g, divide 1 by $${value / 1000}$: $1 / ${value / 1000} = ${correctAnswer}$. So, $1~\\text{g} : ${correctAnswer}~\\text{ml}$, or $1~\\text{in}~${correctAnswer}$";
+                        explanation = `$${value}~\\text{mg/ml} \\implies ${value}~\\text{mg} : 1~\\text{ml}$. Convert to g: $${value / 1000}~\\text{g} : 1~\\text{ml}$. To get 1g, divide 1 by $${value / 1000}$: $1 / ${value / 1000} = ${correctAnswer}$. So, $1~\\text{g} : ${correctAnswer}~\\text{ml}$, or $1~\\text{in}~${correctAnswer}$`;
                         break;
                 }
                 return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
@@ -354,7 +375,7 @@
                         questionText = `If <strong>${dose}mg</strong> of active ingredient is dissolved in <strong>${volume} millilitres</strong> of solution, what is the concentration in mg/mL?`;
                         correctAnswer = formatNumber(concentration, 1);
                         units = "mg/mL";
-                        explanation = `Concentration = $${dose}~\\text{mg} \\div ${volume}~\\text{ml} = ${correctAnswer}~\\text{mg/ml}$";
+                        explanation = `Concentration = $${dose}~\\text{mg} \\div ${volume}~\\text{ml} = ${correctAnswer}~\\text{mg/ml}$`;
                         break;
                     case 'calculate_volume':
                         dose = getRandomInt(1, 5) * 100; // mg, e.g., 100mg, 300mg
@@ -363,7 +384,7 @@
                         questionText = `How many millilitres of a solution with a concentration of <strong>${concentration}mg/ml</strong> would be required to provide a dose of <strong>${dose}mg</strong>?`;
                         correctAnswer = formatNumber(volume, 0);
                         units = "ml";
-                        explanation = `Required volume = $${dose}~\\text{mg} \\div ${concentration}~\\text{mg/ml} = ${correctAnswer}~\\text{ml}$";
+                        explanation = `Required volume = $${dose}~\\text{mg} \\div ${concentration}~\\text{mg/ml} = ${correctAnswer}~\\text{ml}$`;
                         break;
                 }
                 return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
@@ -465,13 +486,16 @@
                     { val: 2.25, sqrt: 1.50 }, { val: 4, sqrt: 2.00 }, { val: 3.3, sqrt: 1.82 }, { val: 3.65, sqrt: 1.91 }, { val: 2.56, sqrt: 1.60 }
                 ];
                 let info_string = "";
-                // Shuffle and pick 4 unique ones including the correct one
-                let unique_info_sqrts = new Set();
-                unique_info_sqrts.add(info_sqrts.find(item => item.sqrt === bsa_val)); // Ensure correct is always included
-                while (unique_info_sqrts.size < 4) {
-                    unique_info_sqrts.add(info_sqrts[getRandomInt(0, info_sqrts.length - 1)]);
+                // Filter out undefined and ensure correct is always included
+                let unique_info_sqrts_filtered = info_sqrts.filter(item => item.sqrt === bsa_val);
+                while (unique_info_sqrts_filtered.length < 4) {
+                    const randomItem = info_sqrts[getRandomInt(0, info_sqrts.length - 1)];
+                    if (!unique_info_sqrts_filtered.some(item => item.val === randomItem.val)) {
+                        unique_info_sqrts_filtered.push(randomItem);
+                    }
                 }
-                info_string = Array.from(unique_info_sqrts).map(item => `$\\sqrt{${item.val}} = ${item.sqrt}$`).join(', ');
+                // Shuffle the final list for display
+                info_string = unique_info_sqrts_filtered.sort(() => Math.random() - 0.5).map(item => `$\\sqrt{${item.val}} = ${item.sqrt}$`).join(', ');
 
 
                 questionText = `What is the body surface area of someone who is <strong>${scenario.ht_m} metres</strong> tall and <strong>${wt_kg} Kg</strong> in weight?<br> (For Your Information: ${info_string})<br><em>Formula: BSA = $\\sqrt{\\frac{\\text{Ht (cm)} \\times \\text{Weight (kg)}}{3600}}$</em>`;
@@ -553,7 +577,7 @@
                     correctAnswer = formatNumber(totalMcg / 1000, 1); // Convert to mg
                     questionText = `If a patient requires <strong>${rate} mcg/minute</strong> of a drug for <strong>${hours} hours</strong>, what is the total amount of drug they will receive in mg? Answer to <strong>1 decimal place</strong>.`;
                     units = "mg";
-                    explanation = `Total minutes = $${hours}~\\text{hours} \\times 60~\\text{minutes/hour} = ${totalMinutes}~\\text{minutes}$. Total mcg = $${rate}~\\text{mcg/minute} \\times ${totalMinutes}~\\text{minutes} = ${totalMcg}~\\text{mcg}$. Convert to mg: $${totalMcg}~\\text{mcg} \\div 1000 = ${correctAnswer}~\\text{mg}$";
+                    explanation = `Total minutes = $${hours}~\\text{hours} \\times 60~\\text{minutes/hour} = ${totalMinutes}~\\text{minutes}$. Total mcg = $${rate}~\\text{mcg/minute} \\times ${totalMinutes}~\\text{minutes} = ${totalMcg}~\\text{mcg}$. Convert to mg: $${totalMcg}~\\text{mcg} \\div 1000 = ${correctAnswer}~\\text{mg}$`;
                 }
                 return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
             },
@@ -590,7 +614,14 @@
 
             currentQuizQuestions = [];
             for (let i = 0; i < TOTAL_QUESTIONS_PER_QUIZ; i++) {
-                currentQuizQuestions.push(selectedTopicGenerator());
+                try {
+                    currentQuizQuestions.push(selectedTopicGenerator());
+                } catch (e) {
+                    console.error(`Error generating question for topic ${topicId}:`, e);
+                    // Fallback or display an error message to the user
+                    alert(`Error generating question for this topic. Please try another topic or refresh. Details: ${e.message}`);
+                    return; // Stop quiz initiation if a question fails to generate
+                }
             }
 
             currentQuestionIndex = 0;
@@ -754,18 +785,6 @@
             quizSectionDiv.style.display = 'none';
             quizSummaryDiv.style.display = 'none';
         };
-
-        // --- Generic Unit Conversion Helper (used by multiple generators) ---
-        function convertValue(value, fromUnit, toUnit, unitType) {
-            const fromFactor = unitConversions[unitType][fromUnit];
-            const toFactor = unitConversions[unitType][toUnit];
-            if (fromFactor === undefined || toFactor === undefined) {
-                console.error(`Conversion error: Invalid units ${fromUnit} or ${toUnit} for type ${unitType}`);
-                return null;
-            }
-            // Convert to base unit (factor 1) then to target unit
-            return (value * toFactor) / fromFactor; // Corrected conversion logic
-        }
 
     </script>
 </body>
