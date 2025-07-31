@@ -69,9 +69,7 @@
                 </div>
 
                 <div class="feedback-message" id="feedbackMessage"></div>
-                <!-- Solution explanation div is hidden and will not be populated -->
-                <div class="solution-explanation" id="solutionExplanation" style="display: none;"></div>
-
+                
                 <div class="button-group">
                     <button id="checkAnswerBtn">Check Answer</button>
                     <button id="nextQuestionBtn" disabled>Next Question</button>
@@ -99,16 +97,15 @@
     </footer>
 
     <script>
-        let currentQuizQuestions = []; // Stores the 10 generated questions for the current quiz
+        let currentQuizQuestions = [];
         let currentQuestionIndex = 0;
         let score = 0;
         let timerInterval;
         let secondsElapsed = 0;
-        let selectedTopicId = null; // Store the ID of the currently selected topic
+        let selectedTopicId = null;
 
-        // UI Elements
         const topicSelectionDiv = document.getElementById('topicSelection');
-        const quizSectionDiv = document = document.getElementById('quizSection');
+        const quizSectionDiv = document.getElementById('quizSection');
         const quizSummaryDiv = document.getElementById('quizSummary');
 
         const questionNumberDisplay = document.getElementById('questionNumberDisplay');
@@ -116,7 +113,6 @@
         const userAnswerInput = document.getElementById('userAnswerInput');
         const answerUnitDisplay = document.getElementById('answerUnitDisplay');
         const feedbackMessage = document.getElementById('feedbackMessage');
-        const solutionExplanation = document.getElementById('solutionExplanation');
         const checkAnswerBtn = document.getElementById('checkAnswerBtn');
         const nextQuestionBtn = document.getElementById('nextQuestionBtn');
         const restartQuizBtn = document.getElementById('restartQuizBtn');
@@ -125,190 +121,88 @@
         const scoreTracker = document.getElementById('scoreTracker');
         const timeTracker = document.getElementById('timeTracker');
         const currentQuestionNum = document.getElementById('currentQuestionNum');
-        const totalQuestionsSpan = document.getElementById('totalQuestions'); // Total questions in this quiz (fixed at 10)
+        const totalQuestionsSpan = document.getElementById('totalQuestions');
         const quizTitle = document.getElementById('quizTitle');
 
         const TOTAL_QUESTIONS_PER_QUIZ = 10;
-
-        // --- Unit Definitions ---
-        // Factors represent how many of the BASE unit (mg, ml, cm) are in the given unit.
-        // Example: 'g': 1000 means 1 gram = 1000 mg (if mg is base)
-        const unitConversions = {
-            'mass': {
-                'kg': 1000000, 'g': 1000, 'mg': 1, 'mcg': 0.001, 'ng': 0.000001
-            },
-            'volume': {
-                'l': 1000, 'ml': 1, 'mcL': 0.001, 'nl': 0.000001
-            },
-            'length': {
-                'km': 100000, 'm': 100, 'cm': 1, 'mm': 0.1, 'nm': 0.0000001
-            }
-        };
-
-        // Define preferred max decimal places for *any number* appearing in a specific unit,
-        // whether it's in the question or the answer. This is crucial for "clean" numbers.
-        const unitDecimalCleanliness = {
-            'kg': 2, 'g': 2, 'mg': 0, 'mcg': 0, 'ng': 0,
-            'l': 2, 'ml': 0, 'mcL': 0, 'nl': 0,
-            'km': 2, 'm': 0, 'cm': 0, 'mm': 0, 'nm': 0,
-            '%w/v': 1, // Percentages usually 1 decimal
-            '%w/w': 1, // Percentages usually 1 decimal
-            'mg/mL': 1, // Concentration mg/mL usually 1 decimal
-            'ratio_X': 1 // For 1 in X, the X value can have 1 decimal
-        };
+        const FLOATING_POINT_TOLERANCE = 1e-9;
 
         // --- Helper Functions ---
-
         function getRandomInt(min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
         }
-
+        
         function getRandomDecimal(min, max, decimalPlaces) {
             const factor = Math.pow(10, decimalPlaces);
             return (Math.floor(Math.random() * (max * factor - min * factor + 1)) + min * factor) / factor;
         }
 
-        // Helper to format numbers for display (keeps necessary precision, removes unnecessary trailing zeros)
         function formatNumberForDisplay(num, maxDecimalPlaces) {
             if (num === null || !isFinite(num)) return '';
             let formatted = num.toFixed(maxDecimalPlaces);
             return parseFloat(formatted).toString();
         }
-
-        // Helper to check if a number is "clean" (whole or limited decimals)
-        function isNumberClean(num, maxAllowedDecimals) {
-            if (num === null || !isFinite(num)) return false;
-            if (num % 1 === 0) return true; // It's a whole number
-
-            const roundedNum = parseFloat(num.toFixed(maxAllowedDecimals));
-            return Math.abs(num - roundedNum) < 1e-9; // Use a small tolerance for floating point comparison
-        }
         
-        // NEW helper function to check for "clinical sensibility"
-        // Checks if a number is a round number or a common fraction like .5 or .25
         function isClinicallySensible(num) {
             if (num === null || !isFinite(num)) return false;
             const diff = num - Math.floor(num);
-            // Check for whole numbers, halves, and quarters.
-            if (diff === 0 || diff === 0.5 || diff === 0.25 || diff === 0.75) {
+            if (diff === 0 || diff === 0.5 || diff === 0.25 || diff === 0.75 || diff === 0.1 || diff === 0.2 || diff === 0.3 || diff === 0.4 || diff === 0.6 || diff === 0.7 || diff === 0.8 || diff === 0.9) {
                 return true;
-            }
-            // Check for common divisions, e.g., 1/10, 1/8, 1/4
-            const roundedNum = parseFloat(num.toFixed(2));
-            if (Math.abs(num - roundedNum) < 1e-9) { // Is it clean to 2 decimal places?
-                // Now check if it's a "common" decimal
-                const decimalPart = num % 1;
-                const roundedDecimal = parseFloat(decimalPart.toFixed(2));
-                return [0, 0.1, 0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.7, 0.75, 0.8, 0.9].includes(roundedDecimal);
             }
             return false;
         }
 
-
-        // --- Generic Unit Conversion Helper ---
-        function convertValue(value, fromUnit, toUnit, unitType) {
-            const fromFactor = unitConversions[unitType][fromUnit];
-            const toFactor = unitConversions[unitType][toUnit];
-            if (fromFactor === undefined || toFactor === undefined) {
-                console.error(`Conversion error: Invalid units ${fromUnit} or ${toUnit} for type ${unitType}`);
-                return null;
-            }
-            const valueInBaseUnit = value * fromFactor;
-            const convertedValue = valueInBaseUnit / toFactor;
-            return convertedValue;
-        }
+        const unitDecimalCleanliness = {
+            'kg': 2, 'g': 2, 'mg': 0, 'mcg': 0,
+            'l': 2, 'ml': 0, 'mcL': 0,
+            'km': 2, 'm': 0, 'cm': 0, 'mm': 0,
+            '%w/v': 1,
+            '%w/w': 1,
+            'mg/mL': 1,
+            'ratio_X': 1
+        };
 
 
         // --- Question Generation Functions (Topic Specific) ---
 
         const questionGenerators = {
             'unit_conversion': function() {
-                let questionData = null;
-                let attempts = 0;
-                const MAX_ATTEMPTS = 300;
+                const conversionRules = [
+                    { from: 'kg', to: 'g', generate: () => { const qVal = getRandomDecimal(0.1, 10, 1); return { q: qVal, a: qVal * 1000 }; } },
+                    { from: 'g', to: 'kg', generate: () => { const qVal = getRandomDecimal(100, 5000, 0); return { q: qVal, a: qVal / 1000 }; } },
+                    { from: 'g', to: 'mg', generate: () => { const qVal = getRandomDecimal(0.1, 5, 1); return { q: qVal, a: qVal * 1000 }; } },
+                    { from: 'mg', to: 'g', generate: () => { const qVal = getRandomDecimal(100, 5000, 0); return { q: qVal, a: qVal / 1000 }; } },
+                    { from: 'mg', to: 'mcg', generate: () => { const qVal = getRandomDecimal(0.1, 5, 1); return { q: qVal, a: qVal * 1000 }; } },
+                    { from: 'mcg', to: 'mg', generate: () => { const qVal = getRandomDecimal(100, 5000, 0); return { q: qVal, a: qVal / 1000 }; } },
+                    { from: 'g', to: 'mcg', generate: () => { const qVal = getRandomDecimal(0.01, 1, 2); return { q: qVal, a: qVal * 1000000 }; } },
+                    { from: 'mcg', to: 'g', generate: () => { const qVal = getRandomDecimal(1000, 100000, 0); return { q: qVal, a: qVal / 1000000 }; } },
+                    { from: 'l', to: 'ml', generate: () => { const qVal = getRandomDecimal(0.1, 5, 1); return { q: qVal, a: qVal * 1000 }; } },
+                    { from: 'ml', to: 'l', generate: () => { const qVal = getRandomDecimal(100, 5000, 0); return { q: qVal, a: qVal / 1000 }; } },
+                    { from: 'ml', to: 'mcL', generate: () => { const qVal = getRandomDecimal(0.1, 5, 1); return { q: qVal, a: qVal * 1000 }; } },
+                    { from: 'm', to: 'cm', generate: () => { const qVal = getRandomDecimal(0.5, 5, 1); return { q: qVal, a: qVal * 100 }; } },
+                    { from: 'cm', to: 'm', generate: () => { const qVal = getRandomDecimal(50, 500, 0); return { q: qVal, a: qVal / 100 }; } },
+                    { from: 'm', to: 'mm', generate: () => { const qVal = getRandomDecimal(0.1, 2, 1); return { q: qVal, a: qVal * 1000 }; } },
+                    { from: 'mm', to: 'cm', generate: () => { const qVal = getRandomDecimal(10, 100, 0); return { q: qVal, a: qVal / 10 }; } },
+                    { from: 'cm', to: 'mm', generate: () => { const qVal = getRandomDecimal(1, 15, 1); return { q: qVal, a: qVal * 10 }; } }
+                ];
+                
+                const rule = conversionRules[getRandomInt(0, conversionRules.length - 1)];
+                const pair = rule.generate();
 
-                const unitTypes = ['mass', 'volume', 'length'];
-
-                // Define sensible ranges for *answers* for each unit.
-                const answerRanges = {
-                    'mass': {
-                        'kg': { min: 0.01, max: 100 }, 'g': { min: 0.1, max: 10000 }, 'mg': { min: 1, max: 50000 }, 'mcg': { min: 10, max: 100000 }
-                    },
-                    'volume': {
-                        'l': { min: 0.01, max: 50 }, 'ml': { min: 0.1, max: 10000 }, 'mcL': { min: 1, max: 50000 }
-                    },
-                    'length': {
-                        'km': { min: 0.01, max: 10 }, 'm': { min: 0.1, max: 5000 }, 'cm': { min: 1, max: 1000 }, 'mm': { min: 1, max: 500 }
-                    }
+                const qVal = pair.q;
+                const correctAnswer = pair.a;
+                
+                const qMaxDecimals = qVal % 1 === 0 ? 0 : 2;
+                const ansMaxDecimals = 3; // Use a reasonable default for display
+                
+                const formattedQuestionValueDisplay = formatNumberForDisplay(qVal, qMaxDecimals);
+                
+                return {
+                    question: `What is <strong>${formattedQuestionValueDisplay} ${rule.from}</strong> expressed in ${rule.to}?`,
+                    correctAnswer: correctAnswer,
+                    units: rule.to,
+                    answerDisplayDecimals: ansMaxDecimals
                 };
-
-                while (questionData === null && attempts < MAX_ATTEMPTS) {
-                    attempts++;
-                    const selectedType = unitTypes[getRandomInt(0, unitTypes.length - 1)];
-                    const units = Object.keys(unitConversions[selectedType]);
-
-                    let fromUnit, toUnit;
-                    do {
-                        fromUnit = units[getRandomInt(0, units.length - 1)];
-                        toUnit = units[getRandomInt(0, units.length - 1)];
-                    } while (fromUnit === toUnit);
-
-                    const ansMaxDecimals = unitDecimalCleanliness[toUnit]; // Max decimals for the answer
-                    const qMaxDecimals = unitDecimalCleanliness[fromUnit]; // Max decimals for the question value
-
-                    const currentAnswerRange = answerRanges[selectedType][toUnit];
-                    if (!currentAnswerRange) continue;
-
-                    // 1. Generate a random *answer* value, rounded to its preferred cleanliness
-                    let correctAnswerNumerical;
-                    if (ansMaxDecimals === 0) {
-                        correctAnswerNumerical = getRandomInt(currentAnswerRange.min, currentAnswerRange.max);
-                    } else {
-                        const factor = Math.pow(10, ansMaxDecimals);
-                        correctAnswerNumerical = getRandomInt(currentAnswerRange.min * factor, currentAnswerRange.max * factor) / factor;
-                    }
-
-                    // Ensure the generated answer is truly clean at its max decimal places
-                    if (!isNumberClean(correctAnswerNumerical, ansMaxDecimals)) {
-                        continue;
-                    }
-
-                    // 2. Reverse-calculate the question's numerical value
-                    const baseValueNumerical = convertValue(correctAnswerNumerical, toUnit, fromUnit, selectedType);
-
-                    // 3. Validate that the question's numerical value is also "clean" and sensible
-                    if (baseValueNumerical !== null && isFinite(baseValueNumerical) &&
-                        isNumberClean(baseValueNumerical, qMaxDecimals) && // Validate against question's preferred decimals
-                        baseValueNumerical > 0.00001 && baseValueNumerical < 1000000000) { // Avoid extremely small/large numbers
-                        // Ensure the question value is not just 0 or extremely close to 0 after rounding
-                        if (parseFloat(baseValueNumerical.toFixed(qMaxDecimals)) === 0 && baseValueNumerical !== 0) continue;
-
-                        const formattedBaseValueDisplay = formatNumberForDisplay(baseValueNumerical, qMaxDecimals);
-
-                        questionData = {
-                            question: `What is <strong>${formattedBaseValueDisplay} ${fromUnit}</strong> expressed in ${toUnit}?`,
-                            correctAnswer: correctAnswerNumerical,
-                            units: toUnit,
-                            explanation: "", // No longer used for display
-                            internalAnswerUnit: toUnit,
-                            answerDisplayDecimals: ansMaxDecimals
-                        };
-                    }
-                }
-
-                if (questionData === null) {
-                    console.warn("Failed to generate a sensible unit conversion question after multiple attempts.");
-                    return {
-                        question: "Could not generate a sensible unit conversion question. Please try again.",
-                        correctAnswer: 0,
-                        units: "",
-                        explanation: "",
-                        internalAnswerUnit: "",
-                        answerDisplayDecimals: 0
-                    };
-                }
-
-                return questionData;
             },
 
             'concentration_conversion': function() {
@@ -317,73 +211,20 @@
                 const MAX_ATTEMPTS = 100;
 
                 const concentrationRules = [
-                    // %w/v to mg/mL (multiply by 10)
-                    {
-                        type: '%w/v_to_mg/ml',
-                        generate: function() {
-                            let qVal = getRandomDecimal(0.1, 79.9, 1);
-                            let aVal = qVal * 10;
-                            return { questionValue: qVal, correctAnswer: aVal };
-                        },
-                        questionUnitDisplay: '%w/v',
-                        answerUnitDisplay: 'mg/mL',
-                        internalAnswerUnit: 'mg/mL',
-                        answerDisplayDecimals: 1
+                    { type: '%w/v_to_mg/ml', questionUnitDisplay: '%w/v', answerUnitDisplay: 'mg/mL',
+                      generate: () => { let qVal = getRandomDecimal(0.1, 79.9, 1); let aVal = qVal * 10; return { q: qVal, a: aVal }; }
                     },
-                    // mg/mL to %w/v (divide by 10)
-                    {
-                        type: 'mg/ml_to_%w/v',
-                        generate: function() {
-                            let qVal = getRandomDecimal(1, 800, 1);
-                            let aVal = qVal / 10;
-                            return { questionValue: qVal, correctAnswer: aVal };
-                        },
-                        questionUnitDisplay: 'mg/mL',
-                        answerUnitDisplay: '%w/v',
-                        internalAnswerUnit: '%w/v',
-                        answerDisplayDecimals: 1
+                    { type: 'mg/ml_to_%w/v', questionUnitDisplay: 'mg/mL', answerUnitDisplay: '%w/v',
+                      generate: () => { let qVal = getRandomDecimal(1, 800, 1); let aVal = qVal / 10; return { q: qVal, a: aVal }; }
                     },
-                    // 1 in X to mg/mL (1000 / X)
-                    {
-                        type: '1_in_X_to_mg/ml',
-                        generate: function() {
-                            const sensibleXValues = [10, 20, 25, 40, 50, 80, 100, 125, 200, 250, 400, 500, 1000, 2.5, 5, 12.5, 16, 62.5];
-                            let qVal = sensibleXValues[getRandomInt(0, sensibleXValues.length - 1)];
-                            let aVal = 1000 / qVal;
-                            return { questionValue: qVal, correctAnswer: aVal };
-                        },
-                        questionUnitDisplay: '1 in X',
-                        answerUnitDisplay: 'mg/mL',
-                        internalAnswerUnit: 'mg/mL',
-                        answerDisplayDecimals: 1
+                    { type: '1_in_X_to_mg/ml', questionUnitDisplay: '1 in X', answerUnitDisplay: 'mg/mL',
+                      generate: () => { const sensibleXValues = [10, 20, 25, 40, 50, 80, 100, 125, 200, 250, 400, 500, 1000, 2.5, 5, 12.5, 16, 62.5]; let qVal = sensibleXValues[getRandomInt(0, sensibleXValues.length - 1)]; let aVal = 1000 / qVal; return { q: qVal, a: aVal }; }
                     },
-                    // mg/mL to 1 in X (1000 / mg/mL)
-                    {
-                        type: 'mg/ml_to_1_in_X',
-                        generate: function() {
-                            const sensibleMgmlValuesFor1InX = [2, 4, 5, 8, 10, 12.5, 16, 20, 25, 40, 50, 80, 100, 125, 200, 250, 400, 500];
-                            let qVal = sensibleMgmlValuesFor1InX[getRandomInt(0, sensibleMgmlValuesFor1InX.length - 1)];
-                            let aVal = 1000 / qVal;
-                            return { questionValue: qVal, correctAnswer: aVal };
-                        },
-                        questionUnitDisplay: 'mg/mL',
-                        answerUnitDisplay: '', // No unit in input box
-                        internalAnswerUnit: 'ratio_X',
-                        answerDisplayDecimals: 1
+                    { type: 'mg/ml_to_1_in_X', questionUnitDisplay: 'mg/mL', answerUnitDisplay: '', internalAnswerUnit: 'ratio_X',
+                      generate: () => { const sensibleMgmlValuesFor1InX = [2, 4, 5, 8, 10, 12.5, 16, 20, 25, 40, 50, 80, 100, 125, 200, 250, 400, 500]; let qVal = sensibleMgmlValuesFor1InX[getRandomInt(0, sensibleMgmlValuesFor1InX.length - 1)]; let aVal = 1000 / qVal; return { q: qVal, a: aVal }; }
                     },
-                    // Dose & Volume to Concentration (mg/mL) - Restored original logic, but applying cleanliness checks
-                    {
-                        type: 'dose_volume_to_concentration',
-                        generate: function() {
-                            let dose = getRandomInt(10, 10000);
-                            let volume = getRandomInt(10, 500);
-                            let concentration = dose / volume;
-                            return { questionDose: dose, questionVolume: volume, correctAnswer: concentration };
-                        },
-                        questionUnitDisplay: '', // Not applicable directly
-                        answerUnitDisplay: 'mg/mL',
-                        internalAnswerUnit: 'mg/mL',
-                        answerDisplayDecimals: 1
+                    { type: 'dose_volume_to_concentration', questionUnitDisplay: '', answerUnitDisplay: 'mg/mL',
+                      generate: () => { let dose = getRandomDecimal(10, 10000, 0); let volume = getRandomDecimal(10, 500, 0); let concentration = dose / volume; return { q_dose: dose, q_volume: volume, a: concentration }; }
                     }
                 ];
 
@@ -392,73 +233,42 @@
                     const rule = concentrationRules[getRandomInt(0, concentrationRules.length - 1)];
                     const generatedValues = rule.generate.call(rule);
 
-                    if (generatedValues === null) {
+                    if (generatedValues === null || !isClinicallySensible(generatedValues.a)) {
                         continue;
                     }
 
-                    let correctAnswerNumerical = generatedValues.correctAnswer;
-                    let isSensible = true;
+                    let questionText;
+                    let qValDec = 2;
 
-                    // Validate cleanliness of generated answer based on its unit's cleanliness setting
-                    const answerDecimals = unitDecimalCleanliness[rule.answerUnitDisplay || rule.internalAnswerUnit];
-                    if (!isNumberClean(correctAnswerNumerical, answerDecimals)) {
-                        isSensible = false;
-                    }
-
-                    // Validate cleanliness of question values based on their unit's cleanliness setting
-                    if (isSensible) {
-                        if (rule.type === 'dose_volume_to_concentration') {
-                            const qDoseDec = unitDecimalCleanliness['mg'];
-                            const qVolDec = unitDecimalCleanliness['ml'];
-                            if (!isNumberClean(generatedValues.questionDose, qDoseDec) ||
-                                !isNumberClean(generatedValues.questionVolume, qVolDec)) {
-                                isSensible = false;
-                            }
+                    if (rule.type === 'dose_volume_to_concentration') {
+                        const formattedDose = formatNumberForDisplay(generatedValues.q_dose, 0);
+                        const formattedVolume = formatNumberForDisplay(generatedValues.q_volume, 0);
+                        questionText = `If <strong>${formattedDose} mg</strong> of a drug is dissolved in <strong>${formattedVolume} ml</strong> of solution, what is the concentration in <strong>mg/mL</strong>?`;
+                    } else {
+                        qValDec = generatedValues.q % 1 === 0 ? 0 : 2;
+                        const formattedQuestionValue = formatNumberForDisplay(generatedValues.q, qValDec);
+                        if (rule.questionUnitDisplay === '1 in X') {
+                            questionText = `What is <strong>1 in ${formattedQuestionValue}</strong> expressed as ${rule.answerUnitDisplay}?`;
+                        } else if (rule.questionUnitDisplay === 'mg/mL' && rule.internalAnswerUnit === 'ratio_X') {
+                            questionText = `What is <strong>${formattedQuestionValue} mg/mL</strong> expressed as 1 in X? Enter the value of X.`;
                         } else {
-                            const qValDec = unitDecimalCleanliness[rule.questionUnitDisplay || 'mg/mL'];
-                            if (!isNumberClean(generatedValues.questionValue, qValDec)) {
-                                isSensible = false;
-                            }
+                            questionText = `What is <strong>${formattedQuestionValue} ${rule.questionUnitDisplay}</strong> expressed as ${rule.answerUnitDisplay}?`;
                         }
                     }
 
-                    if (isSensible) {
-                        let questionText;
-                        if (rule.type === 'dose_volume_to_concentration') {
-                            const formattedDose = formatNumberForDisplay(generatedValues.questionDose, unitDecimalCleanliness['mg']);
-                            const formattedVolume = formatNumberForDisplay(generatedValues.questionVolume, unitDecimalCleanliness['ml']);
-                            questionText = `If <strong>${formattedDose} mg</strong> of a drug is dissolved in <strong>${formattedVolume} ml</strong> of solution, what is the concentration in <strong>mg/mL</strong>?`;
-                        } else {
-                            const formattedQuestionValue = formatNumberForDisplay(generatedValues.questionValue, unitDecimalCleanliness[rule.questionUnitDisplay || 'mg/mL']);
-                            if (rule.questionUnitDisplay === '1 in X') {
-                                questionText = `What is <strong>1 in ${formattedQuestionValue}</strong> expressed as ${rule.answerUnitDisplay}?`;
-                            } else if (rule.questionUnitDisplay === 'mg/mL' && rule.internalAnswerUnit === 'ratio_X') {
-                                questionText = `What is <strong>${formattedQuestionValue} mg/mL</strong> expressed as 1 in X? Enter the value of X.`;
-                            } else {
-                                questionText = `What is <strong>${formattedQuestionValue} ${rule.questionUnitDisplay}</strong> expressed as ${rule.answerUnitDisplay}?`;
-                            }
-                        }
-
-                        questionData = {
-                            question: questionText,
-                            correctAnswer: correctAnswerNumerical,
-                            units: rule.answerUnitDisplay,
-                            internalAnswerUnit: rule.internalAnswerUnit,
-                            answerDisplayDecimals: answerDecimals,
-                            explanation: ""
-                        };
-                    }
+                    questionData = {
+                        question: questionText,
+                        correctAnswer: generatedValues.a,
+                        units: rule.answerUnitDisplay,
+                        internalAnswerUnit: rule.internalAnswerUnit,
+                        answerDisplayDecimals: generatedValues.a % 1 === 0 ? 0 : 2
+                    };
                 }
 
                 if (questionData === null) {
-                    console.warn("Failed to generate a sensible concentration conversion question after multiple attempts.");
                     return {
                         question: "Could not generate a sensible concentration conversion question. Please try again.",
-                        correctAnswer: 0,
-                        units: "",
-                        explanation: "",
-                        internalAnswerUnit: "",
-                        answerDisplayDecimals: 0
+                        correctAnswer: 0, units: "", answerDisplayDecimals: 0
                     };
                 }
                 return questionData;
@@ -474,117 +284,41 @@
                 const sensibleVolumeValues = [1, 2, 2.5, 5, 10, 15, 20, 25, 30, 40, 50, 75, 100, 125, 150, 200, 250, 300, 400, 500];
 
                 const dosageVolumeRules = [
-                    // Calculate Dose: Concentration (mg/mL) x Volume (mL) = Dose (mg)
-                    {
-                        type: 'calculate_dose',
-                        answerUnitDisplay: 'mg',
-                        internalAnswerUnit: 'mg',
-                        generate: function() {
-                            let attemptsInner = 0;
-                            const MAX_INNER_ATTEMPTS = 50;
-                            while (attemptsInner < MAX_INNER_ATTEMPTS) {
-                                attemptsInner++;
-                                const conc = sensibleConcValues[getRandomInt(0, sensibleConcValues.length - 1)];
-                                const vol = sensibleVolumeValues[getRandomInt(0, sensibleVolumeValues.length - 1)];
-
-                                const dose = conc * vol;
-
-                                if (isClinicallySensible(conc) && isClinicallySensible(vol) && isClinicallySensible(dose) && dose > 0 && dose < 10000) {
-                                    return { questionConcentration: conc, questionVolume: vol, correctAnswer: dose };
-                                }
-                            }
-                            return null;
-                        }
+                    { type: 'calculate_dose', answerUnitDisplay: 'mg',
+                      generate: () => {
+                          const conc = sensibleConcValues[getRandomInt(0, sensibleConcValues.length - 1)];
+                          const vol = sensibleVolumeValues[getRandomInt(0, sensibleVolumeValues.length - 1)];
+                          const dose = conc * vol;
+                          return { q_conc: conc, q_vol: vol, a: dose };
+                      }
                     },
-                    // Calculate Volume: Dose (mg) / Concentration (mg/mL) = Volume (mL)
-                    {
-                        type: 'calculate_volume',
-                        answerUnitDisplay: 'ml',
-                        internalAnswerUnit: 'ml',
-                        generate: function() {
-                            let attemptsInner = 0;
-                            const MAX_INNER_ATTEMPTS = 50;
-                            while (attemptsInner < MAX_INNER_ATTEMPTS) {
-                                attemptsInner++;
-                                const dose = sensibleDoseValues[getRandomInt(0, sensibleDoseValues.length - 1)];
-                                const conc = sensibleConcValues[getRandomInt(0, sensibleConcValues.length - 1)];
-                                
-                                if (conc === 0) continue;
-                                const vol = dose / conc;
-
-                                if (isClinicallySensible(dose) && isClinicallySensible(conc) && isClinicallySensible(vol) && vol > 0 && vol < 1000) {
-                                    return { questionDose: dose, questionConcentration: conc, correctAnswer: vol };
-                                }
-                            }
-                            return null;
-                        }
+                    { type: 'calculate_volume', answerUnitDisplay: 'ml',
+                      generate: () => {
+                          const dose = sensibleDoseValues[getRandomInt(0, sensibleDoseValues.length - 1)];
+                          const conc = sensibleConcValues[getRandomInt(0, sensibleConcValues.length - 1)];
+                          if (conc === 0) return null;
+                          const vol = dose / conc;
+                          return { q_dose: dose, q_conc: conc, a: vol };
+                      }
                     },
-                    // Cream %w/w to Active Ingredient (g or mg)
-                    {
-                        type: 'calculate_w_w_ingredient',
-                        answerUnitDisplay: function(ans) { return ans < 1 ? 'mg' : 'g'; },
-                        internalAnswerUnit: 'dynamic_mass',
-                        generate: function() {
-                            let attemptsInner = 0;
-                            const MAX_INNER_ATTEMPTS = 50;
-                            while (attemptsInner < MAX_INNER_ATTEMPTS) {
-                                attemptsInner++;
-                                const percent_ww = [0.05, 0.1, 0.25, 0.5, 1, 2, 2.5, 5, 10, 12.5, 20][getRandomInt(0, 10)];
-                                const total_g = [10, 20, 25, 30, 50, 100, 125, 200, 250, 500][getRandomInt(0, 9)];
-
-                                const active_ingredient_g = (percent_ww / 100) * total_g;
-
-                                if (isClinicallySensible(percent_ww) && isClinicallySensible(total_g) && isClinicallySensible(active_ingredient_g) && active_ingredient_g > 0.001) {
-                                    return { questionPercentWW: percent_ww, questionTotalG: total_g, correctAnswer: active_ingredient_g };
-                                }
-                            }
-                            return null;
-                        },
-                        answerDisplayDecimals: function(answer) {
-                            let convertedAnswer = answer;
-                            if (answer < 1) { convertedAnswer = answer * 1000; } // Check for mg
-                            return isNumberClean(convertedAnswer, 0) ? 0 : 2; // Return 0 for whole numbers, 2 for others
-                        }
+                    { type: 'calculate_w_w_ingredient', answerUnitDisplay: (ans) => ans < 1 ? 'mg' : 'g',
+                      generate: () => {
+                          const percent_ww = [0.05, 0.1, 0.25, 0.5, 1, 2, 2.5, 5, 10, 12.5, 20][getRandomInt(0, 10)];
+                          const total_g = [10, 20, 25, 30, 50, 100, 125, 200, 250, 500][getRandomInt(0, 9)];
+                          const active_ingredient_g = (percent_ww / 100) * total_g;
+                          return { q_percent_ww: percent_ww, q_total_g: total_g, a: active_ingredient_g };
+                      }
                     },
-                    // Volume from Dose (mg or g) and %w/v solution
-                    {
-                        type: 'calculate_volume_from_dose_and_percent_solution',
-                        answerUnitDisplay: 'ml',
-                        internalAnswerUnit: 'ml',
-                        generate: function() {
-                            let attemptsInner = 0;
-                            const MAX_INNER_ATTEMPTS = 50;
-                            while (attemptsInner < MAX_INNER_ATTEMPTS) {
-                                attemptsInner++;
-                                const percent_wv = [0.1, 0.25, 0.5, 1, 2, 2.5, 5, 10, 12.5][getRandomInt(0, 8)];
-
-                                let required_dose_mg;
-                                let questionDoseUnit;
-                                let questionDoseValue;
-                                if (Math.random() < 0.5) {
-                                    questionDoseUnit = 'mg';
-                                    questionDoseValue = sensibleDoseValues[getRandomInt(0, sensibleDoseValues.length - 1)];
-                                    required_dose_mg = questionDoseValue;
-                                } else {
-                                    questionDoseUnit = 'g';
-                                    questionDoseValue = sensibleDoseValues[getRandomInt(0, sensibleDoseValues.length - 1)] / 1000;
-                                    required_dose_mg = questionDoseValue * 1000;
-                                }
-                                
-                                if (percent_wv === 0) continue;
-                                const volume_needed = (required_dose_mg / (percent_wv * 1000)) * 100;
-                                
-                                if (isClinicallySensible(percent_wv) && isClinicallySensible(questionDoseValue) && isClinicallySensible(volume_needed) && volume_needed > 0 && volume_needed < 1000) {
-                                    return {
-                                        questionDoseValue: questionDoseValue,
-                                        questionDoseUnit: questionDoseUnit,
-                                        questionPercentWV: percent_wv,
-                                        correctAnswer: volume_needed
-                                    };
-                                }
-                            }
-                            return null;
-                        }
+                    { type: 'calculate_volume_from_dose_and_percent_solution', answerUnitDisplay: 'ml',
+                      generate: () => {
+                          const percent_wv = [0.1, 0.25, 0.5, 1, 2, 2.5, 5, 10, 12.5][getRandomInt(0, 8)];
+                          const questionDoseUnit = Math.random() < 0.5 ? 'mg' : 'g';
+                          const questionDoseValue = sensibleDoseValues[getRandomInt(0, sensibleDoseValues.length - 1)] / (questionDoseUnit === 'g' ? 1000 : 1);
+                          const required_dose_mg = questionDoseValue * (questionDoseUnit === 'g' ? 1000 : 1);
+                          if (percent_wv === 0) return null;
+                          const volume_needed = required_dose_mg / (percent_wv * 10);
+                          return { q_dose_val: questionDoseValue, q_dose_unit: questionDoseUnit, q_percent_wv: percent_wv, a: volume_needed };
+                      }
                     }
                 ];
 
@@ -592,53 +326,48 @@
                     attempts++;
                     const rule = dosageVolumeRules[getRandomInt(0, dosageVolumeRules.length - 1)];
                     const generatedValues = rule.generate.call(rule);
-
-                    if (generatedValues === null) {
+                    
+                    if (generatedValues === null || !isClinicallySensible(generatedValues.a)) {
                         continue;
                     }
-
-                    let correctAnswerNumerical = generatedValues.correctAnswer;
-                    const answerUnit = typeof rule.answerUnitDisplay === 'function' ? rule.answerUnitDisplay(correctAnswerNumerical) : rule.answerUnitDisplay;
-                    const answerDecimals = typeof rule.answerDisplayDecimals === 'function' ? rule.answerDisplayDecimals(correctAnswerNumerical) : (unitDecimalCleanliness[answerUnit] || 0);
-
+                    
                     let questionText;
+                    let answerUnit = typeof rule.answerUnitDisplay === 'function' ? rule.answerUnitDisplay(generatedValues.a) : rule.answerUnitDisplay;
+                    let answerDecimals = isClinicallySensible(generatedValues.a) && generatedValues.a % 1 === 0 ? 0 : 2;
+
                     if (rule.type === 'calculate_dose') {
-                        questionText = `If a solution has a concentration of <strong>${formatNumberForDisplay(generatedValues.questionConcentration, 2)} mg/mL</strong>, how many milligrams of drug are in <strong>${formatNumberForDisplay(generatedValues.questionVolume, 0)} ml</strong> of this solution?`;
+                        const formattedConc = formatNumberForDisplay(generatedValues.q_conc, isClinicallySensible(generatedValues.q_conc) && generatedValues.q_conc % 1 === 0 ? 0 : 2);
+                        const formattedVol = formatNumberForDisplay(generatedValues.q_vol, 0);
+                        questionText = `If a solution has a concentration of <strong>${formattedConc} mg/mL</strong>, how many milligrams of drug are in <strong>${formattedVol} ml</strong> of this solution?`;
                     } else if (rule.type === 'calculate_volume') {
-                        questionText = `How many millilitres of a solution with a concentration of <strong>${formatNumberForDisplay(generatedValues.questionConcentration, 2)} mg/mL</strong> would be required to provide a dose of <strong>${formatNumberForDisplay(generatedValues.questionDose, 0)} mg</strong>?`;
+                        const formattedConc = formatNumberForDisplay(generatedValues.q_conc, isClinicallySensible(generatedValues.q_conc) && generatedValues.q_conc % 1 === 0 ? 0 : 2);
+                        const formattedDose = formatNumberForDisplay(generatedValues.q_dose, 0);
+                        questionText = `How many millilitres of a solution with a concentration of <strong>${formattedConc} mg/mL</strong> would be required to provide a dose of <strong>${formattedDose} mg</strong>?`;
                     } else if (rule.type === 'calculate_w_w_ingredient') {
-                        const totalGDec = isNumberClean(generatedValues.questionTotalG, 0) ? 0 : 2;
-                        const percentWWDec = isNumberClean(generatedValues.questionPercentWW, 0) ? 0 : 2;
-                        questionText = `A cream is described as <strong>${formatNumberForDisplay(generatedValues.questionPercentWW, percentWWDec)}% w/w</strong>. How much active ingredient is there in <strong>${formatNumberForDisplay(generatedValues.questionTotalG, totalGDec)} g</strong> of this cream?`;
+                        const totalGDec = isClinicallySensible(generatedValues.q_total_g) && generatedValues.q_total_g % 1 === 0 ? 0 : 2;
+                        const percentWWDec = isClinicallySensible(generatedValues.q_percent_ww) && generatedValues.q_percent_ww % 1 === 0 ? 0 : 2;
+                        questionText = `A cream is described as <strong>${formatNumberForDisplay(generatedValues.q_percent_ww, percentWWDec)}% w/w</strong>. How much active ingredient is there in <strong>${formatNumberForDisplay(generatedValues.q_total_g, totalGDec)} g</strong> of this cream?`;
                     } else if (rule.type === 'calculate_volume_from_dose_and_percent_solution') {
-                        const qDoseDec = isNumberClean(generatedValues.questionDoseValue, 0) ? 0 : 2;
-                        const percentWVDec = isNumberClean(generatedValues.questionPercentWV, 0) ? 0 : 2;
-                        questionText = `How many ml of solution are required to provide a dose of <strong>${formatNumberForDisplay(generatedValues.questionDoseValue, qDoseDec)} ${generatedValues.questionDoseUnit}</strong> from a <strong>${formatNumberForDisplay(generatedValues.questionPercentWV, percentWVDec)}% w/v</strong> solution?`;
+                        const qDoseDec = isClinicallySensible(generatedValues.q_dose_val) && generatedValues.q_dose_val % 1 === 0 ? 0 : 2;
+                        const percentWVDec = isClinicallySensible(generatedValues.q_percent_wv) && generatedValues.q_percent_wv % 1 === 0 ? 0 : 2;
+                        questionText = `How many ml of solution are required to provide a dose of <strong>${formatNumberForDisplay(generatedValues.q_dose_val, qDoseDec)} ${generatedValues.q_dose_unit}</strong> from a <strong>${formatNumberForDisplay(generatedValues.q_percent_wv, percentWVDec)}% w/v</strong> solution?`;
                     } else {
-                        // Fallback for an unhandled rule type
                         console.error(`Unknown rule type: ${rule.type}`);
                         continue;
                     }
                     
                     questionData = {
                         question: questionText,
-                        correctAnswer: correctAnswerNumerical,
+                        correctAnswer: generatedValues.a,
                         units: answerUnit,
-                        internalAnswerUnit: rule.internalAnswerUnit,
-                        answerDisplayDecimals: answerDecimals,
-                        explanation: ""
+                        answerDisplayDecimals: answerDecimals
                     };
                 }
 
                 if (questionData === null) {
-                    console.warn("Failed to generate a sensible dosage & volume question after multiple attempts.");
                     return {
                         question: "Could not generate a sensible dosage & volume question. Please try again.",
-                        correctAnswer: 0,
-                        units: "",
-                        explanation: "",
-                        internalAnswerUnit: "",
-                        answerDisplayDecimals: 0
+                        correctAnswer: 0, units: "", answerDisplayDecimals: 0
                     };
                 }
                 return questionData;
@@ -648,9 +377,9 @@
         // --- Core Quiz Logic ---
 
         function startQuiz(topicId) {
-            selectedTopicId = topicId; // Store the topic ID
+            selectedTopicId = topicId;
             const selectedTopicGenerator = questionGenerators[topicId];
-            if (typeof selectedTopicGenerator !== 'function') { // More robust check
+            if (typeof selectedTopicGenerator !== 'function') {
                 alert('Invalid topic selected or generator not found!');
                 console.error("Generator for topic '" + topicId + "' is not a function:", selectedTopicGenerator);
                 return;
@@ -663,10 +392,7 @@
                     if (question) {
                         currentQuizQuestions.push(question);
                     } else {
-                        // Handle the case where a generator returns null.
-                        // For simplicity, we just won't push a question for this iteration.
-                        // A more robust app might log an error or retry.
-                        i--; // Decrement the counter to try again.
+                        i--;
                     }
                 } catch (e) {
                     console.error(`Error generating question for topic ${topicId}:`, e);
@@ -686,9 +412,6 @@
             quizSummaryDiv.style.display = 'none';
             quizSectionDiv.style.display = 'block';
 
-            restartQuizBtn.style.display = 'none';
-            checkAnswerBtn.style.display = 'inline-block';
-            nextQuestionBtn.style.display = 'inline-block';
             checkAnswerBtn.disabled = false;
             nextQuestionBtn.disabled = true;
             userAnswerInput.value = '';
@@ -711,7 +434,6 @@
             userAnswerInput.disabled = false;
             answerUnitDisplay.textContent = question.units;
             feedbackMessage.style.display = 'none';
-            solutionExplanation.style.display = 'none'; // Ensure solution explanation is hidden
             feedbackMessage.className = 'feedback-message';
 
             if (window.MathJax) {
@@ -725,7 +447,7 @@
 
         function checkAnswer() {
             const userAnswerRaw = userAnswerInput.value;
-            let userAnswer = parseFloat(userAnswerRaw);
+            const userAnswer = parseFloat(userAnswerRaw);
 
             if (isNaN(userAnswer)) {
                 feedbackMessage.textContent = "Please enter a numerical answer.";
@@ -735,42 +457,26 @@
             }
 
             const currentQuestion = currentQuizQuestions[currentQuestionIndex];
-            const correctAnswer = currentQuestion.correctAnswer; // This is the precise, clean numerical value
-
-            // Determine the correct number of decimal places for comparison based on the question's rule
-            const answerDecimalsForComparison = typeof currentQuestion.answerDisplayDecimals === 'function' ?
-                currentQuestion.answerDisplayDecimals(correctAnswer) : currentQuestion.answerDisplayDecimals;
-
-            // Format the precise correct answer to its intended display decimals for comparison
-            const formattedCorrectAnswerForComparison = parseFloat(correctAnswer.toFixed(answerDecimalsForComparison));
-
-            // Round user answer to the same number of decimal places for a fair comparison
-            userAnswer = parseFloat(userAnswer.toFixed(answerDecimalsForComparison));
-
-            const tolerance = 0.00001; // Small tolerance for floating point comparison issues
-
-            // Compare the user's rounded answer with the precisely calculated answer, rounded to the display decimals.
-            if (Math.abs(userAnswer - formattedCorrectAnswerForComparison) < tolerance) {
+            const correctAnswer = currentQuestion.correctAnswer;
+            
+            // This is the new, correct comparison logic.
+            if (Math.abs(userAnswer - correctAnswer) < FLOATING_POINT_TOLERANCE) {
                 score++;
                 feedbackMessage.textContent = "Correct!";
                 feedbackMessage.className = 'feedback-message feedback-correct';
             } else {
                 let feedbackAnswerDisplayString;
-                // Format the precise correct answer for display in the feedback message
+                const answerDecimals = currentQuestion.answerDisplayDecimals;
+                
                 if (currentQuestion.internalAnswerUnit === 'ratio_X') {
-                    feedbackAnswerDisplayString = `1 in ${formatNumberForDisplay(correctAnswer, answerDecimalsForComparison)}`;
-                } else if (currentQuestion.internalAnswerUnit === 'dynamic_mass') {
-                    const unit = typeof currentQuestion.units === 'function' ? currentQuestion.units(correctAnswer) : currentQuestion.units;
-                    const decimals = typeof currentQuestion.answerDisplayDecimals === 'function' ? currentQuestion.answerDisplayDecimals(correctAnswer) : currentQuestion.answerDisplayDecimals;
-                    
-                    let convertedAnswer = correctAnswer;
-                    if (unit === 'mg') {
-                        convertedAnswer = correctAnswer * 1000;
-                    }
+                    feedbackAnswerDisplayString = `1 in ${formatNumberForDisplay(correctAnswer, answerDecimals)}`;
+                } else if (typeof currentQuestion.units === 'function') {
+                    const unit = currentQuestion.units(correctAnswer);
+                    const convertedAnswer = unit === 'mg' ? correctAnswer * 1000 : correctAnswer;
+                    const decimals = convertedAnswer % 1 === 0 ? 0 : 2;
                     feedbackAnswerDisplayString = `${formatNumberForDisplay(convertedAnswer, decimals)} ${unit}`;
-                }
-                else {
-                    feedbackAnswerDisplayString = `${formatNumberForDisplay(correctAnswer, answerDecimalsForComparison)} ${currentQuestion.units}`;
+                } else {
+                    feedbackAnswerDisplayString = `${formatNumberForDisplay(correctAnswer, answerDecimals)} ${currentQuestion.units}`;
                 }
 
                 feedbackMessage.textContent = `Incorrect. The correct answer was ${feedbackAnswerDisplayString}.`;
@@ -779,7 +485,6 @@
 
             scoreTracker.textContent = score;
             feedbackMessage.style.display = 'block';
-            solutionExplanation.style.display = 'none'; // Explicitly ensure solution explanation is hidden
 
             checkAnswerBtn.disabled = true;
             nextQuestionBtn.disabled = false;
@@ -792,76 +497,70 @@
         }
 
         function endQuiz() {
-                clearInterval(timerInterval);
-                quizSummaryDiv.style.display = 'block';
-                quizSectionDiv.style.display = 'none';
+            clearInterval(timerInterval);
+            quizSummaryDiv.style.display = 'block';
+            quizSectionDiv.style.display = 'none';
 
-                document.getElementById('finalScore').textContent = score;
-                document.getElementById('finalTotal').textContent = TOTAL_QUESTIONS_PER_QUIZ;
-                document.getElementById('finalTime').textContent = formatTime(secondsElapsed);
-            }
+            document.getElementById('finalScore').textContent = score;
+            document.getElementById('finalTotal').textContent = TOTAL_QUESTIONS_PER_QUIZ;
+            document.getElementById('finalTime').textContent = formatTime(secondsElapsed);
+        }
 
-            function startTimer() {
-                clearInterval(timerInterval);
-                secondsElapsed = 0;
+        function startTimer() {
+            clearInterval(timerInterval);
+            secondsElapsed = 0;
+            timeTracker.textContent = formatTime(secondsElapsed);
+            timerInterval = setInterval(() => {
+                secondsElapsed++;
                 timeTracker.textContent = formatTime(secondsElapsed);
-                timerInterval = setInterval(() => {
-                    secondsElapsed++;
-                    timeTracker.textContent = formatTime(secondsElapsed);
-                }, 1000);
-            }
+            }, 1000);
+        }
 
-            function formatTime(totalSeconds) {
-                const minutes = Math.floor(totalSeconds / 60);
-                const remainingSeconds = totalSeconds % 60;
-                return `${minutes} minute${minutes === 1 ? '' : 's'} ${remainingSeconds} second${remainingSeconds === 1 ? '' : 's'}`;
-            }
+        function formatTime(totalSeconds) {
+            const minutes = Math.floor(totalSeconds / 60);
+            const remainingSeconds = totalSeconds % 60;
+            return `${minutes} minute${minutes === 1 ? '' : 's'} ${remainingSeconds} second${remainingSeconds === 1 ? '' : 's'}`;
+        }
 
-            function formatTopicTitle(topicId) {
-                return topicId.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase()) + ' Questions';
-            }
+        function formatTopicTitle(topicId) {
+            return topicId.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase()) + ' Questions';
+        }
 
-            // --- Event Listeners ---
-
-            // Topic selection buttons
-            document.querySelectorAll('.topic-button').forEach(button => {
-                button.addEventListener('click', (event) => {
-                    const topic = event.currentTarget.dataset.topic;
-                    startQuiz(topic);
-                });
+        // --- Event Listeners ---
+        document.querySelectorAll('.topic-button').forEach(button => {
+            button.addEventListener('click', (event) => {
+                const topic = event.currentTarget.dataset.topic;
+                startQuiz(topic);
             });
+        });
 
-            checkAnswerBtn.addEventListener('click', checkAnswer);
-            nextQuestionBtn.addEventListener('click', nextQuestion);
-            // Use selectedTopicId for restarting the quiz
-            restartQuizBtn.addEventListener('click', () => startQuiz(selectedTopicId));
-            summaryRestartBtn.addEventListener('click', () => startQuiz(selectedTopicId));
+        checkAnswerBtn.addEventListener('click', checkAnswer);
+        nextQuestionBtn.addEventListener('click', nextQuestion);
+        summaryRestartBtn.addEventListener('click', () => startQuiz(selectedTopicId));
 
-            backToTopicsBtn.addEventListener('click', () => {
-                quizSummaryDiv.style.display = 'none';
-                topicSelectionDiv.style.display = 'block';
-                quizTitle.textContent = 'Random Questions'; // Reset navbar title
-            });
+        backToTopicsBtn.addEventListener('click', () => {
+            quizSummaryDiv.style.display = 'none';
+            topicSelectionDiv.style.display = 'block';
+            quizTitle.textContent = 'Random Questions';
+        });
 
-            // Allow pressing Enter to check answer or move to next question
-            userAnswerInput.addEventListener('keypress', (event) => {
-                if (event.key === 'Enter') {
-                    if (!checkAnswerBtn.disabled) {
-                        checkAnswer();
-                    } else if (!nextQuestionBtn.disabled) {
-                        nextQuestion();
-                    }
+        userAnswerInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                if (!checkAnswerBtn.disabled) {
+                    checkAnswer();
+                } else if (!nextQuestionBtn.disabled) {
+                    nextQuestion();
                 }
-            });
+            }
+        });
 
-            // --- Initial Setup ---
-            window.onload = () => {
-                // Ensure topic selection is visible at start
-                topicSelectionDiv.style.display = 'block';
-                quizSectionDiv.style.display = 'none';
-                quizSummaryDiv.style.display = 'none';
-            };
+        // --- Initial Setup ---
+        window.onload = () => {
+            topicSelectionDiv.style.display = 'block';
+            quizSectionDiv.style.display = 'none';
+            quizSummaryDiv.style.display = 'none';
+        };
 
-        </script>
-    </body>
-    </html>
+    </script>
+</body>
+</html>
