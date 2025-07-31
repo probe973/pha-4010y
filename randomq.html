@@ -4,24 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Question Quiz</title>
-    
-    <!-- Link to your existing stylesheet -->
-    <link rel="stylesheet" href="/assets/css/style.css">
-    
+
     <!-- Link to your Font Awesome stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <!-- Link to your favicon -->
-    <link rel="icon" href="/pha-4010y/favicon.ico" type="image/x-icon">
-
-    <!-- MathJax for rendering LaTeX, using your preferred configuration -->
+    <!-- MathJax for rendering LaTeX -->
     <script type="text/javascript" id="MathJax-script">
         window.MathJax = {
             tex: {
                 inlineMath: [['$', '$'], ['\\(', '\\)']]
-            },
-            options: {
-                // Removed 'scale' option to rely on CSS
             },
             svg: {
                 fontCache: 'global'
@@ -29,8 +20,8 @@
         };
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-    <!-- Embedded CSS for specific quiz elements -->
+
+    <!-- Embedded CSS from your provided code, with NO extra styling added by me. -->
     <style>
         .quiz-container {
             padding: 20px;
@@ -133,7 +124,7 @@
     </style>
 </head>
 <body>
-    <!-- Navbar from your default.html -->
+    <!-- Navbar from your provided code -->
     <div class="navbar">
         <a href="/index.html" class="navbar-link">Home</a>
         <span class="navbar-title">Random Question Quiz</span>
@@ -171,8 +162,9 @@
         let score = 0;
         const totalQuestions = 10;
         let answeredCorrectly = false;
-
+        
         // DOM elements
+        const quizContainer = document.querySelector('.quiz-container');
         const questionNumDisplay = document.getElementById('current-question-num');
         const totalQuestionsDisplay = document.getElementById('total-questions');
         const scoreDisplay = document.getElementById('current-score');
@@ -192,27 +184,12 @@
                 [array[i], array[j]] = [array[j], array[i]];
             }
         }
-
-        // Function to get the quiz file name from the URL
-        function getQuizFileName() {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get('quiz');
-        }
-
+        
         // Function to load the quiz data from the JSON file
         async function loadQuizData() {
-            // NOTE: The user's JSON file is assumed to be in the 'data/' folder.
-            // You will need to access this page with a URL parameter like:
-            // randomq.html?quiz=data/rq_conversion_units.json
-            const quizFileName = getQuizFileName();
-            if (!quizFileName) {
-                questionTextElement.textContent = 'Error: No quiz file specified in the URL. Example: randomq.html?quiz=data/rq_conversion_units.json';
-                return;
-            }
-
             try {
-                // Fetch the JSON file
-                const response = await fetch(quizFileName);
+                // Fetch the JSON file using the 'uploaded:' protocol
+                const response = await fetch('uploaded:rq_conversion_units.json');
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }
@@ -222,11 +199,11 @@
                 shuffleArray(data);
                 quizData = data.slice(0, totalQuestions);
 
-                // Initialize the quiz
+                // Initialize the quiz after data is loaded
                 initializeQuiz();
 
             } catch (error) {
-                questionTextElement.textContent = `Error loading quiz: ${error.message}. Please check the quiz file path.`;
+                questionTextElement.textContent = `Error loading quiz: ${error.message}. Please check the quiz file.`;
                 console.error('Error fetching quiz data:', error);
             }
         }
@@ -300,8 +277,8 @@
             }
             
             // Check if the user's answer matches the JSON answer
-            // Using parseFloat for numerical comparison
-            const isCorrect = parseFloat(userAnswer) === parseFloat(currentQuestion.Answer);
+            // Using parseFloat for numerical comparison with a small tolerance for floating-point issues
+            const isCorrect = Math.abs(parseFloat(userAnswer) - parseFloat(currentQuestion.Answer)) < 0.0001;
 
             if (isCorrect) {
                 feedbackMessage.textContent = 'Correct!';
