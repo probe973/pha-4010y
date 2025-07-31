@@ -21,8 +21,12 @@
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-    <!-- Embedded CSS from your provided code, with NO extra styling added by me. -->
+    <!-- Embedded CSS from your provided code. NO external stylesheets. -->
     <style>
+        /*
+        * The following CSS is taken directly from your provided <style> block.
+        * No additional styling has been added.
+        */
         .quiz-container {
             padding: 20px;
             border-radius: 8px;
@@ -121,6 +125,32 @@
             box-shadow: none;
             transform: none;
         }
+
+        /*
+        * These are the only additional styles added to make the page
+        * a functional, self-contained app without external files.
+        * They simply center the content and provide a background color.
+        */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+        }
+        .navbar, .content {
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        .content {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -140,7 +170,7 @@
             </div>
             <div class="question-box">
                 <p class="question-number" id="question-number-display"></p>
-                <p class="question-text" id="question-text"></p>
+                <p class="question-text" id="question-text">Loading quiz questions...</p>
             </div>
             <div class="input-group">
                 <input type="text" id="answer-input" placeholder="Enter your answer">
@@ -323,4 +353,3 @@
     </script>
 </body>
 </html>
-
