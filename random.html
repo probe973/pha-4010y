@@ -187,8 +187,6 @@
         }
 
         // --- Generic Unit Conversion Helper (used by multiple generators) ---
-        // Corrected logic: value * (conversion_factor_of_fromUnit / conversion_factor_of_toUnit)
-        // Or, more intuitively: value_in_base_unit / to_unit_factor
         function convertValue(value, fromUnit, toUnit, unitType) {
             const fromFactor = unitConversions[unitType][fromUnit];
             const toFactor = unitConversions[unitType][toUnit];
@@ -375,7 +373,7 @@
                         questionText = `If <strong>${dose}mg</strong> of active ingredient is dissolved in <strong>${volume} millilitres</strong> of solution, what is the concentration in mg/mL?`;
                         correctAnswer = formatNumber(concentration, 1);
                         units = "mg/mL";
-                        explanation = `Concentration = $${dose}~\\text{mg} \\div ${volume}~\\text{ml} = ${correctAnswer}~\\text{mg/ml}$`;
+                        explanation = `Concentration = $${dose}~\\text{mg} \\div ${volume}~\\text{ml} = ${correctAnswer}~\\text{mg/ml}$";
                         break;
                     case 'calculate_volume':
                         dose = getRandomInt(1, 5) * 100; // mg, e.g., 100mg, 300mg
@@ -384,7 +382,7 @@
                         questionText = `How many millilitres of a solution with a concentration of <strong>${concentration}mg/ml</strong> would be required to provide a dose of <strong>${dose}mg</strong>?`;
                         correctAnswer = formatNumber(volume, 0);
                         units = "ml";
-                        explanation = `Required volume = $${dose}~\\text{mg} \\div ${concentration}~\\text{mg/ml} = ${correctAnswer}~\\text{ml}$`;
+                        explanation = `Required volume = $${dose}~\\text{mg} \\div ${concentration}~\\text{mg/ml} = ${correctAnswer}~\\text{ml}$";
                         break;
                 }
                 return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
@@ -490,7 +488,8 @@
                 let unique_info_sqrts_filtered = info_sqrts.filter(item => item.sqrt === bsa_val);
                 while (unique_info_sqrts_filtered.length < 4) {
                     const randomItem = info_sqrts[getRandomInt(0, info_sqrts.length - 1)];
-                    if (!unique_info_sqrts_filtered.some(item => item.val === randomItem.val)) {
+                    // Ensure the random item is not already in the filtered list
+                    if (!unique_info_sqrts_filtered.some(item => item.val === randomItem.val && item.sqrt === randomItem.sqrt)) {
                         unique_info_sqrts_filtered.push(randomItem);
                     }
                 }
@@ -536,7 +535,7 @@
                     correctAnswer = formatNumber((tempC * 9 / 5) + 32, 0);
                     questionText = `What is <strong>${tempC} &deg;C</strong> in <strong>&deg;F</strong>?`;
                     units = "°F";
-                    explanation = `$F = \\frac{9}{5}C + 32$. $F = \\frac{9}{5}(${tempC}) + 32 = ${formatNumber(tempC * 9 / 5, 0)} + 32 = ${correctAnswer}~\\text{&deg;F}$`;
+                    explanation = `$F = \\frac{9}{5}C + 32$. $F = \\frac{9}{5}(${tempC}) + 32 = ${formatNumber(tempC * 9 / 5, 0)} + 32 = ${correctAnswer}~\\text{&deg;F}$";
                 } else { // F_to_C
                     const tempF = getRandomInt(32, 104); // 32-104 F (multiples of 9 for clean C)
                     if ((tempF - 32) % 9 !== 0) { // Ensure (F-32) is a multiple of 9
@@ -593,7 +592,7 @@
                 const factor = targetVolume / originalVolume;
                 correctAnswer = formatNumber(originalAmount * factor, 0);
 
-                // Corrected template literal for formula_scaling
+                // This is the line that was problematic. Ensure it's correctly formed.
                 questionText = `If the formula for <strong>Oral Rehydration Salts</strong> is:<br><ul><li>${ingredient}: <strong>${originalAmount}mg</strong></li><li>Purified Water: <strong>to ${originalVolume} mL</strong></li></ul>How much <strong>${ingredient}</strong> in milligrams is required to produce <strong>${targetVolume}ml</strong> of the Oral Rehydration Salts solution?`;
                 units = "mg";
                 explanation = `The formula is for ${originalVolume} ml. We need to make ${targetVolume} ml. Factor = $${targetVolume}~\\text{ml} \\div ${originalVolume}~\\text{ml} = ${factor}$. ${ingredient} needed = $${originalAmount}~\\text{mg} \\times ${factor} = ${correctAnswer}~\\text{mg}$`;
