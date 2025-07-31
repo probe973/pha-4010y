@@ -422,7 +422,7 @@
                     questionText = `If a person is <strong>${feet} feet and ${inches} inches</strong> tall, what is this in metres (Assuming <strong>1 inch = 2.5 cm</strong>)?`;
                     correctAnswer = formatNumber(meters, 2);
                     units = "m";
-                    explanation = `$${feet}~\\text{feet} = ${feet * 12}~\\text{inches}$. Total inches = $${feet * 12} + ${inches} = ${totalInches}~\\text{inches}$. Convert to cm: $${totalInches}~\\text{inches} \\times 2.5~\\text{cm/inch} = ${cm}~\\text{cm}$. Convert to m: $${cm}~\\text{cm} = ${correctAnswer}~\\text{m}$";
+                    explanation = `$${feet}~\\text{feet} = ${feet * 12}~\\text{inches}$. Total inches = $${feet * 12} + ${inches} = ${totalInches}~\\text{inches}$. Convert to cm: $${totalInches}~\\text{inches} \\times 2.5~\\text{cm/inch} = ${cm}~\\text{cm}$. Convert to m: $${cm}~\\text{cm} = ${correctAnswer}~\\text{m}$`;
                 } else { // weight
                     const stone = getRandomInt(8, 15);
                     const lbs = getRandomInt(0, 13); // 0 to 13 lbs
@@ -431,7 +431,7 @@
                     questionText = `If a patient is <strong>${stone} stone ${lbs} lbs</strong>, how much do they weigh in Kg (Assuming <strong>2 lbs = 1 Kg</strong>)?`;
                     correctAnswer = formatNumber(kg, 0); // Kg usually whole number for stone/lbs conversion
                     units = "kg";
-                    explanation = `$${stone}~\\text{stone} = ${stone * 14}~\\text{lbs}$. Total lbs = $${stone * 14} + ${lbs} = ${totalLbs}~\\text{lbs}$. Convert to Kg: $${totalLbs}~\\text{lbs} \\div 2~\\text{lbs/kg} = ${correctAnswer}~\\text{kg}$";
+                    explanation = `$${stone}~\\text{stone} = ${stone * 14}~\\text{lbs}$. Total lbs = $${stone * 14} + ${lbs} = ${totalLbs}~\\text{lbs}$. Convert to Kg: $${totalLbs}~\\text{lbs} \\div 2~\\text{lbs/kg} = ${correctAnswer}~\\text{kg}$`;
                 }
                 return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
             },
@@ -569,10 +569,13 @@
                 const factor = targetVolume / originalVolume;
                 correctAnswer = formatNumber(originalAmount * factor, 0);
 
-                // This is the line that was problematic. Ensure it's correctly formed.
-                questionText = `If the formula for <strong>Oral Rehydration Salts</strong> is:<br><ul><li>${ingredient}: <strong>${originalAmount}mg</strong></li><li>Purified Water: <strong>to ${originalVolume} mL</strong></li></ul>How much <strong>${ingredient}</strong> in milligrams is required to produce <strong>${targetVolume}ml</strong> of the Oral Rehydration Salts solution?`;
+                // Re-written the string for maximum robustness
+                questionText = 'If the formula for <strong>Oral Rehydration Salts</strong> is:<br>' +
+                               '<ul><li>' + ingredient + ': <strong>' + originalAmount + 'mg</strong></li>' +
+                               '<li>Purified Water: <strong>to ' + originalVolume + ' mL</strong></li></ul>' +
+                               'How much <strong>' + ingredient + '</strong> in milligrams is required to produce <strong>' + targetVolume + 'ml</strong> of the Oral Rehydration Salts solution?';
                 units = "mg";
-                explanation = `The formula is for ${originalVolume} ml. We need to make ${targetVolume} ml. Factor = $${targetVolume}~\\text{ml} \\div ${originalVolume}~\\text{ml} = ${factor}$. ${ingredient} needed = $${originalAmount}~\\text{mg} \\times ${factor} = ${correctAnswer}~\\text{mg}$`;
+                explanation = 'The formula is for ' + originalVolume + ' ml. We need to make ' + targetVolume + ' ml. Factor = $' + targetVolume + '~\\text{ml} \\div ' + originalVolume + '~\\text{ml} = ' + factor + '$. ' + ingredient + ' needed = $' + originalAmount + '~\\text{mg} \\times ' + factor + ' = ' + correctAnswer + '~\\text{mg}$';
 
                 return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
             }
@@ -583,9 +586,10 @@
         function startQuiz(topicId) {
             selectedTopicId = topicId; // Store the topic ID
             const selectedTopicGenerator = questionGenerators[topicId];
-            if (!selectedTopicGenerator) {
+            if (typeof selectedTopicGenerator !== 'function') { // More robust check
                 // Using a simple alert for now, but consider a custom modal for better UX
-                alert('Invalid topic selected!');
+                alert('Invalid topic selected or generator not found!');
+                console.error("Generator for topic '" + topicId + "' is not a function:", selectedTopicGenerator);
                 return;
             }
 
