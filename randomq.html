@@ -197,21 +197,24 @@
         
         async function loadQuizData() {
             try {
-                // Get the file name from the URL query parameter
+                // Get the file name from the URL query parameter 'quiz'
                 const urlParams = new URLSearchParams(window.location.search);
-                const fileName = urlParams.get('file');
+                let fileName = urlParams.get('quiz');
 
                 if (!fileName) {
-                    questionTextElement.textContent = "Error: No quiz file specified in the URL.";
+                    questionTextElement.textContent = "Error: No quiz file specified in the URL. Please use a URL like '?quiz=rq_conversion_units.json'.";
                     return;
                 }
 
+                // Remove the 'data/' prefix if it's present, as the 'uploaded:' protocol handles this.
+                fileName = fileName.replace('data/', '');
+
                 // Correctly construct the full path using the 'uploaded:' protocol and the dynamic file name
-                const filePath = `uploaded:rq_conversion_units.json`;
+                const filePath = `uploaded:${fileName}`;
                 
                 const response = await fetch(filePath);
                 if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
+                    throw new Error(`HTTP error! Status: ${response.status}. Please ensure the file name is correct.`);
                 }
                 const data = await response.json();
                 
