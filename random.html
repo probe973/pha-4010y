@@ -373,7 +373,7 @@
                         questionText = `If <strong>${dose}mg</strong> of active ingredient is dissolved in <strong>${volume} millilitres</strong> of solution, what is the concentration in mg/mL?`;
                         correctAnswer = formatNumber(concentration, 1);
                         units = "mg/mL";
-                        explanation = `Concentration = $${dose}~\\text{mg} \\div ${volume}~\\text{ml} = ${correctAnswer}~\\text{mg/ml}$";
+                        explanation = `Concentration = $${dose}~\\text{mg} \\div ${volume}~\\text{ml} = ${correctAnswer}~\\text{mg/ml}$`;
                         break;
                     case 'calculate_volume':
                         dose = getRandomInt(1, 5) * 100; // mg, e.g., 100mg, 300mg
@@ -382,7 +382,7 @@
                         questionText = `How many millilitres of a solution with a concentration of <strong>${concentration}mg/ml</strong> would be required to provide a dose of <strong>${dose}mg</strong>?`;
                         correctAnswer = formatNumber(volume, 0);
                         units = "ml";
-                        explanation = `Required volume = $${dose}~\\text{mg} \\div ${concentration}~\\text{mg/ml} = ${correctAnswer}~\\text{ml}$";
+                        explanation = `Required volume = $${dose}~\\text{mg} \\div ${concentration}~\\text{mg/ml} = ${correctAnswer}~\\text{ml}$`;
                         break;
                 }
                 return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
@@ -403,7 +403,7 @@
                 const correctAnswer = formatNumber(moles * compound.mw, 2);
                 const units = "g";
                 let explanation = `Molecular weight of ${compound.name} = ${compound.mw}~\\text{g/mol}$. `;
-                explanation += `$${millimoles}~\\text{millimoles} = ${moles}~\\text{moles}$. Mass = $${moles}~\\text{moles} \\times ${compound.mw}~\\text{g/mol} = ${correctAnswer}~\\text{g}$";
+                explanation += `$${millimoles}~\\text{millimoles} = ${moles}~\\text{moles}$. Mass = $${moles}~\\text{moles} \\times ${compound.mw}~\\text{g/mol} = ${correctAnswer}~\\text{g}$`;
 
                 return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
             },
@@ -428,7 +428,7 @@
                 questionText = `How many millilitres of a <strong>1 in ${c1_val}</strong> solution is required to produce <strong>${v2_val}mL</strong> of a <strong>1 in ${c2_val}</strong> solution?`;
                 correctAnswer = formatNumber(v1_val, 1);
                 units = "ml";
-                explanation = `Using $C1V1 = C2V2$: $\\frac{1}{${c1_val}} \\times V1 = \\frac{1}{${c2_val}} \\times ${v2_val}$. $V1 = \\frac{${v2_val}}{${c2_val}} \\times ${c1_val} = ${correctAnswer}~\\text{ml}$";
+                explanation = `Using $C1V1 = C2V2$: $\\frac{1}{${c1_val}} \\times V1 = \\frac{1}{${c2_val}} \\times ${v2_val}$. $V1 = \\frac{${v2_val}}{${c2_val}} \\times ${c1_val} = ${correctAnswer}~\\text{ml}$`;
 
                 return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
             },
@@ -446,7 +446,7 @@
                     questionText = `If a person is <strong>${feet} feet and ${inches} inches</strong> tall, what is this in metres (Assuming <strong>1 inch = 2.5 cm</strong>)?`;
                     correctAnswer = formatNumber(meters, 2);
                     units = "m";
-                    explanation = `$${feet}~\\text{feet} = ${feet * 12}~\\text{inches}$. Total inches = $${feet * 12} + ${inches} = ${totalInches}~\\text{inches}$. Convert to cm: $${totalInches}~\\text{inches} \\times 2.5~\\text{cm/inch} = ${cm}~\\text{cm}$. Convert to m: $${cm}~\\text{cm} = ${correctAnswer}~\\text{m}$";
+                    explanation = `$${feet}~\\text{feet} = ${feet * 12}~\\text{inches}$. Total inches = $${feet * 12} + ${inches} = ${totalInches}~\\text{inches}$. Convert to cm: $${totalInches}~\\text{inches} \\times 2.5~\\text{cm/inch} = ${cm}~\\text{cm}$. Convert to m: $${cm}~\\text{cm} = ${correctAnswer}~\\text{m}$`;
                 } else { // weight
                     const stone = getRandomInt(8, 15);
                     const lbs = getRandomInt(0, 13); // 0 to 13 lbs
@@ -455,7 +455,7 @@
                     questionText = `If a patient is <strong>${stone} stone ${lbs} lbs</strong>, how much do they weigh in Kg (Assuming <strong>2 lbs = 1 Kg</strong>)?`;
                     correctAnswer = formatNumber(kg, 0); // Kg usually whole number for stone/lbs conversion
                     units = "kg";
-                    explanation = `$${stone}~\\text{stone} = ${stone * 14}~\\text{lbs}$. Total lbs = $${stone * 14} + ${lbs} = ${totalLbs}~\\text{lbs}$. Convert to Kg: $${totalLbs}~\\text{lbs} \\div 2~\\text{lbs/kg} = ${correctAnswer}~\\text{kg}$";
+                    explanation = `$${stone}~\\text{stone} = ${stone * 14}~\\text{lbs}$. Total lbs = $${stone * 14} + ${lbs} = ${totalLbs}~\\text{lbs}$. Convert to Kg: $${totalLbs}~\\text{lbs} \\div 2~\\text{lbs/kg} = ${correctAnswer}~\\text{kg}$`;
                 }
                 return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
             },
@@ -486,6 +486,7 @@
                 let info_string = "";
                 // Filter out undefined and ensure correct is always included
                 let unique_info_sqrts_filtered = info_sqrts.filter(item => item.sqrt === bsa_val);
+                // Ensure we have at least 4 unique items for info_string
                 while (unique_info_sqrts_filtered.length < 4) {
                     const randomItem = info_sqrts[getRandomInt(0, info_sqrts.length - 1)];
                     // Ensure the random item is not already in the filtered list
@@ -535,7 +536,7 @@
                     correctAnswer = formatNumber((tempC * 9 / 5) + 32, 0);
                     questionText = `What is <strong>${tempC} &deg;C</strong> in <strong>&deg;F</strong>?`;
                     units = "°F";
-                    explanation = `$F = \\frac{9}{5}C + 32$. $F = \\frac{9}{5}(${tempC}) + 32 = ${formatNumber(tempC * 9 / 5, 0)} + 32 = ${correctAnswer}~\\text{&deg;F}$";
+                    explanation = `$F = \\frac{9}{5}C + 32$. $F = \\frac{9}{5}(${tempC}) + 32 = ${formatNumber(tempC * 9 / 5, 0)} + 32 = ${correctAnswer}~\\text{&deg;F}$`;
                 } else { // F_to_C
                     const tempF = getRandomInt(32, 104); // 32-104 F (multiples of 9 for clean C)
                     if ((tempF - 32) % 9 !== 0) { // Ensure (F-32) is a multiple of 9
