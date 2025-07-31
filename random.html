@@ -140,7 +140,7 @@
                 'kg': 1000000, 'g': 1000, 'mg': 1, 'mcg': 0.001, 'ng': 0.000001
             },
             'volume': {
-                'l': 1000, 'ml': 1, 'mcL': 0.001, 'nl': 0.000001 // mcL for microlitres (volume)
+                'l': 1000, 'ml': 1, 'mcL': 0.001, 'nl': 0.000001
             },
             'length': {
                 'km': 100000, 'm': 100, 'cm': 1, 'mm': 0.1, 'nm': 0.0000001
@@ -158,27 +158,20 @@
             return (Math.floor(Math.random() * (max * factor - min * factor + 1)) + min * factor) / factor;
         }
 
-        // Helper to format numbers for display (keeps necessary precision, removes trailing zeros)
-        // E.g., formatNumberForDisplay(15, 1) -> "15" (if it's a whole number)
-        // E.g., formatNumberForDisplay(15.312, 1) -> "15.3"
-        // E.g., formatNumberForDisplay(0.091, 3) -> "0.091"
-        // E.g., formatNumberForDisplay(1.230, 3) -> "1.23"
+        // Helper to format numbers for display (keeps necessary precision, removes unnecessary trailing zeros)
         function formatNumberForDisplay(num, maxDecimalPlaces = 3) {
-            if (num === null || !isFinite(num)) return ''; // Handle non-finite numbers
-            const fixed = num.toFixed(maxDecimalPlaces);
-            // Convert to float then back to string to remove unnecessary trailing zeros (e.g., "15.0" -> "15", "1.230" -> "1.23")
-            // But keep the decimal if it's significant (e.g., "0.091")
-            let result = parseFloat(fixed).toString();
-            // If the original number had a decimal and the fixed version still has one, ensure it's not truncated too aggressively
-            if (num % 1 !== 0 && fixed.includes('.') && !result.includes('.')) {
-                // This means parseFloat removed a necessary .0, so re-add if it was explicitly .0
-                if (num.toFixed(1) === fixed) { // If original fixed to 1 decimal is the same as the fixed version
-                     result = num.toFixed(1);
-                } else {
-                    result = fixed; // Fallback to fixed if complex
-                }
-            }
-            return result;
+            if (num === null || !isFinite(num)) return '';
+            let formatted = num.toFixed(maxDecimalPlaces);
+            return parseFloat(formatted).toString();
+        }
+
+        // Helper to check if a number is "clean" (whole or limited decimals)
+        function isNumberClean(num, maxAllowedDecimals) {
+            if (num === null || !isFinite(num)) return false;
+            if (num % 1 === 0) return true; // It's a whole number
+
+            const roundedNum = parseFloat(num.toFixed(maxAllowedDecimals));
+            return Math.abs(num - roundedNum) < 1e-9; // Use a small tolerance for floating point comparison
         }
 
 
@@ -208,112 +201,94 @@
             'unit_conversion': function() {
                 let questionData = null;
                 let attempts = 0;
-                const MAX_ATTEMPTS = 100; // Prevent infinite loops if generation is too strict
+                const MAX_ATTEMPTS = 300;
 
-                // Define sensible conversion rules.
-                // Each rule specifies:
-                // - from: The starting unit in the question
-                // - to: The target unit for the answer
-                // - type: The unit category (mass, volume, length)
-                // - generateAnswer: A function to produce a numerical answer that is "sensible" (e.g., whole, 1-3 decimals)
-                // - answerDisplayDecimals: The maximum decimal places to show for the answer.
-                const conversionRules = [
-                    // Mass conversions
-                    { from: 'kg', to: 'g', type: 'mass', generateAnswer: () => getRandomInt(50, 20000), answerDisplayDecimals: 0 },
-                    { from: 'g', to: 'kg', type: 'mass', generateAnswer: () => getRandomDecimal(0.05, 100.0, 1), answerDisplayDecimals: 1 },
-                    { from: 'g', to: 'mg', type: 'mass', generateAnswer: () => getRandomInt(5, 10000), answerDisplayDecimals: 0 },
-                    { from: 'mg', to: 'g', type: 'mass', generateAnswer: () => getRandomDecimal(0.05, 1000.0, 1), answerDisplayDecimals: 1 },
-                    { from: 'mg', to: 'mcg', type: 'mass', generateAnswer: () => getRandomInt(50, 50000), answerDisplayDecimals: 0 },
-                    { from: 'mcg', to: 'mg', type: 'mass', generateAnswer: () => getRandomDecimal(0.05, 50.0, 1), answerDisplayDecimals: 1 },
-                    // Special cases for g <-> mcg to allow 0.0XX g in question/answer if needed, but keep it sensible
-                    { from: 'g', to: 'mcg', type: 'mass', generateAnswer: () => getRandomInt(500, 200000), answerDisplayDecimals: 0 }, // Answer is whole mcg. Question will be 0.0X g
-                    { from: 'mcg', to: 'g', type: 'mass', generateAnswer: () => getRandomDecimal(0.0005, 0.5, 3), answerDisplayDecimals: 3 }, // Answer is 0.0XX g. Question will be whole mcg.
+                const unitTypes = ['mass', 'volume', 'length'];
 
-                    // Volume conversions
-                    { from: 'l', to: 'ml', type: 'volume', generateAnswer: () => getRandomInt(10, 10000), answerDisplayDecimals: 0 },
-                    { from: 'ml', to: 'l', type: 'volume', generateAnswer: () => getRandomDecimal(0.1, 10.0, 1), answerDisplayDecimals: 1 },
-                    { from: 'ml', to: 'mcL', type: 'volume', generateAnswer: () => getRandomInt(100, 10000), answerDisplayDecimals: 0 },
-                    { from: 'mcL', to: 'ml', type: 'volume', generateAnswer: () => getRandomDecimal(0.1, 10.0, 1), answerDisplayDecimals: 1 },
+                // Define preferred max decimal places for *any number* appearing in a specific unit,
+                // whether it's in the question or the answer.
+                const unitDecimalCleanliness = {
+                    'kg': 2, 'g': 3, 'mg': 0, 'mcg': 0, 'ng': 0,
+                    'l': 2, 'ml': 0, 'mcL': 0, 'nl': 0,
+                    'km': 2, 'm': 0, 'cm': 0, 'mm': 0, 'nm': 0
+                };
 
-                    // Length conversions
-                    { from: 'km', to: 'm', type: 'length', generateAnswer: () => getRandomInt(100, 5000), answerDisplayDecimals: 0 },
-                    { from: 'm', to: 'km', type: 'length', generateAnswer: () => getRandomDecimal(0.1, 5.0, 1), answerDisplayDecimals: 1 },
-                    { from: 'm', to: 'cm', type: 'length', generateAnswer: () => getRandomInt(10, 2000), answerDisplayDecimals: 0 },
-                    { from: 'cm', to: 'm', type: 'length', generateAnswer: () => getRandomDecimal(0.1, 20.0, 1), answerDisplayDecimals: 1 },
-                    { from: 'cm', to: 'mm', type: 'length', generateAnswer: () => getRandomInt(10, 100), answerDisplayDecimals: 0 },
-                    { from: 'mm', to: 'cm', type: 'length', generateAnswer: () => getRandomDecimal(0.1, 10.0, 1), answerDisplayDecimals: 1 }
-                ];
+                // Define sensible ranges for *answers* for each unit.
+                // These ranges are for the final "clean" answer value.
+                const answerRanges = {
+                    'mass': {
+                        'kg': { min: 0.01, max: 100 }, 'g': { min: 0.1, max: 10000 }, 'mg': { min: 1, max: 50000 }, 'mcg': { min: 10, max: 100000 }
+                    },
+                    'volume': {
+                        'l': { min: 0.01, max: 50 }, 'ml': { min: 0.1, max: 10000 }, 'mcL': { min: 1, max: 50000 }
+                    },
+                    'length': {
+                        'km': { min: 0.01, max: 10 }, 'm': { min: 0.1, max: 5000 }, 'cm': { min: 1, max: 1000 }, 'mm': { min: 1, max: 500 }
+                    }
+                };
 
                 while (questionData === null && attempts < MAX_ATTEMPTS) {
                     attempts++;
-                    const rule = conversionRules[getRandomInt(0, conversionRules.length - 1)];
+                    const selectedType = unitTypes[getRandomInt(0, unitTypes.length - 1)];
+                    const units = Object.keys(unitConversions[selectedType]);
 
-                    const fromUnit = rule.from;
-                    const toUnit = rule.to;
-                    const selectedType = rule.type;
-                    const answerDisplayDecimals = rule.answerDisplayDecimals;
+                    let fromUnit, toUnit;
+                    do {
+                        fromUnit = units[getRandomInt(0, units.length - 1)];
+                        toUnit = units[getRandomInt(0, units.length - 1)];
+                    } while (fromUnit === toUnit);
 
-                    // 1. Generate a clean numerical answer based on the rule's desired precision for the answer
-                    const correctAnswerNumerical = rule.generateAnswer();
+                    const ansMaxDecimals = unitDecimalCleanliness[toUnit]; // Max decimals for the answer
+                    const qMaxDecimals = unitDecimalCleanliness[fromUnit]; // Max decimals for the question value
 
-                    // 2. Calculate the question's base value by reverse converting the correct answer
+                    const currentAnswerRange = answerRanges[selectedType][toUnit];
+                    if (!currentAnswerRange) continue;
+
+                    // 1. Generate a random *answer* value, rounded to its preferred cleanliness
+                    let correctAnswerNumerical;
+                    if (ansMaxDecimals === 0) {
+                        correctAnswerNumerical = getRandomInt(currentAnswerRange.min, currentAnswerRange.max);
+                    } else {
+                        // Generate a random integer and divide by a power of 10 to get desired decimal places
+                        const factor = Math.pow(10, ansMaxDecimals);
+                        correctAnswerNumerical = getRandomInt(currentAnswerRange.min * factor, currentAnswerRange.max * factor) / factor;
+                    }
+
+                    // Ensure the generated answer is truly clean at its max decimal places
+                    if (!isNumberClean(correctAnswerNumerical, ansMaxDecimals)) {
+                        continue;
+                    }
+
+                    // 2. Reverse-calculate the question's numerical value
                     const baseValueNumerical = convertValue(correctAnswerNumerical, toUnit, fromUnit, selectedType);
 
-                    // 3. Check if the baseValueNumerical is "sensible" for the question
-                    // Sensible means: not null, not too many decimal places (max 3 for question display), not extremely large/small
-                    let isBaseValueSensible = true;
-                    if (baseValueNumerical === null || !isFinite(baseValueNumerical)) { // Added !isFinite check
-                        isBaseValueSensible = false;
-                    } else if (baseValueNumerical % 1 !== 0) { // It's a decimal
-                        const decimalString = baseValueNumerical.toFixed(5).split('.')[1] || ''; // Check up to 5 fixed decimal places
-                        if (decimalString.length > 3 && parseFloat(decimalString.substring(3)) !== 0) { // More than 3 significant decimal places
-                            isBaseValueSensible = false;
-                        }
-                    }
-                    // Add checks for extremely large/small values if needed, e.g., Math.abs(baseValueNumerical) > 1e6 || Math.abs(baseValueNumerical) < 1e-6
+                    // 3. Validate that the question's numerical value is also "clean" and sensible
+                    if (baseValueNumerical !== null && isFinite(baseValueNumerical) &&
+                        isNumberClean(baseValueNumerical, qMaxDecimals) && // Validate against question's preferred decimals
+                        baseValueNumerical > 0.00001 && baseValueNumerical < 1000000000) { // Avoid extremely small/large numbers
+                        // Ensure the question value is not just 0 or extremely close to 0 after rounding
+                        if (parseFloat(baseValueNumerical.toFixed(qMaxDecimals)) === 0 && baseValueNumerical !== 0) continue;
 
-                    if (isBaseValueSensible) {
-                        const formattedBaseValueDisplay = formatNumberForDisplay(baseValueNumerical, 3); // Max 3 decimals for question display
-                        const formattedCorrectAnswerDisplay = formatNumberForDisplay(correctAnswerNumerical, answerDisplayDecimals); // Use rule's specific decimal places for answer display
-
-                        // The explanation string is no longer needed for display, but we keep it here for completeness
-                        // if we were to re-enable explanations in the future.
-                        const conversionFactor = unitConversions[selectedType][fromUnit] / unitConversions[selectedType][toUnit];
-                        let operationText;
-                        let factorForExplanation;
-
-                        if (conversionFactor >= 1) {
-                            operationText = 'multiply';
-                            factorForExplanation = formatNumberForDisplay(conversionFactor, 0);
-                        } else {
-                            operationText = 'divide';
-                            factorForExplanation = formatNumberForDisplay(1 / conversionFactor, 0);
-                        }
-
-                        const explanationText = `To convert ${formattedBaseValueDisplay} ${fromUnit} to ${toUnit}, you ${operationText} by ${factorForExplanation}.`;
-                        const mathJaxCalculation = `$${formattedBaseValueDisplay}~\\text{${fromUnit}} ${operationText === 'multiply' ? '\\times' : '\\div'} ${factorForExplanation} = ${formattedCorrectAnswerDisplay}~\\text{${toUnit}}$`;
-
+                        const formattedBaseValueDisplay = formatNumberForDisplay(baseValueNumerical, qMaxDecimals);
 
                         questionData = {
                             question: `What is <strong>${formattedBaseValueDisplay} ${fromUnit}</strong> expressed in ${toUnit}?`,
-                            correctAnswer: correctAnswerNumerical, // Store numerical value for comparison
+                            correctAnswer: correctAnswerNumerical, // Store the precise, clean numerical value
                             units: toUnit,
-                            // Explanation is no longer used for display
-                            explanation: `${explanationText} ${mathJaxCalculation}`,
-                            internalAnswerUnit: toUnit, // For feedback formatting in checkAnswer
-                            answerDisplayDecimals: answerDisplayDecimals // For feedback formatting in checkAnswer
+                            explanation: "", // No longer used for display
+                            internalAnswerUnit: toUnit,
+                            answerDisplayDecimals: ansMaxDecimals // For formatting the correct answer in feedback
                         };
                     }
                 }
 
                 if (questionData === null) {
-                    // Fallback if unable to generate a sensible question after many attempts
                     console.warn("Failed to generate a sensible unit conversion question after multiple attempts.");
                     return {
                         question: "Could not generate a sensible unit conversion question. Please try again.",
                         correctAnswer: 0,
                         units: "",
-                        explanation: "", // No explanation
+                        explanation: "",
                         internalAnswerUnit: "",
                         answerDisplayDecimals: 0
                     };
@@ -325,156 +300,102 @@
             'concentration_conversion': function() {
                 let questionData = null;
                 let attempts = 0;
-                const MAX_ATTEMPTS = 100;
+                const MAX_ATTEMPTS = 200;
 
-                // Expanded and refined common ratio values for more variation, including simple decimals
-                const sensibleXValues = [10, 20, 25, 40, 50, 80, 100, 125, 200, 250, 400, 500, 1000, 2.5, 5, 12.5, 16, 62.5];
-                const sensibleMgmlValuesFor1InX = [2, 4, 5, 8, 10, 12.5, 16, 20, 25, 40, 50, 80, 100, 125, 200, 250, 400, 500];
+                const unitDecimalCleanliness = {
+                    '%w/v': 1, // %w/v usually 1 decimal
+                    'mg/mL': 1, // mg/mL usually 1 decimal
+                    '1 in X': 1 // X value can be 1 decimal (e.g., 1 in 12.5)
+                };
 
                 const concentrationRules = [
                     // %w/v to mg/mL (multiply by 10)
                     {
                         type: '%w/v_to_mg/ml',
-                        generateQuestionAndAnswer: () => {
-                            let qVal, aVal;
-                            let attemptsInner = 0;
-                            while (attemptsInner < 50) {
-                                qVal = getRandomDecimal(0.1, 79.9, 1);
-                                aVal = qVal * 10;
-                                if ((aVal % 1 === 0 || (aVal * 10) % 1 === 0)) { // Ensure answer is clean
-                                    return { questionValue: qVal, correctAnswer: aVal };
-                                }
-                                attemptsInner++;
-                            }
-                            return null;
-                        },
                         questionUnitDisplay: '%w/v',
                         answerUnitDisplay: 'mg/mL',
                         internalAnswerUnit: 'mg/mL',
-                        // Explanation is no longer used for display
-                        explanation: (qVal, aVal) => {
-                            const formattedQVal = formatNumberForDisplay(qVal, 1);
-                            const formattedAVal = formatNumberForDisplay(aVal, 1);
-                            return `<strong>${formattedQVal}% w/v</strong> means ${formattedQVal} grams in 100 ml. To convert grams to milligrams, you multiply by 1000. So, $${formattedQVal}~\\text{g} \\times 1000 = ${formatNumberForDisplay(qVal * 1000, 0)}~\\text{mg}$ in 100 ml. To find milligrams per 1 ml, you divide by 100. Therefore, $${formatNumberForDisplay(qVal * 1000, 0)}~\\text{mg} \\div 100~\\text{ml} = ${formattedAVal}~\\text{mg/ml}$.`;
-                        },
-                        answerDisplayDecimals: 1
+                        answerRange: { min: 1, max: 800 }, // Answer (mg/mL) range
+                        generate: (ansDec, qDec) => {
+                            let aVal;
+                            if (ansDec === 0) aVal = getRandomInt(this.answerRange.min, this.answerRange.max);
+                            else aVal = getRandomDecimal(this.answerRange.min, this.answerRange.max, ansDec);
+
+                            const qVal = aVal / 10;
+                            return { questionValue: qVal, correctAnswer: aVal };
+                        }
                     },
                     // mg/mL to %w/v (divide by 10)
                     {
                         type: 'mg/ml_to_%w/v',
-                        generateQuestionAndAnswer: () => {
-                            let qVal, aVal;
-                            let attemptsInner = 0;
-                            while (attemptsInner < 50) {
-                                aVal = getRandomDecimal(0.1, 20.0, 1); // Target %w/v answer
-                                qVal = aVal * 10; // Calculate mg/mL question value
-                                if ((qVal % 1 === 0 || (qVal * 10) % 1 === 0)) { // Ensure question value is clean
-                                    return { questionValue: qVal, correctAnswer: aVal };
-                                }
-                                attemptsInner++;
-                            }
-                            return null;
-                        },
                         questionUnitDisplay: 'mg/mL',
                         answerUnitDisplay: '%w/v',
                         internalAnswerUnit: '%w/v',
-                        // Explanation is no longer used for display
-                        explanation: (qVal, aVal) => {
-                            const formattedQVal = formatNumberForDisplay(qVal, 1);
-                            const formattedAVal = formatNumberForDisplay(aVal, 1);
-                            return `<strong>${formattedQVal} mg/mL</strong> means ${formattedQVal} milligrams in 1 ml. To find grams per 1 ml, you divide by 1000. So, $${formattedQVal}~\\text{mg} \\div 1000 = ${formatNumberForDisplay(qVal / 1000, 3)}~\\text{g}$ in 1 ml. To find grams per 100 ml (which is %w/v), you multiply by 100. Therefore, $${formatNumberForDisplay(qVal / 1000, 3)}~\\text{g} \\times 100 = ${formattedAVal}~\\text{g}$ in 100 ml, which is ${formattedAVal}% w/v.`;
-                        },
-                        answerDisplayDecimals: 1
+                        answerRange: { min: 0.1, max: 20.0 }, // Answer (%w/v) range
+                        generate: (ansDec, qDec) => {
+                            let aVal;
+                            if (ansDec === 0) aVal = getRandomInt(this.answerRange.min, this.answerRange.max);
+                            else aVal = getRandomDecimal(this.answerRange.min, this.answerRange.max, ansDec);
+
+                            const qVal = aVal * 10;
+                            return { questionValue: qVal, correctAnswer: aVal };
+                        }
                     },
                     // 1 in X to mg/mL (1000 / X)
                     {
                         type: '1_in_X_to_mg/ml',
-                        generateQuestionAndAnswer: () => {
-                            const sensibleXValues = [10, 20, 25, 40, 50, 80, 100, 125, 200, 250, 400, 500, 1000, 2.5, 5, 12.5, 16, 62.5];
-                            let qVal = sensibleXValues[getRandomInt(0, sensibleXValues.length - 1)];
-                            let aVal = 1000 / qVal;
-                            // Ensure answer is clean (whole or 1 decimal)
-                            if ((aVal % 1 === 0 || (aVal * 10) % 1 === 0)) {
-                                return { questionValue: qVal, correctAnswer: aVal };
-                            }
-                            return null;
-                        },
                         questionUnitDisplay: '1 in X',
                         answerUnitDisplay: 'mg/mL',
                         internalAnswerUnit: 'mg/mL',
-                        // Explanation is no longer used for display
-                        explanation: (qVal, aVal) => {
-                            const formattedQVal = formatNumberForDisplay(qVal, (qVal % 1 === 0) ? 0 : 1);
-                            const formattedAVal = formatNumberForDisplay(aVal, (aVal % 1 === 0) ? 0 : 1);
-                            return `To convert <strong>1 in ${formattedQVal}</strong> to mg/mL: '1 in ${formattedQVal}' means 1 gram in ${formattedQVal} ml. Since 1 gram is 1000 mg, this means 1000 mg in ${formattedQVal} ml. To find milligrams per 1 ml, we divide the total milligrams by the total volume: $1000~\\text{mg} \\div ${formattedQVal}~\\text{ml} = ${formattedAVal}~\\text{mg/ml}$.`;
-                        },
-                        answerDisplayDecimals: 1
+                        answerRange: { min: 1, max: 1000 }, // Answer (mg/mL) range
+                        generate: (ansDec, qDec) => {
+                            let aVal;
+                            if (ansDec === 0) aVal = getRandomInt(this.answerRange.min, this.answerRange.max);
+                            else aVal = getRandomDecimal(this.answerRange.min, this.answerRange.max, ansDec);
+
+                            const qVal = 1000 / aVal;
+                            return { questionValue: qVal, correctAnswer: aVal };
+                        }
                     },
                     // mg/mL to 1 in X (1000 / mg/mL)
                     {
                         type: 'mg/ml_to_1_in_X',
-                        generateQuestionAndAnswer: () => {
-                            const sensibleMgmlValuesFor1InX = [2, 4, 5, 8, 10, 12.5, 16, 20, 25, 40, 50, 80, 100, 125, 200, 250, 400, 500];
-                            let qVal = sensibleMgmlValuesFor1InX[getRandomInt(0, sensibleMgmlValuesFor1InX.length - 1)];
-                            let aVal = 1000 / qVal;
-                            // Ensure answer is clean (whole or 1 decimal)
-                            if ((aVal % 1 === 0 || (aVal * 10) % 1 === 0)) {
-                                return { questionValue: qVal, correctAnswer: aVal };
-                            }
-                            return null;
-                        },
                         questionUnitDisplay: 'mg/mL',
                         answerUnitDisplay: '', // No unit in input box
                         internalAnswerUnit: 'ratio_X',
-                        // Explanation is no longer used for display
-                        explanation: (qVal, aVal) => {
-                            const formattedQVal = formatNumberForDisplay(qVal, (qVal % 1 === 0) ? 0 : 1);
-                            const formattedAVal = formatNumberForDisplay(aVal, (aVal % 1 === 0) ? 0 : 1);
-                            return `To convert <strong>${formattedQVal} mg/mL</strong> to 1 in X: '${formattedQVal} mg/mL' means ${formattedQVal} milligrams in 1 ml. To express this as '1 in X', we need to know how many ml contain 1 gram (which is 1000 mg). We divide the desired total milligrams (1000 mg) by the concentration (${formattedQVal} mg/mL) to find the volume: $1000~\\text{mg} \\div ${formattedQVal}~\\text{mg/ml} = ${formattedAVal}~\\text{ml}$. Therefore, the concentration is 1 in ${formattedAVal}.`;
-                        },
-                        answerDisplayDecimals: 1
+                        answerRange: { min: 1, max: 1000 }, // Answer (X value) range
+                        generate: (ansDec, qDec) => {
+                            let aVal;
+                            if (ansDec === 0) aVal = getRandomInt(this.answerRange.min, this.answerRange.max);
+                            else aVal = getRandomDecimal(this.answerRange.min, this.answerRange.max, ansDec);
+
+                            const qVal = 1000 / aVal;
+                            return { questionValue: qVal, correctAnswer: aVal };
+                        }
                     },
-                    // NEW RULE: Dose & Volume to Concentration (mg/mL) - This was the new one moved here
+                    // Dose & Volume to Concentration (mg/mL)
                     {
                         type: 'dose_volume_to_concentration',
-                        generateQuestionAndAnswer: () => {
-                            // Target clean concentrations (answer)
-                            const targetConcentrations = [0.1, 0.2, 0.25, 0.5, 1, 2, 2.5, 4, 5, 8, 10, 12.5, 15, 20];
-                            // Sensible volumes for the question
-                            const sensibleVolumes = [10, 20, 25, 50, 100, 125, 150, 200, 250, 300, 400, 500];
-                            let concentration, volume, dose;
-                            let attemptsInner = 0;
-                            const MAX_ATTEMPTS_INNER = 50;
-
-                            while (attemptsInner < 50) {
-                                concentration = targetConcentrations[getRandomInt(0, targetConcentrations.length - 1)];
-                                volume = sensibleVolumes[getRandomInt(0, sensibleVolumes.length - 1)];
-                                dose = concentration * volume;
-
-                                // Check if dose is a whole number or has max 1 decimal place, and is within a reasonable range
-                                // Dose should not be excessively large (e.g., max 10,000 mg)
-                                if ((dose % 1 === 0 || (dose * 10) % 1 === 0) && dose >= 10 && dose <= 10000) {
-                                    return {
-                                        questionDose: dose,
-                                        questionVolume: volume,
-                                        correctAnswer: concentration
-                                    };
-                                }
-                                attemptsInner++;
-                            }
-                            return null; // Indicate failure to generate sensible values
-                        },
-                        questionUnitDisplay: '', // Not applicable for this question type directly
+                        questionUnitDisplay: '', // Not applicable directly
                         answerUnitDisplay: 'mg/mL',
                         internalAnswerUnit: 'mg/mL',
-                        // Explanation is no longer used for display
-                        explanation: (questionDose, questionVolume, correctAnswer) => {
-                            const formattedDose = formatNumberForDisplay(questionDose, (questionDose % 1 === 0) ? 0 : 1);
-                            const formattedVolume = formatNumberForDisplay(questionVolume, 0);
-                            const formattedAnswer = formatNumberForDisplay(correctAnswer, (correctAnswer % 1 === 0) ? 0 : 1);
-                            return `To find the concentration, you divide the total dose by the total volume. For example, $${formattedDose}~\\text{mg} \\div ${formattedVolume}~\\text{ml} = ${formattedAnswer}~\\text{mg/ml}$.`;
-                        },
-                        answerDisplayDecimals: 1
+                        answerRange: { min: 0.1, max: 20.0 }, // Concentration answer range
+                        doseRange: { min: 10, max: 10000 },
+                        volumeRange: { min: 10, max: 500 },
+                        generate: (ansDec, qDec) => { // qDec here for dose/volume display decimals
+                            let concentration;
+                            if (ansDec === 0) concentration = getRandomInt(this.answerRange.min, this.answerRange.max);
+                            else concentration = getRandomDecimal(this.answerRange.min, this.answerRange.max, ansDec);
+
+                            const volume = getRandomInt(this.volumeRange.min, this.volumeRange.max);
+                            const dose = concentration * volume;
+
+                            if (isNumberClean(dose, qDec) && isNumberClean(volume, qDec) &&
+                                dose >= this.doseRange.min && dose <= this.doseRange.max) {
+                                return { questionDose: dose, questionVolume: volume, correctAnswer: concentration };
+                            }
+                            return null;
+                        }
                     }
                 ];
 
@@ -482,87 +403,53 @@
                     attempts++;
                     const rule = concentrationRules[getRandomInt(0, concentrationRules.length - 1)];
 
-                    const generatedValues = rule.generateQuestionAndAnswer();
+                    // Determine decimal places for this specific question/answer pair
+                    const answerDecimalPlaces = unitDecimalCleanliness[rule.answerUnitDisplay || rule.internalAnswerUnit];
+                    const questionDisplayDecimals = unitDecimalCleanliness[rule.questionUnitDisplay || 'mg/mL']; // Default for dose/volume Q
+
+                    const generatedValues = rule.generate.call(rule, answerDecimalPlaces, questionDisplayDecimals);
 
                     if (generatedValues === null) {
-                        continue; // Failed to generate sensible values for this rule, try another
+                        continue;
                     }
 
-                    let questionValueNumerical, correctAnswerNumerical;
-                    let questionDose, questionVolume; // For the new type
-
-                    // Extract values based on rule type
-                    if (rule.type === 'dose_volume_to_concentration') {
-                        questionDose = generatedValues.questionDose;
-                        questionVolume = generatedValues.questionVolume;
-                        correctAnswerNumerical = generatedValues.correctAnswer;
-                    } else {
-                        questionValueNumerical = generatedValues.questionValue;
-                        correctAnswerNumerical = generatedValues.correctAnswer;
-                    }
-
-                    // Perform general sensibility checks on the answer
+                    let correctAnswerNumerical = generatedValues.correctAnswer;
                     let isSensible = true;
-                    if (correctAnswerNumerical === null || !isFinite(correctAnswerNumerical)) { // Added !isFinite check
+
+                    // Validate cleanliness of generated answer
+                    if (!isNumberClean(correctAnswerNumerical, answerDecimalPlaces)) {
                         isSensible = false;
-                    } else if (correctAnswerNumerical % 1 !== 0) { // If answer is a decimal
-                        const decimalString = correctAnswerNumerical.toFixed(5).split('.')[1] || '';
-                        if (decimalString.length > rule.answerDisplayDecimals && parseFloat(decimalString.substring(rule.answerDisplayDecimals)) !== 0) {
-                            isSensible = false;
-                        }
                     }
 
-                    // Specific checks for question values if applicable (only for non 'dose_volume_to_concentration' type)
-                    if (isSensible && rule.type !== 'dose_volume_to_concentration') {
-                        if (questionValueNumerical === null || !isFinite(questionValueNumerical)) { // Added !isFinite check
-                            isSensible = false;
-                        } else if (questionValueNumerical % 1 !== 0) {
-                            const decimalString = questionValueNumerical.toFixed(5).split('.')[1] || '';
-                            if (decimalString.length > 3 && parseFloat(decimalString.substring(3)) !== 0) {
+                    // Validate cleanliness of question values
+                    if (isSensible) {
+                        if (rule.type === 'dose_volume_to_concentration') {
+                            if (!isNumberClean(generatedValues.questionDose, questionDisplayDecimals) ||
+                                !isNumberClean(generatedValues.questionVolume, questionDisplayDecimals)) {
                                 isSensible = false;
                             }
-                        }
-                        // Specific check for %w/v to ensure it's < 80
-                        if (rule.questionUnitDisplay === '%w/v' && questionValueNumerical >= 80) {
-                            isSensible = false;
+                        } else {
+                            if (!isNumberClean(generatedValues.questionValue, questionDisplayDecimals)) {
+                                isSensible = false;
+                            }
                         }
                     }
 
                     if (isSensible) {
-                        let formattedQuestionValue, formattedQuestionDose, formattedQuestionVolume;
-                        if (rule.type === 'dose_volume_to_concentration') {
-                            formattedQuestionDose = formatNumberForDisplay(questionDose, (questionDose % 1 === 0) ? 0 : 1);
-                            formattedQuestionVolume = formatNumberForDisplay(questionVolume, 0);
-                        } else {
-                            formattedQuestionValue = formatNumberForDisplay(questionValueNumerical, 3);
-                        }
-                        const formattedCorrectAnswer = formatNumberForDisplay(correctAnswerNumerical, rule.answerDisplayDecimals);
-
-                        let explanationText; // This will still be generated but not displayed
-                        let mathJaxCalculation; // This will still be generated but not displayed
                         let questionText;
-
-                        // Construct question text and explanation based on type
-                        if (rule.type === '%w/v_to_mg/ml') {
-                            questionText = `What is <strong>${formattedQuestionValue} ${rule.questionUnitDisplay}</strong> expressed as ${rule.answerUnitDisplay}?`;
-                            explanationText = rule.explanation(questionValueNumerical, correctAnswerNumerical);
-                            mathJaxCalculation = `$\\frac{${formattedQuestionValue}~\\text{g}}{100~\\text{ml}} \\times \\frac{1000~\\text{mg}}{1~\\text{g}} = \\frac{${formatNumberForDisplay(questionValueNumerical * 1000, 0)}~\\text{mg}}{100~\\text{ml}} = ${formattedCorrectAnswer}~\\text{mg/ml}$`;
-                        } else if (rule.type === 'mg/ml_to_%w/v') {
-                            questionText = `What is <strong>${formattedQuestionValue} mg/mL</strong> expressed as ${rule.answerUnitDisplay}?`;
-                            explanationText = rule.explanation(questionValueNumerical, correctAnswerNumerical);
-                            mathJaxCalculation = `$\\frac{${formattedQuestionValue}~\\text{mg}}{1~\\text{ml}} \\div \\frac{1000~\\text{mg}}{1~\\text{g}} \\times 100~\\text{ml} = ${formattedCorrectAnswer}\\%~\\text{w/v}$`;
-                        } else if (rule.type === '1_in_X_to_mg/ml') {
-                            questionText = `What is <strong>1 in ${formattedQuestionValue}</strong> expressed as ${rule.answerUnitDisplay}?`;
-                            explanationText = rule.explanation(questionValueNumerical, correctAnswerNumerical);
-                            mathJaxCalculation = `$\\frac{1~\\text{g}}{${formattedQuestionValue}~\\text{ml}} \\times \\frac{1000~\\text{mg}}{1~\\text{g}} = ${formattedCorrectAnswer}~\\text{mg/ml}$`;
-                        } else if (rule.type === 'mg/ml_to_1_in_X') {
-                            questionText = `What is <strong>${formattedQuestionValue} mg/mL</strong> expressed as 1 in X? Enter the value of X.`;
-                            explanationText = rule.explanation(questionValueNumerical, correctAnswerNumerical);
-                            mathJaxCalculation = `$\\frac{1000~\\text{mg}}{${formattedQuestionValue}~\\text{mg/ml}} = ${formattedCorrectAnswer}$`;
-                        } else if (rule.type === 'dose_volume_to_concentration') {
-                            questionText = `If <strong>${formattedQuestionDose} mg</strong> of a drug is dissolved in <strong>${formattedQuestionVolume} ml</strong> of solution, what is the concentration in <strong>mg/mL</strong>?`;
-                            explanationText = rule.explanation(questionDose, questionVolume, correctAnswerNumerical);
-                            mathJaxCalculation = `$\\frac{${formattedQuestionDose}~\\text{mg}}{${formattedQuestionVolume}~\\text{ml}} = ${formattedCorrectAnswer}~\\text{mg/ml}$`;
+                        if (rule.type === 'dose_volume_to_concentration') {
+                            const formattedDose = formatNumberForDisplay(generatedValues.questionDose, questionDisplayDecimals);
+                            const formattedVolume = formatNumberForDisplay(generatedValues.questionVolume, questionDisplayDecimals);
+                            questionText = `If <strong>${formattedDose} mg</strong> of a drug is dissolved in <strong>${formattedVolume} ml</strong> of solution, what is the concentration in <strong>mg/mL</strong>?`;
+                        } else {
+                            const formattedQuestionValue = formatNumberForDisplay(generatedValues.questionValue, questionDisplayDecimals);
+                            if (rule.questionUnitDisplay === '1 in X') {
+                                questionText = `What is <strong>1 in ${formattedQuestionValue}</strong> expressed as ${rule.answerUnitDisplay}?`;
+                            } else if (rule.questionUnitDisplay === 'mg/mL' && rule.internalAnswerUnit === 'ratio_X') {
+                                questionText = `What is <strong>${formattedQuestionValue} mg/mL</strong> expressed as 1 in X? Enter the value of X.`;
+                            } else {
+                                questionText = `What is <strong>${formattedQuestionValue} ${rule.questionUnitDisplay}</strong> expressed as ${rule.answerUnitDisplay}?`;
+                            }
                         }
 
                         questionData = {
@@ -570,8 +457,8 @@
                             correctAnswer: correctAnswerNumerical,
                             units: rule.answerUnitDisplay,
                             internalAnswerUnit: rule.internalAnswerUnit,
-                            answerDisplayDecimals: rule.answerDisplayDecimals,
-                            explanation: `${explanationText} ${mathJaxCalculation}` // Still generating, but not displayed
+                            answerDisplayDecimals: answerDecimalPlaces, // Use the randomly chosen answer decimals
+                            explanation: "" // No longer used for display
                         };
                     }
                 }
@@ -582,7 +469,7 @@
                         question: "Could not generate a sensible concentration conversion question. Please try again.",
                         correctAnswer: 0,
                         units: "",
-                        explanation: "", // No explanation
+                        explanation: "",
                         internalAnswerUnit: "",
                         answerDisplayDecimals: 0
                     };
@@ -593,234 +480,124 @@
             'dosage_volume': function() {
                 let questionData = null;
                 let attempts = 0;
-                const MAX_ATTEMPTS = 100;
+                const MAX_ATTEMPTS = 200;
+
+                const unitDecimalCleanliness = {
+                    'mg': 0, 'g': 2, // mg usually whole, g can have 2 decimals
+                    'ml': 0, // ml usually whole
+                    '%w/w': 1, '%w/v': 1 // Percentages usually 1 decimal
+                };
 
                 const dosageVolumeRules = [
                     // Calculate Dose: Concentration (mg/mL) x Volume (mL) = Dose (mg)
                     {
                         type: 'calculate_dose',
-                        generateQuestionAndAnswer: () => {
-                            let conc, vol, dose;
-                            let attemptsInner = 0;
-                            const MAX_ATTEMPTS_INNER = 50;
-                            while (attemptsInner < MAX_ATTEMPTS_INNER) {
-                                // Generate concentration in a sensible range (e.g., 1 to 100 mg/mL, favoring smaller values)
-                                conc = getRandomInt(1, 20) * (Math.random() < 0.5 ? 1 : 5); // e.g., 1, 5, 10, 25, 100
-                                if (conc === 0) continue; // Avoid division by zero if this were a divisor
+                        answerUnitDisplay: 'mg',
+                        internalAnswerUnit: 'mg',
+                        answerRange: { min: 1, max: 10000 }, // Dose (mg) range
+                        generate: (ansDec, qConcDec, qVolDec) => {
+                            let dose;
+                            if (ansDec === 0) dose = getRandomInt(this.answerRange.min, this.answerRange.max);
+                            else dose = getRandomDecimal(this.answerRange.min, this.answerRange.max, ansDec);
 
-                                // Generate volume in a sensible range (e.g., 1 to 200 mL, favoring smaller values)
-                                vol = getRandomInt(1, 50) * (Math.random() < 0.5 ? 1 : 5); // e.g., 1, 5, 10, 25, 50, 100, 200
-                                if (vol === 0) continue;
+                            const conc = getRandomDecimal(0.1, 100.0, qConcDec); // Generate a clean concentration
+                            if (conc === 0) return null;
+                            const vol = dose / conc; // Calculate volume
 
-                                dose = conc * vol;
-
-                                // Ensure dose is a whole number and within a reasonable range (e.g., 1 to 5000 mg)
-                                if (dose % 1 === 0 && dose >= 1 && dose <= 5000) {
-                                    return {
-                                        questionConcentration: conc,
-                                        questionVolume: vol,
-                                        correctAnswer: dose
-                                    };
-                                }
-                                attemptsInner++;
+                            if (isNumberClean(vol, qVolDec) && isNumberClean(conc, qConcDec) &&
+                                vol >= 1 && vol <= 500) { // Volume is clean and sensible
+                                return { questionConcentration: conc, questionVolume: vol, correctAnswer: dose };
                             }
                             return null;
-                        },
-                        answerUnitDisplay: 'mg',
-                        // Explanation is no longer used for display
-                        explanation: (conc, vol, answer) => {
-                            const formattedConc = formatNumberForDisplay(conc, (conc % 1 === 0) ? 0 : 1);
-                            const formattedVol = formatNumberForDisplay(vol, 0);
-                            const formattedAnswer = formatNumberForDisplay(answer, 0);
-                            return `To find the total dose, you multiply the concentration by the volume. For example, $${formattedConc}~\\text{mg/ml} \\times ${formattedVol}~\\text{ml} = ${formattedAnswer}~\\text{mg}$.`;
-                        },
-                        answerDisplayDecimals: 0
+                        }
                     },
                     // Calculate Volume: Dose (mg) / Concentration (mg/mL) = Volume (mL)
                     {
                         type: 'calculate_volume',
-                        generateQuestionAndAnswer: () => {
-                            let dose, conc, vol;
-                            let attemptsInner = 0;
-                            const MAX_ATTEMPTS_INNER = 50;
-                            while (attemptsInner < MAX_ATTEMPTS_INNER) {
-                                // Generate concentration that will result in a sensible volume (e.g., 1 to 50 mg/mL, favoring smaller values)
-                                conc = getRandomInt(1, 20) * (Math.random() < 0.5 ? 1 : 5); // e.g., 1, 5, 10, 25, 50
-                                if (conc === 0) continue;
-
-                                // Generate dose such that dose / conc is a sensible volume (e.g., 1 to 500 mL, whole or 1 decimal)
-                                // To ensure sensible volumes, generate volume first, then calculate dose
-                                vol = getRandomInt(1, 100) * (Math.random() < 0.5 ? 1 : 5); // e.g., 1, 5, 10, 25, 50, 100, 250, 500
-                                if (vol === 0) continue;
-
-                                dose = conc * vol;
-
-                                // Check if dose is reasonable (e.g., 10 to 10000 mg)
-                                if (dose >= 10 && dose <= 10000 && (vol % 1 === 0 || (vol * 10) % 1 === 0)) {
-                                    return {
-                                        questionDose: dose,
-                                        questionConcentration: conc,
-                                        correctAnswer: vol
-                                    };
-                                }
-                                attemptsInner++;
-                            }
-                            return null;
-                        },
-                        answerUnitDisplay: 'ml',
-                        // Explanation is no longer used for display
-                        explanation: (dose, conc, answer) => {
-                            const formattedDose = formatNumberForDisplay(dose, 0);
-                            const formattedConc = formatNumberForDisplay(conc, (conc % 1 === 0) ? 0 : 1);
-                            const formattedAnswer = formatNumberForDisplay(answer, (answer % 1 === 0) ? 0 : 1);
-                            return `To find the required volume, use the 'Need/Have $\\times$ Volume' approach:
-                            <ol>
-                                <li>You <strong>Need</strong>: $${formattedDose}~\\text{mg}$.</li>
-                                <li>You <strong>Have</strong>: $${formattedConc}~\\text{mg}$ in 1 ml of solution.</li>
-                                <li>Volume required: $\\frac{\\text{Need (in mg)}}{\\text{Have (in mg)}} \\times \\text{Volume of Have} = \\frac{${formattedDose}~\\text{mg}}{${formattedConc}~\\text{mg}} \\times 1~\\text{ml} = ${formattedAnswer}~\\text{ml}$.</li>
-                            </ol>`;
-                        },
-                        answerDisplayDecimals: 1 // Allow 1 decimal for volume like 2.5 ml
-                    },
-                    // NEW: Cream %w/w to Active Ingredient (g or mg)
-                    {
-                        type: 'calculate_w_w_ingredient',
-                        generateQuestionAndAnswer: () => {
-                            let percent_ww, total_g, active_ingredient_g;
-                            let attemptsInner = 0;
-                            const MAX_ATTEMPTS_INNER = 50;
-                            while (attemptsInner < MAX_ATTEMPTS_INNER) {
-                                // Sensible percentages (0.1% to 20%)
-                                percent_ww = getRandomDecimal(0.1, 20.0, 1);
-                                // Sensible total grams (10g to 500g)
-                                total_g = getRandomInt(1, 50) * (Math.random() < 0.5 ? 1 : 5); // e.g., 1, 5, 10, 25, 50, 100, 250, 500
-                                if (total_g === 0) continue;
-
-                                active_ingredient_g = (percent_ww / 100) * total_g;
-
-                                // Ensure answer is clean (whole or 1-2 decimals) and within a reasonable range
-                                if ((active_ingredient_g * 100) % 1 === 0 && active_ingredient_g > 0.001 && active_ingredient_g <= 50) { // Max 2 decimal places, min 1mg
-                                    return {
-                                        questionPercentWW: percent_ww,
-                                        questionTotalG: total_g,
-                                        correctAnswer: active_ingredient_g
-                                    };
-                                }
-                                attemptsInner++;
-                            }
-                            return null;
-                        },
-                        answerUnitDisplay: (answer) => { // Dynamic unit display
-                            return answer < 1 ? 'mg' : 'g';
-                        },
-                        internalAnswerUnit: 'dynamic_mass',
-                        // Explanation is no longer used for display
-                        explanation: (percent_ww, total_g, answer) => {
-                            const formattedPercent = formatNumberForDisplay(percent_ww, 1);
-                            const formattedTotalG = formatNumberForDisplay(total_g, 0);
-                            let formattedAnswer;
-                            let mathJaxAnswer;
-                            if (answer < 1) { // Display in mg
-                                formattedAnswer = formatNumberForDisplay(answer * 1000, 0);
-                                mathJaxAnswer = `$${formattedAnswer}~\\text{mg}$`;
-                            } else { // Display in g
-                                formattedAnswer = formatNumberForDisplay(answer, (answer % 1 === 0) ? 0 : 2);
-                                mathJaxAnswer = `$${formattedAnswer}~\\text{g}$`;
-                            }
-
-                            return `<strong>${formattedPercent}% w/w</strong> means ${formattedPercent} grams of active ingredient in 100 grams of cream. To find the amount in ${formattedTotalG} grams, you calculate: $(\\frac{${formattedPercent}}{100}) \\times ${formattedTotalG}~\\text{g} = ${mathJaxAnswer}$.`;
-                        },
-                        answerDisplayDecimals: (answer) => { // Dynamic decimal places for answer
-                            return answer < 1 ? 0 : 2; // 0 for mg, 2 for g
-                        }
-                    },
-                    // NEW: Volume from Dose (mg or g) and %w/v solution (Need/Have x Volume)
-                    {
-                        type: 'calculate_volume_from_dose_and_percent_solution',
-                        generateQuestionAndAnswer: () => {
-                            let required_dose_mg, percent_wv, volume_needed;
-                            let attemptsInner = 0;
-                            const MAX_ATTEMPTS_INNER = 50;
-                            while (attemptsInner < MAX_ATTEMPTS_INNER) {
-                                // Generate target volume first to ensure clean numbers
-                                volume_needed = getRandomInt(1, 100) * (Math.random() < 0.5 ? 1 : 5); // e.g., 1, 5, 10, 25, 50, 100, 250, 500
-                                if (volume_needed === 0) continue;
-
-                                // Generate solution %w/v
-                                percent_wv = getRandomDecimal(0.1, 10.0, 1); // e.g., 0.1, 0.5, 1.0, 2.5, 5.0, 10.0
-                                if (percent_wv === 0) continue;
-
-                                // Calculate the amount of drug in 100ml of the solution (in mg)
-                                const have_mg_in_100ml = percent_wv * 1000;
-
-                                // Calculate required dose in mg based on desired volume and concentration
-                                required_dose_mg = (volume_needed / 100) * have_mg_in_100ml;
-
-                                // Decide if dose should be presented in grams or milligrams
-                                let questionDoseUnit = 'mg';
-                                let questionDoseValue = required_dose_mg;
-                                if (required_dose_mg >= 1000 && Math.random() < 0.5) { // If dose is 1g or more, 50% chance to show in grams
-                                    questionDoseUnit = 'g';
-                                    questionDoseValue = required_dose_mg / 1000;
-                                    // Ensure grams value is clean (e.g., 1.5g, 2g, not 1.234g)
-                                    if (!((questionDoseValue * 10) % 1 === 0)) {
-                                        continue; // Regenerate if not clean decimal for grams
-                                    }
-                                }
-
-                                // Ensure required_dose_mg is sensible (e.g., 10 to 10000 mg)
-                                // And volume_needed is sensible (e.g., 0.1 to 500 ml)
-                                if (required_dose_mg >= 10 && required_dose_mg <= 10000 &&
-                                    volume_needed >= 0.1 && volume_needed <= 500 &&
-                                    (volume_needed * 100) % 1 === 0) { // Allow 0, 1 or 2 decimal places for volume
-                                    return {
-                                        questionDoseValue: questionDoseValue,
-                                        questionDoseUnit: questionDoseUnit,
-                                        questionPercentWV: percent_wv,
-                                        correctAnswer: volume_needed
-                                    };
-                                }
-                                attemptsInner++;
-                            }
-                            return null;
-                        },
                         answerUnitDisplay: 'ml',
                         internalAnswerUnit: 'ml',
-                        // Explanation is no longer used for display
-                        explanation: (questionDoseValue, questionPercentWV, correctAnswer, questionDoseUnit) => {
-                            const formattedQuestionPercentWV = formatNumberForDisplay(questionPercentWV, 1);
-                            const formattedAnswer = formatNumberForDisplay(correctAnswer, (correctAnswer % 1 === 0) ? 0 : 2); // Show 0 or 2 decimals for ml
+                        answerRange: { min: 0.1, max: 500 }, // Volume (ml) range
+                        generate: (ansDec, qDoseDec, qConcDec) => {
+                            let vol;
+                            if (ansDec === 0) vol = getRandomInt(this.answerRange.min, this.answerRange.max);
+                            else vol = getRandomDecimal(this.answerRange.min, this.answerRange.max, ansDec);
+                            if (vol === 0) return null;
 
-                            // Determine the 'Have' part in grams and its corresponding volume (100 ml)
-                            const have_g_in_100ml = questionPercentWV; // Y% w/v means Y g in 100ml
-                            const formattedHaveGIn100ml = formatNumberForDisplay(have_g_in_100ml, 1);
+                            const conc = getRandomDecimal(0.1, 100.0, qConcDec);
+                            if (conc === 0) return null;
 
-                            // Prepare parts for the MathJax fraction without their own $ delimiters
-                            let needValueAndUnit;
-                            let haveValueAndUnit;
+                            const dose = conc * vol;
 
-                            if (questionDoseUnit === 'g') {
-                                needValueAndUnit = `${formatNumberForDisplay(questionDoseValue, (questionDoseValue % 1 === 0) ? 0 : 1)}~\\text{g}`;
-                                haveValueAndUnit = `${formattedHaveGIn100ml}~\\text{g}`;
-                            } else { // questionDoseUnit is 'mg'
-                                needValueAndUnit = `${formatNumberForDisplay(questionDoseValue, 0)}~\\text{mg}`;
-                                haveValueAndUnit = `${formatNumberForDisplay(have_mg_in_100ml, 0)}~\\text{mg}`;
+                            if (isNumberClean(dose, qDoseDec) && isNumberClean(conc, qConcDec) &&
+                                dose >= 10 && dose <= 10000) { // Dose is clean and sensible
+                                return { questionDose: dose, questionConcentration: conc, correctAnswer: vol };
+                            }
+                            return null;
+                        }
+                    },
+                    // Cream %w/w to Active Ingredient (g or mg)
+                    {
+                        type: 'calculate_w_w_ingredient',
+                        answerUnitDisplay: (ans) => ans < 1 ? 'mg' : 'g',
+                        internalAnswerUnit: 'dynamic_mass',
+                        answerRange: { min: 0.001, max: 50 }, // Active ingredient in grams
+                        generate: (ansDec, qPercentDec, qTotalGDec) => {
+                            let active_ingredient_g;
+                            if (ansDec === 0) active_ingredient_g = getRandomInt(this.answerRange.min, this.answerRange.max);
+                            else active_ingredient_g = getRandomDecimal(this.answerRange.min, this.answerRange.max, ansDec);
+                            if (active_ingredient_g === 0) return null;
+
+                            const total_g = getRandomDecimal(10, 500, qTotalGDec); // Total cream in grams
+                            if (total_g === 0) return null;
+
+                            const percent_ww = (active_ingredient_g / total_g) * 100;
+
+                            if (isNumberClean(percent_ww, qPercentDec) && isNumberClean(total_g, qTotalGDec) &&
+                                percent_ww >= 0.1 && percent_ww <= 20.0) { // Percent is clean and sensible
+                                return { questionPercentWW: percent_ww, questionTotalG: total_g, correctAnswer: active_ingredient_g };
+                            }
+                            return null;
+                        }
+                    },
+                    // Volume from Dose (mg or g) and %w/v solution
+                    {
+                        type: 'calculate_volume_from_dose_and_percent_solution',
+                        answerUnitDisplay: 'ml',
+                        internalAnswerUnit: 'ml',
+                        answerRange: { min: 0.1, max: 500 }, // Volume (ml) range
+                        generate: (ansDec, qDoseValDec, qPercentWVDec) => {
+                            let volume_needed;
+                            if (ansDec === 0) volume_needed = getRandomInt(this.answerRange.min, this.answerRange.max);
+                            else volume_needed = getRandomDecimal(this.answerRange.min, this.answerRange.max, ansDec);
+                            if (volume_needed === 0) return null;
+
+                            const percent_wv = getRandomDecimal(0.1, 10.0, qPercentWVDec);
+                            if (percent_wv === 0) return null;
+
+                            const have_mg_in_100ml = percent_wv * 1000;
+                            let required_dose_mg = (volume_needed / 100) * have_mg_in_100ml;
+
+                            let questionDoseUnit = 'mg';
+                            let questionDoseValue = required_dose_mg;
+
+                            // Decide if dose should be presented in grams or milligrams, and ensure cleanliness
+                            if (required_dose_mg >= 1000 && Math.random() < 0.5) {
+                                questionDoseUnit = 'g';
+                                questionDoseValue = required_dose_mg / 1000;
                             }
 
-                            return `To find the required volume:
-                            <ol>
-                                <li>First, understand what the solution's concentration means:
-                                    <br><strong>${formattedQuestionPercentWV}% w/v</strong> means you <strong>Have</strong>: $${formattedHaveGIn100ml}~\\text{g}$ in 100 ml of solution.
-                                    ${questionDoseUnit === 'mg' ? `<br>To match units with your needed dose, convert this to milligrams: $${formattedHaveGIn100ml}~\\text{g} \\times 1000~\\frac{\\text{mg}}{\\text{g}} = ${formatNumberForDisplay(have_mg_in_100ml, 0)}~\\text{mg}$ in 100 ml.` : ''}
-                                </li>
-                                <li>Then, use the 'Need/Have $\\times$ Volume' approach to find the required volume:
-                                    <br>You <strong>Need</strong>: $${needValueAndUnit}$.
-                                    <br>You <strong>Have</strong>: $${haveValueAndUnit}$ in 100 ml.
-                                    <br>Volume required: $\\frac{${needValueAndUnit}}{${haveValueAndUnit}} \\times 100~\\text{ml} = ${formattedAnswer}~\\text{ml}$.
-                                </li>
-                            </ol>`;
-                        },
-                        answerDisplayDecimals: 2
+                            if (isNumberClean(questionDoseValue, qDoseValDec) && isNumberClean(percent_wv, qPercentWVDec) &&
+                                questionDoseValue >= (questionDoseUnit === 'mg' ? 10 : 0.01) &&
+                                questionDoseValue <= (questionDoseUnit === 'mg' ? 10000 : 10)) { // Sensible range for dose
+                                return {
+                                    questionDoseValue: questionDoseValue,
+                                    questionDoseUnit: questionDoseUnit,
+                                    questionPercentWV: percent_wv,
+                                    correctAnswer: volume_needed
+                                };
+                            }
+                            return null;
+                        }
                     }
                 ];
 
@@ -828,72 +605,76 @@
                     attempts++;
                     const rule = dosageVolumeRules[getRandomInt(0, dosageVolumeRules.length - 1)];
 
-                    const generatedValues = rule.generateQuestionAndAnswer();
+                    // Determine decimal places for this specific question/answer pair
+                    const answerDecimalPlaces = typeof rule.answerDecimals === 'function' ?
+                        rule.answerDecimals(rule.answerRange.min)[getRandomInt(0, rule.answerDecimals(rule.answerRange.min).length - 1)] :
+                        rule.answerDecimals[getRandomInt(0, rule.answerDecimals.length - 1)];
+
+                    // Determine question display decimals based on the type of values in the question
+                    let qValDecimals = [];
+                    if (rule.type === 'calculate_dose') {
+                        qValDecimals = [unitDecimalCleanliness['mg/mL'], unitDecimalCleanliness['ml']]; // Conc, Vol
+                    } else if (rule.type === 'calculate_volume') {
+                        qValDecimals = [unitDecimalCleanliness['mg'], unitDecimalCleanliness['mg/mL']]; // Dose, Conc
+                    } else if (rule.type === 'calculate_w_w_ingredient') {
+                        qValDecimals = [unitDecimalCleanliness['%w/w'], unitDecimalCleanliness['g']]; // Percent, Total G
+                    } else if (rule.type === 'calculate_volume_from_dose_and_percent_solution') {
+                        qValDecimals = [unitDecimalCleanliness['mg'], unitDecimalCleanliness['%w/v']]; // Dose, Percent
+                    }
+
+                    const generatedValues = rule.generate.apply(rule, [answerDecimalPlaces, ...qValDecimals]);
 
                     if (generatedValues === null) {
-                        continue; // Failed to generate sensible values for this rule, try another
+                        continue;
                     }
 
                     let correctAnswerNumerical = generatedValues.correctAnswer;
-
-                    // Perform general sensibility checks on the answer
                     let isSensible = true;
-                    if (correctAnswerNumerical === null || !isFinite(correctAnswerNumerical)) {
+
+                    // Validate cleanliness of generated answer
+                    if (!isNumberClean(correctAnswerNumerical, answerDecimalPlaces)) {
                         isSensible = false;
-                    } else if (correctAnswerNumerical % 1 !== 0) { // If answer is a decimal
-                        const decimalString = correctAnswerNumerical.toFixed(5).split('.')[1] || '';
-                        let maxDecimals = (typeof rule.answerDisplayDecimals === 'function') ? rule.answerDisplayDecimals(correctAnswerNumerical) : rule.answerDisplayDecimals;
-                        if (decimalString.length > maxDecimals && parseFloat(decimalString.substring(maxDecimals)) !== 0) {
-                            isSensible = false;
+                    }
+
+                    // Validate cleanliness of question values
+                    if (isSensible) {
+                        if (rule.type === 'calculate_dose') {
+                            if (!isNumberClean(generatedValues.questionConcentration, qValDecimals[0]) ||
+                                !isNumberClean(generatedValues.questionVolume, qValDecimals[1])) {
+                                isSensible = false;
+                            }
+                        } else if (rule.type === 'calculate_volume') {
+                            if (!isNumberClean(generatedValues.questionDose, qValDecimals[0]) ||
+                                !isNumberClean(generatedValues.questionConcentration, qValDecimals[1])) {
+                                isSensible = false;
+                            }
+                        } else if (rule.type === 'calculate_w_w_ingredient') {
+                            if (!isNumberClean(generatedValues.questionPercentWW, qValDecimals[0]) ||
+                                !isNumberClean(generatedValues.questionTotalG, qValDecimals[1])) {
+                                isSensible = false;
+                            }
+                        } else if (rule.type === 'calculate_volume_from_dose_and_percent_solution') {
+                            if (!isNumberClean(generatedValues.questionDoseValue, qValDecimals[0]) ||
+                                !isNumberClean(generatedValues.questionPercentWV, qValDecimals[1])) {
+                                isSensible = false;
+                            }
                         }
                     }
 
                     if (isSensible) {
                         let questionText;
-                        const answerDecimals = (typeof rule.answerDisplayDecimals === 'function') ? rule.answerDisplayDecimals(correctAnswerNumerical) : rule.answerDisplayDecimals;
-                        const formattedCorrectAnswer = formatNumberForDisplay(correctAnswerNumerical, answerDecimals);
-                        const answerUnit = (typeof rule.answerUnitDisplay === 'function') ? rule.answerUnitDisplay(correctAnswerNumerical) : rule.answerUnitDisplay;
 
-                        let explanationContent; // This will still be generated but not displayed
+                        const answerUnit = typeof rule.answerUnitDisplay === 'function' ? rule.answerUnitDisplay(correctAnswerNumerical) : rule.answerUnitDisplay;
 
-                        // Dynamically call the explanation function with the correct parameters for each rule type
+                        // Construct question text based on the rule type and generated values
                         if (rule.type === 'calculate_dose') {
-                            const formattedConc = formatNumberForDisplay(generatedValues.questionConcentration, (generatedValues.questionConcentration % 1 === 0) ? 0 : 1);
-                            const formattedVol = formatNumberForDisplay(generatedValues.questionVolume, 0);
-                            questionText = `If a solution has a concentration of <strong>${formattedConc} mg/mL</strong>, how many milligrams of drug are in <strong>${formattedVol} ml</strong> of this solution?`;
-                            explanationContent = rule.explanation(
-                                generatedValues.questionConcentration,
-                                generatedValues.questionVolume,
-                                correctAnswerNumerical
-                            );
+                            questionText = `If a solution has a concentration of <strong>${formatNumberForDisplay(generatedValues.questionConcentration, qValDecimals[0])} mg/mL</strong>, how many milligrams of drug are in <strong>${formatNumberForDisplay(generatedValues.questionVolume, qValDecimals[1])} ml</strong> of this solution?`;
                         } else if (rule.type === 'calculate_volume') {
-                            const formattedDose = formatNumberForDisplay(generatedValues.questionDose, 0);
-                            const formattedConc = formatNumberForDisplay(generatedValues.questionConcentration, (generatedValues.questionConcentration % 1 === 0) ? 0 : 1);
-                            questionText = `How many millilitres of a solution with a concentration of <strong>${formattedConc} mg/mL</strong> would be required to provide a dose of <strong>${formattedDose} mg</strong>?`;
-                            explanationContent = rule.explanation(
-                                generatedValues.questionDose,
-                                generatedValues.questionConcentration,
-                                correctAnswerNumerical
-                            );
+                            questionText = `How many millilitres of a solution with a concentration of <strong>${formatNumberForDisplay(generatedValues.questionConcentration, qValDecimals[1])} mg/mL</strong> would be required to provide a dose of <strong>${formatNumberForDisplay(generatedValues.questionDose, qValDecimals[0])} mg</strong>?`;
                         } else if (rule.type === 'calculate_w_w_ingredient') {
-                            const formattedPercent = formatNumberForDisplay(generatedValues.questionPercentWW, 1);
-                            const formattedTotalG = formatNumberForDisplay(generatedValues.questionTotalG, 0);
-                            questionText = `A cream is described as <strong>${formattedPercent}% w/w</strong>. How much active ingredient is there in <strong>${formattedTotalG} g</strong> of this cream?`;
-                            explanationContent = rule.explanation(
-                                generatedValues.questionPercentWW,
-                                generatedValues.questionTotalG,
-                                correctAnswerNumerical
-                            );
+                            questionText = `A cream is described as <strong>${formatNumberForDisplay(generatedValues.questionPercentWW, qValDecimals[0])}% w/w</strong>. How much active ingredient is there in <strong>${formatNumberForDisplay(generatedValues.questionTotalG, qValDecimals[1])} g</strong> of this cream?`;
                         } else if (rule.type === 'calculate_volume_from_dose_and_percent_solution') {
-                            const formattedDoseValue = formatNumberForDisplay(generatedValues.questionDoseValue, (generatedValues.questionDoseValue % 1 === 0) ? 0 : 1);
-                            const formattedPercentWV = formatNumberForDisplay(generatedValues.questionPercentWV, 1);
-                            questionText = `How many ml of solution are required to provide a dose of <strong>${formattedDoseValue} ${generatedValues.questionDoseUnit}</strong> from a <strong>${formattedPercentWV}% w/v</strong> solution?`;
-                            explanationContent = rule.explanation(
-                                generatedValues.questionDoseValue,
-                                generatedValues.questionPercentWV,
-                                correctAnswerNumerical,
-                                generatedValues.questionDoseUnit
-                            );
+                            questionText = `How many ml of solution are required to provide a dose of <strong>${formatNumberForDisplay(generatedValues.questionDoseValue, qValDecimals[0])} ${generatedValues.questionDoseUnit}</strong> from a <strong>${formatNumberForDisplay(generatedValues.questionPercentWV, qValDecimals[1])}% w/v</strong> solution?`;
                         }
 
                         questionData = {
@@ -901,8 +682,8 @@
                             correctAnswer: correctAnswerNumerical,
                             units: answerUnit,
                             internalAnswerUnit: rule.internalAnswerUnit,
-                            answerDisplayDecimals: answerDecimals,
-                            explanation: explanationContent // Still generating, but not displayed
+                            answerDisplayDecimals: answerDecimalPlaces,
+                            explanation: "" // No longer used for display
                         };
                     }
                 }
@@ -913,7 +694,7 @@
                         question: "Could not generate a sensible dosage & volume question. Please try again.",
                         correctAnswer: 0,
                         units: "",
-                        explanation: "", // No explanation
+                        explanation: "",
                         internalAnswerUnit: "",
                         answerDisplayDecimals: 0
                     };
@@ -928,7 +709,6 @@
             selectedTopicId = topicId; // Store the topic ID
             const selectedTopicGenerator = questionGenerators[topicId];
             if (typeof selectedTopicGenerator !== 'function') { // More robust check
-                // Using a simple alert for now, but consider a custom modal for better UX
                 alert('Invalid topic selected or generator not found!');
                 console.error("Generator for topic '" + topicId + "' is not a function:", selectedTopicGenerator);
                 return;
@@ -940,9 +720,8 @@
                     currentQuizQuestions.push(selectedTopicGenerator());
                 } catch (e) {
                     console.error(`Error generating question for topic ${topicId}:`, e);
-                    // Fallback or display an error message to the user
                     alert(`Error generating question for this topic. Please try another topic or refresh. Details: ${e.message}`);
-                    return; // Stop quiz initiation if a question fails to generate
+                    return;
                 }
             }
 
@@ -950,8 +729,8 @@
             score = 0;
             secondsElapsed = 0;
             scoreTracker.textContent = score;
-            totalQuestionsSpan.textContent = TOTAL_QUESTIONS_PER_QUIZ; // Set total questions display
-            quizTitle.textContent = formatTopicTitle(topicId); // Update navbar title
+            totalQuestionsSpan.textContent = TOTAL_QUESTIONS_PER_QUIZ;
+            quizTitle.textContent = formatTopicTitle(topicId);
 
             topicSelectionDiv.style.display = 'none';
             quizSummaryDiv.style.display = 'none';
@@ -978,45 +757,25 @@
             const question = currentQuizQuestions[currentQuestionIndex];
             currentQuestionNum.textContent = currentQuestionIndex + 1;
             questionText.innerHTML = question.question;
-            userAnswerInput.value = ''; // Clear previous answer
+            userAnswerInput.value = '';
             userAnswerInput.disabled = false;
-            answerUnitDisplay.textContent = question.units; // Display units next to input
+            answerUnitDisplay.textContent = question.units;
             feedbackMessage.style.display = 'none';
             solutionExplanation.style.display = 'none'; // Ensure solution explanation is hidden
             feedbackMessage.className = 'feedback-message';
 
             if (window.MathJax) {
-                // Only typeset the question text, not the solution explanation
                 MathJax.typesetPromise([questionText]).catch((err) => console.error("MathJax typesetting error:", err));
             }
 
             checkAnswerBtn.disabled = false;
             nextQuestionBtn.disabled = true;
-            userAnswerInput.focus(); // Focus on the input field
+            userAnswerInput.focus();
         }
 
         function checkAnswer() {
             const userAnswerRaw = userAnswerInput.value;
             let userAnswer = parseFloat(userAnswerRaw);
-
-            // Normalize user input to a fixed precision to avoid floating point comparison issues
-            // Assuming answers are generally expected to be up to 3 decimal places for robustness
-            if (!isNaN(userAnswer)) {
-                userAnswer = Math.round(userAnswer * 1000) / 1000;
-            }
-
-            const currentQuestion = currentQuizQuestions[currentQuestionIndex];
-            const correctAnswer = currentQuestion.correctAnswer; // This is the numerical value
-
-            console.log("User Input Raw:", userAnswerRaw);
-            console.log("Parsed & Normalized User Answer:", userAnswer);
-            console.log("Correct Answer Numerical:", correctAnswer);
-            console.log("Absolute difference:", Math.abs(userAnswer - correctAnswer));
-            const tolerance = 0.001; // For up to 2-3 decimal places accuracy
-            console.log("Tolerance:", tolerance);
-            console.log("Is within tolerance:", Math.abs(userAnswer - correctAnswer) < tolerance);
-            console.log("Current Question:", currentQuestion);
-
 
             if (isNaN(userAnswer)) {
                 feedbackMessage.textContent = "Please enter a numerical answer.";
@@ -1025,24 +784,48 @@
                 return;
             }
 
-            if (Math.abs(userAnswer - correctAnswer) < tolerance) {
+            const currentQuestion = currentQuizQuestions[currentQuestionIndex];
+            const correctAnswer = currentQuestion.correctAnswer; // This is the precise, clean numerical value
+
+            // Determine the correct number of decimal places for comparison based on the question's rule
+            const answerDecimalsForComparison = typeof currentQuestion.answerDisplayDecimals === 'function' ?
+                currentQuestion.answerDisplayDecimals(correctAnswer) : currentQuestion.answerDisplayDecimals;
+
+            // Format the precise correct answer to its intended display decimals for comparison
+            const formattedCorrectAnswerForComparison = parseFloat(correctAnswer.toFixed(answerDecimalsForComparison));
+
+            // Round user answer to the same number of decimal places for a fair comparison
+            userAnswer = parseFloat(userAnswer.toFixed(answerDecimalsForComparison));
+
+
+            console.log("User Input Raw:", userAnswerRaw);
+            console.log("Parsed & Normalized User Answer:", userAnswer);
+            console.log("Correct Answer Numerical (Precise):", correctAnswer);
+            console.log("Correct Answer Numerical (Formatted for Comparison):", formattedCorrectAnswerForComparison);
+
+            console.log("Absolute difference (User vs Formatted Correct):", Math.abs(userAnswer - formattedCorrectAnswerForComparison));
+            const tolerance = 0.00001; // Increased tolerance for floating point comparison issues
+            console.log("Tolerance:", tolerance);
+            console.log("Is within tolerance:", Math.abs(userAnswer - formattedCorrectAnswerForComparison) < tolerance);
+
+
+            // Compare the user's rounded answer with the precisely calculated answer, rounded to the display decimals.
+            if (Math.abs(userAnswer - formattedCorrectAnswerForComparison) < tolerance) {
                 score++;
                 feedbackMessage.textContent = "Correct!";
                 feedbackMessage.className = 'feedback-message feedback-correct';
             } else {
                 let feedbackAnswerDisplayString;
-                // Use internalAnswerUnit to determine how to format the correct answer in feedback
+                // Format the precise correct answer for display in the feedback message
                 if (currentQuestion.internalAnswerUnit === 'ratio_X') {
-                    feedbackAnswerDisplayString = `1 in ${formatNumberForDisplay(correctAnswer, currentQuestion.answerDisplayDecimals)}`;
+                    feedbackAnswerDisplayString = `1 in ${formatNumberForDisplay(correctAnswer, answerDecimalsForComparison)}`;
                 } else if (currentQuestion.internalAnswerUnit === 'dynamic_mass') {
-                    // currentQuestion.units is already the string ('mg' or 'g')
-                    const unit = currentQuestion.units;
-                    // currentQuestion.answerDisplayDecimals is already the number (0 or 2)
-                    const decimals = currentQuestion.answerDisplayDecimals;
+                    const unit = typeof currentQuestion.units === 'function' ? currentQuestion.units(correctAnswer) : currentQuestion.units;
+                    const decimals = typeof currentQuestion.answerDisplayDecimals === 'function' ? currentQuestion.answerDisplayDecimals(correctAnswer) : currentQuestion.answerDisplayDecimals;
                     feedbackAnswerDisplayString = `${formatNumberForDisplay(correctAnswer * (unit === 'mg' ? 1000 : 1), decimals)} ${unit}`;
                 }
                 else {
-                    feedbackAnswerDisplayString = `${formatNumberForDisplay(correctAnswer, currentQuestion.answerDisplayDecimals)} ${currentQuestion.units}`;
+                    feedbackAnswerDisplayString = `${formatNumberForDisplay(correctAnswer, answerDecimalsForComparison)} ${currentQuestion.units}`;
                 }
 
                 feedbackMessage.textContent = `Incorrect. The correct answer was ${feedbackAnswerDisplayString}.`;
@@ -1055,7 +838,7 @@
 
             checkAnswerBtn.disabled = true;
             nextQuestionBtn.disabled = false;
-            userAnswerInput.disabled = true; // Disable input after checking
+            userAnswerInput.disabled = true;
         }
 
         function nextQuestion() {
