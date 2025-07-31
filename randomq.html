@@ -201,9 +201,12 @@
 
         // Function to load the quiz data from the JSON file
         async function loadQuizData() {
+            // NOTE: The user's JSON file is assumed to be in the 'data/' folder.
+            // You will need to access this page with a URL parameter like:
+            // randomq.html?quiz=data/rq_conversion_units.json
             const quizFileName = getQuizFileName();
             if (!quizFileName) {
-                questionTextElement.textContent = 'Error: No quiz file specified in the URL. Example: randomq.html?quiz=path/to/your/file.json';
+                questionTextElement.textContent = 'Error: No quiz file specified in the URL. Example: randomq.html?quiz=data/rq_conversion_units.json';
                 return;
             }
 
