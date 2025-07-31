@@ -536,7 +536,7 @@
                     correctAnswer = formatNumber((tempC * 9 / 5) + 32, 0);
                     questionText = `What is <strong>${tempC} &deg;C</strong> in <strong>&deg;F</strong>?`;
                     units = "°F";
-                    explanation = `$F = \\frac{9}{5}C + 32$. $F = \\frac{9}{5}(${tempC}) + 32 = ${formatNumber(tempC * 9 / 5, 0)} + 32 = ${correctAnswer}~\\text{&deg;F}$";
+                    explanation = `$F = \\frac{9}{5}C + 32$. $F = \\frac{9}{5}(${tempC}) + 32 = ${formatNumber(tempC * 9 / 5, 0)} + 32 = ${correctAnswer}~\\text{&deg;F}$`;
                 } else { // F_to_C
                     const tempF = getRandomInt(32, 104); // 32-104 F (multiples of 9 for clean C)
                     if ((tempF - 32) % 9 !== 0) { // Ensure (F-32) is a multiple of 9
@@ -593,6 +593,7 @@
                 const factor = targetVolume / originalVolume;
                 correctAnswer = formatNumber(originalAmount * factor, 0);
 
+                // Corrected template literal for formula_scaling
                 questionText = `If the formula for <strong>Oral Rehydration Salts</strong> is:<br><ul><li>${ingredient}: <strong>${originalAmount}mg</strong></li><li>Purified Water: <strong>to ${originalVolume} mL</strong></li></ul>How much <strong>${ingredient}</strong> in milligrams is required to produce <strong>${targetVolume}ml</strong> of the Oral Rehydration Salts solution?`;
                 units = "mg";
                 explanation = `The formula is for ${originalVolume} ml. We need to make ${targetVolume} ml. Factor = $${targetVolume}~\\text{ml} \\div ${originalVolume}~\\text{ml} = ${factor}$. ${ingredient} needed = $${originalAmount}~\\text{mg} \\times ${factor} = ${correctAnswer}~\\text{mg}$`;
