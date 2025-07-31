@@ -224,78 +224,54 @@
                 let baseValue;
                 let correctAnswer;
                 let explanation;
-                let decimalPlaces = 3; // Default for unit conversions
+                const targetDecimalPlaces = 1; // Always format to 1 decimal place for the answer
 
-                // Logic to ensure non-calculator friendly numbers
-                // This is where the 'retro-fitting' or careful selection happens
+                // Logic to ensure non-calculator friendly numbers with more variety
                 if (selectedType === 'mass') {
-                     // Example: g <-> mg, mg <-> mcg, kg <-> g
-                    if ((fromUnit === 'g' && toUnit === 'mg') || (fromUnit === 'mg' && toUnit === 'g')) {
-                        baseValue = getRandomInt(1, 50) * (fromUnit === 'g' ? 1 : 10); // e.g., 2g, 250mg
-                        correctAnswer = convertValue(baseValue, fromUnit, toUnit, selectedType);
-                        decimalPlaces = (correctAnswer % 1 === 0) ? 0 : 2; // Adjust decimal places if it's a whole number or simple decimal
-                    } else if ((fromUnit === 'mg' && toUnit === 'mcg') || (fromUnit === 'mcg' && toUnit === 'mg')) {
-                        baseValue = getRandomInt(1, 10) * (fromUnit === 'mg' ? 1 : 100); // e.g., 5mg, 500mcg
-                        correctAnswer = convertValue(baseValue, fromUnit, toUnit, selectedType);
-                        decimalPlaces = (correctAnswer % 1 === 0) ? 0 : 2;
-                    } else if ((fromUnit === 'kg' && toUnit === 'g') || (fromUnit === 'g' && toUnit === 'kg')) {
-                        baseValue = getRandomInt(1, 10) * (fromUnit === 'kg' ? 1 : 100); // e.g., 2kg, 200g
-                        correctAnswer = convertValue(baseValue, fromUnit, toUnit, selectedType);
-                        decimalPlaces = (correctAnswer % 1 === 0) ? 0 : 2;
-                    } else { // More complex conversions, ensure simple numbers
-                        baseValue = getRandomInt(1, 10); // Simple integer
-                        correctAnswer = convertValue(baseValue, fromUnit, toUnit, selectedType);
-                        // Try to make sure it's not too many decimal places for random complex ones
-                        if (Math.abs(correctAnswer) > 0.0001 && Math.abs(correctAnswer) < 1000000) { // Avoid extreme numbers
-                            decimalPlaces = Math.min(3, (correctAnswer.toString().split('.')[1] || '').length);
-                        } else { // If it's too complex, regenerate or simplify
-                            return questionGenerators['unit_conversion'](); // Recursive call to get a simpler one
-                        }
+                    // More varied base values, aiming for clean 1-decimal results
+                    if (fromUnit === 'g' && toUnit === 'mg') {
+                        baseValue = getRandomDecimal(0.1, 50.0, 1); // e.g., 2.5g, 15.0g
+                    } else if (fromUnit === 'mg' && toUnit === 'g') {
+                        baseValue = getRandomInt(10, 500); // e.g., 250mg, 400mg
+                    } else if (fromUnit === 'mg' && toUnit === 'mcg') {
+                        baseValue = getRandomDecimal(0.1, 10.0, 1); // e.g., 0.5mg, 7.2mg
+                    } else if (fromUnit === 'mcg' && toUnit === 'mg') {
+                        baseValue = getRandomInt(100, 5000); // e.g., 2500mcg, 800mcg
+                    } else if (fromUnit === 'kg' && toUnit === 'g') {
+                        baseValue = getRandomDecimal(0.1, 10.0, 1); // e.g., 0.5kg, 3.2kg
+                    } else if (fromUnit === 'g' && toUnit === 'kg') {
+                        baseValue = getRandomInt(100, 5000); // e.g., 1500g, 300g
+                    } else {
+                        // For other combinations, use a broader range and rely on formatting
+                        baseValue = getRandomDecimal(0.001, 10000, 3); // Broader range for less common conversions
                     }
                 } else if (selectedType === 'volume') {
                     if ((fromUnit === 'l' && toUnit === 'ml') || (fromUnit === 'ml' && toUnit === 'l')) {
-                        baseValue = getRandomInt(1, 50) * (fromUnit === 'l' ? 1 : 10);
-                        correctAnswer = convertValue(baseValue, fromUnit, toUnit, selectedType);
-                        decimalPlaces = (correctAnswer % 1 === 0) ? 0 : 2;
+                        baseValue = getRandomDecimal(0.1, 50.0, 1);
                     } else if ((fromUnit === 'ml' && toUnit === 'ul') || (fromUnit === 'ul' && toUnit === 'ml')) {
-                        baseValue = getRandomInt(1, 10) * (fromUnit === 'ml' ? 1 : 100);
-                        correctAnswer = convertValue(baseValue, fromUnit, toUnit, selectedType);
-                        decimalPlaces = (correctAnswer % 1 === 0) ? 0 : 2;
+                        baseValue = getRandomDecimal(0.1, 10.0, 1);
                     } else {
-                        baseValue = getRandomInt(1, 10);
-                        correctAnswer = convertValue(baseValue, fromUnit, toUnit, selectedType);
-                        if (Math.abs(correctAnswer) > 0.0001 && Math.abs(correctAnswer) < 1000000) {
-                            decimalPlaces = Math.min(3, (correctAnswer.toString().split('.')[1] || '').length);
-                        } else {
-                            return questionGenerators['unit_conversion']();
-                        }
+                        baseValue = getRandomDecimal(0.001, 10000, 3);
                     }
                 } else if (selectedType === 'length') {
                     if ((fromUnit === 'm' && toUnit === 'cm') || (fromUnit === 'cm' && toUnit === 'm')) {
-                        baseValue = getRandomInt(1, 50) * (fromUnit === 'm' ? 1 : 10);
-                        correctAnswer = convertValue(baseValue, fromUnit, toUnit, selectedType);
-                        decimalPlaces = (correctAnswer % 1 === 0) ? 0 : 2;
+                        baseValue = getRandomDecimal(0.1, 50.0, 1);
                     } else if ((fromUnit === 'cm' && toUnit === 'mm') || (fromUnit === 'mm' && toUnit === 'cm')) {
-                        baseValue = getRandomInt(1, 10) * (fromUnit === 'cm' ? 1 : 10);
-                        correctAnswer = convertValue(baseValue, fromUnit, toUnit, selectedType);
-                        decimalPlaces = (correctAnswer % 1 === 0) ? 0 : 2;
+                        baseValue = getRandomDecimal(0.1, 10.0, 1);
                     } else {
-                        baseValue = getRandomInt(1, 10);
-                        correctAnswer = convertValue(baseValue, fromUnit, toUnit, selectedType);
-                        if (Math.abs(correctAnswer) > 0.0001 && Math.abs(correctAnswer) < 1000000) {
-                            decimalPlaces = Math.min(3, (correctAnswer.toString().split('.')[1] || '').length);
-                        } else {
-                            return questionGenerators['unit_conversion']();
-                        }
+                        baseValue = getRandomDecimal(0.001, 10000, 3);
                     }
                 }
 
+                correctAnswer = convertValue(baseValue, fromUnit, toUnit, selectedType);
+                correctAnswer = formatNumber(correctAnswer, targetDecimalPlaces); // Enforce 1 decimal place
+
                 const questionText = `What is <strong>${baseValue} ${fromUnit}</strong> expressed in ${toUnit}?`;
-                explanation = `To convert ${baseValue} ${fromUnit} to ${toUnit}: $${baseValue}~\\text{${fromUnit}} \\times \\frac{${unitConversions[selectedType][fromUnit]}~\\text{BaseUnit}}{1~\\text{${fromUnit}}} \\div \\frac{${unitConversions[selectedType][toUnit]}~\\text{BaseUnit}}{1~\\text{${toUnit}}} = ${formatNumber(correctAnswer, decimalPlaces)}~\\text{${toUnit}}$`;
+                explanation = `To convert ${baseValue} ${fromUnit} to ${toUnit}: $${baseValue}~\\text{${fromUnit}} \\times \\frac{${unitConversions[selectedType][fromUnit]}~\\text{BaseUnit}}{1~\\text{${fromUnit}}} \\div \\frac{${unitConversions[selectedType][toUnit]}~\\text{BaseUnit}}{1~\\text{${toUnit}}} = ${correctAnswer}~\\text{${toUnit}}$`;
 
                 return {
                     question: questionText,
-                    correctAnswer: formatNumber(correctAnswer, decimalPlaces),
+                    correctAnswer: correctAnswer,
                     units: toUnit,
                     explanation: explanation
                 };
@@ -446,7 +422,7 @@
                     questionText = `If a person is <strong>${feet} feet and ${inches} inches</strong> tall, what is this in metres (Assuming <strong>1 inch = 2.5 cm</strong>)?`;
                     correctAnswer = formatNumber(meters, 2);
                     units = "m";
-                    explanation = `$${feet}~\\text{feet} = ${feet * 12}~\\text{inches}$. Total inches = $${feet * 12} + ${inches} = ${totalInches}~\\text{inches}$. Convert to cm: $${totalInches}~\\text{inches} \\times 2.5~\\text{cm/inch} = ${cm}~\\text{cm}$. Convert to m: $${cm}~\\text{cm} = ${correctAnswer}~\\text{m}$`;
+                    explanation = `$${feet}~\\text{feet} = ${feet * 12}~\\text{inches}$. Total inches = $${feet * 12} + ${inches} = ${totalInches}~\\text{inches}$. Convert to cm: $${totalInches}~\\text{inches} \\times 2.5~\\text{cm/inch} = ${cm}~\\text{cm}$. Convert to m: $${cm}~\\text{cm} = ${correctAnswer}~\\text{m}$";
                 } else { // weight
                     const stone = getRandomInt(8, 15);
                     const lbs = getRandomInt(0, 13); // 0 to 13 lbs
@@ -455,7 +431,7 @@
                     questionText = `If a patient is <strong>${stone} stone ${lbs} lbs</strong>, how much do they weigh in Kg (Assuming <strong>2 lbs = 1 Kg</strong>)?`;
                     correctAnswer = formatNumber(kg, 0); // Kg usually whole number for stone/lbs conversion
                     units = "kg";
-                    explanation = `$${stone}~\\text{stone} = ${stone * 14}~\\text{lbs}$. Total lbs = $${stone * 14} + ${lbs} = ${totalLbs}~\\text{lbs}$. Convert to Kg: $${totalLbs}~\\text{lbs} \\div 2~\\text{lbs/kg} = ${correctAnswer}~\\text{kg}$`;
+                    explanation = `$${stone}~\\text{stone} = ${stone * 14}~\\text{lbs}$. Total lbs = $${stone * 14} + ${lbs} = ${totalLbs}~\\text{lbs}$. Convert to Kg: $${totalLbs}~\\text{lbs} \\div 2~\\text{lbs/kg} = ${correctAnswer}~\\text{kg}$";
                 }
                 return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
             },
