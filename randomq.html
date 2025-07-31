@@ -121,12 +121,6 @@
             box-shadow: none;
             transform: none;
         }
-
-        /*
-        * These are the only additional styles added to make the page
-        * a functional, self-contained app without external files.
-        * They simply center the content and provide a background color.
-        */
         body {
             font-family: sans-serif;
             margin: 0;
@@ -150,13 +144,10 @@
     </style>
 </head>
 <body>
-    <!-- Navbar from your provided code -->
     <div class="navbar">
         <a href="/index.html" class="navbar-link">Home</a>
         <span class="navbar-title">Random Question Quiz</span>
     </div>
-
-    <!-- Main Content Area -->
     <div class="content">
         <h1>Random Question Quiz</h1>
         <div class="quiz-container">
@@ -180,19 +171,13 @@
             </div>
         </div>
     </div>
-
     <script>
-        // Quiz state variables
         let quizData = [];
         let currentQuestionIndex = 0;
         let score = 0;
         const totalQuestions = 10;
-        let answeredCorrectly = false;
         
-        // DOM elements
-        const quizContainer = document.querySelector('.quiz-container');
         const questionNumDisplay = document.getElementById('current-question-num');
-        const totalQuestionsDisplay = document.getElementById('total-questions');
         const scoreDisplay = document.getElementById('current-score');
         const questionNumberDisplay = document.getElementById('question-number-display');
         const questionTextElement = document.getElementById('question-text');
@@ -203,7 +188,6 @@
         const nextBtn = document.getElementById('next-btn');
         const restartBtn = document.getElementById('restart-btn');
 
-        // Function to shuffle an array (Fisher-Yates algorithm)
         function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
@@ -211,51 +195,49 @@
             }
         }
         
-        // Function to load the quiz data from the JSON file
         async function loadQuizData() {
             try {
-                // Fetch the JSON file using the 'uploaded:' protocol
-                const response = await fetch('uploaded:rq_conversion_units.json');
+                // Get the file name from the URL query parameter
+                const urlParams = new URLSearchParams(window.location.search);
+                const fileName = urlParams.get('file');
+
+                if (!fileName) {
+                    questionTextElement.textContent = "Error: No quiz file specified in the URL.";
+                    return;
+                }
+
+                // Correctly construct the full path using the 'uploaded:' protocol and the dynamic file name
+                const filePath = `uploaded:rq_conversion_units.json`;
+                
+                const response = await fetch(filePath);
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }
                 const data = await response.json();
                 
-                // Shuffle and select the first 10 questions
                 shuffleArray(data);
                 quizData = data.slice(0, totalQuestions);
-
-                // Initialize the quiz after data is loaded
                 initializeQuiz();
 
             } catch (error) {
-                // If there's an error, display it in the question text element
-                questionTextElement.textContent = `Error loading quiz: ${error.message}. Please check the quiz file.`;
+                questionTextElement.textContent = `Error loading quiz: ${error.message}. Please check the file path and name.`;
                 console.error('Error fetching quiz data:', error);
             }
         }
 
-        // Function to initialize the quiz once data is loaded
         function initializeQuiz() {
             currentQuestionIndex = 0;
             score = 0;
-            answeredCorrectly = false;
             scoreDisplay.textContent = score;
-            totalQuestionsDisplay.textContent = totalQuestions;
             restartBtn.style.display = 'none';
             checkBtn.style.display = 'inline-block';
             nextBtn.style.display = 'inline-block';
-            checkBtn.disabled = false;
-            nextBtn.disabled = true;
             answerInput.disabled = false;
             answerInput.value = '';
-            answerInput.style.display = 'inline-block';
-            unitsTextElement.style.display = 'inline-block';
             feedbackMessage.style.display = 'none';
             loadQuestion();
         }
 
-        // Function to load the current question
         function loadQuestion() {
             if (currentQuestionIndex < totalQuestions) {
                 const currentQuestion = quizData[currentQuestionIndex];
@@ -266,20 +248,15 @@
                 answerInput.value = '';
                 answerInput.focus();
                 
-                // Update MathJax
                 if (window.MathJax) {
                     MathJax.typesetPromise();
                 }
 
-                // Reset feedback and buttons
                 feedbackMessage.style.display = 'none';
                 checkBtn.disabled = false;
                 nextBtn.disabled = true;
                 answerInput.disabled = false;
-                answeredCorrectly = false;
-
             } else {
-                // Quiz is finished
                 questionTextElement.textContent = `Quiz Complete! You scored ${score} out of ${totalQuestions}.`;
                 questionNumberDisplay.textContent = '';
                 answerInput.style.display = 'none';
@@ -290,12 +267,10 @@
             }
         }
 
-        // Function to check the user's answer
         function checkAnswer() {
             const userAnswer = answerInput.value.trim();
             const currentQuestion = quizData[currentQuestionIndex];
             
-            // Check for a non-empty answer
             if (userAnswer === '') {
                 feedbackMessage.textContent = 'Please enter an answer.';
                 feedbackMessage.className = 'feedback-message feedback-incorrect';
@@ -303,8 +278,6 @@
                 return;
             }
             
-            // Check if the user's answer matches the JSON answer
-            // Using parseFloat for numerical comparison with a small tolerance for floating-point issues
             const isCorrect = Math.abs(parseFloat(userAnswer) - parseFloat(currentQuestion.Answer)) < 0.0001;
 
             if (isCorrect) {
@@ -312,39 +285,32 @@
                 feedbackMessage.className = 'feedback-message feedback-correct';
                 score++;
                 scoreDisplay.textContent = score;
-                answeredCorrectly = true;
                 answerInput.disabled = true;
             } else {
                 feedbackMessage.textContent = `Incorrect. The correct answer is ${currentQuestion.Answer} ${currentQuestion.Units}.`;
                 feedbackMessage.className = 'feedback-message feedback-incorrect';
-                answeredCorrectly = false;
             }
 
-            // Display feedback and enable next button
             feedbackMessage.style.display = 'block';
             checkBtn.disabled = true;
             nextBtn.disabled = false;
         }
 
-        // Function to move to the next question
         function nextQuestion() {
             currentQuestionIndex++;
             loadQuestion();
         }
 
-        // Add event listeners
         checkBtn.addEventListener('click', checkAnswer);
         nextBtn.addEventListener('click', nextQuestion);
         restartBtn.addEventListener('click', loadQuizData);
 
-        // Allow pressing Enter to check the answer
         answerInput.addEventListener('keypress', (event) => {
             if (event.key === 'Enter' && !checkBtn.disabled) {
                 checkAnswer();
             }
         });
 
-        // Initial load of quiz data when the page loads
         document.addEventListener('DOMContentLoaded', loadQuizData);
     </script>
 </body>
