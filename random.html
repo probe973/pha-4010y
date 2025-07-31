@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Pharmacy Questions</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="/pha-4010y/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript" id="MathJax-script">
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            options: {
+                // Removed 'scale' option here to rely on CSS 'font-size: 1em !important;' from style.css
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script"
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html" class="navbar-link">Home</a>
+        <span class="navbar-title" id="quizTitle">Random Questions</span>
+    </div>
+
+    <div class="content">
+        <h1>Generate Practice Questions</h1>
+
+        <!-- Topic Selection Section -->
+        <div id="topicSelection" class="quiz-container">
+            <h2>Select a Topic</h2>
+            <p>Choose a topic to generate 10 random questions.</p>
+            <div class="topic-link-container">
+                <button class="topic-button" data-topic="unit_conversion">
+                    <i class="fas fa-ruler-combined topic-icon"></i> Unit Conversions
+                </button>
+                <button class="topic-button" data-topic="concentration_conversion">
+                    <i class="fas fa-flask topic-icon"></i> Concentration Conversions
+                </button>
+                <button class="topic-button" data-topic="dosage_volume">
+                    <i class="fas fa-pills topic-icon"></i> Dosage & Volume
+                </button>
+                <button class="topic-button" data-topic="molecular_molarity">
+                    <i class="fas fa-atom topic-icon"></i> Molecular & Molarity
+                </button>
+                <button class="topic-button" data-topic="dilution">
+                    <i class="fas fa-tint topic-icon"></i> Dilutions
+                </button>
+                <button class="topic-button" data-topic="patient_specific">
+                    <i class="fas fa-user-md topic-icon"></i> Patient Specific (Ht/Wt)
+                </button>
+                <button class="topic-button" data-topic="bsa">
+                    <i class="fas fa-chart-area topic-icon"></i> Body Surface Area (BSA)
+                </button>
+                <button class="topic-button" data-topic="crcl">
+                    <i class="fas fa-heartbeat topic-icon"></i> Creatinine Clearance (CrCl)
+                </button>
+                <button class="topic-button" data-topic="temperature">
+                    <i class="fas fa-thermometer-half topic-icon"></i> Temperature Conversions
+                </button>
+                <button class="topic-button" data-topic="drug_admin_rate">
+                    <i class="fas fa-clock topic-icon"></i> Drug Administration Rates
+                </button>
+                <button class="topic-button" data-topic="formula_scaling">
+                    <i class="fas fa-prescription-bottle-alt topic-icon"></i> Formula Scaling
+                </button>
+            </div>
+        </div>
+
+        <!-- Quiz Section (hidden initially) -->
+        <div id="quizSection" style="display: none;">
+            <div class="status-bar">
+                <span>Question: <span id="currentQuestionNum">1</span> / <span id="totalQuestions">10</span></span>
+                <span>Score: <span id="scoreTracker">0</span></span>
+                <span>Time: <span id="timeTracker">0 minutes</span></span>
+            </div>
+
+            <div class="quiz-container">
+                <p class="question-number" id="questionNumberDisplay"></p>
+                <p class="question-text" id="questionText"></p>
+                <div class="answer-input-container">
+                    <input type="text" id="userAnswerInput" placeholder="Enter your answer" class="text-input">
+                    <span id="answerUnitDisplay" class="unit-display"></span>
+                </div>
+
+                <div class="feedback-message" id="feedbackMessage"></div>
+                <div class="solution-explanation" id="solutionExplanation"></div>
+
+                <div class="button-group">
+                    <button id="checkAnswerBtn">Check Answer</button>
+                    <button id="nextQuestionBtn" disabled>Next Question</button>
+                    <button id="restartQuizBtn" style="display: none;">Restart Quiz</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Summary Section (hidden initially) -->
+        <div class="quiz-summary" id="quizSummary" style="display: none;">
+            <h2>Quiz Complete!</h2>
+            <p>Your final score: <span id="finalScore"></span> out of <span id="finalTotal"></span></p>
+            <p>Time taken: <span id="finalTime"></span></p>
+            <div class="button-group">
+                <button id="summaryRestartBtn">Restart Quiz</button>
+                <button id="backToTopicsBtn">Back to Topics</button>
+            </div>
+        </div>
+    </div>
+
+    <footer style="text-align: center; margin-top: 50px; padding: 20px; font-size: 0.8em; color: #666;">
+        <p>Icons by <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">Font Awesome</a>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>.</p>
+        <p>Mathematical typesetting by <a href="https://www.mathjax.org/" target="_blank" rel="noopener noreferrer">MathJax</a>.</p>
+        <p>Styled with <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">Tailwind CSS</a>.</p>
+    </footer>
+
+    <script>
+        let currentQuizQuestions = []; // Stores the 10 generated questions for the current quiz
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let timerInterval;
+        let secondsElapsed = 0;
+        let selectedTopicGenerator = null; // Function to generate questions for the selected topic
+
+        // UI Elements
+        const topicSelectionDiv = document.getElementById('topicSelection');
+        const quizSectionDiv = document.getElementById('quizSection');
+        const quizSummaryDiv = document.getElementById('quizSummary');
+
+        const questionNumberDisplay = document.getElementById('questionNumberDisplay');
+        const questionText = document.getElementById('questionText');
+        const userAnswerInput = document.getElementById('userAnswerInput');
+        const answerUnitDisplay = document.getElementById('answerUnitDisplay');
+        const feedbackMessage = document.getElementById('feedbackMessage');
+        const solutionExplanation = document.getElementById('solutionExplanation');
+        const checkAnswerBtn = document.getElementById('checkAnswerBtn');
+        const nextQuestionBtn = document.getElementById('nextQuestionBtn');
+        const restartQuizBtn = document.getElementById('restartQuizBtn');
+        const summaryRestartBtn = document.getElementById('summaryRestartBtn');
+        const backToTopicsBtn = document.getElementById('backToTopicsBtn');
+        const scoreTracker = document.getElementById('scoreTracker');
+        const timeTracker = document.getElementById('timeTracker');
+        const currentQuestionNum = document.getElementById('currentQuestionNum');
+        const totalQuestionsSpan = document.getElementById('totalQuestions'); // Total questions in this quiz (fixed at 10)
+        const quizTitle = document.getElementById('quizTitle');
+
+        const TOTAL_QUESTIONS_PER_QUIZ = 10;
+
+        // --- Unit Definitions ---
+        const unitConversions = {
+            'mass': {
+                'kg': 1000000, 'g': 1000, 'mg': 1, 'mcg': 0.001, 'ng': 0.000001
+            },
+            'volume': {
+                'l': 1000, 'ml': 1, 'ul': 0.001, 'nl': 0.000001
+            },
+            'length': {
+                'km': 100000, 'm': 100, 'cm': 1, 'mm': 0.1, 'nm': 0.0000001
+            }
+        };
+
+        const massUnits = ['kg', 'g', 'mg', 'mcg', 'ng'];
+        const volumeUnits = ['l', 'ml', 'ul', 'nl'];
+        const lengthUnits = ['km', 'm', 'cm', 'mm', 'nm'];
+
+        // --- Helper Functions ---
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function getRandomDecimal(min, max, decimalPlaces) {
+            const factor = Math.pow(10, decimalPlaces);
+            return (Math.floor(Math.random() * (max * factor - min * factor + 1)) + min * factor) / factor;
+        }
+
+        function formatNumber(num, decimalPlaces) {
+            return parseFloat(num.toFixed(decimalPlaces));
+        }
+
+        // --- Question Generation Functions (Topic Specific) ---
+
+        const questionGenerators = {
+            'unit_conversion': function() {
+                const unitTypes = ['mass', 'volume', 'length'];
+                const selectedType = unitTypes[getRandomInt(0, unitTypes.length - 1)];
+                const units = {
+                    'mass': massUnits,
+                    'volume': volumeUnits,
+                    'length': lengthUnits
+                }[selectedType];
+
+                let fromUnit = units[getRandomInt(0, units.length - 1)];
+                let toUnit = units[getRandomInt(0, units.length - 1)];
+                while (fromUnit === toUnit) { // Ensure different units
+                    toUnit = units[getRandomInt(0, units.length - 1)];
+                }
+
+                let baseValue;
+                let correctAnswer;
+                let explanation;
+                let decimalPlaces = 3; // Default for unit conversions
+
+                // Logic to ensure non-calculator friendly numbers
+                // This is where the 'retro-fitting' or careful selection happens
+                if (selectedType === 'mass') {
+                     // Example: g <-> mg, mg <-> mcg, kg <-> g
+                    if ((fromUnit === 'g' && toUnit === 'mg') || (fromUnit === 'mg' && toUnit === 'g')) {
+                        baseValue = getRandomInt(1, 50) * (fromUnit === 'g' ? 1 : 10); // e.g., 2g, 250mg
+                        correctAnswer = convertValue(baseValue, fromUnit, toUnit, selectedType);
+                        decimalPlaces = (correctAnswer % 1 === 0) ? 0 : 2; // Adjust decimal places if it's a whole number or simple decimal
+                    } else if ((fromUnit === 'mg' && toUnit === 'mcg') || (fromUnit === 'mcg' && toUnit === 'mg')) {
+                        baseValue = getRandomInt(1, 10) * (fromUnit === 'mg' ? 1 : 100); // e.g., 5mg, 500mcg
+                        correctAnswer = convertValue(baseValue, fromUnit, toUnit, selectedType);
+                        decimalPlaces = (correctAnswer % 1 === 0) ? 0 : 2;
+                    } else if ((fromUnit === 'kg' && toUnit === 'g') || (fromUnit === 'g' && toUnit === 'kg')) {
+                        baseValue = getRandomInt(1, 10) * (fromUnit === 'kg' ? 1 : 100); // e.g., 2kg, 200g
+                        correctAnswer = convertValue(baseValue, fromUnit, toUnit, selectedType);
+                        decimalPlaces = (correctAnswer % 1 === 0) ? 0 : 2;
+                    } else { // More complex conversions, ensure simple numbers
+                        baseValue = getRandomInt(1, 10); // Simple integer
+                        correctAnswer = convertValue(baseValue, fromUnit, toUnit, selectedType);
+                        // Try to make sure it's not too many decimal places for random complex ones
+                        if (Math.abs(correctAnswer) > 0.0001 && Math.abs(correctAnswer) < 1000000) { // Avoid extreme numbers
+                            decimalPlaces = Math.min(3, (correctAnswer.toString().split('.')[1] || '').length);
+                        } else { // If it's too complex, regenerate or simplify
+                            return questionGenerators['unit_conversion'](); // Recursive call to get a simpler one
+                        }
+                    }
+                } else if (selectedType === 'volume') {
+                    if ((fromUnit === 'l' && toUnit === 'ml') || (fromUnit === 'ml' && toUnit === 'l')) {
+                        baseValue = getRandomInt(1, 50) * (fromUnit === 'l' ? 1 : 10);
+                        correctAnswer = convertValue(baseValue, fromUnit, toUnit, selectedType);
+                        decimalPlaces = (correctAnswer % 1 === 0) ? 0 : 2;
+                    } else if ((fromUnit === 'ml' && toUnit === 'ul') || (fromUnit === 'ul' && toUnit === 'ml')) {
+                        baseValue = getRandomInt(1, 10) * (fromUnit === 'ml' ? 1 : 100);
+                        correctAnswer = convertValue(baseValue, fromUnit, toUnit, selectedType);
+                        decimalPlaces = (correctAnswer % 1 === 0) ? 0 : 2;
+                    } else {
+                        baseValue = getRandomInt(1, 10);
+                        correctAnswer = convertValue(baseValue, fromUnit, toUnit, selectedType);
+                        if (Math.abs(correctAnswer) > 0.0001 && Math.abs(correctAnswer) < 1000000) {
+                            decimalPlaces = Math.min(3, (correctAnswer.toString().split('.')[1] || '').length);
+                        } else {
+                            return questionGenerators['unit_conversion']();
+                        }
+                    }
+                } else if (selectedType === 'length') {
+                    if ((fromUnit === 'm' && toUnit === 'cm') || (fromUnit === 'cm' && toUnit === 'm')) {
+                        baseValue = getRandomInt(1, 50) * (fromUnit === 'm' ? 1 : 10);
+                        correctAnswer = convertValue(baseValue, fromUnit, toUnit, selectedType);
+                        decimalPlaces = (correctAnswer % 1 === 0) ? 0 : 2;
+                    } else if ((fromUnit === 'cm' && toUnit === 'mm') || (fromUnit === 'mm' && toUnit === 'cm')) {
+                        baseValue = getRandomInt(1, 10) * (fromUnit === 'cm' ? 1 : 10);
+                        correctAnswer = convertValue(baseValue, fromUnit, toUnit, selectedType);
+                        decimalPlaces = (correctAnswer % 1 === 0) ? 0 : 2;
+                    } else {
+                        baseValue = getRandomInt(1, 10);
+                        correctAnswer = convertValue(baseValue, fromUnit, toUnit, selectedType);
+                        if (Math.abs(correctAnswer) > 0.0001 && Math.abs(correctAnswer) < 1000000) {
+                            decimalPlaces = Math.min(3, (correctAnswer.toString().split('.')[1] || '').length);
+                        } else {
+                            return questionGenerators['unit_conversion']();
+                        }
+                    }
+                }
+
+                const questionText = `What is <strong>${baseValue} ${fromUnit}</strong> expressed in ${toUnit}?`;
+                explanation = `To convert ${baseValue} ${fromUnit} to ${toUnit}: $${baseValue}~\\text{${fromUnit}} \\times \\frac{${unitConversions[selectedType][toUnit]}~\\text{${toUnit}}}{${unitConversions[selectedType][fromUnit]}~\\text{${fromUnit}}} = ${formatNumber(correctAnswer, decimalPlaces)}~\\text{${toUnit}}$`;
+
+                return {
+                    question: questionText,
+                    correctAnswer: formatNumber(correctAnswer, decimalPlaces),
+                    units: toUnit,
+                    explanation: explanation
+                };
+            },
+
+            'concentration_conversion': function() {
+                const types = ['%w/v_to_mg/ml', 'mg/ml_to_%w/v', '1_in_X_to_mg/ml', 'mg/ml_to_1_in_X'];
+                const type = types[getRandomInt(0, types.length - 1)];
+                let questionText, correctAnswer, units, explanation;
+                let value;
+
+                switch (type) {
+                    case '%w/v_to_mg/ml':
+                        value = getRandomInt(1, 10); // e.g., 2%w/v
+                        questionText = `What is <strong>${value}% w/v</strong> expressed as mg/mL?`;
+                        correctAnswer = value * 10;
+                        units = "mg/mL";
+                        explanation = `$${value}\\%~\\text{w/v} \\implies ${value}~\\text{g} : 100~\\text{ml}$. Convert to mg: $${value * 1000}~\\text{mg} : 100~\\text{ml}$. Divide by 100: $${correctAnswer}~\\text{mg/ml}$";
+                        break;
+                    case 'mg/ml_to_%w/v':
+                        value = getRandomInt(1, 10) * 10; // e.g., 20mg/mL
+                        questionText = `What is <strong>${value} mg/mL</strong> expressed as %w/v?`;
+                        correctAnswer = value / 10;
+                        units = "%w/v";
+                        explanation = `$${value}~\\text{mg/ml} \\implies ${value}~\\text{mg} : 1~\\text{ml}$. Multiply by 100: $${value * 100}~\\text{mg} : 100~\\text{ml}$. Convert to g: $${correctAnswer}~\\text{g} : 100~\\text{ml}$. So, $${correctAnswer}\\%~\\text{w/v}$";
+                        break;
+                    case '1_in_X_to_mg/ml':
+                        // X should be a factor of 1000 for clean mg/mL
+                        const xOptions = [10, 20, 25, 40, 50, 100, 200, 250, 500, 1000];
+                        value = xOptions[getRandomInt(0, xOptions.length - 1)];
+                        questionText = `What is <strong>1 in ${value}</strong> expressed as mg/mL?`;
+                        correctAnswer = 1000 / value;
+                        units = "mg/mL";
+                        explanation = `$1~\\text{in}~${value} \\implies 1~\\text{g} : ${value}~\\text{ml}$. Convert to mg: $1000~\\text{mg} : ${value}~\\text{ml}$. Divide by ${value}: $${correctAnswer}~\\text{mg/ml}$";
+                        break;
+                    case 'mg/ml_to_1_in_X':
+                        // mg/mL should be a factor of 1000 for clean X
+                        const mgmlOptions = [2, 4, 5, 10, 20, 25, 40, 50, 100, 200, 250, 500];
+                        value = mgmlOptions[getRandomInt(0, mgmlOptions.length - 1)];
+                        questionText = `What is <strong>${value} mg/mL</strong> expressed as 1 in X?`;
+                        correctAnswer = 1000 / value;
+                        units = "1 in X";
+                        explanation = `$${value}~\\text{mg/ml} \\implies ${value}~\\text{mg} : 1~\\text{ml}$. Convert to g: $${value / 1000}~\\text{g} : 1~\\text{ml}$. To get 1g, divide 1 by $${value / 1000}$: $1 / ${value / 1000} = ${correctAnswer}$. So, $1~\\text{g} : ${correctAnswer}~\\text{ml}$, or $1~\\text{in}~${correctAnswer}$";
+                        break;
+                }
+                return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
+            },
+
+            'dosage_volume': function() {
+                // Dose = Concentration * Volume
+                // We'll fix two and calculate the third.
+                let questionText, correctAnswer, units, explanation;
+
+                const scenarios = [
+                    'calculate_dose', 'calculate_concentration', 'calculate_volume'
+                ];
+                const scenario = scenarios[getRandomInt(0, scenarios.length - 1)];
+
+                let dose, concentration, volume;
+
+                switch (scenario) {
+                    case 'calculate_dose':
+                        concentration = getRandomInt(5, 50) * 10; // mg/mL, e.g., 50, 100, 200
+                        volume = getRandomInt(1, 10) * 10; // mL, e.g., 20, 50, 100
+                        dose = (concentration * volume) / 1000; // Convert to grams for a clean answer
+                        questionText = `If a mixture is described as <strong>${concentration}mg/ml</strong>, how many grams are required to make <strong>${volume} millilitres</strong> of the mixture? Please give your answer to <strong>2 decimal points</strong>.`;
+                        correctAnswer = formatNumber(dose, 2);
+                        units = "g";
+                        explanation = `Amount = $${concentration}~\\text{mg/ml} \\times ${volume}~\\text{ml} = ${concentration * volume}~\\text{mg}$. Convert to g: $${concentration * volume}~\\text{mg} \\div 1000 = ${correctAnswer}~\\text{g}$`;
+                        break;
+                    case 'calculate_concentration':
+                        dose = getRandomInt(1, 5) * 100; // mg, e.g., 200mg, 500mg
+                        volume = getRandomInt(1, 10) * 5; // mL, e.g., 10ml, 25ml, 50ml
+                        concentration = dose / volume;
+                        questionText = `If <strong>${dose}mg</strong> of active ingredient is dissolved in <strong>${volume} millilitres</strong> of solution, what is the concentration in mg/mL?`;
+                        correctAnswer = formatNumber(concentration, 1);
+                        units = "mg/mL";
+                        explanation = `Concentration = $${dose}~\\text{mg} \\div ${volume}~\\text{ml} = ${correctAnswer}~\\text{mg/ml}$`;
+                        break;
+                    case 'calculate_volume':
+                        dose = getRandomInt(1, 5) * 100; // mg, e.g., 100mg, 300mg
+                        concentration = getRandomInt(5, 20) * 5; // mg/mL, e.g., 10, 25, 50
+                        volume = dose / concentration;
+                        questionText = `How many millilitres of a solution with a concentration of <strong>${concentration}mg/ml</strong> would be required to provide a dose of <strong>${dose}mg</strong>?`;
+                        correctAnswer = formatNumber(volume, 0);
+                        units = "ml";
+                        explanation = `Required volume = $${dose}~\\text{mg} \\div ${concentration}~\\text{mg/ml} = ${correctAnswer}~\\text{ml}$`;
+                        break;
+                }
+                return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
+            },
+
+            'molecular_molarity': function() {
+                const compounds = [
+                    { name: "Sodium Hydroxide (NaOH)", mw: 40, na: 23, o: 16, h: 1 },
+                    { name: "Sodium Chloride (NaCl)", mw: 58.5, na: 23, cl: 35.5 },
+                    { name: "Potassium Chloride (KCl)", mw: 74.5, k: 39, cl: 35.5 },
+                    { name: "Glucose (C6H12O6)", mw: 180, c: 12, h: 1, o: 16 }
+                ];
+                const compound = compounds[getRandomInt(0, compounds.length - 1)];
+                const moles = getRandomInt(1, 5) * 0.1; // 0.1, 0.2, 0.3, 0.4, 0.5 moles (100-500 millimoles)
+                const millimoles = moles * 1000;
+
+                const questionText = `How much <strong>${compound.name}</strong> (molecular weight = <strong>${compound.mw}</strong>) in grams is required to make <strong>${millimoles} millimoles</strong>?`;
+                const correctAnswer = formatNumber(moles * compound.mw, 2);
+                const units = "g";
+                let explanation = `Molecular weight of ${compound.name} = ${compound.mw}~\\text{g/mol}$. `;
+                explanation += `$${millimoles}~\\text{millimoles} = ${moles}~\\text{moles}$. Mass = $${moles}~\\text{moles} \\times ${compound.mw}~\\text{g/mol} = ${correctAnswer}~\\text{g}$";
+
+                return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
+            },
+
+            'dilution': function() {
+                // C1V1 = C2V2
+                let questionText, correctAnswer, units, explanation;
+
+                const c1Options = [10, 20, 25, 50, 100]; // Common 1 in X initial concentrations
+                const v2Options = [100, 200, 250, 500]; // Common final volumes
+                const dilutionFactors = [10, 20, 50, 100, 200]; // How much more dilute
+
+                const c1_val = c1Options[getRandomInt(0, c1Options.length - 1)];
+                const v2_val = v2Options[getRandomInt(0, v2Options.length - 1)];
+                const df = dilutionFactors[getRandomInt(0, dilutionFactors.length - 1)];
+
+                const c2_val = c1_val * df; // Make C2 a larger '1 in X' value
+
+                // Ensure V1 is a clean number
+                const v1_val = (c2_val * v2_val) / c1_val;
+
+                questionText = `How many millilitres of a <strong>1 in ${c1_val}</strong> solution is required to produce <strong>${v2_val}mL</strong> of a <strong>1 in ${c2_val}</strong> solution?`;
+                correctAnswer = formatNumber(v1_val, 1);
+                units = "ml";
+                explanation = `Using $C1V1 = C2V2$: $\\frac{1}{${c1_val}} \\times V1 = \\frac{1}{${c2_val}} \\times ${v2_val}$. $V1 = \\frac{${v2_val}}{${c2_val}} \\times ${c1_val} = ${correctAnswer}~\\text{ml}$";
+
+                return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
+            },
+
+            'patient_specific': function() {
+                let questionText, correctAnswer, units, explanation;
+                const type = getRandomInt(0, 1) === 0 ? 'height' : 'weight';
+
+                if (type === 'height') {
+                    const feet = getRandomInt(5, 6);
+                    const inches = getRandomInt(0, 11); // 0 to 11 inches
+                    const totalInches = (feet * 12) + inches;
+                    const cm = totalInches * 2.5;
+                    const meters = cm / 100;
+                    questionText = `If a person is <strong>${feet} feet and ${inches} inches</strong> tall, what is this in metres (Assuming <strong>1 inch = 2.5 cm</strong>)?`;
+                    correctAnswer = formatNumber(meters, 2);
+                    units = "m";
+                    explanation = `$${feet}~\\text{feet} = ${feet * 12}~\\text{inches}$. Total inches = $${feet * 12} + ${inches} = ${totalInches}~\\text{inches}$. Convert to cm: $${totalInches}~\\text{inches} \\times 2.5~\\text{cm/inch} = ${cm}~\\text{cm}$. Convert to m: $${cm}~\\text{cm} = ${correctAnswer}~\\text{m}$";
+                } else { // weight
+                    const stone = getRandomInt(8, 15);
+                    const lbs = getRandomInt(0, 13); // 0 to 13 lbs
+                    const totalLbs = (stone * 14) + lbs;
+                    const kg = totalLbs / 2; // Assuming 2 lbs = 1 Kg for simplicity
+                    questionText = `If a patient is <strong>${stone} stone ${lbs} lbs</strong>, how much do they weigh in Kg (Assuming <strong>2 lbs = 1 Kg</strong>)?`;
+                    correctAnswer = formatNumber(kg, 0); // Kg usually whole number for stone/lbs conversion
+                    units = "kg";
+                    explanation = `$${stone}~\\text{stone} = ${stone * 14}~\\text{lbs}$. Total lbs = $${stone * 14} + ${lbs} = ${totalLbs}~\\text{lbs}$. Convert to Kg: $${totalLbs}~\\text{lbs} \\div 2~\\text{lbs/kg} = ${correctAnswer}~\\text{kg}$";
+                }
+                return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
+            },
+
+            'bsa': function() {
+                // BSA = sqrt((Ht_cm * Wt_kg) / 3600)
+                // Ensure (Ht_cm * Wt_kg) / 3600 is a perfect square or a clean 2 decimal place number with a known sqrt
+                let questionText, correctAnswer, units, explanation;
+
+                // Values chosen to produce clean BSA results
+                const bsaScenarios = [
+                    { ht_m: 1.5, wt_kg: 54, sqrt_val: 2.25, bsa: 1.50 }, // (150*54)/3600 = 8100/3600 = 2.25 -> 1.50
+                    { ht_m: 1.6, wt_kg: 90, sqrt_val: 4, bsa: 2.00 },   // (160*90)/3600 = 14400/3600 = 4 -> 2.00
+                    { ht_m: 1.7, wt_kg: 70, sqrt_val: 3.305, bsa: 1.82 }, // (170*70)/3600 = 11900/3600 = 3.305... -> approx 1.82
+                    { ht_m: 1.8, wt_kg: 80, sqrt_val: 4, bsa: 2.00 }    // (180*80)/3600 = 14400/3600 = 4 -> 2.00
+                ];
+                const scenario = bsaScenarios[getRandomInt(0, bsaScenarios.length - 1)];
+
+                const ht_cm = scenario.ht_m * 100;
+                const wt_kg = scenario.wt_kg;
+                const bsa_val = scenario.bsa;
+                const sqrt_val_for_info = scenario.sqrt_val;
+
+                // Provide plausible distractors for sqrt_val_for_info
+                const info_sqrts = [
+                    { val: 2.25, sqrt: 1.50 }, { val: 4, sqrt: 2.00 }, { val: 3.3, sqrt: 1.82 }, { val: 3.65, sqrt: 1.91 }, { val: 2.56, sqrt: 1.60 }
+                ];
+                let info_string = "";
+                // Shuffle and pick 4 unique ones including the correct one
+                let unique_info_sqrts = new Set();
+                unique_info_sqrts.add(info_sqrts.find(item => item.sqrt === bsa_val)); // Ensure correct is always included
+                while (unique_info_sqrts.size < 4) {
+                    unique_info_sqrts.add(info_sqrts[getRandomInt(0, info_sqrts.length - 1)]);
+                }
+                info_string = Array.from(unique_info_sqrts).map(item => `$\\sqrt{${item.val}} = ${item.sqrt}$`).join(', ');
+
+
+                questionText = `What is the body surface area of someone who is <strong>${scenario.ht_m} metres</strong> tall and <strong>${wt_kg} Kg</strong> in weight?<br> (For Your Information: ${info_string})<br><em>Formula: BSA = $\\sqrt{\\frac{\\text{Ht (cm)} \\times \\text{Weight (kg)}}{3600}}$</em>`;
+                correctAnswer = bsa_val;
+                units = "m$^2$";
+                explanation = `Height in cm: $${scenario.ht_m}~\\text{m} = ${ht_cm}~\\text{cm}$. BSA = $\\sqrt{\\frac{${ht_cm} \\times ${wt_kg}}{3600}} = \\sqrt{\\frac{${ht_cm * wt_kg}}{3600}} = \\sqrt{${formatNumber((ht_cm * wt_kg) / 3600, 2)}}$. From info: $\\sqrt{${formatNumber((ht_cm * wt_kg) / 3600, 2)}} = ${correctAnswer}$. So, $${correctAnswer}~\\text{m}^2$`;
+
+                return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
+            },
+
+            'crcl': function() {
+                // CrCl (ml/min) = (140-Age) x Weight (Kg) / Serum creatinine (micromol/L)
+                // All male patients, ensure clean whole number results
+                let questionText, correctAnswer, units, explanation;
+
+                const crclScenarios = [
+                    { age: 60, weight: 70, scr: 80, result: 70 }, // (140-60)*70/80 = 80*70/80 = 70
+                    { age: 65, weight: 77, scr: 105, result: 55 }, // (140-65)*77/105 = 75*77/105 = (5/7)*77 = 5*11 = 55
+                    { age: 50, weight: 78, scr: 108, result: 65 }, // (140-50)*78/108 = 90*78/108 = (5/6)*78 = 5*13 = 65
+                    { age: 70, weight: 85, scr: 119, result: 50 }  // (140-70)*85/119 = 70*85/119 = (10/17)*85 = 10*5 = 50
+                ];
+                const scenario = crclScenarios[getRandomInt(0, crclScenarios.length - 1)];
+
+                questionText = `If a <strong>${scenario.age}-year-old</strong> male has a weight of <strong>${scenario.weight}kg</strong> and a serum creatinine of <strong>${scenario.scr} micromol/litre</strong>, what is their CrCl (ml/min)?<br><em>Formula: CrCl (ml/min) = (140-Age) x Weight (Kg) / Serum creatinine (micromol/L)</em>`;
+                correctAnswer = scenario.result;
+                units = "ml/min";
+                explanation = `CrCl = $(140 - ${scenario.age}) \\times ${scenario.weight} / ${scenario.scr} = ${140 - scenario.age} \\times ${scenario.weight} / ${scenario.scr} = ${scenario.result}~\\text{ml/min}$`;
+
+                return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
+            },
+
+            'temperature': function() {
+                let questionText, correctAnswer, units, explanation;
+                const type = getRandomInt(0, 1) === 0 ? 'C_to_F' : 'F_to_C';
+
+                if (type === 'C_to_F') {
+                    const tempC = getRandomInt(0, 40); // 0-40 C
+                    correctAnswer = formatNumber((tempC * 9 / 5) + 32, 0);
+                    questionText = `What is <strong>${tempC} &deg;C</strong> in <strong>&deg;F</strong>?`;
+                    units = "°F";
+                    explanation = `$F = \\frac{9}{5}C + 32$. $F = \\frac{9}{5}(${tempC}) + 32 = ${formatNumber(tempC * 9 / 5, 0)} + 32 = ${correctAnswer}~\\text{&deg;F}$";
+                } else { // F_to_C
+                    const tempF = getRandomInt(32, 104); // 32-104 F (multiples of 9 for clean C)
+                    if ((tempF - 32) % 9 !== 0) { // Ensure (F-32) is a multiple of 9
+                        const remainder = (tempF - 32) % 9;
+                        if (remainder > 4) { // Round up to nearest multiple of 9
+                            tempF += (9 - remainder);
+                        } else { // Round down
+                            tempF -= remainder;
+                        }
+                    }
+                    correctAnswer = formatNumber((tempF - 32) * 5 / 9, 0);
+                    questionText = `What is <strong>${tempF} &deg;F</strong> in <strong>&deg;C</strong>?`;
+                    units = "°C";
+                    explanation = "$C = \\frac{5}{9}(F-32)$. $C = \\frac{5}{9}(${tempF}-32) = \\frac{5}{9}(${tempF - 32}) = ${correctAnswer}~\\text{&deg;C}$";
+                }
+                return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
+            },
+
+            'drug_admin_rate': function() {
+                // Total Drug = Rate * Time * Weight (if applicable)
+                let questionText, correctAnswer, units, explanation;
+                const type = getRandomInt(0, 1) === 0 ? 'mg_per_kg_per_min' : 'mcg_per_min';
+
+                if (type === 'mg_per_kg_per_min') {
+                    const rate = getRandomInt(1, 5); // mg/Kg/min
+                    const time = getRandomInt(10, 30); // minutes
+                    const weight = getRandomInt(50, 100); // Kg
+                    const totalMg = rate * time * weight;
+                    correctAnswer = formatNumber(totalMg / 1000, 1); // Convert to grams
+                    questionText = `A patient requires <strong>${rate} mg/Kg/minute</strong> of a drug for <strong>${time} minutes</strong>. The patient weighs <strong>${weight} Kg</strong>. What is the total amount of drug needed in grams?`;
+                    units = "g";
+                    explanation = `Total mg/minute = $${rate}~\\text{mg/Kg/minute} \\times ${weight}~\\text{Kg} = ${rate * weight}~\\text{mg/minute}$. Total mg = $${rate * weight}~\\text{mg/minute} \\times ${time}~\\text{minutes} = ${totalMg}~\\text{mg}$. Convert to g: $${totalMg}~\\text{mg} \\div 1000 = ${correctAnswer}~\\text{g}$`;
+                } else { // mcg_per_min
+                    const rate = getRandomInt(10, 100) * 5; // mcg/min (e.g., 50, 100, 250)
+                    const hours = getRandomInt(1, 5); // hours
+                    const totalMinutes = hours * 60;
+                    const totalMcg = rate * totalMinutes;
+                    correctAnswer = formatNumber(totalMcg / 1000, 1); // Convert to mg
+                    questionText = `If a patient requires <strong>${rate} mcg/minute</strong> of a drug for <strong>${hours} hours</strong>, what is the total amount of drug they will receive in mg? Answer to <strong>1 decimal place</strong>.`;
+                    units = "mg";
+                    explanation = `Total minutes = $${hours}~\\text{hours} \\times 60~\\text{minutes/hour} = ${totalMinutes}~\\text{minutes}$. Total mcg = $${rate}~\\text{mcg/minute} \\times ${totalMinutes}~\\text{minutes} = ${totalMcg}~\\text{mcg}$. Convert to mg: $${totalMcg}~\\text{mcg} \\div 1000 = ${correctAnswer}~\\text{mg}$`;
+                }
+                return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
+            },
+
+            'formula_scaling': function() {
+                let questionText, correctAnswer, units, explanation;
+
+                const ingredient = getRandomInt(0, 1) === 0 ? 'Glucose' : 'Sodium Chloride';
+                const originalAmount = getRandomInt(10, 200) * 5; // mg (e.g., 50mg, 100mg)
+                const originalVolume = getRandomInt(5, 20) * 5; // mL (e.g., 10ml, 20ml)
+                const targetVolume = getRandomInt(100, 500) * 10; // mL (e.g., 100ml, 200ml)
+
+                const factor = targetVolume / originalVolume;
+                correctAnswer = formatNumber(originalAmount * factor, 0);
+
+                questionText = `If the formula for <strong>Oral Rehydration Salts</strong> is:<br><ul><li>${ingredient}: <strong>${originalAmount}mg</strong></li><li>Purified Water: <strong>to ${originalVolume} mL</strong></li></ul>How much <strong>${ingredient}</strong> in milligrams is required to produce <strong>${targetVolume}ml</strong> of the Oral Rehydration Salts solution?`;
+                units = "mg";
+                explanation = `The formula is for ${originalVolume} ml. We need to make ${targetVolume} ml. Factor = $${targetVolume}~\\text{ml} \\div ${originalVolume}~\\text{ml} = ${factor}$. ${ingredient} needed = $${originalAmount}~\\text{mg} \\times ${factor} = ${correctAnswer}~\\text{mg}$`;
+
+                return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
+            }
+        };
+
+        // --- Core Quiz Logic ---
+
+        function startQuiz(topicId) {
+            selectedTopicGenerator = questionGenerators[topicId];
+            if (!selectedTopicGenerator) {
+                alert('Invalid topic selected!'); // Replace with a proper message box
+                return;
+            }
+
+            currentQuizQuestions = [];
+            for (let i = 0; i < TOTAL_QUESTIONS_PER_QUIZ; i++) {
+                currentQuizQuestions.push(selectedTopicGenerator());
+            }
+
+            currentQuestionIndex = 0;
+            score = 0;
+            secondsElapsed = 0;
+            scoreTracker.textContent = score;
+            totalQuestionsSpan.textContent = TOTAL_QUESTIONS_PER_QUIZ; // Set total questions display
+            quizTitle.textContent = formatTopicTitle(topicId); // Update navbar title
+
+            topicSelectionDiv.style.display = 'none';
+            quizSummaryDiv.style.display = 'none';
+            quizSectionDiv.style.display = 'block';
+
+            restartQuizBtn.style.display = 'none';
+            checkAnswerBtn.style.display = 'inline-block';
+            nextQuestionBtn.style.display = 'inline-block';
+            checkAnswerBtn.disabled = false;
+            nextQuestionBtn.disabled = true;
+            userAnswerInput.value = '';
+            userAnswerInput.disabled = false;
+
+            startTimer();
+            displayQuestion();
+        }
+
+        function displayQuestion() {
+            if (currentQuestionIndex >= currentQuizQuestions.length) {
+                endQuiz();
+                return;
+            }
+
+            const question = currentQuizQuestions[currentQuestionIndex];
+            currentQuestionNum.textContent = currentQuestionIndex + 1;
+            questionText.innerHTML = question.question;
+            userAnswerInput.value = ''; // Clear previous answer
+            userAnswerInput.disabled = false;
+            answerUnitDisplay.textContent = question.units; // Display units next to input
+            feedbackMessage.style.display = 'none';
+            solutionExplanation.style.display = 'none';
+            feedbackMessage.className = 'feedback-message';
+
+            if (window.MathJax) {
+                MathJax.typesetPromise([questionText]).catch((err) => console.error("MathJax typesetting error:", err));
+            }
+
+            checkAnswerBtn.disabled = false;
+            nextQuestionBtn.disabled = true;
+            userAnswerInput.focus(); // Focus on the input field
+        }
+
+        function checkAnswer() {
+            const userAnswer = parseFloat(userAnswerInput.value);
+            const currentQuestion = currentQuizQuestions[currentQuestionIndex];
+            const correctAnswer = currentQuestion.correctAnswer;
+            const explanation = currentQuestion.explanation;
+
+            if (isNaN(userAnswer)) {
+                feedbackMessage.textContent = "Please enter a numerical answer.";
+                feedbackMessage.className = 'feedback-message feedback-incorrect';
+                feedbackMessage.style.display = 'block';
+                return;
+            }
+
+            // Use a small tolerance for floating point comparisons
+            const tolerance = 0.001; // For up to 2-3 decimal places accuracy
+            if (Math.abs(userAnswer - correctAnswer) < tolerance) {
+                score++;
+                feedbackMessage.textContent = "Correct!";
+                feedbackMessage.className = 'feedback-message feedback-correct';
+            } else {
+                feedbackMessage.textContent = "Incorrect. Please review the solution.";
+                feedbackMessage.className = 'feedback-message feedback-incorrect';
+            }
+
+            scoreTracker.textContent = score;
+            feedbackMessage.style.display = 'block';
+            solutionExplanation.innerHTML = `<strong>Solution:</strong> ${explanation}`;
+            solutionExplanation.style.display = 'block';
+
+            if (window.MathJax) {
+                MathJax.typesetPromise([solutionExplanation]).catch((err) => console.error("MathJax typesetting error:", err));
+            }
+
+            checkAnswerBtn.disabled = true;
+            nextQuestionBtn.disabled = false;
+            userAnswerInput.disabled = true; // Disable input after checking
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            displayQuestion();
+        }
+
+        function endQuiz() {
+            clearInterval(timerInterval);
+            quizSummaryDiv.style.display = 'block';
+            quizSectionDiv.style.display = 'none';
+
+            document.getElementById('finalScore').textContent = score;
+            document.getElementById('finalTotal').textContent = TOTAL_QUESTIONS_PER_QUIZ;
+            document.getElementById('finalTime').textContent = formatTime(secondsElapsed);
+        }
+
+        function startTimer() {
+            clearInterval(timerInterval);
+            secondsElapsed = 0;
+            timeTracker.textContent = formatTime(secondsElapsed);
+            timerInterval = setInterval(() => {
+                secondsElapsed++;
+                timeTracker.textContent = formatTime(secondsElapsed);
+            }, 1000);
+        }
+
+        function formatTime(totalSeconds) {
+            const minutes = Math.floor(totalSeconds / 60);
+            const remainingSeconds = totalSeconds % 60;
+            return `${minutes} minute${minutes === 1 ? '' : 's'} ${remainingSeconds} second${remainingSeconds === 1 ? '' : 's'}`;
+        }
+
+        function formatTopicTitle(topicId) {
+            return topicId.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase()) + ' Questions';
+        }
+
+        // --- Event Listeners ---
+
+        // Topic selection buttons
+        document.querySelectorAll('.topic-button').forEach(button => {
+            button.addEventListener('click', (event) => {
+                const topic = event.currentTarget.dataset.topic;
+                startQuiz(topic);
+            });
+        });
+
+        checkAnswerBtn.addEventListener('click', checkAnswer);
+        nextQuestionBtn.addEventListener('click', nextQuestion);
+        summaryRestartBtn.addEventListener('click', () => startQuiz(selectedTopicGenerator.name)); // Re-start with same topic
+        backToTopicsBtn.addEventListener('click', () => {
+            quizSummaryDiv.style.display = 'none';
+            topicSelectionDiv.style.display = 'block';
+            quizTitle.textContent = 'Random Questions'; // Reset navbar title
+        });
+
+        // Allow pressing Enter to check answer or move to next question
+        userAnswerInput.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                if (!checkAnswerBtn.disabled) {
+                    checkAnswer();
+                } else if (!nextQuestionBtn.disabled) {
+                    nextQuestion();
+                }
+            }
+        });
+
+        // --- Initial Setup ---
+        window.onload = () => {
+            // Ensure topic selection is visible at start
+            topicSelectionDiv.style.display = 'block';
+            quizSectionDiv.style.display = 'none';
+            quizSummaryDiv.style.display = 'none';
+        };
+
+        // --- Generic Unit Conversion Helper (used by multiple generators) ---
+        function convertValue(value, fromUnit, toUnit, unitType) {
+            const fromFactor = unitConversions[unitType][fromUnit];
+            const toFactor = unitConversions[unitType][toUnit];
+            if (fromFactor === undefined || toFactor === undefined) {
+                console.error(`Conversion error: Invalid units ${fromUnit} or ${toUnit} for type ${unitType}`);
+                return null;
+            }
+            return (value / fromFactor) * toFactor;
+        }
+
+    </script>
+</body>
+</html>
