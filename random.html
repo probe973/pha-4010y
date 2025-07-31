@@ -201,16 +201,16 @@
             'unit_conversion': function() {
                 let questionData = null;
                 let attempts = 0;
-                const MAX_ATTEMPTS = 300;
+                const MAX_ATTEMPTS = 300; // Increased attempts for more robust generation
 
                 const unitTypes = ['mass', 'volume', 'length'];
 
                 // Define preferred max decimal places for *any number* appearing in a specific unit,
                 // whether it's in the question or the answer.
                 const unitDecimalCleanliness = {
-                    'kg': 2, 'g': 3, 'mg': 0, 'mcg': 0, 'ng': 0,
-                    'l': 2, 'ml': 0, 'mcL': 0, 'nl': 0,
-                    'km': 2, 'm': 0, 'cm': 0, 'mm': 0, 'nm': 0
+                    'kg': 2, 'g': 3, 'mg': 0, 'mcg': 0, 'ng': 0, // g can be 0.005g, mg/mcg/ng usually whole
+                    'l': 2, 'ml': 0, 'mcL': 0, 'nl': 0, // l can be 0.75l, ml/mcL/nl usually whole
+                    'km': 2, 'm': 0, 'cm': 0, 'mm': 0, 'nm': 0 // km/m can be 2.5km, 0.75m, cm/mm/nm usually whole
                 };
 
                 // Define sensible ranges for *answers* for each unit.
@@ -249,7 +249,6 @@
                     if (ansMaxDecimals === 0) {
                         correctAnswerNumerical = getRandomInt(currentAnswerRange.min, currentAnswerRange.max);
                     } else {
-                        // Generate a random integer and divide by a power of 10 to get desired decimal places
                         const factor = Math.pow(10, ansMaxDecimals);
                         correctAnswerNumerical = getRandomInt(currentAnswerRange.min * factor, currentAnswerRange.max * factor) / factor;
                     }
@@ -316,7 +315,7 @@
                         answerUnitDisplay: 'mg/mL',
                         internalAnswerUnit: 'mg/mL',
                         answerRange: { min: 1, max: 800 }, // Answer (mg/mL) range
-                        generate: (ansDec, qDec) => {
+                        generate: function(ansDec, qDec) { // Changed to regular function
                             let aVal;
                             if (ansDec === 0) aVal = getRandomInt(this.answerRange.min, this.answerRange.max);
                             else aVal = getRandomDecimal(this.answerRange.min, this.answerRange.max, ansDec);
@@ -332,7 +331,7 @@
                         answerUnitDisplay: '%w/v',
                         internalAnswerUnit: '%w/v',
                         answerRange: { min: 0.1, max: 20.0 }, // Answer (%w/v) range
-                        generate: (ansDec, qDec) => {
+                        generate: function(ansDec, qDec) { // Changed to regular function
                             let aVal;
                             if (ansDec === 0) aVal = getRandomInt(this.answerRange.min, this.answerRange.max);
                             else aVal = getRandomDecimal(this.answerRange.min, this.answerRange.max, ansDec);
@@ -348,7 +347,7 @@
                         answerUnitDisplay: 'mg/mL',
                         internalAnswerUnit: 'mg/mL',
                         answerRange: { min: 1, max: 1000 }, // Answer (mg/mL) range
-                        generate: (ansDec, qDec) => {
+                        generate: function(ansDec, qDec) { // Changed to regular function
                             let aVal;
                             if (ansDec === 0) aVal = getRandomInt(this.answerRange.min, this.answerRange.max);
                             else aVal = getRandomDecimal(this.answerRange.min, this.answerRange.max, ansDec);
@@ -364,7 +363,7 @@
                         answerUnitDisplay: '', // No unit in input box
                         internalAnswerUnit: 'ratio_X',
                         answerRange: { min: 1, max: 1000 }, // Answer (X value) range
-                        generate: (ansDec, qDec) => {
+                        generate: function(ansDec, qDec) { // Changed to regular function
                             let aVal;
                             if (ansDec === 0) aVal = getRandomInt(this.answerRange.min, this.answerRange.max);
                             else aVal = getRandomDecimal(this.answerRange.min, this.answerRange.max, ansDec);
@@ -382,7 +381,7 @@
                         answerRange: { min: 0.1, max: 20.0 }, // Concentration answer range
                         doseRange: { min: 10, max: 10000 },
                         volumeRange: { min: 10, max: 500 },
-                        generate: (ansDec, qDec) => { // qDec here for dose/volume display decimals
+                        generate: function(ansDec, qDoseDec, qVolDec) { // Changed to regular function
                             let concentration;
                             if (ansDec === 0) concentration = getRandomInt(this.answerRange.min, this.answerRange.max);
                             else concentration = getRandomDecimal(this.answerRange.min, this.answerRange.max, ansDec);
@@ -390,7 +389,7 @@
                             const volume = getRandomInt(this.volumeRange.min, this.volumeRange.max);
                             const dose = concentration * volume;
 
-                            if (isNumberClean(dose, qDec) && isNumberClean(volume, qDec) &&
+                            if (isNumberClean(dose, qDoseDec) && isNumberClean(volume, qVolDec) &&
                                 dose >= this.doseRange.min && dose <= this.doseRange.max) {
                                 return { questionDose: dose, questionVolume: volume, correctAnswer: concentration };
                             }
@@ -405,7 +404,8 @@
 
                     // Determine decimal places for this specific question/answer pair
                     const answerDecimalPlaces = unitDecimalCleanliness[rule.answerUnitDisplay || rule.internalAnswerUnit];
-                    const questionDisplayDecimals = unitDecimalCleanliness[rule.questionUnitDisplay || 'mg/mL']; // Default for dose/volume Q
+                    // For question values, use the general cleanliness for mg/mL or %w/v
+                    const questionDisplayDecimals = unitDecimalCleanliness[rule.questionUnitDisplay || 'mg/mL'];
 
                     const generatedValues = rule.generate.call(rule, answerDecimalPlaces, questionDisplayDecimals);
 
@@ -485,7 +485,8 @@
                 const unitDecimalCleanliness = {
                     'mg': 0, 'g': 2, // mg usually whole, g can have 2 decimals
                     'ml': 0, // ml usually whole
-                    '%w/w': 1, '%w/v': 1 // Percentages usually 1 decimal
+                    '%w/w': 1, '%w/v': 1, // Percentages usually 1 decimal
+                    'mg/mL': 1 // Concentration
                 };
 
                 const dosageVolumeRules = [
@@ -495,7 +496,7 @@
                         answerUnitDisplay: 'mg',
                         internalAnswerUnit: 'mg',
                         answerRange: { min: 1, max: 10000 }, // Dose (mg) range
-                        generate: (ansDec, qConcDec, qVolDec) => {
+                        generate: function(ansDec, qConcDec, qVolDec) { // Changed to regular function
                             let dose;
                             if (ansDec === 0) dose = getRandomInt(this.answerRange.min, this.answerRange.max);
                             else dose = getRandomDecimal(this.answerRange.min, this.answerRange.max, ansDec);
@@ -517,7 +518,7 @@
                         answerUnitDisplay: 'ml',
                         internalAnswerUnit: 'ml',
                         answerRange: { min: 0.1, max: 500 }, // Volume (ml) range
-                        generate: (ansDec, qDoseDec, qConcDec) => {
+                        generate: function(ansDec, qDoseDec, qConcDec) { // Changed to regular function
                             let vol;
                             if (ansDec === 0) vol = getRandomInt(this.answerRange.min, this.answerRange.max);
                             else vol = getRandomDecimal(this.answerRange.min, this.answerRange.max, ansDec);
@@ -538,10 +539,10 @@
                     // Cream %w/w to Active Ingredient (g or mg)
                     {
                         type: 'calculate_w_w_ingredient',
-                        answerUnitDisplay: (ans) => ans < 1 ? 'mg' : 'g',
+                        answerUnitDisplay: function(ans) { return ans < 1 ? 'mg' : 'g'; }, // Changed to regular function
                         internalAnswerUnit: 'dynamic_mass',
                         answerRange: { min: 0.001, max: 50 }, // Active ingredient in grams
-                        generate: (ansDec, qPercentDec, qTotalGDec) => {
+                        generate: function(ansDec, qPercentDec, qTotalGDec) { // Changed to regular function
                             let active_ingredient_g;
                             if (ansDec === 0) active_ingredient_g = getRandomInt(this.answerRange.min, this.answerRange.max);
                             else active_ingredient_g = getRandomDecimal(this.answerRange.min, this.answerRange.max, ansDec);
@@ -565,7 +566,7 @@
                         answerUnitDisplay: 'ml',
                         internalAnswerUnit: 'ml',
                         answerRange: { min: 0.1, max: 500 }, // Volume (ml) range
-                        generate: (ansDec, qDoseValDec, qPercentWVDec) => {
+                        generate: function(ansDec, qDoseValDec, qPercentWVDec) { // Changed to regular function
                             let volume_needed;
                             if (ansDec === 0) volume_needed = getRandomInt(this.answerRange.min, this.answerRange.max);
                             else volume_needed = getRandomDecimal(this.answerRange.min, this.answerRange.max, ansDec);
@@ -605,7 +606,7 @@
                     attempts++;
                     const rule = dosageVolumeRules[getRandomInt(0, dosageVolumeRules.length - 1)];
 
-                    // Determine decimal places for this specific question/answer pair
+                    // Determine answer decimal places based on its type or a default
                     const answerDecimalPlaces = typeof rule.answerDecimals === 'function' ?
                         rule.answerDecimals(rule.answerRange.min)[getRandomInt(0, rule.answerDecimals(rule.answerRange.min).length - 1)] :
                         rule.answerDecimals[getRandomInt(0, rule.answerDecimals.length - 1)];
@@ -622,6 +623,7 @@
                         qValDecimals = [unitDecimalCleanliness['mg'], unitDecimalCleanliness['%w/v']]; // Dose, Percent
                     }
 
+                    // Call generate with appropriate decimal place arguments
                     const generatedValues = rule.generate.apply(rule, [answerDecimalPlaces, ...qValDecimals]);
 
                     if (generatedValues === null) {
