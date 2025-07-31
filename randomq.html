@@ -203,6 +203,7 @@
                 initializeQuiz();
 
             } catch (error) {
+                // If there's an error, display it in the question text element
                 questionTextElement.textContent = `Error loading quiz: ${error.message}. Please check the quiz file.`;
                 console.error('Error fetching quiz data:', error);
             }
