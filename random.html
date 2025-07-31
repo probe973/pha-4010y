@@ -126,7 +126,7 @@
         let score = 0;
         let timerInterval;
         let secondsElapsed = 0;
-        let selectedTopicGenerator = null; // Function to generate questions for the selected topic
+        let selectedTopicId = null; // Store the ID of the currently selected topic
 
         // UI Elements
         const topicSelectionDiv = document.getElementById('topicSelection');
@@ -354,7 +354,7 @@
                         questionText = `If <strong>${dose}mg</strong> of active ingredient is dissolved in <strong>${volume} millilitres</strong> of solution, what is the concentration in mg/mL?`;
                         correctAnswer = formatNumber(concentration, 1);
                         units = "mg/mL";
-                        explanation = `Concentration = $${dose}~\\text{mg} \\div ${volume}~\\text{ml} = ${correctAnswer}~\\text{mg/ml}$`;
+                        explanation = `Concentration = $${dose}~\\text{mg} \\div ${volume}~\\text{ml} = ${correctAnswer}~\\text{mg/ml}$";
                         break;
                     case 'calculate_volume':
                         dose = getRandomInt(1, 5) * 100; // mg, e.g., 100mg, 300mg
@@ -363,7 +363,7 @@
                         questionText = `How many millilitres of a solution with a concentration of <strong>${concentration}mg/ml</strong> would be required to provide a dose of <strong>${dose}mg</strong>?`;
                         correctAnswer = formatNumber(volume, 0);
                         units = "ml";
-                        explanation = `Required volume = $${dose}~\\text{mg} \\div ${concentration}~\\text{mg/ml} = ${correctAnswer}~\\text{ml}$`;
+                        explanation = `Required volume = $${dose}~\\text{mg} \\div ${concentration}~\\text{mg/ml} = ${correctAnswer}~\\text{ml}$";
                         break;
                 }
                 return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
@@ -553,7 +553,7 @@
                     correctAnswer = formatNumber(totalMcg / 1000, 1); // Convert to mg
                     questionText = `If a patient requires <strong>${rate} mcg/minute</strong> of a drug for <strong>${hours} hours</strong>, what is the total amount of drug they will receive in mg? Answer to <strong>1 decimal place</strong>.`;
                     units = "mg";
-                    explanation = `Total minutes = $${hours}~\\text{hours} \\times 60~\\text{minutes/hour} = ${totalMinutes}~\\text{minutes}$. Total mcg = $${rate}~\\text{mcg/minute} \\times ${totalMinutes}~\\text{minutes} = ${totalMcg}~\\text{mcg}$. Convert to mg: $${totalMcg}~\\text{mcg} \\div 1000 = ${correctAnswer}~\\text{mg}$`;
+                    explanation = `Total minutes = $${hours}~\\text{hours} \\times 60~\\text{minutes/hour} = ${totalMinutes}~\\text{minutes}$. Total mcg = $${rate}~\\text{mcg/minute} \\times ${totalMinutes}~\\text{minutes} = ${totalMcg}~\\text{mcg}$. Convert to mg: $${totalMcg}~\\text{mcg} \\div 1000 = ${correctAnswer}~\\text{mg}$";
                 }
                 return { question: questionText, correctAnswer: correctAnswer, units: units, explanation: explanation };
             },
@@ -580,9 +580,11 @@
         // --- Core Quiz Logic ---
 
         function startQuiz(topicId) {
-            selectedTopicGenerator = questionGenerators[topicId];
+            selectedTopicId = topicId; // Store the topic ID
+            const selectedTopicGenerator = questionGenerators[topicId];
             if (!selectedTopicGenerator) {
-                alert('Invalid topic selected!'); // Replace with a proper message box
+                // Using a simple alert for now, but consider a custom modal for better UX
+                alert('Invalid topic selected!');
                 return;
             }
 
@@ -659,7 +661,7 @@
                 feedbackMessage.textContent = "Correct!";
                 feedbackMessage.className = 'feedback-message feedback-correct';
             } else {
-                feedbackMessage.textContent = "Incorrect. Please review the solution.";
+                feedbackMessage.textContent = `Incorrect. The correct answer was ${correctAnswer} ${currentQuestion.units}.`;
                 feedbackMessage.className = 'feedback-message feedback-incorrect';
             }
 
@@ -724,7 +726,10 @@
 
         checkAnswerBtn.addEventListener('click', checkAnswer);
         nextQuestionBtn.addEventListener('click', nextQuestion);
-        summaryRestartBtn.addEventListener('click', () => startQuiz(selectedTopicGenerator.name)); // Re-start with same topic
+        // Use selectedTopicId for restarting the quiz
+        restartQuizBtn.addEventListener('click', () => startQuiz(selectedTopicId));
+        summaryRestartBtn.addEventListener('click', () => startQuiz(selectedTopicId));
+
         backToTopicsBtn.addEventListener('click', () => {
             quizSummaryDiv.style.display = 'none';
             topicSelectionDiv.style.display = 'block';
@@ -758,7 +763,8 @@
                 console.error(`Conversion error: Invalid units ${fromUnit} or ${toUnit} for type ${unitType}`);
                 return null;
             }
-            return (value / fromFactor) * toFactor;
+            // Convert to base unit (factor 1) then to target unit
+            return (value * toFactor) / fromFactor; // Corrected conversion logic
         }
 
     </script>
