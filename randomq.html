@@ -342,28 +342,17 @@
             }
         });
 
-        // Initial load: get quiz ID from URL and load data
-        window.onload = () => {
-            const quizId = getUrlParameter('quiz');
-            if (quizId) {
-                // Call the load function with the correct tool and file path
-                loadQuiz(quizId);
-            } else {
-                questionText.innerHTML = `<p style="color: red;">No quiz ID specified in the URL. Please use a link like: <code>quiz.html?quiz=your_quiz_id</code></p>`;
-                checkAnswerBtn.disabled = true;
-                nextQuestionBtn.disabled = true;
-            }
-        };
-
+        // Function to load the quiz data from the uploaded file
         async function loadQuizData(quizId) {
             try {
-                // The correct way to get the file content is via the content_fetcher
-                const fileContent = await content_fetcher.fetch({
-                    query: "Get the quiz data from the uploaded JSON file.",
-                    source_references: [{ id: `uploaded:${quizId}`, type: 'file' }]
-                });
-
-                const fullData = JSON.parse(fileContent);
+                // Use a standard fetch call with the 'uploaded:' protocol to get the file.
+                // This is the correct method for this environment.
+                const response = await fetch(`uploaded:${quizId}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}. Please check the quiz ID in the URL.`);
+                }
+                const fullData = await response.json();
+                
                 shuffleArray(fullData);
                 quizData = fullData.slice(0, totalQuestions);
 
@@ -372,17 +361,24 @@
                 startQuiz();
             } catch (error) {
                 questionText.innerHTML = `<p style="color: red;">Error loading quiz: ${error.message}. Please check the quiz ID in the URL and ensure the file exists.</p>`;
+                console.error('Error fetching quiz data:', error);
                 checkAnswerBtn.disabled = true;
                 nextQuestionBtn.disabled = true;
             }
         }
-
-        // Overwrite the original loadQuiz with the corrected version.
-        function loadQuiz(quizId) {
-            // Remove the 'data/' prefix if it's present, as the 'uploaded:' protocol handles this.
-            const fileName = quizId.replace('data/', '');
-            loadQuizData(fileName);
-        }
+        
+        // Initial load: get quiz ID from URL and load data
+        window.onload = () => {
+            const quizId = getUrlParameter('quiz');
+            if (quizId) {
+                // Use the new, corrected data loading function
+                loadQuizData(quizId);
+            } else {
+                questionText.innerHTML = `<p style="color: red;">No quiz ID specified in the URL. Please use a link like: <code>quiz.html?quiz=your_quiz_id</code></p>`;
+                checkAnswerBtn.disabled = true;
+                nextQuestionBtn.disabled = true;
+            }
+        };
     </script>
 </body>
 </html>
