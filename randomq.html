@@ -278,7 +278,8 @@
             feedbackMessage.style.display = 'none';
             feedbackMessage.className = 'feedback-message';
             
-            MathJax.typesetPromise([questionText]).catch((err) => console.error("MathJax typesetting error:", err));
+            //MathJax.typesetPromise([questionText]).catch((err) => console.error("MathJax typesetting error:", err));
+            MathJax.typesetPromise([questionText, unitsText]).catch((err) => console.error("MathJax typesetting error:", err));
 
             checkAnswerBtn.disabled = false;
             nextQuestionBtn.disabled = true;
