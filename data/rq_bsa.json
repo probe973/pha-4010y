@@ -1,170 +1,2048 @@
 [
   {
     "Number": 1,
-    "Question": "Find the BSA of somebody who is 1.84 m in height with a mass of 90 kg<br>You can use: $\\sqrt{4.6}=2.14 \\sqrt{5.04}=2.24 \\sqrt{3.74}=1.93$",
-    "Answer": 2.14,
+    "Question": "Find the BSA of somebody who is 1.88 m in height with a mass of 108 kg<br>For Info: $\\sqrt{5.64}=2.37$, $\\sqrt{3.3}=1.82$, $\\sqrt{4.08}=2.02$",
+    "Answer": 2.37,
     "Units": "$m^2$"
   },
   {
     "Number": 2,
-    "Question": "Find the BSA of somebody who is 1.6 m in height with a mass of 72 kg<br>You can use: $\\sqrt{3.2}=1.79 \\sqrt{4.72}=2.17 \\sqrt{7.14}=2.67$",
-    "Answer": 1.79,
+    "Question": "Find the BSA of somebody who is 1.26 m in height with a mass of 36 kg<br>For Info: $\\sqrt{5.94}=2.44$, $\\sqrt{1.26}=1.12$, $\\sqrt{6.97}=2.64$",
+    "Answer": 2.44,
     "Units": "$m^2$"
   },
   {
     "Number": 3,
-    "Question": "Find the BSA of somebody who is 1.5 m in height with a mass of 64.8 kg<br>You can use: $\\sqrt{1.32}=1.15 \\sqrt{1.8}=1.34 \\sqrt{2.7}=1.64$",
-    "Answer": 1.64,
+    "Question": "Find the BSA of somebody who is 1.9 m in height with a mass of 93.6 kg<br>For Info: $\\sqrt{3.32}=1.82$, $\\sqrt{4.72}=2.17$, $\\sqrt{4.94}=2.22$",
+    "Answer": 1.82,
     "Units": "$m^2$"
   },
   {
     "Number": 4,
-    "Question": "Find the BSA of somebody who is 1.62 m in height with a mass of 72 kg<br>You can use: $\\sqrt{4.55}=2.13 \\sqrt{3.24}=1.8 \\sqrt{4.68}=2.16$",
-    "Answer": 1.8,
+    "Question": "Find the BSA of somebody who is 1.55 m in height with a mass of 57.6 kg<br>For Info: $\\sqrt{3}=1.73$, $\\sqrt{6.8}=2.61$, $\\sqrt{2.48}=1.57$",
+    "Answer": 1.73,
     "Units": "$m^2$"
   },
   {
     "Number": 5,
-    "Question": "Find the BSA of somebody who is 1.5 m in height with a mass of 72 kg<br>You can use: $\\sqrt{3}=1.73 \\sqrt{1.92}=1.39 \\sqrt{6.72}=2.59$",
-    "Answer": 1.73,
+    "Question": "Find the BSA of somebody who is 1.85 m in height with a mass of 93.6 kg<br>For Info: $\\sqrt{1.4}=1.18$, $\\sqrt{1.92}=1.39$, $\\sqrt{4.81}=2.19$",
+    "Answer": 1.18,
     "Units": "$m^2$"
   },
   {
     "Number": 6,
-    "Question": "Find the BSA of somebody who is 2.05 m in height with a mass of 122.4 kg<br>You can use: $\\sqrt{2.13}=1.46 \\sqrt{3.78}=1.94 \\sqrt{6.97}=2.64$",
-    "Answer": 2.64,
+    "Question": "Find the BSA of somebody who is 1.6 m in height with a mass of 72 kg<br>For Info: $\\sqrt{3.2}=1.79$, $\\sqrt{3.92}=1.98$, $\\sqrt{0.96}=0.98$",
+    "Answer": 1.79,
     "Units": "$m^2$"
   },
   {
     "Number": 7,
-    "Question": "Find the BSA of somebody who is 1.7 m in height with a mass of 72 kg<br>You can use: $\\sqrt{7.21}=2.69 \\sqrt{4.06}=2.01 \\sqrt{3.4}=1.84$",
-    "Answer": 1.84,
-    "Units": "$m^2$"
-  },
-  {
-    "Number": 8,
-    "Question": "Find the BSA of somebody who is 2.05 m in height with a mass of 108 kg<br>You can use: $\\sqrt{5.64}=2.37 \\sqrt{1.8}=1.34 \\sqrt{6.15}=2.48$",
-    "Answer": 2.48,
-    "Units": "$m^2$"
-  },
-  {
-    "Number": 9,
-    "Question": "Find the BSA of somebody who is 1.8 m in height with a mass of 90 kg<br>You can use: $\\sqrt{4.5}=2.12 \\sqrt{1.2}=1.1 \\sqrt{6.15}=2.48$",
-    "Answer": 2.12,
-    "Units": "$m^2$"
-  },
-  {
-    "Number": 10,
-    "Question": "Find the BSA of somebody who is 1.54 m in height with a mass of 72 kg<br>You can use: $\\sqrt{3.08}=1.75 \\sqrt{1.23}=1.11 \\sqrt{4.32}=2.08$",
-    "Answer": 1.75,
-    "Units": "$m^2$"
-  },
-  {
-    "Number": 11,
-    "Question": "Find the BSA of somebody who is 1.44 m in height with a mass of 54 kg<br>You can use: $\\sqrt{2.16}=1.47 \\sqrt{2.35}=1.53 \\sqrt{2.4}=1.55$",
-    "Answer": 1.47,
-    "Units": "$m^2$"
-  },
-  {
-    "Number": 12,
-    "Question": "Find the BSA of somebody who is 1.3 m in height with a mass of 28.8 kg<br>You can use: $\\sqrt{1.98}=1.41 \\sqrt{6.8}=2.61 \\sqrt{1.04}=1.02$",
-    "Answer": 1.02,
-    "Units": "$m^2$"
-  },
-  {
-    "Number": 13,
-    "Question": "Find the BSA of somebody who is 1.32 m in height with a mass of 36 kg<br>You can use: $\\sqrt{1.32}=1.15 \\sqrt{1.35}=1.16 \\sqrt{1.25}=1.12$",
-    "Answer": 1.15,
-    "Units": "$m^2$"
-  },
-  {
-    "Number": 14,
-    "Question": "Find the BSA of somebody who is 1.6 m in height with a mass of 64.8 kg<br>You can use: $\\sqrt{2.07}=1.44 \\sqrt{4.72}=2.17 \\sqrt{2.88}=1.7$",
-    "Answer": 1.7,
-    "Units": "$m^2$"
-  },
-  {
-    "Number": 15,
-    "Question": "Find the BSA of somebody who is 1.64 m in height with a mass of 90 kg<br>You can use: $\\sqrt{4.1}=2.02 \\sqrt{1.84}=1.36 \\sqrt{2.32}=1.52$",
-    "Answer": 2.02,
-    "Units": "$m^2$"
-  },
-  {
-    "Number": 16,
-    "Question": "Find the BSA of somebody who is 1.48 m in height with a mass of 54 kg<br>You can use: $\\sqrt{2.22}=1.49 \\sqrt{3.36}=1.83 \\sqrt{3.52}=1.88$",
-    "Answer": 1.49,
-    "Units": "$m^2$"
-  },
-  {
-    "Number": 17,
-    "Question": "Find the BSA of somebody who is 1.64 m in height with a mass of 72 kg<br>You can use: $\\sqrt{3.28}=1.81 \\sqrt{3.36}=1.83 \\sqrt{6.4}=2.53$",
-    "Answer": 1.81,
-    "Units": "$m^2$"
-  },
-  {
-    "Number": 18,
-    "Question": "Find the BSA of somebody who is 1.5 m in height with a mass of 72 kg<br>You can use: $\\sqrt{7.14}=2.67 \\sqrt{3}=1.73 \\sqrt{2.97}=1.72$",
-    "Answer": 1.73,
-    "Units": "$m^2$"
-  },
-  {
-    "Number": 19,
-    "Question": "Find the BSA of somebody who is 1.7 m in height with a mass of 79.2 kg<br>You can use: $\\sqrt{4.35}=2.09 \\sqrt{1.8}=1.34 \\sqrt{3.74}=1.93$",
-    "Answer": 1.93,
-    "Units": "$m^2$"
-  },
-  {
-    "Number": 20,
-    "Question": "Find the BSA of somebody who is 1.28 m in height with a mass of 54 kg<br>You can use: $\\sqrt{1.92}=1.39 \\sqrt{6.21}=2.49 \\sqrt{1.56}=1.25$",
-    "Answer": 1.39,
-    "Units": "$m^2$"
-  },
-  {
-    "Number": 21,
-    "Question": "Find the BSA of somebody who is 1.47 m in height with a mass of 60 kg<br>You can use: $\\sqrt{3.4}=1.84 \\sqrt{2.45}=1.57 \\sqrt{1.5}=1.22$",
-    "Answer": 1.57,
-    "Units": "$m^2$"
-  },
-  {
-    "Number": 22,
-    "Question": "Find the BSA of somebody who is 1.56 m in height with a mass of 72 kg<br>You can use: $\\sqrt{5.94}=2.44 \\sqrt{3.12}=1.77 \\sqrt{7.14}=2.67$",
-    "Answer": 1.77,
-    "Units": "$m^2$"
-  },
-  {
-    "Number": 23,
-    "Question": "Find the BSA of somebody who is 2.01 m in height with a mass of 108 kg<br>You can use: $\\sqrt{4.4}=2.1 \\sqrt{6.03}=2.46 \\sqrt{1.56}=1.25$",
-    "Answer": 2.46,
-    "Units": "$m^2$"
-  },
-  {
-    "Number": 24,
-    "Question": "Find the BSA of somebody who is 1.83 m in height with a mass of 96 kg<br>You can use: $\\sqrt{6.24}=2.5 \\sqrt{4.88}=2.21 \\sqrt{5.85}=2.42$",
+    "Question": "Find the BSA of somebody who is 2.1 m in height with a mass of 115.2 kg<br>For Info: $\\sqrt{4.9}=2.21$, $\\sqrt{4.8}=2.19$, $\\sqrt{6.72}=2.59$",
     "Answer": 2.21,
     "Units": "$m^2$"
   },
   {
-    "Number": 25,
-    "Question": "Find the BSA of somebody who is 1.86 m in height with a mass of 96 kg<br>You can use: $\\sqrt{4.75}=2.18 \\sqrt{4.96}=2.23 \\sqrt{1.5}=1.22$",
-    "Answer": 2.23,
+    "Number": 8,
+    "Question": "Find the BSA of somebody who is 1.85 m in height with a mass of 93.6 kg<br>For Info: $\\sqrt{6.12}=2.47$, $\\sqrt{2.65}=1.63$, $\\sqrt{4.81}=2.19$",
+    "Answer": 2.47,
     "Units": "$m^2$"
   },
   {
-    "Number": 26,
-    "Question": "Find the BSA of somebody who is 1.2 m in height with a mass of 36 kg<br>You can use: $\\sqrt{4.55}=2.13 \\sqrt{1.2}=1.1 \\sqrt{1.2}=1.1$",
+    "Number": 9,
+    "Question": "Find the BSA of somebody who is 1.29 m in height with a mass of 36 kg<br>For Info: $\\sqrt{6.06}=2.46$, $\\sqrt{1.29}=1.14$, $\\sqrt{6.8}=2.61$",
+    "Answer": 2.46,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 10,
+    "Question": "Find the BSA of somebody who is 1.8 m in height with a mass of 86.4 kg<br>For Info: $\\sqrt{5.64}=2.37$, $\\sqrt{2.4}=1.55$, $\\sqrt{4.32}=2.08$",
+    "Answer": 2.37,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 11,
+    "Question": "Find the BSA of somebody who is 1.54 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.31}=1.52$, $\\sqrt{1.29}=1.14$, $\\sqrt{3.74}=1.93$",
+    "Answer": 1.52,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 12,
+    "Question": "Find the BSA of somebody who is 2.05 m in height with a mass of 115.2 kg<br>For Info: $\\sqrt{1.92}=1.39$, $\\sqrt{6.03}=2.46$, $\\sqrt{6.56}=2.56$",
+    "Answer": 1.39,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 13,
+    "Question": "Find the BSA of somebody who is 1.44 m in height with a mass of 48 kg<br>For Info: $\\sqrt{1.38}=1.17$, $\\sqrt{1.92}=1.39$, $\\sqrt{1}=1$",
+    "Answer": 1.17,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 14,
+    "Question": "Find the BSA of somebody who is 2.04 m in height with a mass of 108 kg<br>For Info: $\\sqrt{1.3}=1.14$, $\\sqrt{6.12}=2.47$, $\\sqrt{3.1}=1.76$",
+    "Answer": 1.14,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 15,
+    "Question": "Find the BSA of somebody who is 1.22 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.22}=1.1$, $\\sqrt{3.99}=2$, $\\sqrt{1.62}=1.27$",
     "Answer": 1.1,
     "Units": "$m^2$"
   },
   {
+    "Number": 16,
+    "Question": "Find the BSA of somebody who is 1.35 m in height with a mass of 43.2 kg<br>For Info: $\\sqrt{2.13}=1.46$, $\\sqrt{6.03}=2.46$, $\\sqrt{1.62}=1.27$",
+    "Answer": 1.46,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 17,
+    "Question": "Find the BSA of somebody who is 1.35 m in height with a mass of 57.6 kg<br>For Info: $\\sqrt{1.34}=1.16$, $\\sqrt{1.92}=1.39$, $\\sqrt{2.16}=1.47$",
+    "Answer": 1.16,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 18,
+    "Question": "Find the BSA of somebody who is 1.3 m in height with a mass of 50.4 kg<br>For Info: $\\sqrt{5.46}=2.34$, $\\sqrt{6.9}=2.63$, $\\sqrt{1.82}=1.35$",
+    "Answer": 2.34,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 19,
+    "Question": "Find the BSA of somebody who is 2.08 m in height with a mass of 126 kg<br>For Info: $\\sqrt{7.28}=2.7$, $\\sqrt{3.3}=1.82$, $\\sqrt{5.85}=2.42$",
+    "Answer": 2.7,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 20,
+    "Question": "Find the BSA of somebody who is 1.75 m in height with a mass of 79.2 kg<br>For Info: $\\sqrt{4.45}=2.11$, $\\sqrt{4.72}=2.17$, $\\sqrt{3.85}=1.96$",
+    "Answer": 2.11,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 21,
+    "Question": "Find the BSA of somebody who is 1.7 m in height with a mass of 79.2 kg<br>For Info: $\\sqrt{3.2}=1.79$, $\\sqrt{2.6}=1.61$, $\\sqrt{3.74}=1.93$",
+    "Answer": 1.79,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 22,
+    "Question": "Find the BSA of somebody who is 1.47 m in height with a mass of 48 kg<br>For Info: $\\sqrt{3.36}=1.83$, $\\sqrt{1.96}=1.4$, $\\sqrt{6.4}=2.53$",
+    "Answer": 1.83,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 23,
+    "Question": "Find the BSA of somebody who is 1.6 m in height with a mass of 72 kg<br>For Info: $\\sqrt{4.4}=2.1$, $\\sqrt{3.42}=1.85$, $\\sqrt{3.2}=1.79$",
+    "Answer": 2.1,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 24,
+    "Question": "Find the BSA of somebody who is 1.95 m in height with a mass of 93.6 kg<br>For Info: $\\sqrt{4.2}=2.05$, $\\sqrt{2.6}=1.61$, $\\sqrt{5.07}=2.25$",
+    "Answer": 2.05,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 25,
+    "Question": "Find the BSA of somebody who is 1.83 m in height with a mass of 96 kg<br>For Info: $\\sqrt{3.44}=1.85$, $\\sqrt{4.88}=2.21$, $\\sqrt{2.03}=1.42$",
+    "Answer": 1.85,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 26,
+    "Question": "Find the BSA of somebody who is 1.8 m in height with a mass of 100.8 kg<br>For Info: $\\sqrt{1.3}=1.14$, $\\sqrt{5.04}=2.24$, $\\sqrt{5.04}=2.24$",
+    "Answer": 1.14,
+    "Units": "$m^2$"
+  },
+  {
     "Number": 27,
-    "Question": "Find the BSA of somebody who is 1.47 m in height with a mass of 48 kg<br>You can use: $\\sqrt{5.46}=2.34 \\sqrt{1.96}=1.4 \\sqrt{5.6}=2.37$",
-    "Answer": 1.4,
+    "Question": "Find the BSA of somebody who is 2.01 m in height with a mass of 108 kg<br>For Info: $\\sqrt{6.24}=2.5$, $\\sqrt{6.03}=2.46$, $\\sqrt{6.72}=2.59$",
+    "Answer": 2.5,
     "Units": "$m^2$"
   },
   {
     "Number": 28,
-    "Question": "Find the BSA of somebody who is 2.1 m in height with a mass of 126 kg<br>You can use: $\\sqrt{7.35}=2.71 \\sqrt{4.96}=2.23 \\sqrt{6.4}=2.53$",
+    "Question": "Find the BSA of somebody who is 1.3 m in height with a mass of 54 kg<br>For Info: $\\sqrt{1.95}=1.4$, $\\sqrt{6.12}=2.47$, $\\sqrt{1.62}=1.27$",
+    "Answer": 1.4,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 29,
+    "Question": "Find the BSA of somebody who is 2.1 m in height with a mass of 108 kg<br>For Info: $\\sqrt{6.12}=2.47$, $\\sqrt{6.3}=2.51$, $\\sqrt{6.56}=2.56$",
+    "Answer": 2.47,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 30,
+    "Question": "Find the BSA of somebody who is 1.26 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.26}=1.12$, $\\sqrt{3.42}=1.85$, $\\sqrt{5.18}=2.28$",
+    "Answer": 1.12,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 31,
+    "Question": "Find the BSA of somebody who is 1.3 m in height with a mass of 36 kg<br>For Info: $\\sqrt{6.3}=2.51$, $\\sqrt{4.27}=2.07$, $\\sqrt{1.3}=1.14$",
+    "Answer": 2.51,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 32,
+    "Question": "Find the BSA of somebody who is 1.71 m in height with a mass of 72 kg<br>For Info: $\\sqrt{6.06}=2.46$, $\\sqrt{3.42}=1.85$, $\\sqrt{6.15}=2.48$",
+    "Answer": 2.46,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 33,
+    "Question": "Find the BSA of somebody who is 1.5 m in height with a mass of 72 kg<br>For Info: $\\sqrt{3}=1.73$, $\\sqrt{1.72}=1.31$, $\\sqrt{6.4}=2.53$",
+    "Answer": 1.73,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 34,
+    "Question": "Find the BSA of somebody who is 1.4 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.1}=1.45$, $\\sqrt{3.36}=1.83$, $\\sqrt{2.79}=1.67$",
+    "Answer": 1.45,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 35,
+    "Question": "Find the BSA of somebody who is 1.4 m in height with a mass of 57.6 kg<br>For Info: $\\sqrt{5.76}=2.4$, $\\sqrt{6.8}=2.61$, $\\sqrt{2.24}=1.5$",
+    "Answer": 2.4,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 36,
+    "Question": "Find the BSA of somebody who is 1.4 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.1}=1.45$, $\\sqrt{1.88}=1.37$, $\\sqrt{1.96}=1.4$",
+    "Answer": 1.45,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 37,
+    "Question": "Find the BSA of somebody who is 1.52 m in height with a mass of 72 kg<br>For Info: $\\sqrt{3.04}=1.74$, $\\sqrt{2.55}=1.6$, $\\sqrt{2.79}=1.67$",
+    "Answer": 1.74,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 38,
+    "Question": "Find the BSA of somebody who is 1.22 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.22}=1.1$, $\\sqrt{6.7}=2.59$, $\\sqrt{2.79}=1.67$",
+    "Answer": 1.1,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 39,
+    "Question": "Find the BSA of somebody who is 1.62 m in height with a mass of 72 kg<br>For Info: $\\sqrt{4.05}=2.01$, $\\sqrt{3.24}=1.8$, $\\sqrt{1.96}=1.4$",
+    "Answer": 2.01,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 40,
+    "Question": "Find the BSA of somebody who is 1.45 m in height with a mass of 57.6 kg<br>For Info: $\\sqrt{4.6}=2.14$, $\\sqrt{1.35}=1.16$, $\\sqrt{2.32}=1.52$",
+    "Answer": 2.14,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 41,
+    "Question": "Find the BSA of somebody who is 1.95 m in height with a mass of 100.8 kg<br>For Info: $\\sqrt{4.05}=2.01$, $\\sqrt{2.45}=1.57$, $\\sqrt{5.46}=2.34$",
+    "Answer": 2.01,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 42,
+    "Question": "Find the BSA of somebody who is 1.8 m in height with a mass of 90 kg<br>For Info: $\\sqrt{4.5}=2.12$, $\\sqrt{1.84}=1.36$, $\\sqrt{3.63}=1.91$",
+    "Answer": 2.12,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 43,
+    "Question": "Find the BSA of somebody who is 1.25 m in height with a mass of 43.2 kg<br>For Info: $\\sqrt{6}=2.45$, $\\sqrt{6.3}=2.51$, $\\sqrt{1.5}=1.22$",
+    "Answer": 2.45,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 44,
+    "Question": "Find the BSA of somebody who is 1.85 m in height with a mass of 100.8 kg<br>For Info: $\\sqrt{3.08}=1.75$, $\\sqrt{3.92}=1.98$, $\\sqrt{5.18}=2.28$",
+    "Answer": 1.75,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 45,
+    "Question": "Find the BSA of somebody who is 1.34 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.01}=1.42$, $\\sqrt{2.5}=1.58$, $\\sqrt{4.94}=2.22$",
+    "Answer": 1.42,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 46,
+    "Question": "Find the BSA of somebody who is 1.62 m in height with a mass of 60 kg<br>For Info: $\\sqrt{7.35}=2.71$, $\\sqrt{2.7}=1.64$, $\\sqrt{6.3}=2.51$",
     "Answer": 2.71,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 47,
+    "Question": "Find the BSA of somebody who is 1.6 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.4}=1.55$, $\\sqrt{4.96}=2.23$, $\\sqrt{1.62}=1.27$",
+    "Answer": 1.55,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 48,
+    "Question": "Find the BSA of somebody who is 1.35 m in height with a mass of 48 kg<br>For Info: $\\sqrt{1.4}=1.18$, $\\sqrt{1.8}=1.34$, $\\sqrt{2.32}=1.52$",
+    "Answer": 1.18,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 49,
+    "Question": "Find the BSA of somebody who is 1.68 m in height with a mass of 90 kg<br>For Info: $\\sqrt{4.2}=2.05$, $\\sqrt{2.7}=1.64$, $\\sqrt{1.5}=1.22$",
+    "Answer": 2.05,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 50,
+    "Question": "Find the BSA of somebody who is 1.74 m in height with a mass of 96 kg<br>For Info: $\\sqrt{7.28}=2.7$, $\\sqrt{4.64}=2.15$, $\\sqrt{3.3}=1.82$",
+    "Answer": 2.7,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 51,
+    "Question": "Find the BSA of somebody who is 1.95 m in height with a mass of 108 kg<br>For Info: $\\sqrt{4.25}=2.06$, $\\sqrt{4.96}=2.23$, $\\sqrt{5.85}=2.42$",
+    "Answer": 2.06,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 52,
+    "Question": "Find the BSA of somebody who is 1.23 m in height with a mass of 24 kg<br>For Info: $\\sqrt{2.25}=1.5$, $\\sqrt{0.82}=0.91$, $\\sqrt{1.82}=1.35$",
+    "Answer": 1.5,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 53,
+    "Question": "Find the BSA of somebody who is 1.47 m in height with a mass of 60 kg<br>For Info: $\\sqrt{4.75}=2.18$, $\\sqrt{2.45}=1.57$, $\\sqrt{1.35}=1.16$",
+    "Answer": 2.18,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 54,
+    "Question": "Find the BSA of somebody who is 1.71 m in height with a mass of 84 kg<br>For Info: $\\sqrt{2.07}=1.44$, $\\sqrt{3.99}=2$, $\\sqrt{1.25}=1.12$",
+    "Answer": 1.44,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 55,
+    "Question": "Find the BSA of somebody who is 1.24 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.24}=1.11$, $\\sqrt{6.03}=2.46$, $\\sqrt{7.14}=2.67$",
+    "Answer": 1.11,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 56,
+    "Question": "Find the BSA of somebody who is 1.86 m in height with a mass of 90 kg<br>For Info: $\\sqrt{4.65}=2.16$, $\\sqrt{5.76}=2.4$, $\\sqrt{4.44}=2.11$",
+    "Answer": 2.16,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 57,
+    "Question": "Find the BSA of somebody who is 1.6 m in height with a mass of 72 kg<br>For Info: $\\sqrt{2.13}=1.46$, $\\sqrt{2.7}=1.64$, $\\sqrt{3.2}=1.79$",
+    "Answer": 1.46,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 58,
+    "Question": "Find the BSA of somebody who is 2 m in height with a mass of 108 kg<br>For Info: $\\sqrt{3.36}=1.83$, $\\sqrt{1.88}=1.37$, $\\sqrt{6}=2.45$",
+    "Answer": 1.83,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 59,
+    "Question": "Find the BSA of somebody who is 2 m in height with a mass of 108 kg<br>For Info: $\\sqrt{2.04}=1.43$, $\\sqrt{3.3}=1.82$, $\\sqrt{6}=2.45$",
+    "Answer": 1.43,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 60,
+    "Question": "Find the BSA of somebody who is 1.3 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.92}=1.39$, $\\sqrt{4.13}=2.03$, $\\sqrt{1.3}=1.14$",
+    "Answer": 1.39,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 61,
+    "Question": "Find the BSA of somebody who is 1.65 m in height with a mass of 64.8 kg<br>For Info: $\\sqrt{3.12}=1.77$, $\\sqrt{4.88}=2.21$, $\\sqrt{2.97}=1.72$",
+    "Answer": 1.77,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 62,
+    "Question": "Find the BSA of somebody who is 1.77 m in height with a mass of 72 kg<br>For Info: $\\sqrt{1.2}=1.1$, $\\sqrt{3.54}=1.88$, $\\sqrt{3.2}=1.79$",
+    "Answer": 1.1,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 63,
+    "Question": "Find the BSA of somebody who is 1.83 m in height with a mass of 84 kg<br>For Info: $\\sqrt{6.06}=2.46$, $\\sqrt{4.27}=2.07$, $\\sqrt{3.85}=1.96$",
+    "Answer": 2.46,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 64,
+    "Question": "Find the BSA of somebody who is 1.38 m in height with a mass of 60 kg<br>For Info: $\\sqrt{3.16}=1.78$, $\\sqrt{2.3}=1.52$, $\\sqrt{5.32}=2.31$",
+    "Answer": 1.78,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 65,
+    "Question": "Find the BSA of somebody who is 1.5 m in height with a mass of 57.6 kg<br>For Info: $\\sqrt{3.16}=1.78$, $\\sqrt{3.12}=1.77$, $\\sqrt{2.4}=1.55$",
+    "Answer": 1.78,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 66,
+    "Question": "Find the BSA of somebody who is 1.64 m in height with a mass of 72 kg<br>For Info: $\\sqrt{3.28}=1.81$, $\\sqrt{1.8}=1.34$, $\\sqrt{2.88}=1.7$",
+    "Answer": 1.81,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 67,
+    "Question": "Find the BSA of somebody who is 1.9 m in height with a mass of 108 kg<br>For Info: $\\sqrt{5.7}=2.39$, $\\sqrt{5.12}=2.26$, $\\sqrt{4.08}=2.02$",
+    "Answer": 2.39,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 68,
+    "Question": "Find the BSA of somebody who is 1.25 m in height with a mass of 28.8 kg<br>For Info: $\\sqrt{0.6}=0.77$, $\\sqrt{1.35}=1.16$, $\\sqrt{1}=1$",
+    "Answer": 0.77,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 69,
+    "Question": "Find the BSA of somebody who is 1.45 m in height with a mass of 57.6 kg<br>For Info: $\\sqrt{1.3}=1.14$, $\\sqrt{5.76}=2.4$, $\\sqrt{2.32}=1.52$",
+    "Answer": 1.14,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 70,
+    "Question": "Find the BSA of somebody who is 1.85 m in height with a mass of 93.6 kg<br>For Info: $\\sqrt{2.16}=1.47$, $\\sqrt{2.35}=1.53$, $\\sqrt{4.81}=2.19$",
+    "Answer": 1.47,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 71,
+    "Question": "Find the BSA of somebody who is 1.71 m in height with a mass of 84 kg<br>For Info: $\\sqrt{1.89}=1.37$, $\\sqrt{3.99}=2$, $\\sqrt{1.62}=1.27$",
+    "Answer": 1.37,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 72,
+    "Question": "Find the BSA of somebody who is 1.4 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.1}=1.45$, $\\sqrt{3.99}=2$, $\\sqrt{4.94}=2.22$",
+    "Answer": 1.45,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 73,
+    "Question": "Find the BSA of somebody who is 1.47 m in height with a mass of 60 kg<br>For Info: $\\sqrt{4.5}=2.12$, $\\sqrt{2.45}=1.57$, $\\sqrt{4.44}=2.11$",
+    "Answer": 2.12,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 74,
+    "Question": "Find the BSA of somebody who is 1.32 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.32}=1.15$, $\\sqrt{0.8}=0.89$, $\\sqrt{3.63}=1.91$",
+    "Answer": 1.15,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 75,
+    "Question": "Find the BSA of somebody who is 1.58 m in height with a mass of 72 kg<br>For Info: $\\sqrt{3.16}=1.78$, $\\sqrt{6.7}=2.59$, $\\sqrt{0.96}=0.98$",
+    "Answer": 1.78,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 76,
+    "Question": "Find the BSA of somebody who is 1.26 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.26}=1.12$, $\\sqrt{4.13}=2.03$, $\\sqrt{3.1}=1.76$",
+    "Answer": 1.12,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 77,
+    "Question": "Find the BSA of somebody who is 1.3 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.3}=1.14$, $\\sqrt{3.99}=2$, $\\sqrt{6.56}=2.56$",
+    "Answer": 1.14,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 78,
+    "Question": "Find the BSA of somebody who is 1.9 m in height with a mass of 93.6 kg<br>For Info: $\\sqrt{4.85}=2.2$, $\\sqrt{3.42}=1.85$, $\\sqrt{4.94}=2.22$",
+    "Answer": 2.2,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 79,
+    "Question": "Find the BSA of somebody who is 2.1 m in height with a mass of 108 kg<br>For Info: $\\sqrt{1.32}=1.15$, $\\sqrt{6.3}=2.51$, $\\sqrt{3.74}=1.93$",
+    "Answer": 1.15,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 80,
+    "Question": "Find the BSA of somebody who is 1.32 m in height with a mass of 48 kg<br>For Info: $\\sqrt{3.08}=1.75$, $\\sqrt{1.76}=1.33$, $\\sqrt{2.88}=1.7$",
+    "Answer": 1.75,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 81,
+    "Question": "Find the BSA of somebody who is 2.02 m in height with a mass of 108 kg<br>For Info: $\\sqrt{6.06}=2.46$, $\\sqrt{6.03}=2.46$, $\\sqrt{2.4}=1.55$",
+    "Answer": 2.46,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 82,
+    "Question": "Find the BSA of somebody who is 2.1 m in height with a mass of 132 kg<br>For Info: $\\sqrt{4.3}=2.07$, $\\sqrt{7.7}=2.77$, $\\sqrt{3.85}=1.96$",
+    "Answer": 2.07,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 83,
+    "Question": "Find the BSA of somebody who is 2.06 m in height with a mass of 126 kg<br>For Info: $\\sqrt{7.21}=2.69$, $\\sqrt{2.4}=1.55$, $\\sqrt{6}=2.45$",
+    "Answer": 2.69,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 84,
+    "Question": "Find the BSA of somebody who is 1.82 m in height with a mass of 90 kg<br>For Info: $\\sqrt{4.55}=2.13$, $\\sqrt{1.2}=1.1$, $\\sqrt{6.56}=2.56$",
+    "Answer": 2.13,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 85,
+    "Question": "Find the BSA of somebody who is 1.9 m in height with a mass of 108 kg<br>For Info: $\\sqrt{6}=2.45$, $\\sqrt{1.2}=1.1$, $\\sqrt{5.7}=2.39$",
+    "Answer": 2.45,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 86,
+    "Question": "Find the BSA of somebody who is 2.04 m in height with a mass of 120 kg<br>For Info: $\\sqrt{4.7}=2.17$, $\\sqrt{6.8}=2.61$, $\\sqrt{6.72}=2.59$",
+    "Answer": 2.17,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 87,
+    "Question": "Find the BSA of somebody who is 1.55 m in height with a mass of 72 kg<br>For Info: $\\sqrt{2.07}=1.44$, $\\sqrt{7}=2.65$, $\\sqrt{3.1}=1.76$",
+    "Answer": 1.44,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 88,
+    "Question": "Find the BSA of somebody who is 1.56 m in height with a mass of 60 kg<br>For Info: $\\sqrt{2.01}=1.42$, $\\sqrt{2.6}=1.61$, $\\sqrt{2.79}=1.67$",
+    "Answer": 1.42,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 89,
+    "Question": "Find the BSA of somebody who is 1.74 m in height with a mass of 90 kg<br>For Info: $\\sqrt{4.35}=2.09$, $\\sqrt{5.04}=2.24$, $\\sqrt{1.89}=1.37$",
+    "Answer": 2.09,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 90,
+    "Question": "Find the BSA of somebody who is 1.35 m in height with a mass of 43.2 kg<br>For Info: $\\sqrt{7.14}=2.67$, $\\sqrt{1.2}=1.1$, $\\sqrt{1.62}=1.27$",
+    "Answer": 2.67,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 91,
+    "Question": "Find the BSA of somebody who is 1.8 m in height with a mass of 93.6 kg<br>For Info: $\\sqrt{4.8}=2.19$, $\\sqrt{2.5}=1.58$, $\\sqrt{4.68}=2.16$",
+    "Answer": 2.19,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 92,
+    "Question": "Find the BSA of somebody who is 1.23 m in height with a mass of 24 kg<br>For Info: $\\sqrt{2.19}=1.48$, $\\sqrt{0.82}=0.91$, $\\sqrt{1.04}=1.02$",
+    "Answer": 1.48,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 93,
+    "Question": "Find the BSA of somebody who is 1.88 m in height with a mass of 108 kg<br>For Info: $\\sqrt{5.64}=2.37$, $\\sqrt{6.03}=2.46$, $\\sqrt{5.04}=2.24$",
+    "Answer": 2.37,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 94,
+    "Question": "Find the BSA of somebody who is 2.07 m in height with a mass of 108 kg<br>For Info: $\\sqrt{1.44}=1.2$, $\\sqrt{6.21}=2.49$, $\\sqrt{5.46}=2.34$",
+    "Answer": 1.2,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 95,
+    "Question": "Find the BSA of somebody who is 1.71 m in height with a mass of 96 kg<br>For Info: $\\sqrt{2.04}=1.43$, $\\sqrt{4.56}=2.14$, $\\sqrt{3.52}=1.88$",
+    "Answer": 1.43,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 96,
+    "Question": "Find the BSA of somebody who is 1.2 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.22}=1.1$, $\\sqrt{1.2}=1.1$, $\\sqrt{1.25}=1.12$",
+    "Answer": 1.1,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 97,
+    "Question": "Find the BSA of somebody who is 1.89 m in height with a mass of 96 kg<br>For Info: $\\sqrt{1.36}=1.17$, $\\sqrt{5.04}=2.24$, $\\sqrt{5.6}=2.37$",
+    "Answer": 1.17,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 98,
+    "Question": "Find the BSA of somebody who is 1.48 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.22}=1.49$, $\\sqrt{5.76}=2.4$, $\\sqrt{3.52}=1.88$",
+    "Answer": 1.49,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 99,
+    "Question": "Find the BSA of somebody who is 1.66 m in height with a mass of 72 kg<br>For Info: $\\sqrt{3.32}=1.82$, $\\sqrt{1.72}=1.31$, $\\sqrt{2.97}=1.72$",
+    "Answer": 1.82,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 100,
+    "Question": "Find the BSA of somebody who is 1.6 m in height with a mass of 79.2 kg<br>For Info: $\\sqrt{2.16}=1.47$, $\\sqrt{6.12}=2.47$, $\\sqrt{3.52}=1.88$",
+    "Answer": 1.47,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 101,
+    "Question": "Find the BSA of somebody who is 1.4 m in height with a mass of 57.6 kg<br>For Info: $\\sqrt{4.5}=2.12$, $\\sqrt{5.12}=2.26$, $\\sqrt{2.24}=1.5$",
+    "Answer": 2.12,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 102,
+    "Question": "Find the BSA of somebody who is 1.41 m in height with a mass of 60 kg<br>For Info: $\\sqrt{2.92}=1.71$, $\\sqrt{2.35}=1.53$, $\\sqrt{2.24}=1.5$",
+    "Answer": 1.71,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 103,
+    "Question": "Find the BSA of somebody who is 2.08 m in height with a mass of 126 kg<br>For Info: $\\sqrt{7.28}=2.7$, $\\sqrt{4.64}=2.15$, $\\sqrt{1.3}=1.14$",
+    "Answer": 2.7,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 104,
+    "Question": "Find the BSA of somebody who is 2.04 m in height with a mass of 108 kg<br>For Info: $\\sqrt{4.55}=2.13$, $\\sqrt{6.12}=2.47$, $\\sqrt{4.08}=2.02$",
+    "Answer": 2.13,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 105,
+    "Question": "Find the BSA of somebody who is 1.5 m in height with a mass of 57.6 kg<br>For Info: $\\sqrt{3.32}=1.82$, $\\sqrt{2}=1.41$, $\\sqrt{2.4}=1.55$",
+    "Answer": 1.82,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 106,
+    "Question": "Find the BSA of somebody who is 1.36 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.04}=1.43$, $\\sqrt{5.49}=2.34$, $\\sqrt{2.97}=1.72$",
+    "Answer": 1.43,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 107,
+    "Question": "Find the BSA of somebody who is 1.65 m in height with a mass of 84 kg<br>For Info: $\\sqrt{2.07}=1.44$, $\\sqrt{3.85}=1.96$, $\\sqrt{1.56}=1.25$",
+    "Answer": 1.44,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 108,
+    "Question": "Find the BSA of somebody who is 1.65 m in height with a mass of 64.8 kg<br>For Info: $\\sqrt{3.08}=1.75$, $\\sqrt{2.65}=1.63$, $\\sqrt{2.97}=1.72$",
+    "Answer": 1.75,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 109,
+    "Question": "Find the BSA of somebody who is 1.65 m in height with a mass of 72 kg<br>For Info: $\\sqrt{2.07}=1.44$, $\\sqrt{3.3}=1.82$, $\\sqrt{4.81}=2.19$",
+    "Answer": 1.44,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 110,
+    "Question": "Find the BSA of somebody who is 1.35 m in height with a mass of 36 kg<br>For Info: $\\sqrt{2.37}=1.54$, $\\sqrt{1.35}=1.16$, $\\sqrt{5.7}=2.39$",
+    "Answer": 1.54,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 111,
+    "Question": "Find the BSA of somebody who is 1.56 m in height with a mass of 72 kg<br>For Info: $\\sqrt{3.12}=1.77$, $\\sqrt{1.32}=1.15$, $\\sqrt{7.14}=2.67$",
+    "Answer": 1.77,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 112,
+    "Question": "Find the BSA of somebody who is 1.55 m in height with a mass of 64.8 kg<br>For Info: $\\sqrt{5.94}=2.44$, $\\sqrt{3.06}=1.75$, $\\sqrt{2.79}=1.67$",
+    "Answer": 2.44,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 113,
+    "Question": "Find the BSA of somebody who is 1.47 m in height with a mass of 48 kg<br>For Info: $\\sqrt{4.3}=2.07$, $\\sqrt{1.96}=1.4$, $\\sqrt{6.56}=2.56$",
+    "Answer": 2.07,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 114,
+    "Question": "Find the BSA of somebody who is 1.64 m in height with a mass of 72 kg<br>For Info: $\\sqrt{3.28}=1.81$, $\\sqrt{3}=1.73$, $\\sqrt{5.04}=2.24$",
+    "Answer": 1.81,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 115,
+    "Question": "Find the BSA of somebody who is 1.3 m in height with a mass of 43.2 kg<br>For Info: $\\sqrt{4.7}=2.17$, $\\sqrt{6.6}=2.57$, $\\sqrt{1.56}=1.25$",
+    "Answer": 2.17,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 116,
+    "Question": "Find the BSA of somebody who is 2.05 m in height with a mass of 108 kg<br>For Info: $\\sqrt{3.36}=1.83$, $\\sqrt{4.88}=2.21$, $\\sqrt{6.15}=2.48$",
+    "Answer": 1.83,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 117,
+    "Question": "Find the BSA of somebody who is 2.04 m in height with a mass of 108 kg<br>For Info: $\\sqrt{1.28}=1.13$, $\\sqrt{6.12}=2.47$, $\\sqrt{6.4}=2.53$",
+    "Answer": 1.13,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 118,
+    "Question": "Find the BSA of somebody who is 1.35 m in height with a mass of 50.4 kg<br>For Info: $\\sqrt{4.5}=2.12$, $\\sqrt{6.21}=2.49$, $\\sqrt{1.89}=1.37$",
+    "Answer": 2.12,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 119,
+    "Question": "Find the BSA of somebody who is 1.65 m in height with a mass of 64.8 kg<br>For Info: $\\sqrt{3.04}=1.74$, $\\sqrt{3.06}=1.75$, $\\sqrt{2.97}=1.72$",
+    "Answer": 1.74,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 120,
+    "Question": "Find the BSA of somebody who is 1.32 m in height with a mass of 36 kg<br>For Info: $\\sqrt{2.1}=1.45$, $\\sqrt{1.32}=1.15$, $\\sqrt{0.72}=0.85$",
+    "Answer": 1.45,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 121,
+    "Question": "Find the BSA of somebody who is 1.84 m in height with a mass of 108 kg<br>For Info: $\\sqrt{5.52}=2.35$, $\\sqrt{7}=2.65$, $\\sqrt{1.89}=1.37$",
+    "Answer": 2.35,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 122,
+    "Question": "Find the BSA of somebody who is 2.04 m in height with a mass of 126 kg<br>For Info: $\\sqrt{7.14}=2.67$, $\\sqrt{5.2}=2.28$, $\\sqrt{5.32}=2.31$",
+    "Answer": 2.67,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 123,
+    "Question": "Find the BSA of somebody who is 1.95 m in height with a mass of 108 kg<br>For Info: $\\sqrt{2.04}=1.43$, $\\sqrt{4.34}=2.08$, $\\sqrt{5.85}=2.42$",
+    "Answer": 1.43,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 124,
+    "Question": "Find the BSA of somebody who is 1.9 m in height with a mass of 93.6 kg<br>For Info: $\\sqrt{3.28}=1.81$, $\\sqrt{3.36}=1.83$, $\\sqrt{4.94}=2.22$",
+    "Answer": 1.81,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 125,
+    "Question": "Find the BSA of somebody who is 1.95 m in height with a mass of 96 kg<br>For Info: $\\sqrt{2.31}=1.52$, $\\sqrt{5.2}=2.28$, $\\sqrt{1.35}=1.16$",
+    "Answer": 1.52,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 126,
+    "Question": "Find the BSA of somebody who is 1.56 m in height with a mass of 72 kg<br>For Info: $\\sqrt{1.26}=1.12$, $\\sqrt{3.12}=1.77$, $\\sqrt{3.74}=1.93$",
+    "Answer": 1.12,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 127,
+    "Question": "Find the BSA of somebody who is 1.45 m in height with a mass of 57.6 kg<br>For Info: $\\sqrt{3.2}=1.79$, $\\sqrt{2.5}=1.58$, $\\sqrt{2.32}=1.52$",
+    "Answer": 1.79,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 128,
+    "Question": "Find the BSA of somebody who is 1.8 m in height with a mass of 100.8 kg<br>For Info: $\\sqrt{4.75}=2.18$, $\\sqrt{3.24}=1.8$, $\\sqrt{5.04}=2.24$",
+    "Answer": 2.18,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 129,
+    "Question": "Find the BSA of somebody who is 1.92 m in height with a mass of 108 kg<br>For Info: $\\sqrt{7.28}=2.7$, $\\sqrt{5.76}=2.4$, $\\sqrt{3.85}=1.96$",
+    "Answer": 2.7,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 130,
+    "Question": "Find the BSA of somebody who is 1.74 m in height with a mass of 90 kg<br>For Info: $\\sqrt{4.35}=2.09$, $\\sqrt{3.85}=1.96$, $\\sqrt{3}=1.73$",
+    "Answer": 2.09,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 131,
+    "Question": "Find the BSA of somebody who is 2.08 m in height with a mass of 126 kg<br>For Info: $\\sqrt{7.28}=2.7$, $\\sqrt{2.55}=1.6$, $\\sqrt{6.72}=2.59$",
+    "Answer": 2.7,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 132,
+    "Question": "Find the BSA of somebody who is 2 m in height with a mass of 115.2 kg<br>For Info: $\\sqrt{7}=2.65$, $\\sqrt{1.26}=1.12$, $\\sqrt{6.4}=2.53$",
+    "Answer": 2.65,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 133,
+    "Question": "Find the BSA of somebody who is 1.32 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.32}=1.15$, $\\sqrt{5.76}=2.4$, $\\sqrt{6}=2.45$",
+    "Answer": 1.15,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 134,
+    "Question": "Find the BSA of somebody who is 1.95 m in height with a mass of 108 kg<br>For Info: $\\sqrt{6.18}=2.49$, $\\sqrt{5.85}=2.42$, $\\sqrt{5.07}=2.25$",
+    "Answer": 2.49,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 135,
+    "Question": "Find the BSA of somebody who is 2.05 m in height with a mass of 115.2 kg<br>For Info: $\\sqrt{6}=2.45$, $\\sqrt{1.32}=1.15$, $\\sqrt{6.56}=2.56$",
+    "Answer": 2.45,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 136,
+    "Question": "Find the BSA of somebody who is 1.7 m in height with a mass of 86.4 kg<br>For Info: $\\sqrt{2.1}=1.45$, $\\sqrt{6.12}=2.47$, $\\sqrt{4.08}=2.02$",
+    "Answer": 1.45,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 137,
+    "Question": "Find the BSA of somebody who is 1.2 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.24}=1.11$, $\\sqrt{1.2}=1.1$, $\\sqrt{0.96}=0.98$",
+    "Answer": 1.11,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 138,
+    "Question": "Find the BSA of somebody who is 1.71 m in height with a mass of 84 kg<br>For Info: $\\sqrt{2.13}=1.46$, $\\sqrt{3.99}=2$, $\\sqrt{6.72}=2.59$",
+    "Answer": 1.46,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 139,
+    "Question": "Find the BSA of somebody who is 1.62 m in height with a mass of 72 kg<br>For Info: $\\sqrt{1.4}=1.18$, $\\sqrt{3.24}=1.8$, $\\sqrt{3.96}=1.99$",
+    "Answer": 1.18,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 140,
+    "Question": "Find the BSA of somebody who is 1.4 m in height with a mass of 57.6 kg<br>For Info: $\\sqrt{5.88}=2.42$, $\\sqrt{3.3}=1.82$, $\\sqrt{2.24}=1.5$",
+    "Answer": 2.42,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 141,
+    "Question": "Find the BSA of somebody who is 1.3 m in height with a mass of 28.8 kg<br>For Info: $\\sqrt{4.65}=2.16$, $\\sqrt{1.8}=1.34$, $\\sqrt{1.04}=1.02$",
+    "Answer": 2.16,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 142,
+    "Question": "Find the BSA of somebody who is 1.55 m in height with a mass of 72 kg<br>For Info: $\\sqrt{5.64}=2.37$, $\\sqrt{1.96}=1.4$, $\\sqrt{3.1}=1.76$",
+    "Answer": 2.37,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 143,
+    "Question": "Find the BSA of somebody who is 1.26 m in height with a mass of 18 kg<br>For Info: $\\sqrt{0.63}=0.79$, $\\sqrt{1.2}=1.1$, $\\sqrt{5.32}=2.31$",
+    "Answer": 0.79,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 144,
+    "Question": "Find the BSA of somebody who is 1.77 m in height with a mass of 84 kg<br>For Info: $\\sqrt{3.24}=1.8$, $\\sqrt{4.13}=2.03$, $\\sqrt{5.07}=2.25$",
+    "Answer": 1.8,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 145,
+    "Question": "Find the BSA of somebody who is 1.44 m in height with a mass of 60 kg<br>For Info: $\\sqrt{6.18}=2.49$, $\\sqrt{2.4}=1.55$, $\\sqrt{3}=1.73$",
+    "Answer": 2.49,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 146,
+    "Question": "Find the BSA of somebody who is 1.62 m in height with a mass of 72 kg<br>For Info: $\\sqrt{3.24}=1.8$, $\\sqrt{2.45}=1.57$, $\\sqrt{2.16}=1.47$",
+    "Answer": 1.8,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 147,
+    "Question": "Find the BSA of somebody who is 2 m in height with a mass of 108 kg<br>For Info: $\\sqrt{6}=2.45$, $\\sqrt{5.04}=2.24$, $\\sqrt{2.24}=1.5$",
+    "Answer": 2.45,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 148,
+    "Question": "Find the BSA of somebody who is 1.2 m in height with a mass of 28.8 kg<br>For Info: $\\sqrt{6.12}=2.47$, $\\sqrt{3.42}=1.85$, $\\sqrt{0.96}=0.98$",
+    "Answer": 2.47,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 149,
+    "Question": "Find the BSA of somebody who is 1.94 m in height with a mass of 108 kg<br>For Info: $\\sqrt{5.82}=2.41$, $\\sqrt{4.72}=2.17$, $\\sqrt{5.32}=2.31$",
+    "Answer": 2.41,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 150,
+    "Question": "Find the BSA of somebody who is 1.44 m in height with a mass of 60 kg<br>For Info: $\\sqrt{2.19}=1.48$, $\\sqrt{2.4}=1.55$, $\\sqrt{5.04}=2.24$",
+    "Answer": 1.48,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 151,
+    "Question": "Find the BSA of somebody who is 1.8 m in height with a mass of 84 kg<br>For Info: $\\sqrt{2.1}=1.45$, $\\sqrt{4.2}=2.05$, $\\sqrt{4.44}=2.11$",
+    "Answer": 1.45,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 152,
+    "Question": "Find the BSA of somebody who is 1.25 m in height with a mass of 43.2 kg<br>For Info: $\\sqrt{4.65}=2.16$, $\\sqrt{2.25}=1.5$, $\\sqrt{1.5}=1.22$",
+    "Answer": 2.16,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 153,
+    "Question": "Find the BSA of somebody who is 1.5 m in height with a mass of 64.8 kg<br>For Info: $\\sqrt{6.24}=2.5$, $\\sqrt{1.72}=1.31$, $\\sqrt{2.7}=1.64$",
+    "Answer": 2.5,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 154,
+    "Question": "Find the BSA of somebody who is 1.94 m in height with a mass of 108 kg<br>For Info: $\\sqrt{5.82}=2.41$, $\\sqrt{6.03}=2.46$, $\\sqrt{3.3}=1.82$",
+    "Answer": 2.41,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 155,
+    "Question": "Find the BSA of somebody who is 1.2 m in height with a mass of 36 kg<br>For Info: $\\sqrt{2.01}=1.42$, $\\sqrt{3.92}=1.98$, $\\sqrt{1.2}=1.1$",
+    "Answer": 1.42,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 156,
+    "Question": "Find the BSA of somebody who is 1.7 m in height with a mass of 90 kg<br>For Info: $\\sqrt{4.25}=2.06$, $\\sqrt{3.42}=1.85$, $\\sqrt{6.15}=2.48$",
+    "Answer": 2.06,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 157,
+    "Question": "Find the BSA of somebody who is 1.47 m in height with a mass of 60 kg<br>For Info: $\\sqrt{2.01}=1.42$, $\\sqrt{2.45}=1.57$, $\\sqrt{4.2}=2.05$",
+    "Answer": 1.42,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 158,
+    "Question": "Find the BSA of somebody who is 1.5 m in height with a mass of 57.6 kg<br>For Info: $\\sqrt{4.4}=2.1$, $\\sqrt{2.4}=1.55$, $\\sqrt{2.4}=1.55$",
+    "Answer": 2.1,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 159,
+    "Question": "Find the BSA of somebody who is 1.34 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.01}=1.42$, $\\sqrt{2.45}=1.57$, $\\sqrt{5.07}=2.25$",
+    "Answer": 1.42,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 160,
+    "Question": "Find the BSA of somebody who is 1.8 m in height with a mass of 79.2 kg<br>For Info: $\\sqrt{4.5}=2.12$, $\\sqrt{1.29}=1.14$, $\\sqrt{3.96}=1.99$",
+    "Answer": 2.12,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 161,
+    "Question": "Find the BSA of somebody who is 1.32 m in height with a mass of 48 kg<br>For Info: $\\sqrt{3.2}=1.79$, $\\sqrt{1.76}=1.33$, $\\sqrt{6.15}=2.48$",
+    "Answer": 1.79,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 162,
+    "Question": "Find the BSA of somebody who is 1.34 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.34}=1.16$, $\\sqrt{4.34}=2.08$, $\\sqrt{1.35}=1.16$",
+    "Answer": 1.16,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 163,
+    "Question": "Find the BSA of somebody who is 1.58 m in height with a mass of 72 kg<br>For Info: $\\sqrt{3.16}=1.78$, $\\sqrt{5.04}=2.24$, $\\sqrt{5.55}=2.36$",
+    "Answer": 1.78,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 164,
+    "Question": "Find the BSA of somebody who is 1.4 m in height with a mass of 57.6 kg<br>For Info: $\\sqrt{5.82}=2.41$, $\\sqrt{3.36}=1.83$, $\\sqrt{2.24}=1.5$",
+    "Answer": 2.41,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 165,
+    "Question": "Find the BSA of somebody who is 1.3 m in height with a mass of 43.2 kg<br>For Info: $\\sqrt{4.45}=2.11$, $\\sqrt{5.85}=2.42$, $\\sqrt{1.56}=1.25$",
+    "Answer": 2.11,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 166,
+    "Question": "Find the BSA of somebody who is 1.65 m in height with a mass of 79.2 kg<br>For Info: $\\sqrt{4.35}=2.09$, $\\sqrt{4.06}=2.01$, $\\sqrt{3.63}=1.91$",
+    "Answer": 2.09,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 167,
+    "Question": "Find the BSA of somebody who is 1.5 m in height with a mass of 60 kg<br>For Info: $\\sqrt{1.2}=1.1$, $\\sqrt{2.5}=1.58$, $\\sqrt{2.03}=1.42$",
+    "Answer": 1.1,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 168,
+    "Question": "Find the BSA of somebody who is 1.59 m in height with a mass of 72 kg<br>For Info: $\\sqrt{3.32}=1.82$, $\\sqrt{3.18}=1.78$, $\\sqrt{2.03}=1.42$",
+    "Answer": 1.82,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 169,
+    "Question": "Find the BSA of somebody who is 1.38 m in height with a mass of 48 kg<br>For Info: $\\sqrt{1.36}=1.17$, $\\sqrt{1.84}=1.36$, $\\sqrt{2.88}=1.7$",
+    "Answer": 1.17,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 170,
+    "Question": "Find the BSA of somebody who is 1.6 m in height with a mass of 72 kg<br>For Info: $\\sqrt{3.2}=1.79$, $\\sqrt{0.82}=0.91$, $\\sqrt{6.4}=2.53$",
+    "Answer": 1.79,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 171,
+    "Question": "Find the BSA of somebody who is 2 m in height with a mass of 108 kg<br>For Info: $\\sqrt{2.37}=1.54$, $\\sqrt{5.58}=2.36$, $\\sqrt{6}=2.45$",
+    "Answer": 1.54,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 172,
+    "Question": "Find the BSA of somebody who is 2.06 m in height with a mass of 108 kg<br>For Info: $\\sqrt{6.18}=2.49$, $\\sqrt{1.26}=1.12$, $\\sqrt{3.2}=1.79$",
+    "Answer": 2.49,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 173,
+    "Question": "Find the BSA of somebody who is 2.1 m in height with a mass of 132 kg<br>For Info: $\\sqrt{4.5}=2.12$, $\\sqrt{7.7}=2.77$, $\\sqrt{1.04}=1.02$",
+    "Answer": 2.12,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 174,
+    "Question": "Find the BSA of somebody who is 1.82 m in height with a mass of 90 kg<br>For Info: $\\sqrt{4.55}=2.13$, $\\sqrt{3.92}=1.98$, $\\sqrt{4.08}=2.02$",
+    "Answer": 2.13,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 175,
+    "Question": "Find the BSA of somebody who is 1.64 m in height with a mass of 72 kg<br>For Info: $\\sqrt{3.28}=1.81$, $\\sqrt{5.85}=2.42$, $\\sqrt{6.97}=2.64$",
+    "Answer": 1.81,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 176,
+    "Question": "Find the BSA of somebody who is 1.25 m in height with a mass of 28.8 kg<br>For Info: $\\sqrt{2.1}=1.45$, $\\sqrt{6.9}=2.63$, $\\sqrt{1}=1$",
+    "Answer": 1.45,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 177,
+    "Question": "Find the BSA of somebody who is 1.3 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.3}=1.14$, $\\sqrt{1.32}=1.15$, $\\sqrt{2.24}=1.5$",
+    "Answer": 1.14,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 178,
+    "Question": "Find the BSA of somebody who is 1.28 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.28}=1.13$, $\\sqrt{5.58}=2.36$, $\\sqrt{2.32}=1.52$",
+    "Answer": 1.13,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 179,
+    "Question": "Find the BSA of somebody who is 1.47 m in height with a mass of 60 kg<br>For Info: $\\sqrt{2.25}=1.5$, $\\sqrt{2.45}=1.57$, $\\sqrt{4.44}=2.11$",
+    "Answer": 1.5,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 180,
+    "Question": "Find the BSA of somebody who is 2 m in height with a mass of 100.8 kg<br>For Info: $\\sqrt{2.1}=1.45$, $\\sqrt{6.8}=2.61$, $\\sqrt{5.6}=2.37$",
+    "Answer": 1.45,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 181,
+    "Question": "Find the BSA of somebody who is 1.62 m in height with a mass of 72 kg<br>For Info: $\\sqrt{3.24}=1.8$, $\\sqrt{1.68}=1.3$, $\\sqrt{5.7}=2.39$",
+    "Answer": 1.8,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 182,
+    "Question": "Find the BSA of somebody who is 1.92 m in height with a mass of 108 kg<br>For Info: $\\sqrt{4.35}=2.09$, $\\sqrt{5.76}=2.4$, $\\sqrt{1.56}=1.25$",
+    "Answer": 2.09,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 183,
+    "Question": "Find the BSA of somebody who is 1.95 m in height with a mass of 96 kg<br>For Info: $\\sqrt{5.76}=2.4$, $\\sqrt{5.2}=2.28$, $\\sqrt{2.56}=1.6$",
+    "Answer": 2.4,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 184,
+    "Question": "Find the BSA of somebody who is 1.55 m in height with a mass of 64.8 kg<br>For Info: $\\sqrt{1.26}=1.12$, $\\sqrt{5.94}=2.44$, $\\sqrt{2.79}=1.67$",
+    "Answer": 1.12,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 185,
+    "Question": "Find the BSA of somebody who is 1.88 m in height with a mass of 90 kg<br>For Info: $\\sqrt{4.7}=2.17$, $\\sqrt{1.23}=1.11$, $\\sqrt{1.74}=1.32$",
+    "Answer": 2.17,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 186,
+    "Question": "Find the BSA of somebody who is 1.55 m in height with a mass of 64.8 kg<br>For Info: $\\sqrt{2.16}=1.47$, $\\sqrt{0.84}=0.92$, $\\sqrt{2.79}=1.67$",
+    "Answer": 1.47,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 187,
+    "Question": "Find the BSA of somebody who is 1.34 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.01}=1.42$, $\\sqrt{2.3}=1.52$, $\\sqrt{0.75}=0.87$",
+    "Answer": 1.42,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 188,
+    "Question": "Find the BSA of somebody who is 1.56 m in height with a mass of 60 kg<br>For Info: $\\sqrt{4.6}=2.14$, $\\sqrt{2.6}=1.61$, $\\sqrt{4.94}=2.22$",
+    "Answer": 2.14,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 189,
+    "Question": "Find the BSA of somebody who is 1.9 m in height with a mass of 108 kg<br>For Info: $\\sqrt{3.2}=1.79$, $\\sqrt{5.12}=2.26$, $\\sqrt{5.7}=2.39$",
+    "Answer": 1.79,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 190,
+    "Question": "Find the BSA of somebody who is 1.7 m in height with a mass of 72 kg<br>For Info: $\\sqrt{7.35}=2.71$, $\\sqrt{1.72}=1.31$, $\\sqrt{3.4}=1.84$",
+    "Answer": 2.71,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 191,
+    "Question": "Find the BSA of somebody who is 1.25 m in height with a mass of 28.8 kg<br>For Info: $\\sqrt{4.5}=2.12$, $\\sqrt{5.85}=2.42$, $\\sqrt{1}=1$",
+    "Answer": 2.12,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 192,
+    "Question": "Find the BSA of somebody who is 1.32 m in height with a mass of 54 kg<br>For Info: $\\sqrt{1.98}=1.41$, $\\sqrt{6.9}=2.63$, $\\sqrt{4.81}=2.19$",
+    "Answer": 1.41,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 193,
+    "Question": "Find the BSA of somebody who is 1.98 m in height with a mass of 108 kg<br>For Info: $\\sqrt{3.48}=1.87$, $\\sqrt{5.94}=2.44$, $\\sqrt{4.32}=2.08$",
+    "Answer": 1.87,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 194,
+    "Question": "Find the BSA of somebody who is 2.1 m in height with a mass of 126 kg<br>For Info: $\\sqrt{7.35}=2.71$, $\\sqrt{0.8}=0.89$, $\\sqrt{7.56}=2.75$",
+    "Answer": 2.71,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 195,
+    "Question": "Find the BSA of somebody who is 1.48 m in height with a mass of 72 kg<br>For Info: $\\sqrt{2.96}=1.72$, $\\sqrt{6.7}=2.59$, $\\sqrt{1.25}=1.12$",
+    "Answer": 1.72,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 196,
+    "Question": "Find the BSA of somebody who is 1.76 m in height with a mass of 90 kg<br>For Info: $\\sqrt{4.4}=2.1$, $\\sqrt{6.21}=2.49$, $\\sqrt{1.5}=1.22$",
+    "Answer": 2.1,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 197,
+    "Question": "Find the BSA of somebody who is 1.71 m in height with a mass of 72 kg<br>For Info: $\\sqrt{4.4}=2.1$, $\\sqrt{3.42}=1.85$, $\\sqrt{3.85}=1.96$",
+    "Answer": 2.1,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 198,
+    "Question": "Find the BSA of somebody who is 1.24 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.24}=1.11$, $\\sqrt{1.2}=1.1$, $\\sqrt{2.4}=1.55$",
+    "Answer": 1.11,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 199,
+    "Question": "Find the BSA of somebody who is 1.25 m in height with a mass of 28.8 kg<br>For Info: $\\sqrt{5.64}=2.37$, $\\sqrt{3.36}=1.83$, $\\sqrt{1}=1$",
+    "Answer": 2.37,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 200,
+    "Question": "Find the BSA of somebody who is 1.86 m in height with a mass of 90 kg<br>For Info: $\\sqrt{4.65}=2.16$, $\\sqrt{6.7}=2.59$, $\\sqrt{1.3}=1.14$",
+    "Answer": 2.16,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 201,
+    "Question": "Find the BSA of somebody who is 1.74 m in height with a mass of 84 kg<br>For Info: $\\sqrt{2.16}=1.47$, $\\sqrt{4.06}=2.01$, $\\sqrt{1.68}=1.3$",
+    "Answer": 1.47,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 202,
+    "Question": "Find the BSA of somebody who is 1.4 m in height with a mass of 50.4 kg<br>For Info: $\\sqrt{2.31}=1.52$, $\\sqrt{6.03}=2.46$, $\\sqrt{1.96}=1.4$",
+    "Answer": 1.52,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 203,
+    "Question": "Find the BSA of somebody who is 1.75 m in height with a mass of 86.4 kg<br>For Info: $\\sqrt{0.61}=0.78$, $\\sqrt{2.5}=1.58$, $\\sqrt{4.2}=2.05$",
+    "Answer": 0.78,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 204,
+    "Question": "Find the BSA of somebody who is 1.92 m in height with a mass of 108 kg<br>For Info: $\\sqrt{5.76}=2.4$, $\\sqrt{5.94}=2.44$, $\\sqrt{1.68}=1.3$",
+    "Answer": 2.4,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 205,
+    "Question": "Find the BSA of somebody who is 1.72 m in height with a mass of 72 kg<br>For Info: $\\sqrt{3.44}=1.85$, $\\sqrt{6.21}=2.49$, $\\sqrt{6.4}=2.53$",
+    "Answer": 1.85,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 206,
+    "Question": "Find the BSA of somebody who is 1.2 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.2}=1.1$, $\\sqrt{3.3}=1.82$, $\\sqrt{5.18}=2.28$",
+    "Answer": 1.1,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 207,
+    "Question": "Find the BSA of somebody who is 1.53 m in height with a mass of 60 kg<br>For Info: $\\sqrt{4.2}=2.05$, $\\sqrt{2.55}=1.6$, $\\sqrt{2.88}=1.7$",
+    "Answer": 2.05,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 208,
+    "Question": "Find the BSA of somebody who is 2 m in height with a mass of 100.8 kg<br>For Info: $\\sqrt{4.75}=2.18$, $\\sqrt{2.45}=1.57$, $\\sqrt{5.6}=2.37$",
+    "Answer": 2.18,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 209,
+    "Question": "Find the BSA of somebody who is 1.36 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.04}=1.43$, $\\sqrt{6.7}=2.59$, $\\sqrt{4.68}=2.16$",
+    "Answer": 1.43,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 210,
+    "Question": "Find the BSA of somebody who is 1.46 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.19}=1.48$, $\\sqrt{1.76}=1.33$, $\\sqrt{4.68}=2.16$",
+    "Answer": 1.48,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 211,
+    "Question": "Find the BSA of somebody who is 1.95 m in height with a mass of 115.2 kg<br>For Info: $\\sqrt{2.07}=1.44$, $\\sqrt{3}=1.73$, $\\sqrt{6.24}=2.5$",
+    "Answer": 1.44,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 212,
+    "Question": "Find the BSA of somebody who is 1.75 m in height with a mass of 86.4 kg<br>For Info: $\\sqrt{2.1}=1.45$, $\\sqrt{3.78}=1.94$, $\\sqrt{4.2}=2.05$",
+    "Answer": 1.45,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 213,
+    "Question": "Find the BSA of somebody who is 1.77 m in height with a mass of 84 kg<br>For Info: $\\sqrt{4.55}=2.13$, $\\sqrt{4.13}=2.03$, $\\sqrt{5.6}=2.37$",
+    "Answer": 2.13,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 214,
+    "Question": "Find the BSA of somebody who is 1.78 m in height with a mass of 90 kg<br>For Info: $\\sqrt{4.45}=2.11$, $\\sqrt{3.06}=1.75$, $\\sqrt{0.96}=0.98$",
+    "Answer": 2.11,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 215,
+    "Question": "Find the BSA of somebody who is 1.44 m in height with a mass of 48 kg<br>For Info: $\\sqrt{2.28}=1.51$, $\\sqrt{1.92}=1.39$, $\\sqrt{1.3}=1.14$",
+    "Answer": 1.51,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 216,
+    "Question": "Find the BSA of somebody who is 1.52 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.28}=1.51$, $\\sqrt{1.72}=1.31$, $\\sqrt{3.63}=1.91$",
+    "Answer": 1.51,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 217,
+    "Question": "Find the BSA of somebody who is 1.98 m in height with a mass of 108 kg<br>For Info: $\\sqrt{5.94}=2.44$, $\\sqrt{5.04}=2.24$, $\\sqrt{3.2}=1.79$",
+    "Answer": 2.44,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 218,
+    "Question": "Find the BSA of somebody who is 1.5 m in height with a mass of 60 kg<br>For Info: $\\sqrt{1.22}=1.1$, $\\sqrt{2.5}=1.58$, $\\sqrt{6.56}=2.56$",
+    "Answer": 1.1,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 219,
+    "Question": "Find the BSA of somebody who is 1.5 m in height with a mass of 72 kg<br>For Info: $\\sqrt{3}=1.73$, $\\sqrt{5.58}=2.36$, $\\sqrt{1.89}=1.37$",
+    "Answer": 1.73,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 220,
+    "Question": "Find the BSA of somebody who is 2.08 m in height with a mass of 108 kg<br>For Info: $\\sqrt{6.24}=2.5$, $\\sqrt{4.64}=2.15$, $\\sqrt{3.85}=1.96$",
+    "Answer": 2.5,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 221,
+    "Question": "Find the BSA of somebody who is 1.25 m in height with a mass of 36 kg<br>For Info: $\\sqrt{3}=1.73$, $\\sqrt{1.26}=1.12$, $\\sqrt{1.25}=1.12$",
+    "Answer": 1.73,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 222,
+    "Question": "Find the BSA of somebody who is 2.07 m in height with a mass of 108 kg<br>For Info: $\\sqrt{6}=2.45$, $\\sqrt{6.21}=2.49$, $\\sqrt{1}=1$",
+    "Answer": 2.45,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 223,
+    "Question": "Find the BSA of somebody who is 1.6 m in height with a mass of 72 kg<br>For Info: $\\sqrt{1.32}=1.15$, $\\sqrt{5.85}=2.42$, $\\sqrt{3.2}=1.79$",
+    "Answer": 1.15,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 224,
+    "Question": "Find the BSA of somebody who is 1.65 m in height with a mass of 84 kg<br>For Info: $\\sqrt{0.6}=0.77$, $\\sqrt{3.85}=1.96$, $\\sqrt{1.62}=1.27$",
+    "Answer": 0.77,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 225,
+    "Question": "Find the BSA of somebody who is 1.62 m in height with a mass of 84 kg<br>For Info: $\\sqrt{4.4}=2.1$, $\\sqrt{3.78}=1.94$, $\\sqrt{4.68}=2.16$",
+    "Answer": 2.1,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 226,
+    "Question": "Find the BSA of somebody who is 1.86 m in height with a mass of 90 kg<br>For Info: $\\sqrt{4.65}=2.16$, $\\sqrt{1.88}=1.37$, $\\sqrt{3.1}=1.76$",
+    "Answer": 2.16,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 227,
+    "Question": "Find the BSA of somebody who is 1.86 m in height with a mass of 108 kg<br>For Info: $\\sqrt{5.58}=2.36$, $\\sqrt{3.18}=1.78$, $\\sqrt{2.79}=1.67$",
+    "Answer": 2.36,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 228,
+    "Question": "Find the BSA of somebody who is 1.45 m in height with a mass of 50.4 kg<br>For Info: $\\sqrt{6.12}=2.47$, $\\sqrt{6.8}=2.61$, $\\sqrt{2.03}=1.42$",
+    "Answer": 2.47,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 229,
+    "Question": "Find the BSA of somebody who is 1.75 m in height with a mass of 93.6 kg<br>For Info: $\\sqrt{7.28}=2.7$, $\\sqrt{3.18}=1.78$, $\\sqrt{4.55}=2.13$",
+    "Answer": 2.7,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 230,
+    "Question": "Find the BSA of somebody who is 1.29 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.28}=1.13$, $\\sqrt{1.29}=1.14$, $\\sqrt{2.24}=1.5$",
+    "Answer": 1.13,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 231,
+    "Question": "Find the BSA of somebody who is 2.1 m in height with a mass of 126 kg<br>For Info: $\\sqrt{7.35}=2.71$, $\\sqrt{2.5}=1.58$, $\\sqrt{3.85}=1.96$",
+    "Answer": 2.71,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 232,
+    "Question": "Find the BSA of somebody who is 2 m in height with a mass of 108 kg<br>For Info: $\\sqrt{5.94}=2.44$, $\\sqrt{3.85}=1.96$, $\\sqrt{6}=2.45$",
+    "Answer": 2.44,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 233,
+    "Question": "Find the BSA of somebody who is 2.1 m in height with a mass of 132 kg<br>For Info: $\\sqrt{5.88}=2.42$, $\\sqrt{7.7}=2.77$, $\\sqrt{4.08}=2.02$",
+    "Answer": 2.42,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 234,
+    "Question": "Find the BSA of somebody who is 1.26 m in height with a mass of 54 kg<br>For Info: $\\sqrt{1.89}=1.37$, $\\sqrt{1.72}=1.31$, $\\sqrt{1.62}=1.27$",
+    "Answer": 1.37,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 235,
+    "Question": "Find the BSA of somebody who is 1.35 m in height with a mass of 36 kg<br>For Info: $\\sqrt{4.4}=2.1$, $\\sqrt{4.34}=2.08$, $\\sqrt{1.35}=1.16$",
+    "Answer": 2.1,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 236,
+    "Question": "Find the BSA of somebody who is 1.54 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.31}=1.52$, $\\sqrt{3}=1.73$, $\\sqrt{6.8}=2.61$",
+    "Answer": 1.52,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 237,
+    "Question": "Find the BSA of somebody who is 1.32 m in height with a mass of 48 kg<br>For Info: $\\sqrt{3.36}=1.83$, $\\sqrt{1.76}=1.33$, $\\sqrt{2.61}=1.62$",
+    "Answer": 1.83,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 238,
+    "Question": "Find the BSA of somebody who is 1.46 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.19}=1.48$, $\\sqrt{6.9}=2.63$, $\\sqrt{1.89}=1.37$",
+    "Answer": 1.48,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 239,
+    "Question": "Find the BSA of somebody who is 1.44 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.16}=1.47$, $\\sqrt{4.06}=2.01$, $\\sqrt{2.79}=1.67$",
+    "Answer": 1.47,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 240,
+    "Question": "Find the BSA of somebody who is 1.8 m in height with a mass of 93.6 kg<br>For Info: $\\sqrt{6.06}=2.46$, $\\sqrt{1.35}=1.16$, $\\sqrt{4.68}=2.16$",
+    "Answer": 2.46,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 241,
+    "Question": "Find the BSA of somebody who is 1.58 m in height with a mass of 72 kg<br>For Info: $\\sqrt{3.16}=1.78$, $\\sqrt{4.8}=2.19$, $\\sqrt{1.96}=1.4$",
+    "Answer": 1.78,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 242,
+    "Question": "Find the BSA of somebody who is 1.4 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.1}=1.45$, $\\sqrt{5.76}=2.4$, $\\sqrt{4.32}=2.08$",
+    "Answer": 1.45,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 243,
+    "Question": "Find the BSA of somebody who is 1.56 m in height with a mass of 72 kg<br>For Info: $\\sqrt{2.92}=1.71$, $\\sqrt{3.12}=1.77$, $\\sqrt{5.32}=2.31$",
+    "Answer": 1.71,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 244,
+    "Question": "Find the BSA of somebody who is 1.53 m in height with a mass of 72 kg<br>For Info: $\\sqrt{7}=2.65$, $\\sqrt{3.06}=1.75$, $\\sqrt{3.1}=1.76$",
+    "Answer": 2.65,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 245,
+    "Question": "Find the BSA of somebody who is 1.5 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.25}=1.5$, $\\sqrt{1.96}=1.4$, $\\sqrt{1.2}=1.1$",
+    "Answer": 1.5,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 246,
+    "Question": "Find the BSA of somebody who is 1.71 m in height with a mass of 72 kg<br>For Info: $\\sqrt{1.24}=1.11$, $\\sqrt{3.42}=1.85$, $\\sqrt{2.79}=1.67$",
+    "Answer": 1.11,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 247,
+    "Question": "Find the BSA of somebody who is 1.35 m in height with a mass of 43.2 kg<br>For Info: $\\sqrt{5.94}=2.44$, $\\sqrt{0.8}=0.89$, $\\sqrt{1.62}=1.27$",
+    "Answer": 2.44,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 248,
+    "Question": "Find the BSA of somebody who is 1.24 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.24}=1.11$, $\\sqrt{6.3}=2.51$, $\\sqrt{6.56}=2.56$",
+    "Answer": 1.11,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 249,
+    "Question": "Find the BSA of somebody who is 1.8 m in height with a mass of 93.6 kg<br>For Info: $\\sqrt{1.36}=1.17$, $\\sqrt{2.5}=1.58$, $\\sqrt{4.68}=2.16$",
+    "Answer": 1.17,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 250,
+    "Question": "Find the BSA of somebody who is 2.02 m in height with a mass of 126 kg<br>For Info: $\\sqrt{7.07}=2.66$, $\\sqrt{5.85}=2.42$, $\\sqrt{2.61}=1.62$",
+    "Answer": 2.66,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 251,
+    "Question": "Find the BSA of somebody who is 1.29 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.34}=1.16$, $\\sqrt{1.29}=1.14$, $\\sqrt{6.15}=2.48$",
+    "Answer": 1.16,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 252,
+    "Question": "Find the BSA of somebody who is 2.02 m in height with a mass of 108 kg<br>For Info: $\\sqrt{6.06}=2.46$, $\\sqrt{4.13}=2.03$, $\\sqrt{6.72}=2.59$",
+    "Answer": 2.46,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 253,
+    "Question": "Find the BSA of somebody who is 1.9 m in height with a mass of 93.6 kg<br>For Info: $\\sqrt{1.26}=1.12$, $\\sqrt{0.8}=0.89$, $\\sqrt{4.94}=2.22$",
+    "Answer": 1.12,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 254,
+    "Question": "Find the BSA of somebody who is 1.2 m in height with a mass of 21.6 kg<br>For Info: $\\sqrt{4.65}=2.16$, $\\sqrt{1.92}=1.39$, $\\sqrt{0.72}=0.85$",
+    "Answer": 2.16,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 255,
+    "Question": "Find the BSA of somebody who is 1.2 m in height with a mass of 24 kg<br>For Info: $\\sqrt{2.19}=1.48$, $\\sqrt{0.8}=0.89$, $\\sqrt{5.18}=2.28$",
+    "Answer": 1.48,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 256,
+    "Question": "Find the BSA of somebody who is 1.45 m in height with a mass of 50.4 kg<br>For Info: $\\sqrt{2.37}=1.54$, $\\sqrt{3.06}=1.75$, $\\sqrt{2.03}=1.42$",
+    "Answer": 1.54,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 257,
+    "Question": "Find the BSA of somebody who is 1.71 m in height with a mass of 96 kg<br>For Info: $\\sqrt{2.25}=1.5$, $\\sqrt{4.56}=2.14$, $\\sqrt{4.08}=2.02$",
+    "Answer": 1.5,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 258,
+    "Question": "Find the BSA of somebody who is 1.95 m in height with a mass of 115.2 kg<br>For Info: $\\sqrt{6.3}=2.51$, $\\sqrt{1.88}=1.37$, $\\sqrt{6.24}=2.5$",
+    "Answer": 2.51,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 259,
+    "Question": "Find the BSA of somebody who is 1.76 m in height with a mass of 90 kg<br>For Info: $\\sqrt{4.4}=2.1$, $\\sqrt{3.99}=2$, $\\sqrt{4.68}=2.16$",
+    "Answer": 2.1,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 260,
+    "Question": "Find the BSA of somebody who is 1.34 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.01}=1.42$, $\\sqrt{4.64}=2.15$, $\\sqrt{2.48}=1.57$",
+    "Answer": 1.42,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 261,
+    "Question": "Find the BSA of somebody who is 1.72 m in height with a mass of 90 kg<br>For Info: $\\sqrt{4.3}=2.07$, $\\sqrt{1.68}=1.3$, $\\sqrt{1.35}=1.16$",
+    "Answer": 2.07,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 262,
+    "Question": "Find the BSA of somebody who is 1.96 m in height with a mass of 108 kg<br>For Info: $\\sqrt{5.88}=2.42$, $\\sqrt{2.45}=1.57$, $\\sqrt{2.88}=1.7$",
+    "Answer": 2.42,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 263,
+    "Question": "Find the BSA of somebody who is 1.35 m in height with a mass of 48 kg<br>For Info: $\\sqrt{2.13}=1.46$, $\\sqrt{1.8}=1.34$, $\\sqrt{2.97}=1.72$",
+    "Answer": 1.46,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 264,
+    "Question": "Find the BSA of somebody who is 1.41 m in height with a mass of 60 kg<br>For Info: $\\sqrt{3.28}=1.81$, $\\sqrt{2.35}=1.53$, $\\sqrt{1.35}=1.16$",
+    "Answer": 1.81,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 265,
+    "Question": "Find the BSA of somebody who is 1.3 m in height with a mass of 50.4 kg<br>For Info: $\\sqrt{3.24}=1.8$, $\\sqrt{3.36}=1.83$, $\\sqrt{1.82}=1.35$",
+    "Answer": 1.8,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 266,
+    "Question": "Find the BSA of somebody who is 1.29 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.22}=1.1$, $\\sqrt{1.29}=1.14$, $\\sqrt{6.4}=2.53$",
+    "Answer": 1.1,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 267,
+    "Question": "Find the BSA of somebody who is 2 m in height with a mass of 126 kg<br>For Info: $\\sqrt{7}=2.65$, $\\sqrt{2.35}=1.53$, $\\sqrt{2.03}=1.42$",
+    "Answer": 2.65,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 268,
+    "Question": "Find the BSA of somebody who is 1.46 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.19}=1.48$, $\\sqrt{1.26}=1.12$, $\\sqrt{6.15}=2.48$",
+    "Answer": 1.48,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 269,
+    "Question": "Find the BSA of somebody who is 1.24 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.24}=1.11$, $\\sqrt{4.13}=2.03$, $\\sqrt{4.68}=2.16$",
+    "Answer": 1.11,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 270,
+    "Question": "Find the BSA of somebody who is 1.94 m in height with a mass of 108 kg<br>For Info: $\\sqrt{5.82}=2.41$, $\\sqrt{2.65}=1.63$, $\\sqrt{2.48}=1.57$",
+    "Answer": 2.41,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 271,
+    "Question": "Find the BSA of somebody who is 1.88 m in height with a mass of 108 kg<br>For Info: $\\sqrt{5.64}=2.37$, $\\sqrt{2.4}=1.55$, $\\sqrt{5.85}=2.42$",
+    "Answer": 2.37,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 272,
+    "Question": "Find the BSA of somebody who is 1.59 m in height with a mass of 72 kg<br>For Info: $\\sqrt{7.35}=2.71$, $\\sqrt{3.18}=1.78$, $\\sqrt{6.4}=2.53$",
+    "Answer": 2.71,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 273,
+    "Question": "Find the BSA of somebody who is 1.6 m in height with a mass of 64.8 kg<br>For Info: $\\sqrt{3.2}=1.79$, $\\sqrt{2.4}=1.55$, $\\sqrt{2.88}=1.7$",
+    "Answer": 1.79,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 274,
+    "Question": "Find the BSA of somebody who is 2.07 m in height with a mass of 120 kg<br>For Info: $\\sqrt{3.32}=1.82$, $\\sqrt{6.9}=2.63$, $\\sqrt{1.25}=1.12$",
+    "Answer": 1.82,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 275,
+    "Question": "Find the BSA of somebody who is 1.2 m in height with a mass of 21.6 kg<br>For Info: $\\sqrt{1.95}=1.4$, $\\sqrt{3.18}=1.78$, $\\sqrt{0.72}=0.85$",
+    "Answer": 1.4,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 276,
+    "Question": "Find the BSA of somebody who is 1.3 m in height with a mass of 28.8 kg<br>For Info: $\\sqrt{2.34}=1.53$, $\\sqrt{4.13}=2.03$, $\\sqrt{1.04}=1.02$",
+    "Answer": 1.53,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 277,
+    "Question": "Find the BSA of somebody who is 1.29 m in height with a mass of 36 kg<br>For Info: $\\sqrt{4.45}=2.11$, $\\sqrt{1.29}=1.14$, $\\sqrt{5.7}=2.39$",
+    "Answer": 2.11,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 278,
+    "Question": "Find the BSA of somebody who is 2.08 m in height with a mass of 126 kg<br>For Info: $\\sqrt{7.28}=2.7$, $\\sqrt{1.26}=1.12$, $\\sqrt{3.96}=1.99$",
+    "Answer": 2.7,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 279,
+    "Question": "Find the BSA of somebody who is 1.4 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.1}=1.45$, $\\sqrt{3.71}=1.93$, $\\sqrt{3.2}=1.79$",
+    "Answer": 1.45,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 280,
+    "Question": "Find the BSA of somebody who is 1.5 m in height with a mass of 57.6 kg<br>For Info: $\\sqrt{5.88}=2.42$, $\\sqrt{7}=2.65$, $\\sqrt{2.4}=1.55$",
+    "Answer": 2.42,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 281,
+    "Question": "Find the BSA of somebody who is 1.26 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.26}=1.12$, $\\sqrt{3.78}=1.94$, $\\sqrt{5.07}=2.25$",
+    "Answer": 1.12,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 282,
+    "Question": "Find the BSA of somebody who is 1.45 m in height with a mass of 43.2 kg<br>For Info: $\\sqrt{4.5}=2.12$, $\\sqrt{0.8}=0.89$, $\\sqrt{1.74}=1.32$",
+    "Answer": 2.12,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 283,
+    "Question": "Find the BSA of somebody who is 1.89 m in height with a mass of 96 kg<br>For Info: $\\sqrt{5.88}=2.42$, $\\sqrt{5.04}=2.24$, $\\sqrt{2.03}=1.42$",
+    "Answer": 2.42,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 284,
+    "Question": "Find the BSA of somebody who is 1.95 m in height with a mass of 100.8 kg<br>For Info: $\\sqrt{2.22}=1.49$, $\\sqrt{3.12}=1.77$, $\\sqrt{5.46}=2.34$",
+    "Answer": 1.49,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 285,
+    "Question": "Find the BSA of somebody who is 1.54 m in height with a mass of 72 kg<br>For Info: $\\sqrt{3.08}=1.75$, $\\sqrt{3.06}=1.75$, $\\sqrt{0.96}=0.98$",
+    "Answer": 1.75,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 286,
+    "Question": "Find the BSA of somebody who is 1.89 m in height with a mass of 108 kg<br>For Info: $\\sqrt{1.24}=1.11$, $\\sqrt{5.67}=2.38$, $\\sqrt{3.74}=1.93$",
+    "Answer": 1.11,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 287,
+    "Question": "Find the BSA of somebody who is 2.04 m in height with a mass of 120 kg<br>For Info: $\\sqrt{1.2}=1.1$, $\\sqrt{6.8}=2.61$, $\\sqrt{4.81}=2.19$",
+    "Answer": 1.1,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 288,
+    "Question": "Find the BSA of somebody who is 1.5 m in height with a mass of 50.4 kg<br>For Info: $\\sqrt{1.22}=1.1$, $\\sqrt{6.3}=2.51$, $\\sqrt{2.1}=1.45$",
+    "Answer": 1.1,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 289,
+    "Question": "Find the BSA of somebody who is 2 m in height with a mass of 126 kg<br>For Info: $\\sqrt{7}=2.65$, $\\sqrt{5.28}=2.3$, $\\sqrt{2.88}=1.7$",
+    "Answer": 2.65,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 290,
+    "Question": "Find the BSA of somebody who is 2.05 m in height with a mass of 122.4 kg<br>For Info: $\\sqrt{6.06}=2.46$, $\\sqrt{6.9}=2.63$, $\\sqrt{6.97}=2.64$",
+    "Answer": 2.46,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 291,
+    "Question": "Find the BSA of somebody who is 1.68 m in height with a mass of 84 kg<br>For Info: $\\sqrt{7.35}=2.71$, $\\sqrt{3.92}=1.98$, $\\sqrt{6.4}=2.53$",
+    "Answer": 2.71,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 292,
+    "Question": "Find the BSA of somebody who is 1.44 m in height with a mass of 48 kg<br>For Info: $\\sqrt{4.8}=2.19$, $\\sqrt{1.92}=1.39$, $\\sqrt{5.07}=2.25$",
+    "Answer": 2.19,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 293,
+    "Question": "Find the BSA of somebody who is 1.6 m in height with a mass of 72 kg<br>For Info: $\\sqrt{3.2}=1.79$, $\\sqrt{4.13}=2.03$, $\\sqrt{5.18}=2.28$",
+    "Answer": 1.79,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 294,
+    "Question": "Find the BSA of somebody who is 1.78 m in height with a mass of 90 kg<br>For Info: $\\sqrt{4.45}=2.11$, $\\sqrt{5.04}=2.24$, $\\sqrt{1.2}=1.1$",
+    "Answer": 2.11,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 295,
+    "Question": "Find the BSA of somebody who is 2.1 m in height with a mass of 120 kg<br>For Info: $\\sqrt{1.24}=1.11$, $\\sqrt{7}=2.65$, $\\sqrt{2.61}=1.62$",
+    "Answer": 1.11,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 296,
+    "Question": "Find the BSA of somebody who is 1.98 m in height with a mass of 96 kg<br>For Info: $\\sqrt{2.19}=1.48$, $\\sqrt{5.28}=2.3$, $\\sqrt{6.97}=2.64$",
+    "Answer": 1.48,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 297,
+    "Question": "Find the BSA of somebody who is 1.82 m in height with a mass of 108 kg<br>For Info: $\\sqrt{5.46}=2.34$, $\\sqrt{3}=1.73$, $\\sqrt{2.61}=1.62$",
+    "Answer": 2.34,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 298,
+    "Question": "Find the BSA of somebody who is 1.8 m in height with a mass of 79.2 kg<br>For Info: $\\sqrt{5.88}=2.42$, $\\sqrt{4.88}=2.21$, $\\sqrt{3.96}=1.99$",
+    "Answer": 2.42,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 299,
+    "Question": "Find the BSA of somebody who is 1.85 m in height with a mass of 100.8 kg<br>For Info: $\\sqrt{2.16}=1.47$, $\\sqrt{3.18}=1.78$, $\\sqrt{5.18}=2.28$",
+    "Answer": 1.47,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 300,
+    "Question": "Find the BSA of somebody who is 1.98 m in height with a mass of 108 kg<br>For Info: $\\sqrt{5.94}=2.44$, $\\sqrt{5.04}=2.24$, $\\sqrt{4.32}=2.08$",
+    "Answer": 2.44,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 301,
+    "Question": "Find the BSA of somebody who is 1.55 m in height with a mass of 57.6 kg<br>For Info: $\\sqrt{4.6}=2.14$, $\\sqrt{3}=1.73$, $\\sqrt{2.48}=1.57$",
+    "Answer": 2.14,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 302,
+    "Question": "Find the BSA of somebody who is 1.56 m in height with a mass of 54 kg<br>For Info: $\\sqrt{2.34}=1.53$, $\\sqrt{3.3}=1.82$, $\\sqrt{1.62}=1.27$",
+    "Answer": 1.53,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 303,
+    "Question": "Find the BSA of somebody who is 2.1 m in height with a mass of 108 kg<br>For Info: $\\sqrt{4.3}=2.07$, $\\sqrt{6.3}=2.51$, $\\sqrt{3.96}=1.99$",
+    "Answer": 2.07,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 304,
+    "Question": "Find the BSA of somebody who is 1.68 m in height with a mass of 72 kg<br>For Info: $\\sqrt{3.36}=1.83$, $\\sqrt{2.35}=1.53$, $\\sqrt{1.3}=1.14$",
+    "Answer": 1.83,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 305,
+    "Question": "Find the BSA of somebody who is 1.44 m in height with a mass of 48 kg<br>For Info: $\\sqrt{5.7}=2.39$, $\\sqrt{1.92}=1.39$, $\\sqrt{1.3}=1.14$",
+    "Answer": 2.39,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 306,
+    "Question": "Find the BSA of somebody who is 1.7 m in height with a mass of 86.4 kg<br>For Info: $\\sqrt{1.26}=1.12$, $\\sqrt{5.94}=2.44$, $\\sqrt{4.08}=2.02$",
+    "Answer": 1.12,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 307,
+    "Question": "Find the BSA of somebody who is 1.85 m in height with a mass of 93.6 kg<br>For Info: $\\sqrt{1.32}=1.15$, $\\sqrt{3.06}=1.75$, $\\sqrt{4.81}=2.19$",
+    "Answer": 1.15,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 308,
+    "Question": "Find the BSA of somebody who is 1.6 m in height with a mass of 72 kg<br>For Info: $\\sqrt{1.26}=1.12$, $\\sqrt{3.92}=1.98$, $\\sqrt{3.2}=1.79$",
+    "Answer": 1.12,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 309,
+    "Question": "Find the BSA of somebody who is 1.95 m in height with a mass of 96 kg<br>For Info: $\\sqrt{3.2}=1.79$, $\\sqrt{5.2}=2.28$, $\\sqrt{4.32}=2.08$",
+    "Answer": 1.79,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 310,
+    "Question": "Find the BSA of somebody who is 1.65 m in height with a mass of 72 kg<br>For Info: $\\sqrt{7.21}=2.69$, $\\sqrt{3.3}=1.82$, $\\sqrt{1.68}=1.3$",
+    "Answer": 2.69,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 311,
+    "Question": "Find the BSA of somebody who is 2 m in height with a mass of 108 kg<br>For Info: $\\sqrt{6}=2.45$, $\\sqrt{5.85}=2.42$, $\\sqrt{5.85}=2.42$",
+    "Answer": 2.45,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 312,
+    "Question": "Find the BSA of somebody who is 1.56 m in height with a mass of 72 kg<br>For Info: $\\sqrt{2.25}=1.5$, $\\sqrt{3.12}=1.77$, $\\sqrt{3.1}=1.76$",
+    "Answer": 1.5,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 313,
+    "Question": "Find the BSA of somebody who is 1.75 m in height with a mass of 86.4 kg<br>For Info: $\\sqrt{4.5}=2.12$, $\\sqrt{4.41}=2.1$, $\\sqrt{4.2}=2.05$",
+    "Answer": 2.12,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 314,
+    "Question": "Find the BSA of somebody who is 1.56 m in height with a mass of 72 kg<br>For Info: $\\sqrt{3.12}=1.77$, $\\sqrt{1.88}=1.37$, $\\sqrt{4.44}=2.11$",
+    "Answer": 1.77,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 315,
+    "Question": "Find the BSA of somebody who is 1.45 m in height with a mass of 57.6 kg<br>For Info: $\\sqrt{0.6}=0.77$, $\\sqrt{3.3}=1.82$, $\\sqrt{2.32}=1.52$",
+    "Answer": 0.77,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 316,
+    "Question": "Find the BSA of somebody who is 1.38 m in height with a mass of 48 kg<br>For Info: $\\sqrt{2.1}=1.45$, $\\sqrt{1.84}=1.36$, $\\sqrt{7.56}=2.75$",
+    "Answer": 1.45,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 317,
+    "Question": "Find the BSA of somebody who is 1.36 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.36}=1.17$, $\\sqrt{3.78}=1.94$, $\\sqrt{2.7}=1.64$",
+    "Answer": 1.17,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 318,
+    "Question": "Find the BSA of somebody who is 2.1 m in height with a mass of 120 kg<br>For Info: $\\sqrt{6.24}=2.5$, $\\sqrt{7}=2.65$, $\\sqrt{3.1}=1.76$",
+    "Answer": 2.5,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 319,
+    "Question": "Find the BSA of somebody who is 1.83 m in height with a mass of 84 kg<br>For Info: $\\sqrt{5.7}=2.39$, $\\sqrt{4.27}=2.07$, $\\sqrt{4.08}=2.02$",
+    "Answer": 2.39,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 320,
+    "Question": "Find the BSA of somebody who is 1.2 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.24}=1.11$, $\\sqrt{6.03}=2.46$, $\\sqrt{1.2}=1.1$",
+    "Answer": 1.11,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 321,
+    "Question": "Find the BSA of somebody who is 1.59 m in height with a mass of 60 kg<br>For Info: $\\sqrt{0.61}=0.78$, $\\sqrt{2.65}=1.63$, $\\sqrt{1.2}=1.1$",
+    "Answer": 0.78,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 322,
+    "Question": "Find the BSA of somebody who is 1.45 m in height with a mass of 64.8 kg<br>For Info: $\\sqrt{7.28}=2.7$, $\\sqrt{5.49}=2.34$, $\\sqrt{2.61}=1.62$",
+    "Answer": 2.7,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 323,
+    "Question": "Find the BSA of somebody who is 1.83 m in height with a mass of 108 kg<br>For Info: $\\sqrt{1.3}=1.14$, $\\sqrt{5.49}=2.34$, $\\sqrt{4.55}=2.13$",
+    "Answer": 1.14,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 324,
+    "Question": "Find the BSA of somebody who is 1.86 m in height with a mass of 108 kg<br>For Info: $\\sqrt{1.28}=1.13$, $\\sqrt{5.58}=2.36$, $\\sqrt{1.96}=1.4$",
+    "Answer": 1.13,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 325,
+    "Question": "Find the BSA of somebody who is 1.29 m in height with a mass of 36 kg<br>For Info: $\\sqrt{0.61}=0.78$, $\\sqrt{1.29}=1.14$, $\\sqrt{3.52}=1.88$",
+    "Answer": 0.78,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 326,
+    "Question": "Find the BSA of somebody who is 1.41 m in height with a mass of 60 kg<br>For Info: $\\sqrt{5.76}=2.4$, $\\sqrt{2.35}=1.53$, $\\sqrt{7.56}=2.75$",
+    "Answer": 2.4,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 327,
+    "Question": "Find the BSA of somebody who is 1.4 m in height with a mass of 57.6 kg<br>For Info: $\\sqrt{3.24}=1.8$, $\\sqrt{4.13}=2.03$, $\\sqrt{2.24}=1.5$",
+    "Answer": 1.8,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 328,
+    "Question": "Find the BSA of somebody who is 1.68 m in height with a mass of 90 kg<br>For Info: $\\sqrt{4.2}=2.05$, $\\sqrt{3.18}=1.78$, $\\sqrt{1.89}=1.37$",
+    "Answer": 2.05,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 329,
+    "Question": "Find the BSA of somebody who is 1.22 m in height with a mass of 36 kg<br>For Info: $\\sqrt{1.22}=1.1$, $\\sqrt{3.48}=1.87$, $\\sqrt{2.48}=1.57$",
+    "Answer": 1.1,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 330,
+    "Question": "Find the BSA of somebody who is 1.64 m in height with a mass of 90 kg<br>For Info: $\\sqrt{4.1}=2.02$, $\\sqrt{1.72}=1.31$, $\\sqrt{3.63}=1.91$",
+    "Answer": 2.02,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 331,
+    "Question": "Find the BSA of somebody who is 2.02 m in height with a mass of 108 kg<br>For Info: $\\sqrt{6.06}=2.46$, $\\sqrt{5.49}=2.34$, $\\sqrt{2.4}=1.55$",
+    "Answer": 2.46,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 332,
+    "Question": "Find the BSA of somebody who is 1.95 m in height with a mass of 96 kg<br>For Info: $\\sqrt{3.56}=1.89$, $\\sqrt{5.2}=2.28$, $\\sqrt{1.35}=1.16$",
+    "Answer": 1.89,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 333,
+    "Question": "Find the BSA of somebody who is 1.35 m in height with a mass of 36 kg<br>For Info: $\\sqrt{4.55}=2.13$, $\\sqrt{1.84}=1.36$, $\\sqrt{1.35}=1.16$",
+    "Answer": 2.13,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 334,
+    "Question": "Find the BSA of somebody who is 1.6 m in height with a mass of 72 kg<br>For Info: $\\sqrt{6.18}=2.49$, $\\sqrt{5.76}=2.4$, $\\sqrt{3.2}=1.79$",
+    "Answer": 2.49,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 335,
+    "Question": "Find the BSA of somebody who is 1.56 m in height with a mass of 60 kg<br>For Info: $\\sqrt{4.25}=2.06$, $\\sqrt{2.6}=1.61$, $\\sqrt{1.89}=1.37$",
+    "Answer": 2.06,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 336,
+    "Question": "Find the BSA of somebody who is 1.3 m in height with a mass of 36 kg<br>For Info: $\\sqrt{4.3}=2.07$, $\\sqrt{1.84}=1.36$, $\\sqrt{1.3}=1.14$",
+    "Answer": 2.07,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 337,
+    "Question": "Find the BSA of somebody who is 2.02 m in height with a mass of 108 kg<br>For Info: $\\sqrt{6.06}=2.46$, $\\sqrt{1.72}=1.31$, $\\sqrt{2.79}=1.67$",
+    "Answer": 2.46,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 338,
+    "Question": "Find the BSA of somebody who is 1.44 m in height with a mass of 60 kg<br>For Info: $\\sqrt{1.92}=1.39$, $\\sqrt{2.4}=1.55$, $\\sqrt{2.4}=1.55$",
+    "Answer": 1.39,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 339,
+    "Question": "Find the BSA of somebody who is 1.86 m in height with a mass of 108 kg<br>For Info: $\\sqrt{5.58}=2.36$, $\\sqrt{3.3}=1.82$, $\\sqrt{6}=2.45$",
+    "Answer": 2.36,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 340,
+    "Question": "Find the BSA of somebody who is 1.65 m in height with a mass of 64.8 kg<br>For Info: $\\sqrt{1.98}=1.41$, $\\sqrt{1.72}=1.31$, $\\sqrt{2.97}=1.72$",
+    "Answer": 1.41,
+    "Units": "$m^2$"
+  },
+  {
+    "Number": 341,
+    "Question": "Find the BSA of somebody who is 1.5 m in height with a mass of 64.8 kg<br>For Info: $\\sqrt{1.36}=1.17$, $\\sqrt{3.12}=1.77$, $\\sqrt{2.7}=1.64$",
+    "Answer": 1.17,
     "Units": "$m^2$"
   }
 ]
