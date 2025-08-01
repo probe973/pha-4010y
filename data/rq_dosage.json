@@ -2401,1801 +2401,1801 @@
   },
   {
     "Number": 401,
-    "Question": "Prescription for: 30 mg\n\nDrug available as: 30mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 30 mg <br> Drug available as: 30mg/5ml <br> How many ml are required for the dose?",
     "Answer": 5,
     "Units": "ml"
   },
   {
     "Number": 402,
-    "Question": "Prescription for: 227.5 mg\n\nDrug available as: 35mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 227.5 mg <br> Drug available as: 35mg/10ml <br> How many ml are required for the dose?",
     "Answer": 65,
     "Units": "ml"
   },
   {
     "Number": 403,
-    "Question": "Prescription for: 1050 mg\n\nDrug available as: 30mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1050 mg <br> Drug available as: 30mg/ml <br> How many ml are required for the dose?",
     "Answer": 35,
     "Units": "ml"
   },
   {
     "Number": 404,
-    "Question": "Prescription for: 75 mg\n\nDrug available as: 15mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 75 mg <br> Drug available as: 15mg/5ml <br> How many ml are required for the dose?",
     "Answer": 25,
     "Units": "ml"
   },
   {
     "Number": 405,
-    "Question": "Prescription for: 12.5 mg\n\nDrug available as: 25mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 12.5 mg <br> Drug available as: 25mg/10ml <br> How many ml are required for the dose?",
     "Answer": 5,
     "Units": "ml"
   },
   {
     "Number": 406,
-    "Question": "Prescription for: 75 mg\n\nDrug available as: 15mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 75 mg <br> Drug available as: 15mg/ml <br> How many ml are required for the dose?",
     "Answer": 5,
     "Units": "ml"
   },
   {
     "Number": 407,
-    "Question": "Prescription for: 210 mg\n\nDrug available as: 35mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 210 mg <br> Drug available as: 35mg/5ml <br> How many ml are required for the dose?",
     "Answer": 30,
     "Units": "ml"
   },
   {
     "Number": 408,
-    "Question": "Prescription for: 180 mg\n\nDrug available as: 30mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 180 mg <br> Drug available as: 30mg/10ml <br> How many ml are required for the dose?",
     "Answer": 60,
     "Units": "ml"
   },
   {
     "Number": 409,
-    "Question": "Prescription for: 750 mg\n\nDrug available as: 25mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 750 mg <br> Drug available as: 25mg/ml <br> How many ml are required for the dose?",
     "Answer": 30,
     "Units": "ml"
   },
   {
     "Number": 410,
-    "Question": "Prescription for: 135 mg\n\nDrug available as: 15mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 135 mg <br> Drug available as: 15mg/5ml <br> How many ml are required for the dose?",
     "Answer": 45,
     "Units": "ml"
   },
   {
     "Number": 411,
-    "Question": "Prescription for: 67.5 mg\n\nDrug available as: 15mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 67.5 mg <br> Drug available as: 15mg/10ml <br> How many ml are required for the dose?",
     "Answer": 45,
     "Units": "ml"
   },
   {
     "Number": 412,
-    "Question": "Prescription for: 975 mg\n\nDrug available as: 15mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 975 mg <br> Drug available as: 15mg/ml <br> How many ml are required for the dose?",
     "Answer": 65,
     "Units": "ml"
   },
   {
     "Number": 413,
-    "Question": "Prescription for: 260 mg\n\nDrug available as: 20mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 260 mg <br> Drug available as: 20mg/5ml <br> How many ml are required for the dose?",
     "Answer": 65,
     "Units": "ml"
   },
   {
     "Number": 414,
-    "Question": "Prescription for: 212.5 mg\n\nDrug available as: 25mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 212.5 mg <br> Drug available as: 25mg/10ml <br> How many ml are required for the dose?",
     "Answer": 85,
     "Units": "ml"
   },
   {
     "Number": 415,
-    "Question": "Prescription for: 1350 mg\n\nDrug available as: 30mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1350 mg <br> Drug available as: 30mg/ml <br> How many ml are required for the dose?",
     "Answer": 45,
     "Units": "ml"
   },
   {
     "Number": 416,
-    "Question": "Prescription for: 325 mg\n\nDrug available as: 25mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 325 mg <br> Drug available as: 25mg/5ml <br> How many ml are required for the dose?",
     "Answer": 65,
     "Units": "ml"
   },
   {
     "Number": 417,
-    "Question": "Prescription for: 12.5 mg\n\nDrug available as: 25mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 12.5 mg <br> Drug available as: 25mg/10ml <br> How many ml are required for the dose?",
     "Answer": 5,
     "Units": "ml"
   },
   {
     "Number": 418,
-    "Question": "Prescription for: 200 mg\n\nDrug available as: 20mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 200 mg <br> Drug available as: 20mg/ml <br> How many ml are required for the dose?",
     "Answer": 10,
     "Units": "ml"
   },
   {
     "Number": 419,
-    "Question": "Prescription for: 680 mg\n\nDrug available as: 40mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 680 mg <br> Drug available as: 40mg/5ml <br> How many ml are required for the dose?",
     "Answer": 85,
     "Units": "ml"
   },
   {
     "Number": 420,
-    "Question": "Prescription for: 297.5 mg\n\nDrug available as: 35mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 297.5 mg <br> Drug available as: 35mg/10ml <br> How many ml are required for the dose?",
     "Answer": 85,
     "Units": "ml"
   },
   {
     "Number": 421,
-    "Question": "Prescription for: 2850 mg\n\nDrug available as: 30mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2850 mg <br> Drug available as: 30mg/ml <br> How many ml are required for the dose?",
     "Answer": 95,
     "Units": "ml"
   },
   {
     "Number": 422,
-    "Question": "Prescription for: 105 mg\n\nDrug available as: 35mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 105 mg <br> Drug available as: 35mg/5ml <br> How many ml are required for the dose?",
     "Answer": 15,
     "Units": "ml"
   },
   {
     "Number": 423,
-    "Question": "Prescription for: 75 mg\n\nDrug available as: 30mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 75 mg <br> Drug available as: 30mg/10ml <br> How many ml are required for the dose?",
     "Answer": 25,
     "Units": "ml"
   },
   {
     "Number": 424,
-    "Question": "Prescription for: 1000 mg\n\nDrug available as: 40mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1000 mg <br> Drug available as: 40mg/ml <br> How many ml are required for the dose?",
     "Answer": 25,
     "Units": "ml"
   },
   {
     "Number": 425,
-    "Question": "Prescription for: 360 mg\n\nDrug available as: 40mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 360 mg <br> Drug available as: 40mg/5ml <br> How many ml are required for the dose?",
     "Answer": 45,
     "Units": "ml"
   },
   {
     "Number": 426,
-    "Question": "Prescription for: 380 mg\n\nDrug available as: 40mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 380 mg <br> Drug available as: 40mg/10ml <br> How many ml are required for the dose?",
     "Answer": 95,
     "Units": "ml"
   },
   {
     "Number": 427,
-    "Question": "Prescription for: 2275 mg\n\nDrug available as: 35mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2275 mg <br> Drug available as: 35mg/ml <br> How many ml are required for the dose?",
     "Answer": 65,
     "Units": "ml"
   },
   {
     "Number": 428,
-    "Question": "Prescription for: 200 mg\n\nDrug available as: 20mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 200 mg <br> Drug available as: 20mg/5ml <br> How many ml are required for the dose?",
     "Answer": 50,
     "Units": "ml"
   },
   {
     "Number": 429,
-    "Question": "Prescription for: 100 mg\n\nDrug available as: 20mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 100 mg <br> Drug available as: 20mg/10ml <br> How many ml are required for the dose?",
     "Answer": 50,
     "Units": "ml"
   },
   {
     "Number": 430,
-    "Question": "Prescription for: 2125 mg\n\nDrug available as: 25mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2125 mg <br> Drug available as: 25mg/ml <br> How many ml are required for the dose?",
     "Answer": 85,
     "Units": "ml"
   },
   {
     "Number": 431,
-    "Question": "Prescription for: 150 mg\n\nDrug available as: 15mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 150 mg <br> Drug available as: 15mg/5ml <br> How many ml are required for the dose?",
     "Answer": 50,
     "Units": "ml"
   },
   {
     "Number": 432,
-    "Question": "Prescription for: 260 mg\n\nDrug available as: 40mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 260 mg <br> Drug available as: 40mg/10ml <br> How many ml are required for the dose?",
     "Answer": 65,
     "Units": "ml"
   },
   {
     "Number": 433,
-    "Question": "Prescription for: 1300 mg\n\nDrug available as: 20mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1300 mg <br> Drug available as: 20mg/ml <br> How many ml are required for the dose?",
     "Answer": 65,
     "Units": "ml"
   },
   {
     "Number": 434,
-    "Question": "Prescription for: 600 mg\n\nDrug available as: 40mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 600 mg <br> Drug available as: 40mg/5ml <br> How many ml are required for the dose?",
     "Answer": 75,
     "Units": "ml"
   },
   {
     "Number": 435,
-    "Question": "Prescription for: 142.5 mg\n\nDrug available as: 15mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 142.5 mg <br> Drug available as: 15mg/10ml <br> How many ml are required for the dose?",
     "Answer": 95,
     "Units": "ml"
   },
   {
     "Number": 436,
-    "Question": "Prescription for: 600 mg\n\nDrug available as: 40mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 600 mg <br> Drug available as: 40mg/ml <br> How many ml are required for the dose?",
     "Answer": 15,
     "Units": "ml"
   },
   {
     "Number": 437,
-    "Question": "Prescription for: 455 mg\n\nDrug available as: 35mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 455 mg <br> Drug available as: 35mg/5ml <br> How many ml are required for the dose?",
     "Answer": 65,
     "Units": "ml"
   },
   {
     "Number": 438,
-    "Question": "Prescription for: 80 mg\n\nDrug available as: 20mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 80 mg <br> Drug available as: 20mg/10ml <br> How many ml are required for the dose?",
     "Answer": 40,
     "Units": "ml"
   },
   {
     "Number": 439,
-    "Question": "Prescription for: 875 mg\n\nDrug available as: 25mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 875 mg <br> Drug available as: 25mg/ml <br> How many ml are required for the dose?",
     "Answer": 35,
     "Units": "ml"
   },
   {
     "Number": 440,
-    "Question": "Prescription for: 75 mg\n\nDrug available as: 25mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 75 mg <br> Drug available as: 25mg/5ml <br> How many ml are required for the dose?",
     "Answer": 15,
     "Units": "ml"
   },
   {
     "Number": 441,
-    "Question": "Prescription for: 112.5 mg\n\nDrug available as: 25mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 112.5 mg <br> Drug available as: 25mg/10ml <br> How many ml are required for the dose?",
     "Answer": 45,
     "Units": "ml"
   },
   {
     "Number": 442,
-    "Question": "Prescription for: 1425 mg\n\nDrug available as: 15mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1425 mg <br> Drug available as: 15mg/ml <br> How many ml are required for the dose?",
     "Answer": 95,
     "Units": "ml"
   },
   {
     "Number": 443,
-    "Question": "Prescription for: 600 mg\n\nDrug available as: 40mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 600 mg <br> Drug available as: 40mg/5ml <br> How many ml are required for the dose?",
     "Answer": 75,
     "Units": "ml"
   },
   {
     "Number": 444,
-    "Question": "Prescription for: 225 mg\n\nDrug available as: 25mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 225 mg <br> Drug available as: 25mg/10ml <br> How many ml are required for the dose?",
     "Answer": 90,
     "Units": "ml"
   },
   {
     "Number": 445,
-    "Question": "Prescription for: 175 mg\n\nDrug available as: 35mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 175 mg <br> Drug available as: 35mg/ml <br> How many ml are required for the dose?",
     "Answer": 5,
     "Units": "ml"
   },
   {
     "Number": 446,
-    "Question": "Prescription for: 440 mg\n\nDrug available as: 40mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 440 mg <br> Drug available as: 40mg/5ml <br> How many ml are required for the dose?",
     "Answer": 55,
     "Units": "ml"
   },
   {
     "Number": 447,
-    "Question": "Prescription for: 30 mg\n\nDrug available as: 20mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 30 mg <br> Drug available as: 20mg/10ml <br> How many ml are required for the dose?",
     "Answer": 15,
     "Units": "ml"
   },
   {
     "Number": 448,
-    "Question": "Prescription for: 3600 mg\n\nDrug available as: 40mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 3600 mg <br> Drug available as: 40mg/ml <br> How many ml are required for the dose?",
     "Answer": 90,
     "Units": "ml"
   },
   {
     "Number": 449,
-    "Question": "Prescription for: 35 mg\n\nDrug available as: 35mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 35 mg <br> Drug available as: 35mg/5ml <br> How many ml are required for the dose?",
     "Answer": 5,
     "Units": "ml"
   },
   {
     "Number": 450,
-    "Question": "Prescription for: 180 mg\n\nDrug available as: 40mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 180 mg <br> Drug available as: 40mg/10ml <br> How many ml are required for the dose?",
     "Answer": 45,
     "Units": "ml"
   },
   {
     "Number": 451,
-    "Question": "Prescription for: 375 mg\n\nDrug available as: 15mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 375 mg <br> Drug available as: 15mg/ml <br> How many ml are required for the dose?",
     "Answer": 25,
     "Units": "ml"
   },
   {
     "Number": 452,
-    "Question": "Prescription for: 105 mg\n\nDrug available as: 35mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 105 mg <br> Drug available as: 35mg/5ml <br> How many ml are required for the dose?",
     "Answer": 15,
     "Units": "ml"
   },
   {
     "Number": 453,
-    "Question": "Prescription for: 100 mg\n\nDrug available as: 20mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 100 mg <br> Drug available as: 20mg/10ml <br> How many ml are required for the dose?",
     "Answer": 50,
     "Units": "ml"
   },
   {
     "Number": 454,
-    "Question": "Prescription for: 500 mg\n\nDrug available as: 20mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 500 mg <br> Drug available as: 20mg/ml <br> How many ml are required for the dose?",
     "Answer": 25,
     "Units": "ml"
   },
   {
     "Number": 455,
-    "Question": "Prescription for: 600 mg\n\nDrug available as: 40mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 600 mg <br> Drug available as: 40mg/5ml <br> How many ml are required for the dose?",
     "Answer": 75,
     "Units": "ml"
   },
   {
     "Number": 456,
-    "Question": "Prescription for: 192.5 mg\n\nDrug available as: 35mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 192.5 mg <br> Drug available as: 35mg/10ml <br> How many ml are required for the dose?",
     "Answer": 55,
     "Units": "ml"
   },
   {
     "Number": 457,
-    "Question": "Prescription for: 2450 mg\n\nDrug available as: 35mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2450 mg <br> Drug available as: 35mg/ml <br> How many ml are required for the dose?",
     "Answer": 70,
     "Units": "ml"
   },
   {
     "Number": 458,
-    "Question": "Prescription for: 270 mg\n\nDrug available as: 30mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 270 mg <br> Drug available as: 30mg/5ml <br> How many ml are required for the dose?",
     "Answer": 45,
     "Units": "ml"
   },
   {
     "Number": 459,
-    "Question": "Prescription for: 105 mg\n\nDrug available as: 30mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 105 mg <br> Drug available as: 30mg/10ml <br> How many ml are required for the dose?",
     "Answer": 35,
     "Units": "ml"
   },
   {
     "Number": 460,
-    "Question": "Prescription for: 100 mg\n\nDrug available as: 20mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 100 mg <br> Drug available as: 20mg/ml <br> How many ml are required for the dose?",
     "Answer": 5,
     "Units": "ml"
   },
   {
     "Number": 461,
-    "Question": "Prescription for: 760 mg\n\nDrug available as: 40mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 760 mg <br> Drug available as: 40mg/5ml <br> How many ml are required for the dose?",
     "Answer": 95,
     "Units": "ml"
   },
   {
     "Number": 462,
-    "Question": "Prescription for: 127.5 mg\n\nDrug available as: 15mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 127.5 mg <br> Drug available as: 15mg/10ml <br> How many ml are required for the dose?",
     "Answer": 85,
     "Units": "ml"
   },
   {
     "Number": 463,
-    "Question": "Prescription for: 2625 mg\n\nDrug available as: 35mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2625 mg <br> Drug available as: 35mg/ml <br> How many ml are required for the dose?",
     "Answer": 75,
     "Units": "ml"
   },
   {
     "Number": 464,
-    "Question": "Prescription for: 25 mg\n\nDrug available as: 25mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 25 mg <br> Drug available as: 25mg/5ml <br> How many ml are required for the dose?",
     "Answer": 5,
     "Units": "ml"
   },
   {
     "Number": 465,
-    "Question": "Prescription for: 285 mg\n\nDrug available as: 30mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 285 mg <br> Drug available as: 30mg/10ml <br> How many ml are required for the dose?",
     "Answer": 95,
     "Units": "ml"
   },
   {
     "Number": 466,
-    "Question": "Prescription for: 450 mg\n\nDrug available as: 15mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 450 mg <br> Drug available as: 15mg/ml <br> How many ml are required for the dose?",
     "Answer": 30,
     "Units": "ml"
   },
   {
     "Number": 467,
-    "Question": "Prescription for: 35 mg\n\nDrug available as: 35mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 35 mg <br> Drug available as: 35mg/5ml <br> How many ml are required for the dose?",
     "Answer": 5,
     "Units": "ml"
   },
   {
     "Number": 468,
-    "Question": "Prescription for: 40 mg\n\nDrug available as: 40mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 40 mg <br> Drug available as: 40mg/10ml <br> How many ml are required for the dose?",
     "Answer": 10,
     "Units": "ml"
   },
   {
     "Number": 469,
-    "Question": "Prescription for: 200 mg\n\nDrug available as: 20mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 200 mg <br> Drug available as: 20mg/ml <br> How many ml are required for the dose?",
     "Answer": 10,
     "Units": "ml"
   },
   {
     "Number": 470,
-    "Question": "Prescription for: 225 mg\n\nDrug available as: 15mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 225 mg <br> Drug available as: 15mg/5ml <br> How many ml are required for the dose?",
     "Answer": 75,
     "Units": "ml"
   },
   {
     "Number": 471,
-    "Question": "Prescription for: 225 mg\n\nDrug available as: 30mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 225 mg <br> Drug available as: 30mg/10ml <br> How many ml are required for the dose?",
     "Answer": 75,
     "Units": "ml"
   },
   {
     "Number": 472,
-    "Question": "Prescription for: 600 mg\n\nDrug available as: 15mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 600 mg <br> Drug available as: 15mg/ml <br> How many ml are required for the dose?",
     "Answer": 40,
     "Units": "ml"
   },
   {
     "Number": 473,
-    "Question": "Prescription for: 300 mg\n\nDrug available as: 25mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 300 mg <br> Drug available as: 25mg/5ml <br> How many ml are required for the dose?",
     "Answer": 60,
     "Units": "ml"
   },
   {
     "Number": 474,
-    "Question": "Prescription for: 250 mg\n\nDrug available as: 25mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 250 mg <br> Drug available as: 25mg/10ml <br> How many ml are required for the dose?",
     "Answer": 100,
     "Units": "ml"
   },
   {
     "Number": 475,
-    "Question": "Prescription for: 1350 mg\n\nDrug available as: 15mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1350 mg <br> Drug available as: 15mg/ml <br> How many ml are required for the dose?",
     "Answer": 90,
     "Units": "ml"
   },
   {
     "Number": 476,
-    "Question": "Prescription for: 560 mg\n\nDrug available as: 35mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 560 mg <br> Drug available as: 35mg/5ml <br> How many ml are required for the dose?",
     "Answer": 80,
     "Units": "ml"
   },
   {
     "Number": 477,
-    "Question": "Prescription for: 25 mg\n\nDrug available as: 25mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 25 mg <br> Drug available as: 25mg/10ml <br> How many ml are required for the dose?",
     "Answer": 10,
     "Units": "ml"
   },
   {
     "Number": 478,
-    "Question": "Prescription for: 1800 mg\n\nDrug available as: 30mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1800 mg <br> Drug available as: 30mg/ml <br> How many ml are required for the dose?",
     "Answer": 60,
     "Units": "ml"
   },
   {
     "Number": 479,
-    "Question": "Prescription for: 180 mg\n\nDrug available as: 30mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 180 mg <br> Drug available as: 30mg/5ml <br> How many ml are required for the dose?",
     "Answer": 30,
     "Units": "ml"
   },
   {
     "Number": 480,
-    "Question": "Prescription for: 60 mg\n\nDrug available as: 40mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 60 mg <br> Drug available as: 40mg/10ml <br> How many ml are required for the dose?",
     "Answer": 15,
     "Units": "ml"
   },
   {
     "Number": 481,
-    "Question": "Prescription for: 1400 mg\n\nDrug available as: 35mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1400 mg <br> Drug available as: 35mg/ml <br> How many ml are required for the dose?",
     "Answer": 40,
     "Units": "ml"
   },
   {
     "Number": 482,
-    "Question": "Prescription for: 30 mg\n\nDrug available as: 15mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 30 mg <br> Drug available as: 15mg/5ml <br> How many ml are required for the dose?",
     "Answer": 10,
     "Units": "ml"
   },
   {
     "Number": 483,
-    "Question": "Prescription for: 20 mg\n\nDrug available as: 40mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 20 mg <br> Drug available as: 40mg/10ml <br> How many ml are required for the dose?",
     "Answer": 5,
     "Units": "ml"
   },
   {
     "Number": 484,
-    "Question": "Prescription for: 2200 mg\n\nDrug available as: 40mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2200 mg <br> Drug available as: 40mg/ml <br> How many ml are required for the dose?",
     "Answer": 55,
     "Units": "ml"
   },
   {
     "Number": 485,
-    "Question": "Prescription for: 160 mg\n\nDrug available as: 40mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 160 mg <br> Drug available as: 40mg/5ml <br> How many ml are required for the dose?",
     "Answer": 20,
     "Units": "ml"
   },
   {
     "Number": 486,
-    "Question": "Prescription for: 60 mg\n\nDrug available as: 15mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 60 mg <br> Drug available as: 15mg/10ml <br> How many ml are required for the dose?",
     "Answer": 40,
     "Units": "ml"
   },
   {
     "Number": 487,
-    "Question": "Prescription for: 1000 mg\n\nDrug available as: 20mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1000 mg <br> Drug available as: 20mg/ml <br> How many ml are required for the dose?",
     "Answer": 50,
     "Units": "ml"
   },
   {
     "Number": 488,
-    "Question": "Prescription for: 60 mg\n\nDrug available as: 15mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 60 mg <br> Drug available as: 15mg/5ml <br> How many ml are required for the dose?",
     "Answer": 20,
     "Units": "ml"
   },
   {
     "Number": 489,
-    "Question": "Prescription for: 105 mg\n\nDrug available as: 15mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 105 mg <br> Drug available as: 15mg/10ml <br> How many ml are required for the dose?",
     "Answer": 70,
     "Units": "ml"
   },
   {
     "Number": 490,
-    "Question": "Prescription for: 1800 mg\n\nDrug available as: 20mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1800 mg <br> Drug available as: 20mg/ml <br> How many ml are required for the dose?",
     "Answer": 90,
     "Units": "ml"
   },
   {
     "Number": 491,
-    "Question": "Prescription for: 325 mg\n\nDrug available as: 25mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 325 mg <br> Drug available as: 25mg/5ml <br> How many ml are required for the dose?",
     "Answer": 65,
     "Units": "ml"
   },
   {
     "Number": 492,
-    "Question": "Prescription for: 25 mg\n\nDrug available as: 25mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 25 mg <br> Drug available as: 25mg/10ml <br> How many ml are required for the dose?",
     "Answer": 10,
     "Units": "ml"
   },
   {
     "Number": 493,
-    "Question": "Prescription for: 1500 mg\n\nDrug available as: 30mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1500 mg <br> Drug available as: 30mg/ml <br> How many ml are required for the dose?",
     "Answer": 50,
     "Units": "ml"
   },
   {
     "Number": 494,
-    "Question": "Prescription for: 60 mg\n\nDrug available as: 15mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 60 mg <br> Drug available as: 15mg/5ml <br> How many ml are required for the dose?",
     "Answer": 20,
     "Units": "ml"
   },
   {
     "Number": 495,
-    "Question": "Prescription for: 380 mg\n\nDrug available as: 40mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 380 mg <br> Drug available as: 40mg/10ml <br> How many ml are required for the dose?",
     "Answer": 95,
     "Units": "ml"
   },
   {
     "Number": 496,
-    "Question": "Prescription for: 3325 mg\n\nDrug available as: 35mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 3325 mg <br> Drug available as: 35mg/ml <br> How many ml are required for the dose?",
     "Answer": 95,
     "Units": "ml"
   },
   {
     "Number": 497,
-    "Question": "Prescription for: 245 mg\n\nDrug available as: 35mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 245 mg <br> Drug available as: 35mg/5ml <br> How many ml are required for the dose?",
     "Answer": 35,
     "Units": "ml"
   },
   {
     "Number": 498,
-    "Question": "Prescription for: 227.5 mg\n\nDrug available as: 35mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 227.5 mg <br> Drug available as: 35mg/10ml <br> How many ml are required for the dose?",
     "Answer": 65,
     "Units": "ml"
   },
   {
     "Number": 499,
-    "Question": "Prescription for: 600 mg\n\nDrug available as: 30mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 600 mg <br> Drug available as: 30mg/ml <br> How many ml are required for the dose?",
     "Answer": 20,
     "Units": "ml"
   },
   {
     "Number": 500,
-    "Question": "Prescription for: 140 mg\n\nDrug available as: 20mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 140 mg <br> Drug available as: 20mg/5ml <br> How many ml are required for the dose?",
     "Answer": 35,
     "Units": "ml"
   },
   {
     "Number": 501,
-    "Question": "Prescription for: 100 mg\n\nDrug available as: 40mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 100 mg <br> Drug available as: 40mg/10ml <br> How many ml are required for the dose?",
     "Answer": 25,
     "Units": "ml"
   },
   {
     "Number": 502,
-    "Question": "Prescription for: 14.7 g\n\nDrug available as: 35mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 14.7 g <br> Drug available as: 35mg/ml <br> How many ml are required for the dose?",
     "Answer": 420,
     "Units": "ml"
   },
   {
     "Number": 503,
-    "Question": "Prescription for: 2.56 g\n\nDrug available as: 40mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2.56 g <br> Drug available as: 40mg/5ml <br> How many ml are required for the dose?",
     "Answer": 320,
     "Units": "ml"
   },
   {
     "Number": 504,
-    "Question": "Prescription for: 1.2 g\n\nDrug available as: 30mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.2 g <br> Drug available as: 30mg/10ml <br> How many ml are required for the dose?",
     "Answer": 400,
     "Units": "ml"
   },
   {
     "Number": 505,
-    "Question": "Prescription for: 4.8 g\n\nDrug available as: 15mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 4.8 g <br> Drug available as: 15mg/ml <br> How many ml are required for the dose?",
     "Answer": 320,
     "Units": "ml"
   },
   {
     "Number": 506,
-    "Question": "Prescription for: 1.04 g\n\nDrug available as: 20mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.04 g <br> Drug available as: 20mg/5ml <br> How many ml are required for the dose?",
     "Answer": 260,
     "Units": "ml"
   },
   {
     "Number": 507,
-    "Question": "Prescription for: 1.925 g\n\nDrug available as: 35mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.925 g <br> Drug available as: 35mg/10ml <br> How many ml are required for the dose?",
     "Answer": 550,
     "Units": "ml"
   },
   {
     "Number": 508,
-    "Question": "Prescription for: 3.75 g\n\nDrug available as: 15mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 3.75 g <br> Drug available as: 15mg/ml <br> How many ml are required for the dose?",
     "Answer": 250,
     "Units": "ml"
   },
   {
     "Number": 509,
-    "Question": "Prescription for: 3.08 g\n\nDrug available as: 35mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 3.08 g <br> Drug available as: 35mg/5ml <br> How many ml are required for the dose?",
     "Answer": 440,
     "Units": "ml"
   },
   {
     "Number": 510,
-    "Question": "Prescription for: 1 g\n\nDrug available as: 25mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1 g <br> Drug available as: 25mg/10ml <br> How many ml are required for the dose?",
     "Answer": 400,
     "Units": "ml"
   },
   {
     "Number": 511,
-    "Question": "Prescription for: 8 g\n\nDrug available as: 20mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 8 g <br> Drug available as: 20mg/ml <br> How many ml are required for the dose?",
     "Answer": 400,
     "Units": "ml"
   },
   {
     "Number": 512,
-    "Question": "Prescription for: 1.53 g\n\nDrug available as: 15mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.53 g <br> Drug available as: 15mg/5ml <br> How many ml are required for the dose?",
     "Answer": 510,
     "Units": "ml"
   },
   {
     "Number": 513,
-    "Question": "Prescription for: 1.56 g\n\nDrug available as: 40mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.56 g <br> Drug available as: 40mg/10ml <br> How many ml are required for the dose?",
     "Answer": 390,
     "Units": "ml"
   },
   {
     "Number": 514,
-    "Question": "Prescription for: 22 g\n\nDrug available as: 40mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 22 g <br> Drug available as: 40mg/ml <br> How many ml are required for the dose?",
     "Answer": 550,
     "Units": "ml"
   },
   {
     "Number": 515,
-    "Question": "Prescription for: 2.7 g\n\nDrug available as: 30mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2.7 g <br> Drug available as: 30mg/5ml <br> How many ml are required for the dose?",
     "Answer": 450,
     "Units": "ml"
   },
   {
     "Number": 516,
-    "Question": "Prescription for: 1.68 g\n\nDrug available as: 30mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.68 g <br> Drug available as: 30mg/10ml <br> How many ml are required for the dose?",
     "Answer": 560,
     "Units": "ml"
   },
   {
     "Number": 517,
-    "Question": "Prescription for: 6.25 g\n\nDrug available as: 25mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 6.25 g <br> Drug available as: 25mg/ml <br> How many ml are required for the dose?",
     "Answer": 250,
     "Units": "ml"
   },
   {
     "Number": 518,
-    "Question": "Prescription for: 4.08 g\n\nDrug available as: 40mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 4.08 g <br> Drug available as: 40mg/5ml <br> How many ml are required for the dose?",
     "Answer": 510,
     "Units": "ml"
   },
   {
     "Number": 519,
-    "Question": "Prescription for: 1.96 g\n\nDrug available as: 35mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.96 g <br> Drug available as: 35mg/10ml <br> How many ml are required for the dose?",
     "Answer": 560,
     "Units": "ml"
   },
   {
     "Number": 520,
-    "Question": "Prescription for: 10.5 g\n\nDrug available as: 35mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 10.5 g <br> Drug available as: 35mg/ml <br> How many ml are required for the dose?",
     "Answer": 300,
     "Units": "ml"
   },
   {
     "Number": 521,
-    "Question": "Prescription for: 2.16 g\n\nDrug available as: 40mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2.16 g <br> Drug available as: 40mg/5ml <br> How many ml are required for the dose?",
     "Answer": 270,
     "Units": "ml"
   },
   {
     "Number": 522,
-    "Question": "Prescription for: 1.08 g\n\nDrug available as: 30mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.08 g <br> Drug available as: 30mg/10ml <br> How many ml are required for the dose?",
     "Answer": 360,
     "Units": "ml"
   },
   {
     "Number": 523,
-    "Question": "Prescription for: 6.8 g\n\nDrug available as: 20mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 6.8 g <br> Drug available as: 20mg/ml <br> How many ml are required for the dose?",
     "Answer": 340,
     "Units": "ml"
   },
   {
     "Number": 524,
-    "Question": "Prescription for: 2.04 g\n\nDrug available as: 30mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2.04 g <br> Drug available as: 30mg/5ml <br> How many ml are required for the dose?",
     "Answer": 340,
     "Units": "ml"
   },
   {
     "Number": 525,
-    "Question": "Prescription for: 1.24 g\n\nDrug available as: 40mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.24 g <br> Drug available as: 40mg/10ml <br> How many ml are required for the dose?",
     "Answer": 310,
     "Units": "ml"
   },
   {
     "Number": 526,
-    "Question": "Prescription for: 8 g\n\nDrug available as: 25mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 8 g <br> Drug available as: 25mg/ml <br> How many ml are required for the dose?",
     "Answer": 320,
     "Units": "ml"
   },
   {
     "Number": 527,
-    "Question": "Prescription for: 3.57 g\n\nDrug available as: 35mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 3.57 g <br> Drug available as: 35mg/5ml <br> How many ml are required for the dose?",
     "Answer": 510,
     "Units": "ml"
   },
   {
     "Number": 528,
-    "Question": "Prescription for: 0.975 g\n\nDrug available as: 25mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 0.975 g <br> Drug available as: 25mg/10ml <br> How many ml are required for the dose?",
     "Answer": 390,
     "Units": "ml"
   },
   {
     "Number": 529,
-    "Question": "Prescription for: 7.35 g\n\nDrug available as: 15mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 7.35 g <br> Drug available as: 15mg/ml <br> How many ml are required for the dose?",
     "Answer": 490,
     "Units": "ml"
   },
   {
     "Number": 530,
-    "Question": "Prescription for: 2.16 g\n\nDrug available as: 30mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2.16 g <br> Drug available as: 30mg/5ml <br> How many ml are required for the dose?",
     "Answer": 360,
     "Units": "ml"
   },
   {
     "Number": 531,
-    "Question": "Prescription for: 1.04 g\n\nDrug available as: 20mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.04 g <br> Drug available as: 20mg/10ml <br> How many ml are required for the dose?",
     "Answer": 520,
     "Units": "ml"
   },
   {
     "Number": 532,
-    "Question": "Prescription for: 12 g\n\nDrug available as: 25mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 12 g <br> Drug available as: 25mg/ml <br> How many ml are required for the dose?",
     "Answer": 480,
     "Units": "ml"
   },
   {
     "Number": 533,
-    "Question": "Prescription for: 3.6 g\n\nDrug available as: 30mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 3.6 g <br> Drug available as: 30mg/5ml <br> How many ml are required for the dose?",
     "Answer": 600,
     "Units": "ml"
   },
   {
     "Number": 534,
-    "Question": "Prescription for: 1.18 g\n\nDrug available as: 20mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.18 g <br> Drug available as: 20mg/10ml <br> How many ml are required for the dose?",
     "Answer": 590,
     "Units": "ml"
   },
   {
     "Number": 535,
-    "Question": "Prescription for: 12 g\n\nDrug available as: 25mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 12 g <br> Drug available as: 25mg/ml <br> How many ml are required for the dose?",
     "Answer": 480,
     "Units": "ml"
   },
   {
     "Number": 536,
-    "Question": "Prescription for: 3.71 g\n\nDrug available as: 35mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 3.71 g <br> Drug available as: 35mg/5ml <br> How many ml are required for the dose?",
     "Answer": 530,
     "Units": "ml"
   },
   {
     "Number": 537,
-    "Question": "Prescription for: 0.945 g\n\nDrug available as: 35mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 0.945 g <br> Drug available as: 35mg/10ml <br> How many ml are required for the dose?",
     "Answer": 270,
     "Units": "ml"
   },
   {
     "Number": 538,
-    "Question": "Prescription for: 24 g\n\nDrug available as: 40mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 24 g <br> Drug available as: 40mg/ml <br> How many ml are required for the dose?",
     "Answer": 600,
     "Units": "ml"
   },
   {
     "Number": 539,
-    "Question": "Prescription for: 2 g\n\nDrug available as: 40mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2 g <br> Drug available as: 40mg/5ml <br> How many ml are required for the dose?",
     "Answer": 250,
     "Units": "ml"
   },
   {
     "Number": 540,
-    "Question": "Prescription for: 0.525 g\n\nDrug available as: 15mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 0.525 g <br> Drug available as: 15mg/10ml <br> How many ml are required for the dose?",
     "Answer": 350,
     "Units": "ml"
   },
   {
     "Number": 541,
-    "Question": "Prescription for: 19.6 g\n\nDrug available as: 40mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 19.6 g <br> Drug available as: 40mg/ml <br> How many ml are required for the dose?",
     "Answer": 490,
     "Units": "ml"
   },
   {
     "Number": 542,
-    "Question": "Prescription for: 1.5 g\n\nDrug available as: 15mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.5 g <br> Drug available as: 15mg/5ml <br> How many ml are required for the dose?",
     "Answer": 500,
     "Units": "ml"
   },
   {
     "Number": 543,
-    "Question": "Prescription for: 1.14 g\n\nDrug available as: 30mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.14 g <br> Drug available as: 30mg/10ml <br> How many ml are required for the dose?",
     "Answer": 380,
     "Units": "ml"
   },
   {
     "Number": 544,
-    "Question": "Prescription for: 20.8 g\n\nDrug available as: 40mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 20.8 g <br> Drug available as: 40mg/ml <br> How many ml are required for the dose?",
     "Answer": 520,
     "Units": "ml"
   },
   {
     "Number": 545,
-    "Question": "Prescription for: 1.8 g\n\nDrug available as: 25mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.8 g <br> Drug available as: 25mg/5ml <br> How many ml are required for the dose?",
     "Answer": 360,
     "Units": "ml"
   },
   {
     "Number": 546,
-    "Question": "Prescription for: 0.5 g\n\nDrug available as: 20mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 0.5 g <br> Drug available as: 20mg/10ml <br> How many ml are required for the dose?",
     "Answer": 250,
     "Units": "ml"
   },
   {
     "Number": 547,
-    "Question": "Prescription for: 5 g\n\nDrug available as: 20mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 5 g <br> Drug available as: 20mg/ml <br> How many ml are required for the dose?",
     "Answer": 250,
     "Units": "ml"
   },
   {
     "Number": 548,
-    "Question": "Prescription for: 2.94 g\n\nDrug available as: 30mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2.94 g <br> Drug available as: 30mg/5ml <br> How many ml are required for the dose?",
     "Answer": 490,
     "Units": "ml"
   },
   {
     "Number": 549,
-    "Question": "Prescription for: 1.59 g\n\nDrug available as: 30mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.59 g <br> Drug available as: 30mg/10ml <br> How many ml are required for the dose?",
     "Answer": 530,
     "Units": "ml"
   },
   {
     "Number": 550,
-    "Question": "Prescription for: 16.45 g\n\nDrug available as: 35mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 16.45 g <br> Drug available as: 35mg/ml <br> How many ml are required for the dose?",
     "Answer": 470,
     "Units": "ml"
   },
   {
     "Number": 551,
-    "Question": "Prescription for: 1.36 g\n\nDrug available as: 20mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.36 g <br> Drug available as: 20mg/5ml <br> How many ml are required for the dose?",
     "Answer": 340,
     "Units": "ml"
   },
   {
     "Number": 552,
-    "Question": "Prescription for: 0.91 g\n\nDrug available as: 35mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 0.91 g <br> Drug available as: 35mg/10ml <br> How many ml are required for the dose?",
     "Answer": 260,
     "Units": "ml"
   },
   {
     "Number": 553,
-    "Question": "Prescription for: 10.8 g\n\nDrug available as: 40mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 10.8 g <br> Drug available as: 40mg/ml <br> How many ml are required for the dose?",
     "Answer": 270,
     "Units": "ml"
   },
   {
     "Number": 554,
-    "Question": "Prescription for: 2.24 g\n\nDrug available as: 35mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2.24 g <br> Drug available as: 35mg/5ml <br> How many ml are required for the dose?",
     "Answer": 320,
     "Units": "ml"
   },
   {
     "Number": 555,
-    "Question": "Prescription for: 1.04 g\n\nDrug available as: 40mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.04 g <br> Drug available as: 40mg/10ml <br> How many ml are required for the dose?",
     "Answer": 260,
     "Units": "ml"
   },
   {
     "Number": 556,
-    "Question": "Prescription for: 13.6 g\n\nDrug available as: 40mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 13.6 g <br> Drug available as: 40mg/ml <br> How many ml are required for the dose?",
     "Answer": 340,
     "Units": "ml"
   },
   {
     "Number": 557,
-    "Question": "Prescription for: 3.22 g\n\nDrug available as: 35mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 3.22 g <br> Drug available as: 35mg/5ml <br> How many ml are required for the dose?",
     "Answer": 460,
     "Units": "ml"
   },
   {
     "Number": 558,
-    "Question": "Prescription for: 0.56 g\n\nDrug available as: 20mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 0.56 g <br> Drug available as: 20mg/10ml <br> How many ml are required for the dose?",
     "Answer": 280,
     "Units": "ml"
   },
   {
     "Number": 559,
-    "Question": "Prescription for: 8.1 g\n\nDrug available as: 15mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 8.1 g <br> Drug available as: 15mg/ml <br> How many ml are required for the dose?",
     "Answer": 540,
     "Units": "ml"
   },
   {
     "Number": 560,
-    "Question": "Prescription for: 1.8 g\n\nDrug available as: 25mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.8 g <br> Drug available as: 25mg/5ml <br> How many ml are required for the dose?",
     "Answer": 360,
     "Units": "ml"
   },
   {
     "Number": 561,
-    "Question": "Prescription for: 2.08 g\n\nDrug available as: 40mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2.08 g <br> Drug available as: 40mg/10ml <br> How many ml are required for the dose?",
     "Answer": 520,
     "Units": "ml"
   },
   {
     "Number": 562,
-    "Question": "Prescription for: 11.75 g\n\nDrug available as: 25mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 11.75 g <br> Drug available as: 25mg/ml <br> How many ml are required for the dose?",
     "Answer": 470,
     "Units": "ml"
   },
   {
     "Number": 563,
-    "Question": "Prescription for: 2.58 g\n\nDrug available as: 30mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2.58 g <br> Drug available as: 30mg/5ml <br> How many ml are required for the dose?",
     "Answer": 430,
     "Units": "ml"
   },
   {
     "Number": 564,
-    "Question": "Prescription for: 0.54 g\n\nDrug available as: 20mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 0.54 g <br> Drug available as: 20mg/10ml <br> How many ml are required for the dose?",
     "Answer": 270,
     "Units": "ml"
   },
   {
     "Number": 565,
-    "Question": "Prescription for: 12.6 g\n\nDrug available as: 30mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 12.6 g <br> Drug available as: 30mg/ml <br> How many ml are required for the dose?",
     "Answer": 420,
     "Units": "ml"
   },
   {
     "Number": 566,
-    "Question": "Prescription for: 2.28 g\n\nDrug available as: 20mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2.28 g <br> Drug available as: 20mg/5ml <br> How many ml are required for the dose?",
     "Answer": 570,
     "Units": "ml"
   },
   {
     "Number": 567,
-    "Question": "Prescription for: 0.75 g\n\nDrug available as: 30mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 0.75 g <br> Drug available as: 30mg/10ml <br> How many ml are required for the dose?",
     "Answer": 250,
     "Units": "ml"
   },
   {
     "Number": 568,
-    "Question": "Prescription for: 19.25 g\n\nDrug available as: 35mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 19.25 g <br> Drug available as: 35mg/ml <br> How many ml are required for the dose?",
     "Answer": 550,
     "Units": "ml"
   },
   {
     "Number": 569,
-    "Question": "Prescription for: 1.89 g\n\nDrug available as: 35mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.89 g <br> Drug available as: 35mg/5ml <br> How many ml are required for the dose?",
     "Answer": 270,
     "Units": "ml"
   },
   {
     "Number": 570,
-    "Question": "Prescription for: 2.03 g\n\nDrug available as: 35mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2.03 g <br> Drug available as: 35mg/10ml <br> How many ml are required for the dose?",
     "Answer": 580,
     "Units": "ml"
   },
   {
     "Number": 571,
-    "Question": "Prescription for: 9 g\n\nDrug available as: 30mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 9 g <br> Drug available as: 30mg/ml <br> How many ml are required for the dose?",
     "Answer": 300,
     "Units": "ml"
   },
   {
     "Number": 572,
-    "Question": "Prescription for: 2.52 g\n\nDrug available as: 35mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2.52 g <br> Drug available as: 35mg/5ml <br> How many ml are required for the dose?",
     "Answer": 360,
     "Units": "ml"
   },
   {
     "Number": 573,
-    "Question": "Prescription for: 0.435 g\n\nDrug available as: 15mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 0.435 g <br> Drug available as: 15mg/10ml <br> How many ml are required for the dose?",
     "Answer": 290,
     "Units": "ml"
   },
   {
     "Number": 574,
-    "Question": "Prescription for: 12.9 g\n\nDrug available as: 30mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 12.9 g <br> Drug available as: 30mg/ml <br> How many ml are required for the dose?",
     "Answer": 430,
     "Units": "ml"
   },
   {
     "Number": 575,
-    "Question": "Prescription for: 4.32 g\n\nDrug available as: 40mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 4.32 g <br> Drug available as: 40mg/5ml <br> How many ml are required for the dose?",
     "Answer": 540,
     "Units": "ml"
   },
   {
     "Number": 576,
-    "Question": "Prescription for: 1.12 g\n\nDrug available as: 35mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.12 g <br> Drug available as: 35mg/10ml <br> How many ml are required for the dose?",
     "Answer": 320,
     "Units": "ml"
   },
   {
     "Number": 577,
-    "Question": "Prescription for: 13.6 g\n\nDrug available as: 40mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 13.6 g <br> Drug available as: 40mg/ml <br> How many ml are required for the dose?",
     "Answer": 340,
     "Units": "ml"
   },
   {
     "Number": 578,
-    "Question": "Prescription for: 1.2 g\n\nDrug available as: 20mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.2 g <br> Drug available as: 20mg/5ml <br> How many ml are required for the dose?",
     "Answer": 300,
     "Units": "ml"
   },
   {
     "Number": 579,
-    "Question": "Prescription for: 1.8 g\n\nDrug available as: 40mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.8 g <br> Drug available as: 40mg/10ml <br> How many ml are required for the dose?",
     "Answer": 450,
     "Units": "ml"
   },
   {
     "Number": 580,
-    "Question": "Prescription for: 9.9 g\n\nDrug available as: 30mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 9.9 g <br> Drug available as: 30mg/ml <br> How many ml are required for the dose?",
     "Answer": 330,
     "Units": "ml"
   },
   {
     "Number": 581,
-    "Question": "Prescription for: 4.24 g\n\nDrug available as: 40mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 4.24 g <br> Drug available as: 40mg/5ml <br> How many ml are required for the dose?",
     "Answer": 530,
     "Units": "ml"
   },
   {
     "Number": 582,
-    "Question": "Prescription for: 0.85 g\n\nDrug available as: 25mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 0.85 g <br> Drug available as: 25mg/10ml <br> How many ml are required for the dose?",
     "Answer": 340,
     "Units": "ml"
   },
   {
     "Number": 583,
-    "Question": "Prescription for: 12.25 g\n\nDrug available as: 25mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 12.25 g <br> Drug available as: 25mg/ml <br> How many ml are required for the dose?",
     "Answer": 490,
     "Units": "ml"
   },
   {
     "Number": 584,
-    "Question": "Prescription for: 2.7 g\n\nDrug available as: 25mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2.7 g <br> Drug available as: 25mg/5ml <br> How many ml are required for the dose?",
     "Answer": 540,
     "Units": "ml"
   },
   {
     "Number": 585,
-    "Question": "Prescription for: 1.35 g\n\nDrug available as: 30mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.35 g <br> Drug available as: 30mg/10ml <br> How many ml are required for the dose?",
     "Answer": 450,
     "Units": "ml"
   },
   {
     "Number": 586,
-    "Question": "Prescription for: 13.25 g\n\nDrug available as: 25mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 13.25 g <br> Drug available as: 25mg/ml <br> How many ml are required for the dose?",
     "Answer": 530,
     "Units": "ml"
   },
   {
     "Number": 587,
-    "Question": "Prescription for: 2.75 g\n\nDrug available as: 25mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2.75 g <br> Drug available as: 25mg/5ml <br> How many ml are required for the dose?",
     "Answer": 550,
     "Units": "ml"
   },
   {
     "Number": 588,
-    "Question": "Prescription for: 1.41 g\n\nDrug available as: 30mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.41 g <br> Drug available as: 30mg/10ml <br> How many ml are required for the dose?",
     "Answer": 470,
     "Units": "ml"
   },
   {
     "Number": 589,
-    "Question": "Prescription for: 7.5 g\n\nDrug available as: 30mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 7.5 g <br> Drug available as: 30mg/ml <br> How many ml are required for the dose?",
     "Answer": 250,
     "Units": "ml"
   },
   {
     "Number": 590,
-    "Question": "Prescription for: 2.24 g\n\nDrug available as: 40mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2.24 g <br> Drug available as: 40mg/5ml <br> How many ml are required for the dose?",
     "Answer": 280,
     "Units": "ml"
   },
   {
     "Number": 591,
-    "Question": "Prescription for: 0.96 g\n\nDrug available as: 30mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 0.96 g <br> Drug available as: 30mg/10ml <br> How many ml are required for the dose?",
     "Answer": 320,
     "Units": "ml"
   },
   {
     "Number": 592,
-    "Question": "Prescription for: 21 g\n\nDrug available as: 35mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 21 g <br> Drug available as: 35mg/ml <br> How many ml are required for the dose?",
     "Answer": 600,
     "Units": "ml"
   },
   {
     "Number": 593,
-    "Question": "Prescription for: 0.78 g\n\nDrug available as: 15mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 0.78 g <br> Drug available as: 15mg/5ml <br> How many ml are required for the dose?",
     "Answer": 260,
     "Units": "ml"
   },
   {
     "Number": 594,
-    "Question": "Prescription for: 1.715 g\n\nDrug available as: 35mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.715 g <br> Drug available as: 35mg/10ml <br> How many ml are required for the dose?",
     "Answer": 490,
     "Units": "ml"
   },
   {
     "Number": 595,
-    "Question": "Prescription for: 5.6 g\n\nDrug available as: 20mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 5.6 g <br> Drug available as: 20mg/ml <br> How many ml are required for the dose?",
     "Answer": 280,
     "Units": "ml"
   },
   {
     "Number": 596,
-    "Question": "Prescription for: 2.94 g\n\nDrug available as: 35mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2.94 g <br> Drug available as: 35mg/5ml <br> How many ml are required for the dose?",
     "Answer": 420,
     "Units": "ml"
   },
   {
     "Number": 597,
-    "Question": "Prescription for: 0.6 g\n\nDrug available as: 20mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 0.6 g <br> Drug available as: 20mg/10ml <br> How many ml are required for the dose?",
     "Answer": 300,
     "Units": "ml"
   },
   {
     "Number": 598,
-    "Question": "Prescription for: 14.8 g\n\nDrug available as: 40mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 14.8 g <br> Drug available as: 40mg/ml <br> How many ml are required for the dose?",
     "Answer": 370,
     "Units": "ml"
   },
   {
     "Number": 599,
-    "Question": "Prescription for: 1.88 g\n\nDrug available as: 20mg/5ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.88 g <br> Drug available as: 20mg/5ml <br> How many ml are required for the dose?",
     "Answer": 470,
     "Units": "ml"
   },
   {
     "Number": 600,
-    "Question": "Prescription for: 1.225 g\n\nDrug available as: 25mg/10ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1.225 g <br> Drug available as: 25mg/10ml <br> How many ml are required for the dose?",
     "Answer": 490,
     "Units": "ml"
   },
   {
     "Number": 601,
-    "Question": "Prescription for: 20.8 g\n\nDrug available as: 40mg/ml\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 20.8 g <br> Drug available as: 40mg/ml <br> How many ml are required for the dose?",
     "Answer": 520,
     "Units": "ml"
   },
   {
     "Number": 602,
-    "Question": "Prescription for: 13.5 mg\n\nDrug available as: 15 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 13.5 mg <br> Drug available as: 15 %w/v <br> How many ml are required for the dose?",
     "Answer": 90,
     "Units": "ml"
   },
   {
     "Number": 603,
-    "Question": "Prescription for: 4000 mg\n\nDrug available as: 10 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 4000 mg <br> Drug available as: 10 %w/v <br> How many ml are required for the dose?",
     "Answer": 40,
     "Units": "ml"
   },
   {
     "Number": 604,
-    "Question": "Prescription for: 12750 mg\n\nDrug available as: 15 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 12750 mg <br> Drug available as: 15 %w/v <br> How many ml are required for the dose?",
     "Answer": 85,
     "Units": "ml"
   },
   {
     "Number": 605,
-    "Question": "Prescription for: 21250 mg\n\nDrug available as: 25 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 21250 mg <br> Drug available as: 25 %w/v <br> How many ml are required for the dose?",
     "Answer": 85,
     "Units": "ml"
   },
   {
     "Number": 606,
-    "Question": "Prescription for: 2000 mg\n\nDrug available as: 20 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2000 mg <br> Drug available as: 20 %w/v <br> How many ml are required for the dose?",
     "Answer": 10,
     "Units": "ml"
   },
   {
     "Number": 607,
-    "Question": "Prescription for: 5000 mg\n\nDrug available as: 25 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 5000 mg <br> Drug available as: 25 %w/v <br> How many ml are required for the dose?",
     "Answer": 20,
     "Units": "ml"
   },
   {
     "Number": 608,
-    "Question": "Prescription for: 16000 mg\n\nDrug available as: 20 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 16000 mg <br> Drug available as: 20 %w/v <br> How many ml are required for the dose?",
     "Answer": 80,
     "Units": "ml"
   },
   {
     "Number": 609,
-    "Question": "Prescription for: 5000 mg\n\nDrug available as: 20 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 5000 mg <br> Drug available as: 20 %w/v <br> How many ml are required for the dose?",
     "Answer": 25,
     "Units": "ml"
   },
   {
     "Number": 610,
-    "Question": "Prescription for: 28500 mg\n\nDrug available as: 30 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 28500 mg <br> Drug available as: 30 %w/v <br> How many ml are required for the dose?",
     "Answer": 95,
     "Units": "ml"
   },
   {
     "Number": 611,
-    "Question": "Prescription for: 4750 mg\n\nDrug available as: 5 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 4750 mg <br> Drug available as: 5 %w/v <br> How many ml are required for the dose?",
     "Answer": 95,
     "Units": "ml"
   },
   {
     "Number": 612,
-    "Question": "Prescription for: 16250 mg\n\nDrug available as: 25 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 16250 mg <br> Drug available as: 25 %w/v <br> How many ml are required for the dose?",
     "Answer": 65,
     "Units": "ml"
   },
   {
     "Number": 613,
-    "Question": "Prescription for: 8000 mg\n\nDrug available as: 10 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 8000 mg <br> Drug available as: 10 %w/v <br> How many ml are required for the dose?",
     "Answer": 80,
     "Units": "ml"
   },
   {
     "Number": 614,
-    "Question": "Prescription for: 15000 mg\n\nDrug available as: 25 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 15000 mg <br> Drug available as: 25 %w/v <br> How many ml are required for the dose?",
     "Answer": 60,
     "Units": "ml"
   },
   {
     "Number": 615,
-    "Question": "Prescription for: 3750 mg\n\nDrug available as: 15 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 3750 mg <br> Drug available as: 15 %w/v <br> How many ml are required for the dose?",
     "Answer": 25,
     "Units": "ml"
   },
   {
     "Number": 616,
-    "Question": "Prescription for: 16500 mg\n\nDrug available as: 30 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 16500 mg <br> Drug available as: 30 %w/v <br> How many ml are required for the dose?",
     "Answer": 55,
     "Units": "ml"
   },
   {
     "Number": 617,
-    "Question": "Prescription for: 6500 mg\n\nDrug available as: 10 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 6500 mg <br> Drug available as: 10 %w/v <br> How many ml are required for the dose?",
     "Answer": 65,
     "Units": "ml"
   },
   {
     "Number": 618,
-    "Question": "Prescription for: 4000 mg\n\nDrug available as: 20 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 4000 mg <br> Drug available as: 20 %w/v <br> How many ml are required for the dose?",
     "Answer": 20,
     "Units": "ml"
   },
   {
     "Number": 619,
-    "Question": "Prescription for: 27000 mg\n\nDrug available as: 30 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 27000 mg <br> Drug available as: 30 %w/v <br> How many ml are required for the dose?",
     "Answer": 90,
     "Units": "ml"
   },
   {
     "Number": 620,
-    "Question": "Prescription for: 10000 mg\n\nDrug available as: 20 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 10000 mg <br> Drug available as: 20 %w/v <br> How many ml are required for the dose?",
     "Answer": 50,
     "Units": "ml"
   },
   {
     "Number": 621,
-    "Question": "Prescription for: 9000 mg\n\nDrug available as: 15 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 9000 mg <br> Drug available as: 15 %w/v <br> How many ml are required for the dose?",
     "Answer": 60,
     "Units": "ml"
   },
   {
     "Number": 622,
-    "Question": "Prescription for: 750 mg\n\nDrug available as: 15 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 750 mg <br> Drug available as: 15 %w/v <br> How many ml are required for the dose?",
     "Answer": 5,
     "Units": "ml"
   },
   {
     "Number": 623,
-    "Question": "Prescription for: 12500 mg\n\nDrug available as: 25 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 12500 mg <br> Drug available as: 25 %w/v <br> How many ml are required for the dose?",
     "Answer": 50,
     "Units": "ml"
   },
   {
     "Number": 624,
-    "Question": "Prescription for: 11250 mg\n\nDrug available as: 15 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 11250 mg <br> Drug available as: 15 %w/v <br> How many ml are required for the dose?",
     "Answer": 75,
     "Units": "ml"
   },
   {
     "Number": 625,
-    "Question": "Prescription for: 1250 mg\n\nDrug available as: 25 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1250 mg <br> Drug available as: 25 %w/v <br> How many ml are required for the dose?",
     "Answer": 5,
     "Units": "ml"
   },
   {
     "Number": 626,
-    "Question": "Prescription for: 21250 mg\n\nDrug available as: 25 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 21250 mg <br> Drug available as: 25 %w/v <br> How many ml are required for the dose?",
     "Answer": 85,
     "Units": "ml"
   },
   {
     "Number": 627,
-    "Question": "Prescription for: 8000 mg\n\nDrug available as: 20 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 8000 mg <br> Drug available as: 20 %w/v <br> How many ml are required for the dose?",
     "Answer": 40,
     "Units": "ml"
   },
   {
     "Number": 628,
-    "Question": "Prescription for: 500 mg\n\nDrug available as: 10 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 500 mg <br> Drug available as: 10 %w/v <br> How many ml are required for the dose?",
     "Answer": 5,
     "Units": "ml"
   },
   {
     "Number": 629,
-    "Question": "Prescription for: 3500 mg\n\nDrug available as: 10 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 3500 mg <br> Drug available as: 10 %w/v <br> How many ml are required for the dose?",
     "Answer": 35,
     "Units": "ml"
   },
   {
     "Number": 630,
-    "Question": "Prescription for: 5000 mg\n\nDrug available as: 5 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 5000 mg <br> Drug available as: 5 %w/v <br> How many ml are required for the dose?",
     "Answer": 100,
     "Units": "ml"
   },
   {
     "Number": 631,
-    "Question": "Prescription for: 30000 mg\n\nDrug available as: 30 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 30000 mg <br> Drug available as: 30 %w/v <br> How many ml are required for the dose?",
     "Answer": 100,
     "Units": "ml"
   },
   {
     "Number": 632,
-    "Question": "Prescription for: 20000 mg\n\nDrug available as: 25 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 20000 mg <br> Drug available as: 25 %w/v <br> How many ml are required for the dose?",
     "Answer": 80,
     "Units": "ml"
   },
   {
     "Number": 633,
-    "Question": "Prescription for: 3000 mg\n\nDrug available as: 10 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 3000 mg <br> Drug available as: 10 %w/v <br> How many ml are required for the dose?",
     "Answer": 30,
     "Units": "ml"
   },
   {
     "Number": 634,
-    "Question": "Prescription for: 9000 mg\n\nDrug available as: 20 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 9000 mg <br> Drug available as: 20 %w/v <br> How many ml are required for the dose?",
     "Answer": 45,
     "Units": "ml"
   },
   {
     "Number": 635,
-    "Question": "Prescription for: 4000 mg\n\nDrug available as: 10 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 4000 mg <br> Drug available as: 10 %w/v <br> How many ml are required for the dose?",
     "Answer": 40,
     "Units": "ml"
   },
   {
     "Number": 636,
-    "Question": "Prescription for: 10500 mg\n\nDrug available as: 30 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 10500 mg <br> Drug available as: 30 %w/v <br> How many ml are required for the dose?",
     "Answer": 35,
     "Units": "ml"
   },
   {
     "Number": 637,
-    "Question": "Prescription for: 1500 mg\n\nDrug available as: 5 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1500 mg <br> Drug available as: 5 %w/v <br> How many ml are required for the dose?",
     "Answer": 30,
     "Units": "ml"
   },
   {
     "Number": 638,
-    "Question": "Prescription for: 9750 mg\n\nDrug available as: 15 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 9750 mg <br> Drug available as: 15 %w/v <br> How many ml are required for the dose?",
     "Answer": 65,
     "Units": "ml"
   },
   {
     "Number": 639,
-    "Question": "Prescription for: 10000 mg\n\nDrug available as: 25 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 10000 mg <br> Drug available as: 25 %w/v <br> How many ml are required for the dose?",
     "Answer": 40,
     "Units": "ml"
   },
   {
     "Number": 640,
-    "Question": "Prescription for: 2500 mg\n\nDrug available as: 5 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2500 mg <br> Drug available as: 5 %w/v <br> How many ml are required for the dose?",
     "Answer": 50,
     "Units": "ml"
   },
   {
     "Number": 641,
-    "Question": "Prescription for: 9750 mg\n\nDrug available as: 15 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 9750 mg <br> Drug available as: 15 %w/v <br> How many ml are required for the dose?",
     "Answer": 65,
     "Units": "ml"
   },
   {
     "Number": 642,
-    "Question": "Prescription for: 27000 mg\n\nDrug available as: 30 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 27000 mg <br> Drug available as: 30 %w/v <br> How many ml are required for the dose?",
     "Answer": 90,
     "Units": "ml"
   },
   {
     "Number": 643,
-    "Question": "Prescription for: 16250 mg\n\nDrug available as: 25 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 16250 mg <br> Drug available as: 25 %w/v <br> How many ml are required for the dose?",
     "Answer": 65,
     "Units": "ml"
   },
   {
     "Number": 644,
-    "Question": "Prescription for: 6000 mg\n\nDrug available as: 10 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 6000 mg <br> Drug available as: 10 %w/v <br> How many ml are required for the dose?",
     "Answer": 60,
     "Units": "ml"
   },
   {
     "Number": 645,
-    "Question": "Prescription for: 13500 mg\n\nDrug available as: 15 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 13500 mg <br> Drug available as: 15 %w/v <br> How many ml are required for the dose?",
     "Answer": 90,
     "Units": "ml"
   },
   {
     "Number": 646,
-    "Question": "Prescription for: 3000 mg\n\nDrug available as: 20 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 3000 mg <br> Drug available as: 20 %w/v <br> How many ml are required for the dose?",
     "Answer": 15,
     "Units": "ml"
   },
   {
     "Number": 647,
-    "Question": "Prescription for: 750 mg\n\nDrug available as: 15 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 750 mg <br> Drug available as: 15 %w/v <br> How many ml are required for the dose?",
     "Answer": 5,
     "Units": "ml"
   },
   {
     "Number": 648,
-    "Question": "Prescription for: 5000 mg\n\nDrug available as: 5 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 5000 mg <br> Drug available as: 5 %w/v <br> How many ml are required for the dose?",
     "Answer": 100,
     "Units": "ml"
   },
   {
     "Number": 649,
-    "Question": "Prescription for: 3000 mg\n\nDrug available as: 20 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 3000 mg <br> Drug available as: 20 %w/v <br> How many ml are required for the dose?",
     "Answer": 15,
     "Units": "ml"
   },
   {
     "Number": 650,
-    "Question": "Prescription for: 16250 mg\n\nDrug available as: 25 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 16250 mg <br> Drug available as: 25 %w/v <br> How many ml are required for the dose?",
     "Answer": 65,
     "Units": "ml"
   },
   {
     "Number": 651,
-    "Question": "Prescription for: 11250 mg\n\nDrug available as: 25 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 11250 mg <br> Drug available as: 25 %w/v <br> How many ml are required for the dose?",
     "Answer": 45,
     "Units": "ml"
   },
   {
     "Number": 652,
-    "Question": "Prescription for: 6000 mg\n\nDrug available as: 20 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 6000 mg <br> Drug available as: 20 %w/v <br> How many ml are required for the dose?",
     "Answer": 30,
     "Units": "ml"
   },
   {
     "Number": 653,
-    "Question": "Prescription for: 9000 mg\n\nDrug available as: 30 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 9000 mg <br> Drug available as: 30 %w/v <br> How many ml are required for the dose?",
     "Answer": 30,
     "Units": "ml"
   },
   {
     "Number": 654,
-    "Question": "Prescription for: 1500 mg\n\nDrug available as: 10 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1500 mg <br> Drug available as: 10 %w/v <br> How many ml are required for the dose?",
     "Answer": 15,
     "Units": "ml"
   },
   {
     "Number": 655,
-    "Question": "Prescription for: 1250 mg\n\nDrug available as: 5 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 1250 mg <br> Drug available as: 5 %w/v <br> How many ml are required for the dose?",
     "Answer": 25,
     "Units": "ml"
   },
   {
     "Number": 656,
-    "Question": "Prescription for: 3750 mg\n\nDrug available as: 5 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 3750 mg <br> Drug available as: 5 %w/v <br> How many ml are required for the dose?",
     "Answer": 75,
     "Units": "ml"
   },
   {
     "Number": 657,
-    "Question": "Prescription for: 2000 mg\n\nDrug available as: 5 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2000 mg <br> Drug available as: 5 %w/v <br> How many ml are required for the dose?",
     "Answer": 40,
     "Units": "ml"
   },
   {
     "Number": 658,
-    "Question": "Prescription for: 7000 mg\n\nDrug available as: 10 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 7000 mg <br> Drug available as: 10 %w/v <br> How many ml are required for the dose?",
     "Answer": 70,
     "Units": "ml"
   },
   {
     "Number": 659,
-    "Question": "Prescription for: 14250 mg\n\nDrug available as: 15 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 14250 mg <br> Drug available as: 15 %w/v <br> How many ml are required for the dose?",
     "Answer": 95,
     "Units": "ml"
   },
   {
     "Number": 660,
-    "Question": "Prescription for: 2000 mg\n\nDrug available as: 5 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2000 mg <br> Drug available as: 5 %w/v <br> How many ml are required for the dose?",
     "Answer": 40,
     "Units": "ml"
   },
   {
     "Number": 661,
-    "Question": "Prescription for: 12750 mg\n\nDrug available as: 15 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 12750 mg <br> Drug available as: 15 %w/v <br> How many ml are required for the dose?",
     "Answer": 85,
     "Units": "ml"
   },
   {
     "Number": 662,
-    "Question": "Prescription for: 9500 mg\n\nDrug available as: 10 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 9500 mg <br> Drug available as: 10 %w/v <br> How many ml are required for the dose?",
     "Answer": 95,
     "Units": "ml"
   },
   {
     "Number": 663,
-    "Question": "Prescription for: 11000 mg\n\nDrug available as: 20 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 11000 mg <br> Drug available as: 20 %w/v <br> How many ml are required for the dose?",
     "Answer": 55,
     "Units": "ml"
   },
   {
     "Number": 664,
-    "Question": "Prescription for: 5000 mg\n\nDrug available as: 20 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 5000 mg <br> Drug available as: 20 %w/v <br> How many ml are required for the dose?",
     "Answer": 25,
     "Units": "ml"
   },
   {
     "Number": 665,
-    "Question": "Prescription for: 16250 mg\n\nDrug available as: 25 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 16250 mg <br> Drug available as: 25 %w/v <br> How many ml are required for the dose?",
     "Answer": 65,
     "Units": "ml"
   },
   {
     "Number": 666,
-    "Question": "Prescription for: 3500 mg\n\nDrug available as: 10 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 3500 mg <br> Drug available as: 10 %w/v <br> How many ml are required for the dose?",
     "Answer": 35,
     "Units": "ml"
   },
   {
     "Number": 667,
-    "Question": "Prescription for: 9500 mg\n\nDrug available as: 10 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 9500 mg <br> Drug available as: 10 %w/v <br> How many ml are required for the dose?",
     "Answer": 95,
     "Units": "ml"
   },
   {
     "Number": 668,
-    "Question": "Prescription for: 250 mg\n\nDrug available as: 5 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 250 mg <br> Drug available as: 5 %w/v <br> How many ml are required for the dose?",
     "Answer": 5,
     "Units": "ml"
   },
   {
     "Number": 669,
-    "Question": "Prescription for: 2750 mg\n\nDrug available as: 5 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2750 mg <br> Drug available as: 5 %w/v <br> How many ml are required for the dose?",
     "Answer": 55,
     "Units": "ml"
   },
   {
     "Number": 670,
-    "Question": "Prescription for: 4000 mg\n\nDrug available as: 5 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 4000 mg <br> Drug available as: 5 %w/v <br> How many ml are required for the dose?",
     "Answer": 80,
     "Units": "ml"
   },
   {
     "Number": 671,
-    "Question": "Prescription for: 22500 mg\n\nDrug available as: 30 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 22500 mg <br> Drug available as: 30 %w/v <br> How many ml are required for the dose?",
     "Answer": 75,
     "Units": "ml"
   },
   {
     "Number": 672,
-    "Question": "Prescription for: 10500 mg\n\nDrug available as: 15 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 10500 mg <br> Drug available as: 15 %w/v <br> How many ml are required for the dose?",
     "Answer": 70,
     "Units": "ml"
   },
   {
     "Number": 673,
-    "Question": "Prescription for: 4000 mg\n\nDrug available as: 10 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 4000 mg <br> Drug available as: 10 %w/v <br> How many ml are required for the dose?",
     "Answer": 40,
     "Units": "ml"
   },
   {
     "Number": 674,
-    "Question": "Prescription for: 18000 mg\n\nDrug available as: 20 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 18000 mg <br> Drug available as: 20 %w/v <br> How many ml are required for the dose?",
     "Answer": 90,
     "Units": "ml"
   },
   {
     "Number": 675,
-    "Question": "Prescription for: 7500 mg\n\nDrug available as: 15 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 7500 mg <br> Drug available as: 15 %w/v <br> How many ml are required for the dose?",
     "Answer": 50,
     "Units": "ml"
   },
   {
     "Number": 676,
-    "Question": "Prescription for: 8500 mg\n\nDrug available as: 10 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 8500 mg <br> Drug available as: 10 %w/v <br> How many ml are required for the dose?",
     "Answer": 85,
     "Units": "ml"
   },
   {
     "Number": 677,
-    "Question": "Prescription for: 16000 mg\n\nDrug available as: 20 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 16000 mg <br> Drug available as: 20 %w/v <br> How many ml are required for the dose?",
     "Answer": 80,
     "Units": "ml"
   },
   {
     "Number": 678,
-    "Question": "Prescription for: 16250 mg\n\nDrug available as: 25 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 16250 mg <br> Drug available as: 25 %w/v <br> How many ml are required for the dose?",
     "Answer": 65,
     "Units": "ml"
   },
   {
     "Number": 679,
-    "Question": "Prescription for: 5250 mg\n\nDrug available as: 15 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 5250 mg <br> Drug available as: 15 %w/v <br> How many ml are required for the dose?",
     "Answer": 35,
     "Units": "ml"
   },
   {
     "Number": 680,
-    "Question": "Prescription for: 12500 mg\n\nDrug available as: 25 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 12500 mg <br> Drug available as: 25 %w/v <br> How many ml are required for the dose?",
     "Answer": 50,
     "Units": "ml"
   },
   {
     "Number": 681,
-    "Question": "Prescription for: 2250 mg\n\nDrug available as: 15 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2250 mg <br> Drug available as: 15 %w/v <br> How many ml are required for the dose?",
     "Answer": 15,
     "Units": "ml"
   },
   {
     "Number": 682,
-    "Question": "Prescription for: 3000 mg\n\nDrug available as: 30 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 3000 mg <br> Drug available as: 30 %w/v <br> How many ml are required for the dose?",
     "Answer": 10,
     "Units": "ml"
   },
   {
     "Number": 683,
-    "Question": "Prescription for: 25500 mg\n\nDrug available as: 30 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 25500 mg <br> Drug available as: 30 %w/v <br> How many ml are required for the dose?",
     "Answer": 85,
     "Units": "ml"
   },
   {
     "Number": 684,
-    "Question": "Prescription for: 13750 mg\n\nDrug available as: 25 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 13750 mg <br> Drug available as: 25 %w/v <br> How many ml are required for the dose?",
     "Answer": 55,
     "Units": "ml"
   },
   {
     "Number": 685,
-    "Question": "Prescription for: 750 mg\n\nDrug available as: 15 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 750 mg <br> Drug available as: 15 %w/v <br> How many ml are required for the dose?",
     "Answer": 5,
     "Units": "ml"
   },
   {
     "Number": 686,
-    "Question": "Prescription for: 10000 mg\n\nDrug available as: 20 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 10000 mg <br> Drug available as: 20 %w/v <br> How many ml are required for the dose?",
     "Answer": 50,
     "Units": "ml"
   },
   {
     "Number": 687,
-    "Question": "Prescription for: 2500 mg\n\nDrug available as: 10 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2500 mg <br> Drug available as: 10 %w/v <br> How many ml are required for the dose?",
     "Answer": 25,
     "Units": "ml"
   },
   {
     "Number": 688,
-    "Question": "Prescription for: 3000 mg\n\nDrug available as: 10 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 3000 mg <br> Drug available as: 10 %w/v <br> How many ml are required for the dose?",
     "Answer": 30,
     "Units": "ml"
   },
   {
     "Number": 689,
-    "Question": "Prescription for: 19500 mg\n\nDrug available as: 30 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 19500 mg <br> Drug available as: 30 %w/v <br> How many ml are required for the dose?",
     "Answer": 65,
     "Units": "ml"
   },
   {
     "Number": 690,
-    "Question": "Prescription for: 5250 mg\n\nDrug available as: 15 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 5250 mg <br> Drug available as: 15 %w/v <br> How many ml are required for the dose?",
     "Answer": 35,
     "Units": "ml"
   },
   {
     "Number": 691,
-    "Question": "Prescription for: 2250 mg\n\nDrug available as: 5 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 2250 mg <br> Drug available as: 5 %w/v <br> How many ml are required for the dose?",
     "Answer": 45,
     "Units": "ml"
   },
   {
     "Number": 692,
-    "Question": "Prescription for: 4000 mg\n\nDrug available as: 5 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 4000 mg <br> Drug available as: 5 %w/v <br> How many ml are required for the dose?",
     "Answer": 80,
     "Units": "ml"
   },
   {
     "Number": 693,
-    "Question": "Prescription for: 7000 mg\n\nDrug available as: 20 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 7000 mg <br> Drug available as: 20 %w/v <br> How many ml are required for the dose?",
     "Answer": 35,
     "Units": "ml"
   },
   {
     "Number": 694,
-    "Question": "Prescription for: 9500 mg\n\nDrug available as: 10 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 9500 mg <br> Drug available as: 10 %w/v <br> How many ml are required for the dose?",
     "Answer": 95,
     "Units": "ml"
   },
   {
     "Number": 695,
-    "Question": "Prescription for: 4500 mg\n\nDrug available as: 5 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 4500 mg <br> Drug available as: 5 %w/v <br> How many ml are required for the dose?",
     "Answer": 90,
     "Units": "ml"
   },
   {
     "Number": 696,
-    "Question": "Prescription for: 9000 mg\n\nDrug available as: 10 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 9000 mg <br> Drug available as: 10 %w/v <br> How many ml are required for the dose?",
     "Answer": 90,
     "Units": "ml"
   },
   {
     "Number": 697,
-    "Question": "Prescription for: 18000 mg\n\nDrug available as: 20 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 18000 mg <br> Drug available as: 20 %w/v <br> How many ml are required for the dose?",
     "Answer": 90,
     "Units": "ml"
   },
   {
     "Number": 698,
-    "Question": "Prescription for: 21250 mg\n\nDrug available as: 25 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 21250 mg <br> Drug available as: 25 %w/v <br> How many ml are required for the dose?",
     "Answer": 85,
     "Units": "ml"
   },
   {
     "Number": 699,
-    "Question": "Prescription for: 5250 mg\n\nDrug available as: 15 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 5250 mg <br> Drug available as: 15 %w/v <br> How many ml are required for the dose?",
     "Answer": 35,
     "Units": "ml"
   },
   {
     "Number": 700,
-    "Question": "Prescription for: 500 mg\n\nDrug available as: 10 %w/v\n\nHow many ml are required for the dose?",
+    "Question": "Prescription for: 500 mg <br> Drug available as: 10 %w/v <br> How many ml are required for the dose?",
     "Answer": 5,
     "Units": "ml"
   }
