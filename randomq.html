@@ -163,9 +163,10 @@
         <div class="quiz-container">
             <p class="question-number" id="questionNumberDisplay"></p>
             <p class="question-text" id="questionText"></p>
+            <div id="loadingMessage" style="text-align: center; font-style: italic; color: #555;">Loading quiz...</div>
 
             <!-- Replaced options list with input box and units span -->
-            <div class="input-group">
+            <div class="input-group" style="display: none;">
                 <input type="text" id="answerInput" placeholder="Enter your answer">
                 <span id="unitsText"></span>
             </div>
@@ -173,8 +174,8 @@
             <div class="feedback-message" id="feedbackMessage"></div>
 
             <div class="button-group">
-                <button id="checkAnswerBtn">Check Answer</button>
-                <button id="nextQuestionBtn" disabled>Next Question</button>
+                <button id="checkAnswerBtn" style="display: none;">Check Answer</button>
+                <button id="nextQuestionBtn" disabled style="display: none;">Next Question</button>
                 <button id="restartQuizBtn" style="display: none;">Restart Quiz</button>
             </div>
         </div>
@@ -215,6 +216,8 @@
         const quizTitle = document.getElementById('quizTitle');
         const answerInput = document.getElementById('answerInput');
         const unitsText = document.getElementById('unitsText');
+        const loadingMessage = document.getElementById('loadingMessage');
+        const inputGroup = document.querySelector('.input-group');
 
         // Function to parse URL parameters
         function getUrlParameter(name) {
@@ -255,6 +258,8 @@
             nextQuestionBtn.disabled = true;
             answerInput.value = '';
             answerInput.disabled = false;
+            loadingMessage.style.display = 'none';
+            inputGroup.style.display = 'flex';
             displayQuestion();
         }
 
@@ -345,7 +350,7 @@
         // Function to load the quiz data from the uploaded file
         async function loadQuizData(quizId, retries = 3, delay = 1000) {
             try {
-                // The correct way to get the file is to use the full uploaded ID.
+                // Correct fetch path using the data/ prefix.
                 const response = await fetch(`data/${quizId}`);
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}. Please check the quiz ID in the URL.`);
@@ -365,8 +370,10 @@
                 } else {
                     questionText.innerHTML = `<p style="color: red;">Error loading quiz: ${error.message}. Please check the quiz ID in the URL and ensure the file exists.</p>`;
                     console.error('Final error fetching quiz data:', error);
-                    checkAnswerBtn.disabled = true;
-                    nextQuestionBtn.disabled = true;
+                    checkAnswerBtn.style.display = 'none';
+                    nextQuestionBtn.style.display = 'none';
+                    loadingMessage.style.display = 'none';
+                    inputGroup.style.display = 'none';
                 }
             }
         }
@@ -375,13 +382,14 @@
         window.onload = () => {
             const quizId = getUrlParameter('quiz');
             if (quizId) {
-                // The URL parameter is the file name itself, so we pass it directly to the loading function.
-                // The loading function will add the 'uploaded:' prefix.
+                // The URL parameter is the file name itself, which will be prefixed with 'data/' in the fetch call.
                 loadQuizData(quizId);
             } else {
                 questionText.innerHTML = `<p style="color: red;">No quiz ID specified in the URL. Please use a link like: <code>quiz.html?quiz=your_quiz_id</code></p>`;
-                checkAnswerBtn.disabled = true;
-                nextQuestionBtn.disabled = true;
+                checkAnswerBtn.style.display = 'none';
+                nextQuestionBtn.style.display = 'none';
+                loadingMessage.style.display = 'none';
+                inputGroup.style.display = 'none';
             }
         };
     </script>
