@@ -345,8 +345,8 @@
         // Function to load the quiz data from the uploaded file
         async function loadQuizData(quizId, retries = 3, delay = 1000) {
             try {
-                // Use the standard fetch call to access the uploaded file directly
-                const response = await fetch(quizId);
+                // The correct way to get the file is to use the full uploaded ID.
+                const response = await fetch(`uploaded:${quizId}`);
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}. Please check the quiz ID in the URL.`);
                 }
@@ -375,7 +375,8 @@
         window.onload = () => {
             const quizId = getUrlParameter('quiz');
             if (quizId) {
-                // The URL parameter is the file name itself, so we pass it directly to fetch.
+                // The URL parameter is the file name itself, so we pass it directly to the loading function.
+                // The loading function will add the 'uploaded:' prefix.
                 loadQuizData(quizId);
             } else {
                 questionText.innerHTML = `<p style="color: red;">No quiz ID specified in the URL. Please use a link like: <code>quiz.html?quiz=your_quiz_id</code></p>`;
