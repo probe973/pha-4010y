@@ -200,7 +200,7 @@
         let score = 0;
         const totalQuestions = 10;
         
-        // Re-using your element references
+        // Element references
         const questionNumberDisplay = document.getElementById('questionNumberDisplay');
         const questionText = document.getElementById('questionText');
         const feedbackMessage = document.getElementById('feedbackMessage');
@@ -213,8 +213,6 @@
         const currentQuestionNum = document.getElementById('currentQuestionNum');
         const totalQuestionsDisplay = document.getElementById('totalQuestions');
         const quizTitle = document.getElementById('quizTitle');
-
-        // New element references for the numerical input quiz
         const answerInput = document.getElementById('answerInput');
         const unitsText = document.getElementById('unitsText');
 
@@ -226,56 +224,12 @@
             return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
         }
 
-        // Function to format quiz title (e.g., "mcq01" -> "Multiple Choice Quiz 01")
+        // Function to format quiz title (e.g., "rq_conversion_units.json" -> "Random Questions Conversion Units Quiz")
         function formatQuizTitle(quizId) {
-            const match = quizId.match(/(\D+)(\d+)/); // Captures non-digits and digits
-            if (match && match[1] && match[2]) {
-                let prefix = match[1];
-                const number = match[2];
-                // Assuming 'rq' stands for 'Random Questions' or similar
-                if (prefix === 'rq') {
-                    prefix = 'Random Questions';
-                } else {
-                    // General capitalization for other prefixes if needed
-                    prefix = prefix.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
-                }
-                return `${prefix} Quiz ${number}`;
-            }
-            return quizId.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase()) + ' Quiz'; // Fallback
-        }
-
-        // Function to load quiz data with exponential backoff and retries
-        async function loadQuiz(quizId, retries = 3, delay = 1000) { // 3 retries, starting with 1 second delay
-            try {
-                // Remove the 'data/' prefix if it's present, as the 'uploaded:' protocol handles this.
-                const fileName = quizId.replace('data/', '');
-                const filePath = `uploaded:${fileName}`;
-
-                const response = await fetch(filePath);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const fullData = await response.json();
-                
-                // Shuffle the full dataset and take the first 'totalQuestions'
-                shuffleArray(fullData);
-                quizData = fullData.slice(0, totalQuestions);
-                
-                totalQuestionsDisplay.textContent = quizData.length;
-                quizTitle.textContent = formatQuizTitle(quizId);
-                startQuiz();
-            } catch (error) {
-                console.error(`Attempt to load quiz data failed (retries left: ${retries}):`, error);
-                if (retries > 0) {
-                    // Retry after delay
-                    setTimeout(() => loadQuiz(quizId, retries - 1, delay * 2), delay);
-                } else {
-                    // No more retries, show error message
-                    questionText.innerHTML = `<p style="color: red;">Error loading quiz. Please check the quiz ID in the URL and ensure the data file exists. If the problem persists, try refreshing the page or contact support.</p>`;
-                    checkAnswerBtn.disabled = true;
-                    nextQuestionBtn.disabled = true;
-                }
-            }
+            const fileName = quizId.replace('.json', '');
+            const parts = fileName.split('_');
+            const formattedTitle = parts.map(part => part.charAt(0).toUpperCase() + part.slice(1)).join(' ');
+            return formattedTitle + ' Quiz';
         }
 
         // Function to shuffle an array
@@ -292,15 +246,15 @@
             score = 0;
             scoreTracker.textContent = score;
             quizSummary.style.display = 'none';
-            document.querySelector('.quiz-container').style.display = 'block'; // Show quiz container
-            document.querySelector('.status-bar').style.display = 'flex'; // Show status bar
+            document.querySelector('.quiz-container').style.display = 'block';
+            document.querySelector('.status-bar').style.display = 'flex';
             restartQuizBtn.style.display = 'none';
             checkAnswerBtn.style.display = 'inline-block';
             nextQuestionBtn.style.display = 'inline-block';
             checkAnswerBtn.disabled = false;
             nextQuestionBtn.disabled = true;
-            answerInput.value = ''; // Clear input
-            answerInput.disabled = false; // Enable input
+            answerInput.value = '';
+            answerInput.disabled = false;
             displayQuestion();
         }
 
@@ -314,18 +268,15 @@
             const question = quizData[currentQuestionIndex];
             currentQuestionNum.textContent = currentQuestionIndex + 1;
             questionNumberDisplay.textContent = `Question ${currentQuestionIndex + 1}:`;
-            questionText.innerHTML = question.Question; // Use innerHTML to render MathJax
-            
-            unitsText.textContent = question.Units || ''; // Display units
-            
+            questionText.innerHTML = question.Question;
+            unitsText.textContent = question.Units || '';
             feedbackMessage.style.display = 'none';
-            feedbackMessage.className = 'feedback-message'; // Reset classes
+            feedbackMessage.className = 'feedback-message';
             
-            // Render MathJax for the new question and options
-            MathJax.typesetPromise([questionText, unitsText]).catch((err) => console.error("MathJax typesetting error:", err));
+            MathJax.typesetPromise([questionText]).catch((err) => console.error("MathJax typesetting error:", err));
 
-            checkAnswerBtn.disabled = false; // Check button enabled for new question
-            nextQuestionBtn.disabled = true; // Next button disabled until answer is checked
+            checkAnswerBtn.disabled = false;
+            nextQuestionBtn.disabled = true;
             answerInput.disabled = false;
             answerInput.value = '';
             answerInput.focus();
@@ -355,9 +306,9 @@
             
             scoreTracker.textContent = score;
             feedbackMessage.style.display = 'block';
-            checkAnswerBtn.disabled = true; // Disable check after an attempt
-            nextQuestionBtn.disabled = false; // Enable next button after checking
-            answerInput.disabled = true; // Disable input after an attempt
+            checkAnswerBtn.disabled = true;
+            nextQuestionBtn.disabled = false;
+            answerInput.disabled = true;
         }
 
         // Function to move to the next question
@@ -375,7 +326,6 @@
             document.getElementById('finalScore').textContent = score;
             document.getElementById('finalTotal').textContent = totalQuestions;
             
-            // Hide all quiz buttons
             checkAnswerBtn.style.display = 'none';
             nextQuestionBtn.style.display = 'none';
             restartQuizBtn.style.display = 'none';
@@ -392,11 +342,11 @@
             }
         });
 
-
         // Initial load: get quiz ID from URL and load data
         window.onload = () => {
             const quizId = getUrlParameter('quiz');
             if (quizId) {
+                // Call the load function with the correct tool and file path
                 loadQuiz(quizId);
             } else {
                 questionText.innerHTML = `<p style="color: red;">No quiz ID specified in the URL. Please use a link like: <code>quiz.html?quiz=your_quiz_id</code></p>`;
@@ -404,6 +354,35 @@
                 nextQuestionBtn.disabled = true;
             }
         };
+
+        async function loadQuizData(quizId) {
+            try {
+                // The correct way to get the file content is via the content_fetcher
+                const fileContent = await content_fetcher.fetch({
+                    query: "Get the quiz data from the uploaded JSON file.",
+                    source_references: [{ id: `uploaded:${quizId}`, type: 'file' }]
+                });
+
+                const fullData = JSON.parse(fileContent);
+                shuffleArray(fullData);
+                quizData = fullData.slice(0, totalQuestions);
+
+                totalQuestionsDisplay.textContent = quizData.length;
+                quizTitle.textContent = formatQuizTitle(quizId);
+                startQuiz();
+            } catch (error) {
+                questionText.innerHTML = `<p style="color: red;">Error loading quiz: ${error.message}. Please check the quiz ID in the URL and ensure the file exists.</p>`;
+                checkAnswerBtn.disabled = true;
+                nextQuestionBtn.disabled = true;
+            }
+        }
+
+        // Overwrite the original loadQuiz with the corrected version.
+        function loadQuiz(quizId) {
+            // Remove the 'data/' prefix if it's present, as the 'uploaded:' protocol handles this.
+            const fileName = quizId.replace('data/', '');
+            loadQuizData(fileName);
+        }
     </script>
 </body>
 </html>
