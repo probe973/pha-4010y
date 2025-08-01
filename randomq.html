@@ -343,11 +343,10 @@
         });
 
         // Function to load the quiz data from the uploaded file
-        async function loadQuizData(quizId) {
+        async function loadQuizData(quizId, retries = 3, delay = 1000) {
             try {
-                // Use a standard fetch call with the 'uploaded:' protocol to get the file.
-                // This is the correct method for this environment.
-                const response = await fetch(`uploaded:${quizId}`);
+                // Use the standard fetch call to access the uploaded file directly
+                const response = await fetch(quizId);
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}. Please check the quiz ID in the URL.`);
                 }
@@ -360,10 +359,15 @@
                 quizTitle.textContent = formatQuizTitle(quizId);
                 startQuiz();
             } catch (error) {
-                questionText.innerHTML = `<p style="color: red;">Error loading quiz: ${error.message}. Please check the quiz ID in the URL and ensure the file exists.</p>`;
-                console.error('Error fetching quiz data:', error);
-                checkAnswerBtn.disabled = true;
-                nextQuestionBtn.disabled = true;
+                if (retries > 0) {
+                    console.error(`Attempt to load quiz data failed (retries left: ${retries}):`, error);
+                    setTimeout(() => loadQuizData(quizId, retries - 1, delay * 2), delay);
+                } else {
+                    questionText.innerHTML = `<p style="color: red;">Error loading quiz: ${error.message}. Please check the quiz ID in the URL and ensure the file exists.</p>`;
+                    console.error('Final error fetching quiz data:', error);
+                    checkAnswerBtn.disabled = true;
+                    nextQuestionBtn.disabled = true;
+                }
             }
         }
         
@@ -371,7 +375,7 @@
         window.onload = () => {
             const quizId = getUrlParameter('quiz');
             if (quizId) {
-                // Use the new, corrected data loading function
+                // The URL parameter is the file name itself, so we pass it directly to fetch.
                 loadQuizData(quizId);
             } else {
                 questionText.innerHTML = `<p style="color: red;">No quiz ID specified in the URL. Please use a link like: <code>quiz.html?quiz=your_quiz_id</code></p>`;
