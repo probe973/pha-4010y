@@ -305,13 +305,16 @@
                     feedbackMessage.textContent = "Correct!";
                     feedbackMessage.className = 'feedback-message feedback-correct';
                 } else {
-                    feedbackMessage.textContent = `Incorrect. The correct answer is ${correctAnswer} ${currentQuestion.Units}.`;
-                    feedbackMessage.className = 'feedback-message feedback-incorrect';
+                   // feedbackMessage.textContent = `Incorrect. The correct answer is ${correctAnswer} ${currentQuestion.Units}.`;
+                    feedbackMessage.innerHTML = `Incorrect. The correct answer is ${correctAnswer} ${currentQuestion.Units}.`;
+                    feedbackMessage.className = 'feedback-message feedback-incorrect';                      
                 }
             }
             
             scoreTracker.textContent = score;
             feedbackMessage.style.display = 'block';
+            //new
+            MathJax.typesetPromise([feedbackMessage]).catch((err) => console.error("MathJax typesetting error:", err));
             checkAnswerBtn.disabled = true;
             nextQuestionBtn.disabled = false;
             answerInput.disabled = true;
