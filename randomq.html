@@ -167,7 +167,7 @@
 
             <!-- Replaced options list with input box and units span -->
             <div class="input-group" style="display: none;">
-                <input type="text" id="answerInput" placeholder="Enter your answer">
+                <input type="text" id="answerInput" placeholder="Enter your answer" inputmode="numeric">
                 <span id="unitsText"></span>
             </div>
 
@@ -351,6 +351,31 @@
             }
         });
 
+        // New event listener to restrict input to numbers only
+        answerInput.addEventListener('keydown', (event) => {
+            // Allow control keys: backspace, delete, tab, escape, enter, arrows
+            if (event.key === 'Backspace' || event.key === 'Delete' || event.key === 'Tab' ||
+                event.key === 'Escape' || event.key === 'Enter' || event.key.includes('Arrow')) {
+                return;
+            }
+
+            // Allow a single decimal point
+            if (event.key === '.' && !event.target.value.includes('.')) {
+                return;
+            }
+
+            // Allow a single minus sign at the beginning
+            if (event.key === '-' && event.target.selectionStart === 0 && !event.target.value.includes('-')) {
+                return;
+            }
+
+            // Check if the key is a number (0-9). If not, prevent the default action.
+            if (!/^[0-9]$/.test(event.key)) {
+                event.preventDefault();
+            }
+        });
+
+        
         // Function to load the quiz data from the uploaded file
         async function loadQuizData(quizId, retries = 3, delay = 1000) {
             try {
