@@ -1,0 +1,3038 @@
+[
+  {
+    "Number": 1,
+    "Question": "How many grams of SiO₂ are required to make 800 millimoles, given that the atomic weight of Silicon is 28.1 and Oxygen is 16",
+    "Answer": 48.08,
+    "Units": "g"
+  },
+  {
+    "Number": 2,
+    "Question": "How many grams of H₂O₂ are required to make 750 millimoles, given that the atomic weight of Hydrogen is 1 and Oxygen is 16",
+    "Answer": 25.5,
+    "Units": "g"
+  },
+  {
+    "Number": 3,
+    "Question": "How many grams of H₂S are required to make 800 millimoles, given that the atomic weight of Hydrogen is 1 and Sulfur is 32.1",
+    "Answer": 27.28,
+    "Units": "g"
+  },
+  {
+    "Number": 4,
+    "Question": "How many grams of AgBr are required to make 100 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 18.78,
+    "Units": "g"
+  },
+  {
+    "Number": 5,
+    "Question": "How many grams of N₂O are required to make 200 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 8.8,
+    "Units": "g"
+  },
+  {
+    "Number": 6,
+    "Question": "How many grams of H₂O₂ are required to make 900 millimoles, given that the atomic weight of Hydrogen is 1 and Oxygen is 16",
+    "Answer": 30.6,
+    "Units": "g"
+  },
+  {
+    "Number": 7,
+    "Question": "How many grams of KI are required to make 400 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 66.4,
+    "Units": "g"
+  },
+  {
+    "Number": 8,
+    "Question": "How many grams of LiH are required to make 200 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 1.58,
+    "Units": "g"
+  },
+  {
+    "Number": 9,
+    "Question": "How many grams of H₂O₂ are required to make 250 millimoles, given that the atomic weight of Hydrogen is 1 and Oxygen is 16",
+    "Answer": 8.5,
+    "Units": "g"
+  },
+  {
+    "Number": 10,
+    "Question": "How many grams of KI are required to make 900 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 149.4,
+    "Units": "g"
+  },
+  {
+    "Number": 11,
+    "Question": "How many grams of BaCl₂ are required to make 200 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 41.66,
+    "Units": "g"
+  },
+  {
+    "Number": 12,
+    "Question": "How many grams of ZnS are required to make 600 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 58.5,
+    "Units": "g"
+  },
+  {
+    "Number": 13,
+    "Question": "How many grams of BaCl₂ are required to make 200 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 41.66,
+    "Units": "g"
+  },
+  {
+    "Number": 14,
+    "Question": "How many grams of H₂S are required to make 300 millimoles, given that the atomic weight of Hydrogen is 1 and Sulfur is 32.1",
+    "Answer": 10.23,
+    "Units": "g"
+  },
+  {
+    "Number": 15,
+    "Question": "How many grams of ZnS are required to make 300 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 29.25,
+    "Units": "g"
+  },
+  {
+    "Number": 16,
+    "Question": "How many grams of KI are required to make 900 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 149.4,
+    "Units": "g"
+  },
+  {
+    "Number": 17,
+    "Question": "How many grams of H₂O₂ are required to make 700 millimoles, given that the atomic weight of Hydrogen is 1 and Oxygen is 16",
+    "Answer": 23.8,
+    "Units": "g"
+  },
+  {
+    "Number": 18,
+    "Question": "How many grams of N₂O are required to make 900 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 39.6,
+    "Units": "g"
+  },
+  {
+    "Number": 19,
+    "Question": "How many grams of LiH are required to make 700 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 5.53,
+    "Units": "g"
+  },
+  {
+    "Number": 20,
+    "Question": "How many grams of BaCl₂ are required to make 400 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 83.32,
+    "Units": "g"
+  },
+  {
+    "Number": 21,
+    "Question": "How many grams of BaCl₂ are required to make 600 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 124.98,
+    "Units": "g"
+  },
+  {
+    "Number": 22,
+    "Question": "How many grams of KI are required to make 300 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 49.8,
+    "Units": "g"
+  },
+  {
+    "Number": 23,
+    "Question": "How many grams of CaO are required to make 300 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 16.83,
+    "Units": "g"
+  },
+  {
+    "Number": 24,
+    "Question": "How many grams of BaCl₂ are required to make 700 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 145.81,
+    "Units": "g"
+  },
+  {
+    "Number": 25,
+    "Question": "How many grams of AgBr are required to make 600 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 112.68,
+    "Units": "g"
+  },
+  {
+    "Number": 26,
+    "Question": "How many grams of LiH are required to make 800 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 6.32,
+    "Units": "g"
+  },
+  {
+    "Number": 27,
+    "Question": "How many grams of H₂S are required to make 800 millimoles, given that the atomic weight of Hydrogen is 1 and Sulfur is 32.1",
+    "Answer": 27.28,
+    "Units": "g"
+  },
+  {
+    "Number": 28,
+    "Question": "How many grams of CaO are required to make 200 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 11.22,
+    "Units": "g"
+  },
+  {
+    "Number": 29,
+    "Question": "How many grams of ZnS are required to make 600 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 58.5,
+    "Units": "g"
+  },
+  {
+    "Number": 30,
+    "Question": "How many grams of SiO₂ are required to make 700 millimoles, given that the atomic weight of Silicon is 28.1 and Oxygen is 16",
+    "Answer": 42.07,
+    "Units": "g"
+  },
+  {
+    "Number": 31,
+    "Question": "How many grams of SiO₂ are required to make 200 millimoles, given that the atomic weight of Silicon is 28.1 and Oxygen is 16",
+    "Answer": 12.02,
+    "Units": "g"
+  },
+  {
+    "Number": 32,
+    "Question": "How many grams of BaCl₂ are required to make 600 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 124.98,
+    "Units": "g"
+  },
+  {
+    "Number": 33,
+    "Question": "How many grams of KI are required to make 400 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 66.4,
+    "Units": "g"
+  },
+  {
+    "Number": 34,
+    "Question": "How many grams of CaO are required to make 800 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 44.88,
+    "Units": "g"
+  },
+  {
+    "Number": 35,
+    "Question": "How many grams of CaO are required to make 800 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 44.88,
+    "Units": "g"
+  },
+  {
+    "Number": 36,
+    "Question": "How many grams of AgBr are required to make 600 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 112.68,
+    "Units": "g"
+  },
+  {
+    "Number": 37,
+    "Question": "How many grams of CaO are required to make 600 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 33.66,
+    "Units": "g"
+  },
+  {
+    "Number": 38,
+    "Question": "How many grams of CaO are required to make 100 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 5.61,
+    "Units": "g"
+  },
+  {
+    "Number": 39,
+    "Question": "How many grams of N₂O are required to make 250 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 11,
+    "Units": "g"
+  },
+  {
+    "Number": 40,
+    "Question": "How many grams of BaCl₂ are required to make 200 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 41.66,
+    "Units": "g"
+  },
+  {
+    "Number": 41,
+    "Question": "How many grams of CaO are required to make 400 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 22.44,
+    "Units": "g"
+  },
+  {
+    "Number": 42,
+    "Question": "How many grams of H₂S are required to make 200 millimoles, given that the atomic weight of Hydrogen is 1 and Sulfur is 32.1",
+    "Answer": 6.82,
+    "Units": "g"
+  },
+  {
+    "Number": 43,
+    "Question": "How many grams of PCl₅ are required to make 100 millimoles, given that the atomic weight of Phosphorus is 31 and Chlorine is 35.5",
+    "Answer": 20.85,
+    "Units": "g"
+  },
+  {
+    "Number": 44,
+    "Question": "How many grams of AgBr are required to make 900 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 169.02,
+    "Units": "g"
+  },
+  {
+    "Number": 45,
+    "Question": "How many grams of H₂O₂ are required to make 500 millimoles, given that the atomic weight of Hydrogen is 1 and Oxygen is 16",
+    "Answer": 17,
+    "Units": "g"
+  },
+  {
+    "Number": 46,
+    "Question": "How many grams of NO₂ are required to make 500 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 23,
+    "Units": "g"
+  },
+  {
+    "Number": 47,
+    "Question": "How many grams of KI are required to make 200 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 33.2,
+    "Units": "g"
+  },
+  {
+    "Number": 48,
+    "Question": "How many grams of BaCl₂ are required to make 600 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 124.98,
+    "Units": "g"
+  },
+  {
+    "Number": 49,
+    "Question": "How many grams of KI are required to make 600 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 99.6,
+    "Units": "g"
+  },
+  {
+    "Number": 50,
+    "Question": "How many grams of N₂O are required to make 50 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 2.2,
+    "Units": "g"
+  },
+  {
+    "Number": 51,
+    "Question": "How many grams of H₂S are required to make 600 millimoles, given that the atomic weight of Hydrogen is 1 and Sulfur is 32.1",
+    "Answer": 20.46,
+    "Units": "g"
+  },
+  {
+    "Number": 52,
+    "Question": "How many grams of NO₂ are required to make 650 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 29.9,
+    "Units": "g"
+  },
+  {
+    "Number": 53,
+    "Question": "How many grams of NO₂ are required to make 450 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 20.7,
+    "Units": "g"
+  },
+  {
+    "Number": 54,
+    "Question": "How many grams of NO₂ are required to make 200 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 9.2,
+    "Units": "g"
+  },
+  {
+    "Number": 55,
+    "Question": "How many grams of LiH are required to make 200 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 1.58,
+    "Units": "g"
+  },
+  {
+    "Number": 56,
+    "Question": "How many grams of N₂O are required to make 100 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 4.4,
+    "Units": "g"
+  },
+  {
+    "Number": 57,
+    "Question": "How many grams of H₂S are required to make 500 millimoles, given that the atomic weight of Hydrogen is 1 and Sulfur is 32.1",
+    "Answer": 17.05,
+    "Units": "g"
+  },
+  {
+    "Number": 58,
+    "Question": "How many grams of ZnS are required to make 700 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 68.25,
+    "Units": "g"
+  },
+  {
+    "Number": 59,
+    "Question": "How many grams of ZnS are required to make 600 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 58.5,
+    "Units": "g"
+  },
+  {
+    "Number": 60,
+    "Question": "How many grams of KI are required to make 400 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 66.4,
+    "Units": "g"
+  },
+  {
+    "Number": 61,
+    "Question": "How many grams of KI are required to make 800 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 132.8,
+    "Units": "g"
+  },
+  {
+    "Number": 62,
+    "Question": "How many grams of AgBr are required to make 800 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 150.24,
+    "Units": "g"
+  },
+  {
+    "Number": 63,
+    "Question": "How many grams of LiH are required to make 700 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 5.53,
+    "Units": "g"
+  },
+  {
+    "Number": 64,
+    "Question": "How many grams of NO₂ are required to make 600 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 27.6,
+    "Units": "g"
+  },
+  {
+    "Number": 65,
+    "Question": "How many grams of BaCl₂ are required to make 900 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 187.47,
+    "Units": "g"
+  },
+  {
+    "Number": 66,
+    "Question": "How many grams of ZnS are required to make 900 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 87.75,
+    "Units": "g"
+  },
+  {
+    "Number": 67,
+    "Question": "How many grams of BaCl₂ are required to make 100 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 20.83,
+    "Units": "g"
+  },
+  {
+    "Number": 68,
+    "Question": "How many grams of BaCl₂ are required to make 300 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 62.49,
+    "Units": "g"
+  },
+  {
+    "Number": 69,
+    "Question": "How many grams of SiO₂ are required to make 400 millimoles, given that the atomic weight of Silicon is 28.1 and Oxygen is 16",
+    "Answer": 24.04,
+    "Units": "g"
+  },
+  {
+    "Number": 70,
+    "Question": "How many grams of H₂S are required to make 200 millimoles, given that the atomic weight of Hydrogen is 1 and Sulfur is 32.1",
+    "Answer": 6.82,
+    "Units": "g"
+  },
+  {
+    "Number": 71,
+    "Question": "How many grams of SiO₂ are required to make 600 millimoles, given that the atomic weight of Silicon is 28.1 and Oxygen is 16",
+    "Answer": 36.06,
+    "Units": "g"
+  },
+  {
+    "Number": 72,
+    "Question": "How many grams of N₂O are required to make 200 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 8.8,
+    "Units": "g"
+  },
+  {
+    "Number": 73,
+    "Question": "How many grams of AgBr are required to make 200 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 37.56,
+    "Units": "g"
+  },
+  {
+    "Number": 74,
+    "Question": "How many grams of NO₂ are required to make 50 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 2.3,
+    "Units": "g"
+  },
+  {
+    "Number": 75,
+    "Question": "How many grams of H₂O₂ are required to make 850 millimoles, given that the atomic weight of Hydrogen is 1 and Oxygen is 16",
+    "Answer": 28.9,
+    "Units": "g"
+  },
+  {
+    "Number": 76,
+    "Question": "How many grams of ZnS are required to make 500 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 48.75,
+    "Units": "g"
+  },
+  {
+    "Number": 77,
+    "Question": "How many grams of CaO are required to make 400 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 22.44,
+    "Units": "g"
+  },
+  {
+    "Number": 78,
+    "Question": "How many grams of H₂S are required to make 800 millimoles, given that the atomic weight of Hydrogen is 1 and Sulfur is 32.1",
+    "Answer": 27.28,
+    "Units": "g"
+  },
+  {
+    "Number": 79,
+    "Question": "How many grams of LiH are required to make 400 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 3.16,
+    "Units": "g"
+  },
+  {
+    "Number": 80,
+    "Question": "How many grams of H₂S are required to make 700 millimoles, given that the atomic weight of Hydrogen is 1 and Sulfur is 32.1",
+    "Answer": 23.87,
+    "Units": "g"
+  },
+  {
+    "Number": 81,
+    "Question": "How many grams of ZnS are required to make 600 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 58.5,
+    "Units": "g"
+  },
+  {
+    "Number": 82,
+    "Question": "How many grams of NO₂ are required to make 250 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 11.5,
+    "Units": "g"
+  },
+  {
+    "Number": 83,
+    "Question": "How many grams of KI are required to make 500 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 83,
+    "Units": "g"
+  },
+  {
+    "Number": 84,
+    "Question": "How many grams of N₂O are required to make 600 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 26.4,
+    "Units": "g"
+  },
+  {
+    "Number": 85,
+    "Question": "How many grams of KI are required to make 600 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 99.6,
+    "Units": "g"
+  },
+  {
+    "Number": 86,
+    "Question": "How many grams of AgBr are required to make 900 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 169.02,
+    "Units": "g"
+  },
+  {
+    "Number": 87,
+    "Question": "How many grams of NO₂ are required to make 250 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 11.5,
+    "Units": "g"
+  },
+  {
+    "Number": 88,
+    "Question": "How many grams of CaO are required to make 400 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 22.44,
+    "Units": "g"
+  },
+  {
+    "Number": 89,
+    "Question": "How many grams of H₂O₂ are required to make 750 millimoles, given that the atomic weight of Hydrogen is 1 and Oxygen is 16",
+    "Answer": 25.5,
+    "Units": "g"
+  },
+  {
+    "Number": 90,
+    "Question": "How many grams of BaCl₂ are required to make 500 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 104.15,
+    "Units": "g"
+  },
+  {
+    "Number": 91,
+    "Question": "How many grams of NO₂ are required to make 250 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 11.5,
+    "Units": "g"
+  },
+  {
+    "Number": 92,
+    "Question": "How many grams of BaCl₂ are required to make 900 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 187.47,
+    "Units": "g"
+  },
+  {
+    "Number": 93,
+    "Question": "How many grams of NO₂ are required to make 850 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 39.1,
+    "Units": "g"
+  },
+  {
+    "Number": 94,
+    "Question": "How many grams of AgBr are required to make 700 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 131.46,
+    "Units": "g"
+  },
+  {
+    "Number": 95,
+    "Question": "How many grams of NO₂ are required to make 500 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 23,
+    "Units": "g"
+  },
+  {
+    "Number": 96,
+    "Question": "How many grams of BaCl₂ are required to make 900 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 187.47,
+    "Units": "g"
+  },
+  {
+    "Number": 97,
+    "Question": "How many grams of PCl₅ are required to make 800 millimoles, given that the atomic weight of Phosphorus is 31 and Chlorine is 35.5",
+    "Answer": 166.8,
+    "Units": "g"
+  },
+  {
+    "Number": 98,
+    "Question": "How many grams of CaO are required to make 900 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 50.49,
+    "Units": "g"
+  },
+  {
+    "Number": 99,
+    "Question": "How many grams of PCl₅ are required to make 500 millimoles, given that the atomic weight of Phosphorus is 31 and Chlorine is 35.5",
+    "Answer": 104.25,
+    "Units": "g"
+  },
+  {
+    "Number": 100,
+    "Question": "How many grams of AgBr are required to make 800 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 150.24,
+    "Units": "g"
+  },
+  {
+    "Number": 101,
+    "Question": "How many grams of N₂O are required to make 650 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 28.6,
+    "Units": "g"
+  },
+  {
+    "Number": 102,
+    "Question": "How many grams of NO₂ are required to make 950 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 43.7,
+    "Units": "g"
+  },
+  {
+    "Number": 103,
+    "Question": "How many grams of N₂O are required to make 750 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 33,
+    "Units": "g"
+  },
+  {
+    "Number": 104,
+    "Question": "How many grams of N₂O are required to make 350 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 15.4,
+    "Units": "g"
+  },
+  {
+    "Number": 105,
+    "Question": "How many grams of N₂O are required to make 350 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 15.4,
+    "Units": "g"
+  },
+  {
+    "Number": 106,
+    "Question": "How many grams of KI are required to make 300 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 49.8,
+    "Units": "g"
+  },
+  {
+    "Number": 107,
+    "Question": "How many grams of KI are required to make 700 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 116.2,
+    "Units": "g"
+  },
+  {
+    "Number": 108,
+    "Question": "How many grams of NO₂ are required to make 750 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 34.5,
+    "Units": "g"
+  },
+  {
+    "Number": 109,
+    "Question": "How many grams of ZnS are required to make 600 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 58.5,
+    "Units": "g"
+  },
+  {
+    "Number": 110,
+    "Question": "How many grams of H₂S are required to make 700 millimoles, given that the atomic weight of Hydrogen is 1 and Sulfur is 32.1",
+    "Answer": 23.87,
+    "Units": "g"
+  },
+  {
+    "Number": 111,
+    "Question": "How many grams of LiH are required to make 500 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 3.95,
+    "Units": "g"
+  },
+  {
+    "Number": 112,
+    "Question": "How many grams of PCl₅ are required to make 800 millimoles, given that the atomic weight of Phosphorus is 31 and Chlorine is 35.5",
+    "Answer": 166.8,
+    "Units": "g"
+  },
+  {
+    "Number": 113,
+    "Question": "How many grams of ZnS are required to make 400 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 39,
+    "Units": "g"
+  },
+  {
+    "Number": 114,
+    "Question": "How many grams of N₂O are required to make 400 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 17.6,
+    "Units": "g"
+  },
+  {
+    "Number": 115,
+    "Question": "How many grams of CaO are required to make 900 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 50.49,
+    "Units": "g"
+  },
+  {
+    "Number": 116,
+    "Question": "How many grams of NO₂ are required to make 500 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 23,
+    "Units": "g"
+  },
+  {
+    "Number": 117,
+    "Question": "How many grams of N₂O are required to make 550 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 24.2,
+    "Units": "g"
+  },
+  {
+    "Number": 118,
+    "Question": "How many grams of AgBr are required to make 300 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 56.34,
+    "Units": "g"
+  },
+  {
+    "Number": 119,
+    "Question": "How many grams of KI are required to make 300 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 49.8,
+    "Units": "g"
+  },
+  {
+    "Number": 120,
+    "Question": "How many grams of ZnS are required to make 400 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 39,
+    "Units": "g"
+  },
+  {
+    "Number": 121,
+    "Question": "How many grams of H₂O₂ are required to make 750 millimoles, given that the atomic weight of Hydrogen is 1 and Oxygen is 16",
+    "Answer": 25.5,
+    "Units": "g"
+  },
+  {
+    "Number": 122,
+    "Question": "How many grams of LiH are required to make 300 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 2.37,
+    "Units": "g"
+  },
+  {
+    "Number": 123,
+    "Question": "How many grams of BaCl₂ are required to make 600 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 124.98,
+    "Units": "g"
+  },
+  {
+    "Number": 124,
+    "Question": "How many grams of NO₂ are required to make 700 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 32.2,
+    "Units": "g"
+  },
+  {
+    "Number": 125,
+    "Question": "How many grams of NO₂ are required to make 400 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 18.4,
+    "Units": "g"
+  },
+  {
+    "Number": 126,
+    "Question": "How many grams of H₂S are required to make 400 millimoles, given that the atomic weight of Hydrogen is 1 and Sulfur is 32.1",
+    "Answer": 13.64,
+    "Units": "g"
+  },
+  {
+    "Number": 127,
+    "Question": "How many grams of SiO₂ are required to make 700 millimoles, given that the atomic weight of Silicon is 28.1 and Oxygen is 16",
+    "Answer": 42.07,
+    "Units": "g"
+  },
+  {
+    "Number": 128,
+    "Question": "How many grams of AgBr are required to make 300 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 56.34,
+    "Units": "g"
+  },
+  {
+    "Number": 129,
+    "Question": "How many grams of PCl₅ are required to make 800 millimoles, given that the atomic weight of Phosphorus is 31 and Chlorine is 35.5",
+    "Answer": 166.8,
+    "Units": "g"
+  },
+  {
+    "Number": 130,
+    "Question": "How many grams of CaO are required to make 900 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 50.49,
+    "Units": "g"
+  },
+  {
+    "Number": 131,
+    "Question": "How many grams of SiO₂ are required to make 900 millimoles, given that the atomic weight of Silicon is 28.1 and Oxygen is 16",
+    "Answer": 54.09,
+    "Units": "g"
+  },
+  {
+    "Number": 132,
+    "Question": "How many grams of LiH are required to make 400 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 3.16,
+    "Units": "g"
+  },
+  {
+    "Number": 133,
+    "Question": "How many grams of SiO₂ are required to make 400 millimoles, given that the atomic weight of Silicon is 28.1 and Oxygen is 16",
+    "Answer": 24.04,
+    "Units": "g"
+  },
+  {
+    "Number": 134,
+    "Question": "How many grams of LiH are required to make 500 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 3.95,
+    "Units": "g"
+  },
+  {
+    "Number": 135,
+    "Question": "How many grams of PCl₅ are required to make 100 millimoles, given that the atomic weight of Phosphorus is 31 and Chlorine is 35.5",
+    "Answer": 20.85,
+    "Units": "g"
+  },
+  {
+    "Number": 136,
+    "Question": "How many grams of H₂O₂ are required to make 800 millimoles, given that the atomic weight of Hydrogen is 1 and Oxygen is 16",
+    "Answer": 27.2,
+    "Units": "g"
+  },
+  {
+    "Number": 137,
+    "Question": "How many grams of compound X (MW = 101) are required to produce 200 millilitres of a 4 molar solution?",
+    "Answer": 80.8,
+    "Units": "g"
+  },
+  {
+    "Number": 138,
+    "Question": "How many grams of compound X (MW = 108) are required to produce 200 millilitres of a 4 molar solution?",
+    "Answer": 86.4,
+    "Units": "g"
+  },
+  {
+    "Number": 139,
+    "Question": "How many grams of compound X (MW = 76) are required to produce 500 millilitres of a 3 molar solution?",
+    "Answer": 114,
+    "Units": "g"
+  },
+  {
+    "Number": 140,
+    "Question": "How many grams of compound X (MW = 84) are required to produce 100 millilitres of a 5 molar solution?",
+    "Answer": 42,
+    "Units": "g"
+  },
+  {
+    "Number": 141,
+    "Question": "How many grams of compound X (MW = 104) are required to produce 400 millilitres of a 1.5 molar solution?",
+    "Answer": 62.4,
+    "Units": "g"
+  },
+  {
+    "Number": 142,
+    "Question": "How many grams of compound X (MW = 89) are required to produce 600 millilitres of a 1 molar solution?",
+    "Answer": 53.4,
+    "Units": "g"
+  },
+  {
+    "Number": 143,
+    "Question": "How many grams of compound X (MW = 106) are required to produce 200 millilitres of a 1 molar solution?",
+    "Answer": 21.2,
+    "Units": "g"
+  },
+  {
+    "Number": 144,
+    "Question": "How many grams of compound X (MW = 70) are required to produce 300 millilitres of a 7 molar solution?",
+    "Answer": 147,
+    "Units": "g"
+  },
+  {
+    "Number": 145,
+    "Question": "How many grams of compound X (MW = 44) are required to produce 800 millilitres of a 9 molar solution?",
+    "Answer": 316.8,
+    "Units": "g"
+  },
+  {
+    "Number": 146,
+    "Question": "How many grams of compound X (MW = 68) are required to produce 600 millilitres of a 5.5 molar solution?",
+    "Answer": 224.4,
+    "Units": "g"
+  },
+  {
+    "Number": 147,
+    "Question": "How many grams of compound X (MW = 103) are required to produce 800 millilitres of a 3 molar solution?",
+    "Answer": 247.2,
+    "Units": "g"
+  },
+  {
+    "Number": 148,
+    "Question": "How many grams of compound X (MW = 111) are required to produce 700 millilitres of a 2.5 molar solution?",
+    "Answer": 194.25,
+    "Units": "g"
+  },
+  {
+    "Number": 149,
+    "Question": "How many grams of compound X (MW = 85) are required to produce 400 millilitres of a 7.5 molar solution?",
+    "Answer": 255,
+    "Units": "g"
+  },
+  {
+    "Number": 150,
+    "Question": "How many grams of compound X (MW = 67) are required to produce 800 millilitres of a 9 molar solution?",
+    "Answer": 482.4,
+    "Units": "g"
+  },
+  {
+    "Number": 151,
+    "Question": "How many grams of compound X (MW = 110) are required to produce 300 millilitres of a 5 molar solution?",
+    "Answer": 165,
+    "Units": "g"
+  },
+  {
+    "Number": 152,
+    "Question": "How many grams of compound X (MW = 37) are required to produce 400 millilitres of a 9.5 molar solution?",
+    "Answer": 140.6,
+    "Units": "g"
+  },
+  {
+    "Number": 153,
+    "Question": "How many grams of compound X (MW = 104) are required to produce 400 millilitres of a 4.5 molar solution?",
+    "Answer": 187.2,
+    "Units": "g"
+  },
+  {
+    "Number": 154,
+    "Question": "How many grams of compound X (MW = 58) are required to produce 600 millilitres of a 5.5 molar solution?",
+    "Answer": 191.4,
+    "Units": "g"
+  },
+  {
+    "Number": 155,
+    "Question": "How many grams of compound X (MW = 59) are required to produce 900 millilitres of a 8 molar solution?",
+    "Answer": 424.8,
+    "Units": "g"
+  },
+  {
+    "Number": 156,
+    "Question": "How many grams of compound X (MW = 38) are required to produce 400 millilitres of a 8 molar solution?",
+    "Answer": 121.6,
+    "Units": "g"
+  },
+  {
+    "Number": 157,
+    "Question": "How many grams of compound X (MW = 33) are required to produce 400 millilitres of a 4.5 molar solution?",
+    "Answer": 59.4,
+    "Units": "g"
+  },
+  {
+    "Number": 158,
+    "Question": "How many grams of compound X (MW = 117) are required to produce 700 millilitres of a 6 molar solution?",
+    "Answer": 491.4,
+    "Units": "g"
+  },
+  {
+    "Number": 159,
+    "Question": "How many grams of compound X (MW = 87) are required to produce 800 millilitres of a 5.5 molar solution?",
+    "Answer": 382.8,
+    "Units": "g"
+  },
+  {
+    "Number": 160,
+    "Question": "How many grams of compound X (MW = 98) are required to produce 600 millilitres of a 4.5 molar solution?",
+    "Answer": 264.6,
+    "Units": "g"
+  },
+  {
+    "Number": 161,
+    "Question": "How many grams of compound X (MW = 88) are required to produce 400 millilitres of a 6 molar solution?",
+    "Answer": 211.2,
+    "Units": "g"
+  },
+  {
+    "Number": 162,
+    "Question": "How many grams of compound X (MW = 102) are required to produce 600 millilitres of a 2.5 molar solution?",
+    "Answer": 153,
+    "Units": "g"
+  },
+  {
+    "Number": 163,
+    "Question": "How many grams of compound X (MW = 83) are required to produce 500 millilitres of a 0.5 molar solution?",
+    "Answer": 20.75,
+    "Units": "g"
+  },
+  {
+    "Number": 164,
+    "Question": "How many grams of compound X (MW = 67) are required to produce 300 millilitres of a 0.5 molar solution?",
+    "Answer": 10.05,
+    "Units": "g"
+  },
+  {
+    "Number": 165,
+    "Question": "How many grams of compound X (MW = 114) are required to produce 100 millilitres of a 0.5 molar solution?",
+    "Answer": 5.7,
+    "Units": "g"
+  },
+  {
+    "Number": 166,
+    "Question": "How many grams of compound X (MW = 59) are required to produce 700 millilitres of a 3 molar solution?",
+    "Answer": 123.9,
+    "Units": "g"
+  },
+  {
+    "Number": 167,
+    "Question": "How many grams of compound X (MW = 120) are required to produce 400 millilitres of a 7.5 molar solution?",
+    "Answer": 360,
+    "Units": "g"
+  },
+  {
+    "Number": 168,
+    "Question": "How many grams of compound X (MW = 119) are required to produce 700 millilitres of a 10 molar solution?",
+    "Answer": 833,
+    "Units": "g"
+  },
+  {
+    "Number": 169,
+    "Question": "How many grams of compound X (MW = 108) are required to produce 200 millilitres of a 8.5 molar solution?",
+    "Answer": 183.6,
+    "Units": "g"
+  },
+  {
+    "Number": 170,
+    "Question": "How many grams of compound X (MW = 91) are required to produce 300 millilitres of a 4.5 molar solution?",
+    "Answer": 122.85,
+    "Units": "g"
+  },
+  {
+    "Number": 171,
+    "Question": "How many grams of compound X (MW = 31) are required to produce 500 millilitres of a 2 molar solution?",
+    "Answer": 31,
+    "Units": "g"
+  },
+  {
+    "Number": 172,
+    "Question": "How many grams of compound X (MW = 67) are required to produce 300 millilitres of a 3.5 molar solution?",
+    "Answer": 70.35,
+    "Units": "g"
+  },
+  {
+    "Number": 173,
+    "Question": "How many grams of compound X (MW = 53) are required to produce 500 millilitres of a 3.5 molar solution?",
+    "Answer": 92.75,
+    "Units": "g"
+  },
+  {
+    "Number": 174,
+    "Question": "How many grams of compound X (MW = 84) are required to produce 400 millilitres of a 4 molar solution?",
+    "Answer": 134.4,
+    "Units": "g"
+  },
+  {
+    "Number": 175,
+    "Question": "How many grams of compound X (MW = 38) are required to produce 400 millilitres of a 3.5 molar solution?",
+    "Answer": 53.2,
+    "Units": "g"
+  },
+  {
+    "Number": 176,
+    "Question": "How many grams of compound X (MW = 100) are required to produce 600 millilitres of a 6.5 molar solution?",
+    "Answer": 390,
+    "Units": "g"
+  },
+  {
+    "Number": 177,
+    "Question": "How many grams of compound X (MW = 75) are required to produce 400 millilitres of a 8.5 molar solution?",
+    "Answer": 255,
+    "Units": "g"
+  },
+  {
+    "Number": 178,
+    "Question": "How many grams of compound X (MW = 49) are required to produce 800 millilitres of a 9 molar solution?",
+    "Answer": 352.8,
+    "Units": "g"
+  },
+  {
+    "Number": 179,
+    "Question": "How many grams of compound X (MW = 109) are required to produce 400 millilitres of a 10 molar solution?",
+    "Answer": 436,
+    "Units": "g"
+  },
+  {
+    "Number": 180,
+    "Question": "How many grams of compound X (MW = 45) are required to produce 800 millilitres of a 1.5 molar solution?",
+    "Answer": 54,
+    "Units": "g"
+  },
+  {
+    "Number": 181,
+    "Question": "How many grams of compound X (MW = 108) are required to produce 300 millilitres of a 9 molar solution?",
+    "Answer": 291.6,
+    "Units": "g"
+  },
+  {
+    "Number": 182,
+    "Question": "How many grams of compound X (MW = 72) are required to produce 800 millilitres of a 4 molar solution?",
+    "Answer": 230.4,
+    "Units": "g"
+  },
+  {
+    "Number": 183,
+    "Question": "How many grams of compound X (MW = 98) are required to produce 100 millilitres of a 4.5 molar solution?",
+    "Answer": 44.1,
+    "Units": "g"
+  },
+  {
+    "Number": 184,
+    "Question": "How many grams of compound X (MW = 119) are required to produce 800 millilitres of a 5 molar solution?",
+    "Answer": 476,
+    "Units": "g"
+  },
+  {
+    "Number": 185,
+    "Question": "How many grams of compound X (MW = 105) are required to produce 200 millilitres of a 8.5 molar solution?",
+    "Answer": 178.5,
+    "Units": "g"
+  },
+  {
+    "Number": 186,
+    "Question": "How many grams of compound X (MW = 96) are required to produce 200 millilitres of a 3.5 molar solution?",
+    "Answer": 67.2,
+    "Units": "g"
+  },
+  {
+    "Number": 187,
+    "Question": "How many grams of compound X (MW = 62) are required to produce 400 millilitres of a 6.5 molar solution?",
+    "Answer": 161.2,
+    "Units": "g"
+  },
+  {
+    "Number": 188,
+    "Question": "How many grams of compound X (MW = 79) are required to produce 800 millilitres of a 0.5 molar solution?",
+    "Answer": 31.6,
+    "Units": "g"
+  },
+  {
+    "Number": 189,
+    "Question": "How many grams of compound X (MW = 113) are required to produce 500 millilitres of a 0.5 molar solution?",
+    "Answer": 28.25,
+    "Units": "g"
+  },
+  {
+    "Number": 190,
+    "Question": "How many grams of compound X (MW = 82) are required to produce 100 millilitres of a 3.5 molar solution?",
+    "Answer": 28.7,
+    "Units": "g"
+  },
+  {
+    "Number": 191,
+    "Question": "How many grams of compound X (MW = 35) are required to produce 600 millilitres of a 8.5 molar solution?",
+    "Answer": 178.5,
+    "Units": "g"
+  },
+  {
+    "Number": 192,
+    "Question": "How many grams of compound X (MW = 97) are required to produce 300 millilitres of a 3 molar solution?",
+    "Answer": 87.3,
+    "Units": "g"
+  },
+  {
+    "Number": 193,
+    "Question": "How many grams of compound X (MW = 35) are required to produce 400 millilitres of a 1.5 molar solution?",
+    "Answer": 21,
+    "Units": "g"
+  },
+  {
+    "Number": 194,
+    "Question": "How many grams of compound X (MW = 37) are required to produce 200 millilitres of a 9.5 molar solution?",
+    "Answer": 70.3,
+    "Units": "g"
+  },
+  {
+    "Number": 195,
+    "Question": "How many grams of compound X (MW = 119) are required to produce 700 millilitres of a 5 molar solution?",
+    "Answer": 416.5,
+    "Units": "g"
+  },
+  {
+    "Number": 196,
+    "Question": "How many grams of compound X (MW = 119) are required to produce 400 millilitres of a 3 molar solution?",
+    "Answer": 142.8,
+    "Units": "g"
+  },
+  {
+    "Number": 197,
+    "Question": "How many grams of compound X (MW = 86) are required to produce 400 millilitres of a 4 molar solution?",
+    "Answer": 137.6,
+    "Units": "g"
+  },
+  {
+    "Number": 198,
+    "Question": "How many grams of compound X (MW = 103) are required to produce 300 millilitres of a 8.5 molar solution?",
+    "Answer": 262.65,
+    "Units": "g"
+  },
+  {
+    "Number": 199,
+    "Question": "How many grams of compound X (MW = 99) are required to produce 800 millilitres of a 6 molar solution?",
+    "Answer": 475.2,
+    "Units": "g"
+  },
+  {
+    "Number": 200,
+    "Question": "How many grams of compound X (MW = 88) are required to produce 300 millilitres of a 11 molar solution?",
+    "Answer": 290.4,
+    "Units": "g"
+  },
+  {
+    "Number": 201,
+    "Question": "How many grams of compound X (MW = 61) are required to produce 650 millilitres of a 9 molar solution?",
+    "Answer": 356.85,
+    "Units": "g"
+  },
+  {
+    "Number": 202,
+    "Question": "How many grams of compound X (MW = 72) are required to produce 550 millilitres of a 1 molar solution?",
+    "Answer": 39.6,
+    "Units": "g"
+  },
+  {
+    "Number": 203,
+    "Question": "How many grams of compound X (MW = 113) are required to produce 500 millilitres of a 2 molar solution?",
+    "Answer": 113,
+    "Units": "g"
+  },
+  {
+    "Number": 204,
+    "Question": "How many grams of compound X (MW = 102) are required to produce 150 millilitres of a 9 molar solution?",
+    "Answer": 137.7,
+    "Units": "g"
+  },
+  {
+    "Number": 205,
+    "Question": "How many grams of compound X (MW = 70) are required to produce 550 millilitres of a 4 molar solution?",
+    "Answer": 154,
+    "Units": "g"
+  },
+  {
+    "Number": 206,
+    "Question": "How many grams of compound X (MW = 66) are required to produce 400 millilitres of a 10 molar solution?",
+    "Answer": 264,
+    "Units": "g"
+  },
+  {
+    "Number": 207,
+    "Question": "How many grams of compound X (MW = 48) are required to produce 150 millilitres of a 12 molar solution?",
+    "Answer": 86.4,
+    "Units": "g"
+  },
+  {
+    "Number": 208,
+    "Question": "How many grams of compound X (MW = 85) are required to produce 900 millilitres of a 7 molar solution?",
+    "Answer": 535.5,
+    "Units": "g"
+  },
+  {
+    "Number": 209,
+    "Question": "How many grams of compound X (MW = 63) are required to produce 400 millilitres of a 11 molar solution?",
+    "Answer": 277.2,
+    "Units": "g"
+  },
+  {
+    "Number": 210,
+    "Question": "How many grams of compound X (MW = 39) are required to produce 650 millilitres of a 10 molar solution?",
+    "Answer": 253.5,
+    "Units": "g"
+  },
+  {
+    "Number": 211,
+    "Question": "How many grams of compound X (MW = 112) are required to produce 600 millilitres of a 3 molar solution?",
+    "Answer": 201.6,
+    "Units": "g"
+  },
+  {
+    "Number": 212,
+    "Question": "How many grams of compound X (MW = 37) are required to produce 100 millilitres of a 1 molar solution?",
+    "Answer": 3.7,
+    "Units": "g"
+  },
+  {
+    "Number": 213,
+    "Question": "How many grams of compound X (MW = 59) are required to produce 350 millilitres of a 10 molar solution?",
+    "Answer": 206.5,
+    "Units": "g"
+  },
+  {
+    "Number": 214,
+    "Question": "How many grams of compound X (MW = 102) are required to produce 450 millilitres of a 8 molar solution?",
+    "Answer": 367.2,
+    "Units": "g"
+  },
+  {
+    "Number": 215,
+    "Question": "How many grams of compound X (MW = 60) are required to produce 650 millilitres of a 4 molar solution?",
+    "Answer": 156,
+    "Units": "g"
+  },
+  {
+    "Number": 216,
+    "Question": "How many grams of compound X (MW = 49) are required to produce 450 millilitres of a 6 molar solution?",
+    "Answer": 132.3,
+    "Units": "g"
+  },
+  {
+    "Number": 217,
+    "Question": "How many grams of compound X (MW = 96) are required to produce 150 millilitres of a 5 molar solution?",
+    "Answer": 72,
+    "Units": "g"
+  },
+  {
+    "Number": 218,
+    "Question": "How many grams of compound X (MW = 36) are required to produce 250 millilitres of a 5 molar solution?",
+    "Answer": 45,
+    "Units": "g"
+  },
+  {
+    "Number": 219,
+    "Question": "How many grams of compound X (MW = 46) are required to produce 700 millilitres of a 1 molar solution?",
+    "Answer": 32.2,
+    "Units": "g"
+  },
+  {
+    "Number": 220,
+    "Question": "How many grams of compound X (MW = 41) are required to produce 300 millilitres of a 5 molar solution?",
+    "Answer": 61.5,
+    "Units": "g"
+  },
+  {
+    "Number": 221,
+    "Question": "How many grams of compound X (MW = 109) are required to produce 850 millilitres of a 2 molar solution?",
+    "Answer": 185.3,
+    "Units": "g"
+  },
+  {
+    "Number": 222,
+    "Question": "How many grams of compound X (MW = 79) are required to produce 150 millilitres of a 2 molar solution?",
+    "Answer": 23.7,
+    "Units": "g"
+  },
+  {
+    "Number": 223,
+    "Question": "How many grams of compound X (MW = 70) are required to produce 500 millilitres of a 3 molar solution?",
+    "Answer": 105,
+    "Units": "g"
+  },
+  {
+    "Number": 224,
+    "Question": "How many grams of compound X (MW = 119) are required to produce 300 millilitres of a 12 molar solution?",
+    "Answer": 428.4,
+    "Units": "g"
+  },
+  {
+    "Number": 225,
+    "Question": "How many grams of compound X (MW = 56) are required to produce 500 millilitres of a 1 molar solution?",
+    "Answer": 28,
+    "Units": "g"
+  },
+  {
+    "Number": 226,
+    "Question": "How many grams of compound X (MW = 45) are required to produce 350 millilitres of a 2 molar solution?",
+    "Answer": 31.5,
+    "Units": "g"
+  },
+  {
+    "Number": 227,
+    "Question": "How many grams of compound X (MW = 106) are required to produce 450 millilitres of a 11 molar solution?",
+    "Answer": 524.7,
+    "Units": "g"
+  },
+  {
+    "Number": 228,
+    "Question": "How many grams of compound X (MW = 66) are required to produce 100 millilitres of a 6 molar solution?",
+    "Answer": 39.6,
+    "Units": "g"
+  },
+  {
+    "Number": 229,
+    "Question": "How many grams of compound X (MW = 84) are required to produce 700 millilitres of a 4 molar solution?",
+    "Answer": 235.2,
+    "Units": "g"
+  },
+  {
+    "Number": 230,
+    "Question": "How many grams of compound X (MW = 68) are required to produce 400 millilitres of a 6 molar solution?",
+    "Answer": 163.2,
+    "Units": "g"
+  },
+  {
+    "Number": 231,
+    "Question": "How many grams of compound X (MW = 46) are required to produce 200 millilitres of a 7 molar solution?",
+    "Answer": 64.4,
+    "Units": "g"
+  },
+  {
+    "Number": 232,
+    "Question": "How many grams of compound X (MW = 105) are required to produce 400 millilitres of a 10 molar solution?",
+    "Answer": 420,
+    "Units": "g"
+  },
+  {
+    "Number": 233,
+    "Question": "How many grams of compound X (MW = 87) are required to produce 300 millilitres of a 7 molar solution?",
+    "Answer": 182.7,
+    "Units": "g"
+  },
+  {
+    "Number": 234,
+    "Question": "How many grams of compound X (MW = 96) are required to produce 350 millilitres of a 7 molar solution?",
+    "Answer": 235.2,
+    "Units": "g"
+  },
+  {
+    "Number": 235,
+    "Question": "How many grams of compound X (MW = 44) are required to produce 700 millilitres of a 5 molar solution?",
+    "Answer": 154,
+    "Units": "g"
+  },
+  {
+    "Number": 236,
+    "Question": "How many grams of compound X (MW = 73) are required to produce 400 millilitres of a 10 molar solution?",
+    "Answer": 292,
+    "Units": "g"
+  },
+  {
+    "Number": 237,
+    "Question": "How many grams of compound X (MW = 79) are required to produce 750 millilitres of a 2 molar solution?",
+    "Answer": 118.5,
+    "Units": "g"
+  },
+  {
+    "Number": 238,
+    "Question": "How many grams of compound X (MW = 35) are required to produce 500 millilitres of a 2 molar solution?",
+    "Answer": 35,
+    "Units": "g"
+  },
+  {
+    "Number": 239,
+    "Question": "How many grams of compound X (MW = 69) are required to produce 200 millilitres of a 7 molar solution?",
+    "Answer": 96.6,
+    "Units": "g"
+  },
+  {
+    "Number": 240,
+    "Question": "How many grams of compound X (MW = 88) are required to produce 650 millilitres of a 6 molar solution?",
+    "Answer": 343.2,
+    "Units": "g"
+  },
+  {
+    "Number": 241,
+    "Question": "How many grams of compound X (MW = 98) are required to produce 550 millilitres of a 8 molar solution?",
+    "Answer": 431.2,
+    "Units": "g"
+  },
+  {
+    "Number": 242,
+    "Question": "How many grams of compound X (MW = 35) are required to produce 350 millilitres of a 1 molar solution?",
+    "Answer": 12.25,
+    "Units": "g"
+  },
+  {
+    "Number": 243,
+    "Question": "How many grams of compound X (MW = 107) are required to produce 800 millilitres of a 1 molar solution?",
+    "Answer": 85.6,
+    "Units": "g"
+  },
+  {
+    "Number": 244,
+    "Question": "How many grams of compound X (MW = 56) are required to produce 150 millilitres of a 1 molar solution?",
+    "Answer": 8.4,
+    "Units": "g"
+  },
+  {
+    "Number": 245,
+    "Question": "How many grams of compound X (MW = 112) are required to produce 900 millilitres of a 11 molar solution?",
+    "Answer": 1108.8,
+    "Units": "g"
+  },
+  {
+    "Number": 246,
+    "Question": "How many grams of compound X (MW = 87) are required to produce 150 millilitres of a 8 molar solution?",
+    "Answer": 104.4,
+    "Units": "g"
+  },
+  {
+    "Number": 247,
+    "Question": "How many grams of compound X (MW = 119) are required to produce 600 millilitres of a 5 molar solution?",
+    "Answer": 357,
+    "Units": "g"
+  },
+  {
+    "Number": 248,
+    "Question": "How many grams of compound X (MW = 69) are required to produce 700 millilitres of a 11 molar solution?",
+    "Answer": 531.3,
+    "Units": "g"
+  },
+  {
+    "Number": 249,
+    "Question": "How many grams of compound X (MW = 97) are required to produce 250 millilitres of a 4 molar solution?",
+    "Answer": 97,
+    "Units": "g"
+  },
+  {
+    "Number": 250,
+    "Question": "How many grams of compound X (MW = 58) are required to produce 650 millilitres of a 6 molar solution?",
+    "Answer": 226.2,
+    "Units": "g"
+  },
+  {
+    "Number": 251,
+    "Question": "How many grams of compound X (MW = 45) are required to produce 400 millilitres of a 6 molar solution?",
+    "Answer": 108,
+    "Units": "g"
+  },
+  {
+    "Number": 252,
+    "Question": "How many grams of compound X (MW = 43) are required to produce 750 millilitres of a 11 molar solution?",
+    "Answer": 354.75,
+    "Units": "g"
+  },
+  {
+    "Number": 253,
+    "Question": "How many grams of compound X (MW = 38) are required to produce 600 millilitres of a 4 molar solution?",
+    "Answer": 91.2,
+    "Units": "g"
+  },
+  {
+    "Number": 254,
+    "Question": "How many grams of ZnS are required to make 500 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 48.75,
+    "Units": "g"
+  },
+  {
+    "Number": 255,
+    "Question": "How many grams of H₂S are required to make 200 millimoles, given that the atomic weight of Hydrogen is 1 and Sulfur is 32.1",
+    "Answer": 6.82,
+    "Units": "g"
+  },
+  {
+    "Number": 256,
+    "Question": "How many grams of CaO are required to make 200 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 11.22,
+    "Units": "g"
+  },
+  {
+    "Number": 257,
+    "Question": "How many grams of CaO are required to make 100 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 5.61,
+    "Units": "g"
+  },
+  {
+    "Number": 258,
+    "Question": "How many grams of KI are required to make 900 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 149.4,
+    "Units": "g"
+  },
+  {
+    "Number": 259,
+    "Question": "How many grams of PCl₅ are required to make 300 millimoles, given that the atomic weight of Phosphorus is 31 and Chlorine is 35.5",
+    "Answer": 62.55,
+    "Units": "g"
+  },
+  {
+    "Number": 260,
+    "Question": "How many grams of PCl₅ are required to make 200 millimoles, given that the atomic weight of Phosphorus is 31 and Chlorine is 35.5",
+    "Answer": 41.7,
+    "Units": "g"
+  },
+  {
+    "Number": 261,
+    "Question": "How many grams of BaCl₂ are required to make 700 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 145.81,
+    "Units": "g"
+  },
+  {
+    "Number": 262,
+    "Question": "How many grams of AgBr are required to make 600 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 112.68,
+    "Units": "g"
+  },
+  {
+    "Number": 263,
+    "Question": "How many grams of NO₂ are required to make 400 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 18.4,
+    "Units": "g"
+  },
+  {
+    "Number": 264,
+    "Question": "How many grams of LiH are required to make 800 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 6.32,
+    "Units": "g"
+  },
+  {
+    "Number": 265,
+    "Question": "How many grams of CaO are required to make 300 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 16.83,
+    "Units": "g"
+  },
+  {
+    "Number": 266,
+    "Question": "How many grams of CaO are required to make 300 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 16.83,
+    "Units": "g"
+  },
+  {
+    "Number": 267,
+    "Question": "How many grams of SiO₂ are required to make 900 millimoles, given that the atomic weight of Silicon is 28.1 and Oxygen is 16",
+    "Answer": 54.09,
+    "Units": "g"
+  },
+  {
+    "Number": 268,
+    "Question": "How many grams of AgBr are required to make 900 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 169.02,
+    "Units": "g"
+  },
+  {
+    "Number": 269,
+    "Question": "How many grams of SiO₂ are required to make 800 millimoles, given that the atomic weight of Silicon is 28.1 and Oxygen is 16",
+    "Answer": 48.08,
+    "Units": "g"
+  },
+  {
+    "Number": 270,
+    "Question": "How many grams of ZnS are required to make 800 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 78,
+    "Units": "g"
+  },
+  {
+    "Number": 271,
+    "Question": "How many grams of SiO₂ are required to make 200 millimoles, given that the atomic weight of Silicon is 28.1 and Oxygen is 16",
+    "Answer": 12.02,
+    "Units": "g"
+  },
+  {
+    "Number": 272,
+    "Question": "How many grams of BaCl₂ are required to make 500 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 104.15,
+    "Units": "g"
+  },
+  {
+    "Number": 273,
+    "Question": "How many grams of SiO₂ are required to make 900 millimoles, given that the atomic weight of Silicon is 28.1 and Oxygen is 16",
+    "Answer": 54.09,
+    "Units": "g"
+  },
+  {
+    "Number": 274,
+    "Question": "How many grams of NO₂ are required to make 850 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 39.1,
+    "Units": "g"
+  },
+  {
+    "Number": 275,
+    "Question": "How many grams of CaO are required to make 300 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 16.83,
+    "Units": "g"
+  },
+  {
+    "Number": 276,
+    "Question": "How many grams of H₂O₂ are required to make 700 millimoles, given that the atomic weight of Hydrogen is 1 and Oxygen is 16",
+    "Answer": 23.8,
+    "Units": "g"
+  },
+  {
+    "Number": 277,
+    "Question": "How many grams of PCl₅ are required to make 100 millimoles, given that the atomic weight of Phosphorus is 31 and Chlorine is 35.5",
+    "Answer": 20.85,
+    "Units": "g"
+  },
+  {
+    "Number": 278,
+    "Question": "How many grams of ZnS are required to make 800 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 78,
+    "Units": "g"
+  },
+  {
+    "Number": 279,
+    "Question": "How many grams of PCl₅ are required to make 400 millimoles, given that the atomic weight of Phosphorus is 31 and Chlorine is 35.5",
+    "Answer": 83.4,
+    "Units": "g"
+  },
+  {
+    "Number": 280,
+    "Question": "How many grams of ZnS are required to make 500 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 48.75,
+    "Units": "g"
+  },
+  {
+    "Number": 281,
+    "Question": "How many grams of N₂O are required to make 750 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 33,
+    "Units": "g"
+  },
+  {
+    "Number": 282,
+    "Question": "How many grams of NO₂ are required to make 950 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 43.7,
+    "Units": "g"
+  },
+  {
+    "Number": 283,
+    "Question": "How many grams of BaCl₂ are required to make 300 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 62.49,
+    "Units": "g"
+  },
+  {
+    "Number": 284,
+    "Question": "How many grams of SiO₂ are required to make 800 millimoles, given that the atomic weight of Silicon is 28.1 and Oxygen is 16",
+    "Answer": 48.08,
+    "Units": "g"
+  },
+  {
+    "Number": 285,
+    "Question": "How many grams of PCl₅ are required to make 600 millimoles, given that the atomic weight of Phosphorus is 31 and Chlorine is 35.5",
+    "Answer": 125.1,
+    "Units": "g"
+  },
+  {
+    "Number": 286,
+    "Question": "How many grams of BaCl₂ are required to make 800 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 166.64,
+    "Units": "g"
+  },
+  {
+    "Number": 287,
+    "Question": "How many grams of NO₂ are required to make 850 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 39.1,
+    "Units": "g"
+  },
+  {
+    "Number": 288,
+    "Question": "How many grams of PCl₅ are required to make 400 millimoles, given that the atomic weight of Phosphorus is 31 and Chlorine is 35.5",
+    "Answer": 83.4,
+    "Units": "g"
+  },
+  {
+    "Number": 289,
+    "Question": "How many grams of CaO are required to make 400 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 22.44,
+    "Units": "g"
+  },
+  {
+    "Number": 290,
+    "Question": "How many grams of LiH are required to make 700 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 5.53,
+    "Units": "g"
+  },
+  {
+    "Number": 291,
+    "Question": "How many grams of ZnS are required to make 200 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 19.5,
+    "Units": "g"
+  },
+  {
+    "Number": 292,
+    "Question": "How many grams of N₂O are required to make 100 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 4.4,
+    "Units": "g"
+  },
+  {
+    "Number": 293,
+    "Question": "How many grams of AgBr are required to make 300 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 56.34,
+    "Units": "g"
+  },
+  {
+    "Number": 294,
+    "Question": "How many grams of CaO are required to make 200 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 11.22,
+    "Units": "g"
+  },
+  {
+    "Number": 295,
+    "Question": "How many grams of AgBr are required to make 500 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 93.9,
+    "Units": "g"
+  },
+  {
+    "Number": 296,
+    "Question": "How many grams of KI are required to make 300 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 49.8,
+    "Units": "g"
+  },
+  {
+    "Number": 297,
+    "Question": "How many grams of ZnS are required to make 800 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 78,
+    "Units": "g"
+  },
+  {
+    "Number": 298,
+    "Question": "How many grams of BaCl₂ are required to make 800 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 166.64,
+    "Units": "g"
+  },
+  {
+    "Number": 299,
+    "Question": "How many grams of KI are required to make 500 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 83,
+    "Units": "g"
+  },
+  {
+    "Number": 300,
+    "Question": "How many grams of AgBr are required to make 400 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 75.12,
+    "Units": "g"
+  },
+  {
+    "Number": 301,
+    "Question": "How many grams of NO₂ are required to make 450 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 20.7,
+    "Units": "g"
+  },
+  {
+    "Number": 302,
+    "Question": "How many grams of ZnS are required to make 800 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 78,
+    "Units": "g"
+  },
+  {
+    "Number": 303,
+    "Question": "How many grams of CaO are required to make 100 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 5.61,
+    "Units": "g"
+  },
+  {
+    "Number": 304,
+    "Question": "How many grams of BaCl₂ are required to make 400 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 83.32,
+    "Units": "g"
+  },
+  {
+    "Number": 305,
+    "Question": "How many grams of CaO are required to make 700 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 39.27,
+    "Units": "g"
+  },
+  {
+    "Number": 306,
+    "Question": "How many grams of BaCl₂ are required to make 200 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 41.66,
+    "Units": "g"
+  },
+  {
+    "Number": 307,
+    "Question": "How many grams of H₂S are required to make 300 millimoles, given that the atomic weight of Hydrogen is 1 and Sulfur is 32.1",
+    "Answer": 10.23,
+    "Units": "g"
+  },
+  {
+    "Number": 308,
+    "Question": "How many grams of BaCl₂ are required to make 500 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 104.15,
+    "Units": "g"
+  },
+  {
+    "Number": 309,
+    "Question": "How many grams of CaO are required to make 200 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 11.22,
+    "Units": "g"
+  },
+  {
+    "Number": 310,
+    "Question": "How many grams of LiH are required to make 600 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 4.74,
+    "Units": "g"
+  },
+  {
+    "Number": 311,
+    "Question": "How many grams of LiH are required to make 100 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 0.79,
+    "Units": "g"
+  },
+  {
+    "Number": 312,
+    "Question": "How many grams of LiH are required to make 700 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 5.53,
+    "Units": "g"
+  },
+  {
+    "Number": 313,
+    "Question": "How many grams of AgBr are required to make 200 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 37.56,
+    "Units": "g"
+  },
+  {
+    "Number": 314,
+    "Question": "How many grams of PCl₅ are required to make 900 millimoles, given that the atomic weight of Phosphorus is 31 and Chlorine is 35.5",
+    "Answer": 187.65,
+    "Units": "g"
+  },
+  {
+    "Number": 315,
+    "Question": "How many grams of H₂S are required to make 900 millimoles, given that the atomic weight of Hydrogen is 1 and Sulfur is 32.1",
+    "Answer": 30.69,
+    "Units": "g"
+  },
+  {
+    "Number": 316,
+    "Question": "How many grams of NO₂ are required to make 400 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 18.4,
+    "Units": "g"
+  },
+  {
+    "Number": 317,
+    "Question": "How many grams of H₂O₂ are required to make 800 millimoles, given that the atomic weight of Hydrogen is 1 and Oxygen is 16",
+    "Answer": 27.2,
+    "Units": "g"
+  },
+  {
+    "Number": 318,
+    "Question": "How many grams of H₂S are required to make 700 millimoles, given that the atomic weight of Hydrogen is 1 and Sulfur is 32.1",
+    "Answer": 23.87,
+    "Units": "g"
+  },
+  {
+    "Number": 319,
+    "Question": "How many grams of NO₂ are required to make 800 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 36.8,
+    "Units": "g"
+  },
+  {
+    "Number": 320,
+    "Question": "How many grams of ZnS are required to make 500 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 48.75,
+    "Units": "g"
+  },
+  {
+    "Number": 321,
+    "Question": "How many grams of LiH are required to make 200 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 1.58,
+    "Units": "g"
+  },
+  {
+    "Number": 322,
+    "Question": "How many grams of SiO₂ are required to make 500 millimoles, given that the atomic weight of Silicon is 28.1 and Oxygen is 16",
+    "Answer": 30.05,
+    "Units": "g"
+  },
+  {
+    "Number": 323,
+    "Question": "How many grams of SiO₂ are required to make 800 millimoles, given that the atomic weight of Silicon is 28.1 and Oxygen is 16",
+    "Answer": 48.08,
+    "Units": "g"
+  },
+  {
+    "Number": 324,
+    "Question": "How many grams of NO₂ are required to make 950 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 43.7,
+    "Units": "g"
+  },
+  {
+    "Number": 325,
+    "Question": "How many grams of H₂O₂ are required to make 550 millimoles, given that the atomic weight of Hydrogen is 1 and Oxygen is 16",
+    "Answer": 18.7,
+    "Units": "g"
+  },
+  {
+    "Number": 326,
+    "Question": "How many grams of LiH are required to make 700 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 5.53,
+    "Units": "g"
+  },
+  {
+    "Number": 327,
+    "Question": "How many grams of H₂S are required to make 600 millimoles, given that the atomic weight of Hydrogen is 1 and Sulfur is 32.1",
+    "Answer": 20.46,
+    "Units": "g"
+  },
+  {
+    "Number": 328,
+    "Question": "How many grams of H₂O₂ are required to make 900 millimoles, given that the atomic weight of Hydrogen is 1 and Oxygen is 16",
+    "Answer": 30.6,
+    "Units": "g"
+  },
+  {
+    "Number": 329,
+    "Question": "How many grams of LiH are required to make 800 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 6.32,
+    "Units": "g"
+  },
+  {
+    "Number": 330,
+    "Question": "How many grams of NO₂ are required to make 100 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 4.6,
+    "Units": "g"
+  },
+  {
+    "Number": 331,
+    "Question": "How many grams of H₂O₂ are required to make 400 millimoles, given that the atomic weight of Hydrogen is 1 and Oxygen is 16",
+    "Answer": 13.6,
+    "Units": "g"
+  },
+  {
+    "Number": 332,
+    "Question": "How many grams of KI are required to make 700 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 116.2,
+    "Units": "g"
+  },
+  {
+    "Number": 333,
+    "Question": "How many grams of NO₂ are required to make 250 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 11.5,
+    "Units": "g"
+  },
+  {
+    "Number": 334,
+    "Question": "How many grams of N₂O are required to make 950 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 41.8,
+    "Units": "g"
+  },
+  {
+    "Number": 335,
+    "Question": "How many grams of ZnS are required to make 800 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 78,
+    "Units": "g"
+  },
+  {
+    "Number": 336,
+    "Question": "How many grams of BaCl₂ are required to make 600 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 124.98,
+    "Units": "g"
+  },
+  {
+    "Number": 337,
+    "Question": "How many grams of AgBr are required to make 700 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 131.46,
+    "Units": "g"
+  },
+  {
+    "Number": 338,
+    "Question": "How many grams of N₂O are required to make 100 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 4.4,
+    "Units": "g"
+  },
+  {
+    "Number": 339,
+    "Question": "How many grams of LiH are required to make 100 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 0.79,
+    "Units": "g"
+  },
+  {
+    "Number": 340,
+    "Question": "How many grams of ZnS are required to make 100 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 9.75,
+    "Units": "g"
+  },
+  {
+    "Number": 341,
+    "Question": "How many grams of ZnS are required to make 900 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 87.75,
+    "Units": "g"
+  },
+  {
+    "Number": 342,
+    "Question": "How many grams of NO₂ are required to make 50 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 2.3,
+    "Units": "g"
+  },
+  {
+    "Number": 343,
+    "Question": "How many grams of BaCl₂ are required to make 200 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 41.66,
+    "Units": "g"
+  },
+  {
+    "Number": 344,
+    "Question": "How many grams of SiO₂ are required to make 600 millimoles, given that the atomic weight of Silicon is 28.1 and Oxygen is 16",
+    "Answer": 36.06,
+    "Units": "g"
+  },
+  {
+    "Number": 345,
+    "Question": "How many grams of H₂O₂ are required to make 250 millimoles, given that the atomic weight of Hydrogen is 1 and Oxygen is 16",
+    "Answer": 8.5,
+    "Units": "g"
+  },
+  {
+    "Number": 346,
+    "Question": "How many grams of KI are required to make 700 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 116.2,
+    "Units": "g"
+  },
+  {
+    "Number": 347,
+    "Question": "How many grams of AgBr are required to make 100 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 18.78,
+    "Units": "g"
+  },
+  {
+    "Number": 348,
+    "Question": "How many grams of AgBr are required to make 900 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 169.02,
+    "Units": "g"
+  },
+  {
+    "Number": 349,
+    "Question": "How many grams of KI are required to make 100 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 16.6,
+    "Units": "g"
+  },
+  {
+    "Number": 350,
+    "Question": "How many grams of BaCl₂ are required to make 400 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 83.32,
+    "Units": "g"
+  },
+  {
+    "Number": 351,
+    "Question": "How many grams of LiH are required to make 300 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 2.37,
+    "Units": "g"
+  },
+  {
+    "Number": 352,
+    "Question": "How many grams of PCl₅ are required to make 800 millimoles, given that the atomic weight of Phosphorus is 31 and Chlorine is 35.5",
+    "Answer": 166.8,
+    "Units": "g"
+  },
+  {
+    "Number": 353,
+    "Question": "How many grams of LiH are required to make 400 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 3.16,
+    "Units": "g"
+  },
+  {
+    "Number": 354,
+    "Question": "How many grams of SiO₂ are required to make 700 millimoles, given that the atomic weight of Silicon is 28.1 and Oxygen is 16",
+    "Answer": 42.07,
+    "Units": "g"
+  },
+  {
+    "Number": 355,
+    "Question": "How many grams of H₂O₂ are required to make 600 millimoles, given that the atomic weight of Hydrogen is 1 and Oxygen is 16",
+    "Answer": 20.4,
+    "Units": "g"
+  },
+  {
+    "Number": 356,
+    "Question": "How many grams of NO₂ are required to make 850 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 39.1,
+    "Units": "g"
+  },
+  {
+    "Number": 357,
+    "Question": "How many grams of KI are required to make 400 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 66.4,
+    "Units": "g"
+  },
+  {
+    "Number": 358,
+    "Question": "How many grams of CaO are required to make 300 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 16.83,
+    "Units": "g"
+  },
+  {
+    "Number": 359,
+    "Question": "How many grams of SiO₂ are required to make 300 millimoles, given that the atomic weight of Silicon is 28.1 and Oxygen is 16",
+    "Answer": 18.03,
+    "Units": "g"
+  },
+  {
+    "Number": 360,
+    "Question": "How many grams of N₂O are required to make 200 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 8.8,
+    "Units": "g"
+  },
+  {
+    "Number": 361,
+    "Question": "How many grams of H₂S are required to make 600 millimoles, given that the atomic weight of Hydrogen is 1 and Sulfur is 32.1",
+    "Answer": 20.46,
+    "Units": "g"
+  },
+  {
+    "Number": 362,
+    "Question": "How many grams of H₂O₂ are required to make 350 millimoles, given that the atomic weight of Hydrogen is 1 and Oxygen is 16",
+    "Answer": 11.9,
+    "Units": "g"
+  },
+  {
+    "Number": 363,
+    "Question": "How many grams of KI are required to make 800 millimoles, given that the atomic weight of Potassium is 39.1 and Iodine is 126.9",
+    "Answer": 132.8,
+    "Units": "g"
+  },
+  {
+    "Number": 364,
+    "Question": "How many grams of H₂S are required to make 400 millimoles, given that the atomic weight of Hydrogen is 1 and Sulfur is 32.1",
+    "Answer": 13.64,
+    "Units": "g"
+  },
+  {
+    "Number": 365,
+    "Question": "How many grams of BaCl₂ are required to make 600 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 124.98,
+    "Units": "g"
+  },
+  {
+    "Number": 366,
+    "Question": "How many grams of AgBr are required to make 400 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 75.12,
+    "Units": "g"
+  },
+  {
+    "Number": 367,
+    "Question": "How many grams of BaCl₂ are required to make 400 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 83.32,
+    "Units": "g"
+  },
+  {
+    "Number": 368,
+    "Question": "How many grams of ZnS are required to make 400 millimoles, given that the atomic weight of Zinc is 65.4 and Sulfur is 32.1",
+    "Answer": 39,
+    "Units": "g"
+  },
+  {
+    "Number": 369,
+    "Question": "How many grams of PCl₅ are required to make 700 millimoles, given that the atomic weight of Phosphorus is 31 and Chlorine is 35.5",
+    "Answer": 145.95,
+    "Units": "g"
+  },
+  {
+    "Number": 370,
+    "Question": "How many grams of N₂O are required to make 550 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 24.2,
+    "Units": "g"
+  },
+  {
+    "Number": 371,
+    "Question": "How many grams of H₂O₂ are required to make 150 millimoles, given that the atomic weight of Hydrogen is 1 and Oxygen is 16",
+    "Answer": 5.1,
+    "Units": "g"
+  },
+  {
+    "Number": 372,
+    "Question": "How many grams of LiH are required to make 600 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 4.74,
+    "Units": "g"
+  },
+  {
+    "Number": 373,
+    "Question": "How many grams of CaO are required to make 100 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 5.61,
+    "Units": "g"
+  },
+  {
+    "Number": 374,
+    "Question": "How many grams of N₂O are required to make 200 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 8.8,
+    "Units": "g"
+  },
+  {
+    "Number": 375,
+    "Question": "How many grams of NO₂ are required to make 850 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 39.1,
+    "Units": "g"
+  },
+  {
+    "Number": 376,
+    "Question": "How many grams of PCl₅ are required to make 300 millimoles, given that the atomic weight of Phosphorus is 31 and Chlorine is 35.5",
+    "Answer": 62.55,
+    "Units": "g"
+  },
+  {
+    "Number": 377,
+    "Question": "How many grams of LiH are required to make 700 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 5.53,
+    "Units": "g"
+  },
+  {
+    "Number": 378,
+    "Question": "How many grams of CaO are required to make 500 millimoles, given that the atomic weight of Calcium is 40.1 and Oxygen is 16",
+    "Answer": 28.05,
+    "Units": "g"
+  },
+  {
+    "Number": 379,
+    "Question": "How many grams of LiH are required to make 700 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 5.53,
+    "Units": "g"
+  },
+  {
+    "Number": 380,
+    "Question": "How many grams of SiO₂ are required to make 500 millimoles, given that the atomic weight of Silicon is 28.1 and Oxygen is 16",
+    "Answer": 30.05,
+    "Units": "g"
+  },
+  {
+    "Number": 381,
+    "Question": "How many grams of PCl₅ are required to make 600 millimoles, given that the atomic weight of Phosphorus is 31 and Chlorine is 35.5",
+    "Answer": 125.1,
+    "Units": "g"
+  },
+  {
+    "Number": 382,
+    "Question": "How many grams of N₂O are required to make 400 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 17.6,
+    "Units": "g"
+  },
+  {
+    "Number": 383,
+    "Question": "How many grams of AgBr are required to make 600 millimoles, given that the atomic weight of Silver is 107.9 and Bromine is 79.9",
+    "Answer": 112.68,
+    "Units": "g"
+  },
+  {
+    "Number": 384,
+    "Question": "How many grams of PCl₅ are required to make 200 millimoles, given that the atomic weight of Phosphorus is 31 and Chlorine is 35.5",
+    "Answer": 41.7,
+    "Units": "g"
+  },
+  {
+    "Number": 385,
+    "Question": "How many grams of H₂S are required to make 300 millimoles, given that the atomic weight of Hydrogen is 1 and Sulfur is 32.1",
+    "Answer": 10.23,
+    "Units": "g"
+  },
+  {
+    "Number": 386,
+    "Question": "How many grams of BaCl₂ are required to make 600 millimoles, given that the atomic weight of Barium is 137.3 and Chlorine is 35.5",
+    "Answer": 124.98,
+    "Units": "g"
+  },
+  {
+    "Number": 387,
+    "Question": "How many grams of N₂O are required to make 250 millimoles, given that the atomic weight of Nitrogen is 14 and Oxygen is 16",
+    "Answer": 11,
+    "Units": "g"
+  },
+  {
+    "Number": 388,
+    "Question": "How many grams of LiH are required to make 700 millimoles, given that the atomic weight of Lithium is 6.9 and Hydrogen is 1",
+    "Answer": 5.53,
+    "Units": "g"
+  },
+  {
+    "Number": 389,
+    "Question": "How many grams of SiO₂ are required to make 800 millimoles, given that the atomic weight of Silicon is 28.1 and Oxygen is 16",
+    "Answer": 48.08,
+    "Units": "g"
+  },
+  {
+    "Number": 390,
+    "Question": "How many grams of compound X (MW = 83) are required to produce 500 millilitres of a 1 molar solution?",
+    "Answer": 41.5,
+    "Units": "g"
+  },
+  {
+    "Number": 391,
+    "Question": "How many grams of compound X (MW = 43) are required to produce 300 millilitres of a 6.5 molar solution?",
+    "Answer": 83.85,
+    "Units": "g"
+  },
+  {
+    "Number": 392,
+    "Question": "How many grams of compound X (MW = 67) are required to produce 900 millilitres of a 8.5 molar solution?",
+    "Answer": 512.55,
+    "Units": "g"
+  },
+  {
+    "Number": 393,
+    "Question": "How many grams of compound X (MW = 113) are required to produce 300 millilitres of a 7 molar solution?",
+    "Answer": 237.3,
+    "Units": "g"
+  },
+  {
+    "Number": 394,
+    "Question": "How many grams of compound X (MW = 58) are required to produce 900 millilitres of a 8 molar solution?",
+    "Answer": 417.6,
+    "Units": "g"
+  },
+  {
+    "Number": 395,
+    "Question": "How many grams of compound X (MW = 69) are required to produce 200 millilitres of a 4.5 molar solution?",
+    "Answer": 62.1,
+    "Units": "g"
+  },
+  {
+    "Number": 396,
+    "Question": "How many grams of compound X (MW = 59) are required to produce 800 millilitres of a 2 molar solution?",
+    "Answer": 94.4,
+    "Units": "g"
+  },
+  {
+    "Number": 397,
+    "Question": "How many grams of compound X (MW = 45) are required to produce 900 millilitres of a 7 molar solution?",
+    "Answer": 283.5,
+    "Units": "g"
+  },
+  {
+    "Number": 398,
+    "Question": "How many grams of compound X (MW = 41) are required to produce 700 millilitres of a 10 molar solution?",
+    "Answer": 287,
+    "Units": "g"
+  },
+  {
+    "Number": 399,
+    "Question": "How many grams of compound X (MW = 46) are required to produce 600 millilitres of a 8.5 molar solution?",
+    "Answer": 234.6,
+    "Units": "g"
+  },
+  {
+    "Number": 400,
+    "Question": "How many grams of compound X (MW = 112) are required to produce 700 millilitres of a 3.5 molar solution?",
+    "Answer": 274.4,
+    "Units": "g"
+  },
+  {
+    "Number": 401,
+    "Question": "How many grams of compound X (MW = 36) are required to produce 400 millilitres of a 6 molar solution?",
+    "Answer": 86.4,
+    "Units": "g"
+  },
+  {
+    "Number": 402,
+    "Question": "How many grams of compound X (MW = 39) are required to produce 100 millilitres of a 1 molar solution?",
+    "Answer": 3.9,
+    "Units": "g"
+  },
+  {
+    "Number": 403,
+    "Question": "How many grams of compound X (MW = 103) are required to produce 400 millilitres of a 7.5 molar solution?",
+    "Answer": 309,
+    "Units": "g"
+  },
+  {
+    "Number": 404,
+    "Question": "How many grams of compound X (MW = 43) are required to produce 500 millilitres of a 5.5 molar solution?",
+    "Answer": 118.25,
+    "Units": "g"
+  },
+  {
+    "Number": 405,
+    "Question": "How many grams of compound X (MW = 61) are required to produce 300 millilitres of a 8 molar solution?",
+    "Answer": 146.4,
+    "Units": "g"
+  },
+  {
+    "Number": 406,
+    "Question": "How many grams of compound X (MW = 39) are required to produce 800 millilitres of a 9 molar solution?",
+    "Answer": 280.8,
+    "Units": "g"
+  },
+  {
+    "Number": 407,
+    "Question": "How many grams of compound X (MW = 92) are required to produce 100 millilitres of a 4.5 molar solution?",
+    "Answer": 41.4,
+    "Units": "g"
+  },
+  {
+    "Number": 408,
+    "Question": "How many grams of compound X (MW = 73) are required to produce 400 millilitres of a 4.5 molar solution?",
+    "Answer": 131.4,
+    "Units": "g"
+  },
+  {
+    "Number": 409,
+    "Question": "How many grams of compound X (MW = 112) are required to produce 800 millilitres of a 8 molar solution?",
+    "Answer": 716.8,
+    "Units": "g"
+  },
+  {
+    "Number": 410,
+    "Question": "How many grams of compound X (MW = 40) are required to produce 600 millilitres of a 6.5 molar solution?",
+    "Answer": 156,
+    "Units": "g"
+  },
+  {
+    "Number": 411,
+    "Question": "How many grams of compound X (MW = 64) are required to produce 200 millilitres of a 7 molar solution?",
+    "Answer": 89.6,
+    "Units": "g"
+  },
+  {
+    "Number": 412,
+    "Question": "How many grams of compound X (MW = 54) are required to produce 300 millilitres of a 3 molar solution?",
+    "Answer": 48.6,
+    "Units": "g"
+  },
+  {
+    "Number": 413,
+    "Question": "How many grams of compound X (MW = 119) are required to produce 200 millilitres of a 8 molar solution?",
+    "Answer": 190.4,
+    "Units": "g"
+  },
+  {
+    "Number": 414,
+    "Question": "How many grams of compound X (MW = 52) are required to produce 600 millilitres of a 9 molar solution?",
+    "Answer": 280.8,
+    "Units": "g"
+  },
+  {
+    "Number": 415,
+    "Question": "How many grams of compound X (MW = 84) are required to produce 700 millilitres of a 10 molar solution?",
+    "Answer": 588,
+    "Units": "g"
+  },
+  {
+    "Number": 416,
+    "Question": "How many grams of compound X (MW = 65) are required to produce 600 millilitres of a 2.5 molar solution?",
+    "Answer": 97.5,
+    "Units": "g"
+  },
+  {
+    "Number": 417,
+    "Question": "How many grams of compound X (MW = 114) are required to produce 500 millilitres of a 5 molar solution?",
+    "Answer": 285,
+    "Units": "g"
+  },
+  {
+    "Number": 418,
+    "Question": "How many grams of compound X (MW = 75) are required to produce 600 millilitres of a 1 molar solution?",
+    "Answer": 45,
+    "Units": "g"
+  },
+  {
+    "Number": 419,
+    "Question": "How many grams of compound X (MW = 75) are required to produce 500 millilitres of a 1.5 molar solution?",
+    "Answer": 56.25,
+    "Units": "g"
+  },
+  {
+    "Number": 420,
+    "Question": "How many grams of compound X (MW = 64) are required to produce 700 millilitres of a 2 molar solution?",
+    "Answer": 89.6,
+    "Units": "g"
+  },
+  {
+    "Number": 421,
+    "Question": "How many grams of compound X (MW = 102) are required to produce 500 millilitres of a 8 molar solution?",
+    "Answer": 408,
+    "Units": "g"
+  },
+  {
+    "Number": 422,
+    "Question": "How many grams of compound X (MW = 31) are required to produce 500 millilitres of a 8.5 molar solution?",
+    "Answer": 131.75,
+    "Units": "g"
+  },
+  {
+    "Number": 423,
+    "Question": "How many grams of compound X (MW = 36) are required to produce 700 millilitres of a 4 molar solution?",
+    "Answer": 100.8,
+    "Units": "g"
+  },
+  {
+    "Number": 424,
+    "Question": "How many grams of compound X (MW = 31) are required to produce 800 millilitres of a 4 molar solution?",
+    "Answer": 99.2,
+    "Units": "g"
+  },
+  {
+    "Number": 425,
+    "Question": "How many grams of compound X (MW = 86) are required to produce 400 millilitres of a 0.5 molar solution?",
+    "Answer": 17.2,
+    "Units": "g"
+  },
+  {
+    "Number": 426,
+    "Question": "How many grams of compound X (MW = 66) are required to produce 600 millilitres of a 3 molar solution?",
+    "Answer": 118.8,
+    "Units": "g"
+  },
+  {
+    "Number": 427,
+    "Question": "How many grams of compound X (MW = 87) are required to produce 600 millilitres of a 7 molar solution?",
+    "Answer": 365.4,
+    "Units": "g"
+  },
+  {
+    "Number": 428,
+    "Question": "How many grams of compound X (MW = 56) are required to produce 600 millilitres of a 2.5 molar solution?",
+    "Answer": 84,
+    "Units": "g"
+  },
+  {
+    "Number": 429,
+    "Question": "How many grams of compound X (MW = 75) are required to produce 400 millilitres of a 7.5 molar solution?",
+    "Answer": 225,
+    "Units": "g"
+  },
+  {
+    "Number": 430,
+    "Question": "How many grams of compound X (MW = 39) are required to produce 700 millilitres of a 7 molar solution?",
+    "Answer": 191.1,
+    "Units": "g"
+  },
+  {
+    "Number": 431,
+    "Question": "How many grams of compound X (MW = 83) are required to produce 400 millilitres of a 2.5 molar solution?",
+    "Answer": 83,
+    "Units": "g"
+  },
+  {
+    "Number": 432,
+    "Question": "How many grams of compound X (MW = 95) are required to produce 100 millilitres of a 4.5 molar solution?",
+    "Answer": 42.75,
+    "Units": "g"
+  },
+  {
+    "Number": 433,
+    "Question": "How many grams of compound X (MW = 94) are required to produce 200 millilitres of a 3.5 molar solution?",
+    "Answer": 65.8,
+    "Units": "g"
+  },
+  {
+    "Number": 434,
+    "Question": "How many grams of compound X (MW = 41) are required to produce 900 millilitres of a 1.5 molar solution?",
+    "Answer": 55.35,
+    "Units": "g"
+  },
+  {
+    "Number": 435,
+    "Question": "How many grams of compound X (MW = 98) are required to produce 400 millilitres of a 3.5 molar solution?",
+    "Answer": 137.2,
+    "Units": "g"
+  },
+  {
+    "Number": 436,
+    "Question": "How many grams of compound X (MW = 50) are required to produce 300 millilitres of a 0.5 molar solution?",
+    "Answer": 7.5,
+    "Units": "g"
+  },
+  {
+    "Number": 437,
+    "Question": "How many grams of compound X (MW = 30) are required to produce 300 millilitres of a 2.5 molar solution?",
+    "Answer": 22.5,
+    "Units": "g"
+  },
+  {
+    "Number": 438,
+    "Question": "How many grams of compound X (MW = 37) are required to produce 100 millilitres of a 7.5 molar solution?",
+    "Answer": 27.75,
+    "Units": "g"
+  },
+  {
+    "Number": 439,
+    "Question": "How many grams of compound X (MW = 87) are required to produce 600 millilitres of a 3.5 molar solution?",
+    "Answer": 182.7,
+    "Units": "g"
+  },
+  {
+    "Number": 440,
+    "Question": "How many grams of compound X (MW = 41) are required to produce 700 millilitres of a 3 molar solution?",
+    "Answer": 86.1,
+    "Units": "g"
+  },
+  {
+    "Number": 441,
+    "Question": "How many grams of compound X (MW = 30) are required to produce 800 millilitres of a 2 molar solution?",
+    "Answer": 48,
+    "Units": "g"
+  },
+  {
+    "Number": 442,
+    "Question": "How many grams of compound X (MW = 70) are required to produce 200 millilitres of a 3.5 molar solution?",
+    "Answer": 49,
+    "Units": "g"
+  },
+  {
+    "Number": 443,
+    "Question": "How many grams of compound X (MW = 32) are required to produce 200 millilitres of a 5.5 molar solution?",
+    "Answer": 35.2,
+    "Units": "g"
+  },
+  {
+    "Number": 444,
+    "Question": "How many grams of compound X (MW = 110) are required to produce 800 millilitres of a 7.5 molar solution?",
+    "Answer": 660,
+    "Units": "g"
+  },
+  {
+    "Number": 445,
+    "Question": "How many grams of compound X (MW = 101) are required to produce 200 millilitres of a 8 molar solution?",
+    "Answer": 161.6,
+    "Units": "g"
+  },
+  {
+    "Number": 446,
+    "Question": "How many grams of compound X (MW = 45) are required to produce 600 millilitres of a 5 molar solution?",
+    "Answer": 135,
+    "Units": "g"
+  },
+  {
+    "Number": 447,
+    "Question": "How many grams of compound X (MW = 76) are required to produce 600 millilitres of a 4.5 molar solution?",
+    "Answer": 205.2,
+    "Units": "g"
+  },
+  {
+    "Number": 448,
+    "Question": "How many grams of compound X (MW = 32) are required to produce 700 millilitres of a 6.5 molar solution?",
+    "Answer": 145.6,
+    "Units": "g"
+  },
+  {
+    "Number": 449,
+    "Question": "How many grams of compound X (MW = 116) are required to produce 400 millilitres of a 3.5 molar solution?",
+    "Answer": 162.4,
+    "Units": "g"
+  },
+  {
+    "Number": 450,
+    "Question": "How many grams of compound X (MW = 37) are required to produce 600 millilitres of a 5.5 molar solution?",
+    "Answer": 122.1,
+    "Units": "g"
+  },
+  {
+    "Number": 451,
+    "Question": "How many grams of compound X (MW = 46) are required to produce 600 millilitres of a 8 molar solution?",
+    "Answer": 220.8,
+    "Units": "g"
+  },
+  {
+    "Number": 452,
+    "Question": "How many grams of compound X (MW = 101) are required to produce 400 millilitres of a 5 molar solution?",
+    "Answer": 202,
+    "Units": "g"
+  },
+  {
+    "Number": 453,
+    "Question": "How many grams of compound X (MW = 56) are required to produce 450 millilitres of a 3 molar solution?",
+    "Answer": 75.6,
+    "Units": "g"
+  },
+  {
+    "Number": 454,
+    "Question": "How many grams of compound X (MW = 109) are required to produce 100 millilitres of a 4 molar solution?",
+    "Answer": 43.6,
+    "Units": "g"
+  },
+  {
+    "Number": 455,
+    "Question": "How many grams of compound X (MW = 60) are required to produce 150 millilitres of a 7 molar solution?",
+    "Answer": 63,
+    "Units": "g"
+  },
+  {
+    "Number": 456,
+    "Question": "How many grams of compound X (MW = 108) are required to produce 700 millilitres of a 3 molar solution?",
+    "Answer": 226.8,
+    "Units": "g"
+  },
+  {
+    "Number": 457,
+    "Question": "How many grams of compound X (MW = 84) are required to produce 400 millilitres of a 8 molar solution?",
+    "Answer": 268.8,
+    "Units": "g"
+  },
+  {
+    "Number": 458,
+    "Question": "How many grams of compound X (MW = 108) are required to produce 350 millilitres of a 1 molar solution?",
+    "Answer": 37.8,
+    "Units": "g"
+  },
+  {
+    "Number": 459,
+    "Question": "How many grams of compound X (MW = 79) are required to produce 300 millilitres of a 10 molar solution?",
+    "Answer": 237,
+    "Units": "g"
+  },
+  {
+    "Number": 460,
+    "Question": "How many grams of compound X (MW = 48) are required to produce 300 millilitres of a 6 molar solution?",
+    "Answer": 86.4,
+    "Units": "g"
+  },
+  {
+    "Number": 461,
+    "Question": "How many grams of compound X (MW = 101) are required to produce 600 millilitres of a 4 molar solution?",
+    "Answer": 242.4,
+    "Units": "g"
+  },
+  {
+    "Number": 462,
+    "Question": "How many grams of compound X (MW = 116) are required to produce 900 millilitres of a 10 molar solution?",
+    "Answer": 1044,
+    "Units": "g"
+  },
+  {
+    "Number": 463,
+    "Question": "How many grams of compound X (MW = 81) are required to produce 200 millilitres of a 3 molar solution?",
+    "Answer": 48.6,
+    "Units": "g"
+  },
+  {
+    "Number": 464,
+    "Question": "How many grams of compound X (MW = 79) are required to produce 350 millilitres of a 2 molar solution?",
+    "Answer": 55.3,
+    "Units": "g"
+  },
+  {
+    "Number": 465,
+    "Question": "How many grams of compound X (MW = 81) are required to produce 350 millilitres of a 2 molar solution?",
+    "Answer": 56.7,
+    "Units": "g"
+  },
+  {
+    "Number": 466,
+    "Question": "How many grams of compound X (MW = 44) are required to produce 400 millilitres of a 11 molar solution?",
+    "Answer": 193.6,
+    "Units": "g"
+  },
+  {
+    "Number": 467,
+    "Question": "How many grams of compound X (MW = 107) are required to produce 200 millilitres of a 8 molar solution?",
+    "Answer": 171.2,
+    "Units": "g"
+  },
+  {
+    "Number": 468,
+    "Question": "How many grams of compound X (MW = 116) are required to produce 300 millilitres of a 3 molar solution?",
+    "Answer": 104.4,
+    "Units": "g"
+  },
+  {
+    "Number": 469,
+    "Question": "How many grams of compound X (MW = 36) are required to produce 550 millilitres of a 6 molar solution?",
+    "Answer": 118.8,
+    "Units": "g"
+  },
+  {
+    "Number": 470,
+    "Question": "How many grams of compound X (MW = 67) are required to produce 300 millilitres of a 7 molar solution?",
+    "Answer": 140.7,
+    "Units": "g"
+  },
+  {
+    "Number": 471,
+    "Question": "How many grams of compound X (MW = 57) are required to produce 300 millilitres of a 4 molar solution?",
+    "Answer": 68.4,
+    "Units": "g"
+  },
+  {
+    "Number": 472,
+    "Question": "How many grams of compound X (MW = 114) are required to produce 150 millilitres of a 8 molar solution?",
+    "Answer": 136.8,
+    "Units": "g"
+  },
+  {
+    "Number": 473,
+    "Question": "How many grams of compound X (MW = 46) are required to produce 650 millilitres of a 10 molar solution?",
+    "Answer": 299,
+    "Units": "g"
+  },
+  {
+    "Number": 474,
+    "Question": "How many grams of compound X (MW = 115) are required to produce 150 millilitres of a 2 molar solution?",
+    "Answer": 34.5,
+    "Units": "g"
+  },
+  {
+    "Number": 475,
+    "Question": "How many grams of compound X (MW = 119) are required to produce 800 millilitres of a 5 molar solution?",
+    "Answer": 476,
+    "Units": "g"
+  },
+  {
+    "Number": 476,
+    "Question": "How many grams of compound X (MW = 33) are required to produce 900 millilitres of a 10 molar solution?",
+    "Answer": 297,
+    "Units": "g"
+  },
+  {
+    "Number": 477,
+    "Question": "How many grams of compound X (MW = 96) are required to produce 400 millilitres of a 5 molar solution?",
+    "Answer": 192,
+    "Units": "g"
+  },
+  {
+    "Number": 478,
+    "Question": "How many grams of compound X (MW = 118) are required to produce 350 millilitres of a 8 molar solution?",
+    "Answer": 330.4,
+    "Units": "g"
+  },
+  {
+    "Number": 479,
+    "Question": "How many grams of compound X (MW = 66) are required to produce 400 millilitres of a 6 molar solution?",
+    "Answer": 158.4,
+    "Units": "g"
+  },
+  {
+    "Number": 480,
+    "Question": "How many grams of compound X (MW = 62) are required to produce 550 millilitres of a 5 molar solution?",
+    "Answer": 170.5,
+    "Units": "g"
+  },
+  {
+    "Number": 481,
+    "Question": "How many grams of compound X (MW = 57) are required to produce 550 millilitres of a 6 molar solution?",
+    "Answer": 188.1,
+    "Units": "g"
+  },
+  {
+    "Number": 482,
+    "Question": "How many grams of compound X (MW = 102) are required to produce 250 millilitres of a 1 molar solution?",
+    "Answer": 25.5,
+    "Units": "g"
+  },
+  {
+    "Number": 483,
+    "Question": "How many grams of compound X (MW = 39) are required to produce 250 millilitres of a 9 molar solution?",
+    "Answer": 87.75,
+    "Units": "g"
+  },
+  {
+    "Number": 484,
+    "Question": "How many grams of compound X (MW = 58) are required to produce 650 millilitres of a 7 molar solution?",
+    "Answer": 263.9,
+    "Units": "g"
+  },
+  {
+    "Number": 485,
+    "Question": "How many grams of compound X (MW = 75) are required to produce 300 millilitres of a 10 molar solution?",
+    "Answer": 225,
+    "Units": "g"
+  },
+  {
+    "Number": 486,
+    "Question": "How many grams of compound X (MW = 34) are required to produce 900 millilitres of a 5 molar solution?",
+    "Answer": 153,
+    "Units": "g"
+  },
+  {
+    "Number": 487,
+    "Question": "How many grams of compound X (MW = 98) are required to produce 450 millilitres of a 3 molar solution?",
+    "Answer": 132.3,
+    "Units": "g"
+  },
+  {
+    "Number": 488,
+    "Question": "How many grams of compound X (MW = 118) are required to produce 600 millilitres of a 7 molar solution?",
+    "Answer": 495.6,
+    "Units": "g"
+  },
+  {
+    "Number": 489,
+    "Question": "How many grams of compound X (MW = 113) are required to produce 450 millilitres of a 8 molar solution?",
+    "Answer": 406.8,
+    "Units": "g"
+  },
+  {
+    "Number": 490,
+    "Question": "How many grams of compound X (MW = 117) are required to produce 850 millilitres of a 3 molar solution?",
+    "Answer": 298.35,
+    "Units": "g"
+  },
+  {
+    "Number": 491,
+    "Question": "How many grams of compound X (MW = 43) are required to produce 550 millilitres of a 3 molar solution?",
+    "Answer": 70.95,
+    "Units": "g"
+  },
+  {
+    "Number": 492,
+    "Question": "How many grams of compound X (MW = 59) are required to produce 350 millilitres of a 2 molar solution?",
+    "Answer": 41.3,
+    "Units": "g"
+  },
+  {
+    "Number": 493,
+    "Question": "How many grams of compound X (MW = 84) are required to produce 450 millilitres of a 3 molar solution?",
+    "Answer": 113.4,
+    "Units": "g"
+  },
+  {
+    "Number": 494,
+    "Question": "How many grams of compound X (MW = 88) are required to produce 600 millilitres of a 8 molar solution?",
+    "Answer": 422.4,
+    "Units": "g"
+  },
+  {
+    "Number": 495,
+    "Question": "How many grams of compound X (MW = 47) are required to produce 300 millilitres of a 4 molar solution?",
+    "Answer": 56.4,
+    "Units": "g"
+  },
+  {
+    "Number": 496,
+    "Question": "How many grams of compound X (MW = 59) are required to produce 750 millilitres of a 12 molar solution?",
+    "Answer": 531,
+    "Units": "g"
+  },
+  {
+    "Number": 497,
+    "Question": "How many grams of compound X (MW = 46) are required to produce 200 millilitres of a 12 molar solution?",
+    "Answer": 110.4,
+    "Units": "g"
+  },
+  {
+    "Number": 498,
+    "Question": "How many grams of compound X (MW = 31) are required to produce 350 millilitres of a 12 molar solution?",
+    "Answer": 130.2,
+    "Units": "g"
+  },
+  {
+    "Number": 499,
+    "Question": "How many grams of compound X (MW = 103) are required to produce 250 millilitres of a 5 molar solution?",
+    "Answer": 128.75,
+    "Units": "g"
+  },
+  {
+    "Number": 500,
+    "Question": "How many grams of compound X (MW = 110) are required to produce 300 millilitres of a 3 molar solution?",
+    "Answer": 99,
+    "Units": "g"
+  },
+  {
+    "Number": 501,
+    "Question": "How many grams of compound X (MW = 62) are required to produce 800 millilitres of a 11 molar solution?",
+    "Answer": 545.6,
+    "Units": "g"
+  },
+  {
+    "Number": 502,
+    "Question": "How many grams of compound X (MW = 79) are required to produce 500 millilitres of a 9 molar solution?",
+    "Answer": 355.5,
+    "Units": "g"
+  },
+  {
+    "Number": 503,
+    "Question": "How many grams of compound X (MW = 118) are required to produce 550 millilitres of a 12 molar solution?",
+    "Answer": 778.8,
+    "Units": "g"
+  },
+  {
+    "Number": 504,
+    "Question": "How many grams of compound X (MW = 70) are required to produce 400 millilitres of a 9 molar solution?",
+    "Answer": 252,
+    "Units": "g"
+  },
+  {
+    "Number": 505,
+    "Question": "How many grams of compound X (MW = 60) are required to produce 300 millilitres of a 2 molar solution?",
+    "Answer": 36,
+    "Units": "g"
+  },
+  {
+    "Number": 506,
+    "Question": "How many grams of compound X (MW = 58) are required to produce 650 millilitres of a 10 molar solution?",
+    "Answer": 377,
+    "Units": "g"
+  }
+]
