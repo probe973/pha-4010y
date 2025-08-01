@@ -346,7 +346,7 @@
         async function loadQuizData(quizId, retries = 3, delay = 1000) {
             try {
                 // The correct way to get the file is to use the full uploaded ID.
-                const response = await fetch(`uploaded:${quizId}`);
+                const response = await fetch(`data/${quizId}`);
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}. Please check the quiz ID in the URL.`);
                 }
