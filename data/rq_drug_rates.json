@@ -1,0 +1,842 @@
+[
+  {
+    "Number": 1,
+    "Question": "If a patient requires 10 mcg/min of a drug for 10 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 6,
+    "Units": "mg"
+  },
+  {
+    "Number": 2,
+    "Question": "If a patient requires 5 mcg/min of a drug for 3 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 0.9,
+    "Units": "mg"
+  },
+  {
+    "Number": 3,
+    "Question": "If a patient requires 40 mcg/min of a drug for 8 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 19.2,
+    "Units": "mg"
+  },
+  {
+    "Number": 4,
+    "Question": "If a patient requires 35 mcg/min of a drug for 5 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 10.5,
+    "Units": "mg"
+  },
+  {
+    "Number": 5,
+    "Question": "If a patient requires 35 mcg/min of a drug for 5 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 10.5,
+    "Units": "mg"
+  },
+  {
+    "Number": 6,
+    "Question": "If a patient requires 45 mcg/min of a drug for 10 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 27,
+    "Units": "mg"
+  },
+  {
+    "Number": 7,
+    "Question": "If a patient requires 20 mcg/min of a drug for 6 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 7.2,
+    "Units": "mg"
+  },
+  {
+    "Number": 8,
+    "Question": "If a patient requires 10 mcg/min of a drug for 10 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 6,
+    "Units": "mg"
+  },
+  {
+    "Number": 9,
+    "Question": "If a patient requires 35 mcg/min of a drug for 6 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 12.6,
+    "Units": "mg"
+  },
+  {
+    "Number": 10,
+    "Question": "If a patient requires 25 mcg/min of a drug for 11 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 16.5,
+    "Units": "mg"
+  },
+  {
+    "Number": 11,
+    "Question": "If a patient requires 10 mcg/min of a drug for 12 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 7.2,
+    "Units": "mg"
+  },
+  {
+    "Number": 12,
+    "Question": "If a patient requires 10 mcg/min of a drug for 10 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 6,
+    "Units": "mg"
+  },
+  {
+    "Number": 13,
+    "Question": "If a patient requires 35 mcg/min of a drug for 4 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 8.4,
+    "Units": "mg"
+  },
+  {
+    "Number": 14,
+    "Question": "If a patient requires 30 mcg/min of a drug for 11 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 19.8,
+    "Units": "mg"
+  },
+  {
+    "Number": 15,
+    "Question": "If a patient requires 5 mcg/min of a drug for 6 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 1.8,
+    "Units": "mg"
+  },
+  {
+    "Number": 16,
+    "Question": "If a patient requires 15 mcg/min of a drug for 8 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 7.2,
+    "Units": "mg"
+  },
+  {
+    "Number": 17,
+    "Question": "If a patient requires 5 mcg/min of a drug for 4 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 1.2,
+    "Units": "mg"
+  },
+  {
+    "Number": 18,
+    "Question": "If a patient requires 35 mcg/min of a drug for 12 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 25.2,
+    "Units": "mg"
+  },
+  {
+    "Number": 19,
+    "Question": "If a patient requires 30 mcg/min of a drug for 6 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 10.8,
+    "Units": "mg"
+  },
+  {
+    "Number": 20,
+    "Question": "If a patient requires 35 mcg/min of a drug for 6 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 12.6,
+    "Units": "mg"
+  },
+  {
+    "Number": 21,
+    "Question": "If a patient requires 15 mcg/min of a drug for 12 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 10.8,
+    "Units": "mg"
+  },
+  {
+    "Number": 22,
+    "Question": "If a patient requires 5 mcg/min of a drug for 10 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 3,
+    "Units": "mg"
+  },
+  {
+    "Number": 23,
+    "Question": "If a patient requires 50 mcg/min of a drug for 7 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 21,
+    "Units": "mg"
+  },
+  {
+    "Number": 24,
+    "Question": "If a patient requires 35 mcg/min of a drug for 7 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 14.7,
+    "Units": "mg"
+  },
+  {
+    "Number": 25,
+    "Question": "If a patient requires 15 mcg/min of a drug for 7 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 6.3,
+    "Units": "mg"
+  },
+  {
+    "Number": 26,
+    "Question": "If a patient requires 30 mcg/min of a drug for 9 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 16.2,
+    "Units": "mg"
+  },
+  {
+    "Number": 27,
+    "Question": "If a patient requires 45 mcg/min of a drug for 12 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 32.4,
+    "Units": "mg"
+  },
+  {
+    "Number": 28,
+    "Question": "If a patient requires 15 mcg/min of a drug for 7 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 6.3,
+    "Units": "mg"
+  },
+  {
+    "Number": 29,
+    "Question": "If a patient requires 35 mcg/min of a drug for 11 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 23.1,
+    "Units": "mg"
+  },
+  {
+    "Number": 30,
+    "Question": "If a patient requires 25 mcg/min of a drug for 11 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 16.5,
+    "Units": "mg"
+  },
+  {
+    "Number": 31,
+    "Question": "If a patient requires 45 mcg/min of a drug for 3 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 8.1,
+    "Units": "mg"
+  },
+  {
+    "Number": 32,
+    "Question": "If a patient requires 25 mcg/min of a drug for 8 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 12,
+    "Units": "mg"
+  },
+  {
+    "Number": 33,
+    "Question": "If a patient requires 15 mcg/min of a drug for 7 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 6.3,
+    "Units": "mg"
+  },
+  {
+    "Number": 34,
+    "Question": "If a patient requires 35 mcg/min of a drug for 3 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 6.3,
+    "Units": "mg"
+  },
+  {
+    "Number": 35,
+    "Question": "If a patient requires 15 mcg/min of a drug for 9 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 8.1,
+    "Units": "mg"
+  },
+  {
+    "Number": 36,
+    "Question": "If a patient requires 45 mcg/min of a drug for 10 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 27,
+    "Units": "mg"
+  },
+  {
+    "Number": 37,
+    "Question": "If a patient requires 5 mcg/min of a drug for 7 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 2.1,
+    "Units": "mg"
+  },
+  {
+    "Number": 38,
+    "Question": "If a patient requires 25 mcg/min of a drug for 5 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 7.5,
+    "Units": "mg"
+  },
+  {
+    "Number": 39,
+    "Question": "If a patient requires 45 mcg/min of a drug for 8 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 21.6,
+    "Units": "mg"
+  },
+  {
+    "Number": 40,
+    "Question": "If a patient requires 25 mcg/min of a drug for 12 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 18,
+    "Units": "mg"
+  },
+  {
+    "Number": 41,
+    "Question": "If a patient requires 25 mcg/min of a drug for 6 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 9,
+    "Units": "mg"
+  },
+  {
+    "Number": 42,
+    "Question": "If a patient requires 30 mcg/min of a drug for 5 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 9,
+    "Units": "mg"
+  },
+  {
+    "Number": 43,
+    "Question": "If a patient requires 20 mcg/min of a drug for 8 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 9.6,
+    "Units": "mg"
+  },
+  {
+    "Number": 44,
+    "Question": "If a patient requires 40 mcg/min of a drug for 2 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 4.8,
+    "Units": "mg"
+  },
+  {
+    "Number": 45,
+    "Question": "If a patient requires 50 mcg/min of a drug for 2 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 6,
+    "Units": "mg"
+  },
+  {
+    "Number": 46,
+    "Question": "If a patient requires 40 mcg/min of a drug for 7 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 16.8,
+    "Units": "mg"
+  },
+  {
+    "Number": 47,
+    "Question": "If a patient requires 5 mcg/min of a drug for 3 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 0.9,
+    "Units": "mg"
+  },
+  {
+    "Number": 48,
+    "Question": "If a patient requires 20 mcg/min of a drug for 7 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 8.4,
+    "Units": "mg"
+  },
+  {
+    "Number": 49,
+    "Question": "If a patient requires 25 mcg/min of a drug for 2 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 3,
+    "Units": "mg"
+  },
+  {
+    "Number": 50,
+    "Question": "If a patient requires 5 mcg/min of a drug for 8 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 2.4,
+    "Units": "mg"
+  },
+  {
+    "Number": 51,
+    "Question": "If a patient requires 40 mcg/min of a drug for 4 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 9.6,
+    "Units": "mg"
+  },
+  {
+    "Number": 52,
+    "Question": "If a patient requires 10 mcg/min of a drug for 2 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 1.2,
+    "Units": "mg"
+  },
+  {
+    "Number": 53,
+    "Question": "If a patient requires 5 mcg/min of a drug for 3 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 0.9,
+    "Units": "mg"
+  },
+  {
+    "Number": 54,
+    "Question": "If a patient requires 50 mcg/min of a drug for 11 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 33,
+    "Units": "mg"
+  },
+  {
+    "Number": 55,
+    "Question": "If a patient requires 35 mcg/min of a drug for 6 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 12.6,
+    "Units": "mg"
+  },
+  {
+    "Number": 56,
+    "Question": "If a patient requires 15 mcg/min of a drug for 7 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 6.3,
+    "Units": "mg"
+  },
+  {
+    "Number": 57,
+    "Question": "If a patient requires 20 mcg/min of a drug for 10 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 12,
+    "Units": "mg"
+  },
+  {
+    "Number": 58,
+    "Question": "If a patient requires 15 mcg/min of a drug for 6 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 5.4,
+    "Units": "mg"
+  },
+  {
+    "Number": 59,
+    "Question": "If a patient requires 20 mcg/min of a drug for 10 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 12,
+    "Units": "mg"
+  },
+  {
+    "Number": 60,
+    "Question": "If a patient requires 45 mcg/min of a drug for 2 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 5.4,
+    "Units": "mg"
+  },
+  {
+    "Number": 61,
+    "Question": "If a patient requires 50 mcg/min of a drug for 5 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 15,
+    "Units": "mg"
+  },
+  {
+    "Number": 62,
+    "Question": "If a patient requires 25 mcg/min of a drug for 7 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 10.5,
+    "Units": "mg"
+  },
+  {
+    "Number": 63,
+    "Question": "If a patient requires 45 mcg/min of a drug for 3 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 8.1,
+    "Units": "mg"
+  },
+  {
+    "Number": 64,
+    "Question": "If a patient requires 35 mcg/min of a drug for 3 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 6.3,
+    "Units": "mg"
+  },
+  {
+    "Number": 65,
+    "Question": "If a patient requires 45 mcg/min of a drug for 9 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 24.3,
+    "Units": "mg"
+  },
+  {
+    "Number": 66,
+    "Question": "If a patient requires 5 mcg/min of a drug for 2 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 0.6,
+    "Units": "mg"
+  },
+  {
+    "Number": 67,
+    "Question": "If a patient requires 5 mcg/min of a drug for 7 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 2.1,
+    "Units": "mg"
+  },
+  {
+    "Number": 68,
+    "Question": "If a patient requires 30 mcg/min of a drug for 5 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 9,
+    "Units": "mg"
+  },
+  {
+    "Number": 69,
+    "Question": "If a patient requires 35 mcg/min of a drug for 10 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 21,
+    "Units": "mg"
+  },
+  {
+    "Number": 70,
+    "Question": "If a patient requires 25 mcg/min of a drug for 4 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 6,
+    "Units": "mg"
+  },
+  {
+    "Number": 71,
+    "Question": "If a patient requires 50 mcg/min of a drug for 6 hours, what is the total amount of the drug they will require in milligrams?  Give your answer to <strong> 1 decimal place </strong>",
+    "Answer": 18,
+    "Units": "mg"
+  },
+  {
+    "Number": 72,
+    "Question": "A 60 kg patient requires 58 mg/kg/minute for 10 minutes, delivered by a 12 %w/v solution. How much solution will they need in ml?",
+    "Answer": 290,
+    "Units": "ml"
+  },
+  {
+    "Number": 73,
+    "Question": "A 50 kg patient requires 28 mg/kg/minute for 45 minutes, delivered by a 22.5 %w/v solution. How much solution will they need in ml?",
+    "Answer": 280,
+    "Units": "ml"
+  },
+  {
+    "Number": 74,
+    "Question": "A 60 kg patient requires 28 mg/kg/minute for 45 minutes, delivered by a 27 %w/v solution. How much solution will they need in ml?",
+    "Answer": 280,
+    "Units": "ml"
+  },
+  {
+    "Number": 75,
+    "Question": "A 70 kg patient requires 64 mg/kg/minute for 15 minutes, delivered by a 21 %w/v solution. How much solution will they need in ml?",
+    "Answer": 320,
+    "Units": "ml"
+  },
+  {
+    "Number": 76,
+    "Question": "A 80 kg patient requires 78 mg/kg/minute for 15 minutes, delivered by a 24 %w/v solution. How much solution will they need in ml?",
+    "Answer": 390,
+    "Units": "ml"
+  },
+  {
+    "Number": 77,
+    "Question": "A 70 kg patient requires 66 mg/kg/minute for 40 minutes, delivered by a 84 %w/v solution. How much solution will they need in ml?",
+    "Answer": 220,
+    "Units": "ml"
+  },
+  {
+    "Number": 78,
+    "Question": "A 80 kg patient requires 74 mg/kg/minute for 10 minutes, delivered by a 16 %w/v solution. How much solution will they need in ml?",
+    "Answer": 370,
+    "Units": "ml"
+  },
+  {
+    "Number": 79,
+    "Question": "A 50 kg patient requires 30 mg/kg/minute for 35 minutes, delivered by a 17.5 %w/v solution. How much solution will they need in ml?",
+    "Answer": 300,
+    "Units": "ml"
+  },
+  {
+    "Number": 80,
+    "Question": "A 40 kg patient requires 68 mg/kg/minute for 30 minutes, delivered by a 24 %w/v solution. How much solution will they need in ml?",
+    "Answer": 340,
+    "Units": "ml"
+  },
+  {
+    "Number": 81,
+    "Question": "A 80 kg patient requires 37 mg/kg/minute for 35 minutes, delivered by a 28 %w/v solution. How much solution will they need in ml?",
+    "Answer": 370,
+    "Units": "ml"
+  },
+  {
+    "Number": 82,
+    "Question": "A 40 kg patient requires 36 mg/kg/minute for 30 minutes, delivered by a 12 %w/v solution. How much solution will they need in ml?",
+    "Answer": 360,
+    "Units": "ml"
+  },
+  {
+    "Number": 83,
+    "Question": "A 70 kg patient requires 27 mg/kg/minute for 15 minutes, delivered by a 10.5 %w/v solution. How much solution will they need in ml?",
+    "Answer": 270,
+    "Units": "ml"
+  },
+  {
+    "Number": 84,
+    "Question": "A 50 kg patient requires 48 mg/kg/minute for 5 minutes, delivered by a 5 %w/v solution. How much solution will they need in ml?",
+    "Answer": 240,
+    "Units": "ml"
+  },
+  {
+    "Number": 85,
+    "Question": "A 90 kg patient requires 81 mg/kg/minute for 10 minutes, delivered by a 27 %w/v solution. How much solution will they need in ml?",
+    "Answer": 270,
+    "Units": "ml"
+  },
+  {
+    "Number": 86,
+    "Question": "A 30 kg patient requires 31 mg/kg/minute for 35 minutes, delivered by a 10.5 %w/v solution. How much solution will they need in ml?",
+    "Answer": 310,
+    "Units": "ml"
+  },
+  {
+    "Number": 87,
+    "Question": "A 40 kg patient requires 30 mg/kg/minute for 5 minutes, delivered by a 2 %w/v solution. How much solution will they need in ml?",
+    "Answer": 300,
+    "Units": "ml"
+  },
+  {
+    "Number": 88,
+    "Question": "A 50 kg patient requires 64 mg/kg/minute for 40 minutes, delivered by a 40 %w/v solution. How much solution will they need in ml?",
+    "Answer": 320,
+    "Units": "ml"
+  },
+  {
+    "Number": 89,
+    "Question": "A 40 kg patient requires 68 mg/kg/minute for 30 minutes, delivered by a 24 %w/v solution. How much solution will they need in ml?",
+    "Answer": 340,
+    "Units": "ml"
+  },
+  {
+    "Number": 90,
+    "Question": "A 60 kg patient requires 30 mg/kg/minute for 5 minutes, delivered by a 3 %w/v solution. How much solution will they need in ml?",
+    "Answer": 300,
+    "Units": "ml"
+  },
+  {
+    "Number": 91,
+    "Question": "A 40 kg patient requires 38 mg/kg/minute for 35 minutes, delivered by a 14 %w/v solution. How much solution will they need in ml?",
+    "Answer": 380,
+    "Units": "ml"
+  },
+  {
+    "Number": 92,
+    "Question": "A 70 kg patient requires 72 mg/kg/minute for 30 minutes, delivered by a 63 %w/v solution. How much solution will they need in ml?",
+    "Answer": 240,
+    "Units": "ml"
+  },
+  {
+    "Number": 93,
+    "Question": "A 60 kg patient requires 44 mg/kg/minute for 20 minutes, delivered by a 24 %w/v solution. How much solution will they need in ml?",
+    "Answer": 220,
+    "Units": "ml"
+  },
+  {
+    "Number": 94,
+    "Question": "A 80 kg patient requires 30 mg/kg/minute for 20 minutes, delivered by a 16 %w/v solution. How much solution will they need in ml?",
+    "Answer": 300,
+    "Units": "ml"
+  },
+  {
+    "Number": 95,
+    "Question": "A 80 kg patient requires 34 mg/kg/minute for 40 minutes, delivered by a 32 %w/v solution. How much solution will they need in ml?",
+    "Answer": 340,
+    "Units": "ml"
+  },
+  {
+    "Number": 96,
+    "Question": "A 50 kg patient requires 44 mg/kg/minute for 35 minutes, delivered by a 35 %w/v solution. How much solution will they need in ml?",
+    "Answer": 220,
+    "Units": "ml"
+  },
+  {
+    "Number": 97,
+    "Question": "A 70 kg patient requires 20 mg/kg/minute for 5 minutes, delivered by a 3.5 %w/v solution. How much solution will they need in ml?",
+    "Answer": 200,
+    "Units": "ml"
+  },
+  {
+    "Number": 98,
+    "Question": "A 70 kg patient requires 35 mg/kg/minute for 10 minutes, delivered by a 7 %w/v solution. How much solution will they need in ml?",
+    "Answer": 350,
+    "Units": "ml"
+  },
+  {
+    "Number": 99,
+    "Question": "A 50 kg patient requires 38 mg/kg/minute for 10 minutes, delivered by a 5 %w/v solution. How much solution will they need in ml?",
+    "Answer": 380,
+    "Units": "ml"
+  },
+  {
+    "Number": 100,
+    "Question": "A 50 kg patient requires 63 mg/kg/minute for 45 minutes, delivered by a 67.5 %w/v solution. How much solution will they need in ml?",
+    "Answer": 210,
+    "Units": "ml"
+  },
+  {
+    "Number": 101,
+    "Question": "A 80 kg patient requires 50 mg/kg/minute for 30 minutes, delivered by a 48 %w/v solution. How much solution will they need in ml?",
+    "Answer": 250,
+    "Units": "ml"
+  },
+  {
+    "Number": 102,
+    "Question": "A 60 kg patient requires 36 mg/kg/minute for 25 minutes, delivered by a 15 %w/v solution. How much solution will they need in ml?",
+    "Answer": 360,
+    "Units": "ml"
+  },
+  {
+    "Number": 103,
+    "Question": "A 70 kg patient requires 40 mg/kg/minute for 10 minutes, delivered by a 7 %w/v solution. How much solution will they need in ml?",
+    "Answer": 400,
+    "Units": "ml"
+  },
+  {
+    "Number": 104,
+    "Question": "A 50 kg patient requires 38 mg/kg/minute for 35 minutes, delivered by a 17.5 %w/v solution. How much solution will they need in ml?",
+    "Answer": 380,
+    "Units": "ml"
+  },
+  {
+    "Number": 105,
+    "Question": "A 50 kg patient requires 35 mg/kg/minute for 40 minutes, delivered by a 20 %w/v solution. How much solution will they need in ml?",
+    "Answer": 350,
+    "Units": "ml"
+  },
+  {
+    "Number": 106,
+    "Question": "A 50 kg patient requires 87 mg/kg/minute for 35 minutes, delivered by a 52.5 %w/v solution. How much solution will they need in ml?",
+    "Answer": 290,
+    "Units": "ml"
+  },
+  {
+    "Number": 107,
+    "Question": "A 80 kg patient requires 62 mg/kg/minute for 30 minutes, delivered by a 48 %w/v solution. How much solution will they need in ml?",
+    "Answer": 310,
+    "Units": "ml"
+  },
+  {
+    "Number": 108,
+    "Question": "A 80 kg patient requires 60 mg/kg/minute for 5 minutes, delivered by a 12 %w/v solution. How much solution will they need in ml?",
+    "Answer": 200,
+    "Units": "ml"
+  },
+  {
+    "Number": 109,
+    "Question": "A 60 kg patient requires 69 mg/kg/minute for 45 minutes, delivered by a 81 %w/v solution. How much solution will they need in ml?",
+    "Answer": 230,
+    "Units": "ml"
+  },
+  {
+    "Number": 110,
+    "Question": "A 70 kg patient requires 52 mg/kg/minute for 25 minutes, delivered by a 35 %w/v solution. How much solution will they need in ml?",
+    "Answer": 260,
+    "Units": "ml"
+  },
+  {
+    "Number": 111,
+    "Question": "A 40 kg patient requires 38 mg/kg/minute for 30 minutes, delivered by a 12 %w/v solution. How much solution will they need in ml?",
+    "Answer": 380,
+    "Units": "ml"
+  },
+  {
+    "Number": 112,
+    "Question": "A 90 kg patient requires 80 mg/kg/minute for 15 minutes, delivered by a 54 %w/v solution. How much solution will they need in ml?",
+    "Answer": 200,
+    "Units": "ml"
+  },
+  {
+    "Number": 113,
+    "Question": "A 50 kg patient requires 66 mg/kg/minute for 15 minutes, delivered by a 22.5 %w/v solution. How much solution will they need in ml?",
+    "Answer": 220,
+    "Units": "ml"
+  },
+  {
+    "Number": 114,
+    "Question": "A 70 kg patient requires 48 mg/kg/minute for 25 minutes, delivered by a 35 %w/v solution. How much solution will they need in ml?",
+    "Answer": 240,
+    "Units": "ml"
+  },
+  {
+    "Number": 115,
+    "Question": "A 50 kg patient requires 37 mg/kg/minute for 45 minutes, delivered by a 22.5 %w/v solution. How much solution will they need in ml?",
+    "Answer": 370,
+    "Units": "ml"
+  },
+  {
+    "Number": 116,
+    "Question": "A 60 kg patient requires 72 mg/kg/minute for 10 minutes, delivered by a 18 %w/v solution. How much solution will they need in ml?",
+    "Answer": 240,
+    "Units": "ml"
+  },
+  {
+    "Number": 117,
+    "Question": "A 90 kg patient requires 44 mg/kg/minute for 35 minutes, delivered by a 63 %w/v solution. How much solution will they need in ml?",
+    "Answer": 220,
+    "Units": "ml"
+  },
+  {
+    "Number": 118,
+    "Question": "A 50 kg patient requires 56 mg/kg/minute for 20 minutes, delivered by a 20 %w/v solution. How much solution will they need in ml?",
+    "Answer": 280,
+    "Units": "ml"
+  },
+  {
+    "Number": 119,
+    "Question": "A 50 kg patient requires 27 mg/kg/minute for 40 minutes, delivered by a 20 %w/v solution. How much solution will they need in ml?",
+    "Answer": 270,
+    "Units": "ml"
+  },
+  {
+    "Number": 120,
+    "Question": "A 30 kg patient requires 56 mg/kg/minute for 40 minutes, delivered by a 24 %w/v solution. How much solution will they need in ml?",
+    "Answer": 280,
+    "Units": "ml"
+  },
+  {
+    "Number": 121,
+    "Question": "A 40 kg patient requires 31 mg/kg/minute for 40 minutes, delivered by a 16 %w/v solution. How much solution will they need in ml?",
+    "Answer": 310,
+    "Units": "ml"
+  },
+  {
+    "Number": 122,
+    "Question": "A 80 kg patient requires 60 mg/kg/minute for 10 minutes, delivered by a 24 %w/v solution. How much solution will they need in ml?",
+    "Answer": 200,
+    "Units": "ml"
+  },
+  {
+    "Number": 123,
+    "Question": "A 60 kg patient requires 70 mg/kg/minute for 5 minutes, delivered by a 6 %w/v solution. How much solution will they need in ml?",
+    "Answer": 350,
+    "Units": "ml"
+  },
+  {
+    "Number": 124,
+    "Question": "A 50 kg patient requires 44 mg/kg/minute for 10 minutes, delivered by a 10 %w/v solution. How much solution will they need in ml?",
+    "Answer": 220,
+    "Units": "ml"
+  },
+  {
+    "Number": 125,
+    "Question": "A 80 kg patient requires 54 mg/kg/minute for 40 minutes, delivered by a 64 %w/v solution. How much solution will they need in ml?",
+    "Answer": 270,
+    "Units": "ml"
+  },
+  {
+    "Number": 126,
+    "Question": "A 50 kg patient requires 27 mg/kg/minute for 30 minutes, delivered by a 15 %w/v solution. How much solution will they need in ml?",
+    "Answer": 270,
+    "Units": "ml"
+  },
+  {
+    "Number": 127,
+    "Question": "A 50 kg patient requires 48 mg/kg/minute for 15 minutes, delivered by a 15 %w/v solution. How much solution will they need in ml?",
+    "Answer": 240,
+    "Units": "ml"
+  },
+  {
+    "Number": 128,
+    "Question": "A 90 kg patient requires 58 mg/kg/minute for 40 minutes, delivered by a 72 %w/v solution. How much solution will they need in ml?",
+    "Answer": 290,
+    "Units": "ml"
+  },
+  {
+    "Number": 129,
+    "Question": "A 50 kg patient requires 64 mg/kg/minute for 35 minutes, delivered by a 35 %w/v solution. How much solution will they need in ml?",
+    "Answer": 320,
+    "Units": "ml"
+  },
+  {
+    "Number": 130,
+    "Question": "A 60 kg patient requires 76 mg/kg/minute for 10 minutes, delivered by a 12 %w/v solution. How much solution will they need in ml?",
+    "Answer": 380,
+    "Units": "ml"
+  },
+  {
+    "Number": 131,
+    "Question": "A 80 kg patient requires 31 mg/kg/minute for 10 minutes, delivered by a 8 %w/v solution. How much solution will they need in ml?",
+    "Answer": 310,
+    "Units": "ml"
+  },
+  {
+    "Number": 132,
+    "Question": "A 80 kg patient requires 37 mg/kg/minute for 45 minutes, delivered by a 36 %w/v solution. How much solution will they need in ml?",
+    "Answer": 370,
+    "Units": "ml"
+  },
+  {
+    "Number": 133,
+    "Question": "A 80 kg patient requires 40 mg/kg/minute for 20 minutes, delivered by a 32 %w/v solution. How much solution will they need in ml?",
+    "Answer": 200,
+    "Units": "ml"
+  },
+  {
+    "Number": 134,
+    "Question": "A 60 kg patient requires 76 mg/kg/minute for 10 minutes, delivered by a 12 %w/v solution. How much solution will they need in ml?",
+    "Answer": 380,
+    "Units": "ml"
+  },
+  {
+    "Number": 135,
+    "Question": "A 70 kg patient requires 68 mg/kg/minute for 20 minutes, delivered by a 28 %w/v solution. How much solution will they need in ml?",
+    "Answer": 340,
+    "Units": "ml"
+  },
+  {
+    "Number": 136,
+    "Question": "A 40 kg patient requires 34 mg/kg/minute for 5 minutes, delivered by a 2 %w/v solution. How much solution will they need in ml?",
+    "Answer": 340,
+    "Units": "ml"
+  },
+  {
+    "Number": 137,
+    "Question": "A 90 kg patient requires 66 mg/kg/minute for 30 minutes, delivered by a 81 %w/v solution. How much solution will they need in ml?",
+    "Answer": 220,
+    "Units": "ml"
+  },
+  {
+    "Number": 138,
+    "Question": "A 30 kg patient requires 58 mg/kg/minute for 40 minutes, delivered by a 24 %w/v solution. How much solution will they need in ml?",
+    "Answer": 290,
+    "Units": "ml"
+  },
+  {
+    "Number": 139,
+    "Question": "A 70 kg patient requires 64 mg/kg/minute for 45 minutes, delivered by a 63 %w/v solution. How much solution will they need in ml?",
+    "Answer": 320,
+    "Units": "ml"
+  },
+  {
+    "Number": 140,
+    "Question": "A 50 kg patient requires 54 mg/kg/minute for 5 minutes, delivered by a 5 %w/v solution. How much solution will they need in ml?",
+    "Answer": 270,
+    "Units": "ml"
+  }
+]
