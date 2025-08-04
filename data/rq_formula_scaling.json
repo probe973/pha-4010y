@@ -1,0 +1,1202 @@
+[
+  {
+    "Number": 1,
+    "Question": "A formula for a solution is: <br> Substance A: 70 mg <br>Substance B: 60 mg <br>Substance C: 20 mg <br>Substance D: 50 ml <br>Water to 200 ml <br>How much of substance C is required to make 800 ml of the solution?",
+    "Answer": 80,
+    "Units": "mg"
+  },
+  {
+    "Number": 2,
+    "Question": "A formula for a solution is: <br> Substance A: 50 mg <br>Substance B: 60 mg <br>Substance C: 40 mg <br>Substance D: 15 ml <br>Water to 200 ml <br>How much of substance A is required to make 800 ml of the solution?",
+    "Answer": 200,
+    "Units": "mg"
+  },
+  {
+    "Number": 3,
+    "Question": "A formula for a solution is: <br> Substance A: 25 mg <br>Substance B: 75 mg <br>Substance C: 45 mg <br>Substance D: 35 ml <br>Water to 200 ml <br>How much of substance A is required to make 1200 ml of the solution?",
+    "Answer": 150,
+    "Units": "mg"
+  },
+  {
+    "Number": 4,
+    "Question": "A formula for a solution is: <br> Substance A: 90 mg <br>Substance B: 20 mg <br>Substance C: 60 mg <br>Substance D: 105 ml <br>Water to 800 ml <br>How much of substance B is required to make 7200 ml of the solution?",
+    "Answer": 180,
+    "Units": "mg"
+  },
+  {
+    "Number": 5,
+    "Question": "A formula for a solution is: <br> Substance A: 60 mg <br>Substance B: 45 mg <br>Substance C: 80 mg <br>Substance D: 20 ml <br>Water to 100 ml <br>How much of substance A is required to make 700 ml of the solution?",
+    "Answer": 420,
+    "Units": "mg"
+  },
+  {
+    "Number": 6,
+    "Question": "A formula for a solution is: <br> Substance A: 80 mg <br>Substance B: 35 mg <br>Substance C: 35 mg <br>Substance D: 20 ml <br>Water to 900 ml <br>How much of substance D is required to make 2700 ml of the solution?",
+    "Answer": 60,
+    "Units": "ml"
+  },
+  {
+    "Number": 7,
+    "Question": "A formula for a solution is: <br> Substance A: 50 mg <br>Substance B: 15 mg <br>Substance C: 30 mg <br>Substance D: 135 ml <br>Water to 700 ml <br>How much of substance A is required to make 6300 ml of the solution?",
+    "Answer": 450,
+    "Units": "mg"
+  },
+  {
+    "Number": 8,
+    "Question": "A formula for a solution is: <br> Substance A: 70 mg <br>Substance B: 20 mg <br>Substance C: 90 mg <br>Substance D: 120 ml <br>Water to 800 ml <br>How much of substance A is required to make 6400 ml of the solution?",
+    "Answer": 560,
+    "Units": "mg"
+  },
+  {
+    "Number": 9,
+    "Question": "A formula for a solution is: <br> Substance A: 45 mg <br>Substance B: 40 mg <br>Substance C: 30 mg <br>Substance D: 15 ml <br>Water to 100 ml <br>How much of substance C is required to make 700 ml of the solution?",
+    "Answer": 210,
+    "Units": "mg"
+  },
+  {
+    "Number": 10,
+    "Question": "A formula for a solution is: <br> Substance A: 55 mg <br>Substance B: 10 mg <br>Substance C: 70 mg <br>Substance D: 145 ml <br>Water to 600 ml <br>How much of substance D is required to make 3000 ml of the solution?",
+    "Answer": 725,
+    "Units": "ml"
+  },
+  {
+    "Number": 11,
+    "Question": "A formula for a solution is: <br> Substance A: 20 mg <br>Substance B: 15 mg <br>Substance C: 35 mg <br>Substance D: 80 ml <br>Water to 400 ml <br>How much of substance B is required to make 3600 ml of the solution?",
+    "Answer": 135,
+    "Units": "mg"
+  },
+  {
+    "Number": 12,
+    "Question": "A formula for a solution is: <br> Substance A: 25 mg <br>Substance B: 40 mg <br>Substance C: 45 mg <br>Substance D: 100 ml <br>Water to 400 ml <br>How much of substance B is required to make 2800 ml of the solution?",
+    "Answer": 280,
+    "Units": "mg"
+  },
+  {
+    "Number": 13,
+    "Question": "A formula for a solution is: <br> Substance A: 95 mg <br>Substance B: 65 mg <br>Substance C: 55 mg <br>Substance D: 50 ml <br>Water to 500 ml <br>How much of substance A is required to make 2500 ml of the solution?",
+    "Answer": 475,
+    "Units": "mg"
+  },
+  {
+    "Number": 14,
+    "Question": "A formula for a solution is: <br> Substance A: 60 mg <br>Substance B: 80 mg <br>Substance C: 85 mg <br>Substance D: 150 ml <br>Water to 800 ml <br>How much of substance D is required to make 4000 ml of the solution?",
+    "Answer": 750,
+    "Units": "ml"
+  },
+  {
+    "Number": 15,
+    "Question": "A formula for a solution is: <br> Substance A: 35 mg <br>Substance B: 15 mg <br>Substance C: 45 mg <br>Substance D: 50 ml <br>Water to 800 ml <br>How much of substance B is required to make 4800 ml of the solution?",
+    "Answer": 90,
+    "Units": "mg"
+  },
+  {
+    "Number": 16,
+    "Question": "A formula for a solution is: <br> Substance A: 100 mg <br>Substance B: 45 mg <br>Substance C: 70 mg <br>Substance D: 10 ml <br>Water to 300 ml <br>How much of substance D is required to make 2100 ml of the solution?",
+    "Answer": 70,
+    "Units": "ml"
+  },
+  {
+    "Number": 17,
+    "Question": "A formula for a solution is: <br> Substance A: 25 mg <br>Substance B: 20 mg <br>Substance C: 80 mg <br>Substance D: 35 ml <br>Water to 300 ml <br>How much of substance D is required to make 2100 ml of the solution?",
+    "Answer": 245,
+    "Units": "ml"
+  },
+  {
+    "Number": 18,
+    "Question": "A formula for a solution is: <br> Substance A: 25 mg <br>Substance B: 60 mg <br>Substance C: 55 mg <br>Substance D: 25 ml <br>Water to 300 ml <br>How much of substance B is required to make 2400 ml of the solution?",
+    "Answer": 480,
+    "Units": "mg"
+  },
+  {
+    "Number": 19,
+    "Question": "A formula for a solution is: <br> Substance A: 40 mg <br>Substance B: 85 mg <br>Substance C: 75 mg <br>Substance D: 180 ml <br>Water to 900 ml <br>How much of substance C is required to make 7200 ml of the solution?",
+    "Answer": 600,
+    "Units": "mg"
+  },
+  {
+    "Number": 20,
+    "Question": "A formula for a solution is: <br> Substance A: 85 mg <br>Substance B: 30 mg <br>Substance C: 55 mg <br>Substance D: 10 ml <br>Water to 800 ml <br>How much of substance C is required to make 1600 ml of the solution?",
+    "Answer": 110,
+    "Units": "mg"
+  },
+  {
+    "Number": 21,
+    "Question": "A formula for a solution is: <br> Substance A: 25 mg <br>Substance B: 70 mg <br>Substance C: 45 mg <br>Substance D: 30 ml <br>Water to 200 ml <br>How much of substance B is required to make 1800 ml of the solution?",
+    "Answer": 630,
+    "Units": "mg"
+  },
+  {
+    "Number": 22,
+    "Question": "A formula for a solution is: <br> Substance A: 45 mg <br>Substance B: 90 mg <br>Substance C: 30 mg <br>Substance D: 10 ml <br>Water to 200 ml <br>How much of substance C is required to make 400 ml of the solution?",
+    "Answer": 60,
+    "Units": "mg"
+  },
+  {
+    "Number": 23,
+    "Question": "A formula for a solution is: <br> Substance A: 90 mg <br>Substance B: 15 mg <br>Substance C: 40 mg <br>Substance D: 10 ml <br>Water to 200 ml <br>How much of substance C is required to make 1600 ml of the solution?",
+    "Answer": 320,
+    "Units": "mg"
+  },
+  {
+    "Number": 24,
+    "Question": "A formula for a solution is: <br> Substance A: 100 mg <br>Substance B: 50 mg <br>Substance C: 40 mg <br>Substance D: 50 ml <br>Water to 400 ml <br>How much of substance A is required to make 2000 ml of the solution?",
+    "Answer": 500,
+    "Units": "mg"
+  },
+  {
+    "Number": 25,
+    "Question": "A formula for a solution is: <br> Substance A: 85 mg <br>Substance B: 45 mg <br>Substance C: 75 mg <br>Substance D: 100 ml <br>Water to 800 ml <br>How much of substance C is required to make 1600 ml of the solution?",
+    "Answer": 150,
+    "Units": "mg"
+  },
+  {
+    "Number": 26,
+    "Question": "A formula for a solution is: <br> Substance A: 30 mg <br>Substance B: 45 mg <br>Substance C: 10 mg <br>Substance D: 65 ml <br>Water to 300 ml <br>How much of substance B is required to make 900 ml of the solution?",
+    "Answer": 135,
+    "Units": "mg"
+  },
+  {
+    "Number": 27,
+    "Question": "A formula for a solution is: <br> Substance A: 40 mg <br>Substance B: 100 mg <br>Substance C: 90 mg <br>Substance D: 75 ml <br>Water to 800 ml <br>How much of substance D is required to make 4800 ml of the solution?",
+    "Answer": 450,
+    "Units": "ml"
+  },
+  {
+    "Number": 28,
+    "Question": "A formula for a solution is: <br> Substance A: 15 mg <br>Substance B: 80 mg <br>Substance C: 95 mg <br>Substance D: 40 ml <br>Water to 200 ml <br>How much of substance B is required to make 1600 ml of the solution?",
+    "Answer": 640,
+    "Units": "mg"
+  },
+  {
+    "Number": 29,
+    "Question": "A formula for a solution is: <br> Substance A: 80 mg <br>Substance B: 90 mg <br>Substance C: 25 mg <br>Substance D: 140 ml <br>Water to 600 ml <br>How much of substance C is required to make 1200 ml of the solution?",
+    "Answer": 50,
+    "Units": "mg"
+  },
+  {
+    "Number": 30,
+    "Question": "A formula for a solution is: <br> Substance A: 90 mg <br>Substance B: 75 mg <br>Substance C: 80 mg <br>Substance D: 40 ml <br>Water to 200 ml <br>How much of substance B is required to make 1600 ml of the solution?",
+    "Answer": 600,
+    "Units": "mg"
+  },
+  {
+    "Number": 31,
+    "Question": "A formula for a solution is: <br> Substance A: 90 mg <br>Substance B: 60 mg <br>Substance C: 95 mg <br>Substance D: 30 ml <br>Water to 400 ml <br>How much of substance C is required to make 2000 ml of the solution?",
+    "Answer": 475,
+    "Units": "mg"
+  },
+  {
+    "Number": 32,
+    "Question": "A formula for a solution is: <br> Substance A: 20 mg <br>Substance B: 15 mg <br>Substance C: 60 mg <br>Substance D: 80 ml <br>Water to 600 ml <br>How much of substance B is required to make 3000 ml of the solution?",
+    "Answer": 75,
+    "Units": "mg"
+  },
+  {
+    "Number": 33,
+    "Question": "A formula for a solution is: <br> Substance A: 55 mg <br>Substance B: 70 mg <br>Substance C: 65 mg <br>Substance D: 35 ml <br>Water to 300 ml <br>How much of substance B is required to make 900 ml of the solution?",
+    "Answer": 210,
+    "Units": "mg"
+  },
+  {
+    "Number": 34,
+    "Question": "A formula for a solution is: <br> Substance A: 25 mg <br>Substance B: 20 mg <br>Substance C: 100 mg <br>Substance D: 25 ml <br>Water to 300 ml <br>How much of substance A is required to make 2400 ml of the solution?",
+    "Answer": 200,
+    "Units": "mg"
+  },
+  {
+    "Number": 35,
+    "Question": "A formula for a solution is: <br> Substance A: 10 mg <br>Substance B: 90 mg <br>Substance C: 10 mg <br>Substance D: 115 ml <br>Water to 500 ml <br>How much of substance D is required to make 4000 ml of the solution?",
+    "Answer": 920,
+    "Units": "ml"
+  },
+  {
+    "Number": 36,
+    "Question": "A formula for a solution is: <br> Substance A: 10 mg <br>Substance B: 40 mg <br>Substance C: 100 mg <br>Substance D: 50 ml <br>Water to 300 ml <br>How much of substance B is required to make 2100 ml of the solution?",
+    "Answer": 280,
+    "Units": "mg"
+  },
+  {
+    "Number": 37,
+    "Question": "A formula for a solution is: <br> Substance A: 15 mg <br>Substance B: 80 mg <br>Substance C: 95 mg <br>Substance D: 85 ml <br>Water to 500 ml <br>How much of substance C is required to make 4000 ml of the solution?",
+    "Answer": 760,
+    "Units": "mg"
+  },
+  {
+    "Number": 38,
+    "Question": "A formula for a solution is: <br> Substance A: 20 mg <br>Substance B: 70 mg <br>Substance C: 85 mg <br>Substance D: 95 ml <br>Water to 400 ml <br>How much of substance B is required to make 3600 ml of the solution?",
+    "Answer": 630,
+    "Units": "mg"
+  },
+  {
+    "Number": 39,
+    "Question": "A formula for a solution is: <br> Substance A: 30 mg <br>Substance B: 45 mg <br>Substance C: 25 mg <br>Substance D: 110 ml <br>Water to 700 ml <br>How much of substance D is required to make 4200 ml of the solution?",
+    "Answer": 660,
+    "Units": "ml"
+  },
+  {
+    "Number": 40,
+    "Question": "A formula for a solution is: <br> Substance A: 65 mg <br>Substance B: 55 mg <br>Substance C: 60 mg <br>Substance D: 80 ml <br>Water to 500 ml <br>How much of substance D is required to make 2000 ml of the solution?",
+    "Answer": 320,
+    "Units": "ml"
+  },
+  {
+    "Number": 41,
+    "Question": "A formula for a solution is: <br> Substance A: 65 mg <br>Substance B: 75 mg <br>Substance C: 25 mg <br>Substance D: 40 ml <br>Water to 700 ml <br>How much of substance A is required to make 6300 ml of the solution?",
+    "Answer": 585,
+    "Units": "mg"
+  },
+  {
+    "Number": 42,
+    "Question": "A formula for a solution is: <br> Substance A: 95 mg <br>Substance B: 75 mg <br>Substance C: 50 mg <br>Substance D: 105 ml <br>Water to 900 ml <br>How much of substance B is required to make 1800 ml of the solution?",
+    "Answer": 150,
+    "Units": "mg"
+  },
+  {
+    "Number": 43,
+    "Question": "A formula for a solution is: <br> Substance A: 85 mg <br>Substance B: 45 mg <br>Substance C: 95 mg <br>Substance D: 70 ml <br>Water to 700 ml <br>How much of substance A is required to make 4200 ml of the solution?",
+    "Answer": 510,
+    "Units": "mg"
+  },
+  {
+    "Number": 44,
+    "Question": "A formula for a solution is: <br> Substance A: 60 mg <br>Substance B: 30 mg <br>Substance C: 50 mg <br>Substance D: 10 ml <br>Water to 100 ml <br>How much of substance C is required to make 400 ml of the solution?",
+    "Answer": 200,
+    "Units": "mg"
+  },
+  {
+    "Number": 45,
+    "Question": "A formula for a solution is: <br> Substance A: 45 mg <br>Substance B: 75 mg <br>Substance C: 95 mg <br>Substance D: 100 ml <br>Water to 500 ml <br>How much of substance D is required to make 4500 ml of the solution?",
+    "Answer": 900,
+    "Units": "ml"
+  },
+  {
+    "Number": 46,
+    "Question": "A formula for a solution is: <br> Substance A: 50 mg <br>Substance B: 35 mg <br>Substance C: 65 mg <br>Substance D: 30 ml <br>Water to 400 ml <br>How much of substance B is required to make 800 ml of the solution?",
+    "Answer": 70,
+    "Units": "mg"
+  },
+  {
+    "Number": 47,
+    "Question": "A formula for a solution is: <br> Substance A: 40 mg <br>Substance B: 55 mg <br>Substance C: 25 mg <br>Substance D: 35 ml <br>Water to 400 ml <br>How much of substance D is required to make 1200 ml of the solution?",
+    "Answer": 105,
+    "Units": "ml"
+  },
+  {
+    "Number": 48,
+    "Question": "A formula for a solution is: <br> Substance A: 55 mg <br>Substance B: 55 mg <br>Substance C: 50 mg <br>Substance D: 135 ml <br>Water to 700 ml <br>How much of substance A is required to make 6300 ml of the solution?",
+    "Answer": 495,
+    "Units": "mg"
+  },
+  {
+    "Number": 49,
+    "Question": "A formula for a solution is: <br> Substance A: 20 mg <br>Substance B: 50 mg <br>Substance C: 15 mg <br>Substance D: 115 ml <br>Water to 600 ml <br>How much of substance B is required to make 1200 ml of the solution?",
+    "Answer": 100,
+    "Units": "mg"
+  },
+  {
+    "Number": 50,
+    "Question": "A formula for a solution is: <br> Substance A: 25 mg <br>Substance B: 90 mg <br>Substance C: 60 mg <br>Substance D: 85 ml <br>Water to 700 ml <br>How much of substance A is required to make 2100 ml of the solution?",
+    "Answer": 75,
+    "Units": "mg"
+  },
+  {
+    "Number": 51,
+    "Question": "A formula for a solution is: <br> Substance A: 60 mg <br>Substance B: 55 mg <br>Substance C: 75 mg <br>Substance D: 45 ml <br>Water to 500 ml <br>How much of substance B is required to make 3000 ml of the solution?",
+    "Answer": 330,
+    "Units": "mg"
+  },
+  {
+    "Number": 52,
+    "Question": "A formula for a solution is: <br> Substance A: 35 mg <br>Substance B: 55 mg <br>Substance C: 85 mg <br>Substance D: 30 ml <br>Water to 200 ml <br>How much of substance D is required to make 1400 ml of the solution?",
+    "Answer": 210,
+    "Units": "ml"
+  },
+  {
+    "Number": 53,
+    "Question": "A formula for a solution is: <br> Substance A: 90 mg <br>Substance B: 85 mg <br>Substance C: 70 mg <br>Substance D: 15 ml <br>Water to 200 ml <br>How much of substance C is required to make 1200 ml of the solution?",
+    "Answer": 420,
+    "Units": "mg"
+  },
+  {
+    "Number": 54,
+    "Question": "A formula for a solution is: <br> Substance A: 75 mg <br>Substance B: 80 mg <br>Substance C: 50 mg <br>Substance D: 45 ml <br>Water to 500 ml <br>How much of substance D is required to make 1500 ml of the solution?",
+    "Answer": 135,
+    "Units": "ml"
+  },
+  {
+    "Number": 55,
+    "Question": "A formula for a solution is: <br> Substance A: 90 mg <br>Substance B: 100 mg <br>Substance C: 25 mg <br>Substance D: 10 ml <br>Water to 100 ml <br>How much of substance A is required to make 200 ml of the solution?",
+    "Answer": 180,
+    "Units": "mg"
+  },
+  {
+    "Number": 56,
+    "Question": "A formula for a solution is: <br> Substance A: 60 mg <br>Substance B: 50 mg <br>Substance C: 65 mg <br>Substance D: 35 ml <br>Water to 400 ml <br>How much of substance D is required to make 4000 ml of the solution?",
+    "Answer": 350,
+    "Units": "ml"
+  },
+  {
+    "Number": 57,
+    "Question": "A formula for a solution is: <br> Substance A: 60 mg <br>Substance B: 25 mg <br>Substance C: 75 mg <br>Substance D: 85 ml <br>Water to 400 ml <br>How much of substance D is required to make 2000 ml of the solution?",
+    "Answer": 425,
+    "Units": "ml"
+  },
+  {
+    "Number": 58,
+    "Question": "A formula for a solution is: <br> Substance A: 55 mg <br>Substance B: 20 mg <br>Substance C: 65 mg <br>Substance D: 95 ml <br>Water to 900 ml <br>How much of substance C is required to make 5400 ml of the solution?",
+    "Answer": 390,
+    "Units": "mg"
+  },
+  {
+    "Number": 59,
+    "Question": "A formula for a solution is: <br> Substance A: 25 mg <br>Substance B: 20 mg <br>Substance C: 90 mg <br>Substance D: 90 ml <br>Water to 700 ml <br>How much of substance C is required to make 6300 ml of the solution?",
+    "Answer": 810,
+    "Units": "mg"
+  },
+  {
+    "Number": 60,
+    "Question": "A formula for a solution is: <br> Substance A: 70 mg <br>Substance B: 15 mg <br>Substance C: 80 mg <br>Substance D: 10 ml <br>Water to 100 ml <br>How much of substance B is required to make 700 ml of the solution?",
+    "Answer": 105,
+    "Units": "mg"
+  },
+  {
+    "Number": 61,
+    "Question": "A formula for a solution is: <br> Substance A: 10 mg <br>Substance B: 45 mg <br>Substance C: 75 mg <br>Substance D: 10 ml <br>Water to 200 ml <br>How much of substance B is required to make 2000 ml of the solution?",
+    "Answer": 450,
+    "Units": "mg"
+  },
+  {
+    "Number": 62,
+    "Question": "A formula for a solution is: <br> Substance A: 85 mg <br>Substance B: 35 mg <br>Substance C: 55 mg <br>Substance D: 10 ml <br>Water to 600 ml <br>How much of substance B is required to make 5400 ml of the solution?",
+    "Answer": 315,
+    "Units": "mg"
+  },
+  {
+    "Number": 63,
+    "Question": "A formula for a solution is: <br> Substance A: 30 mg <br>Substance B: 40 mg <br>Substance C: 95 mg <br>Substance D: 10 ml <br>Water to 300 ml <br>How much of substance D is required to make 3000 ml of the solution?",
+    "Answer": 100,
+    "Units": "ml"
+  },
+  {
+    "Number": 64,
+    "Question": "A formula for a solution is: <br> Substance A: 30 mg <br>Substance B: 20 mg <br>Substance C: 85 mg <br>Substance D: 55 ml <br>Water to 800 ml <br>How much of substance B is required to make 6400 ml of the solution?",
+    "Answer": 160,
+    "Units": "mg"
+  },
+  {
+    "Number": 65,
+    "Question": "A formula for a solution is: <br> Substance A: 15 mg <br>Substance B: 55 mg <br>Substance C: 80 mg <br>Substance D: 50 ml <br>Water to 200 ml <br>How much of substance C is required to make 400 ml of the solution?",
+    "Answer": 160,
+    "Units": "mg"
+  },
+  {
+    "Number": 66,
+    "Question": "A formula for a solution is: <br> Substance A: 95 mg <br>Substance B: 60 mg <br>Substance C: 50 mg <br>Substance D: 145 ml <br>Water to 700 ml <br>How much of substance C is required to make 3500 ml of the solution?",
+    "Answer": 250,
+    "Units": "mg"
+  },
+  {
+    "Number": 67,
+    "Question": "A formula for a solution is: <br> Substance A: 50 mg <br>Substance B: 50 mg <br>Substance C: 25 mg <br>Substance D: 120 ml <br>Water to 500 ml <br>How much of substance A is required to make 1500 ml of the solution?",
+    "Answer": 150,
+    "Units": "mg"
+  },
+  {
+    "Number": 68,
+    "Question": "A formula for a solution is: <br> Substance A: 80 mg <br>Substance B: 80 mg <br>Substance C: 20 mg <br>Substance D: 55 ml <br>Water to 300 ml <br>How much of substance A is required to make 1800 ml of the solution?",
+    "Answer": 480,
+    "Units": "mg"
+  },
+  {
+    "Number": 69,
+    "Question": "A formula for a solution is: <br> Substance A: 70 mg <br>Substance B: 85 mg <br>Substance C: 70 mg <br>Substance D: 125 ml <br>Water to 900 ml <br>How much of substance C is required to make 4500 ml of the solution?",
+    "Answer": 350,
+    "Units": "mg"
+  },
+  {
+    "Number": 70,
+    "Question": "A formula for a solution is: <br> Substance A: 35 mg <br>Substance B: 25 mg <br>Substance C: 50 mg <br>Substance D: 155 ml <br>Water to 700 ml <br>How much of substance C is required to make 4900 ml of the solution?",
+    "Answer": 350,
+    "Units": "mg"
+  },
+  {
+    "Number": 71,
+    "Question": "A formula for a solution is: <br> Substance A: 25 mg <br>Substance B: 50 mg <br>Substance C: 55 mg <br>Substance D: 65 ml <br>Water to 300 ml <br>How much of substance C is required to make 2100 ml of the solution?",
+    "Answer": 385,
+    "Units": "mg"
+  },
+  {
+    "Number": 72,
+    "Question": "A formula for a solution is: <br> Substance A: 95 mg <br>Substance B: 40 mg <br>Substance C: 35 mg <br>Substance D: 165 ml <br>Water to 900 ml <br>How much of substance A is required to make 5400 ml of the solution?",
+    "Answer": 570,
+    "Units": "mg"
+  },
+  {
+    "Number": 73,
+    "Question": "A formula for a solution is: <br> Substance A: 15 mg <br>Substance B: 45 mg <br>Substance C: 85 mg <br>Substance D: 50 ml <br>Water to 400 ml <br>How much of substance B is required to make 2800 ml of the solution?",
+    "Answer": 315,
+    "Units": "mg"
+  },
+  {
+    "Number": 74,
+    "Question": "A formula for a solution is: <br> Substance A: 25 mg <br>Substance B: 95 mg <br>Substance C: 90 mg <br>Substance D: 35 ml <br>Water to 900 ml <br>How much of substance B is required to make 2700 ml of the solution?",
+    "Answer": 285,
+    "Units": "mg"
+  },
+  {
+    "Number": 75,
+    "Question": "A formula for a solution is: <br> Substance A: 90 mg <br>Substance B: 30 mg <br>Substance C: 60 mg <br>Substance D: 110 ml <br>Water to 500 ml <br>How much of substance B is required to make 4500 ml of the solution?",
+    "Answer": 270,
+    "Units": "mg"
+  },
+  {
+    "Number": 76,
+    "Question": "A formula for a solution is: <br> Substance A: 25 mg <br>Substance B: 75 mg <br>Substance C: 40 mg <br>Substance D: 25 ml <br>Water to 300 ml <br>How much of substance A is required to make 600 ml of the solution?",
+    "Answer": 50,
+    "Units": "mg"
+  },
+  {
+    "Number": 77,
+    "Question": "A formula for a solution is: <br> Substance A: 65 mg <br>Substance B: 35 mg <br>Substance C: 70 mg <br>Substance D: 20 ml <br>Water to 200 ml <br>How much of substance D is required to make 1600 ml of the solution?",
+    "Answer": 160,
+    "Units": "ml"
+  },
+  {
+    "Number": 78,
+    "Question": "A formula for a solution is: <br> Substance A: 65 mg <br>Substance B: 30 mg <br>Substance C: 55 mg <br>Substance D: 15 ml <br>Water to 700 ml <br>How much of substance A is required to make 1400 ml of the solution?",
+    "Answer": 130,
+    "Units": "mg"
+  },
+  {
+    "Number": 79,
+    "Question": "A formula for a solution is: <br> Substance A: 50 mg <br>Substance B: 70 mg <br>Substance C: 95 mg <br>Substance D: 80 ml <br>Water to 700 ml <br>How much of substance D is required to make 4900 ml of the solution?",
+    "Answer": 560,
+    "Units": "ml"
+  },
+  {
+    "Number": 80,
+    "Question": "A formula for a solution is: <br> Substance A: 85 mg <br>Substance B: 100 mg <br>Substance C: 30 mg <br>Substance D: 35 ml <br>Water to 800 ml <br>How much of substance A is required to make 1600 ml of the solution?",
+    "Answer": 170,
+    "Units": "mg"
+  },
+  {
+    "Number": 81,
+    "Question": "A formula for a solution is: <br> Substance A: 40 mg <br>Substance B: 20 mg <br>Substance C: 30 mg <br>Substance D: 25 ml <br>Water to 400 ml <br>How much of substance A is required to make 800 ml of the solution?",
+    "Answer": 80,
+    "Units": "mg"
+  },
+  {
+    "Number": 82,
+    "Question": "A formula for a solution is: <br> Substance A: 85 mg <br>Substance B: 35 mg <br>Substance C: 65 mg <br>Substance D: 200 ml <br>Water to 800 ml <br>How much of substance C is required to make 2400 ml of the solution?",
+    "Answer": 195,
+    "Units": "mg"
+  },
+  {
+    "Number": 83,
+    "Question": "A formula for a solution is: <br> Substance A: 35 mg <br>Substance B: 85 mg <br>Substance C: 50 mg <br>Substance D: 35 ml <br>Water to 300 ml <br>How much of substance D is required to make 1500 ml of the solution?",
+    "Answer": 175,
+    "Units": "ml"
+  },
+  {
+    "Number": 84,
+    "Question": "A formula for a solution is: <br> Substance A: 55 mg <br>Substance B: 60 mg <br>Substance C: 40 mg <br>Substance D: 55 ml <br>Water to 400 ml <br>How much of substance A is required to make 4000 ml of the solution?",
+    "Answer": 550,
+    "Units": "mg"
+  },
+  {
+    "Number": 85,
+    "Question": "A formula for a solution is: <br> Substance A: 65 mg <br>Substance B: 20 mg <br>Substance C: 60 mg <br>Substance D: 55 ml <br>Water to 800 ml <br>How much of substance A is required to make 7200 ml of the solution?",
+    "Answer": 585,
+    "Units": "mg"
+  },
+  {
+    "Number": 86,
+    "Question": "A formula for a solution is: <br> Substance A: 15 mg <br>Substance B: 50 mg <br>Substance C: 15 mg <br>Substance D: 70 ml <br>Water to 500 ml <br>How much of substance B is required to make 1000 ml of the solution?",
+    "Answer": 100,
+    "Units": "mg"
+  },
+  {
+    "Number": 87,
+    "Question": "A formula for a solution is: <br> Substance A: 90 mg <br>Substance B: 40 mg <br>Substance C: 20 mg <br>Substance D: 45 ml <br>Water to 300 ml <br>How much of substance A is required to make 1200 ml of the solution?",
+    "Answer": 360,
+    "Units": "mg"
+  },
+  {
+    "Number": 88,
+    "Question": "A formula for a solution is: <br> Substance A: 55 mg <br>Substance B: 25 mg <br>Substance C: 10 mg <br>Substance D: 10 ml <br>Water to 800 ml <br>How much of substance D is required to make 1600 ml of the solution?",
+    "Answer": 20,
+    "Units": "ml"
+  },
+  {
+    "Number": 89,
+    "Question": "A formula for a solution is: <br> Substance A: 10 mg <br>Substance B: 50 mg <br>Substance C: 35 mg <br>Substance D: 70 ml <br>Water to 300 ml <br>How much of substance C is required to make 600 ml of the solution?",
+    "Answer": 70,
+    "Units": "mg"
+  },
+  {
+    "Number": 90,
+    "Question": "A formula for a solution is: <br> Substance A: 90 mg <br>Substance B: 20 mg <br>Substance C: 80 mg <br>Substance D: 15 ml <br>Water to 200 ml <br>How much of substance A is required to make 2000 ml of the solution?",
+    "Answer": 900,
+    "Units": "mg"
+  },
+  {
+    "Number": 91,
+    "Question": "A formula for a solution is: <br> Substance A: 70 mg <br>Substance B: 60 mg <br>Substance C: 30 mg <br>Substance D: 110 ml <br>Water to 700 ml <br>How much of substance D is required to make 2800 ml of the solution?",
+    "Answer": 440,
+    "Units": "ml"
+  },
+  {
+    "Number": 92,
+    "Question": "A formula for a solution is: <br> Substance A: 75 mg <br>Substance B: 90 mg <br>Substance C: 95 mg <br>Substance D: 120 ml <br>Water to 900 ml <br>How much of substance C is required to make 7200 ml of the solution?",
+    "Answer": 760,
+    "Units": "mg"
+  },
+  {
+    "Number": 93,
+    "Question": "A formula for a solution is: <br> Substance A: 85 mg <br>Substance B: 65 mg <br>Substance C: 95 mg <br>Substance D: 80 ml <br>Water to 700 ml <br>How much of substance A is required to make 4900 ml of the solution?",
+    "Answer": 595,
+    "Units": "mg"
+  },
+  {
+    "Number": 94,
+    "Question": "A formula for a solution is: <br> Substance A: 65 mg <br>Substance B: 40 mg <br>Substance C: 55 mg <br>Substance D: 90 ml <br>Water to 800 ml <br>How much of substance A is required to make 6400 ml of the solution?",
+    "Answer": 520,
+    "Units": "mg"
+  },
+  {
+    "Number": 95,
+    "Question": "A formula for a solution is: <br> Substance A: 90 mg <br>Substance B: 15 mg <br>Substance C: 95 mg <br>Substance D: 35 ml <br>Water to 200 ml <br>How much of substance A is required to make 1400 ml of the solution?",
+    "Answer": 630,
+    "Units": "mg"
+  },
+  {
+    "Number": 96,
+    "Question": "A formula for a solution is: <br> Substance A: 20 mg <br>Substance B: 95 mg <br>Substance C: 20 mg <br>Substance D: 30 ml <br>Water to 400 ml <br>How much of substance C is required to make 2800 ml of the solution?",
+    "Answer": 140,
+    "Units": "mg"
+  },
+  {
+    "Number": 97,
+    "Question": "A formula for a solution is: <br> Substance A: 75 mg <br>Substance B: 85 mg <br>Substance C: 90 mg <br>Substance D: 75 ml <br>Water to 300 ml <br>How much of substance A is required to make 1200 ml of the solution?",
+    "Answer": 300,
+    "Units": "mg"
+  },
+  {
+    "Number": 98,
+    "Question": "A formula for a solution is: <br> Substance A: 75 mg <br>Substance B: 50 mg <br>Substance C: 80 mg <br>Substance D: 125 ml <br>Water to 700 ml <br>How much of substance C is required to make 1400 ml of the solution?",
+    "Answer": 160,
+    "Units": "mg"
+  },
+  {
+    "Number": 99,
+    "Question": "A formula for a solution is: <br> Substance A: 100 mg <br>Substance B: 20 mg <br>Substance C: 100 mg <br>Substance D: 65 ml <br>Water to 300 ml <br>How much of substance D is required to make 1500 ml of the solution?",
+    "Answer": 325,
+    "Units": "ml"
+  },
+  {
+    "Number": 100,
+    "Question": "A formula for a solution is: <br> Substance A: 45 mg <br>Substance B: 70 mg <br>Substance C: 70 mg <br>Substance D: 15 ml <br>Water to 400 ml <br>How much of substance C is required to make 1200 ml of the solution?",
+    "Answer": 210,
+    "Units": "mg"
+  },
+  {
+    "Number": 101,
+    "Question": "A formula for a solution is: <br> Substance A: 75 mg <br>Substance B: 100 mg <br>Substance C: 95 mg <br>Substance D: 20 ml <br>Water to 200 ml <br>How much of substance A is required to make 1000 ml of the solution?",
+    "Answer": 375,
+    "Units": "mg"
+  },
+  {
+    "Number": 102,
+    "Question": "A formula for a solution is: <br> Substance A: 35 mg <br>Substance B: 85 mg <br>Substance C: 40 mg <br>Substance D: 180 ml <br>Water to 800 ml <br>How much of substance C is required to make 4000 ml of the solution?",
+    "Answer": 200,
+    "Units": "mg"
+  },
+  {
+    "Number": 103,
+    "Question": "A formula for a solution is: <br> Substance A: 30 mg <br>Substance B: 25 mg <br>Substance C: 85 mg <br>Substance D: 65 ml <br>Water to 700 ml <br>How much of substance D is required to make 2100 ml of the solution?",
+    "Answer": 195,
+    "Units": "ml"
+  },
+  {
+    "Number": 104,
+    "Question": "A formula for a solution is: <br> Substance A: 80 mg <br>Substance B: 25 mg <br>Substance C: 35 mg <br>Substance D: 65 ml <br>Water to 600 ml <br>How much of substance A is required to make 1200 ml of the solution?",
+    "Answer": 160,
+    "Units": "mg"
+  },
+  {
+    "Number": 105,
+    "Question": "A formula for a solution is: <br> Substance A: 30 mg <br>Substance B: 35 mg <br>Substance C: 80 mg <br>Substance D: 60 ml <br>Water to 500 ml <br>How much of substance B is required to make 2500 ml of the solution?",
+    "Answer": 175,
+    "Units": "mg"
+  },
+  {
+    "Number": 106,
+    "Question": "A formula for a solution is: <br> Substance A: 10 mg <br>Substance B: 75 mg <br>Substance C: 100 mg <br>Substance D: 40 ml <br>Water to 300 ml <br>How much of substance B is required to make 900 ml of the solution?",
+    "Answer": 225,
+    "Units": "mg"
+  },
+  {
+    "Number": 107,
+    "Question": "A formula for a solution is: <br> Substance A: 35 mg <br>Substance B: 15 mg <br>Substance C: 50 mg <br>Substance D: 20 ml <br>Water to 100 ml <br>How much of substance C is required to make 500 ml of the solution?",
+    "Answer": 250,
+    "Units": "mg"
+  },
+  {
+    "Number": 108,
+    "Question": "A formula for a solution is: <br> Substance A: 10 mg <br>Substance B: 80 mg <br>Substance C: 35 mg <br>Substance D: 40 ml <br>Water to 800 ml <br>How much of substance A is required to make 3200 ml of the solution?",
+    "Answer": 40,
+    "Units": "mg"
+  },
+  {
+    "Number": 109,
+    "Question": "A formula for a solution is: <br> Substance A: 65 mg <br>Substance B: 70 mg <br>Substance C: 30 mg <br>Substance D: 40 ml <br>Water to 200 ml <br>How much of substance C is required to make 600 ml of the solution?",
+    "Answer": 90,
+    "Units": "mg"
+  },
+  {
+    "Number": 110,
+    "Question": "A formula for a solution is: <br> Substance A: 75 mg <br>Substance B: 15 mg <br>Substance C: 80 mg <br>Substance D: 85 ml <br>Water to 400 ml <br>How much of substance C is required to make 3200 ml of the solution?",
+    "Answer": 640,
+    "Units": "mg"
+  },
+  {
+    "Number": 111,
+    "Question": "A formula for a solution is: <br> Substance A: 30 mg <br>Substance B: 35 mg <br>Substance C: 20 mg <br>Substance D: 140 ml <br>Water to 600 ml <br>How much of substance D is required to make 2400 ml of the solution?",
+    "Answer": 560,
+    "Units": "ml"
+  },
+  {
+    "Number": 112,
+    "Question": "A formula for a solution is: <br> Substance A: 10 mg <br>Substance B: 55 mg <br>Substance C: 80 mg <br>Substance D: 65 ml <br>Water to 900 ml <br>How much of substance D is required to make 3600 ml of the solution?",
+    "Answer": 260,
+    "Units": "ml"
+  },
+  {
+    "Number": 113,
+    "Question": "A formula for a solution is: <br> Substance A: 50 mg <br>Substance B: 40 mg <br>Substance C: 45 mg <br>Substance D: 155 ml <br>Water to 700 ml <br>How much of substance C is required to make 3500 ml of the solution?",
+    "Answer": 225,
+    "Units": "mg"
+  },
+  {
+    "Number": 114,
+    "Question": "A formula for a solution is: <br> Substance A: 70 mg <br>Substance B: 55 mg <br>Substance C: 75 mg <br>Substance D: 160 ml <br>Water to 700 ml <br>How much of substance C is required to make 6300 ml of the solution?",
+    "Answer": 675,
+    "Units": "mg"
+  },
+  {
+    "Number": 115,
+    "Question": "A formula for a solution is: <br> Substance A: 75 mg <br>Substance B: 70 mg <br>Substance C: 45 mg <br>Substance D: 95 ml <br>Water to 500 ml <br>How much of substance C is required to make 2000 ml of the solution?",
+    "Answer": 180,
+    "Units": "mg"
+  },
+  {
+    "Number": 116,
+    "Question": "A formula for a solution is: <br> Substance A: 100 mg <br>Substance B: 75 mg <br>Substance C: 60 mg <br>Substance D: 35 ml <br>Water to 600 ml <br>How much of substance A is required to make 6000 ml of the solution?",
+    "Answer": 1000,
+    "Units": "mg"
+  },
+  {
+    "Number": 117,
+    "Question": "A formula for a solution is: <br> Substance A: 40 mg <br>Substance B: 40 mg <br>Substance C: 95 mg <br>Substance D: 75 ml <br>Water to 500 ml <br>How much of substance B is required to make 1000 ml of the solution?",
+    "Answer": 80,
+    "Units": "mg"
+  },
+  {
+    "Number": 118,
+    "Question": "A formula for a solution is: <br> Substance A: 70 mg <br>Substance B: 35 mg <br>Substance C: 40 mg <br>Substance D: 20 ml <br>Water to 500 ml <br>How much of substance D is required to make 3500 ml of the solution?",
+    "Answer": 140,
+    "Units": "ml"
+  },
+  {
+    "Number": 119,
+    "Question": "A formula for a solution is: <br> Substance A: 45 mg <br>Substance B: 75 mg <br>Substance C: 70 mg <br>Substance D: 115 ml <br>Water to 500 ml <br>How much of substance D is required to make 1000 ml of the solution?",
+    "Answer": 230,
+    "Units": "ml"
+  },
+  {
+    "Number": 120,
+    "Question": "A formula for a solution is: <br> Substance A: 95 mg <br>Substance B: 65 mg <br>Substance C: 65 mg <br>Substance D: 115 ml <br>Water to 500 ml <br>How much of substance D is required to make 1500 ml of the solution?",
+    "Answer": 345,
+    "Units": "ml"
+  },
+  {
+    "Number": 121,
+    "Question": "A formula for a solution is: <br> Substance A: 55 mg <br>Substance B: 55 mg <br>Substance C: 80 mg <br>Substance D: 40 ml <br>Water to 400 ml <br>How much of substance B is required to make 3200 ml of the solution?",
+    "Answer": 440,
+    "Units": "mg"
+  },
+  {
+    "Number": 122,
+    "Question": "A formula for a solution is: <br> Substance A: 75 mg <br>Substance B: 80 mg <br>Substance C: 20 mg <br>Substance D: 25 ml <br>Water to 500 ml <br>How much of substance D is required to make 1000 ml of the solution?",
+    "Answer": 50,
+    "Units": "ml"
+  },
+  {
+    "Number": 123,
+    "Question": "A formula for a solution is: <br> Substance A: 55 mg <br>Substance B: 35 mg <br>Substance C: 15 mg <br>Substance D: 15 ml <br>Water to 700 ml <br>How much of substance C is required to make 5600 ml of the solution?",
+    "Answer": 120,
+    "Units": "mg"
+  },
+  {
+    "Number": 124,
+    "Question": "A formula for a solution is: <br> Substance A: 55 mg <br>Substance B: 15 mg <br>Substance C: 50 mg <br>Substance D: 20 ml <br>Water to 100 ml <br>How much of substance B is required to make 800 ml of the solution?",
+    "Answer": 120,
+    "Units": "mg"
+  },
+  {
+    "Number": 125,
+    "Question": "A formula for a solution is: <br> Substance A: 50 mg <br>Substance B: 10 mg <br>Substance C: 75 mg <br>Substance D: 125 ml <br>Water to 600 ml <br>How much of substance C is required to make 4800 ml of the solution?",
+    "Answer": 600,
+    "Units": "mg"
+  },
+  {
+    "Number": 126,
+    "Question": "A formula for a solution is: <br> Substance A: 30 mg <br>Substance B: 30 mg <br>Substance C: 25 mg <br>Substance D: 165 ml <br>Water to 800 ml <br>How much of substance C is required to make 6400 ml of the solution?",
+    "Answer": 200,
+    "Units": "mg"
+  },
+  {
+    "Number": 127,
+    "Question": "A formula for a solution is: <br> Substance A: 25 mg <br>Substance B: 35 mg <br>Substance C: 20 mg <br>Substance D: 25 ml <br>Water to 700 ml <br>How much of substance D is required to make 2100 ml of the solution?",
+    "Answer": 75,
+    "Units": "ml"
+  },
+  {
+    "Number": 128,
+    "Question": "A formula for a solution is: <br> Substance A: 60 mg <br>Substance B: 95 mg <br>Substance C: 95 mg <br>Substance D: 25 ml <br>Water to 600 ml <br>How much of substance D is required to make 2400 ml of the solution?",
+    "Answer": 100,
+    "Units": "ml"
+  },
+  {
+    "Number": 129,
+    "Question": "A formula for a solution is: <br> Substance A: 35 mg <br>Substance B: 100 mg <br>Substance C: 10 mg <br>Substance D: 190 ml <br>Water to 900 ml <br>How much of substance A is required to make 5400 ml of the solution?",
+    "Answer": 210,
+    "Units": "mg"
+  },
+  {
+    "Number": 130,
+    "Question": "A formula for a solution is: <br> Substance A: 20 mg <br>Substance B: 50 mg <br>Substance C: 15 mg <br>Substance D: 35 ml <br>Water to 500 ml <br>How much of substance A is required to make 4500 ml of the solution?",
+    "Answer": 180,
+    "Units": "mg"
+  },
+  {
+    "Number": 131,
+    "Question": "A formula for a solution is: <br> Substance A: 65 mg <br>Substance B: 50 mg <br>Substance C: 75 mg <br>Substance D: 55 ml <br>Water to 600 ml <br>How much of substance A is required to make 4200 ml of the solution?",
+    "Answer": 455,
+    "Units": "mg"
+  },
+  {
+    "Number": 132,
+    "Question": "A formula for a solution is: <br> Substance A: 95 mg <br>Substance B: 45 mg <br>Substance C: 50 mg <br>Substance D: 70 ml <br>Water to 300 ml <br>How much of substance B is required to make 1200 ml of the solution?",
+    "Answer": 180,
+    "Units": "mg"
+  },
+  {
+    "Number": 133,
+    "Question": "A formula for a solution is: <br> Substance A: 30 mg <br>Substance B: 65 mg <br>Substance C: 65 mg <br>Substance D: 90 ml <br>Water to 400 ml <br>How much of substance A is required to make 4000 ml of the solution?",
+    "Answer": 300,
+    "Units": "mg"
+  },
+  {
+    "Number": 134,
+    "Question": "A formula for a solution is: <br> Substance A: 85 mg <br>Substance B: 20 mg <br>Substance C: 75 mg <br>Substance D: 45 ml <br>Water to 300 ml <br>How much of substance D is required to make 1500 ml of the solution?",
+    "Answer": 225,
+    "Units": "ml"
+  },
+  {
+    "Number": 135,
+    "Question": "A formula for a solution is: <br> Substance A: 25 mg <br>Substance B: 55 mg <br>Substance C: 15 mg <br>Substance D: 150 ml <br>Water to 900 ml <br>How much of substance C is required to make 4500 ml of the solution?",
+    "Answer": 75,
+    "Units": "mg"
+  },
+  {
+    "Number": 136,
+    "Question": "A formula for a solution is: <br> Substance A: 15 mg <br>Substance B: 75 mg <br>Substance C: 10 mg <br>Substance D: 50 ml <br>Water to 400 ml <br>How much of substance B is required to make 2400 ml of the solution?",
+    "Answer": 450,
+    "Units": "mg"
+  },
+  {
+    "Number": 137,
+    "Question": "A formula for a solution is: <br> Substance A: 10 mg <br>Substance B: 65 mg <br>Substance C: 80 mg <br>Substance D: 175 ml <br>Water to 800 ml <br>How much of substance C is required to make 7200 ml of the solution?",
+    "Answer": 720,
+    "Units": "mg"
+  },
+  {
+    "Number": 138,
+    "Question": "A formula for a solution is: <br> Substance A: 40 mg <br>Substance B: 65 mg <br>Substance C: 80 mg <br>Substance D: 35 ml <br>Water to 400 ml <br>How much of substance A is required to make 1600 ml of the solution?",
+    "Answer": 160,
+    "Units": "mg"
+  },
+  {
+    "Number": 139,
+    "Question": "A formula for a solution is: <br> Substance A: 35 mg <br>Substance B: 75 mg <br>Substance C: 55 mg <br>Substance D: 170 ml <br>Water to 900 ml <br>How much of substance C is required to make 2700 ml of the solution?",
+    "Answer": 165,
+    "Units": "mg"
+  },
+  {
+    "Number": 140,
+    "Question": "A formula for a solution is: <br> Substance A: 35 mg <br>Substance B: 60 mg <br>Substance C: 75 mg <br>Substance D: 160 ml <br>Water to 900 ml <br>How much of substance B is required to make 2700 ml of the solution?",
+    "Answer": 180,
+    "Units": "mg"
+  },
+  {
+    "Number": 141,
+    "Question": "A formula for a solution is: <br> Substance A: 45 mg <br>Substance B: 15 mg <br>Substance C: 90 mg <br>Substance D: 10 ml <br>Water to 900 ml <br>How much of substance D is required to make 7200 ml of the solution?",
+    "Answer": 80,
+    "Units": "ml"
+  },
+  {
+    "Number": 142,
+    "Question": "A formula for a solution is: <br> Substance A: 15 mg <br>Substance B: 35 mg <br>Substance C: 55 mg <br>Substance D: 35 ml <br>Water to 500 ml <br>How much of substance C is required to make 5000 ml of the solution?",
+    "Answer": 550,
+    "Units": "mg"
+  },
+  {
+    "Number": 143,
+    "Question": "A formula for a solution is: <br> Substance A: 15 mg <br>Substance B: 65 mg <br>Substance C: 30 mg <br>Substance D: 40 ml <br>Water to 200 ml <br>How much of substance A is required to make 1400 ml of the solution?",
+    "Answer": 105,
+    "Units": "mg"
+  },
+  {
+    "Number": 144,
+    "Question": "A formula for a solution is: <br> Substance A: 40 mg <br>Substance B: 60 mg <br>Substance C: 75 mg <br>Substance D: 60 ml <br>Water to 300 ml <br>How much of substance A is required to make 900 ml of the solution?",
+    "Answer": 120,
+    "Units": "mg"
+  },
+  {
+    "Number": 145,
+    "Question": "A formula for a solution is: <br> Substance A: 55 mg <br>Substance B: 45 mg <br>Substance C: 35 mg <br>Substance D: 110 ml <br>Water to 700 ml <br>How much of substance D is required to make 4200 ml of the solution?",
+    "Answer": 660,
+    "Units": "ml"
+  },
+  {
+    "Number": 146,
+    "Question": "A formula for a solution is: <br> Substance A: 75 mg <br>Substance B: 20 mg <br>Substance C: 60 mg <br>Substance D: 90 ml <br>Water to 400 ml <br>How much of substance B is required to make 2800 ml of the solution?",
+    "Answer": 140,
+    "Units": "mg"
+  },
+  {
+    "Number": 147,
+    "Question": "A formula for a solution is: <br> Substance A: 10 mg <br>Substance B: 80 mg <br>Substance C: 60 mg <br>Substance D: 140 ml <br>Water to 700 ml <br>How much of substance B is required to make 2100 ml of the solution?",
+    "Answer": 240,
+    "Units": "mg"
+  },
+  {
+    "Number": 148,
+    "Question": "A formula for a solution is: <br> Substance A: 65 mg <br>Substance B: 85 mg <br>Substance C: 15 mg <br>Substance D: 70 ml <br>Water to 600 ml <br>How much of substance B is required to make 4800 ml of the solution?",
+    "Answer": 680,
+    "Units": "mg"
+  },
+  {
+    "Number": 149,
+    "Question": "A formula for a solution is: <br> Substance A: 70 mg <br>Substance B: 60 mg <br>Substance C: 100 mg <br>Substance D: 25 ml <br>Water to 200 ml <br>How much of substance A is required to make 1200 ml of the solution?",
+    "Answer": 420,
+    "Units": "mg"
+  },
+  {
+    "Number": 150,
+    "Question": "A formula for a solution is: <br> Substance A: 10 mg <br>Substance B: 70 mg <br>Substance C: 85 mg <br>Substance D: 220 ml <br>Water to 900 ml <br>How much of substance D is required to make 3600 ml of the solution?",
+    "Answer": 880,
+    "Units": "ml"
+  },
+  {
+    "Number": 151,
+    "Question": "A formula for a solution is: <br> Substance A: 60 mg <br>Substance B: 55 mg <br>Substance C: 55 mg <br>Substance D: 115 ml <br>Water to 600 ml <br>How much of substance D is required to make 60 ml of the solution?",
+    "Answer": 11.5,
+    "Units": "ml"
+  },
+  {
+    "Number": 152,
+    "Question": "A formula for a solution is: <br> Substance A: 95 mg <br>Substance B: 40 mg <br>Substance C: 60 mg <br>Substance D: 170 ml <br>Water to 700 ml <br>How much of substance D is required to make 7 ml of the solution?",
+    "Answer": 1.7,
+    "Units": "ml"
+  },
+  {
+    "Number": 153,
+    "Question": "A formula for a solution is: <br> Substance A: 15 mg <br>Substance B: 30 mg <br>Substance C: 25 mg <br>Substance D: 15 ml <br>Water to 700 ml <br>How much of substance A is required to make 140 ml of the solution?",
+    "Answer": 3,
+    "Units": "mg"
+  },
+  {
+    "Number": 154,
+    "Question": "A formula for a solution is: <br> Substance A: 95 mg <br>Substance B: 35 mg <br>Substance C: 10 mg <br>Substance D: 130 ml <br>Water to 800 ml <br>How much of substance C is required to make 40 ml of the solution?",
+    "Answer": 0.5,
+    "Units": "mg"
+  },
+  {
+    "Number": 155,
+    "Question": "A formula for a solution is: <br> Substance A: 25 mg <br>Substance B: 30 mg <br>Substance C: 25 mg <br>Substance D: 170 ml <br>Water to 800 ml <br>How much of substance A is required to make 400 ml of the solution?",
+    "Answer": 12.5,
+    "Units": "mg"
+  },
+  {
+    "Number": 156,
+    "Question": "A formula for a solution is: <br> Substance A: 50 mg <br>Substance B: 35 mg <br>Substance C: 50 mg <br>Substance D: 15 ml <br>Water to 200 ml <br>How much of substance C is required to make 2 ml of the solution?",
+    "Answer": 0.5,
+    "Units": "mg"
+  },
+  {
+    "Number": 157,
+    "Question": "A formula for a solution is: <br> Substance A: 90 mg <br>Substance B: 15 mg <br>Substance C: 70 mg <br>Substance D: 20 ml <br>Water to 100 ml <br>How much of substance C is required to make 2 ml of the solution?",
+    "Answer": 1.4,
+    "Units": "mg"
+  },
+  {
+    "Number": 158,
+    "Question": "A formula for a solution is: <br> Substance A: 25 mg <br>Substance B: 35 mg <br>Substance C: 90 mg <br>Substance D: 70 ml <br>Water to 300 ml <br>How much of substance D is required to make 150 ml of the solution?",
+    "Answer": 35,
+    "Units": "ml"
+  },
+  {
+    "Number": 159,
+    "Question": "A formula for a solution is: <br> Substance A: 55 mg <br>Substance B: 35 mg <br>Substance C: 100 mg <br>Substance D: 65 ml <br>Water to 500 ml <br>How much of substance C is required to make 25 ml of the solution?",
+    "Answer": 5,
+    "Units": "mg"
+  },
+  {
+    "Number": 160,
+    "Question": "A formula for a solution is: <br> Substance A: 75 mg <br>Substance B: 25 mg <br>Substance C: 20 mg <br>Substance D: 110 ml <br>Water to 800 ml <br>How much of substance D is required to make 40 ml of the solution?",
+    "Answer": 5.5,
+    "Units": "ml"
+  },
+  {
+    "Number": 161,
+    "Question": "A formula for a solution is: <br> Substance A: 35 mg <br>Substance B: 45 mg <br>Substance C: 30 mg <br>Substance D: 20 ml <br>Water to 100 ml <br>How much of substance A is required to make 20 ml of the solution?",
+    "Answer": 7,
+    "Units": "mg"
+  },
+  {
+    "Number": 162,
+    "Question": "A formula for a solution is: <br> Substance A: 25 mg <br>Substance B: 75 mg <br>Substance C: 60 mg <br>Substance D: 155 ml <br>Water to 700 ml <br>How much of substance B is required to make 14 ml of the solution?",
+    "Answer": 1.5,
+    "Units": "mg"
+  },
+  {
+    "Number": 163,
+    "Question": "A formula for a solution is: <br> Substance A: 75 mg <br>Substance B: 80 mg <br>Substance C: 15 mg <br>Substance D: 95 ml <br>Water to 800 ml <br>How much of substance D is required to make 8 ml of the solution?",
+    "Answer": 0.95,
+    "Units": "ml"
+  },
+  {
+    "Number": 164,
+    "Question": "A formula for a solution is: <br> Substance A: 60 mg <br>Substance B: 80 mg <br>Substance C: 70 mg <br>Substance D: 50 ml <br>Water to 200 ml <br>How much of substance C is required to make 10 ml of the solution?",
+    "Answer": 3.5,
+    "Units": "mg"
+  },
+  {
+    "Number": 165,
+    "Question": "A formula for a solution is: <br> Substance A: 55 mg <br>Substance B: 95 mg <br>Substance C: 95 mg <br>Substance D: 20 ml <br>Water to 200 ml <br>How much of substance C is required to make 2 ml of the solution?",
+    "Answer": 0.95,
+    "Units": "mg"
+  },
+  {
+    "Number": 166,
+    "Question": "A formula for a solution is: <br> Substance A: 75 mg <br>Substance B: 60 mg <br>Substance C: 50 mg <br>Substance D: 70 ml <br>Water to 400 ml <br>How much of substance B is required to make 8 ml of the solution?",
+    "Answer": 1.2,
+    "Units": "mg"
+  },
+  {
+    "Number": 167,
+    "Question": "A formula for a solution is: <br> Substance A: 90 mg <br>Substance B: 60 mg <br>Substance C: 30 mg <br>Substance D: 40 ml <br>Water to 200 ml <br>How much of substance C is required to make 8 ml of the solution?",
+    "Answer": 1.2,
+    "Units": "mg"
+  },
+  {
+    "Number": 168,
+    "Question": "A formula for a solution is: <br> Substance A: 35 mg <br>Substance B: 60 mg <br>Substance C: 90 mg <br>Substance D: 45 ml <br>Water to 700 ml <br>How much of substance A is required to make 70 ml of the solution?",
+    "Answer": 3.5,
+    "Units": "mg"
+  },
+  {
+    "Number": 169,
+    "Question": "A formula for a solution is: <br> Substance A: 95 mg <br>Substance B: 95 mg <br>Substance C: 50 mg <br>Substance D: 195 ml <br>Water to 800 ml <br>How much of substance A is required to make 40 ml of the solution?",
+    "Answer": 4.75,
+    "Units": "mg"
+  },
+  {
+    "Number": 170,
+    "Question": "A formula for a solution is: <br> Substance A: 75 mg <br>Substance B: 75 mg <br>Substance C: 35 mg <br>Substance D: 145 ml <br>Water to 800 ml <br>How much of substance D is required to make 160 ml of the solution?",
+    "Answer": 29,
+    "Units": "ml"
+  },
+  {
+    "Number": 171,
+    "Question": "A formula for a solution is: <br> Substance A: 35 mg <br>Substance B: 55 mg <br>Substance C: 55 mg <br>Substance D: 15 ml <br>Water to 700 ml <br>How much of substance B is required to make 14 ml of the solution?",
+    "Answer": 1.1,
+    "Units": "mg"
+  },
+  {
+    "Number": 172,
+    "Question": "A formula for a solution is: <br> Substance A: 50 mg <br>Substance B: 25 mg <br>Substance C: 70 mg <br>Substance D: 35 ml <br>Water to 200 ml <br>How much of substance A is required to make 8 ml of the solution?",
+    "Answer": 2,
+    "Units": "mg"
+  },
+  {
+    "Number": 173,
+    "Question": "A formula for a solution is: <br> Substance A: 60 mg <br>Substance B: 30 mg <br>Substance C: 60 mg <br>Substance D: 125 ml <br>Water to 800 ml <br>How much of substance B is required to make 16 ml of the solution?",
+    "Answer": 0.6,
+    "Units": "mg"
+  },
+  {
+    "Number": 174,
+    "Question": "A formula for a solution is: <br> Substance A: 20 mg <br>Substance B: 50 mg <br>Substance C: 45 mg <br>Substance D: 55 ml <br>Water to 700 ml <br>How much of substance B is required to make 140 ml of the solution?",
+    "Answer": 10,
+    "Units": "mg"
+  },
+  {
+    "Number": 175,
+    "Question": "A formula for a solution is: <br> Substance A: 80 mg <br>Substance B: 50 mg <br>Substance C: 25 mg <br>Substance D: 25 ml <br>Water to 100 ml <br>How much of substance A is required to make 20 ml of the solution?",
+    "Answer": 16,
+    "Units": "mg"
+  },
+  {
+    "Number": 176,
+    "Question": "A formula for a solution is: <br> Substance A: 75 mg <br>Substance B: 85 mg <br>Substance C: 35 mg <br>Substance D: 200 ml <br>Water to 800 ml <br>How much of substance B is required to make 16 ml of the solution?",
+    "Answer": 1.7,
+    "Units": "mg"
+  },
+  {
+    "Number": 177,
+    "Question": "A formula for a solution is: <br> Substance A: 35 mg <br>Substance B: 65 mg <br>Substance C: 100 mg <br>Substance D: 90 ml <br>Water to 500 ml <br>How much of substance D is required to make 5 ml of the solution?",
+    "Answer": 0.9,
+    "Units": "ml"
+  },
+  {
+    "Number": 178,
+    "Question": "A formula for a solution is: <br> Substance A: 95 mg <br>Substance B: 70 mg <br>Substance C: 60 mg <br>Substance D: 35 ml <br>Water to 400 ml <br>How much of substance C is required to make 80 ml of the solution?",
+    "Answer": 12,
+    "Units": "mg"
+  },
+  {
+    "Number": 179,
+    "Question": "A formula for a solution is: <br> Substance A: 55 mg <br>Substance B: 15 mg <br>Substance C: 75 mg <br>Substance D: 10 ml <br>Water to 600 ml <br>How much of substance C is required to make 24 ml of the solution?",
+    "Answer": 3,
+    "Units": "mg"
+  },
+  {
+    "Number": 180,
+    "Question": "A formula for a solution is: <br> Substance A: 100 mg <br>Substance B: 65 mg <br>Substance C: 100 mg <br>Substance D: 185 ml <br>Water to 800 ml <br>How much of substance C is required to make 40 ml of the solution?",
+    "Answer": 5,
+    "Units": "mg"
+  },
+  {
+    "Number": 181,
+    "Question": "A formula for a solution is: <br> Substance A: 95 mg <br>Substance B: 100 mg <br>Substance C: 25 mg <br>Substance D: 25 ml <br>Water to 200 ml <br>How much of substance A is required to make 2 ml of the solution?",
+    "Answer": 0.95,
+    "Units": "mg"
+  },
+  {
+    "Number": 182,
+    "Question": "A formula for a solution is: <br> Substance A: 95 mg <br>Substance B: 90 mg <br>Substance C: 30 mg <br>Substance D: 45 ml <br>Water to 400 ml <br>How much of substance A is required to make 16 ml of the solution?",
+    "Answer": 3.8,
+    "Units": "mg"
+  },
+  {
+    "Number": 183,
+    "Question": "A formula for a solution is: <br> Substance A: 55 mg <br>Substance B: 45 mg <br>Substance C: 75 mg <br>Substance D: 65 ml <br>Water to 400 ml <br>How much of substance C is required to make 20 ml of the solution?",
+    "Answer": 3.75,
+    "Units": "mg"
+  },
+  {
+    "Number": 184,
+    "Question": "A formula for a solution is: <br> Substance A: 65 mg <br>Substance B: 70 mg <br>Substance C: 65 mg <br>Substance D: 15 ml <br>Water to 100 ml <br>How much of substance C is required to make 4 ml of the solution?",
+    "Answer": 2.6,
+    "Units": "mg"
+  },
+  {
+    "Number": 185,
+    "Question": "A formula for a solution is: <br> Substance A: 45 mg <br>Substance B: 30 mg <br>Substance C: 95 mg <br>Substance D: 55 ml <br>Water to 400 ml <br>How much of substance A is required to make 20 ml of the solution?",
+    "Answer": 2.25,
+    "Units": "mg"
+  },
+  {
+    "Number": 186,
+    "Question": "A formula for a solution is: <br> Substance A: 80 mg <br>Substance B: 20 mg <br>Substance C: 20 mg <br>Substance D: 105 ml <br>Water to 700 ml <br>How much of substance D is required to make 28 ml of the solution?",
+    "Answer": 4.2,
+    "Units": "ml"
+  },
+  {
+    "Number": 187,
+    "Question": "A formula for a solution is: <br> Substance A: 30 mg <br>Substance B: 10 mg <br>Substance C: 25 mg <br>Substance D: 105 ml <br>Water to 800 ml <br>How much of substance A is required to make 80 ml of the solution?",
+    "Answer": 3,
+    "Units": "mg"
+  },
+  {
+    "Number": 188,
+    "Question": "A formula for a solution is: <br> Substance A: 30 mg <br>Substance B: 75 mg <br>Substance C: 65 mg <br>Substance D: 35 ml <br>Water to 400 ml <br>How much of substance B is required to make 200 ml of the solution?",
+    "Answer": 37.5,
+    "Units": "mg"
+  },
+  {
+    "Number": 189,
+    "Question": "A formula for a solution is: <br> Substance A: 75 mg <br>Substance B: 15 mg <br>Substance C: 80 mg <br>Substance D: 75 ml <br>Water to 400 ml <br>How much of substance D is required to make 4 ml of the solution?",
+    "Answer": 0.75,
+    "Units": "ml"
+  },
+  {
+    "Number": 190,
+    "Question": "A formula for a solution is: <br> Substance A: 70 mg <br>Substance B: 50 mg <br>Substance C: 35 mg <br>Substance D: 30 ml <br>Water to 500 ml <br>How much of substance A is required to make 100 ml of the solution?",
+    "Answer": 14,
+    "Units": "mg"
+  },
+  {
+    "Number": 191,
+    "Question": "A formula for a solution is: <br> Substance A: 10 mg <br>Substance B: 85 mg <br>Substance C: 80 mg <br>Substance D: 60 ml <br>Water to 400 ml <br>How much of substance A is required to make 16 ml of the solution?",
+    "Answer": 0.4,
+    "Units": "mg"
+  },
+  {
+    "Number": 192,
+    "Question": "A formula for a solution is: <br> Substance A: 40 mg <br>Substance B: 80 mg <br>Substance C: 15 mg <br>Substance D: 15 ml <br>Water to 200 ml <br>How much of substance C is required to make 20 ml of the solution?",
+    "Answer": 1.5,
+    "Units": "mg"
+  },
+  {
+    "Number": 193,
+    "Question": "A formula for a solution is: <br> Substance A: 30 mg <br>Substance B: 65 mg <br>Substance C: 95 mg <br>Substance D: 30 ml <br>Water to 300 ml <br>How much of substance B is required to make 12 ml of the solution?",
+    "Answer": 2.6,
+    "Units": "mg"
+  },
+  {
+    "Number": 194,
+    "Question": "A formula for a solution is: <br> Substance A: 100 mg <br>Substance B: 85 mg <br>Substance C: 40 mg <br>Substance D: 55 ml <br>Water to 400 ml <br>How much of substance D is required to make 20 ml of the solution?",
+    "Answer": 2.75,
+    "Units": "ml"
+  },
+  {
+    "Number": 195,
+    "Question": "A formula for a solution is: <br> Substance A: 15 mg <br>Substance B: 90 mg <br>Substance C: 55 mg <br>Substance D: 35 ml <br>Water to 700 ml <br>How much of substance A is required to make 35 ml of the solution?",
+    "Answer": 0.75,
+    "Units": "mg"
+  },
+  {
+    "Number": 196,
+    "Question": "A formula for a solution is: <br> Substance A: 20 mg <br>Substance B: 40 mg <br>Substance C: 15 mg <br>Substance D: 100 ml <br>Water to 900 ml <br>How much of substance B is required to make 45 ml of the solution?",
+    "Answer": 2,
+    "Units": "mg"
+  },
+  {
+    "Number": 197,
+    "Question": "A formula for a solution is: <br> Substance A: 50 mg <br>Substance B: 35 mg <br>Substance C: 80 mg <br>Substance D: 105 ml <br>Water to 900 ml <br>How much of substance C is required to make 450 ml of the solution?",
+    "Answer": 40,
+    "Units": "mg"
+  },
+  {
+    "Number": 198,
+    "Question": "A formula for a solution is: <br> Substance A: 80 mg <br>Substance B: 10 mg <br>Substance C: 80 mg <br>Substance D: 100 ml <br>Water to 800 ml <br>How much of substance B is required to make 32 ml of the solution?",
+    "Answer": 0.4,
+    "Units": "mg"
+  },
+  {
+    "Number": 199,
+    "Question": "A formula for a solution is: <br> Substance A: 40 mg <br>Substance B: 40 mg <br>Substance C: 50 mg <br>Substance D: 90 ml <br>Water to 600 ml <br>How much of substance D is required to make 60 ml of the solution?",
+    "Answer": 9,
+    "Units": "ml"
+  },
+  {
+    "Number": 200,
+    "Question": "A formula for a solution is: <br> Substance A: 30 mg <br>Substance B: 65 mg <br>Substance C: 25 mg <br>Substance D: 25 ml <br>Water to 200 ml <br>How much of substance B is required to make 100 ml of the solution?",
+    "Answer": 32.5,
+    "Units": "mg"
+  }
+]
