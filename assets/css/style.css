@@ -168,14 +168,16 @@ mjx-container, mjx-math {
 
 .solution-details summary {
     font-weight: bold;
-    color: #28a745; /* Green color for summary text */
+    /*color: #28a745; /* Green color for summary text */
+    color: #000000;
     cursor: pointer;
     padding: 5px 0;
     outline: none; /* Remove outline on focus */
 }
 
 .solution-details summary:hover {
-    color: #218838; /* Darker green on hover */
+    /*color: #218838; /* Darker green on hover */
+    color: #333333;
 }
 
 .solution-content {
