@@ -100,7 +100,7 @@ title: "Dosage Calculations Practice"
             <summary>Solution</summary>
             <div class="solution-content">
                 <p>Required dose = $30~\text{mg}$</p>
-                <p>Available concentration = $30~\text{mg/5~ml}$</p>
+                <p>Available concentration = $30~\text{mg/}5~\text{ml}$</p>
                 <p>Volume required = $\frac{30~\text{mg}}{30~\text{mg}} \times 5~\text{ml} = \textbf{5 ml}$</p>
             </div>
         </details>
@@ -110,7 +110,7 @@ title: "Dosage Calculations Practice"
             <summary>Solution</summary>
             <div class="solution-content">
                 <p>Required dose = $75~\text{mg}$</p>
-                <p>Available concentration = $15~\text{mg/5~ml}$</p>
+                <p>Available concentration = $15~\text{mg/}5~\text{ml}$</p>
                 <p>Volume required = $\frac{75~\text{mg}}{15~\text{mg}} \times 5~\text{ml} = \textbf{25 ml}$</p>
             </div>
         </details>
@@ -120,7 +120,7 @@ title: "Dosage Calculations Practice"
             <summary>Solution</summary>
             <div class="solution-content">
                 <p>Required dose = $180~\text{mg}$</p>
-                <p>Available concentration = $30~\text{mg/10~ml}$</p>
+                <p>Available concentration = $30~\text{mg/}10~\text{ml}$</p>
                 <p>Volume required = $\frac{180~\text{mg}}{30~\text{mg}} \times 10~\text{ml} = \textbf{60 ml}$</p>
             </div>
         </details>
@@ -130,7 +130,7 @@ title: "Dosage Calculations Practice"
             <summary>Solution</summary>
             <div class="solution-content">
                 <p>Required dose = $100~\text{mg}$</p>
-                <p>Available concentration = $40~\text{mg/10~ml}$</p>
+                <p>Available concentration = $40~\text{mg/}10~\text{ml}$</p>
                 <p>Volume required = $\frac{100~\text{mg}}{40~\text{mg}} \times 10~\text{ml} = \textbf{25 ml}$</p>
             </div>
         </details>
@@ -152,7 +152,7 @@ title: "Dosage Calculations Practice"
             <div class="solution-content">
                 <p>Convert prescription from grams to milligrams: $1.2~\text{g} = 1.2 \times 1000~\text{mg} = 1200~\text{mg}$</p>
                 <p>Required dose = $1200~\text{mg}$</p>
-                <p>Available concentration = $30~\text{mg/10~ml}$</p>
+                <p>Available concentration = $30~\text{mg/}10~\text{ml}$</p>
                 <p>Volume required = $\frac{1200~\text{mg}}{30~\text{mg}} \times 10~\text{ml} = \textbf{400 ml}$</p>
             </div>
         </details>
@@ -176,7 +176,7 @@ title: "Dosage Calculations Practice"
                 <p>Required dose = $7000~\text{mg}$</p>
                 <p>Available concentration = $20~\%\text{w/v}$, which means $20~\text{g}$ in $100~\text{ml}$.</p>
                 <p>Convert grams to milligrams: $20~\text{g} = 20 \times 1000~\text{mg} = 20000~\text{mg}$.</p>
-                <p>So, available concentration is $20000~\text{mg/100~ml}$.</p>
+                <p>So, available concentration is $20000~\text{mg/}100~\text{ml}$.</p>
                 <p>Volume required = $\frac{7000~\text{mg}}{20000~\text{mg}} \times 100~\text{ml} = \textbf{35 ml}$</p>
             </div>
         </details>
