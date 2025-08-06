@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pharmacy 4010Y</title>
     <link rel="icon" href="/pha-4010y/favicon.ico" type="image/x-icon">
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        html, body { /* Ensure no default margins/paddings on html and body */
+        html, body {
             margin: 0;
             padding: 0;
         }
         body {
-            font-family: sans-serif;
+            font-family: 'Inter', sans-serif; /* Applied Inter font */
             line-height: 1.6;
-            padding-top: 60px; /* Space for the fixed header */
-            background-color: #f4f4f4; /* Light background for the page */
+            padding-top: 60px;
+            background-color: #f4f4f4;
             color: #333;
         }
         .navbar {
@@ -22,102 +24,66 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: #45ac8b; /* Changed background color for the navbar */
+            background-color: #45ac8b;
             overflow: hidden;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            z-index: 1000; /* Ensure navbar stays on top */
+            z-index: 1000;
             display: flex;
-            justify-content: flex-start; /* Align title to the start */
+            justify-content: flex-start;
             align-items: center;
-            padding: 20.5px 20px; /* Adjusted vertical padding to match other pages' navbar height */
-            box-sizing: border-box; /* Include padding in width */
+            padding: 20.5px 20px;
+            box-sizing: border-box;
         }
         .navbar-title {
-            color: black; /* Changed text color to black */
+            color: black;
             font-size: 24px;
             font-weight: bold;
-            text-decoration: none; /* Remove underline from title link */
-            flex-grow: 1; /* Make the title take up all available space */
-            text-align: center; /* Center the text within the expanded title area */
-            padding: 0; /* Reset specific padding on title to let flexbox manage */
+            text-decoration: none;
+            flex-grow: 1;
+            text-align: center;
+            padding: 0;
         }
         .content {
-            margin: 20px auto; /* Center content with auto margins */
-            max-width: 800px; /* Max width for readability */
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 40px; /* Add space before the new section */
-        }
-        h1, h2 {
-            color: #333;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        /* New style for the specific sub-heading */
-        .sub-heading {
-            font-size: 1.4em; /* Slightly smaller than default h2 */
-            color: #555; /* Slightly lighter color */
-            margin-top: -10px; /* Pull it closer to the h1 */
-            margin-bottom: 30px; /* Adjust spacing below */
-            font-weight: normal; /* Less bold than default h2 */
-        }
-        p {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 1.1em;
-        }
-        /* The original .button-container and .button styles are no longer needed for pha links,
-            but kept here in case they are used elsewhere or for reference.
-            The pha links will now use topic-link-container and topic-link styles. */
-        .button-container {
-            display: flex;
-            flex-direction: column; /* Stack buttons vertically */
-            gap: 15px; /* Space between buttons */
-            align-items: center; /* Center buttons horizontally */
-            margin-bottom: 40px; /* Space before new section */
-        }
-        .button {
-            display: block; /* Make buttons block-level for full width */
-            width: 80%; /* Adjust width as needed, or use max-width */
-            max-width: 300px; /* Limit button width */
-            padding: 15px 25px;
-            background-color: #007BFF; /* Blue button color */
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            font-size: 1.2em;
-            font-weight: bold;
-            border-radius: 10px; /* More rounded corners */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Deeper shadow */
-            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-        .button:hover {
-            background-color: #0056b3; /* Darker blue on hover */
-            transform: translateY(-2px); /* Slight lift effect */
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3); /* Enhanced shadow on hover */
-        }
-        .button:active {
-            transform: translateY(0); /* Press down effect */
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .topic-section {
             margin: 20px auto;
             max-width: 800px;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .sub-heading {
+            font-size: 1.4em;
+            color: #555;
+            margin-top: -10px;
+            margin-bottom: 30px;
+            font-weight: normal;
+        }
+        p {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        /* Styles for individual topic sections (general styling) */
+        .topic-section {
+            margin: 20px auto; /* Keep margin for overall sections */
+            max-width: 800px; /* Keep max-width for overall sections */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             margin-bottom: 40px; /* Space between sections */
         }
-        .topic-link-container {
+        .topic-link-container { /* Used for Workshops, Exam Prep, MCQs, Random Gen blocks */
             display: flex;
             flex-direction: column;
-            gap: 10px; /* Space between topic links */
+            gap: 10px;
         }
         .topic-link {
             display: flex;
@@ -136,37 +102,103 @@
         }
         .topic-icon {
             margin-right: 10px;
-            font-size: 1.5em; /* Adjust icon size */
-            color: #4CAF50; /* Green color for icons */
+            font-size: 1.5em;
+            color: #4CAF50; /* Green for topic icons */
         }
         .topic-description {
             font-size: 0.9em;
             color: #666;
             margin-top: 5px;
-            margin-left: 35px; /* Align with text after icon */
-        }
-        .iframe-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 75%; /* 4:3 Aspect Ratio (change this to 56.25% for 16:9) */
-            height: 0;
-            overflow: hidden;
-            margin-top: 20px; /* Space above iframe */
-            border-radius: 8px; /* Match container border-radius */
-        }
-        .iframe-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none; /* Remove iframe border */
-            border-radius: 8px; /* Match container border-radius */
+            margin-left: 35px;
         }
 
+        /* NEW: Styles for the paired topic/quiz links in "Further Topic Based Practice" */
+        .topic-group { /* Container for each topic's header and buttons */
+            background-color: #f7f7f7; /* Light background for the group */
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow for the group */
+            margin-bottom: 15px; /* Space between topic groups */
+            transition: transform 0.2s ease;
+        }
+        .topic-group:hover {
+            transform: translateY(-3px); /* Lift effect on hover for the whole group */
+        }
+        .topic-group .topic-header { /* This is the new style for the non-clickable topic title */
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px; /* Space between header and buttons */
+            /* Ensure this looks like a normal text heading, not a link */
+            color: #333; /* Match general text color */
+            font-size: 1.1em; /* Match topic-link font size */
+            font-weight: bold; /* Keep bold as per other topic headers */
+            padding: 10px 0; /* Add some padding for visual spacing */
+        }
+        .topic-group .topic-header .topic-icon { /* Icon for the main topic title in Further Practice */
+            font-size: 1.5em; /* Match standard topic-link icon size */
+            margin-right: 10px; /* Match standard topic-link icon margin */
+            color: #4CAF50; /* Set to green as requested */
+        }
+        .topic-group .topic-header h3 { /* Ensure h3 within topic-header is styled correctly */
+            margin: 0; /* Remove default margin from h3 */
+            font-size: 1em; /* Adjust font size relative to parent .topic-header */
+            color: #333; /* Ensure text color is standard */
+        }
+        .topic-group .topic-header .topic-description { /* Description for the main topic title */
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+            margin-left: 35px; /* Keeping original margin-left for consistency with other topic-link descriptions */
+            font-weight: normal; /* Ensure description is not bold */
+        }
+
+
+        .topic-group .topic-buttons {
+            display: flex;
+            flex-direction: column; /* Stack buttons on small screens */
+            gap: 10px; /* Space between buttons */
+        }
+        .action-button { /* New style for the "Questions & Solutions" and "Random Quiz" buttons */
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center text and icon */
+            padding: 12px 15px;
+            background-color: #45ac8b; /* Navbar background color */
+            color: black; /* Navbar text color */
+            text-align: center;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            width: 100%; /* Take full width of parent on small screens */
+            box-sizing: border-box; /* Include padding in width */
+        }
+        .action-button:hover {
+            background-color: #3a8f74; /* A slightly darker shade for hover effect */
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .action-button .fas { /* Icon inside the action button */
+            margin-right: 8px;
+            font-size: 1.1em;
+            color: black; /* Ensure icon color matches text color */
+        }
 
         /* Responsive adjustments */
-        @media (max-width: 600px) {
+        @media (min-width: 768px) { /* Adjust breakpoint for side-by-side buttons */
+            .topic-group .topic-buttons {
+                flex-direction: row; /* Buttons side-by-side on larger screens */
+                justify-content: space-between; /* Distribute space between buttons */
+            }
+            .action-button {
+                width: auto; /* Allow buttons to size based on content */
+                flex-grow: 1; /* Allow them to grow to fill space */
+            }
+        }
+
+        @media (max-width: 600px) { /* Original mobile breakpoint */
             .navbar {
                 flex-direction: column;
                 padding: 10px;
@@ -178,12 +210,6 @@
                 margin: 10px;
                 padding: 15px;
             }
-            /* .button styles are now largely superseded by .topic-link for pha links */
-            .button {
-                width: 90%;
-                padding: 12px 20px;
-                font-size: 1em;
-            }
             .topic-link {
                 flex-direction: column;
                 align-items: flex-start;
@@ -193,9 +219,6 @@
             }
             .topic-description {
                 margin-left: 0;
-            }
-            .iframe-container {
-                padding-bottom: 100%; /* Adjust aspect ratio for smaller screens if needed */
             }
         }
     </style>
@@ -212,10 +235,9 @@
     <div class="content">
         <h1>Welcome to Pharmacy Calculations Practice</h1>
         <h2 class="sub-heading">LLE - Mathematics & Statistics</h2>
-        <!-- The introductory paragraph for the old buttons is removed as per new structure -->
     </div>
 
-    <!-- New: Learning Enhancement Workshops Block -->
+    <!-- Learning Enhancement Workshops Block -->
     <div class="topic-section">
         <h2>Learning Enhancement Workshops</h2>
         <p>Use the following links to go to the LET workshops.</p>
@@ -252,142 +274,176 @@
         </div>
     </div>
 
-    <!-- Existing: Further Topic Based Practice Block (Unchanged) -->
+    <!-- Further Topic Based Practice Block - NOW WITH PAIRED BUTTONS -->
     <div class="topic-section">
         <h2>Further Topic Based Practice</h2>
         <p>Below you will find links to a question set on individual topics. You will also find links to randomly generated quiz material on the topics.</p>
 
-        <div class="topic-link-container">
-            <a href="unit_conv/qs.html" class="topic-link">
+        <!-- Each topic group now has its own header and button container -->
+        <div class="topic-group">
+            <div class="topic-header">
                 <i class="fas fa-ruler-combined topic-icon"></i>
                 <div>
-                    <strong>Unit Conversions</strong>
+                    <h3>Unit Conversions</h3>
                     <div class="topic-description">Converting between different units of mass, volume, and length.</div>
                 </div>
-            </a>
-            <a href="randomq.html?quiz=rq_conversion_units.json" class="topic-link">
-                <i class="fas fa-dice topic-icon"></i>
-                <div>
-                    <strong>Unit Conversions Random Generated Quiz</strong>
-                   <!-- <div class="topic-description">Converting between different units of mass, volume, and length.</div> -->
-                </div>
-            </a>
-            <a href="concentrations/qs.html" class="topic-link">
+            </div>
+            <div class="topic-buttons">
+                <a href="unit_conv/qs.html" class="action-button">
+                    <i class="fas fa-file-alt"></i> Questions & Solutions
+                </a>
+                <a href="randomq.html?quiz=rq_conversion_units.json" class="action-button">
+                    <i class="fas fa-dice"></i> Random Quiz
+                </a>
+            </div>
+        </div>
+
+        <div class="topic-group">
+            <div class="topic-header">
                 <i class="fas fa-flask topic-icon"></i>
                 <div>
-                    <strong>Concentration Calculations</strong>
+                    <h3>Concentration Calculations</h3>
                     <div class="topic-description">Expressing concentrations in various forms (mg/mL, %w/v, 1 in X) and converting between them.</div>
                 </div>
-            </a>
-            <a href="randomq.html?quiz=rq_conversion_concentrations.json" class="topic-link">
-                <i class="fas fa-dice topic-icon"></i>
-                <div>
-                    <strong>Concentration Calculations Random Generated Quiz</strong>
-                <!--    <div class="topic-description">Expressing concentrations in various forms (mg/mL, %w/v, 1 in X) and converting between them.</div> -->
-                </div>
-            </a>
-            <a href="dosage/qs.html" class="topic-link">
+            </div>
+            <div class="topic-buttons">
+                <a href="concentrations/qs.html" class="action-button">
+                    <i class="fas fa-file-alt"></i> Questions & Solutions
+                </a>
+                <a href="randomq.html?quiz=rq_conversion_concentrations.json" class="action-button">
+                    <i class="fas fa-dice"></i> Random Quiz
+                </a>
+            </div>
+        </div>
+
+        <div class="topic-group">
+            <div class="topic-header">
                 <i class="fas fa-pills topic-icon"></i>
                 <div>
-                    <strong>Dosage and Volume Calculations</strong>
+                    <h3>Dosage and Volume Calculations</h3>
                     <div class="topic-description">Determining the amount of drug or volume of solution required based on given concentrations and desired doses.</div>
                 </div>
-            </a>
-            <a href="randomq.html?quiz=rq_dosage.json" class="topic-link">
-                <i class="fas fa-dice topic-icon"></i>
-                <div>
-                    <strong>Dosage and Volume Calculations Random Generated Quiz</strong>
-              <!--      <div class="topic-description">Determining the amount of drug or volume of solution required based on given concentrations and desired doses.</div> -->
-                </div>
-            </a>
-            <a href="mole/qs.html" class="topic-link">
+            </div>
+            <div class="topic-buttons">
+                <a href="dosage/qs.html" class="action-button">
+                    <i class="fas fa-file-alt"></i> Questions & Solutions
+                </a>
+                <a href="randomq.html?quiz=rq_dosage.json" class="action-button">
+                    <i class="fas fa-dice"></i> Random Quiz
+                </a>
+            </div>
+        </div>
+
+        <div class="topic-group">
+            <div class="topic-header">
                 <i class="fas fa-atom topic-icon"></i>
                 <div>
-                    <strong>Molarity and Mole Calculations</strong>
+                    <h3>Molarity and Mole Calculations</h3>
                     <div class="topic-description">Calculating quantities of substances based on molecular weights and molarity, often involving millimoles.</div>
                 </div>
-            </a>
-            <a href="randomq.html?quiz=rq_mole.json" class="topic-link">
-                <i class="fas fa-dice topic-icon"></i>
-                <div>
-                    <strong>Molarity and Mole Calculations Random Generated Quiz</strong>
-              <!--      <div class="topic-description">Calculating quantities of substances based on molecular weights and molarity, often involving millimoles.</div> -->
-                </div>
-            </a>
-            <a href="dilutions/qs.html" class="topic-link">
+            </div>
+            <div class="topic-buttons">
+                <a href="mole/qs.html" class="action-button">
+                    <i class="fas fa-file-alt"></i> Questions & Solutions
+                </a>
+                <a href="randomq.html?quiz=rq_mole.json" class="action-button">
+                    <i class="fas fa-dice"></i> Random Quiz
+                </a>
+            </div>
+        </div>
+
+        <div class="topic-group">
+            <div class="topic-header">
                 <i class="fas fa-tint topic-icon"></i>
                 <div>
-                    <strong>Dilution Principles</strong>
+                    <h3>Dilution Principles</h3>
                     <div class="topic-description">Applying the C1V1 = C2V2 formula to calculate required volumes for dilutions.</div>
                 </div>
-            </a>
-            <a href="randomq.html?quiz=rq_dilutions.json" class="topic-link">
-                <i class="fas fa-dice topic-icon"></i>
-                <div>
-                    <strong>Dilution Principles Random Generated Quiz</strong>
-              <!--      <div class="topic-description">Applying the C1V1 = C2V2 formula to calculate required volumes for dilutions.</div> -->
-                </div>
-            </a>
-            <a href="imperial/qs.html" class="topic-link">
+            </div>
+            <div class="topic-buttons">
+                <a href="dilutions/qs.html" class="action-button">
+                    <i class="fas fa-file-alt"></i> Questions & Solutions
+                </a>
+                <a href="randomq.html?quiz=rq_dilutions.json" class="action-button">
+                    <i class="fas fa-dice"></i> Random Quiz
+                </a>
+            </div>
+        </div>
+
+        <div class="topic-group">
+            <div class="topic-header">
                 <i class="fas fa-user-md topic-icon"></i>
                 <div>
-                    <strong>Patient Specific Conversions</strong>
+                    <h3>Patient Specific Conversions</h3>
                     <div class="topic-description">Converting patient height and weight between imperial and metric units, and temperature conversions.</div>
                 </div>
-            </a>
-            <a href="randomq.html?quiz=rq_imperial_metric.json" class="topic-link">
-                <i class="fas fa-dice topic-icon"></i>
-                <div>
-                    <strong>Patient Specific Conversions Random Generated Quiz</strong>
-                   <!-- <div class="topic-description">Converting patient height and weight between imperial and metric units, and temperature conversions.</div> -->
-                </div>
-            </a>
-            <a href="bsa/qs.html" class="topic-link">
+            </div>
+            <div class="topic-buttons">
+                <a href="imperial/qs.html" class="action-button">
+                    <i class="fas fa-file-alt"></i> Questions & Solutions
+                </a>
+                <a href="randomq.html?quiz=rq_imperial_metric.json" class="action-button">
+                    <i class="fas fa-dice"></i> Random Quiz
+                </a>
+            </div>
+        </div>
+
+        <div class="topic-group">
+            <div class="topic-header">
                 <i class="fas fa-chart-area topic-icon"></i>
                 <div>
-                    <strong>Body Surface Area (BSA) Calculation</strong>
+                    <h3>Body Surface Area (BSA) Calculation</h3>
                     <div class="topic-description">Using a specific formula to determine Body Surface Area from height and weight.</div>
                 </div>
-            </a>
-            <a href="randomq.html?quiz=rq_bsa.json" class="topic-link">
-                <i class="fas fa-dice topic-icon"></i>
-                <div>
-                    <strong>Body Surface Area (BSA) Calculation Random Generated Quiz</strong>
-              <!--      <div class="topic-description">Using a specific formula to determine Body Surface Area from height and weight.</div>  -->
-                </div>
-            </a>
-            <a href="drug/qs.html" class="topic-link">
+            </div>
+            <div class="topic-buttons">
+                <a href="bsa/qs.html" class="action-button">
+                    <i class="fas fa-file-alt"></i> Questions & Solutions
+                </a>
+                <a href="randomq.html?quiz=rq_bsa.json" class="action-button">
+                    <i class="fas fa-dice"></i> Random Quiz
+                </a>
+            </div>
+        </div>
+
+        <div class="topic-group">
+            <div class="topic-header">
                 <i class="fas fa-clock topic-icon"></i>
                 <div>
-                    <strong>Drug Administration Rates</strong>
+                    <h3>Drug Administration Rates</h3>
                     <div class="topic-description">Calculating the total amount of drug administered over time based on a given rate.</div>
                 </div>
-            </a>
-            <a href="randomq.html?quiz=rq_drug_rates.json" class="topic-link">
-                <i class="fas fa-dice topic-icon"></i>
-                <div>
-                    <strong>Drug Administration Rates Random Generated Quiz</strong>
-                    
-                </div>
-            </a>
-            <a href="formula/qs.html" class="topic-link">
+            </div>
+            <div class="topic-buttons">
+                <a href="drug/qs.html" class="action-button">
+                    <i class="fas fa-file-alt"></i> Questions & Solutions
+                </a>
+                <a href="randomq.html?quiz=rq_drug_rates.json" class="action-button">
+                    <i class="fas fa-dice"></i> Random Quiz
+                </a>
+            </div>
+        </div>
+
+        <div class="topic-group">
+            <div class="topic-header">
                 <i class="fas fa-prescription-bottle-alt topic-icon"></i>
                 <div>
-                    <strong>Formula Scaling</strong>
+                    <h3>Formula Scaling</h3>
                     <div class="topic-description">Calculating ingredient quantities for larger batches of multi-component preparations based on a standard formula.</div>
                 </div>
-            </a>
-             <a href="randomq.html?quiz=rq_formula_scaling.json" class="topic-link">
-                <i class="fas fa-dice topic-icon"></i>
-                <div>
-                    <strong>Formula Scaling Random Generated Quiz</strong>
-                
-                </div>
-            </a>
+            </div>
+            <div class="topic-buttons">
+                <a href="formula/qs.html" class="action-button">
+                    <i class="fas fa-file-alt"></i> Questions & Solutions
+                </a>
+                <a href="randomq.html?quiz=rq_formula_scaling.json" class="action-button">
+                    <i class="fas fa-dice"></i> Random Quiz
+                </a>
+            </div>
         </div>
     </div>
 
-    <!-- Existing: Exam Preparation Questions Block (Re-inserted) -->
+    <!-- Exam Preparation Questions Block -->
     <div class="topic-section">
         <h2>Exam Preparation Questions</h2>
         <p>Practice with exam style questions.</p>
@@ -425,7 +481,7 @@
         </div>
     </div>
 
-    <!-- NEW: Multiple Choice Quiz Section -->
+    <!-- Multiple Choice Quiz Section -->
     <div class="topic-section">
         <h2>Multiple Choice Practice Questions</h2>
         <p>Test your knowledge with interactive multiple choice quizzes.</p>
@@ -462,7 +518,7 @@
         </div>
     </div>
 
-    <!-- Existing: Random Question Generator Block -->
+    <!-- Random Question Generator Block -->
     <div class="topic-section">
         <h2>Random Question Generator</h2>
         <p>Generate random new practice questions</p>
@@ -480,12 +536,7 @@
         <p>Icons by <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">Font Awesome</a>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>.</p>
         <p>Mathematical typesetting by <a href="https://www.mathjax.org/" target="_blank" rel="noopener noreferrer">MathJax</a>.</p>
         <p>Styled with <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">Tailwind CSS</a>.</p>
-        <!-- Add any other libraries you use here -->
     </footer>
 
 </body>
 </html>
-
-
-
-
