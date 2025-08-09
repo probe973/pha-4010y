@@ -19,8 +19,8 @@ How much of each substance is required to make {{include.q.NW}} ml of the soluti
       <p>Step 1: How many times less?</p>
       <p>${{include.q.W}} \div {{include.q.NW}} = {{ratio}}$ We need {{ratio}} times less.</p>
       <p>Step 2: Divide each substance by this amount</p>
-      <p>A: ${{include.q.A}} \div {{ratio}} = {{NA}} \text { mg}$</p>
-      <p>B: ${{include.q.B}} \div {{ratio}} = {{NB}} \text { ml}$</p>
+      <p>A: ${{include.q.A}} \div {{ratio}} = {{NA | round: 2 | replace: '.00', '' | replace: '.0', ''}} \text { mg}$</p>
+      <p>B: ${{include.q.B}} \div {{ratio}} = {{NB | round: 2 | replace: '.00', '' | replace: '.0', ''}} \text { ml}$</p>
     </div>
 </details>
 </li>
