@@ -1,10 +1,10 @@
 <!-- _includes/problem_builder.html -->
 <li>
-    <p>{{ include.problem.question }}</p>
+    <div>{{ include.problem.question }}</div>
     <details class="solution-details">
         <summary>Solution</summary>
         <div class="solution-content">
-            {{ include.problem.solution }}
+            {{ include.problem.solution | markdownify }}
         </div>
     </details>
 </li>
