@@ -1,6 +1,6 @@
 {% assign ratio = include.q.W | divided_by: include.q.NW %}
-{% assign NA = include.q.A | divided_by: ratio %}
-{% assign NB = include.q.B | divided_by: ratio %}
+{% assign NA = include.q.A | times: 1.0 |divided_by: ratio %}
+{% assign NB = include.q.B | times: 1.0 |divided_by: ratio %}
 
 <li>
 
