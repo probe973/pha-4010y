@@ -3,19 +3,7 @@
 {% assign have = include.q.conc | times: 1000 %}
 {% assign volume = need | divided_by: have | times: 100 %}
 
-<li>A <strong>{{include.q.mass}} kg</strong> patient requires <strong>{{include.q.rate}} mg/kg/minute</strong> for <strong>{{include.q.time}} minutes</strong>, delivered by a <strong>{{include.q.conc}} %w/v</strong> solution. How much solution will they need in ml?
-<details class="solution-details">
-    <summary>Solution</summary>
-    <div class="solution-content">
-    <p>Step 1: Find rate per minute using patient mass:</p>
-    <p>${{include.q.rate}} \text{mg/kg/min} \times {{include.q.mass}} \text{kg} = {{ratetime}} \text{mg/min}$</p>
-    <p>Step 2: Find total mg of drug</p>  
-    <p>${{ratetime}} \text{mg/min} \times {{include.q.time}} \text{min} = {{need}} \text{mg}$</p>
-    <p>Step 3: Make the concentration in the same units as required drug:</p>
-    <p>${{include.q.conc}} \text{% w/v} = {{include.q.conc}} \text{g/100 ml} = {{have}} \text{mg/100 ml}$</p>
-    <p>Step 4: Calculate the volume in ml:</p>
-    <p>$\frac{{{need}}}{{{have}}} \times 100 \text{ml} = {{volume}} \text{ml}$</p>
-    <p><strong>Solution: {{volume}} ml</strong></p>
-    </div>
-</details>
+<li>
+    <p>This is a test for a 'type_c' question.</p>
+    <p>The final calculated volume is: <strong>{{ volume }}</strong></p>
 </li>
