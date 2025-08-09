@@ -16,7 +16,7 @@ title: Formula Scaling
 <hr>
 
 <ol>
-    {% for question in site.form_scaling %}
+    {% for question in site.data.form_scaling %}
         {% include question_form_scale.html q=question %}
     {% endfor %}
 </ol>
