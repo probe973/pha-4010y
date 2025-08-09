@@ -1,0 +1,16 @@
+{% assign total_lbs_float = include.q.kg | times: 2.0 %}
+{% assign total_lbs = total_lbs_float | round %}
+{% assign stone = total_lbs | divided_by: 14 %}
+{% assign lbs = total_lbs | modulo: 14 %}
+<li>Convert <strong>{{ include.q.kg }} kg</strong> into stone and lbs (assume 1 kg = 2 lb)
+  <details class="solution-details">
+    <summary>Solution</summary>
+    <div class="solution-content">
+      <p>Step 1: Convert kg into lbs.</p>
+      <p>${{ include.q.kg }} \times 2 = {{ total_lbs }}~\text{lbs}$</p>
+      <p>Step 2: Convert total lbs into stone and lbs.</p>
+      <p>${{ total_lbs }} \div 14 = {{ stone }}~\text{remainder}~{{ lbs }}$</p>
+      <p><strong>Solution: {{ stone }} stone {{ lbs }} lbs</strong></p>
+    </div>
+  </details>
+</li>
