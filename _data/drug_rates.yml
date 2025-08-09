@@ -1,43 +1,43 @@
 # _data/drug_rates.yml
 
 # --- Type 1: rate and time ---
-#- type: rate_time
-#  rate: 20
-#  time: 2
-#- type: rate_time
-#  rate: 50
-#  time: 3
-#- type: rate_time
-#  rate: 25
-#  time: 6
-#- type: rate_time
-#  rate: 80
-#  time: 9
-#- type: rate_time
-#  rate: 250
-#  time: 3
+- type: rate_time
+  rate: 20
+  time: 2
+- type: rate_time
+  rate: 50
+  time: 3
+- type: rate_time
+  rate: 25
+  time: 6
+- type: rate_time
+  rate: 80
+  time: 9
+- type: rate_time
+  rate: 250
+  time: 3
 
 # --- Type 2: rate, mass and time ---
-#- type: rate_mass_time
-#  rate: 40
-#  mass: 60
-#  time: 20
-#- type: rate_mass_time
-#  rate: 50
-#  mass: 65
-#  time: 10
-#- type: rate_mass_time
-#  rate: 25
-#  mass: 60
-#  time: 40
-#- type: rate_mass_time
-#  rate: 30
-#  mass: 52
-#  time: 20
-#- type: rate_mass_time
-#  rate: 45
-#  mass: 54
-#  time: 25
+- type: rate_mass_time
+  rate: 40
+  mass: 60
+  time: 20
+- type: rate_mass_time
+  rate: 50
+  mass: 65
+  time: 10
+- type: rate_mass_time
+  rate: 25
+  mass: 60
+  time: 40
+- type: rate_mass_time
+  rate: 30
+  mass: 52
+  time: 20
+- type: rate_mass_time
+  rate: 45
+  mass: 54
+  time: 25
 
 # --- Type 3: rate, mass, time and drug concentration ---
 - type: rate_mass_time_conc
