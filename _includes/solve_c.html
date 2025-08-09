@@ -7,17 +7,15 @@
 <details class="solution-details">
     <summary>Solution</summary>
     <div class="solution-content">
-        <p>Step 1: Find rate per minute using patient mass:</p>
-        <p>${{include.q.rate}} \text{mg/kg/min} \times {{include.q.mass}} \text{kg} = {{ratetime}} \text{mg/min}$</p>
-
-        <p>Step 2: Find total mg of drug</p>  
-        <p>${{ratetime}} \text{mg/min} \times {{include.q.time}} \text{min} = {{need}} \text{mg}$</p>
-
-        <p>Step 3: Make the concentration in the same units as required drug:</p>
-         <p>${{include.q.conc}} \text{&#37; w/v} = {{include.q.conc}} \text{g/100 ml} = {{have}} \text{mg/100 ml}$</p>
-        <p>Step 4: Calculate the volume in ml:</p>
-    <p>$\frac{ {{need}} }{ {{have}} } \times 100 \text{ml} = {{volume}} \text{ml}$</p>
-    <p><strong>Solution: {{volume}} ml</strong></p>
+    <p>Step 1: Find rate per minute using patient mass:</p>
+    <p>${{include.q.rate | remove_last: ".0"}} \text{mg/kg/min} \times {{include.q.mass | remove_last: ".0"}} \text{kg} = {{ratetime | remove_last: ".0"}} \text{mg/min}$</p>
+    <p>Step 2: Find total mg of drug</p>  
+    <p>${{ratetime | remove_last: ".0"}} \text{mg/min} \times {{include.q.time | remove_last: ".0"}} \text{min} = {{need | remove_last: ".0"}} \text{mg}$</p>
+    <p>Step 3: Make the concentration in the same units as required drug:</p>
+    <p>${{include.q.conc | remove_last: ".0"}} \text{&#37; w/v} = {{include.q.conc | remove_last: ".0"}} \text{g/100 ml} = {{have | remove_last: ".0"}} \text{mg/100 ml}$</p>
+    <p>Step 4: Calculate the volume in ml:</p>
+    <p>$\frac{ {{need | remove_last: ".0"}} }{ {{have | remove_last: ".0"}} } \times 100 \text{ml} = {{volume | remove_last: ".0"}} \text{ml}$</p>
+    <p><strong>Solution: {{volume | remove_last: ".0"}} ml</strong></p>
     </div>
 </details>
 </li>
