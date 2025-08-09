@@ -1,4 +1,4 @@
-{% assign ratio = include.q.NW | divide_by: include.q.W %}
+{% assign ratio = include.q.NW | divided_by: include.q.W %}
 {% assign NA = include.q.A | times: ratio %}
 {% assign NB = include.q.B | times: ratio %}
 
