@@ -1,7 +1,8 @@
 {% assign ratetime = include.q.rate | times: include.q.mass %}
 {% assign need = ratetime | times: include.q.time %}
-{% assign have = include.q.conc | times: 1000 %}
-{% assign volume = need | divided_by: have | times: 100 %}
+{% assign have = include.q.conc | times: 1000.0 %}
+{% assign volume = need | times: 1.0 | divided_by: have | times: 100 %}
+
 <li>A <strong>{{include.q.mass}} kg</strong> patient requires <strong>{{include.q.rate}} mg/kg/minute</strong> for <strong>{{include.q.time}} minutes</strong>, delivered by a <strong>{{include.q.conc}} %w/v</strong> solution. How much solution will they need in ml?
 <details class="solution-details">
     <summary>Solution</summary>
