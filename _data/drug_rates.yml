@@ -1,67 +1,18 @@
 # _data/drug_rates.yml
+- { type: 'rate_time', rate: 20, time: 2 }
+- { type: 'rate_time', rate: 50, time: 3 }
+- { type: 'rate_time', rate: 25, time: 6 }
+- { type: 'rate_time', rate: 80, time: 9 }
+- { type: 'rate_time', rate: 250, time: 3 }
 
-# --- Type 1: rate and time ---
-- type: rate_time
-  rate: 20
-  time: 2
-- type: rate_time
-  rate: 50
-  time: 3
-- type: rate_time
-  rate: 25
-  time: 6
-- type: rate_time
-  rate: 80
-  time: 9
-- type: rate_time
-  rate: 250
-  time: 3
+- { type: 'rate_mass_time', rate: 40, mass: 60, time: 20 }
+- { type: 'rate_mass_time', rate: 50, mass: 65, time: 10 }
+- { type: 'rate_mass_time', rate: 25, mass: 60, time: 40 }
+- { type: 'rate_mass_time', rate: 30, mass: 52, time: 20 }
+- { type: 'rate_mass_time', rate: 45, mass: 54, time: 25 }
 
-# --- Type 2: rate, mass and time ---
-- type: rate_mass_time
-  rate: 40
-  mass: 60
-  time: 20
-- type: rate_mass_time
-  rate: 50
-  mass: 65
-  time: 10
-- type: rate_mass_time
-  rate: 25
-  mass: 60
-  time: 40
-- type: rate_mass_time
-  rate: 30
-  mass: 52
-  time: 20
-- type: rate_mass_time
-  rate: 45
-  mass: 54
-  time: 25
-
-# --- Type 3: rate, mass, time and drug concentration ---
-- type: rate_mass_time_conc
-  rate: 20
-  mass: 60
-  conc: 24
-  time: 20
-- type: rate_mass_time_conc
-  rate: 40
-  mass: 50
-  conc: 15
-  time: 15
-- type: rate_mass_time_conc
-  rate: 25
-  mass: 60
-  conc: 10
-  time: 30
-- type: rate_mass_time_conc
-  rate: 60
-  mass: 75
-  conc: 3
-  time: 30
-- type: rate_mass_time_conc
-  rate: 1.5
-  mass: 40
-  conc: 0.8
-  time: 20
+- { type: 'rate_mass_time_conc', rate: 20, mass: 60, conc: 24, time: 20 }
+- { type: 'rate_mass_time_conc', rate: 40, mass: 50, conc: 15, time: 15 }
+- { type: 'rate_mass_time_conc', rate: 25, mass: 60, conc: 10, time: 30 }
+- { type: 'rate_mass_time_conc', rate: 60, mass: 75, conc: 3, time: 30 }
+- { type: 'rate_mass_time_conc', rate: 1.5, mass: 40, conc: 0.8, time: 20 }
