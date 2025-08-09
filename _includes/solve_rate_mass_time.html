@@ -1,5 +1,5 @@
-{% assign ratetime = include.q.rate | times: include.q.mass}
-{% assign volume = ratetime | times: include.q.time}
+{% assign ratetime = include.q.rate | times: include.q.mass %}
+{% assign volume = ratetime | times: include.q.time %}
 <li>If a <strong>{{include.q.mass}} kg </strong> patient requires <strong>{{include.q.rate}} mg/kg/min </strong>for <strong>{{include.q.time}} minutes</strong>, how many mg of the drug will they require?
 <details class="solution-details">
     <summary>Solution</summary>
