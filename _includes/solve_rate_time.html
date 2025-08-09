@@ -1,0 +1,18 @@
+{% assign step1 = include.q.time| times: 60 %}
+{% assign volumemc = step1 | times: include.q.rate %}
+{% assign volumem = volumemc | divided_by: volumemc}
+<li>If a paitent requires <strong>{{ include.q.rate }} mcg/min </strong> for <strong>{{include.q.time}} hours</strong>, what is the total amount of drug they will require in <strong>milligrams</strong>?
+<details class="solution-details">
+    <summary>Solution</summary>
+    <div class="solution-content">
+      <p>Step 1: Convert the hours into minutes: </p>
+      <p>  ${{include.q.time}} \times 60 = {{ step1 }}$ </p>
+      <p>Step 2: Find total micrograms: </p>
+      <p>  ${{include.q.rate}} \text{mcg/min} \times {{ step1 }} \text{min} = {{ volumemc }} \text{mcg} $</p>
+      <p>Steo 3: Convert to milligrams: </p>
+      <p> ${{volumemc}} \div 1000 = {{volumem}} </p>
+      <p><strong>Solution: {{volumem}}</strong></p>
+    </div>
+</details>
+
+</li>
