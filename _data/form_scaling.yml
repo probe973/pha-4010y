@@ -2,14 +2,11 @@
 - { type: 'MU', A: 20, B: 60, W: 200, NW: 400 }
 - { type: 'MU', A: 150, B: 100, W: 150, NW: 750 }
 - { type: 'MU', A: 65, B: 125, W: 10, NW: 900 }
+- { type: 'MU', A: 82, B: 60, W: 15, NW: 900 }
 - { type: 'MUL', A: 30, B: 60, W: 400, NW: 2 }
 - { type: 'MUL', A: 6, B: 15, W: 20, NW: 1 }
 - { type: 'MUL', A: 30, B: 10, W: 30, NW: 1.5 }
-- { type: 'VU', A: 65, B: 20, W: 100, NW: 300 }
-- { type: 'VU', A: 11, B: 45, W: 25, NW: 750 }
-- { type: 'VUL', A: 135, B: 60, W: 300, NW: 1.2 }
-- { type: 'VUL', A: 18, B: 80, W: 800, NW: 2 }
-- { type: 'MD', A: 80, B: 25, W: 500, NW: 250 }
+- { type: 'MD', A: 80, B: 30, W: 500, NW: 250 }
 - { type: 'MD', A: 120, B: 60, W: 800, NW: 100 }
 - { type: 'MD', A: 180, B: 150, W: 1000, NW: 125 }
 - { type: 'MD', A: 140, B: 100, W: 400, NW: 20 }
