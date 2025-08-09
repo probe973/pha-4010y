@@ -3,19 +3,19 @@
 {% assign have = include.q.conc | times: 1000 %}
 {% assign volume = need | divided_by: have | times: 100 %}
 
-<li>A <strong>{{include.q.mass | strip_zeros}} kg</strong> patient requires <strong>{{include.q.rate | strip_zeros}} mg/kg/minute</strong> for <strong>{{include.q.time | strip_zeros}} minutes</strong>, delivered by a <strong>{{include.q.conc | strip_zeros}} &#37;w/v</strong> solution. How much solution will they need in ml?
+<li>A <strong>{{include.q.mass | format: "%g"}} kg</strong> patient requires <strong>{{include.q.rate | format: "%g"}} mg/kg/minute</strong> for <strong>{{include.q.time | format: "%g"}} minutes</strong>, delivered by a <strong>{{include.q.conc | format: "%g"}} &#37;w/v</strong> solution. How much solution will they need in ml?
 <details class="solution-details">
     <summary>Solution</summary>
     <div class="solution-content">
     <p>Step 1: Find rate per minute using patient mass:</p>
-    <p>${{include.q.rate | strip_zeros}} \text{mg/kg/min} \times {{include.q.mass | strip_zeros}} \text{kg} = {{ratetime | strip_zeros}} \text{mg/min}$</p>
+    <p>${{include.q.rate | format: "%g"}} \text{mg/kg/min} \times {{include.q.mass | format: "%g"}} \text{kg} = {{ratetime | format: "%g"}} \text{mg/min}$</p>
     <p>Step 2: Find total mg of drug</p>  
-    <p>${{ratetime | strip_zeros}} \text{mg/min} \times {{include.q.time | strip_zeros}} \text{min} = {{need | strip_zeros}} \text{mg}$</p>
+    <p>${{ratetime | format: "%g"}} \text{mg/min} \times {{include.q.time | format: "%g"}} \text{min} = {{need | format: "%g"}} \text{mg}$</p>
     <p>Step 3: Make the concentration in the same units as required drug:</p>
-    <p>${{include.q.conc | strip_zeros}} \text{&#37; w/v} = {{include.q.conc | strip_zeros}} \text{g/100 ml} = {{have | strip_zeros}} \text{mg/100 ml}$</p>
+    <p>${{include.q.conc | format: "%g"}} \text{&#37; w/v} = {{include.q.conc | format: "%g"}} \text{g/100 ml} = {{have | format: "%g"}} \text{mg/100 ml}$</p>
     <p>Step 4: Calculate the volume in ml:</p>
-    <p>$\frac{ {{need | strip_zeros}} }{ {{have | strip_zeros}} } \times 100 \text{ml} = {{volume | strip_zeros}} \text{ml}$</p>
-    <p><strong>Solution: {{volume | strip_zeros}} ml</strong></p>
+    <p>$\frac{ {{need | format: "%g"}} }{ {{have | format: "%g"}} } \times 100 \text{ml} = {{volume | format: "%g"}} \text{ml}$</p>
+    <p><strong>Solution: {{volume | format: "%g"}} ml</strong></p>
     </div>
 </details>
 </li>
