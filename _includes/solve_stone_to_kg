@@ -1,0 +1,14 @@
+{% assign total_lbs = include.q.stone | times: 14 | plus: include.q.lbs %}
+{% assign total_kg = total_lbs | divided_by: 2.0 %}
+<li>Convert <strong>{{ include.q.stone }} stone {{ include.q.lbs }} lbs</strong> into kg (assume 1 kg = 2 lb)
+  <details class="solution-details">
+    <summary>Solution</summary>
+    <div class="solution-content">
+      <p>Step 1: Convert total weight into lbs.</p>
+      <p>$({{ include.q.stone }} \times 14) + {{ include.q.lbs }} = {{ total_lbs }}~\text{lbs}$</p>
+      <p>Step 2: Convert lbs into kg.</p>
+      <p>${{ total_lbs }} \div 2 = {{ total_kg }}~\text{kg}$</p>
+      <p><strong>Solution: {{ total_kg }} kg</strong></p>
+    </div>
+  </details>
+</li>
