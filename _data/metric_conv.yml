@@ -1,4 +1,4 @@
 - question: "Convert 5 g into mg"
-solution: |
+  solution: |
 <p>$1 \text{ g} = 1000 \text {mg}$</p>
 <p>$5 \text{ g} \times \frac {1000 \text{ mg} }{1 \text{ g} } = 5000 \text{ mg} $</p>
