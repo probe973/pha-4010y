@@ -7,7 +7,7 @@ html, body { /* Ensure no default margins/paddings on html and body */
     background-color: #f4f4f4; /* Light background for the page */
     color: #333;
 }
-nav.navbar {
+div.navbar, nav.navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -27,7 +27,7 @@ nav.navbar {
 
 /* Styles for links in EXISTING HTML files (e.g., pha01.html, pha01_s.html) */
 /* These target <a> tags directly inside .navbar */
-nav.navbar a {
+div.navbar a, nav.navbar a {
     display: block;
     color: black; /* Changed text color to black */
     text-align: center;
@@ -38,7 +38,7 @@ nav.navbar a {
     transition: background-color 0.3s ease; /* Smooth transition on hover */
     margin-right: 10px; /* Space between links */
 }
-.navbar a:hover {
+div.navbar a:hover, nav.navbar a:hover {
     background-color: #5cb85c; /* Lighter green on hover */
     color: black; /* Ensure text remains black on hover */
 }
@@ -299,7 +299,7 @@ mjx-container, mjx-math {
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
-    nav.navbar {
+    div.navbar, nav.navbar {
         flex-direction: column;
         padding: 10px;
     }
