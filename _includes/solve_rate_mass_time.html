@@ -5,10 +5,10 @@
     <summary>Solution</summary>
     <div class="solution-content">
     <p>Step 1: Find the rate per minute for the given mass:</p>
-    <p>${{include.q.rate}} \text{ mg/kg/min} \times {{include.q.mass}} \text{ kg} = {{ratetime}} \text{ mg/min}$</p>
+    <p>${{include.q.rate}} \text{ mg/kg/min} \times {{include.q.mass}} \text{ kg} = {{ratetime | round: 2 | replace: '.00', '' | replace: '.0', ''}} \text{ mg/min}$</p>
     <p>Step 2: Find the volume required:</p>
-    <p>${{ratetime}} \text{ mg/min} \times {{include.q.time}} \text{ min} = {{volume}} \text{ mg}$</p>
-    <p>Solution: <strong>{{volume}} mg</strong></p>
+    <p>${{ratetime | round: 2 | replace: '.00', '' | replace: '.0', ''}} \text{ mg/min} \times {{include.q.time}} \text{ min} = {{volume | round: 2 | replace: '.00', '' | replace: '.0', ''}} \text{ mg}$</p>
+    <p>Solution: <strong>{{volume | round: 2 | replace: '.00', '' | replace: '.0', ''}} mg</strong></p>
   </div>
 </details>
 </li>
