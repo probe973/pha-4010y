@@ -1,0 +1,8 @@
+{% case include.q.type %}
+  {% when 'rate_time' %}
+    {% include solve_rate_time.html q=include.q %}
+  {% when 'rate_mass_time' %}
+    {% include solve_rate_mass_time.html q=include.q %}
+  {% when 'rate_mass_time_conc' %}
+    {% include solve_rate_mass_time_conc.html q=include.q %}
+{% endcase %}
