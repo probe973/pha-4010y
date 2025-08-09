@@ -6,12 +6,12 @@
     <summary>Solution</summary>
     <div class="solution-content">
       <p>Step 1: Convert the hours into minutes: </p>
-      <p>  ${{include.q.time}} \times 60 = {{ step1 }}$ </p>
+      <p>  ${{include.q.time}} \times 60 = {{ step1 }} \text{ min}$ </p>
       <p>Step 2: Find total micrograms: </p>
-      <p>  ${{include.q.rate}} \text{mcg/min} \times {{ step1 }} \text{min} = {{ volumemc }} \text{mcg} $</p>
+      <p>  ${{include.q.rate}} \text{ mcg/min} \times {{ step1 }} \text{ min} = {{ volumemc }} \text{ mcg} $</p>
       <p>Step 3: Convert to milligrams: </p>
-      <p> ${{volumemc}} \div 1000 = {{volumem}} $</p>
-      <p><strong>Solution: {{volumem}} mg</strong></p>
+      <p> ${{volumemc}} \div 1000 = {{volumem | round: 2 | replace: '.00', '' | replace: '.0', ''}} $</p>
+      <p><strong>Solution: {{volumem | round: 2 | replace: '.00', '' | replace: '.0', ''}} mg</strong></p>
     </div>
 </details>
 
