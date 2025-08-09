@@ -1,0 +1,25 @@
+{% assign ratio = include.q.NW | divide_by: include.q.W %}
+{% assign NA = include.q.A | times: ratio %}
+{% assign NB = inlcude.q.B | times: ratio %}
+
+<li>
+A Formula for a solution is:
+  <p>Substance A: {{include.q.A}} mg</p>
+   <p>Substance B: {{include.q.B}} ml</p>
+  <p>Water to : {{include.q.W}} ml</p>
+  <p></p>
+  <p>How much of each substance is required to make {{include.q.NW}} ml of the solution?</p>
+
+
+<details class="solution-details">
+    <summary>Solution</summary>
+    <div class="solution-content">
+      <p>You need to make more of the substance than the formula shows.</p>
+      <p>Step 1: How many times more?</p>
+      <p>${{include.q.NW}} \div {{include.q.W}} = {{ratio}}$ We need {{ratio}} times more.</p>
+      <p>Step 2: Multiply each substance by this amount</p>
+      <p>A: ${{include.q.A}} \times {{ratio}} = {{NA}} \text { mg}$</p>
+      <p>B: ${{include.q.B}} \times {{ratio}} = {{NB}} \text { ml}$</p>
+    </div>
+</details>
+</li>
