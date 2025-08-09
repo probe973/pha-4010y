@@ -4,5 +4,14 @@
 {% assign volume = need | divided_by: have | times: 100 %}
 
 <li>A <strong>{{include.q.mass}} kg</strong> patient requires <strong>{{include.q.rate}} mg/kg/minute</strong> for <strong>{{include.q.time}} minutes</strong>, delivered by a <strong>{{include.q.conc}} %w/v</strong> solution. How much solution will they need in ml?
-    <p>Test: The calculated volume is {{ volume }} ml.</p>
+<details class="solution-details">
+    <summary>Solution</summary>
+    <div class="solution-content">
+        <p>Step 1: Find rate per minute using patient mass:</p>
+        <p>${{include.q.rate}} \text{mg/kg/min} \times {{include.q.mass}} \text{kg} = {{ratetime}} \text{mg/min}$</p>
+
+        <p>Step 2: Find total mg of drug</p>  
+        <p>${{ratetime}} \text{mg/min} \times {{include.q.time}} \text{min} = {{need}} \text{mg}$</p>
+    </div>
+</details>
 </li>
