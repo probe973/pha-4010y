@@ -1,0 +1,15 @@
+{% comment %} This file reads the 'type' from the YAML and calls the correct solver. {% endcomment %}
+{% case include.q.type %}
+  {% when 'feet_to_cm' %}
+    {% include solve_feet_to_cm.html q=include.q %}
+  {% when 'm_to_feet' %}
+    {% include solve_m_to_feet.html q=include.q %}
+  {% when 'stone_to_kg' %}
+    {% include solve_stone_to_kg.html q=include.q %}
+  {% when 'kg_to_stone' %}
+    {% include solve_kg_to_stone.html q=include.q %}
+  {% when 'c_to_f' %}
+    {% include solve_c_to_f.html q=include.q %}
+  {% when 'f_to_c' %}
+    {% include solve_f_to_c.html q=include.q %}
+{% endcase %}
