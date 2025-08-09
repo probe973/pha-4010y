@@ -1,0 +1,14 @@
+{% assign total_inches = include.q.feet | times: 12 | plus: include.q.inches %}
+{% assign total_cm = total_inches | times: 2.5 %}
+<li>Convert <strong>{{ include.q.feet }} feet {{ include.q.inches }} inches</strong> into cm (assume 1 inch = 2.5 cm)
+  <details class="solution-details">
+    <summary>Solution</summary>
+    <div class="solution-content">
+      <p>Step 1: Convert total height into inches.</p>
+      <p>$({{ include.q.feet }} \times 12) + {{ include.q.inches }} = {{ total_inches }}~\text{inches}$</p>
+      <p>Step 2: Convert inches into cm.</p>
+      <p>${{ total_inches }} \times 2.5 = {{ total_cm }}~\text{cm}$</p>
+      <p><strong>Solution: {{ total_cm }} cm</strong></p>
+    </div>
+  </details>
+</li>
