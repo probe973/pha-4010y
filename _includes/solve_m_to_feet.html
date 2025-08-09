@@ -1,0 +1,19 @@
+{% assign total_cm = include.q.metres | times: 100 %}
+{% assign total_inches_float = total_cm | divided_by: 2.5 %}
+{% assign total_inches = total_inches_float | round %}
+{% assign feet = total_inches | divided_by: 12 %}
+{% assign inches = total_inches | modulo: 12 %}
+<li>Convert <strong>{{ include.q.metres }} m</strong> into feet and inches (assume 1 inch = 2.5 cm)
+  <details class="solution-details">
+    <summary>Solution</summary>
+    <div class="solution-content">
+      <p>Step 1: Convert metres into cm.</p>
+      <p>${{ include.q.metres }} \times 100 = {{ total_cm }}~\text{cm}$</p>
+      <p>Step 2: Convert cm into inches.</p>
+      <p>${{ total_cm }} \div 2.5 = {{ total_inches }}~\text{inches}$</p>
+      <p>Step 3: Convert total inches into feet and inches.</p>
+      <p>${{ total_inches }} \div 12 = {{ feet }}~\text{remainder}~{{ inches }}$</p>
+      <p><strong>Solution: {{ feet }} feet {{ inches }} inches</strong></p>
+    </div>
+  </details>
+</li>
