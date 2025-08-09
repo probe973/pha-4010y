@@ -3,7 +3,6 @@
 {% assign have = include.q.conc | times: 1000 %}
 {% assign volume = need | divided_by: have | times: 100 %}
 
-<li>
-    <p>This is a test for a 'type_c' question.</p>
-    <p>The final calculated volume is: <strong>{{ volume }}</strong></p>
+<li>A <strong>{{include.q.mass}} kg</strong> patient requires <strong>{{include.q.rate}} mg/kg/minute</strong> for <strong>{{include.q.time}} minutes</strong>, delivered by a <strong>{{include.q.conc}} %w/v</strong> solution. How much solution will they need in ml?
+    <p>Test: The calculated volume is {{ volume }} ml.</p>
 </li>
