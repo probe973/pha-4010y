@@ -1,0 +1,15 @@
+{% assign step1 = include.q.fahrenheit | minus: 32 %}
+{% assign celsius = step1 | times: 5 | divided_by: 9 %}
+<li>Convert <strong>{{ include.q.fahrenheit }}&deg;F</strong> into degrees C
+  <details class="solution-details">
+    <summary>Solution</summary>
+    <div class="solution-content">
+      <p>Formula: $C = (F - 32) \times \frac{5}{9}$</p>
+      <p>Step 1: Subtract 32.</p>
+      <p>${{ include.q.fahrenheit }} - 32 = {{ step1 }}$</p>
+      <p>Step 2: Multiply by $\frac{5}{9}$.</p>
+      <p>${{ step1 }} \times 5 \div 9 = {{ celsius }}$</p>
+      <p><strong>Solution: {{ celsius }}&deg;C</strong></p>
+    </div>
+  </details>
+</li>
