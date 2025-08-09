@@ -24,8 +24,8 @@ Give your answer in mg and ml
       <p>A: ${{include.q.A}} \times {{ratio| round: 2 | replace: '.00', '' | replace: '.0', ''}} = {{NA | round: 2 | replace: '.00', '' | replace: '.0', ''}} \text { mg}$</p>
       <p>B: ${{include.q.B}} \times {{ratio| round: 2 | replace: '.00', '' | replace: '.0', ''}} = {{NB | round: 2 | replace: '.00', '' | replace: '.0', ''}} \text { ml}$</p>
       <p>Method 2</p>
-      <p>A: $ \frac{ {{include.q.W}} }{ {{mlc | round: 2 | replace: '.00', '' | replace: '.0', ''}} } \times {{include.q.A}} = {{NA}} \text{ mg} $</p>  
-      <p>B: $ \frac{ {{include.q.W}} }{ {{mlc | round: 2 | replace: '.00', '' | replace: '.0', ''}} } \times {{include.q.B}} = {{NB}} \text{ ml} $</p>  
+      <p>A: $ \frac{ {{include.q.A}} }{ {{include.q.W}} } \times {{mlc | round: 2 | replace: '.00', '' | replace: '.0', ''}} = {{NA}} \text{ mg} $</p>  
+      <p>A: $ \frac{ {{include.q.AB} }{ {{include.q.W}} } \times {{mlc | round: 2 | replace: '.00', '' | replace: '.0', ''}} = {{NB}} \text{ ml} $</p> 
     </div>
 </details>
 </li>
