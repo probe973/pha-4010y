@@ -1,0 +1,10 @@
+{% case include.q.type %}
+  {% when 'MU' %}
+    {% include solve_fs_mu.html q=include.q %}
+  {% when 'MUL' %}
+    {% include solve_fs_mul.html q=include.q %}
+  {% when 'VU' %}
+    {% include solve_fs_vu.html q=include.q %}
+  {% when 'MD' %}
+    {% include solve_fs_md.html q=include.q %}
+{% endcase %}
