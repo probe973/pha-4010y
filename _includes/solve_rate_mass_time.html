@@ -1,0 +1,14 @@
+{% assign ratetime = include.q.rate | times: include.q.mass}
+{% assign volume = ratetime | times: include.q.time}
+<li>If a <strong>{{include.q.mass}} kg </strong> patient requires <strong>{{include.q.rate}} mg/kg/min </strong>for <strong>{{include.q.time}} minutes</strong>, how many mg of the drug will they require?
+<details class="solution-details">
+    <summary>Solution</summary>
+    <div class="solution-content">
+    <p>Step 1: Find the rate per minute for the given mass:</p>
+    <p>${{include.q.rate}} \text{mg\kg\min} \times {{include.q.mass}} \text{kg} = {{ratetime}} \text{mg\min}$</p>
+    <p>Step 2: Find the volume required:</p>
+    <p>${{ratetime}} \text{mg\min} \times {{include.q.time}} \text{min} = {{volume}} \text{mg}$</p>
+    <p>Solution: <strong>{{volume}} mg</strong></p>
+  </div>
+</details>
+</li>
