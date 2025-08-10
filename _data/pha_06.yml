@@ -90,9 +90,11 @@
 - question: >-
     If a 60 year old male has an ideal body weight of 64 kg and an actual body
     weight of 65 kg, with a serum creatinine of 200 micromol/litre, what is
-    their CrCl? <br> $CrCl = \frac{140- \text{age} \times \text{Weight Kg}
-    }{Serum creatinine}$<br>Give your answer to 1 decimal place
-  solution: '<p>$\frac{(140-60) \times 64}{200}=\frac{80 \times 64}{200}=25.6}$</p>'
+    their CrCl? <br> $CrCl = \frac{\text{(}140- \text{age}} \times \text{Weight
+    Kg} }{Serum creatinine}$<br>Give your answer to 1 decimal place
+  solution: >-
+    <p>$\frac{\text{(}140-60\text{)} \times 64}{200}=\frac{80 \times
+    64}{200}=25.6}$</p>
 - question: >-
     How many grams of MgSO4 are required to make 200 millimoles, given atomic
     weights Magnesium = 24, Sulphur = 32, Oxygen = 16?
