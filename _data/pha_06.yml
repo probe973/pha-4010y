@@ -1,6 +1,6 @@
 - question: What is 0.00542 kg expressed as mg?
   solution: >-
-    <p>$1 \text{ kg} = $ 1000000 \text{ mg}$</p>
+    <p>$1 \text{ kg} =  1000000 \text{ mg}$</p>
 
     <p>$0.00542 \text{ kg} \times \frac{1000000 \text{ mg} }{1 \text{ kg} } =
     5420 \text{ mg}$</p>
@@ -8,7 +8,7 @@
     What is 0.0243 litres expressed in millilitres? Give your answer to 1
     decimal point
   solution: >-
-    <p>$1 \text{ l} = $ 1000 \text{ ml}$</p>
+    <p>$1 \text{ l} =  1000 \text{ ml}$</p>
 
     <p>$0.0243 \text{ l} \times \frac{1000 \text{ ml} }{1 \text{ l} } = 24.3
     \text{ ml}$</p>
