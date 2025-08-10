@@ -12,3 +12,134 @@
 
     <p>$0.0243 \text{ l} \times \frac{1000 \text{ ml} }{1 \text{ l} } = 24.3
     \text{ ml}$</p>
+- question: What is 1 in 160 expressed as mg/ml? Give your answer to 1 decimal point
+  solution: >-
+    <p>$\frac{1 \text{ g} }{160 \text{ ml} }=\frac{1000 \text{ mg} }{160 \text{
+    ml} }=6.25 \text{mg/ml}$</p>
+
+    <p>6.3 mg/ml</p>
+- question: What is 24 mg/ml expressed as %w/v?  Give your answer to 1 decimal point
+  solution: >-
+    <p>$\frac{24 \text{ mg}}{1 \text { ml}} \times 100 \text{ ml} = 2400 \text{
+    mg/100 ml} = 2.4 \text{ g/100 ml}$</p>
+
+    <p>2.4 %w/v</p>
+- question: >-
+    If a mixture is described as 20 mg/ml, how many grams are required to make
+    90 ml of the mixture? Give your answer to 1 decimal place
+  solution: >-
+    <p>$\frac{20 \text{ mg}}{1 \text{ ml}} \times 90 \text{ ml} = 1800 \text {
+    ml}$</p>
+
+    <p>1.8 l</p>
+- question: >-
+    If a drug is 1 part in 600, how many litres are required to provide a dose
+    of 3.2g?  Give your answer correct to 1 decimal place
+  solution: >-
+    <p>$\frac{600 \text{ ml}}{1 \text{ g}} \times 3.2 \text{ g} = 1920 \text {
+    ml}$<p>
+
+    <p>1.9 l</p>
+- question: >-
+    How many millilitres of a 4% w/v solution would be required to provide a
+    dose of 250 mg?  Give your answer correct to 1 decimal point
+  solution: >-
+    <p>$\frac{250 \text{ mg}}{4 \text{ g}} \times 100 \text{ ml} = \frac{250
+    \text{ mg}}{4000 \text{ mg}} \times 100 = 6.25 \text{ ml}$</p>
+
+    <p>6.3 ml</p>
+- question: >-
+    How many millilitres from an 18M stock solution are required to make 120 ml
+    of a 6M solution?
+  solution: |-
+    <p>$C1V1=C2V2$</p>
+    <p>$18V1=6 \times 120$</p>
+    <p>$V1 = \frac{6 \times 120}{18} = 40$</p>
+    <p>40 ml
+- question: >-
+    If a person is 4 feet and 11 inches tall, what is this in metres (assuming 1
+    inch = 2.5 cm)?  Give your answer correct to 1 decimal place.
+  solution: |-
+    <p>$4 \times 12 + 11 = 59$</p>
+    <p>$59 \times 2.5 = 147.5 \text{ cm} = 1.475 \text{ m}$</p>
+    <p>1.5 m</p>
+- question: >-
+    If a person is 10 stone 12 lbs, how much do they weigh in kg (assuming 2 lbs
+    = 1 kg)?
+  solution: |-
+    <p>$10 \times 14 + 12 = 152$</p>
+    <p>$152 \div 2 = 76 \text{ kg}$</p>
+- question: >-
+    What is the body surface area of someone who is 1.62 metres tall and 66 kg
+    in weight?  Give your answer to 1 decimal place.
+  solution: |-
+    <p>$\frac{162 \times 66}{3600}=2.97$</p>
+    <p>From list $\sqrt{2.97}=1.7 \text{ m}^2$</p>
+- question: What is 95 $^\circ$F in $^\circ$C?
+  solution: |-
+    <p>$95 – 32 = 63$</p>
+    <p>$63 \times \frac{5}{9} = 35 ^\circ \text{C}$</p>
+- question: >-
+    How many millilitres of a 1 in 500 solution is required to produce 200 ml of
+    a 1 in 20000 solution?
+  solution: |-
+    <p>$C1V1=C2V2$</p>
+    <p>$\frac{1}{500}V1 = 200 \times \frac{1}{20000}$</p>
+    <p>$V1=200 \times \frac{1}{20000} \times \frac{500}{1}$</p>
+    <p>$V1=5 \text{ ml}$</p>
+- question: >-
+    If a 60 year old male has an ideal body weight of 64 kg and an actual body
+    weight of 65 kg, with a serum creatinine of 200 micromol/litre, what is
+    their CrCl? <br> $CrCl = \frac{140- \text{age} \times \text{Weight Kg}
+    }{Serum creatinine}$<br>Give your answer to 1 decimal place
+  solution: '<p>$\frac{(140-60) \times 64}{200}=\frac{80 \times 64}{200}=25.6}$</p>'
+- question: >-
+    How many grams of MgSO4 are required to make 200 millimoles, given atomic
+    weights Magnesium = 24, Sulphur = 32, Oxygen = 16?
+  solution: |-
+    <p>$24+32+4 \times 16=120 \text{ g/mol}$</p>
+    <p>$120 \text{ g/mol} \times 0.2 \text{ mol} = 24 \text{ g}$</p>
+- question: >-
+    How many grams of sodium chloride (MW = 58) are required to produce 400
+    millilitres of a 6M solution? Give your answer to the nearest whole number.
+  solution: |-
+    <p>$6 \text{ mol/l} \times 0.4 \text{ l}=2.4 \text{ mol}$</p>
+    <p>$58 \text{ g/mol} \times 2.4 \text{ mol} = 139.2 \text{ g}$</p>
+    <p>139 g</p>
+- question: >-
+    If a cream is described as 0.045 % w/w, how much active ingredient, in mg, 
+    is required to produce 20 g?
+  solution: |-
+    <p>$\frac{0.045 \text{ g}}{100 \text{ g}} \times 20 g = 0.009 g$</p>
+    <p>9 mg</p>
+- question: >-
+    A formula for a mouthwash is: <br>Sodium Chloride 3 g <br>Sodium Bicarbonate
+    2 g <br>Peppermint emulsion 5 ml <br>Chloroform water 100 ml <br>Water to
+    200 ml<br>How much sodium chloride is needed to make 800 ml of the
+    mouthwash?
+  solution: >-
+    <p>$\frac{3 \text{ g}}{200 \text{ ml}} \times 800 \text{ ml} = 12 \text{
+    g}$</p>
+- question: >-
+    If a patient requires 14 mcg/minute of a drug for 18 hours, what is the
+    total amount of drug they will receive in milligrams?  Give the answer to 1
+    decimal place.
+  solution: |-
+    <p>$18 \times 60 = 1080 \text{ min}$</p>
+    <p>$14 \text{ mcg/min} \times 1080 \text {min} = 15120 \text{ mcg}$</p>
+    <p>$15.12 \text{ mg}$</p>
+    <p>15.1 mg</p>
+- question: >-
+    If a drug is described as 3 mcg/kg/min, how many millilitres of a 1 in 200
+    solution would be required for a 80 kg patient receiving the drug for 40
+    minutes? Give your answer correct to 1 decimal place.
+  solution: >-
+    <p>$3 \text{ mcg/kg/min} \times 80 \text{ kg} = 240 \text{ mcg/min}$</p>
+
+    <p>$240 \text{ mcg/min} \times 40 \text{ min} = 9600 \text{ mcg} = 9.6
+    \text{ mg}$</p>
+
+    <p>$\frac{9.6 \text{ mg}}{1000 \text{ mg}} \times 200 \text{ ml} = 1.92
+    \text { ml}$</p>
+
+    <p>1.9 ml</p>
