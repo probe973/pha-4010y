@@ -16,7 +16,7 @@
     <p>$0.525 \text{ l} \times \frac{1000 \text{ ml}}{1 \text{ l}} = 525 \text{ ml}$</p>
 - question: "Convert 0.034 km into mm"
   solution: |
-    <p>$ 1 \text{ km} = 1000000 \text { mm}
+    <p>$ 1 \text{ km} = 1000000 \text { mm}$</p>
     <p>$0.034 \text{ km} \times \frac{1000000 \text { mm}}{1 \text{ km}} = 34000 \text{ mm}$</p>
 - question: "Convert 52000 mg into g"
   solution: |
@@ -36,5 +36,5 @@
     <p>$5600 \text{ mcg} \times \frac{1 \text{ mg}}{1000 \text { mcg}} = 5.6 \text{ mg}$</p>
 - question: "Convert 453000000000 mcg into kg"
   solution: |
-   <p>$1 \text{ kg} = 1000000000 \text{ mcg$}</p>
+   <p>$1 \text{ kg} = 1000000000 \text{ mcg}$</p>
    <p>$453000000000 \text{ mcg} \times \frac{1 \text{ kg}}{1000000000 \text{ mcg}} = 453 \text{ kg}$</p>
