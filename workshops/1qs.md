@@ -12,7 +12,7 @@ title: "Workshop: Arithmetic"
         <li>Calculators of any description are <strong>NOT</strong> allowed.</li>
     </ul>
 </div>
-<p><a href="pha4010y_ws.pdf>"Get printable version of this workshop</a></p>
+<p><a href="pha4010y_ws.pdf">Get printable version of this workshop</a></p>
 <p><a hfre="pha4010y_ws_answers.pdf">Get printable version of the workshop answers</a></p>
 <hr>
 
