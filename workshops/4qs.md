@@ -12,7 +12,8 @@ title: "Workshop: Imperial Units and Calculating Body Indices"
         <li>Calculators of any description are <strong>NOT</strong> allowed.</li>
     </ul>
 </div>
-
+<p><a href="pha4010y_ws1.pdf">Get printable version of this workshop</a></p>
+<p><a href="pha4010y_ws1_answers.pdf">Get printable version of the workshop answers</a></p>
 <hr>
 
 <h2>Imperial and Metric Units for Volumes</h2>
