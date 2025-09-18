@@ -12,7 +12,8 @@ title: "Workshop: Conversion of Units and Transposing Equations"
         <li>Calculators of any description are <strong>NOT</strong> allowed.</li>
     </ul>
 </div>
-
+<p><a href="pha4010y_ws2.pdf">Get printable version of this workshop</a></p>
+<p><a href="pha4010y_ws2_answers.pdf">Get printable version of the workshop answers</a></p>
 <hr>
 
 <h2>Conversion of units</h2>
