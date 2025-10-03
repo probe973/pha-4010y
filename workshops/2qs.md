@@ -152,11 +152,11 @@ title: "Workshop: Conversion of Units and Transposing Equations"
     </li>
     <li>Convert each of the following into the given unit, writing each answer in standard form:
         <ol type="a">
-            <li>$25\times10^{14}$ mg into g
+            <li>$1.25\times10^{14}$ mg into g
                 <details class="solution-details">
                     <summary>Solution</summary>
                     <div class="solution-content">
-                        <p>$25 \times 10^{14}~\text{mg} = \textbf{$2.5 \times 10^{12}~\text{g}$}$</p>
+                        <p>$1.25 \times 10^{14}~\text{mg} = 1.25 \times 10^{14} \times 10^{-3} = \textbf{$1.25 \times 10^{11}~\text{g}$}$</p>
                     </div>
                 </details>
             </li>
